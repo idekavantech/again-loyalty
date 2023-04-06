@@ -1,6 +1,6 @@
 import { memo, useEffect, useState } from "react";
 import { night } from "@saas/utils/colors";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 import { useRouter } from "next/router";
 import Button from "@material-ui/core/Button";
@@ -71,7 +71,7 @@ function AdminBreadCrumb({
 
   return (
     <div
-      className="d-flex justify-content-between align-items-center flex-wrap py-4"
+      className="d-flex justify-content-between align-items-center flex-wrap py-4 ltr_force"
       style={{
         position: "sticky",
         top: noLayout ? 0 : minWidth768 ? 63 : 48,
@@ -91,9 +91,9 @@ function AdminBreadCrumb({
               minWidth: "30px",
               minHeight: "30px",
             }}
-            className="ml-2"
+            className="mr-2"
           >
-            <ChevronRightIcon />
+            <ChevronLeftIcon />
           </Button>
         )}
         {!disableBreadcrumb && (

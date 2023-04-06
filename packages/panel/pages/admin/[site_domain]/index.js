@@ -6,5 +6,5 @@ export default function AdminHomePage() {
 AdminHomePage.ShouldBeAdmin = true;
 AdminHomePage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "داشبورد",
+  title: "Dashboard",
 };
