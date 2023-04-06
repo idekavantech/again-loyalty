@@ -131,7 +131,7 @@ function CRMMembershipsList() {
         buttons={
           <>
             <Button
-              className="mx-2 pr-1"
+              className="mx-2 pl-1"
               style={{ background: theme.palette.primary.main, color: "white" }}
               variant="contained"
               startIcon={<AddIcon className="ml-3" />}
@@ -140,7 +140,7 @@ function CRMMembershipsList() {
               new customer
             </Button>
             <Button
-              className="mx-2 pr-1"
+              className="mx-2 pl-1"
               style={{
                 color: theme.palette.primary.main,
                 backgroundColor: "white",
@@ -167,7 +167,7 @@ function CRMMembershipsList() {
       <Paper elevation={1} className="crm-search mt-3" style={{ padding: "24px 0" }}>
         <div className="w-100 flex-column d-flex flex-wrap px-4 mt-1">
           <div className="px-2 mb-4 d-flex justify-content-between">
-            <div className="col-lg-6 col-md-9 col-sm-9 pr-0 pl-2">
+            <div className="col-lg-6 col-md-9 col-sm-9 pr-2 pl-0">
               <Input
                 style={{
                   direction: search?.[0] === "+" || search?.[0] === "0" ? "ltr" : "rtl",
@@ -236,7 +236,7 @@ function CRMMembershipsList() {
                 onClose={() => setAnchorEl(null)}
               >
                 <MenuItem className="px-2" onClick={downloadFullExcelFile}>
-                  <ListItemText primary="Download full Excel" className="text-center " />
+                  <ListItemText primary="Download Excel" className="text-center " />
                 </MenuItem>
               </StyledMenu>
             </div>
@@ -275,11 +275,11 @@ function CRMMembershipsList() {
             >
               <MenuItem className="px-2" disabled key={"id"}>
                 <div className="w-100 d-flex align-items-center">
-                  <ListItemText primary="order by" className="text-right" />
+                  <ListItemText primary="order by" className="text-left" />
                 </div>
               </MenuItem>
               <MenuItem className="px-2">
-                <div className="w-100 d-flex align-items-center" onClick={onClearMembershipOrder}>
+                <div className="w-100 d-flex align-items-center row-rev" onClick={onClearMembershipOrder}>
                   <Radio
                     className="p-1"
                     size="small"
@@ -289,18 +289,18 @@ function CRMMembershipsList() {
                     color="primary"
                     checked={!membershipsFilterParams.ordering}
                   />
-                  <ListItemText primary="Default mode" className="text-right" />
+                  <ListItemText primary="Default mode" className="text-left" />
                 </div>
               </MenuItem>
               {sortingOptions?.map((sortOption) => {
                 return (
                   <MenuItem
-                    className="px-2"
+                    className="px-2 "
                     key={sortOption?.id}
                     value={sortOption}
                     onClick={() => onOrderMembershipsChange(sortOption)}
                   >
-                    <div className="w-100 d-flex align-items-center">
+                    <div className="w-100 d-flex align-items-start row-rev">
                       <Radio
                         className="p-1"
                         size="small"
@@ -310,7 +310,7 @@ function CRMMembershipsList() {
                         color="primary"
                         checked={membershipsFilterParams.ordering === sortOption?.keyword}
                       />
-                      <ListItemText primary={sortOption?.text} className="text-right" />
+                      <ListItemText primary={sortOption?.text} className="text-left" />
                     </div>
                   </MenuItem>
                 );
@@ -392,21 +392,21 @@ function CRMMembershipsList() {
             >
               <div className="px-3 py-2 flex-1 d-flex justify-content-center">
                 <input
-                  onChange={(e) => onOrderCreditRangeChange(e, TO)}
-                  value={orderCountRange?.to || ""}
+                  onChange={(e) => onOrderCreditRangeChange(e, FROM)}
+                  value={orderCountRange?.from || ""}
                   className="w-100 text-center"
                   type="number"
-                  placeholder="The maximum number of order"
+                  placeholder="minimum number of order"
                 />
               </div>
               <div className="px-3 d-flex justify-content-center align-items-center">To</div>
               <div className="px-3 py-2 flex-1 d-flex justify-content-center">
                 <input
-                  onChange={(e) => onOrderCreditRangeChange(e, FROM)}
-                  value={orderCountRange?.from || ""}
+                  onChange={(e) => onOrderCreditRangeChange(e, TO)}
+                  value={orderCountRange?.to || ""}
                   className="w-100 text-center"
                   type="number"
-                  placeholder="The minimum number of order"
+                  placeholder="maximum number of order"
                 />
               </div>
             </div>
@@ -423,21 +423,21 @@ function CRMMembershipsList() {
             >
               <div className="px-3 py-2 flex-1 d-flex justify-content-center">
                 <input
-                  onChange={(e) => onCreditPointChange(e, TO)}
-                  value={pointCreditRange?.to || ""}
-                  className="w-100 text-center"
-                  type="number"
-                  placeholder="Maximum rating"
-                />
-              </div>
-              <div className="px-3 d-flex justify-content-center align-items-center">To</div>
-              <div className="px-3 py-2 flex-1 d-flex justify-content-center">
-                <input
                   onChange={(e) => onCreditPointChange(e, FROM)}
                   value={pointCreditRange?.from || ""}
                   className="w-100 text-center"
                   type="number"
                   placeholder="Minimum rating"
+                />
+              </div>
+              <div className="px-3 d-flex justify-content-center align-items-center">To</div>
+              <div className="px-3 py-2 flex-1 d-flex justify-content-center">
+                <input
+                  onChange={(e) => onCreditPointChange(e, TO)}
+                  value={pointCreditRange?.to || ""}
+                  className="w-100 text-center"
+                  type="number"
+                  placeholder="Maximum rating"
                 />
               </div>
             </div>
@@ -510,7 +510,7 @@ function CRMMembershipsList() {
           </div>
           <div className="col-12 col-lg-6 mb-3 mb-lg-0 px-2">
             <div className="position-relative d-flex flex-row-reverse">
-              <div className="px-2 mb-2 mt-5">
+              <div className="pl-2 mb-2 mt-5">
                 <Button
                   style={{ height: 36 }}
                   color="primary"

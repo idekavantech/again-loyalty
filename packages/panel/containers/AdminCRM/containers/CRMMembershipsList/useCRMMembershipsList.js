@@ -43,22 +43,22 @@ const TO = "to";
 const sortingOptions = [
   {
     id: 0,
-    text: "The highest score",
+    text: "Highest Point",
     keyword: "-point_credit",
   },
   {
     id: 1,
-    text: "The lowest rating",
+    text: "Lowest point",
     keyword: "point_credit ",
   },
   {
     id: 2,
-    text: "The most credit",
+    text: "Highest gift",
     keyword: "-gift_credit",
   },
   {
     id: 3,
-    text: "The lowest credit",
+    text: "Lowest gift",
     keyword: "gift_credit",
   },
 ];
