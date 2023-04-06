@@ -165,11 +165,8 @@ export function SelectLabelmodal({
                         cursor: "pointer",
                       }}
                     >
-                      <div align="right" className="w-100 py-4 pl-4 pr-0">
-                        <div
-                          className="d-flex align-items-center"
-                          style={{ width: "max-content" }}
-                        >
+                      <div align="left" className="w-100 py-4 pl-4 pr-0 d-flex justify-content-between align-items-center row-rev">
+
                           <Checkbox
                             className="mx-4"
                             onClick={() => {
@@ -182,7 +179,7 @@ export function SelectLabelmodal({
                           <div className="mr-4" title={label.title}>
                             {ellipseText(label.title, 30)}
                           </div>
-                        </div>
+
                       </div>
                     </div>
                   );
@@ -191,7 +188,7 @@ export function SelectLabelmodal({
         </TabContext>
       </DialogContent>
       <DialogActions
-        className="d-flex align-items-center justify-content-between p-4"
+        className="d-flex align-items-center justify-content-between row-rev p-4"
         style={{ borderTop: "1px solid #EDEDED" }}
       >
         <div>
@@ -205,7 +202,7 @@ export function SelectLabelmodal({
             }}
             variant="contained"
             color="primary"
-            className="u-box-shadow-none u-fontMedium"
+            className="u-box-shadow-none u-fontMedium mx-2"
             size="medium"
             disabled={isLoading || (selectedLabels && !Object.keys(selectedLabels).length)}
           >

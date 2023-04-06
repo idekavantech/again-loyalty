@@ -144,9 +144,9 @@ function CRMMembershipDetail({}) {
                 }}
               ></div>
             </div>
-            <div className="ml-0 my-3 my-lg-0 col-12 col-lg-5 pr-lg-0">
+            <div className="ml-0 my-3 my-lg-0 col-12 col-lg-5 pl-lg-0">
               <p style={{ fontsize: 12, fontWeight: 600 }} className="mb-2">
-                Full name 
+                Full name
               </p>
               <input
                 onChange={(e) =>
@@ -194,7 +194,7 @@ function CRMMembershipDetail({}) {
                   padding: "8px 6px",
                   borderRadius: 8,
                   direction: "ltr",
-                  textAlign: "right",
+                  textAlign: "left",
                 }}
               />
             </div>
@@ -214,30 +214,19 @@ function CRMMembershipDetail({}) {
           </p>
           <div className="d-flex align-items-center justify-content-around row">
             <div className="col-12 col-lg-3 mb-4 mb-lg-0">
-              <p
-                style={{ fontsize: 12, fontWeight: 600, whiteSpace: "nowrap" }}
-                className="mb-2"
-              >
+              <p style={{ fontsize: 12, fontWeight: 600, whiteSpace: "nowrap" }} className="mb-2">
                 Customer satisfaction{" "}
               </p>
-              <div
-                className="px-4 py-2"
-                style={{ border: "1px solid #E4E6E7", borderRadius: 8 }}
-              >
+              <div className="px-4 py-2" style={{ border: "1px solid #E4E6E7", borderRadius: 8 }}>
                 <p style={{ fontsize: 14, fontweight: 400, color: "#8C9196" }}>
                   {CRMMembership?.aggregated_data?.review?.satisfaction
-                    ? satisfactionTitle(
-                        CRMMembership?.aggregated_data?.review?.satisfaction
-                      )
+                    ? satisfactionTitle(CRMMembership?.aggregated_data?.review?.satisfaction)
                     : "-"}
                 </p>
               </div>
             </div>
             <div className="col-12 col-lg-3 mb-4 mb-lg-0">
-              <p
-                style={{ fontsize: 12, fontWeight: 600, whiteSpace: "nowrap" }}
-                className="mb-2"
-              >
+              <p style={{ fontsize: 12, fontWeight: 600, whiteSpace: "nowrap" }} className="mb-2">
                 Rating
               </p>
               <div
@@ -250,9 +239,7 @@ function CRMMembershipDetail({}) {
               >
                 <input
                   value={englishNumberToPersianNumber(crmPointCredit)}
-                  onChange={(e) =>
-                    setCrmPointCredit(persianToEnglishNumber(e.target.value))
-                  }
+                  onChange={(e) => setCrmPointCredit(persianToEnglishNumber(e.target.value))}
                   ref={walletBalance}
                   style={{
                     width: "50%",
@@ -268,10 +255,7 @@ function CRMMembershipDetail({}) {
               </div>
             </div>
             <div className="col-12 col-lg-3 mb-4 mb-lg-0">
-              <p
-                style={{ fontsize: 12, fontWeight: 600, whiteSpace: "nowrap" }}
-                className="mb-2"
-              >
+              <p style={{ fontsize: 12, fontWeight: 600, whiteSpace: "nowrap" }} className="mb-2">
                 Gift credit
               </p>
               <div
@@ -295,16 +279,11 @@ function CRMMembershipDetail({}) {
                     padding: "8px 6px",
                   }}
                 />
-                <p style={{ fontsize: 14, fontweight: 400, color: "#8C9196" }}>
-                  ${" "}
-                </p>
+                <p style={{ fontsize: 14, fontweight: 400, color: "#8C9196" }}>$ </p>
               </div>
             </div>
             <div className="col-12 col-lg-3">
-              <p
-                style={{ fontsize: 12, fontWeight: 600, whiteSpace: "nowrap" }}
-                className="mb-2"
-              >
+              <p style={{ fontsize: 12, fontWeight: 600, whiteSpace: "nowrap" }} className="mb-2">
                 Wallet inventory
               </p>
               <div
@@ -324,22 +303,17 @@ function CRMMembershipDetail({}) {
                     padding: "8px 6px",
                   }}
                 />
-                <p style={{ fontsize: 14, fontweight: 400, color: "#8C9196" }}>
-                  ${" "}
-                </p>
+                <p style={{ fontsize: 14, fontweight: 400, color: "#8C9196" }}>$ </p>
               </div>
             </div>
           </div>
           <div className="d-flex align-items-center row mt-4">
             <div className="col-12 col-lg-3 mb-4 mb-lg-0">
-              <p
-                style={{ fontsize: 12, fontWeight: 600, whiteSpace: "nowrap" }}
-                className="mb-2"
-              >
+              <p style={{ fontsize: 12, fontWeight: 600, whiteSpace: "nowrap" }} className="mb-2">
                 Date of birth
               </p>
               <div
-                className="discountDatePicker d-flex align-items-center pl-4"
+                className="discountDatePicker d-flex align-items-center"
                 style={{ border: "1px solid #E4E6E7", borderRadius: 8 }}
               >
                 <SingleDatePicker
@@ -353,10 +327,11 @@ function CRMMembershipDetail({}) {
                   disableFuture={true}
                   selectedDate={crmMemberShipData?.birth_date}
                   handleDateChange={onBirthDateChange}
-                  placeholder="۰۰/ ۰۰/ ۰۰"
+                  placeholder="00/ 00/ 00"
                 />
                 <svg
-                  width="14"
+                  width="20"
+                  style={{ marginRight: 10 }}
                   height="16"
                   viewBox="0 0 14 16"
                   fill="none"
@@ -371,14 +346,11 @@ function CRMMembershipDetail({}) {
               </div>
             </div>
             <div className="col-12 col-lg-3 mb-4 mb-lg-0">
-              <p
-                style={{ fontsize: 12, fontWeight: 600, whiteSpace: "nowrap" }}
-                className="mb-2"
-              >
+              <p style={{ fontsize: 12, fontWeight: 600, whiteSpace: "nowrap" }} className="mb-2">
                 The date of marriage
               </p>
               <div
-                className="discountDatePicker d-flex align-items-center pl-4"
+                className="discountDatePicker d-flex align-items-center"
                 style={{ border: "1px solid #E4E6E7", borderRadius: 8 }}
               >
                 <SingleDatePicker
@@ -392,10 +364,11 @@ function CRMMembershipDetail({}) {
                   disableFuture={true}
                   selectedDate={crmMemberShipData?.marriage_date}
                   handleDateChange={onMarriageDateChange}
-                  placeholder="۰۰/ ۰۰/ ۰۰"
+                  placeholder="00/ 00/ 00"
                 />
                 <svg
-                  width="14"
+                  width="20"
+                  style={{ marginRight: 10 }}
                   height="16"
                   viewBox="0 0 14 16"
                   fill="none"
@@ -441,7 +414,7 @@ function CRMMembershipDetail({}) {
                   </Link>
                   <div className="mr-1 d-flex">
                     <ArrowBackIosIcon
-                      style={{ color: theme.palette.primary.main, width: 10 }}
+                      style={{ color: theme.palette.primary.main, width: 10, transform: "scaleX(-1)" }}
                     />
                   </div>
                 </div>
@@ -500,12 +473,10 @@ function CRMMembershipDetail({}) {
                     passHref
                     href={`${adminUrlPrefix}crm/labels`}
                   >
-                    Tag settings
+                    Label settings
                   </Link>
-                  <div className="mr-1 d-flex">
-                    <ArrowBackIosIcon
-                      style={{ color: theme.palette.primary.main, width: 10 }}
-                    />
+                  <div className="ml-1 d-flex">
+                    <ArrowBackIosIcon style={{ color: theme.palette.primary.main, width: 10 ,transform: "scaleX(-1)" }} />
                   </div>
                 </div>
               </div>
@@ -525,11 +496,7 @@ function CRMMembershipDetail({}) {
                   Object.keys(selectedLabels)?.map((i) => {
                     return (
                       <Chip
-                        deleteIcon={
-                          <ClearRoundedIcon
-                            style={{ color: theme.palette.text.disabled }}
-                          />
-                        }
+                        deleteIcon={<ClearRoundedIcon className="mr-3" style={{ color: theme.palette.text.disabled }} />}
                         style={{
                           backgroundColor: "#F6F6F7",
                           borderRadius: 8,
@@ -537,7 +504,7 @@ function CRMMembershipDetail({}) {
                           fontweight: 400,
                           color: "#6D7175",
                         }}
-                        className="ml-2 mb-2 py-2"
+                        className="mx-2 mb-2 py-2"
                         onDelete={() => {
                           const _selectedLabels = { ...selectedLabels };
                           delete _selectedLabels[selectedLabels[i].id];
@@ -558,7 +525,7 @@ function CRMMembershipDetail({}) {
                 />
                 <Button
                   onClick={() => toggleSearchModal(true)}
-                  className="px-3 mb-2"
+                  className="px-3 mb-2 ml-2"
                   style={{
                     border: `1px dashed ${theme.palette.primary.main}`,
                     color: `${theme.palette.primary.main}`,
@@ -611,9 +578,7 @@ function CRMMembershipDetail({}) {
                       {CRMMembership?.user?.name || "User without name"}
                     </span>
                     <span style={{ fontSize: 12 }}>
-                      {englishNumberToPersianNumber(
-                        moment(comment?.created_at).format("YYYY/MM/DD")
-                      )}
+                      {englishNumberToPersianNumber(moment(comment?.created_at).format("YYYY/MM/DD"))}
                     </span>
                   </p>
 
@@ -629,27 +594,18 @@ function CRMMembershipDetail({}) {
         </Paper>
         {Object.keys(CRMMembership?.utm_data || {}).length ? (
           <Paper elevation={3} style={{ padding: 24 }} className="mt-3">
-            <div
-              className="p-5 direction-ltr text-left"
-              style={{ border: "1px solid #E4E6E7", borderRadius: 8 }}
-            >
+            <div className="p-5 direction-ltr text-left" style={{ border: "1px solid #E4E6E7", borderRadius: 8 }}>
               <div>
                 UTM Medium:{" "}
-                <span style={{ color: theme.palette.primary.main }}>
-                  {CRMMembership?.utm_data?.medium || "-"}
-                </span>
+                <span style={{ color: theme.palette.primary.main }}>{CRMMembership?.utm_data?.medium || "-"}</span>
               </div>
               <div className="mt-2">
                 UTM Source:{" "}
-                <span style={{ color: theme.palette.primary.main }}>
-                  {CRMMembership?.utm_data?.source || "-"}
-                </span>
+                <span style={{ color: theme.palette.primary.main }}>{CRMMembership?.utm_data?.source || "-"}</span>
               </div>
               <div className="mt-2">
                 Site Referer:{" "}
-                <span style={{ color: theme.palette.primary.main }}>
-                  {CRMMembership?.utm_data?.referer || "-"}
-                </span>
+                <span style={{ color: theme.palette.primary.main }}>{CRMMembership?.utm_data?.referer || "-"}</span>
               </div>
             </div>
           </Paper>
@@ -657,17 +613,12 @@ function CRMMembershipDetail({}) {
         {membershipEventLogs && membershipEventLogs.length > 0 && (
           <Paper elevation={3} style={{ padding: 24 }} className="mt-3">
             <div className="d-flex align-items-center justify-content-between">
-              <div style={{ fontWeight: 500, fontSize: 16 }}>
-                Report of customer records
-              </div>
+              <div style={{ fontWeight: 500, fontSize: 16 }}>Report of customer records</div>
             </div>
             <Table className="mt-4">
               <TableBody>
                 {membershipEventLogs?.map((report) => {
-                  const isSameDate = moment(report.created_at).isSame(
-                    prevDate,
-                    "day"
-                  );
+                  const isSameDate = moment(report.created_at).isSame(prevDate, "day");
                   if (!isSameDate) {
                     prevDate = report.created_at;
                   }
@@ -683,25 +634,19 @@ function CRMMembershipDetail({}) {
                             }}
                             className="mx-2"
                           >
-                            <div className="py-2 px-3">
-                              {formatDate(report.created_at)}
-                            </div>
+                            <div className="py-2 px-3">{formatDate(report.created_at)}</div>
                           </div>
                         </>
                       )}
                       {userReportTypes[report.event_type] && (
                         <div
                           style={{
-                            borderTop: isSameDate
-                              ? "solid 1px rgba(0,0,0,.2)"
-                              : "none",
+                            borderTop: isSameDate ? "solid 1px rgba(0,0,0,.2)" : "none",
                             direction: "rtl",
                           }}
                           className="mx-2"
                         >
-                          <div className="py-3">
-                            {userReportTypes[report.event_type](report)}
-                          </div>
+                          <div className="py-3">{userReportTypes[report.event_type](report)}</div>
                         </div>
                       )}
                     </>
@@ -717,12 +662,8 @@ function CRMMembershipDetail({}) {
                 }}
                 labelRowsPerPage={!isMobile ? "The number of views on a page" : ""}
                 labelDisplayedRows={({ from, to, count }) =>
-                  `${englishNumberToPersianNumber(
-                    from
-                  )} - ${englishNumberToPersianNumber(to)} From${
-                    count !== -1
-                      ? englishNumberToPersianNumber(count)
-                      : `more than${englishNumberToPersianNumber(to)}`
+                  `${englishNumberToPersianNumber(from)} - ${englishNumberToPersianNumber(to)} From${
+                    count !== -1 ? englishNumberToPersianNumber(count) : `more than${englishNumberToPersianNumber(to)}`
                   }`
                 }
                 rowsPerPageOptions={[20, 50, 100]}
@@ -733,16 +674,10 @@ function CRMMembershipDetail({}) {
                 onChangePage={onPageChange}
                 onChangeRowsPerPage={onPageSizeChange}
                 SelectProps={{
-                  renderValue: () =>
-                    englishNumberToPersianNumber(membershipLogsQuery.page_size),
+                  renderValue: () => englishNumberToPersianNumber(membershipLogsQuery.page_size),
                   IconComponent: ArrowDropDownRoundedIcon,
                 }}
-                ActionsComponent={({
-                  count,
-                  page,
-                  rowsPerPage,
-                  onChangePage,
-                }) => (
+                ActionsComponent={({ count, page, rowsPerPage, onChangePage }) => (
                   <div className="">
                     <IconButton
                       onClick={(event) => {
