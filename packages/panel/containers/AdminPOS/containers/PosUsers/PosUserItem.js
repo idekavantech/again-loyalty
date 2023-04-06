@@ -40,16 +40,16 @@ export default function PosUserItem({
       phone.toString().length !== 11 ||
       phone.toString().substr(0, 2) !== "09"
     ) {
-      if (!phone) setPhoneError("وارد کردن شماره تماس الزامی است.");
-      else setPhoneError("شماره تماس وارد شده نادرست است.");
+      if (!phone) setPhoneError("Entering the contact number is required..");
+      else setPhoneError("The contact number entered is incorrect..");
       hasError = true;
     }
     if (!name) {
-      setNameError("وارد کردن نام کاربر الزامی است.");
+      setNameError("Entering user name is required.");
       hasError = true;
     }
     if (pin && pin.length < 4) {
-      setPinError("پین‌کد باید دقیقا ۴ رقم باشد.");
+      setPinError("The pin should be exactly 2 digits.");
       hasError = true;
     }
 
@@ -88,9 +88,9 @@ export default function PosUserItem({
       <PopUp
         open={Boolean(userDialog)}
         onClose={() => openUserDialog(null)}
-        text="آیا مایل به حذف کاربر هستید؟"
-        submitText="حذف کاربر"
-        closeText="انصراف"
+        text="Are you willing to delete the user?"
+        submitText="Remove the user"
+        closeText="Candifying"
         onSubmit={() => {
           setLoading(true);
           openUserDialog(null);
@@ -104,7 +104,7 @@ export default function PosUserItem({
           }`}
         >
           <div className="mb-2 flex-shrink-0 mx-lg-2 mt-lg-2">
-            شماره تلفن کاربر
+            User phone number
           </div>
           <Input
             className="mb-2"
@@ -126,7 +126,7 @@ export default function PosUserItem({
             minWidth992 ? "" : "w-100"
           }`}
         >
-          <div className="mb-2 flex-shrink-0 mx-lg-2 mt-lg-2">نام کاربر</div>
+          <div className="mb-2 flex-shrink-0 mx-lg-2 mt-lg-2">user name</div>
           <Input
             error={Boolean(nameError)}
             helperText={nameError}
@@ -143,7 +143,7 @@ export default function PosUserItem({
             minWidth992 ? "" : "w-100"
           }`}
         >
-          <div className="mb-2 flex-shrink-0 mx-lg-2 mt-lg-2">پین‌کد</div>
+          <div className="mb-2 flex-shrink-0 mx-lg-2 mt-lg-2">Impressive</div>
           <Input
             className="mb-2"
             numberOnly
@@ -155,7 +155,7 @@ export default function PosUserItem({
             onChange={(value) => {
               setPinError("");
               if (value.length > 4)
-                setPinError("پین‌کد باید دقیقا ۴ رقم باشد.");
+                setPinError("The pin should be exactly 2 digits.");
               else setPin(persianToEnglishNumber(value));
             }}
             size="medium"
@@ -172,7 +172,7 @@ export default function PosUserItem({
                     disableFocusListener
                     disableHoverListener
                     disableTouchListener
-                    title="کپی شد!"
+                    title="Copied!"
                   >
                     <CopyToClipboard
                       className="u-cursor-pointer ml-2"
@@ -212,7 +212,7 @@ export default function PosUserItem({
             ) : (
               <EditRoundedIcon className="mx-2" />
             )}
-            {!minWidth992 ? (enabled ? "تایید" : "ویرایش") : ""}
+            {!minWidth992 ? (enabled ? "Confirm" : "Edit") : ""}
           </Button>
           <Button
             className="mr-2"

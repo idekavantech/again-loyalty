@@ -3,7 +3,7 @@ import { sectionsLayout } from "../../sectionsLayout";
 import { SECTION_ABOUT_US } from "@saas/utils/constants/sections";
 
 const aboutUs = [
-  // درباره ما
+  // about us
   {
     ...sectionsConfigTabsRepeatedParts["customization"],
     items: [

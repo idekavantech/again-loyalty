@@ -3,7 +3,7 @@ import { sectionsLayout } from "../../sectionsLayout";
 import { SECTION_ADDRESS_WITH_MAP } from "@saas/utils/constants/sections";
 
 const addressWithMap = [
-  // آدرس با نقشه
+  // Address with Map
   {
     ...sectionsConfigTabsRepeatedParts["customization"],
     items: [

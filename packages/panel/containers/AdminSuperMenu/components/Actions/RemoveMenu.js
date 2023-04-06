@@ -23,8 +23,8 @@ export default function RemoveMenu({ isOpen, onClose, slug, id }) {
       return (
         <>
           <p className={classes.bodyText}>
-            آیا از حذف منو مطمئا هستید؟ بعد از حذف شما دیگر قادر به مشاهده منو
-            در نرم افزار درآمد نمی باشید
+            Are you sure of deleting the menu?After removing you no longer be able to view the menu
+            Are not in the software software
           </p>
         </>
       );
@@ -37,14 +37,14 @@ export default function RemoveMenu({ isOpen, onClose, slug, id }) {
   return (
     <SefareshModal
       isOpen={isOpen}
-      title="حذف منو"
+      title="Remove the menu"
       bodys={bodys}
-      bottomStartText="لغو"
+      bottomStartText="Cancellation"
       bottomEndText={
         loadingSmall ? (
           <CircularProgress size={25} style={{ color: "white" }} />
         ) : (
-          "حذف منو"
+          "Remove the menu"
         )
       }
       bottomStartColor="#ff0017"

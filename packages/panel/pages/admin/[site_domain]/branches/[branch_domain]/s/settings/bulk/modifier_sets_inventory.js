@@ -8,5 +8,5 @@ export default function BulkModifiersPage() {
 BulkModifiersPage.ShouldBeAdmin = true;
 BulkModifiersPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "تنظیم موجودی افزودنی‌ها",
+  title: "Adjustment of additives",
 };

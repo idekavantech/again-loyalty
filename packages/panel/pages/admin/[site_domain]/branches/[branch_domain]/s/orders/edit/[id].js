@@ -7,5 +7,5 @@ export default function AdminOrderPage() {
 AdminOrderPage.ShouldBeAdmin = true;
 AdminOrderPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "ویرایش سفارش",
+  title: "Edit the order",
 };

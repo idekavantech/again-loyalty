@@ -8,5 +8,5 @@ export default function AdminVendorPage() {
 AdminVendorPage.ShouldBeAdmin = true;
 AdminVendorPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "جزئیات تامین‌کننده",
+  title: "Provider details",
 };

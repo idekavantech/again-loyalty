@@ -44,7 +44,7 @@ export function AdminFeedbacks({
   return (
     <div className="pb-70">
       <Head>
-        <title>نظرات مشتری‌ها</title>
+        <title>Customer Comments</title>
       </Head>
       <div className="container col-md-6 col-lg-5 col-12 mt-5">
         <AdminBreadCrumb />

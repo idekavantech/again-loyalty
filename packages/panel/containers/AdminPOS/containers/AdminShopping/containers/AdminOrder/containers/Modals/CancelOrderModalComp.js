@@ -114,7 +114,7 @@ export function CancelOrderModalComp({
       <DialogContent className="p-0">
         <div className="px-4 pt-2">
           <div className="d-flex align-items-center justify-content-between">
-            <div style={{ color: night, fontWeight: 500 }}>لغو سفارش</div>
+            <div style={{ color: night, fontWeight: 500 }}>Cancellation of the order</div>
             <IconButton
               aria-label="close"
               onClick={onClose}
@@ -300,7 +300,7 @@ export function CancelOrderModalComp({
                                 color="primary"
                               />
                             }
-                            label="بازگردانی آیتم‌ها به انبار"
+                            label="Restore items to warehouse"
                           />
                         </div>
                         {item.restock && (
@@ -379,7 +379,7 @@ export function CancelOrderModalComp({
           disabled={loading}
           style={{ backgroundColor: theme.palette.error.main }}
         >
-          لغو سفارش
+          Cancellation of the order
         </Button>
         <Button
           onClick={onClose}
@@ -393,7 +393,7 @@ export function CancelOrderModalComp({
             marginLeft: 0,
           }}
         >
-          نگهداشتن سفارش
+          Keeping the order
         </Button>
       </DialogActions>
     </Dialog>

@@ -29,7 +29,7 @@ export default function Card({ cardDetail, isLoading }) {
         </h6>
         <h5 className="card-title" style={{ fontSize: 16 }}>
           {cardDetail.title}{" "}
-          {cardDetail.isPrice && <span style={{ fontSize: 12 }}>(تومان)</span>}
+          {cardDetail.isPrice && <span style={{ fontSize: 12 }}>(Toman)</span>}
         </h5>
       </div>
     </div>

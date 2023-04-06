@@ -49,8 +49,8 @@ export function AdminForms({ loading, themeConfig, _updateBusiness }) {
     };
     _updateBusiness(
       editedBusiness,
-      "تنظیمات اصلی با موفقیت ذخیره شد.",
-      "ذخیره تغییرات تنظیمات اصلی ناموفق بود!"
+      "The original settings were successfully saved.",
+      "Save the changes to the original settings failed!"
     );
   };
   const headValue = jwt.decode(headConfigTags, process.env.jwt_key);
@@ -58,7 +58,7 @@ export function AdminForms({ loading, themeConfig, _updateBusiness }) {
   return (
     <div className="container">
       <Head>
-        <title>ویرایش تگ‌ها</title>
+        <title>Edit tags</title>
       </Head>
       <AdminBreadCrumb />
       <Paper elevation={1} className="p-3 mt-3">
@@ -107,7 +107,7 @@ export function AdminForms({ loading, themeConfig, _updateBusiness }) {
       </Paper>
       <SaveAndDiscardButtons
         saveAction={submit}
-        saveText="ذخیره"
+        saveText="Store"
         disabled={loading}
       />
     </div>

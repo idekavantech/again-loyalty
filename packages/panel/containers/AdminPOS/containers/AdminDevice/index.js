@@ -108,12 +108,12 @@ function AdminDevice({ _setSnackBarMessage }) {
           <Paper elevation={2} className="my-4 p-4">
             <div className="col-12 px-0 mb-3">
               <div className="mb-2 u-fontLarge u-fontWeightHeavy">
-                اطلاعات دستگاه
+                Device Information
               </div>
               <div className="mb-4">
-                برای ساخت یک دستگاه جدید، کافیست یک شعبه و یک نام برای آن انتخاب
-                کنید. دستگاه پس از ساخته شدن، با نام انتخابی شما شناخته خواهد
-                شد.
+                To build a new device, enough to choose a branch and a name for that
+                do. The device will be recognized by your chosen name after being built
+                became.
               </div>
               <Divider />
             </div>
@@ -132,7 +132,7 @@ function AdminDevice({ _setSnackBarMessage }) {
                       }}
                       className="text-center d-flex flex-1 px-0 col-4 justify-content-center align-items-center"
                     >
-                      شعبه
+                      Branch
                     </div>
                     <FormControl
                       className="col-8 my-0 px-0"
@@ -162,7 +162,7 @@ function AdminDevice({ _setSnackBarMessage }) {
                         input={<Input tableInput />}
                       >
                         <MenuItem value="" disabled>
-                          شعبه انتخاب کنید
+                          Choose a branch
                         </MenuItem>
                         {branches.map((branch) => (
                           <MenuItem key={branch.id} value={branch.id}>
@@ -184,7 +184,7 @@ function AdminDevice({ _setSnackBarMessage }) {
                     }}
                     className="text-center d-flex flex-1 px-0 col-4 justify-content-center align-items-center"
                   >
-                    نام دستگاه
+                    device name
                   </div>
                   <Input
                     tableInput
@@ -207,7 +207,7 @@ function AdminDevice({ _setSnackBarMessage }) {
                       }}
                       className="text-center d-flex flex-1 px-0 col-4 justify-content-center align-items-center"
                     >
-                      کد دستگاه
+                      Device code
                     </div>
                     <div
                       style={{
@@ -220,7 +220,7 @@ function AdminDevice({ _setSnackBarMessage }) {
                       className="d-flex flex-1 px-0 col-8 align-items-center direction-ltr justify-content-end px-3"
                     >
                       {/* <Button onClick={() => setDialog(true)} color="primary">
-                        ساخت مجدد کد
+                        Re -structure the code
                       </Button> */}
                       <div>{device.licence_code.toUpperCase()}</div>
                     </div>
@@ -249,11 +249,11 @@ function AdminDevice({ _setSnackBarMessage }) {
           <Paper elevation={2} className="my-4 p-4">
             <div className="col-12 px-0 mb-3">
               <div className="mb-2 u-fontLarge u-fontWeightHeavy">
-                تنظیمات صفحه ی نمایش محصولات
+                Settings of Products Display
               </div>
               <div className="mb-4">
-                در این قسمت میتوانید نحوه ی چینش و نمایش محصولات خود را در صفحه
-                ی انتخاب محصولات اپلیکیشن مشخص کنید.
+                In this section you can set up and display your products on the page
+                Specify app product selection.
               </div>
               <FormControl
                 className="col-8 my-0 px-0"
@@ -292,12 +292,12 @@ function AdminDevice({ _setSnackBarMessage }) {
                     onChange={() => setIsCrmRequired((prev) => !prev)}
                     color="primary"
                   />{" "}
-                  <p>دریافت اطلاعات کاربر اجباری باشد</p>
+                  <p>Get Mandatory User Information</p>
                 </div>
               )}
               {menuType === SHORTCUT_MENU_NAME && (
                 <Link href={`${adminUrlPrefix}supermenu`}>
-                  رفتن به صفحه ی چینش محصولات و میانبرها
+                  Going to the plate of products and shortcuts
                 </Link>
               )}
               <br />
@@ -306,12 +306,12 @@ function AdminDevice({ _setSnackBarMessage }) {
               <br />
               <br />
               <div className="mb-2 u-fontLarge u-fontWeightHeavy">
-                انتخاب کانال فروش
+                Select the sales channel
               </div>
               <div className="mb-4">
-                در این قسمت میتوانید کانال فروش پیش فرض دستگاه خود را انتخاب
-                کنید (امکان تغییر این گزینه و همچنین انتخاب کانال های فروش دیگر
-                نیز وجود دارد )
+                In this section you can select your default sales channel
+                do(Ability to change this option as well as select other sales channels
+                There is also)
               </div>
               <FormControl
                 className="col-8 my-0 px-0"
@@ -348,7 +348,7 @@ function AdminDevice({ _setSnackBarMessage }) {
                   input={<Input tableInput />}
                 >
                   <MenuItem disabled value="">
-                    لطفا انتخاب کنید
+                    Please select
                   </MenuItem>
                   {Object.keys(business?.plugins_config?.base?.sales_channels)
                     .filter(
@@ -377,11 +377,11 @@ function AdminDevice({ _setSnackBarMessage }) {
                   <br />
                   <div className="mb-2 u-fontLarge u-fontWeightHeavy">
                     {" "}
-                    انتخاب نحوه تحویل پیش فرض
+                    Select how default delivery
                   </div>
                   <div className="mb-4">
-                    در این قسمت میتوانید نحوه تحویل پیش فرض دستگاه خود را انتخاب
-                    کنید (امکان تغییر این گزینه وجود دارد )
+                    In this section you can choose how your device's default delivery is delivered
+                    do(It is possible to change this option)
                   </div>
                   <FormControl
                     className="col-8 my-0 px-0"
@@ -418,7 +418,7 @@ function AdminDevice({ _setSnackBarMessage }) {
                       input={<Input tableInput />}
                     >
                       <MenuItem disabled value="">
-                        لطفا انتخاب کنید
+                        Please select
                       </MenuItem>
                       {availableDeliveryOptions.map((deliveryOption) => (
                         <MenuItem
@@ -462,9 +462,9 @@ function AdminDevice({ _setSnackBarMessage }) {
           <PopUp
             open={isDialogBoxOpen}
             onClose={() => setDialogBox(false)}
-            text="آیا مایل به حذف دستگاه هستید؟"
-            submitText="حذف دستگاه"
-            closeText="انصراف"
+            text="Are you willing to remove the device?"
+            submitText="Remove the device"
+            closeText="Candifying"
             onSubmit={onDeviceDelete}
           />
           <Button
@@ -475,7 +475,7 @@ function AdminDevice({ _setSnackBarMessage }) {
             onClick={submit}
             isLoading={isLoading}
           >
-            ذخیره تغییرات
+            Save changes
           </Button>
           {deviceId && (
             <Button
@@ -485,7 +485,7 @@ function AdminDevice({ _setSnackBarMessage }) {
               disabled={isLoading}
               onClick={() => setDialogBox(true)}
             >
-              حذف دستگاه
+              Remove the device
             </Button>
           )}
         </>

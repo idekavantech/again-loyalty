@@ -37,38 +37,38 @@ export function SOW({
   const admin_SOW_page_cards = useMemo(() => {
     return [
       {
-        title: "عملیات تسویه حساب",
+        title: "Settlement Operation",
         description:
-          "در این قسمت می‌توانید جزییات مربوط به تسویه حساب کیف پول مشترک را مشاهده کنید.",
+          "In this section you can see details of the joint wallet settlement.",
         cards: [
           {
-            title: "تسویه حساب",
-            description: `در این قسمت می‌توانید جزییات مربوط به تسویه حساب کیف پول مشترک را مشاهده و همچنین اقدام به عملیات تسویه حساب کنید.`,
+            title: "Checkout",
+            description: `In this section you can view details of the joint wallet settlement and also settle the settlement.`,
             link: `${urlPrefix}${pluginUrl}/finance/sow/checkout`,
             hasDivider: false,
           },
         ],
       },
       {
-        title: "گزارش کیف پول مشترک",
+        title: "Report of a joint wallet",
         description:
-          "در این قسمت می‌توانید گزارش‌های تراکنش‌های مربوط به بخش‌های مختلف کیف پول مشترک را مشاهده کنید.",
+          "In this section you can see reports of transactions for different parts of the joint wallet.",
         cards: [
           {
-            title: `گزارش‌ کیف پول (تراکنش‌های شعبه ${!isSuper ? "اصلی" : ""})`,
-            description: `در این قسمت می‌توانید گزارش کیف پول مربوط به تراکنش‌های شعبه‌ها را مشاهده نمایید.`,
+            title: `Wallet Report(Branch Transactions${!isSuper ? "Main" : ""})`,
+            description: `In this section you can see the wallet report on the branch transactions.`,
             link: `${urlPrefix}${pluginUrl}/finance/sow/branch_transactions`,
             hasDivider: true,
           },
           {
-            title: "گزارش‌ کیف پول (تراکنش‌های کاربر)",
-            description: `در این قسمت می‌توانید گزارش کیف پول مربوط به تراکنش‌های کاربران را مشاهده نمایید.`,
+            title: "Wallet Report(User transactions)",
+            description: `In this section you can see the wallet report on user transactions.`,
             link: `${urlPrefix}${pluginUrl}/finance/sow/users_transactions`,
             hasDivider: true,
           },
           {
-            title: "گزارش کیف پول(حساب‌های شعب)",
-            description: `در این قسمت میتوانید گزارش کیف پول مربوط به حساب‌های شعب را مشاهده نمایید.`,
+            title: "Wallet Report(Branch accounts)",
+            description: `In this section you can see the wallet report on the branch accounts.`,
             link: `${urlPrefix}${pluginUrl}/finance/sow/all_branch_transactions`,
             hasDivider: false,
           },
@@ -81,7 +81,7 @@ export function SOW({
     <div>
       <div className="container mb-5">
         <Head>
-          <title>کیف پول مشترک</title>
+          <title>Joint wallet</title>
         </Head>
         <AdminBreadCrumb />
         <SOWActivationModal
@@ -93,7 +93,7 @@ export function SOW({
           <div className="py-3 px-4">
             <div className="d-flex justify-content-between align-items-center">
               <div className="u-fontMedium" style={{ color: graphite }}>
-                کیف پول مشترک : {hasSOW ? "فعال" : "غیرفعال"}
+                Joint wallet: {hasSOW ? "active" : "Inactive"}
               </div>
               <Switch
                 checked={hasSOW}
@@ -107,8 +107,8 @@ export function SOW({
               className="u-font-semi-small mt-1"
               style={{ color: smoke, lineHeight: 1.8 }}
             >
-              در صورت فعال بودن کیف پول مشترک مشتریان شما می‌توانند با یک کیف
-              پول، از تمامی شعب شما خرید کنند.
+              If your customers are active, your customers can be with a bag
+              Money, buy from all your branches.
             </div>
           </div>
         </Paper>

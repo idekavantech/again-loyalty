@@ -4,7 +4,7 @@ import { sectionsLayout } from "../../sectionsLayout";
 import { SECTION_ORDER_ONLINE_HEADER } from "@saas/utils/constants/sections";
 
 const orderOnlineHeader = [
-  // هدر سفارش آنلاین
+  // Online order header
   {
     ...sectionsConfigTabsRepeatedParts["content"],
     items: [
@@ -19,14 +19,14 @@ const orderOnlineHeader = [
           },
         ],
         id: uniqueid(),
-        label: "نوار جستجو",
+        label: "Search bar",
         key: "search_bar",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "نمایش نوار جستجو",
+            label: "Show search bar",
             type: "checkbox",
             default_value: true,
             key: "has_search_bar",
@@ -44,14 +44,14 @@ const orderOnlineHeader = [
           },
         ],
         id: uniqueid(),
-        label: "عنوان",
+        label: "Title",
         key: "title",
         element_id: "theme_1_title",
 
         fields: [
           {
             id: uniqueid(),
-            label: "رنگ عنوان",
+            label: "Title color",
             type: "color",
             key: "title_color",
             default_value: "#ffffff",
@@ -70,21 +70,21 @@ const orderOnlineHeader = [
           },
         ],
         id: uniqueid(),
-        label: "لوگو",
+        label: "People",
         key: "logo",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "نمایش لوگو",
+            label: "Logo Show",
             type: "checkbox",
             default_value: true,
             key: "has_logo",
           },
           {
             id: uniqueid(),
-            label: "اپلود عکس",
+            label: "Upload a Photo",
             type: "image_uploader",
             default_value: null,
             key: "value",

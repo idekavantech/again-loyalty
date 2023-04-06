@@ -204,7 +204,7 @@ export function AdminProductSalesReport({
   return (
     <div className="container mb-5">
       <Head>
-        <title>گزارش تعدادی فروش محصولات</title>
+        <title>Report a number of sales of products</title>
       </Head>
       <SearchModal
         isOpen={isSearchModalOpen}
@@ -215,11 +215,11 @@ export function AdminProductSalesReport({
         setSelectedProduct={setSelectedProduct}
       />
       <AdminBreadCrumb
-        submitButtonText="خروجی گرفتن"
+        submitButtonText="Output"
         submitAction={() => {
           if (user?.token) {
             downloaderRequest(
-              "گزارش تعدادی فروش محصولات",
+              "Report a number of sales of products",
               exportCSVEndpoint,
               user.token
             );
@@ -231,7 +231,7 @@ export function AdminProductSalesReport({
         <div className="d-flex flex-wrap align-items-center justify-content-between p-4">
           <div className="d-flex flex-wrap align-items-center">
             <div className="d-flex align-items-center  ml-3 mb-3">
-              <div className="mt-2 ml-2">زمان ثبت سفارش: </div>
+              <div className="mt-2 ml-2">Order registration time: </div>
               <div className="d-flex flex-wrap align-items-center ml-5 mb-4 mb-lg-0">
                 <Button
                   style={{
@@ -241,13 +241,13 @@ export function AdminProductSalesReport({
                   onClick={handleOpen}
                   variant="outlined"
                 >
-                  از{" "}
+                  From{" "}
                   <span className="px-2">
                     {englishNumberToPersianNumber(
                       formatDateObjectToNormal(selectedDayRange.from)
                     )}
                   </span>
-                  تا{" "}
+                  until the{" "}
                   <span className="px-2">
                     {englishNumberToPersianNumber(
                       formatDateObjectToNormal(selectedDayRange.to)
@@ -291,7 +291,7 @@ export function AdminProductSalesReport({
                 </Popover>
               </div>
 
-              <div className="mt-2 mx-2">زمان ارسال سفارش: </div>
+              <div className="mt-2 mx-2">The time of sending the order: </div>
               <div className="d-flex flex-wrap align-items-center ml-5 mb-4 mb-lg-0">
                 <Button
                   style={{
@@ -301,13 +301,13 @@ export function AdminProductSalesReport({
                   onClick={handleOpenModalDelivery}
                   variant="outlined"
                 >
-                  از{" "}
+                  From{" "}
                   <span className="px-2">
                     {englishNumberToPersianNumber(
                       formatDateObjectToNormal(selectedDeliveryDayRange.from)
                     )}
                   </span>
-                  تا{" "}
+                  until the{" "}
                   <span className="px-2">
                     {englishNumberToPersianNumber(
                       formatDateObjectToNormal(selectedDeliveryDayRange.to)
@@ -363,7 +363,7 @@ export function AdminProductSalesReport({
               // IconComponent={() => null}
               renderValue={() => {
                 if (selectedSalesChannel.length === 0)
-                  return "کانال فروش انتخاب کنید";
+                  return "Select the sales channel";
                 if (
                   selectedSalesChannel.length === 1 &&
                   selectedSalesChannel[0]
@@ -372,10 +372,10 @@ export function AdminProductSalesReport({
                     (saleChannel) => saleChannel.id === selectedSalesChannel[0]
                   ).title;
                 if (selectedSalesChannel.length === salesChannelsOptions.length)
-                  return "همه کانال فروش‌ها";
+                  return "All sales channels";
                 return `${englishNumberToPersianNumber(
                   selectedSalesChannel.length
-                )} کانال‌فروش `;
+                )} Channel`;
               }}
               MenuProps={{
                 getContentAnchorEl: null,
@@ -418,7 +418,7 @@ export function AdminProductSalesReport({
                   }
                 />
                 <ListItemText
-                  primary="انتخاب همه کانال فروش‌ها"
+                  primary="Select all sales channels"
                   className="text-right"
                 />
               </MenuItem>
@@ -472,16 +472,16 @@ export function AdminProductSalesReport({
                 displayEmpty
                 size="large"
                 renderValue={() => {
-                  if (selectedBranches.length === 0) return "شعبه انتخاب کنید";
+                  if (selectedBranches.length === 0) return "Choose a branch";
                   if (selectedBranches.length === 1 && selectedBranches[0])
                     return branches.find(
                       (branch) => branch.id === selectedBranches[0]
                     ).title;
                   if (selectedBranches.length === branches.length)
-                    return "همه شعب";
+                    return "All branches";
                   return `${englishNumberToPersianNumber(
                     selectedBranches.length
-                  )} شعبه `;
+                  )} Branch`;
                 }}
                 MenuProps={{
                   getContentAnchorEl: null,
@@ -516,7 +516,7 @@ export function AdminProductSalesReport({
                     checked={selectedBranches.length === branches.length}
                   />
                   <ListItemText
-                    primary="انتخاب همه شعب"
+                    primary="Choosing all branches"
                     className="text-right"
                   />
                 </MenuItem>
@@ -574,7 +574,7 @@ export function AdminProductSalesReport({
                     width: "100%",
                   }}
                   className="ml-2"
-                  placeholder={minWidth768 ? "جستجوی محصول" : ""}
+                  placeholder={minWidth768 ? "Product search" : ""}
                   InputProps={{
                     startAdornment: (
                       <InputAdornment
@@ -610,7 +610,7 @@ export function AdminProductSalesReport({
                 }}
                 className="ml-2 mb-2"
                 onDelete={() => setSelectedBranches([])}
-                label="همه شعب"
+                label="All branches"
               />
             ) : selectedBranches?.length ? (
               branches
@@ -655,7 +655,7 @@ export function AdminProductSalesReport({
                 onDelete={() =>
                   setSelectedBranches(branches.map((branch) => branch.id))
                 }
-                label="هیچ‌کدام از شعب"
+                label="None of the branches"
               />
             )}
           </div>
@@ -675,7 +675,7 @@ export function AdminProductSalesReport({
               }}
               className="ml-2 mb-2"
               onDelete={() => setSelectedSalesChannel([])}
-              label="همه کانال‌های فروش"
+              label="All sales channels"
             />
           ) : selectedSalesChannel?.length ? (
             salesChannelsOptions
@@ -724,7 +724,7 @@ export function AdminProductSalesReport({
                   salesChannelsOptions?.map((ingredient) => ingredient.id)
                 )
               }
-              label="هیچ‌کدام از کانال‌های فروش"
+              label="None of the sales channels"
             />
           )}
         </div>

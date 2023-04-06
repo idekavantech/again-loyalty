@@ -45,8 +45,8 @@ const BirthDate = ({ adminUrlPrefix, business, _updateBusiness }) => {
           birth_date: persianToEnglishNumber(birthDate),
         },
       },
-      "اطلاعات با موفقیت ذخیره شد",
-      "خطا در ثبت اطلاعات",
+      "Information was successfully stored",
+      "Information Error",
       () =>
         router.push(
           `${adminUrlPrefix}documents/${userAge < 18 ? "setting" : "info"}`
@@ -56,12 +56,12 @@ const BirthDate = ({ adminUrlPrefix, business, _updateBusiness }) => {
   return (
     <div className="container mb-5">
       <Head>
-        <title>تنظیمات دامنه</title>
+        <title>Domain settings</title>
       </Head>
       <AdminBreadCrumb />
       <div className="col-12 mt-4 px-0">
         <Paper elevation={1} className="p-2 p-md-4">
-          <p style={{ fontWeight: 600 }}>تاریخ تولد</p>
+          <p style={{ fontWeight: 600 }}>Date of birth</p>
           <p
             style={{
               marginTop: 40,
@@ -70,7 +70,7 @@ const BirthDate = ({ adminUrlPrefix, business, _updateBusiness }) => {
               marginBottom: 20,
             }}
           >
-            تاریخ تولد خود را مطابق شناسنامه وارد کنید.
+            Enter your birth date according to ID.
           </p>
           <div
             className="mb-5"
@@ -87,7 +87,7 @@ const BirthDate = ({ adminUrlPrefix, business, _updateBusiness }) => {
               handleDateChange={(date) =>
                 setBirthDate(date?.format("YYYY-MM-DD") || null)
               }
-              placeholder="تاریخ تولد"
+              placeholder="Date of birth"
             />
           </div>
         </Paper>
@@ -101,7 +101,7 @@ const BirthDate = ({ adminUrlPrefix, business, _updateBusiness }) => {
             disabled={!birthDate}
             onClick={submit}
           >
-            تایید و ادامه
+            Confirm and continue
           </Button>
         </div>
       </div>

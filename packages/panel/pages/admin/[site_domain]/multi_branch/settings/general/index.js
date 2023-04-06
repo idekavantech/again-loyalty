@@ -11,5 +11,5 @@ AdminShoppingDashboardPage[BRANCHES_PLUGIN] = true;
 AdminShoppingDashboardPage.ShouldBeAdmin = true;
 AdminShoppingDashboardPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "تنظیمات سفارش‌گیری",
+  title: "Ordering settings",
 };

@@ -51,46 +51,46 @@ jMoment.locale("fa");
 jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
 
 const categories = [
-  { id: 1, title: "نان‌ها" },
-  { id: 2, title: "سس‌ها" },
-  { id: 3, title: "نوشیدنی‌ها" },
-  { id: 4, title: "ساندویچ‌ها" },
+  { id: 1, title: "Bread" },
+  { id: 2, title: "Sauces" },
+  { id: 3, title: "drinks" },
+  { id: 4, title: "sandwiches" },
 ];
 
 const sortingOptions = [
-  { id: 0, text: "بیشترین تعداد فروش", keyword: HIGHEST_SALES_AMOUNT },
-  { id: 1, text: "کمترین تعداد فروش", keyword: LOWEST_SALES_AMOUNT },
-  { id: 2, text: "بیشترین مبلغ فروش", keyword: HIGHEST_PRICE },
-  { id: 3, text: "کمترین مبلغ فروش", keyword: LOWEST_PRICE },
+  { id: 0, text: "The highest number of sales", keyword: HIGHEST_SALES_AMOUNT },
+  { id: 1, text: "The least number of sales", keyword: LOWEST_SALES_AMOUNT },
+  { id: 2, text: "The highest amount of sale", keyword: HIGHEST_PRICE },
+  { id: 3, text: "The least amount of sale", keyword: LOWEST_PRICE },
 ];
 
 const headCells = [
   {
     id: "id",
-    label: "ردیف",
+    label: "Row",
     align: "center",
   },
   {
     id: "id",
-    label: "دسته‌بندی",
+    label: "Grouping",
     align: "center",
   },
   {
     id: "id",
-    label: "تعداد فروش",
+    label: "Sales number",
     align: "center",
   },
   {
     id: "id",
-    label: "تعداد بازگشت",
+    label: "The number of return",
     align: "center",
   },
   {
     id: "id",
     label: (
       <div className="d-flex flex-column">
-        <div>مبلغ بازگشت</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>The amount of return</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
@@ -99,8 +99,8 @@ const headCells = [
     id: "id",
     label: (
       <div className="d-flex flex-column">
-        <div>مبلغ تخفیف</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>The amount of discount</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
@@ -109,8 +109,8 @@ const headCells = [
     id: "id",
     label: (
       <div className="d-flex flex-column">
-        <div>مالیات</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>Tax</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
@@ -119,8 +119,8 @@ const headCells = [
     id: "id",
     label: (
       <div className="d-flex flex-column">
-        <div>مبلغ فروش ناخالص</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>The amount of gross sales</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
@@ -138,8 +138,8 @@ const headCells = [
     id: "id",
     label: (
       <div className="d-flex flex-column">
-        <div>مبلغ فروش خالص</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>The amount of net sales</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
@@ -183,7 +183,7 @@ export function AdminCategoriesSalesReport({ isLoading, isSuper, branches }) {
     () => ({
       yAxis: {
         title: {
-          text: "مبلغ خرید به تومان",
+          text: "The amount of purchase to Toman",
           style: {
             fontSize: "14px",
             fontFamily: "IranSans",
@@ -219,16 +219,16 @@ export function AdminCategoriesSalesReport({ isLoading, isSuper, branches }) {
       },
       xAxis: {
         categories: [
-          "مترو آزادی",
-          "شادمان",
-          "ولیعصر",
-          "انقلاب",
-          "سیدخندان",
-          "ولنجک",
-          "کامرانیه",
-          "سعادت‌آباد",
-          "فرمانیه",
-          "شهرک‌غرب",
+          "Freedom Metro",
+          "Happy",
+          "Vali Asr",
+          "Revolution",
+          "Seyed Khandan",
+          "Vegetation",
+          "Kamrania",
+          "Sa'adat Abad",
+          "Command",
+          "Shahrake Gharb",
         ],
       },
       series: [
@@ -261,7 +261,7 @@ export function AdminCategoriesSalesReport({ isLoading, isSuper, branches }) {
   return (
     <div className="container">
       <Head>
-        <title>گزارش مالی فروش دسته‌بندی‌ها</title>
+        <title>Category Financial Report</title>
       </Head>
 
       <AdminBreadCrumb />
@@ -291,13 +291,13 @@ export function AdminCategoriesSalesReport({ isLoading, isSuper, branches }) {
                 onClick={handleOpen}
                 variant="outlined"
               >
-                از{" "}
+                From{" "}
                 <span className="px-2">
                   {englishNumberToPersianNumber(
                     formatDateObjectToNormal(selectedDayRange.from)
                   )}
                 </span>
-                تا{" "}
+                until the{" "}
                 <span className="px-2">
                   {englishNumberToPersianNumber(
                     formatDateObjectToNormal(selectedDayRange.to)
@@ -349,16 +349,16 @@ export function AdminCategoriesSalesReport({ isLoading, isSuper, branches }) {
                 displayEmpty
                 size="large"
                 renderValue={() => {
-                  if (selectedBranches.length === 0) return "شعبه انتخاب کنید";
+                  if (selectedBranches.length === 0) return "Choose a branch";
                   if (selectedBranches.length === 1 && selectedBranches[0])
                     return branches.find(
                       (branch) => branch.id === selectedBranches[0]
                     ).title;
                   if (selectedBranches.length === branches.length)
-                    return "همه شعب";
+                    return "All branches";
                   return `${englishNumberToPersianNumber(
                     selectedBranches.length
-                  )} شعبه `;
+                  )} Branch`;
                 }}
                 MenuProps={{
                   getContentAnchorEl: null,
@@ -393,7 +393,7 @@ export function AdminCategoriesSalesReport({ isLoading, isSuper, branches }) {
                     checked={selectedBranches.length === branches.length}
                   />
                   <ListItemText
-                    primary="انتخاب همه شعب"
+                    primary="Choosing all branches"
                     className="text-right"
                   />
                 </MenuItem>
@@ -449,16 +449,16 @@ export function AdminCategoriesSalesReport({ isLoading, isSuper, branches }) {
               // IconComponent={() => null}
               renderValue={() => {
                 if (selectedCategories.length === 0)
-                  return "دسته‌بندی انتخاب کنید";
+                  return "Select the category";
                 if (selectedCategories.length === 1 && selectedCategories[0])
                   return categories.find(
                     (category) => category.id === selectedCategories[0]
                   ).title;
                 if (selectedCategories.length === categories.length)
-                  return "همه دسته‌بندی‌ها";
+                  return "All categories";
                 return `${englishNumberToPersianNumber(
                   selectedCategories.length
-                )} دسته‌بندی `;
+                )} Grouping`;
               }}
               MenuProps={{
                 getContentAnchorEl: null,
@@ -493,7 +493,7 @@ export function AdminCategoriesSalesReport({ isLoading, isSuper, branches }) {
                   checked={selectedCategories.length === categories.length}
                 />
                 <ListItemText
-                  primary="انتخاب همه دسته‌بندی‌ها"
+                  primary="Choosing all categories"
                   className="text-right"
                 />
               </MenuItem>
@@ -558,7 +558,7 @@ export function AdminCategoriesSalesReport({ isLoading, isSuper, branches }) {
                 style={{ width: 200 }}
                 className="px-3 u-fontWeightBold u-fontNormal my-1"
               >
-                مرتب‌سازی بر اساس
+                order by
               </div>
             }
             selectOption={(text) =>
@@ -567,7 +567,7 @@ export function AdminCategoriesSalesReport({ isLoading, isSuper, branches }) {
               )
             }
             inputData={{
-              defaultValue: "مرتب‌سازی",
+              defaultValue: "Ordering",
             }}
             selected={sortingOptions.find(
               (i) => i.keyword === selectedSortingType
@@ -602,7 +602,7 @@ export function AdminCategoriesSalesReport({ isLoading, isSuper, branches }) {
                 }}
                 className="ml-2 mb-2"
                 onDelete={() => setSelectedBranches([])}
-                label="همه شعب"
+                label="All branches"
               />
             ) : selectedBranches?.length ? (
               branches
@@ -647,7 +647,7 @@ export function AdminCategoriesSalesReport({ isLoading, isSuper, branches }) {
                 onDelete={() =>
                   setSelectedBranches(branches.map((branch) => branch.id))
                 }
-                label="هیچ‌کدام از شعب"
+                label="None of the branches"
               />
             )}
           </div>
@@ -667,7 +667,7 @@ export function AdminCategoriesSalesReport({ isLoading, isSuper, branches }) {
               }}
               className="ml-2 mb-2"
               onDelete={() => setSelectedCategories([])}
-              label="همه دسته‌بندی‌ها"
+              label="All categories"
             />
           ) : selectedCategories?.length ? (
             categories
@@ -716,7 +716,7 @@ export function AdminCategoriesSalesReport({ isLoading, isSuper, branches }) {
                   categories?.map((category) => category.id)
                 )
               }
-              label="‌هیچ‌کدام از دسته‌بندی‌ها"
+              label="‌None of the categories"
             />
           )}
         </div>
@@ -829,7 +829,7 @@ export function AdminCategoriesSalesReport({ isLoading, isSuper, branches }) {
                     align="center"
                     style={{ border: "none", position: "sticky", right: 0 }}
                   >
-                    جمع کل
+                    total
                   </TableCell>
                   {isSuper && (
                     <TableCell

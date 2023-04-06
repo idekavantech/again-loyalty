@@ -121,7 +121,7 @@ export function AdminNavigationMenu({
             _obj.links.unshift({
                 id: uniqueid(),
                 link: "/",
-                title: "زیر منوی جدید",
+                title: "Under the new menu",
                 is_active: true,
             });
         } else {
@@ -129,7 +129,7 @@ export function AdminNavigationMenu({
                 obj.links.push({
                     id: uniqueid(),
                     link: "/",
-                    title: "منوی جدید",
+                    title: "New menu",
                     is_active: true,
                 });
             } else {
@@ -137,7 +137,7 @@ export function AdminNavigationMenu({
                     {
                         id: uniqueid(),
                         link: "/",
-                        title: "منوی جدید",
+                        title: "New menu",
                         is_active: true,
                     },
                 ];
@@ -195,8 +195,8 @@ export function AdminNavigationMenu({
         };
         _updateBusiness(
             editedBusiness,
-            "تنظیمات اصلی با موفقیت ذخیره شد.",
-            "ذخیره تغییرات تنظیمات اصلی ناموفق بود!"
+            "The original settings were successfully saved.",
+            "Save the changes to the original settings failed!"
         );
     };
 
@@ -265,19 +265,19 @@ export function AdminNavigationMenu({
         >
             <DialogContent>
                 <DialogContentText id="alert-dialog-description">
-                    آیا مطمئن هستید که می‌خواهید این منو آيتم را حذف کنید؟
+                    Are you sure you want to delete this item menu?
                 </DialogContentText>
             </DialogContent>
             <DialogActions>
                 <Button onClick={deleteMenuItem} color="primary">
-                    حذف منو آیتم
+                    Remove the item menu
                 </Button>
                 <Button
                     onClick={() => setDeleteConfirmationPopupOpen(false)}
                     color="primary"
                     autoFocus
                 >
-                    انصراف
+                    Candifying
                 </Button>
             </DialogActions>
         </Dialog>
@@ -290,7 +290,7 @@ export function AdminNavigationMenu({
             isBig
             header={
                 <ModalHeader
-                    title="منو آیتم"
+                    title="The item menu"
                     onRightClick={() => setEditMenuItemPopupOpen(false)}
                 />
             }
@@ -300,7 +300,7 @@ export function AdminNavigationMenu({
                         <div className="my-4">
                             <Input
                                 value={_name}
-                                label="عنوان منو"
+                                label="Menu title"
                                 onChange={(value) => {
                                     _setName(value);
                                 }}
@@ -311,7 +311,7 @@ export function AdminNavigationMenu({
                             <Input
                                 value={_link}
                                 className="direction-ltr"
-                                label="لینک منو"
+                                label="Menu link"
                                 onChange={(value) => {
                                     const _newLink = value?.replace(
                                         adminUrlPrefix,
@@ -333,7 +333,7 @@ export function AdminNavigationMenu({
                             variant="contained"
                             color="primary"
                         >
-                            تایید و ادامه
+                            Confirm and continue
                         </Button>
                     ) : (
                         <Button
@@ -342,7 +342,7 @@ export function AdminNavigationMenu({
                             className="w-100"
                             color="primary"
                         >
-                            تایید و ادامه
+                            Confirm and continue
                         </Button>
                     )}
                 </div>
@@ -436,7 +436,7 @@ export function AdminNavigationMenu({
                                     style={{ direction: "ltr" }}
                                     endIcon={<Add />}
                                 >
-                                    افزودن زیر منو
+                                    Add under the menu
                                 </Button>
                             </Paper>
                         </div>
@@ -495,7 +495,7 @@ export function AdminNavigationMenu({
             {renderDeleteItemPopup}
             {renderEditItemPopup}
             <Head>
-                <title>ویرایش منوهای سایت</title>
+                <title>Edit site menus</title>
             </Head>
             <AdminBreadCrumb />
             <Paper elevation={1} className="p-3 mt-3 d-flex flex-wrap">
@@ -506,7 +506,7 @@ export function AdminNavigationMenu({
                             fontSize: 16,
                         }}
                     >
-                        اطلاعات اصلی
+                        Original information
                     </div>
                     <div className="my-3">
                         {isEditTitleInputDisabled ? (
@@ -515,7 +515,7 @@ export function AdminNavigationMenu({
                             <Input
                                 size="medium"
                                 value={menu && menu.name}
-                                label="عنوان منو"
+                                label="Menu title"
                                 onChange={(value) => {
                                     setMenu({ ...menu, name: value });
                                 }}
@@ -530,7 +530,7 @@ export function AdminNavigationMenu({
                     className="px-3 d-flex justify-content-between align-items-center"
                     style={{ color: theme.palette.text.tertiary, fontSize: 16 }}
                 >
-                    <div>آیتم منو</div>
+                    <div>Menu item</div>
                     <div>
                         <Button
                             style={{ direction: "ltr" }}
@@ -543,7 +543,7 @@ export function AdminNavigationMenu({
                             }
                             endIcon={<AddRoundedIcon fontSize="small" />}
                         >
-                            منوآیتم جدید
+                            The new menu
                         </Button>
                     </div>
                 </div>
@@ -589,7 +589,7 @@ export function AdminNavigationMenu({
             </Paper>
             <SaveAndDiscardButtons
                 saveAction={submit}
-                saveText="ذخیره منو"
+                saveText="Save menu"
                 disabled={loading}
             />
         </div>

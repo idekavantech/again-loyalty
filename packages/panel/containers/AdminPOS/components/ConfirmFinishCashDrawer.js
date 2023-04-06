@@ -25,16 +25,16 @@ export default function ConfirmFinishCashDrawer({ isOpen, onClose, submit }) {
           >
             <CloseRoundedIcon fontSize="small" />
           </IconButton>
-          <div className="u-fontWeightHeavy u-fontLarge">صندوق بررسی نشده</div>
+          <div className="u-fontWeightHeavy u-fontLarge">Funds not checked</div>
         </div>
         <DialogContentText>
-          {`شما مبلغ واقعی موجود در صندوق را وارد نکردید در این صورت صندوق به حالت
+          {`You did not enter the actual amount in the fund. In this case, the fund to mode
           "`}
           <span className="u-fontWeightHeavy" style={{ color: text.critical }}>
-            بررسی نشده
+            Not checked
           </span>
-          {`" قرار میگیرد و میتوانید در قسمت تاریخچه صندوق‌ها اقدام به بستن صندوق
-          کنید.`}
+          {`" Is placed and you can close the fund history section
+          do.`}
         </DialogContentText>
       </DialogContent>
       <DialogActions className="p-4">
@@ -47,7 +47,7 @@ export default function ConfirmFinishCashDrawer({ isOpen, onClose, submit }) {
           onClick={onClose}
           className="ml-2 u-box-shadow-none"
         >
-          لغو
+          Cancellation
         </Button>
         <Button
           variant="contained"
@@ -58,7 +58,7 @@ export default function ConfirmFinishCashDrawer({ isOpen, onClose, submit }) {
           color="primary"
           autoFocus
         >
-          تایید
+          Confirm
         </Button>
       </DialogActions>
     </Dialog>

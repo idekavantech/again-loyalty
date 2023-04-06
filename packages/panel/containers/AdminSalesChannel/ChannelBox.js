@@ -37,7 +37,7 @@ const ChannelBox = ({ name, description, image, cta, video }) => {
                 width={80}
                 height={80}
                 src={image}
-                alt={`کانال بازاریابی ${name}`}
+                alt={`Marketing Channel${name}`}
               />
             </div>
             <div className={`d-flex ${!maxWidth992 ? "mr-5" : ""} flex-col`}>
@@ -57,7 +57,7 @@ const ChannelBox = ({ name, description, image, cta, video }) => {
               variant="outlined"
             >
               <PlayCircleFilledIcon />
-              <span className="mr-2">مشاهده ویدیو</span>
+              <span className="mr-2">View video</span>
             </Button>
             <Button color="primary" variant="contained" onClick={onCtaClick}>
               <span className="mr-2">{cta.text}</span>

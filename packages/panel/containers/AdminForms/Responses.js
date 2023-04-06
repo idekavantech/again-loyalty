@@ -254,14 +254,14 @@ export function AdminForms({
   return (
     <div className="container">
       <Head>
-        <title>پاسخ‌های فرم‌</title>
+        <title>Form Answers</title>
       </Head>
       <AdminBreadCrumb
-        submitButtonText="خروجی گرفتن"
+        submitButtonText="Output"
         submitAction={() => {
           if (user?.token) {
             downloaderRequest(
-              "گزارش تعدادی فروش محصولات",
+              "Report a number of sales of products",
               exportCSVEndpoint,
               user.token
             );
@@ -277,13 +277,13 @@ export function AdminForms({
           onClick={handleOpen}
           variant="outlined"
         >
-          از{" "}
+          From{" "}
           <span className="px-2">
             {englishNumberToPersianNumber(
               formatDateObjectToNormal(selectedDayRange.from)
             )}
           </span>
-          تا{" "}
+          until the{" "}
           <span className="px-2">
             {englishNumberToPersianNumber(
               formatDateObjectToNormal(selectedDayRange.to)
@@ -325,7 +325,7 @@ export function AdminForms({
         </Popover>
       </div>
       <div className="mt-3 px-4">
-        <span>فرم</span>
+        <span>Form</span>
         <span className="u-font-medium u-fontWeightBold">
           {" "}
           {form && form.title}
@@ -344,8 +344,8 @@ export function AdminForms({
             <Table aria-label="simple table">
               <TableHead>
                 <TableRow>
-                  <TableCell align="right">ردیف</TableCell>
-                  <TableCell align="right">زمان ارسال</TableCell>
+                  <TableCell align="right">Row</TableCell>
+                  <TableCell align="right">shipping time</TableCell>
                   {tableHeadCells &&
                     tableHeadCells.map((tableHeadCell) => (
                       <TableCell key={tableHeadCell.id} align="right">
@@ -554,14 +554,14 @@ export function AdminForms({
             </Table>
           </TableContainer>
           <TablePagination
-            labelRowsPerPage={!maxWidth768 ? "تعداد ردیف در هر صفحه" : ""}
+            labelRowsPerPage={!maxWidth768 ? "The number of rows per page" : ""}
             labelDisplayedRows={({ from, to, count }) =>
               `${englishNumberToPersianNumber(
                 from
-              )} - ${englishNumberToPersianNumber(to)} از ${
+              )} - ${englishNumberToPersianNumber(to)} From${
                 count !== -1
                   ? englishNumberToPersianNumber(count)
-                  : `بیشتر از  ${englishNumberToPersianNumber(to)}`
+                  : `more than${englishNumberToPersianNumber(to)}`
               }`
             }
             rowsPerPageOptions={[20]}
@@ -605,8 +605,8 @@ export function AdminForms({
           className="d-flex my-3 flex-column w-100 justify-content-start p-3 align-items-start"
         >
           <div style={{ color: pollution }}>
-            تاکنون اطلاعاتی برای این فرم دریافت نشده است، زمانی که کاربر وب‌سایت
-            شما این فرم را پر نماید، اطلاعات دریافتی در این بخش نمایان خواهد شد
+            No information has been received for this form so far, when the website user
+            You will fill this form, the information you received will appear in this section
           </div>
         </Paper>
       )}

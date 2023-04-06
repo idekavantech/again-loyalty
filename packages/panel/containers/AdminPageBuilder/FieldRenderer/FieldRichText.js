@@ -68,7 +68,7 @@ const FieldRichText = ({
         onClick={() => setModalOpen(true)}
         color="primary"
       >
-        {edit_button_text || "ویرایش"}
+        {edit_button_text || "Edit"}
       </Button>
       <Modal
         onClose={() => setModalOpen(false)}

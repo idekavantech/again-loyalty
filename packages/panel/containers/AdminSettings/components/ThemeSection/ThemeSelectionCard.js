@@ -23,14 +23,14 @@ const ThemeSelectionCard = (props) => {
             className="u-text-primary-blue-remove u-fontNormal p-1"
             onClick={onClick}
           >
-            پیش‌نمایش
+            Preview
           </button>
 
           <button
             className="u-text-primary-blue-remove u-fontNormal u-border-primary-blue u-border-radius-4 p-1"
             onClick={onSelect}
           >
-            انتخاب
+            Selection
           </button>
         </div>
       )}

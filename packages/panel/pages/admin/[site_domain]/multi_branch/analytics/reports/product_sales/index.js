@@ -13,5 +13,5 @@ export default function AdminAnalyticsProductSalesReport() {
 AdminAnalyticsProductSalesReport.ShouldBeAdmin = true;
 AdminAnalyticsProductSalesReport.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "گزارش تعدادی فروش محصولات",
+  title: "Report a number of sales of products",
 };

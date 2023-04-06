@@ -11,5 +11,5 @@ AdminCRMLabelsListPage.ShouldBeAdmin = true;
 AdminCRMLabelsListPage.layoutConfig = { isSmall: true };
 AdminCRMLabelsListPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "تنظیمات اتوماسیون مارکتینگ",
+  title: "Marketing Automation Settings",
 };

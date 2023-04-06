@@ -7,56 +7,56 @@ const getVideoUrl = (name) =>
   `https://hs3-cdn-saas.behtarino.com/static/panel/saleschannel/${name}.mp4`;
 export const SALES_CHANNELS = [
   {
-    name: "بهترینو",
+    name: "Bestino",
     description:
-      "بهترینو یک پلتفرم معرفی کسب‌وکار است که ماهانه ۵ میلیون بازدیدکننده دارد. با بهترینو در نتایج برتر گوگل دیده شوید و مشتری‌های بیشتری جذب کنید.",
+      "The best is a business introduction platform that has 2 million visitors a month. See with the best in Google's top results and attract more customers.",
     image: getImageUrl("behtarino"),
     cta: {
-      text: "ثبت نام در بهترینو",
+      text: "Sign up in the best.",
       link: "https://behtarino.com/precreate",
     },
     video: getVideoUrl("behtarino"),
   },
   {
-    name: "تُرُب",
+    name: "Rabboo",
     description:
-      "بازدیدکنندگان سایت تُرُب دنبال مقایسه محصولات در فروشگاه‌های اینترنتی مختلف هستند،. توجه آن‌ها را به سایت خود جلب کنید.",
+      "Visitors to the Torb site are looking to compare products in different online stores,. Draw their attention to your site.",
     image: getImageUrl("torob"),
     cta: {
-      text: "ثبت نام در ترب",
+      text: "Horrying enrollment",
       link: "https://panel.torob.com/s",
     },
     video: getVideoUrl("torob"),
   },
   {
-    name: "ایمالز",
+    name: "Imals",
     description:
-      "ایمالز از محبوب‌ترین پلتفرم‌های فروش آنلاین است که مشتریان را به سایت فروشندگان وصل می‌کند. با ایمالز می‌توانید بازدید فروشگاه اینترنتی خود را بالا ببرید.",
+      "Imals is one of the most popular online sales platforms that connect customers to the sellers site. With Imalas you can increase your online store visit.",
     image: getImageUrl("emalls"),
     cta: {
-      text: "ثبت نام در ایمالز",
+      text: "Enrollment in Imalas",
       link: "https://emalls.ir/ShopRequest/",
     },
     video: getVideoUrl("emalls"),
   },
   {
-    name: "اینستاگرام",
+    name: "Instagram",
     description:
-      "با قرار دادن لینک سایت در بایو، استوری و پست‌های اینستاگرام، مخاطبان اکانت اینستاگرام خود را به سمت سایت و خرید آنلاین هدایت کنید.",
+      "With the site link in Bioo, Story and Instagram posts, direct your Instagram account audience to the site and online shopping.",
     image: getImageUrl("instagram"),
     cta: {
-      text: "دریافت مشاوره",
+      text: "Receive advice",
       link: "https://atro.agency/",
     },
     video: getVideoUrl("instagram"),
   },
   {
-    name: "دوباره",
+    name: "Again",
     description:
-      "مشتریان فعلی شما، سرمایه اصلی کسب‌وکارتان هستند؛ با آن‌ها خداحافظی نکنید! با نرم‌افزار باشگاه مشتریان «دوباره»، می‌توانید آن‌ها را برای خرید مجدد از فروشگاه خود بازگردانید.",
+      "Your current customers are the main business capital of your business;Don't say goodbye to them! With Customer Club Software«Again», You can get them back from your store to repurchase.",
     image: getImageUrl("dobare"),
     cta: {
-      text: "فعال‌سازی باشگاه",
+      text: "Club activation",
       link: "https://dobare.me/",
     },
     video: getVideoUrl("dobare"),
@@ -64,76 +64,76 @@ export const SALES_CHANNELS = [
   {
     name: "QR Code",
     description:
-      "اگر فروش حضوری دارید، به‌راحتی با قراردادن یک QR Code در فروشگاه خود می‌توانید مشتری حضوری خود را تبدیل به کاربر سایتتان کنید.",
+      "If you have in -person sales, easily by putting aQR Code In your store you can turn your customer into your site user.",
     image: getImageUrl("qr"),
     cta: {
-      text: "ساخت QR Code",
+      text: "BuildQR Code",
       link: "https://bizarar.ir/qrcode-generator",
     },
     video: getVideoUrl("qr"),
   },
   {
-    name: "گوگل مپ",
+    name: "Google map",
     description:
-      "آدرس فروشگاه خود و وبسایت آن را در گوگل مپ ثبت کنید تا بتوانید مشتری‌هایی که در نقشه جست‌وجو می‌کنند را وارد فروشگاه خود کنید.",
+      "Register your store address and its website on Google Map so you can enter your customers on the map..",
     image: getImageUrl("gmap"),
     cta: {
-      text: "ثبت موقعیت",
+      text: "Position registration",
       link: "https://www.google.com/maps",
     },
     video: getVideoUrl("gmap"),
   },
   {
-    name: "سئو",
+    name: "The article",
     description:
-      "با استفاده از تکنیک‌های سئو (بهینه‌سازی سایت برای موتورهای جست‌وجو)، سایت خود را به صفحه اول گوگل بیاورید تا بازدید سایت شما رشد کند.",
+      "Using SEO techniques(Site Optimization for search engines), Bring your site to Google's front page to grow your site's visit.",
     image: getImageUrl("seo"),
     cta: {
-      text: "دریافت مشاوره",
+      text: "Receive advice",
       link: "https://atro.agency/",
     },
     video: getVideoUrl("seo"),
   },
   {
-    name: "گوگل ادز",
+    name: "Google Adz",
     description:
-      "اگر بخواهید زمان طولانی سئو را با صرف هزینه کوتاه‌تر کنید، می‌توانید با تبلیغات در گوگل (گوگل ادز) راه میانبر را انتخاب کنید و لینک یک گوگل باشید.",
+      "If you want to shorten the long time SEO at the expense, you can advertise on Google(Google Adz) Choose the shortcut and be the link to a Google.",
     image: getImageUrl("gads"),
     cta: {
-      text: "دریافت مشاوره",
+      text: "Receive advice",
       link: "https://atro.agency/",
     },
     video: getVideoUrl("gads"),
   },
   {
-    name: "یکتانت",
+    name: "One",
     description:
-      "برای افزایش بازدید و فروش خود می‌توانید به یکتانت مراجعه کنید تا به کمک این پلتفرم در سایت‌های پربازدید ایرانی تبلیغات گسترده انجام دهید.",
+      "To increase your visit and sale, you can visit the same advertising with this platform on high -profile Iranian sites..",
     image: getImageUrl("yektanet"),
     cta: {
-      text: "ثبت آگهی در یکتانت",
+      text: "Advertise",
       link: "https://www.yektanet.com/",
     },
     video: getVideoUrl("yektanet"),
   },
   {
-    name: "تپسل",
+    name: "Taples",
     description:
-      "از تپسل برای اجرای انواع تبلیغات در اپلیکیشن‌های موبایل مثل بنر و ویدئوی تبلیغاتی درون برنامه‌ای کمک بگیرید تا سایت خود را به مخاطب خود نزدیک‌تر کنید.",
+      "Get help from Taples to run a variety of ads in mobile apps such as banner and video in -app promotional to bring your site closer to your audience.",
     image: getImageUrl("tapsell"),
     cta: {
-      text: "ثبت آگهی در تپسل",
+      text: "Advertisement",
       link: "https://tapsell.ir/",
     },
     video: getVideoUrl("tapsell"),
   },
   {
-    name: "مِدیا اَد",
+    name: "Media",
     description:
-      "مِدیا اَد یک پلتفرم تبلیغات دیجیتالی است که با آن می‌توانید تبلیغات بنری و متنی سایت و محصولات آن را در سایت‌های پربازدید به نمایش بگذارید.",
+      "Madia Ede is a digital advertising platform with which you can show banner and text ads and products on visited sites..",
     image: getImageUrl("mediaad"),
     cta: {
-      text: "ثبت آگهی در مدیا اد",
+      text: "Advertisement in Media Ed",
       link: "https://mediaad.org/",
     },
     video: getVideoUrl("media-ad"),

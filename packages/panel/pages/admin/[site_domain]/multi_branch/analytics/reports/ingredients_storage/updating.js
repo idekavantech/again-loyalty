@@ -13,5 +13,5 @@ export default function AdminAnalyticsIngredientsStorageUpdating() {
 AdminAnalyticsIngredientsStorageUpdating.ShouldBeAdmin = true;
 AdminAnalyticsIngredientsStorageUpdating.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "گزارش انبارگردانی مواد اولیه بر اساس کالا",
+  title: "Report of warehousing raw materials based on goods",
 };

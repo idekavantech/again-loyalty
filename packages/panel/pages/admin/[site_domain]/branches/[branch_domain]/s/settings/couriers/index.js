@@ -7,5 +7,5 @@ export default function AdminCourierPage() {
 AdminCourierPage.ShouldBeAdmin = true;
 AdminCourierPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "پیک‌ها",
+  title: "Peaks",
 };

@@ -11,5 +11,5 @@ SuperMenuPage.ShouldBeAdmin = true;
 SuperMenuPage.Wrapper = AdminLayout;
 SuperMenuPage[INCLUDED_WEBAPPS_ONLY_KEY] = [DARAMAD_WEBAPP_CONSTANT];
 export const breadcrumb = {
-  title: "صفحه چینش محصولات و میانبر",
+  title: "Product layout and shortcut",
 };

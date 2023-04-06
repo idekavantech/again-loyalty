@@ -13,5 +13,5 @@ export default function AdminAnalyticsCategoriesSalesReport() {
 AdminAnalyticsCategoriesSalesReport.ShouldBeAdmin = true;
 AdminAnalyticsCategoriesSalesReport.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "گزارش مالی فروش دسته‌بندی‌ها",
+  title: "Category Financial Report",
 };

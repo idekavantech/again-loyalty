@@ -22,17 +22,17 @@ function RenewLicenseDialog({ isOpen, onClose, submit, isLoading }) {
           className="d-flex align-items-center flex-1 pb-4"
         >
           <InfoRoundedIcon style={{ color: icon.warning }} className="ml-2" />
-          <div className="u-fontLarge u-fontWeightHeavy">ساخت مجدد کد</div>
+          <div className="u-fontLarge u-fontWeightHeavy">Re -structure the code</div>
         </div>
         <div className="mt-5">
-          در صورت ساخت یک کد جدید برای دستگاهتان، تمامی دستگاه‌هایی که از کد
-          قبلی استفاده می‌کردند از حساب خارج می‌شوند و هر یک برای ورود مجدد به
-          حساب، باید از کد جدید استفاده کنند.
+          If you make a new code for your device, all devices from the code
+          Previously used the account and each to re -enter to
+          Account, must use the new code.
         </div>
       </DialogContent>
       <DialogActions className="d-flex align-items-center justify-content-between p-4">
         <div className="u-fontLarge u-fontWeightHeavy">
-          آیا از تغییر کد دستگاه اطمینان دارید؟
+          Are you sure of changing the device code?
         </div>
         <div className="d-flex align-items-center ml-0">
           <Button
@@ -43,7 +43,7 @@ function RenewLicenseDialog({ isOpen, onClose, submit, isLoading }) {
             size="medium"
             style={{ color: text.disabled }}
           >
-            لغو
+            Cancellation
           </Button>
           <Button
             onClick={submit}
@@ -53,7 +53,7 @@ function RenewLicenseDialog({ isOpen, onClose, submit, isLoading }) {
             size="medium"
             disabled={isLoading}
           >
-            تایید
+            Confirm
           </Button>
         </div>
       </DialogActions>

@@ -46,5 +46,5 @@ PaymentPage.getInitialProps = async ({
 };
 PaymentPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "پرداخت",
+  title: "the payment",
 };

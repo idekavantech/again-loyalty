@@ -100,7 +100,7 @@ function MenuSelector({ slug, posDeviceId }) {
                 {
                   shortcut: findoutMissedNumbersFromArrays(listOfShortcuts),
                   title: superMenu.value.length + 1,
-                  nickname: `نام منو ${superMenu.value.length + 1}`,
+                  nickname: `Menu name${superMenu.value.length + 1}`,
                   color: "878D91",
                   cells: [],
                   pos_device: posDeviceId,

@@ -52,18 +52,18 @@ jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
 const branchHeadCells = [
   {
     id: "id",
-    label: "ردیف",
-    name: "ردیف",
+    label: "Row",
+    name: "Row",
     align: "center",
     minWidth: 100,
   },
   {
     id: "id",
-    name: "مبلغ حاصل از فروش",
+    name: "Sale amount",
     label: (
       <div className="d-flex justify-content-between flex-column">
-        <div>مبلغ حاصل از فروش</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>Sale amount</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
@@ -71,11 +71,11 @@ const branchHeadCells = [
   },
   {
     id: "id",
-    name: "سود ناخالص",
+    name: "Gross profit",
     label: (
       <div className="d-flex justify-content-between flex-column">
-        <div>سود ناخالص</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>Gross profit</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
@@ -83,11 +83,11 @@ const branchHeadCells = [
   },
   {
     id: "id",
-    name: "هزینه مواد اولیه",
+    name: "The cost of raw materials",
     label: (
       <div className="d-flex justify-content-between flex-column">
-        <div>هزینه مواد اولیه</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>The cost of raw materials</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
@@ -171,8 +171,8 @@ export function AdminGrossSalesReport({
       const mainBranchHeadCells = [...branchHeadCells];
       mainBranchHeadCells.splice(1, 0, {
         id: "id",
-        label: "شعبه",
-        name: "شعبه",
+        label: "Branch",
+        name: "Branch",
         align: "center",
       });
       return mainBranchHeadCells;
@@ -238,19 +238,19 @@ export function AdminGrossSalesReport({
   return (
     <div className="container">
       <Head>
-        <title>گزارش فروش ناخالص</title>
+        <title>GDP Sale Report</title>
       </Head>
 
       <AdminBreadCrumb
-        submitButtonText="خروجی گرفتن"
+        submitButtonText="Output"
         submitAction={() =>
           generateCSVFile(
             headRow,
             rows || [],
             [],
-            `گزارش سود ناخالص از  ${formatDateObjectToNormal(
+            `Report of gross profit from${formatDateObjectToNormal(
               selectedDayRange.from
-            )} تا  ${formatDateObjectToNormal(selectedDayRange.to)}`
+            )} until the${formatDateObjectToNormal(selectedDayRange.to)}`
           )
         }
       />
@@ -271,13 +271,13 @@ export function AdminGrossSalesReport({
                 onClick={handleOpen}
                 variant="outlined"
               >
-                از{" "}
+                From{" "}
                 <span className="px-2">
                   {englishNumberToPersianNumber(
                     formatDateObjectToNormal(selectedDayRange.from)
                   )}
                 </span>
-                تا{" "}
+                until the{" "}
                 <span className="px-2">
                   {englishNumberToPersianNumber(
                     formatDateObjectToNormal(selectedDayRange.to)
@@ -330,16 +330,16 @@ export function AdminGrossSalesReport({
                 size="large"
                 // IconComponent={() => null}
                 renderValue={() => {
-                  if (selectedBranches.length === 0) return "شعبه انتخاب کنید";
+                  if (selectedBranches.length === 0) return "Choose a branch";
                   if (selectedBranches.length === 1 && selectedBranches[0])
                     return branches.find(
                       (branch) => branch.id === selectedBranches[0]
                     ).title;
                   if (selectedBranches.length === branches.length)
-                    return "همه شعب";
+                    return "All branches";
                   return `${englishNumberToPersianNumber(
                     selectedBranches.length
-                  )} شعبه `;
+                  )} Branch`;
                 }}
                 MenuProps={{
                   getContentAnchorEl: null,
@@ -374,7 +374,7 @@ export function AdminGrossSalesReport({
                     checked={selectedBranches.length === branches.length}
                   />
                   <ListItemText
-                    primary="انتخاب همه شعب"
+                    primary="Choosing all branches"
                     className="text-right"
                   />
                 </MenuItem>
@@ -436,7 +436,7 @@ export function AdminGrossSalesReport({
                 }}
                 className="ml-2 mb-2"
                 onDelete={() => setSelectedBranches([])}
-                label="همه شعب"
+                label="All branches"
               />
             ) : selectedBranches?.length ? (
               branches
@@ -481,13 +481,13 @@ export function AdminGrossSalesReport({
                 onDelete={() =>
                   setSelectedBranches(branches.map((branch) => branch.id))
                 }
-                label="هیچ‌کدام از شعب"
+                label="None of the branches"
               />
             )}
           </div>
         )}
         {!selectedBranches?.length && isSuper ? (
-          <div className="mx-auto">هیچ شعبه‌ای انتخاب نشده است.</div>
+          <div className="mx-auto">No branch is selected.</div>
         ) : (
           <TableContainer
             className="mt-3 purchase-by-order-table"

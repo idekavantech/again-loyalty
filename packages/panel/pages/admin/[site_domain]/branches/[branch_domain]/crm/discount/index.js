@@ -10,5 +10,5 @@ AdminCRMLabelPagePage.ShouldBeAdmin = true;
 AdminCRMLabelPagePage.layoutConfig = { isSmall: true };
 AdminCRMLabelPagePage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "ساخت کد تخفیف",
+  title: "Build a discount code",
 };

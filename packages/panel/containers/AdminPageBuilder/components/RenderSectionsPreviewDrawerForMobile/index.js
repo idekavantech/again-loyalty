@@ -64,7 +64,7 @@ function RenderSectionsPreviewDrawerForMobile({
               zIndex: 1,
             }}
           >
-            <div style={{ color: "#adb1b5", fontWeight: "bold" }}>سکشن‌ها</div>
+            <div style={{ color: "#adb1b5", fontWeight: "bold" }}>Suction</div>
             <div>
               <IconButton
                 disabled={

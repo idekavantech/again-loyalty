@@ -40,15 +40,15 @@ export function AdminSettingsTheme({
     };
     _updateBusiness(
       editedBusiness,
-      "تنظیمات اصلی با موفقیت ذخیره شد.",
-      "ذخیره تغییرات تنظیمات اصلی ناموفق بود!"
+      "The original settings were successfully saved.",
+      "Save the changes to the original settings failed!"
     );
   };
 
   return (
     <div className="container">
       <Head>
-        <title>تنظیمات تم</title>
+        <title>Organizations you</title>
       </Head>
 
       <AdminBreadCrumb
@@ -67,7 +67,7 @@ export function AdminSettingsTheme({
 
       <SaveAndDiscardButtons
         saveAction={submit}
-        saveText="ذخیره تغییرات"
+        saveText="Save changes"
         disabled={loading}
       />
     </div>

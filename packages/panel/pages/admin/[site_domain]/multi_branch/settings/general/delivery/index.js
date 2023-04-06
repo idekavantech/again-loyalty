@@ -14,5 +14,5 @@ AdminShoppingDeliveryMainSettingsPage[BRANCHES_PLUGIN] = true;
 AdminShoppingDeliveryMainSettingsPage.ShouldBeAdmin = true;
 AdminShoppingDeliveryMainSettingsPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "تنظیمات ارسال",
+  title: "Send settings",
 };

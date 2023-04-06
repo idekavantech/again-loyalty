@@ -65,7 +65,7 @@ function Paginator() {
               )
             }
           >
-            اضافه کردن صفحه جدید
+            Add new page
           </Button>
         )}
         left={() => (

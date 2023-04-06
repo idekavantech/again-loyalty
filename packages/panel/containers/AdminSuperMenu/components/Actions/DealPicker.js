@@ -119,7 +119,7 @@ export default function DealPicker({
                   subTitle={
                     product.variations.length > 1
                       ? null
-                      : `${product?.variations?.[0]?.discounted_price} تومان`
+                      : `${product?.variations?.[0]?.discounted_price} Toman`
                   }
                   onClick={() =>
                     checked[0] === product.id
@@ -147,7 +147,7 @@ export default function DealPicker({
                                   setTitle(variant.title)
                                 )
                           }
-                          subTitle={`${variant?.discounted_price} تومان`}
+                          subTitle={`${variant?.discounted_price} Toman`}
                           title={variant.title}
                         />
                       </>
@@ -172,7 +172,7 @@ export default function DealPicker({
   return (
     <SefareshModal
       isOpen={menu.pickDealModal}
-      title={"انتخاب محصول"}
+      title={"Product selection"}
       bodys={bodys}
       onClose={onClose}
       bottomEndOnClick={checked[0] === 0 ? () => {} : add_to_cell}
@@ -180,9 +180,9 @@ export default function DealPicker({
         menu.loadingSmall ? (
           <CircularProgress size={25} style={{ color: "white" }} />
         ) : checked[0] !== 0 ? (
-          "افزودن"
+          "Add"
         ) : (
-          "انتخاب کنید"
+          "Select"
         )
       }
     />

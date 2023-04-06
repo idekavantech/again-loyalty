@@ -10,20 +10,20 @@ import { sectionsLayout } from "../../sectionsLayout";
 import { SECTION_BANNER_WITH_SLIDER } from "@saas/utils/constants/sections";
 
 const bannerWithSlider = [
-  // بنر همراه با اسلایدر
+  // Bang
   {
     ...sectionsConfigTabsRepeatedParts["content"],
     items: [
       {
         id: uniqueId(),
-        label: "عکس اول در سمت چپ",
+        label: "The first photo on the left",
         key: "first_part_image",
         element_id: null,
-        description: "در حالت موبایل عکس وارد اسلایدر میشود",
+        description: "In mobile mode the photo enters the slider",
         fields: [
           {
             id: uniqueid(),
-            label: "آپلود عکس اول",
+            label: "Upload the first photo",
             default_value: `https://dkstatics-public.digikala.com/digikala-adservice-banners/f55b5212d7f9f2a61f6206b214c136760387e93b_1613547036.jpg?x-oss-process=image/quality,q_80`,
             key: "slide_image",
             tooltip: "500 * 245",
@@ -35,19 +35,19 @@ const bannerWithSlider = [
 
           {
             id: uniqueid(),
-            label: "انتخاب لینک داخلی یا خارجی",
+            label: "Select the internal or external link",
             default_value: HAS_INTERNAL_LINK,
             key: "link_type",
             type: "select",
             options: [
               {
                 id: uniqueId(),
-                label: "با لینک خارجی",
+                label: "With external link",
                 value: HAS_EXTERNAL_LINK,
               },
               {
                 id: uniqueId(),
-                label: "با لینک داخلی",
+                label: "With internal link",
                 value: HAS_INTERNAL_LINK,
               },
             ],
@@ -61,7 +61,7 @@ const bannerWithSlider = [
               },
             ],
             id: uniqueid(),
-            label: "لینک داخلی",
+            label: "Internal link",
             default_value: "/",
             key: "internal_link",
             type: "link",
@@ -75,7 +75,7 @@ const bannerWithSlider = [
               },
             ],
             id: uniqueid(),
-            label: "لینک خارجی",
+            label: "External link",
             default_value: "/",
             key: "external_link",
             type: "text",
@@ -83,7 +83,7 @@ const bannerWithSlider = [
           },
           {
             id: uniqueid(),
-            label: "اپلود عکس جداگانه برای موبایل",
+            label: "Upload Separate Photo for Mobile",
             type: "switch",
             key: "having_banner_image_for_mobile",
             default_value: true,
@@ -97,7 +97,7 @@ const bannerWithSlider = [
               },
             ],
             id: uniqueid(),
-            label: "آپلود عکس",
+            label: "Upload a Photo",
             type: "image_uploader",
             key: "banner_image_in_mobile",
             tooltip: "400 * 205",
@@ -107,14 +107,14 @@ const bannerWithSlider = [
       },
       {
         id: uniqueId(),
-        label: "عکس دوم در سمت چپ",
+        label: "The second photo on the left",
         key: "second_part_image",
         element_id: null,
-        description: "در حالت موبایل عکس وارد اسلایدر میشود",
+        description: "In mobile mode the photo enters the slider",
         fields: [
           {
             id: uniqueid(),
-            label: "آپلود عکس دوم",
+            label: "Upload second photo",
             default_value: `https://dkstatics-public.digikala.com/digikala-adservice-banners/7506f91d9c46c1ba4833c761f0255ba8cd24b1f5_1614884929.jpg?x-oss-process=image/quality,q_80`,
             key: "slide_image",
             tooltip: "500 * 245",
@@ -126,19 +126,19 @@ const bannerWithSlider = [
 
           {
             id: uniqueid(),
-            label: "انتخاب لینک داخلی یا خارجی",
+            label: "Select the internal or external link",
             default_value: HAS_INTERNAL_LINK,
             key: "link_type",
             type: "select",
             options: [
               {
                 id: uniqueId(),
-                label: "با لینک خارجی",
+                label: "With external link",
                 value: HAS_EXTERNAL_LINK,
               },
               {
                 id: uniqueId(),
-                label: "با لینک داخلی",
+                label: "With internal link",
                 value: HAS_INTERNAL_LINK,
               },
             ],
@@ -152,7 +152,7 @@ const bannerWithSlider = [
               },
             ],
             id: uniqueid(),
-            label: "لینک داخلی",
+            label: "Internal link",
             default_value: "/",
             key: "internal_link",
             type: "link",
@@ -166,7 +166,7 @@ const bannerWithSlider = [
               },
             ],
             id: uniqueid(),
-            label: "لینک خارجی",
+            label: "External link",
             default_value: "/",
             key: "external_link",
             type: "text",
@@ -174,7 +174,7 @@ const bannerWithSlider = [
           },
           {
             id: uniqueid(),
-            label: "اپلود عکس جداگانه برای موبایل",
+            label: "Upload Separate Photo for Mobile",
             type: "switch",
             key: "having_banner_image_for_mobile",
             default_value: true,
@@ -189,7 +189,7 @@ const bannerWithSlider = [
               },
             ],
             id: uniqueid(),
-            label: "آپلود عکس",
+            label: "Upload a Photo",
             type: "image_uploader",
             tooltip: "400 * 205",
             key: "banner_image_in_mobile",
@@ -199,7 +199,7 @@ const bannerWithSlider = [
       },
       {
         id: uniqueid(),
-        label: "اسلاید‌ها",
+        label: "Slides",
         key: "slides",
         element_id: null,
         description: "",
@@ -207,7 +207,7 @@ const bannerWithSlider = [
         extendable_items: true,
         max_items: 8,
         min_items: 1,
-        add_new_item_text: "افزودن اسلاید جدید",
+        add_new_item_text: "Add new slides",
         default_items: [
           {
             slide_image: `https://dkstatics-public.digikala.com/digikala-adservice-banners/e089235e20d798fba0544e91345d5c94a35936f9_1614243666.jpg?x-oss-process=image/quality,q_80`,
@@ -235,7 +235,7 @@ const bannerWithSlider = [
         items_fields: [
           {
             id: uniqueid(),
-            label: "آپلود عکس",
+            label: "Upload a Photo",
             type: "image_uploader",
             key: "slide_image",
             tooltip: "800 * 405",
@@ -247,18 +247,18 @@ const bannerWithSlider = [
 
           {
             id: uniqueid(),
-            label: "انتخاب لینک داخلی یا خارجی",
+            label: "Select the internal or external link",
             key: "link_type",
             type: "select",
             options: [
               {
                 id: uniqueId(),
-                label: "با لینک خارجی",
+                label: "With external link",
                 value: HAS_EXTERNAL_LINK,
               },
               {
                 id: uniqueId(),
-                label: "با لینک داخلی",
+                label: "With internal link",
                 value: HAS_INTERNAL_LINK,
               },
             ],
@@ -272,7 +272,7 @@ const bannerWithSlider = [
               },
             ],
             id: uniqueid(),
-            label: "لینک داخلی",
+            label: "Internal link",
             key: "internal_link",
             type: "link",
           },
@@ -285,14 +285,14 @@ const bannerWithSlider = [
               },
             ],
             id: uniqueid(),
-            label: "لینک خارجی",
+            label: "External link",
             key: "external_link",
             type: "text",
             className: "direction-ltr",
           },
           {
             id: uniqueid(),
-            label: "اپلود عکس جداگانه برای موبایل",
+            label: "Upload Separate Photo for Mobile",
             type: "switch",
             key: "having_banner_image_for_mobile",
             default_value: true,
@@ -307,7 +307,7 @@ const bannerWithSlider = [
               },
             ],
             id: uniqueid(),
-            label: "آپلود عکس",
+            label: "Upload a Photo",
             type: "image_uploader",
             key: "banner_image_in_mobile",
             tooltip: "400 * 205",

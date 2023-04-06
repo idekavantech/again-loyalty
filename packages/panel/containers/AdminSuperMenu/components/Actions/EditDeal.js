@@ -71,9 +71,9 @@ export default function EditDeal({ isOpen, onClose, slug }) {
     return (
       <div style={{ padding: 20 }}>
         <InputLabel
-          questionLabel="نام محصول"
+          questionLabel="Product Name"
           menuName={input}
-          note="شما میتوانید از نام های اختصاری برای محصول خود در نرم افزار فروش انتخاب کرده و در دستگاه پوز خود اسامی اختصاری را مشاهده کنید "
+          note="You can choose from acronyms for your product in the sales software and see the abbreviation on your device."
           placeholder={menu.selectedDeal.titleAppended}
           onChange={(e) => setInput(e.target.value)}
         />
@@ -84,12 +84,12 @@ export default function EditDeal({ isOpen, onClose, slug }) {
   return (
     <SefareshModal
       isOpen={isOpen}
-      title="ویرایش محصول"
+      title="Product editing"
       headerButtonText={
         menu.loadingSmall ? (
           <CircularProgress size={25} style={{ color: "white" }} />
         ) : (
-          "ذخیره"
+          "Store"
         )
       }
       bodys={bodys}

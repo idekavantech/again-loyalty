@@ -6,21 +6,21 @@ import { sectionsLayout } from "../../sectionsLayout";
 import { SECTION_TESTIMONIALS } from "@saas/utils/constants/sections";
 
 const testimonials = [
-  // نقل قول مشتریان
+  // Customer quote
   {
     ...sectionsConfigTabsRepeatedParts["content"],
     items: [
       {
         id: uniqueid(),
-        label: "عنوان",
+        label: "Title",
         key: "title",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "عنوان",
-            default_value: "عنوان",
+            label: "Title",
+            default_value: "Title",
             key: "value",
             type: "text",
           },
@@ -28,14 +28,14 @@ const testimonials = [
       },
       {
         id: uniqueid(),
-        label: "توضیحات",
+        label: "Description",
         key: "description",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "توضیحات",
+            label: "Description",
             default_value: LOREM_IPSUM_SHORT,
             key: "value",
             type: "richtext",
@@ -44,7 +44,7 @@ const testimonials = [
       },
       {
         id: uniqueid(),
-        label: "نقل‌قول‌ها",
+        label: "Quote",
         key: "quotes",
         element_id: "section_10_quotes",
         description: "",
@@ -52,17 +52,17 @@ const testimonials = [
         extendable_items: true,
         max_items: 10,
         min_items: 1,
-        add_new_item_text: "افزودن نقل‌قول جدید",
+        add_new_item_text: "Adding a new quotation",
         default_items: [
           {
-            title: "عنوان",
-            subtitle: "عنوان فرعی",
+            title: "Title",
+            subtitle: "Substitious title",
             description: LOREM_IPSUM_SHORT,
             image: `${CDN_BASE_URL}mock31.png`,
           },
           {
-            title: "عنوان",
-            subtitle: "عنوان فرعی",
+            title: "Title",
+            subtitle: "Substitious title",
             description: LOREM_IPSUM_SHORT,
             image: `${CDN_BASE_URL}mock32.png`,
           },
@@ -70,28 +70,28 @@ const testimonials = [
         items_fields: [
           {
             id: uniqueid(),
-            label: "عنوان",
-            default_value: "عنوان",
+            label: "Title",
+            default_value: "Title",
             type: "text",
             key: "title",
           },
           {
             id: uniqueid(),
-            label: "زیر‌عنوان",
-            default_value: "زیرعنوان",
+            label: "Underwent",
+            default_value: "Sour",
             key: "subtitle",
             type: "text",
           },
           {
             id: uniqueid(),
-            label: "توضیحات",
+            label: "Description",
             default_value: LOREM_IPSUM_SHORT,
             key: "description",
             type: "richtext",
           },
           {
             id: uniqueid(),
-            label: "عکس",
+            label: "Picture",
             default_value: `${CDN_BASE_URL}mock31.png`,
             key: "image",
             type: "image_uploader",

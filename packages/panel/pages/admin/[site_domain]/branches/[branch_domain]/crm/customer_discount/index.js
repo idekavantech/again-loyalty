@@ -8,5 +8,5 @@ AdminCRMListPage[CRM_PLUGIN] = true;
 AdminCRMListPage.ShouldBeAdmin = true;
 AdminCRMListPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "کد تخفیف",
+  title: "discount code",
 };

@@ -9,7 +9,7 @@ function AdminSaleChannelLayout() {
   return (
     <div className="container pb-3">
       <Head>
-        <title>بازاریابی و افزایش بازدید</title>
+        <title>Marketing and increasing visits</title>
       </Head>
       <AdminBreadCrumb />
       <SalesChannelInformBox />

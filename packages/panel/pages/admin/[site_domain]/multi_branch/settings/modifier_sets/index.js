@@ -9,5 +9,5 @@ AdminModifierSetListPage[BRANCHES_PLUGIN] = true;
 AdminModifierSetListPage.ShouldBeAdmin = true;
 AdminModifierSetListPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "مجموعه‌های افزودنی",
+  title: "Additive sets",
 };

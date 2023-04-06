@@ -95,14 +95,14 @@ function AdminSuperMenu({ slug, getProducts, products, isLoading = true }) {
                   dispatch(selectDevice(i.id));
                 }}
               >
-                ساخت منو
+                Menu building
               </Button>
             </Paper>
           ))}
         {!devices.filter((i) => i.extra_data.template_type == 1).length && (
           <div className="d-flex flex-1 flex-column justify-content-center align-items-center p-5">
             <img alt="" src={`${CDN_BASE_URL}empty_devices.png`} />
-            <div className="mt-4">با این فیلتر دستگاهی یافت نشد</div>
+            <div className="mt-4">Was not found with this device filter</div>
           </div>
         )}
       </div>
@@ -111,7 +111,7 @@ function AdminSuperMenu({ slug, getProducts, products, isLoading = true }) {
     return (
       <>
         <Head>
-          <title>صفحه چینش محصولات و میانبر</title>
+          <title>Product layout and shortcut</title>
         </Head>
         <div style={{ minHeight: "100vh", padding: 10 }}>
           <div className="container">
@@ -138,7 +138,7 @@ function AdminSuperMenu({ slug, getProducts, products, isLoading = true }) {
                     right={() => (
                       <div>
                         <p style={{ fontSize: 17, fontWeight: "bold" }}>
-                          منوها
+                          Intended
                         </p>
                         <MenuSelector
                           posDeviceId={deviceSelected}
@@ -160,7 +160,7 @@ function AdminSuperMenu({ slug, getProducts, products, isLoading = true }) {
                       <div>
                         {Number.isInteger(pages?.current) && (
                           <p style={{ fontSize: 17, fontWeight: "bold" }}>
-                            صفحه ی {pages?.current + 1}/{pages?.total}
+                            Page{pages?.current + 1}/{pages?.total}
                           </p>
                         )}
                         <DealsItem

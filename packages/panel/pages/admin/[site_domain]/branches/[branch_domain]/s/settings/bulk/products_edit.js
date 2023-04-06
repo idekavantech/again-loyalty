@@ -8,5 +8,5 @@ export default function AdminCategoriesPage() {
 AdminCategoriesPage.ShouldBeAdmin = true;
 AdminCategoriesPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "ویرایش جمعی محصولات",
+  title: "Collective editing of products",
 };

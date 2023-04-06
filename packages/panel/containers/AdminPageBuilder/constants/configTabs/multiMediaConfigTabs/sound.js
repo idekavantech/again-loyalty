@@ -4,13 +4,13 @@ import { sectionsLayout } from "../../sectionsLayout";
 import { SECTION_SOUND } from "@saas/utils/constants/sections";
 
 const sound = [
-  // صوت
+  // voice
   {
     ...sectionsConfigTabsRepeatedParts["content"],
     items: [
       {
         id: uniqueid(),
-        label: "صوت",
+        label: "voice",
         key: "sound",
         element_id: null,
         description: "",
@@ -44,14 +44,14 @@ const sound = [
       },
       {
         id: uniqueid(),
-        label: "عرض",
+        label: "an offer",
         key: "width",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "استفاده از عرض دلخواه",
+            label: "Use the desired width",
             type: "checkbox",
             key: "isCustomValue",
             default_value: false,
@@ -65,7 +65,7 @@ const sound = [
               },
             ],
             id: uniqueid(),
-            label: "عرض",
+            label: "an offer",
             type: "slider",
             key: "value",
             min: 350,

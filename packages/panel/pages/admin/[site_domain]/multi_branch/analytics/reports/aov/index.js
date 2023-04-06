@@ -7,5 +7,5 @@ export default function AdminAOVReport() {
 AdminAOVReport.ShouldBeAdmin = true;
 AdminAOVReport.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "میانگین ارزش سفارش‌ها",
+  title: "The average value of orders",
 };

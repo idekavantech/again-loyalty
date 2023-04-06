@@ -5,20 +5,20 @@ import { SECTION_FAQ } from "@saas/utils/constants/sections";
 import uniqueId from "lodash/uniqueId";
 
 const faq = [
-  // سوالات متداول
+  // Frequently Asked Questions
   {
     ...sectionsConfigTabsRepeatedParts["content"],
     items: [
       {
         id: uniqueid(),
-        label: "پس‌زمینه",
+        label: "background",
         key: "background",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "رنگ پس‌زمینه",
+            label: "The background color",
             default_value: "#F1F5FF",
             key: "color",
             type: "color",
@@ -27,21 +27,21 @@ const faq = [
       },
       {
         id: uniqueid(),
-        label: "عنوان",
+        label: "Title",
         key: "title",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "عنوان مورد نظر",
-            default_value: "سایت تو با ویترین",
+            label: "The desired title",
+            default_value: "Your site with showcase",
             key: "value",
             type: "text",
           },
           {
             id: uniqueid(),
-            label: "رنگ عنوان",
+            label: "Title color",
             default_value: process.env.NEXT_PUBLIC_ADMIN_THEME_COLOR,
             key: "color",
             type: "color",
@@ -50,7 +50,7 @@ const faq = [
       },
       {
         id: uniqueid(),
-        label: "سوالات",
+        label: "Questions",
         key: "questions",
         element_id: "section_31_questions",
         description: "",
@@ -58,46 +58,46 @@ const faq = [
         extendable_items: true,
         max_items: 15,
         min_items: 2,
-        add_new_item_text: "افزودن سوال جدید",
+        add_new_item_text: "Adding a new question",
         default_items: [
           {
-            title: "مجموع فروش سایت‌هایی که با ویترین ساخته شده‌اند.",
+            title: "Total sales of sites made with showcase.",
             title_color: process.env.NEXT_PUBLIC_ADMIN_THEME_COLOR,
-            description: "مجموع فروش سایت‌هایی که با ویترین ساخته شده‌اند.",
+            description: "Total sales of sites made with showcase.",
             description_color: "#000000",
           },
           {
-            title: "مجموع فروش سایت‌هایی که با ویترین ساخته شده‌اند.",
+            title: "Total sales of sites made with showcase.",
             title_color: process.env.NEXT_PUBLIC_ADMIN_THEME_COLOR,
-            description: "مجموع فروش سایت‌هایی که با ویترین ساخته شده‌اند.",
+            description: "Total sales of sites made with showcase.",
             description_color: "#000000",
           },
         ],
         items_fields: [
           {
             id: uniqueid(),
-            label: "عنوان",
-            default_value: "مجموع فروش سایت‌هایی که با ویترین ساخته شده‌اند.",
+            label: "Title",
+            default_value: "Total sales of sites made with showcase.",
             type: "text",
             key: "title",
           },
           {
             id: uniqueid(),
-            label: "رنگ عنوان",
+            label: "Title color",
             default_value: process.env.NEXT_PUBLIC_ADMIN_THEME_COLOR,
             key: "title_color",
             type: "color",
           },
           {
             id: uniqueid(),
-            label: "توضیحات",
-            default_value: "مجموع فروش سایت‌هایی که با ویترین ساخته شده‌اند.",
+            label: "Description",
+            default_value: "Total sales of sites made with showcase.",
             type: "richtext",
             key: "description",
           },
           {
             id: uniqueid(),
-            label: "رنگ توضیحات",
+            label: "Color Description",
             default_value: "#000000",
             key: "description_color",
             type: "color",
@@ -174,7 +174,7 @@ const faq = [
             ],
 
             id: uniqueId(),
-            label: "رنگ پس‌زمینه",
+            label: "The background color",
             default_value: "#8C9196",
             key: "background_color_",
             type: "color",

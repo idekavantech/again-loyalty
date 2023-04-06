@@ -107,12 +107,12 @@ function CashDrawer({
               <div className="px-4">
                 <div className="d-flex flex-lg-row flex-column mt-2">
                   <div className="mt-2 pt-2" style={{ width: 140 }}>
-                    توضیحات صندوق:
+                    Fund description:
                   </div>
                   <div className="flex-1 mt-2">
                     <Input
                       value={description}
-                      placeholder="توضیحات صندوق"
+                      placeholder="Fund description"
                       size="small"
                       onChange={setDescription}
                     />
@@ -125,7 +125,7 @@ function CashDrawer({
                       className="mt-4 ml-4"
                       color="primary"
                     >
-                      تاریخچه صندوق‌ها
+                      Fund history
                     </Button>
                   </div>
                   <div className="d-flex flex-wrap">
@@ -137,7 +137,7 @@ function CashDrawer({
                       variant="contained"
                       color="primary"
                     >
-                      بستن صندوق
+                      Close the box
                     </Button>
                     <Button
                       variant="contained"
@@ -145,7 +145,7 @@ function CashDrawer({
                       className="mt-4"
                       onClick={() => setTransactionModal(true)}
                     >
-                      ایجاد تراکنش
+                      Transaction creation
                     </Button>
                   </div>
                 </div>
@@ -153,11 +153,11 @@ function CashDrawer({
             </Paper>
             <Paper elevation={1} className="py-4 mt-4 p-5">
               <div className="mb-4 u-fontLarge u-fontWeightHeavy">
-                صندوق جاری
+                Current fund
               </div>
               <Divider />
               <div className="d-flex justify-content-between my-4">
-                <div>زمان آغاز</div>
+                <div>Beginning time</div>
                 <div>
                   {englishNumberToPersianNumber(
                     moment(device?.active_drawer?.opened_at).format(
@@ -167,11 +167,11 @@ function CashDrawer({
                 </div>
               </div>
               <div className="d-flex justify-content-between my-4">
-                <div>آغازکننده</div>
+                <div>starter</div>
                 <div>{device?.active_drawer?.initializer?.name}</div>
               </div>
               <div className="d-flex justify-content-between my-4">
-                <div>مجموع تراکنش‌ها</div>
+                <div>Total transactions</div>
                 <div>
                   {priceFormatter(
                     Math.abs(
@@ -183,45 +183,45 @@ function CashDrawer({
                   device?.active_drawer?.total_paid_in
                     ? "-"
                     : ""}{" "}
-                  تومان{" "}
+                  Toman{" "}
                 </div>
               </div>
               <div className="d-flex justify-content-between my-4">
-                <div>مجموع تراکنش‌های دریافت شده</div>
+                <div>The sum of the received transactions</div>
                 <div>
-                  {priceFormatter(device?.active_drawer?.total_paid_in)} تومان
+                  {priceFormatter(device?.active_drawer?.total_paid_in)} Toman
                 </div>
               </div>
               <div className="d-flex justify-content-between my-4">
-                <div>مجموع تراکنش‌های پرداخت شده</div>
+                <div>The sum of paid transactions</div>
                 <div>
                   {priceFormatter(device?.active_drawer?.total_paid_out)}
-                  {device?.active_drawer?.total_paid_out ? "-" : ""} تومان
+                  {device?.active_drawer?.total_paid_out ? "-" : ""} Toman
                 </div>
               </div>
               <div className="d-flex justify-content-between my-4">
-                <div>فروش نقدی</div>
+                <div>Cash sales</div>
                 <div>
-                  {priceFormatter(device?.active_drawer?.total_sales)} تومان
+                  {priceFormatter(device?.active_drawer?.total_sales)} Toman
                 </div>
               </div>
               <div className="d-flex justify-content-between my-4">
-                <div>عودت نقدی</div>
+                <div>Critical return</div>
                 <div>
                   {priceFormatter(device?.active_drawer?.total_refunds)}
-                  {device?.active_drawer?.total_refunds ? "-" : ""} تومان
+                  {device?.active_drawer?.total_refunds ? "-" : ""} Toman
                 </div>
               </div>
               <div className="d-flex justify-content-between my-4">
-                <div>مبلغ مورد انتظار در صندوق</div>
+                <div>The expected amount in the box</div>
                 <div>
-                  {priceFormatter(device?.active_drawer?.balance)} تومان
+                  {priceFormatter(device?.active_drawer?.balance)} Toman
                 </div>
               </div>
               <div className="d-flex justify-content-between my-4">
-                <div>مبلغ اولیه صندوق</div>
+                <div>The initial amount of the fund</div>
                 <div>
-                  {priceFormatter(device?.active_drawer?.initial_money)} تومان
+                  {priceFormatter(device?.active_drawer?.initial_money)} Toman
                 </div>
               </div>
             </Paper>
@@ -229,15 +229,15 @@ function CashDrawer({
         ) : (
           <Paper elevation={1} className="py-4 mt-4 p-5">
             <div className="mb-2 u-fontLarge u-fontWeightHeavy d-flex align-items-center justify-content-between">
-              صندوق پول
+              safe box
               <Button onClick={() => setHistoryModal(true)} color="primary">
-                تاریخچه صندوق‌ها
+                Fund history
               </Button>
             </div>
             <div className="mb-4">
-              با فعال‌سازی صندوق پول، می‌توانید برای دستگاه خود یک صندوق نیز
-              تعریف کنید. همچنین می‌توانید صندوق خود را از همین قسمت مدیریت
-              کنید.
+              By activating the money fund, you can also be a fund for your device
+              Define. You can also manage your fund from this section
+              do.
             </div>
             <Divider />
             <div className="d-lg-flex pt-1 justify-content-between">
@@ -245,7 +245,7 @@ function CashDrawer({
                 style={{ marginTop: 20 }}
                 className="flex-shrink-0 u-fontLarge u-fontWeightHeavy"
               >
-                باز کردن صندوق جدید
+                Open the new box.
               </div>
               <div className="mt-3 flex-1 mx-lg-5 d-lg-flex flex-shrink-0 position-relative">
                 <div
@@ -253,7 +253,7 @@ function CashDrawer({
                     minWidth992 ? "ml-2" : "mb-1"
                   } flex-shrink-0 mt-2`}
                 >
-                  مبلغ اولیه صندوق
+                  The initial amount of the fund
                 </div>
                 <Input
                   value={startingCash}
@@ -274,7 +274,7 @@ function CashDrawer({
                   }}
                   className="position-absolute left-0 u-top-0 ml-2"
                 >
-                  تومان
+                  Toman
                 </div>
               </div>
               <Button
@@ -288,17 +288,17 @@ function CashDrawer({
                       router.query.id,
                       { initial_money: startingCash },
                       () => {
-                        setDialog("صندوق ایجاد شد.");
+                        setDialog("The fund was created.");
                         setTimeout(() => {
                           setDialog("");
                         }, 1500);
                         _getDevice(router.query.id);
                       }
                     );
-                  else setError("مبلغ اولیه صندوق را وارد کنید.");
+                  else setError("Enter the initial amount of the fund.");
                 }}
               >
-                باز کردن صندوق
+                Open the box
               </Button>
             </div>
           </Paper>

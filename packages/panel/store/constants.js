@@ -874,7 +874,7 @@ export const VENDOR_ITEM_TYPE_INGREDIENT = "ingredient";
 
 export const IMPORT_CSV = "IMPORT_CSV";
 export const GUESS_OF_FIRST_MONTH_ORDERS_COUNT_OPTIONS = [
-  "۱۰۰ Order",
+  "۱۰۰Order",
   "1 to 2 order",
   "1 to 2 order",
   "1 to 2 order",

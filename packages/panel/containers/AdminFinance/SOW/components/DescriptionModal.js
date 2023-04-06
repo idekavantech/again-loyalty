@@ -21,7 +21,7 @@ function DescriptionModal({ isOpen, onClose, description }) {
               style={{ lineHeight: "initial" }}
               className="u-fontWeightBold u-fontLarge"
             >
-              توضیحات
+              Description
             </div>
           </div>
           <IconButton
@@ -32,12 +32,12 @@ function DescriptionModal({ isOpen, onClose, description }) {
             <CloseRoundedIcon />
           </IconButton>
         </div>
-        <div className="mt-5">توضیحات</div>
+        <div className="mt-5">Description</div>
         <Input
           className="mt-2 pb-2 bg-white"
           color="primary"
           value={description}
-          placeholder="متن توضیحات"
+          placeholder="Text of Description"
           multiline
           disabled
         />

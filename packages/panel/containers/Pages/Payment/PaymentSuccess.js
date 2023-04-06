@@ -128,7 +128,7 @@ function SuccessPayment({
                 marginTop: `${minWidth768 ? "32px" : "20px"}`,
               }}
             >
-              سفارش شما ثبت شد و در حال بررسی است.
+              Your order has been registered and is being reviewed.
             </h1>
             <div
               style={{
@@ -139,7 +139,7 @@ function SuccessPayment({
                 marginTop: `${minWidth768 ? "16px" : "19px"}`,
               }}
             >
-              وضعیت سفارش برای شما پیامک خواهد شد.
+              Order status for you will tex.
             </div>
             {loading || (!timer && isWaitingForTimer) ? (
               <LoadingIndicator />
@@ -164,7 +164,7 @@ function SuccessPayment({
                   }}
                   className="pb-2"
                 >
-                  زمان تحویل
+                  Delivery time
                 </p>
                 {order && order.order_status !== CANCELLED && (
                   <div
@@ -180,15 +180,15 @@ function SuccessPayment({
             ) : (
               <div className="mt-3">
                 {" "}
-                انتظار می‌رود مرسوله‌ی مورد نظر طبق زمان انتخاب شده به دست شما
-                رسیده باشد. در غیر اینصورت لطفا با پشتیبانی تماس حاصل فرمایید.
+                It is expected that the desired customer is expected to be selected by your hand
+                Reached. Otherwise please contact support.
               </div>
             )}
             <div
               className="my-3"
               style={{ color: theme.palette.secondary.main }}
             >
-              تا ۵ ثانیه دیگر به صفحه پیگیری سفارش منتقل می‌شوید.
+              You will be transferred to the order tracking page for another 5 seconds.
             </div>
             <Button
               style={{
@@ -207,7 +207,7 @@ function SuccessPayment({
                 )
               }
             >
-              پیگیری سفارش
+              Tracking order
             </Button>
             <Button
               className="my-1"
@@ -220,7 +220,7 @@ function SuccessPayment({
               color="secondary"
               onClick={() => router.push(`${urlPrefix}/${SHOPPING_PLUGIN_URL}`)}
             >
-              صفحه محصولات
+              Product Page
             </Button>
           </div>
         </Paper>

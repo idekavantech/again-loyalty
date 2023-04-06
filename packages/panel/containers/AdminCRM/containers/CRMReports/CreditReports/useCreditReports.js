@@ -23,12 +23,12 @@ const AUTOMATED_PROCESS = "automated_process";
 const creditTypes = [
   {
     id: 0,
-    label: "روندهای خودکار",
+    label: "Automatic trends",
     type: AUTOMATED_PROCESS,
   },
   {
     id: 1,
-    label: " کمپین ها",
+    label: " Campaigns",
     type: CAMPAIGN,
   },
 ];
@@ -143,7 +143,7 @@ function useCRMReport() {
 
   const TOTAL_GIVEN_CREDIT = {
     id: 0,
-    label: "مجموع مبلغ اعتبار های داده شده",
+    label: "The sum of the amount of credit given",
     type: "total_given_credit",
     align: "right",
     minWidth: 200,
@@ -153,7 +153,7 @@ function useCRMReport() {
 
   const TOTAL_NUMBER_OF_CREDIT = {
     id: 1,
-    label: "تعداد اعتبار های داده شده",
+    label: "The number of credits given",
     type: "total_number_of_credit",
     align: "right",
     minWidth: 180,
@@ -163,7 +163,7 @@ function useCRMReport() {
 
   const TOTAL_NUMBER_OF_CREDIT_USED = {
     id: 2,
-    label: "تعداد اعتبار های استفاده شده",
+    label: "The number of credit used",
     type: "total_number_of_credit_used",
     align: "right",
     minWidth: 200,
@@ -173,7 +173,7 @@ function useCRMReport() {
 
   const TOTAL_AMOUNT_OF_CREDIT_USED = {
     id: 3,
-    label: "مجموع مبلغ اعتبار های استفاده شده",
+    label: "The sum of the amount of credit used",
     type: "total_amount_of_credit_used",
     align: "right",
     minWidth: 220,
@@ -183,14 +183,14 @@ function useCRMReport() {
 
   const TITLE = {
     id: 3,
-    label: "عنوان",
+    label: "Title",
     type: "title",
     align: "right",
     minWidth: 50,
     width: 150,
     headerFormater: (e) => {
       
-      return `${e} ${selectedCreditReport.type === CAMPAIGN ? "کمپین" : "روند خودکار"}`
+      return `${e} ${selectedCreditReport.type === CAMPAIGN ? "Campaign" : "Automatic process"}`
     
     },
   };

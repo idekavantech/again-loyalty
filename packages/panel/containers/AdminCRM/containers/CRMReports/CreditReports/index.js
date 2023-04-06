@@ -57,13 +57,13 @@ function CRMReports() {
                   variant="outlined"
                 >
                   <div className="d-flex justify-content-between w-100">
-                    از{" "}
+                    From{" "}
                     <span className="px-2">
                       {englishNumberToPersianNumber(
                         formatDateObjectToNormal(dateRange?.from)
                       )}
                     </span>
-                    تا{" "}
+                    until the{" "}
                     <span className="px-2">
                       {englishNumberToPersianNumber(
                         formatDateObjectToNormal(dateRange?.to)
@@ -150,8 +150,8 @@ function CRMReports() {
         </div>
         <div className=" mx-4 px-5 pb-2 pt-2">
           {selectedCreditReport.type === AUTOMATED_PROCESS
-            ? "در این گزارش روندهای خودکاری که از نوع اعتبار یا کش بک هستند نمایش داده میشود"
-            : "در این گزارش  کمپین هایی که از نوع اعتبار هستند نمایش داده میشود"}
+            ? "This report shows automated trends that are valid or cache"
+            : "This report shows the credit -type campaigns"}
         </div>
         <div
           style={{
@@ -168,7 +168,7 @@ function CRMReports() {
               fontWeight: 500,
             }}
           >
-            {`گزارش ${selectedCreditReport.label}`}
+            {`Report${selectedCreditReport.label}`}
           </p>
         </div>
         <CreditReportTable

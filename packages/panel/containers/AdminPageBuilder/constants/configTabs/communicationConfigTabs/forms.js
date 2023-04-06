@@ -5,27 +5,27 @@ import { sectionsLayout } from "../../sectionsLayout";
 import { SECTION_FORMS } from "@saas/utils/constants/sections";
 
 const forms = [
-  // فرم‌ها
+  // forms
   {
     ...sectionsConfigTabsRepeatedParts["content"],
     items: [
       {
         id: uniqueid(),
-        label: "انتخاب فرم",
+        label: "Choose form",
         key: "form",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "فرم",
-            default_value: "فرم",
+            label: "Form",
+            default_value: "Form",
             key: "value",
             type: "form_select",
           },
           {
             id: uniqueid(),
-            label: "رنگ فرم از رنگ پیش فرض پیروی کند.",
+            label: "The color of the form follows the default color.",
             type: "checkbox",
             key: "form_use_theme_color",
             default_value: true,
@@ -39,14 +39,14 @@ const forms = [
               },
             ],
             id: uniqueid(),
-            label: "رنگ فرم",
+            label: "Form color",
             type: "color",
             key: "form_color",
             default_value: "#000000",
           },
           {
             id: uniqueid(),
-            label: "رنگ دکمه از رنگ پیش فرض پیروی کند.",
+            label: "The color of the button follows the default color.",
             type: "checkbox",
             key: "button_use_theme_color",
             default_value: true,
@@ -60,7 +60,7 @@ const forms = [
               },
             ],
             id: uniqueid(),
-            label: "رنگ دکمه",
+            label: "Button color",
             type: "color",
             key: "button_color",
             default_value: "#000000",
@@ -74,7 +74,7 @@ const forms = [
               },
             ],
             id: uniqueId(),
-            label: "رنگ متن دکمه",
+            label: "The color of the button text",
             default_value: "#ffffff",
             key: "button_text_color",
             type: "color",

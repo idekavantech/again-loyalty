@@ -7,5 +7,5 @@ export default function AdminShoppingCategoryPage() {
 AdminShoppingCategoryPage.ShouldBeAdmin = true;
 AdminShoppingCategoryPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "جزئیات مجموعه افزودنی",
+  title: "Details of the additive collection",
 };

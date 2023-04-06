@@ -86,8 +86,8 @@ export default function PageRow({
       >
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            آیا مطمئن هستید که می‌خواهید این {entityPersianCopyRight} را حذف
-            کنید؟
+            Are you sure you want this{entityPersianCopyRight} Remove
+            do?
           </DialogContentText>
         </DialogContent>
         <DialogActions>
@@ -101,7 +101,7 @@ export default function PageRow({
               });
             }}
           >
-            حذف {entityPersianCopyRight}
+            Delete{entityPersianCopyRight}
           </Button>
           <Button
             onClick={() =>
@@ -113,7 +113,7 @@ export default function PageRow({
             color="primary"
             autoFocus
           >
-            انصراف
+            Candifying
           </Button>
         </DialogActions>
       </Dialog>
@@ -127,7 +127,7 @@ export default function PageRow({
       >
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            آیا از تغییر وضعیت نمایش این {entityPersianCopyRight} مطمئن هستید؟
+            Is the change of display status of this{entityPersianCopyRight} are you sure?
           </DialogContentText>
         </DialogContent>
         <DialogActions>
@@ -147,7 +147,7 @@ export default function PageRow({
               });
             }}
           >
-            مطمئن هستم
+            I'm sure
           </Button>
           <Button
             onClick={() =>
@@ -159,7 +159,7 @@ export default function PageRow({
             color="primary"
             autoFocus
           >
-            انصراف
+            Candifying
           </Button>
         </DialogActions>
       </Dialog>
@@ -176,7 +176,7 @@ export default function PageRow({
       >
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            آیا از انتخاب این صفحه به عنوان صفحه اصلی مطمئن هستید؟
+            Are you sure of selecting this page as a homepage?
           </DialogContentText>
         </DialogContent>
         <DialogActions>
@@ -191,8 +191,8 @@ export default function PageRow({
               };
               _updateBusiness(
                 editedBusiness,
-                "صفحه اصلی با موفقیت انتخاب شد",
-                "تغییر داده شده پذیرفته نشد!"
+                "The Home Page was successfully selected",
+                "Changed not accepted!"
               );
               setIsConfirmationOpen({
                 ...isConfirmationOpen,
@@ -200,7 +200,7 @@ export default function PageRow({
               });
             }}
           >
-            مطمئن هستم
+            I'm sure
           </Button>
           <Button
             onClick={() =>
@@ -212,7 +212,7 @@ export default function PageRow({
             color="primary"
             autoFocus
           >
-            انصراف
+            Candifying
           </Button>
         </DialogActions>
       </Dialog>
@@ -226,8 +226,8 @@ export default function PageRow({
       >
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            آیا مطمئنید میخواهید این {entityPersianCopyRight} را به حالت پیشفرض
-            بازگردانید؟
+            Do you make sure you want this{entityPersianCopyRight} To default
+            Return?
           </DialogContentText>
         </DialogContent>
         <DialogActions>
@@ -245,7 +245,7 @@ export default function PageRow({
               });
             }}
           >
-            مطمئن هستم
+            I'm sure
           </Button>
           <Button
             onClick={() =>
@@ -257,7 +257,7 @@ export default function PageRow({
             color="primary"
             autoFocus
           >
-            انصراف
+            Candifying
           </Button>
         </DialogActions>
       </Dialog>
@@ -415,7 +415,7 @@ export default function PageRow({
               window.open(previewLink);
             }}
           >
-            پیش نمایش
+            Preview
           </MenuItem>
         ) : null}
         {!isStatic ? (
@@ -428,17 +428,17 @@ export default function PageRow({
               });
             }}
           >
-            حذف
+            Delete
           </MenuItem>
         ) : null}
         <MenuItem
           onClick={() => {
             handleClose();
             navigator.clipboard.writeText(previewLink);
-            _setSnackBarMessage("لینک مورد نظر کپی شد!", "success");
+            _setSnackBarMessage("The desired link was copied!", "success");
           }}
         >
-          کپی لینک
+          Copy of the link
         </MenuItem>
         <MenuItem
           onClick={() => {
@@ -446,7 +446,7 @@ export default function PageRow({
             duplicatePage(page);
           }}
         >
-          {`کپی ${entityPersianCopyRight}`}
+          {`Copy${entityPersianCopyRight}`}
         </MenuItem>
       </Menu>
     </TableRow>

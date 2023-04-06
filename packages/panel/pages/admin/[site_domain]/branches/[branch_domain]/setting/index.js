@@ -8,5 +8,5 @@ export default function AdminSettingPage() {
 AdminSettingPage.ShouldBeAdmin = true;
 AdminSettingPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "اطلاعات اصلی",
+  title: "Original information",
 };

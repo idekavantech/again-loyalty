@@ -13,5 +13,5 @@ export default function AdminAnalyticsCategoriesStorage() {
 AdminAnalyticsCategoriesStorage.ShouldBeAdmin = true;
 AdminAnalyticsCategoriesStorage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "گزارش انبارگردانی محصولات",
+  title: "Product warehousing report",
 };

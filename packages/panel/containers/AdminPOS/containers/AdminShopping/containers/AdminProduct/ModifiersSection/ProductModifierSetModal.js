@@ -44,7 +44,7 @@ function ProductModifierSetModal({
       isBig
       onClose={onClose}
       isOpen={isOpen}
-      header={<ModalHeader onRightClick={onClose} title="تنظیم افزودنی" />}
+      header={<ModalHeader onRightClick={onClose} title="Adjustment adjustment" />}
       body={
         <>
           <ProductsAssignmentModal
@@ -57,12 +57,12 @@ function ProductModifierSetModal({
           <div style={{ maxWidth: 580 }} className="mt-1 mx-auto">
             <div className="px-3 mt-2">
               <div className="text-center u-fontWeightBold py-2">
-                تنظیمات مجموعه افزودنی مورد نظر فقط برای این محصول اعمال میشود.
+                The additive set settings are applied to this product only.
               </div>
             </div>
             <div className="d-flex px-2 justify-content-center mt-3">
               <div className="flex-1 mx-1">
-                <div>حداقل</div>
+                <div>At least</div>
                 <LimitSelector
                   optionMaxNumber={
                     modifierSetData.modifiers
@@ -79,7 +79,7 @@ function ProductModifierSetModal({
                 />
               </div>
               <div className="flex-1 mx-1">
-                <div>حداکثر</div>
+                <div>Maximum</div>
                 <LimitSelector
                   optionMaxNumber={
                     modifierSetData.modifiers
@@ -97,7 +97,7 @@ function ProductModifierSetModal({
               </div>
             </div>
             <div className="px-3 mt-5">
-              <div className="u-fontWeightBold mb-2">افزودنی‌ها</div>
+              <div className="u-fontWeightBold mb-2">Additives</div>
               <TableContainer className="mb-4">
                 <Table size="small">
                   <TableHead>
@@ -107,7 +107,7 @@ function ProductModifierSetModal({
                         className="py-2 u-fontWeightBold text-nowrap"
                         padding="checkbox"
                       >
-                        پیشفرض انتخاب شده
+                        The selected default
                       </TableCell>
                       <TableCell
                         style={{ borderBottom: `1px solid ${graphite}` }}
@@ -116,14 +116,14 @@ function ProductModifierSetModal({
                         align="right"
                         className="py-2 u-fontWeightBold "
                       >
-                        عنوان
+                        Title
                       </TableCell>
                       <TableCell
                         style={{ borderBottom: `1px solid ${graphite}` }}
                         align="right"
                         className="py-2 u-fontWeightBold "
                       >
-                        قیمت
+                        Price
                       </TableCell>
                     </TableRow>
                   </TableHead>
@@ -175,7 +175,7 @@ function ProductModifierSetModal({
                               {row.title}
                             </TableCell>
                             <TableCell align="right">
-                              {priceFormatter(row.price)} تومان
+                              {priceFormatter(row.price)} Toman
                             </TableCell>
                           </TableRow>
                         );
@@ -192,8 +192,8 @@ function ProductModifierSetModal({
                 >
                   <div className="ml-3">
                     <div>
-                      پس از ذخیره {product.title} تنظیمات برای موارد زیر هم
-                      ذخیره خواهد شد:
+                      After storage{product.title} Settings for the following
+                      Will be saved:
                     </div>
                     <div className="u-fontWeightBold mt-1">
                       {bulkModifierSettingProducts
@@ -203,15 +203,15 @@ function ProductModifierSetModal({
                             `${p.title}${
                               !index && bulkModifierSettingProducts.length > 1
                                 ? bulkModifierSettingProducts.length > 2
-                                  ? "، "
-                                  : " و "
+                                  ? "،"
+                                  : " And"
                                 : ""
                             }`
                         )}
                       {bulkModifierSettingProducts.length > 2
-                        ? `، و ${englishNumberToPersianNumber(
+                        ? `, And${englishNumberToPersianNumber(
                             bulkModifierSettingProducts.length - 2
-                          )} محصول دیگر`
+                          )} Another product`
                         : ""}
                     </div>
                   </div>
@@ -222,7 +222,7 @@ function ProductModifierSetModal({
                     }}
                     className="text-center u-cursor-pointer"
                   >
-                    ویرایش
+                    Edit
                   </div>
                 </div>
               </div>
@@ -233,7 +233,7 @@ function ProductModifierSetModal({
                 style={{ color: theme.palette.primary.main }}
                 className="mt-5 u-cursor-pointer text-center"
               >
-                اعمال تنظیمات بر روی سایر محصولات
+                Apply settings on other products
               </div>
             )}
           </div>
@@ -250,7 +250,7 @@ function ProductModifierSetModal({
                   onClose();
                 }}
               >
-                ذخیره
+                Store
               </Button>
             </div>
           ) : null}
@@ -267,7 +267,7 @@ function ProductModifierSetModal({
               onClose();
             }}
           >
-            ذخیره
+            Store
           </Button>
         ) : null
       }

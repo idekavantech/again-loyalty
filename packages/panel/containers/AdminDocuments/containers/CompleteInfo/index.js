@@ -55,7 +55,7 @@ const CompleteInfo = ({ loading, _updateBusiness, adminUrlPrefix }) => {
 
   const blurHandleEmail = () => {
     if (email && !gmailValidator(email)) {
-      setErrors({ ...errors, email: "فرمت ایمیل وارد شده اشتباه است" });
+      setErrors({ ...errors, email: "Email format entered is incorrect" });
     } else {
       setErrors({ ...errors, email: "" });
     }
@@ -64,16 +64,16 @@ const CompleteInfo = ({ loading, _updateBusiness, adminUrlPrefix }) => {
   const submitMainData = () => {
     const _errors = {
       nationalCode: !nationalCode
-        ? "کدملی را وارد کنید."
+        ? "Enter the code."
         : nationalCode.length < 10
-        ? "کد ملی باید ده رقم باشد"
+        ? "The national code must be ten digits"
         : "",
-      mobileNumber: !mobileNumber ? "شماره موبایل را وارد کنید." : "",
-      phone: !phone ? "شماره ثابت را وارد کنید." : errors.phone,
-      address: !address ? "آدرس را وارد کنید." : "",
-      postal: !postalCode ? "کد پستی را وارد کنید." : errors.postal,
-      email: !email ? "ایمیل را وارد کنید." : "",
-      fullName: !fullName ? "نام و نام خانوادگی را وارد کنید." : "",
+      mobileNumber: !mobileNumber ? "Enter the mobile number.." : "",
+      phone: !phone ? "Enter the fixed number.." : errors.phone,
+      address: !address ? "Enter the address." : "",
+      postal: !postalCode ? "Enter the zip code.." : errors.postal,
+      email: !email ? "Enter the email.." : "",
+      fullName: !fullName ? "Enter the last name and surname.." : "",
     };
     setErrors(_errors);
     if (Object.values(_errors).every((error) => !error)) {
@@ -91,8 +91,8 @@ const CompleteInfo = ({ loading, _updateBusiness, adminUrlPrefix }) => {
             },
           },
         },
-        "اطلاعات  با موفقیت ذخیره شد.",
-        "ذخیره اطلاعات  ناموفق بود!",
+        "Information was successfully stored.",
+        "Save information failed!",
         () => router.push(`${adminUrlPrefix}documents/support_specialist`)
       );
     }
@@ -113,13 +113,13 @@ const CompleteInfo = ({ loading, _updateBusiness, adminUrlPrefix }) => {
       />
       <AdminBreadCrumb />
       <div className="col-12 mt-4 px-0">
-        <WarningBox text="ورود کامل و صحیح اطلاعات معتبر برای اتصال فنی و تهیه دامنه رایگان ضروری است." />
+        <WarningBox text="Full and correct login valid information is essential for technical connectivity and free domain provision." />
         <Paper elevation={1} className="p-5 mt-4">
-          <div className="u-fontWeightHeavy u-fontLarge">مشخصات صاحب دامنه</div>
+          <div className="u-fontWeightHeavy u-fontLarge">Domain owner profile</div>
           <p className="mt-4" style={{ fontSize: 15 }}>
-            در ورود اطلاعات دقت کنید. برای اتصال و ثبت دامنه به نام شخص حقیقی ،
-            سامانه ایرنیک (IRNIC) صحت اطلاعات را از طریق ثبت احوال ارزیابی می
-            کند.
+            Be careful in login information.. To connect and register a domain in the name of the natural person,
+            Irnik System(IRNIC) Evaluates the accuracy of the information through registration
+            Slow.
           </p>
           <div
             className="d-flex flex-column flex-md-row "
@@ -134,8 +134,8 @@ const CompleteInfo = ({ loading, _updateBusiness, adminUrlPrefix }) => {
                     id="phoneNumber"
                     noModal
                     size="medium"
-                    placeholder="مثال: مریم طاهری"
-                    label="نام و نام‌خانوادگی"
+                    placeholder="Example: Maryam Taheri"
+                    label="first name and last name"
                     InputLabelProps={{
                       shrink: true,
                     }}
@@ -147,7 +147,7 @@ const CompleteInfo = ({ loading, _updateBusiness, adminUrlPrefix }) => {
                     error={errors.fullName}
                     helperText={
                       errors?.fullName ||
-                      "نام و نام خانوادگی خود را مطابق شناسنامه خود وارد کنید."
+                      "Enter your first and last name in accordance with your birth certificate."
                     }
                   />
                 </div>
@@ -155,8 +155,8 @@ const CompleteInfo = ({ loading, _updateBusiness, adminUrlPrefix }) => {
                   <Input
                     numberOnly
                     size="medium"
-                    placeholder="مثال : ۰۱۲۳۴۵۶۷۸۹"
-                    label="کد ملی"
+                    placeholder="Example: ۰۱۲۳۴۵۶۷۸۹"
+                    label="National Code"
                     InputLabelProps={{
                       shrink: true,
                     }}
@@ -181,8 +181,8 @@ const CompleteInfo = ({ loading, _updateBusiness, adminUrlPrefix }) => {
                 <div className="col-md-6 col-12 px-0 pl-md-3 mt-3 mt-md-5">
                   <Input
                     size="medium"
-                    label="آدرس ایمیل"
-                    placeholder="مثال: usertest@gmail.com"
+                    label="E-mail"
+                    placeholder="Example: usertest@gmail.com"
                     InputLabelProps={{
                       shrink: true,
                     }}
@@ -195,7 +195,7 @@ const CompleteInfo = ({ loading, _updateBusiness, adminUrlPrefix }) => {
                     error={errors.email}
                     helperText={
                       errors?.email ||
-                      "تنها آدرس با پسوند gmail.com وارد شود. به ایمیل شما یک پیام فعالسازی ارسال می شود."
+                      "Only address with extensiongmail.com Enter. To your email a activation message will be sent."
                     }
                   />
                 </div>
@@ -205,8 +205,8 @@ const CompleteInfo = ({ loading, _updateBusiness, adminUrlPrefix }) => {
           <div className="d-flex align-items-center mt-4">
             <InfoOutlinedIcon style={{ color: "rgba(0, 0, 0, 0.54)" }} />
             <span style={{ fontSize: 12, lineHeight: "20px" }} className="mr-1">
-              در صورتی که سابقه ثبت نام با ایمیل خود در کارگزاری‌های دامنه را
-              دارید. یک آدرس ایمیل جدید وارد کنید.{" "}
+              If the registration record with your email in domain brokerage
+              you have. Enter a new email address..{" "}
             </span>
           </div>
           <div className="d-flex flex-wrap w-100 justify-content-between">
@@ -214,11 +214,11 @@ const CompleteInfo = ({ loading, _updateBusiness, adminUrlPrefix }) => {
               <Input
                 numberOnly
                 size="medium"
-                label="شماره ثابت"
+                label="Fixed number"
                 InputLabelProps={{
                   shrink: true,
                 }}
-                placeholder="مثال : ۰۲۱۱۲۳۴۵۶۷۸"
+                placeholder="Example: ۰۲۱۱۲۳۴۵۶۷۸"
                 onChange={(phone) => {
                   setErrors({ ...errors, phone: "" });
                   setPhone(persianToEnglishNumber(phone));
@@ -229,19 +229,19 @@ const CompleteInfo = ({ loading, _updateBusiness, adminUrlPrefix }) => {
                   if (phone && phone.length < 11)
                     setErrors({
                       ...errors,
-                      phone: "شماره ثابت  باید یازده رقم باشد",
+                      phone: "The fixed number must be eleven digits",
                     });
                 }}
                 error={errors.phone}
                 helperText={
-                  errors?.phone || "شماره تلفن را به همراه کد شهر وارد کنید."
+                  errors?.phone || "Enter the phone number with the city code."
                 }
               />
             </div>
             <div className="col-md-4 col-12 px-0 px-md-3 mt-4 mt-md-5">
               <Input
-                label="شماره موبایل"
-                placeholder="مثال: ۰۹۱۲۱۲۳۴۵۶۷"
+                label="phone number"
+                placeholder="Example: ۰۹۱۲۱۲۳۴۵۶۷"
                 size="medium"
                 InputLabelProps={{
                   shrink: true,
@@ -271,11 +271,11 @@ const CompleteInfo = ({ loading, _updateBusiness, adminUrlPrefix }) => {
               <Input
                 numberOnly
                 size="medium"
-                label="کد پستی"
+                label="Postal code"
                 InputLabelProps={{
                   shrink: true,
                 }}
-                placeholder="مثال : ۰۱۲۳۴۵۶۷۸۹"
+                placeholder="Example: ۰۱۲۳۴۵۶۷۸۹"
                 onChange={(code) => {
                   setErrors({ ...errors, postal: "" });
                   setPostalCode(persianToEnglishNumber(code));
@@ -288,7 +288,7 @@ const CompleteInfo = ({ loading, _updateBusiness, adminUrlPrefix }) => {
                   if (postalCode && postalCode.length < 10)
                     setErrors({
                       ...errors,
-                      postal: "کد پستی باید ده رقم باشد",
+                      postal: "Zip code should be ten digits",
                     });
                 }}
                 error={errors.postal}
@@ -298,8 +298,8 @@ const CompleteInfo = ({ loading, _updateBusiness, adminUrlPrefix }) => {
             <div className="col-md-4 -12 px-0 pl-md-4 mt-4 mt-md-5">
               <Input
                 size="medium"
-                placeholder="مثال : تهران"
-                label="آدرس"
+                placeholder="Example: Tehran"
+                label="Address"
                 InputLabelProps={{
                   shrink: true,
                 }}
@@ -309,7 +309,7 @@ const CompleteInfo = ({ loading, _updateBusiness, adminUrlPrefix }) => {
                 }}
                 value={address}
                 helperText={
-                  errors?.address || "آدرس شما در سایت نمایش داده نمی‌شود."
+                  errors?.address || "Your address is not displayed on the site."
                 }
               />
             </div>
@@ -317,7 +317,7 @@ const CompleteInfo = ({ loading, _updateBusiness, adminUrlPrefix }) => {
           <div className="d-flex align-items-center mt-4">
             <InfoOutlinedIcon style={{ color: "rgba(0, 0, 0, 0.54)" }} />
             <span style={{ fontSize: 12, lineHeight: "20px" }} className="mr-1">
-              توجه کنید که شماره ثابت ، کد پستی و آدرس متعلق به یک شهر باشند.
+              Note that the fixed number, zip code and address belong to a city.
             </span>
           </div>
           <div className="d-flex align-items-center" style={{ marginTop: 30 }}>
@@ -327,7 +327,7 @@ const CompleteInfo = ({ loading, _updateBusiness, adminUrlPrefix }) => {
               style={{ color: confirmInfo ? "#0050ff" : "rgba(0, 0, 0, 0.54)" }}
             />
             <span style={{ fontSize: 12 }}>
-              صحت این اطلاعات را تایید می‌کنم.
+              I confirm the accuracy of this information.
             </span>
           </div>
         </Paper>
@@ -345,7 +345,7 @@ const CompleteInfo = ({ loading, _updateBusiness, adminUrlPrefix }) => {
                   cursor: "pointer",
                 }}
               >
-                اصلاح تاریخ تولد
+                Correction of the date of birth
               </span>
             </div>
           </Link>
@@ -360,7 +360,7 @@ const CompleteInfo = ({ loading, _updateBusiness, adminUrlPrefix }) => {
             disabled={loading || !confirmInfo}
             onClick={submitMainData}
           >
-            تایید
+            Confirm
           </Button>
         </div>
         <SuccessMessageModal
@@ -371,10 +371,10 @@ const CompleteInfo = ({ loading, _updateBusiness, adminUrlPrefix }) => {
             (window.location =
               "https://help.vitrin.me/?_gl=1*jd36rr*_ga*MTg4OTAzOTIwNS4xNjUyNzEzNDQ0*_ga_S6SJXQYHNZ*MTY1NTExNDk4Ny40MS4xLjE2NTUxMTU1ODEuNjA.")
           }
-          content="کارشناس پشتیبانی ویترین برای هماهنگی نهایی جهت اتصال دامنه، تا سه روز کاری دیگر با شما در ارتباط خواهد بود. هم اکنون می‌توانید راه اندازی سایر بخشهای سایت را آغاز کنید."
+          content="Showcase Support Expert for final coordination for domain connection will be in touch with you for up to three more business days. You can start launching other parts of the site now."
           image="/images/Approve.svg"
-          nextTitle="آموزش"
-          title="ثبت اطلاعات با موفقیت انجام شد"
+          nextTitle="Education"
+          title="Registration information completed successfully"
         />
       </div>
     </div>

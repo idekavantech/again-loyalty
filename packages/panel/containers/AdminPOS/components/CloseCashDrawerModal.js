@@ -67,25 +67,25 @@ export default function CloseCashDrawerModal({
         onClose={onClose}
         isOpen={isOpen}
         isBig
-        header={<ModalHeader onRightClick={onClose} title="بستن صندوق" />}
+        header={<ModalHeader onRightClick={onClose} title="Close the box" />}
         body={
           <div className="flex-1 d-flex flex-column p-4">
             <Divider />
             <div className="d-flex align-items-center justify-content-between mt-4">
-              <div>مبلغ مورد انتظار در صندوق</div>
+              <div>The expected amount in the box</div>
               <div className="d-flex align-items-center u-fontLarge u-fontWeightHeavy">
                 <div className="direction-ltr">{priceFormatter(balance)}</div>
-                <div className="mr-1">تومان</div>
+                <div className="mr-1">Toman</div>
               </div>
             </div>
             <div className="d-flex flex-wrap mt-2">
               <div className="mt-2 pt-2" style={{ width: 140 }}>
-                مبلغ واقعی در صندوق:
+                The actual amount in the box:
               </div>
               <div style={{ minWidth: 250 }} className="flex-1 mt-2">
                 <Input
                   priceInput
-                  placeholder="مبلغ واقعی"
+                  placeholder="The actual amount"
                   size="small"
                   value={remaining}
                   onChange={setRemaining}
@@ -94,25 +94,25 @@ export default function CloseCashDrawerModal({
             </div>
             <div className="d-flex mt-2 flex-wrap">
               <div className="mt-2 pt-2" style={{ width: 140 }}>
-                توضیحات صندوق:
+                Fund description:
               </div>
               <div style={{ minWidth: 250 }} className="flex-1 mt-2">
                 <Input
                   value={description}
                   onChange={setDescription}
-                  placeholder="توضیحات صندوق"
+                  placeholder="Fund description"
                   size="small"
                 />
               </div>
             </div>
             {remaining ? (
               <div className="u-height-24 d-flex align-items-center justify-content-between mt-5">
-                <div>اختلاف</div>
+                <div>Disagreement</div>
                 <div className="d-flex align-items-center u-fontLarge u-fontWeightHeavy">
                   <div className="direction-ltr">
                     {priceFormatter(balance - parseInt(remaining))}
                   </div>
-                  <div className="mr-1">تومان</div>
+                  <div className="mr-1">Toman</div>
                 </div>
               </div>
             ) : (
@@ -120,7 +120,7 @@ export default function CloseCashDrawerModal({
                 style={{ color: text.subdued }}
                 className="u-height-24 text-center mt-5 u-font-semi-small"
               >
-                همچنین می توانید مبلغ واقعی صندوق را در سابقه کشو وارد کنید.
+                You can also enter the real amount of the fund in the drawer history.
               </div>
             )}
             <Button
@@ -137,14 +137,14 @@ export default function CloseCashDrawerModal({
               color="primary"
               className="mt-4 mb-5"
             >
-              {confirm ? "تایید بستن صندوق" : "بستن صندوق"}
+              {confirm ? "Confirm the closure of the fund" : "Close the box"}
             </Button>
             <Divider />
             <div className="u-fontWeightHeavy u-fontLarge mt-5 mb-3">
-              صندوق جاری
+              Current fund
             </div>
             <div className="d-flex justify-content-between my-3">
-              <div>زمان آغاز</div>
+              <div>Beginning time</div>
               <div>
                 {englishNumberToPersianNumber(
                   moment(opened_at).format("jYYYY/jMM/jDD")
@@ -152,45 +152,45 @@ export default function CloseCashDrawerModal({
               </div>
             </div>
             <div className="d-flex justify-content-between my-3">
-              <div>آغازکننده</div>
+              <div>starter</div>
               <div>{initializer?.name}</div>
             </div>
             <div className="d-flex justify-content-between my-3">
-              <div>مجموع تراکنش‌ها</div>
+              <div>Total transactions</div>
               <div>
                 {priceFormatter(Math.abs(total_paid_in - total_paid_out))}
-                {total_paid_out > total_paid_in ? "-" : ""} تومان{" "}
+                {total_paid_out > total_paid_in ? "-" : ""} Toman{" "}
               </div>
             </div>
             <div className="d-flex justify-content-between my-3">
-              <div>مجموع تراکنش‌های دریافت شده</div>
-              <div>{priceFormatter(total_paid_in)} تومان</div>
+              <div>The sum of the received transactions</div>
+              <div>{priceFormatter(total_paid_in)} Toman</div>
             </div>
             <div className="d-flex justify-content-between my-3">
-              <div>مجموع تراکنش‌های پرداخت شده</div>
+              <div>The sum of paid transactions</div>
               <div>
                 {priceFormatter(total_paid_out)}
-                {total_paid_out ? "-" : ""} تومان
+                {total_paid_out ? "-" : ""} Toman
               </div>
             </div>
             <div className="d-flex justify-content-between my-3">
-              <div>فروش نقدی</div>
-              <div>{priceFormatter(total_sales)} تومان</div>
+              <div>Cash sales</div>
+              <div>{priceFormatter(total_sales)} Toman</div>
             </div>
             <div className="d-flex justify-content-between my-3">
-              <div>عودت نقدی</div>
+              <div>Critical return</div>
               <div>
                 {priceFormatter(total_refunds)}
-                {total_refunds ? "-" : ""} تومان
+                {total_refunds ? "-" : ""} Toman
               </div>
             </div>
             <div className="d-flex justify-content-between my-3">
-              <div>مبلغ مورد انتظار در صندوق</div>
-              <div>{priceFormatter(balance)} تومان</div>
+              <div>The expected amount in the box</div>
+              <div>{priceFormatter(balance)} Toman</div>
             </div>
             <div className="d-flex justify-content-between my-3">
-              <div>مبلغ اولیه صندوق</div>
-              <div>{priceFormatter(initial_money)} تومان</div>
+              <div>The initial amount of the fund</div>
+              <div>{priceFormatter(initial_money)} Toman</div>
             </div>
           </div>
         }

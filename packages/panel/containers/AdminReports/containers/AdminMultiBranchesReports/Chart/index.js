@@ -119,7 +119,7 @@ const Chart = ({
       series: hasToCompare
         ? [
             {
-              name: `${xAxisNodeTitle + " بازه‌ی پیشین"}`,
+              name: `${xAxisNodeTitle + " The previous interval"}`,
               color: "#404040",
               data: compareLineData,
             },

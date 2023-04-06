@@ -36,8 +36,8 @@ const reportConfig = {
     type: BRANCHES_TRANSACTIONS_REPORT_TYPE,
     name: TOTAL_TAX,
   },
-  title: "مجموع مالیات",
-  x_axis_node_title: "مجموع مالیات",
+  title: "Total tax",
+  x_axis_node_title: "Total tax",
   has_branches_selector: true,
   has_export_button: true,
   has_table: true,
@@ -71,7 +71,7 @@ const reportConfig = {
               alignItems: "center",
             }}
           >
-            <div style={{ flex: 1 }}>تاریخ دریافت: {jalaaliDate}</div>
+            <div style={{ flex: 1 }}>Date Received: {jalaaliDate}</div>
             <div
               style={{
                 width: 300,
@@ -88,7 +88,7 @@ const reportConfig = {
                 textAlign: "left",
               }}
             >
-              ش. گزارش:{" "}
+              She. Report:{" "}
               {englishNumberToPersianNumber(
                 Math.floor(100000 + Math.random() * 900000)
               )}
@@ -107,7 +107,7 @@ const reportConfig = {
                 flex: 1,
               }}
             >
-              از تاریخ {from_date.format("jYYYY/jMM/jDD")} - تا تاریخ{" "}
+              from{from_date.format("jYYYY/jMM/jDD")} - Up to date{" "}
               {to_date.format("jYYYY/jMM/jDD")}
             </div>
             <div
@@ -118,7 +118,7 @@ const reportConfig = {
                 textAlign: "center",
               }}
             >
-              «گزارش مجموع مالیات شعب»
+              «Report»
             </div>
             {branches ? (
               <div
@@ -127,7 +127,7 @@ const reportConfig = {
                   textAlign: "left",
                 }}
               >
-                شعبه‌ها: {branches.join(", ")}
+                branches: {branches.join(", ")}
               </div>
             ) : (
               <div
@@ -141,7 +141,7 @@ const reportConfig = {
         </div>
       ),
       footerTemplate: `<footer style="width: max-content;font-size: 10px;margin:0px auto 0px; border: 0.5px solid #c4c4c4;border-radius: 4px; padding: 4px 12px;font-family: 'dana'">
-        صفحه <span class="pageNumber"></span> / <span class="totalPages"></span>
+        Page<span class="pageNumber"></span> / <span class="totalPages"></span>
         </footer>`,
       main_styles: `
       *{
@@ -193,55 +193,55 @@ text-align: right;
   },
   columns: [
     {
-      name: "تاریخ",
+      name: "Date",
       uniqe_name: DATE,
       has_to_shown: true,
       is_price: false,
     },
     {
-      name: "تعداد سفارش",
+      name: "Number of order",
       uniqe_name: TOTAL_ORDER,
       has_to_shown: true,
       is_price: false,
     },
     // {
-    //   name: "فروش ناخالص",
+    //   name: "Gross sale",
     //   uniqe_name: TOTAL_GROSS,
     //   has_to_shown: true,
     //   is_price: true,
     // },
     {
-      name: "تخفیف‌ها",
+      name: "Discounts",
       uniqe_name: TOTAL_DISCOUNT,
       has_to_shown: true,
       is_price: true,
     },
     {
-      name: "استفاده از اعتبار هدیه",
+      name: "Use of gift credit",
       uniqe_name: TOTAL_CREDIT_USED,
       has_to_shown: true,
       is_price: true,
     },
     // {
-    //   name: "فروش خالص",
+    //   name: "net sales",
     //   uniqe_name: TOTAL_NET,
     //   has_to_shown: true,
     //   is_price: true,
     // },
     {
-      name: "هزینه ارسال",
+      name: "shipping cost",
       uniqe_name: TOTAL_SHIPPING,
       has_to_shown: true,
       is_price: true,
     },
     {
-      name: "مالیات",
+      name: "Tax",
       uniqe_name: TOTAL_TAX,
       has_to_shown: true,
       is_price: true,
     },
     {
-      name: "مجموع فروش",
+      name: "Total sales",
       uniqe_name: TOTAL_PAYMENTS,
       has_to_shown: true,
       is_price: true,
@@ -256,5 +256,5 @@ AdminTaxes.ShouldBeAdmin = true;
 AdminTaxes.Wrapper = AdminLayout;
 
 export const breadcrumb = {
-  title: "مجموع مالیات",
+  title: "Total tax",
 };

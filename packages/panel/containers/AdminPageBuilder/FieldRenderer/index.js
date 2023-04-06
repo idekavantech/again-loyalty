@@ -252,7 +252,7 @@ const Index = ({
 
           <Select
             value={value}
-            label="فرم‌ها"
+            label="forms"
             onChange={(event) => setValue(event.target.value)}
             className="medium w-100"
           >
@@ -264,7 +264,7 @@ const Index = ({
               ))
             ) : (
               <MenuItem key={0} value={null}>
-                فرمی وجود ندارد.
+                There is no form.
               </MenuItem>
             )}
           </Select>

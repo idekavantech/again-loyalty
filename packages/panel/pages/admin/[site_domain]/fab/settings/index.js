@@ -13,5 +13,5 @@ AdminFabSettingsPage.ShouldBeAdmin = true;
 AdminFabSettingsPage.Wrapper = AdminLayout;
 AdminFabSettingsPage[INCLUDED_WEBAPPS_ONLY_KEY] = [VITRIN_WEBAPP_CONSTANT];
 export const breadcrumb = {
-  title: "تنظیمات دکمه شناور تماس",
+  title: "Settings of the Call Floating button",
 };

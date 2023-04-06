@@ -71,24 +71,24 @@ jMoment.locale("fa");
 jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
 
 const sortingOptions = [
-  { id: 0, text: "جدیدترین ثبت سفارش", keyword: NEWEST_CREATED_PURCHASE_DATE },
+  { id: 0, text: "The latest order registration", keyword: NEWEST_CREATED_PURCHASE_DATE },
   {
     id: 1,
-    text: "قدیمی‌ترین ثبت سفارش",
+    text: "The oldest order registration",
     keyword: OLDEST_CREATED_PURCHASE_DATE,
   },
   {
     id: 2,
-    text: "جدیدترین دریافت سفارش",
+    text: "The latest order receipt",
     keyword: NEWEST_UPDATED_PURCHASE_DATE,
   },
   {
     id: 3,
-    text: "قدیمی‌ترین دریافت سفارش",
+    text: "The oldest order receipt",
     keyword: OLDEST_UPDATED_PURCHASE_DATE,
   },
-  { id: 4, text: "بیشترین مبلغ", keyword: HIGHEST_PRICE },
-  { id: 5, text: "تامین‌کننده", keyword: VENDORS },
+  { id: 4, text: "The highest amount", keyword: HIGHEST_PRICE },
+  { id: 5, text: "Supplier", keyword: VENDORS },
 ];
 
 const sortingFunctions = {
@@ -109,41 +109,41 @@ const sortingFunctions = {
 const branchHeadCells = [
   {
     id: "id",
-    name: "ردیف",
-    label: "ردیف",
+    name: "Row",
+    label: "Row",
     align: "center",
   },
   {
     id: "id",
-    name: "ش.سند",
-    label: "ش.سند",
+    name: "She.Document",
+    label: "She.Document",
     align: "center",
   },
   {
     id: "id",
-    name: "تامین کننده",
-    label: "تامین کننده",
+    name: "Supplier",
+    label: "Supplier",
     align: "center",
   },
   {
     id: "id",
-    name: "تاریخ ثبت سفارش",
+    name: "Order registration date",
     label: (
       <div className="d-flex flex-column">
-        <div>تاریخ ثبت سفارش</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(توسط شعبه)</div>
+        <div>Order registration date</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(By the branch)</div>
       </div>
     ),
     align: "center",
   },
   {
     id: "id",
-    name: "تاریخ تایید سفارش",
+    name: "Order confirmation date",
     label: (
       <div className="d-flex flex-column">
-        <div>تاریخ تایید سفارش</div>
+        <div>Order confirmation date</div>
         <div className="u-font-semi-small u-fontWeightNormal">
-          (توسط دفتر مرکزی)
+          (By the headquarters)
         </div>
       </div>
     ),
@@ -151,83 +151,83 @@ const branchHeadCells = [
   },
   {
     id: "id",
-    name: "تاریخ دریافت سفارش",
+    name: "The date of receiving the order",
     label: (
       <div className="d-flex flex-column">
-        <div>تاریخ دریافت سفارش</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(توسط شعبه)</div>
+        <div>The date of receiving the order</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(By the branch)</div>
       </div>
     ),
     align: "center",
   },
   {
     id: "id",
-    name: "جمع مبالغ دریافتی",
+    name: "The sum of the sums received",
     label: (
       <div className="d-flex flex-column">
-        <div>جمع مبالغ دریافتی</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>The sum of the sums received</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
   },
   {
     id: "id",
-    name: "جمع مبلغ سند",
+    name: "The sum of the document amount",
     label: (
       <div className="d-flex flex-column">
-        <div>جمع مبلغ سند</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>The sum of the document amount</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
   },
   {
     id: "id",
-    name: "مالیات",
+    name: "Tax",
     label: (
       <div className="d-flex flex-column">
-        <div>مالیات</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>Tax</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
   },
   {
     id: "id",
-    name: "باقی هزینه‌ها",
+    name: "The rest",
     label: (
       <div className="d-flex flex-column">
-        <div>باقی هزینه‌ها</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>The rest</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
   },
   {
     id: "id",
-    name: "توضیحات",
-    label: "توضیحات",
+    name: "Description",
+    label: "Description",
     align: "center",
   },
   {
     id: "id",
-    name: "مبلغ کل دریافتی",
+    name: "The total amount received",
     label: (
       <div className="d-flex flex-column">
-        <div>مبلغ کل دریافتی</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>The total amount received</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
   },
   {
     id: "id",
-    name: "مبلغ کل",
+    name: "Total Amount",
     label: (
       <div className="d-flex flex-column">
-        <div>مبلغ کل</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>Total Amount</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
@@ -337,8 +337,8 @@ export function AdminPurchaseReport({
       const mainBranchHeadCells = [...branchHeadCells];
       mainBranchHeadCells.splice(1, 0, {
         id: "id",
-        name: "نام شعبه",
-        label: "نام شعبه",
+        name: "Branch Name",
+        label: "Branch Name",
         align: "center",
       });
       return mainBranchHeadCells;
@@ -510,21 +510,21 @@ export function AdminPurchaseReport({
       <Head>
         <title>
           {isSuper
-            ? "گزارش مالی ثبت سفارش و سند خرید شعب"
-            : "گزارش مالی ثبت سفارش و سند خرید"}
+            ? "Financial Report of Order Registration and Branches Purchase Document"
+            : "Financial Report of Order Registration and Purchase Document"}
         </title>
       </Head>
 
       <AdminBreadCrumb
-        submitButtonText="خروجی گرفتن"
+        submitButtonText="Output"
         submitAction={() =>
           generateCSVFile(
             headRow,
             rows || [],
             [],
             isSuper
-              ? "گزارش مالی ثبت سفارش و سند خرید شعب"
-              : "گزارش مالی ثبت سفارش و سند خرید"
+              ? "Financial Report of Order Registration and Branches Purchase Document"
+              : "Financial Report of Order Registration and Purchase Document"
           )
         }
       />
@@ -559,7 +559,7 @@ export function AdminPurchaseReport({
                     });
                   }, 500);
                 }}
-                placeholder="جستجوی ش.‌سند"
+                placeholder="Search.‌Document"
                 inputProps={{
                   className: "pr-5 mr-2",
                 }}
@@ -611,13 +611,13 @@ export function AdminPurchaseReport({
                 onClick={handleOpen}
                 variant="outlined"
               >
-                از{" "}
+                From{" "}
                 <span className="px-2">
                   {englishNumberToPersianNumber(
                     formatDateObjectToNormal(selectedDayRange.from)
                   )}
                 </span>
-                تا{" "}
+                until the{" "}
                 <span className="px-2">
                   {englishNumberToPersianNumber(
                     formatDateObjectToNormal(selectedDayRange.to)
@@ -671,16 +671,16 @@ export function AdminPurchaseReport({
                 size="large"
                 // IconComponent={() => null}
                 renderValue={() => {
-                  if (selectedBranches.length === 0) return "شعبه انتخاب کنید";
+                  if (selectedBranches.length === 0) return "Choose a branch";
                   if (selectedBranches.length === 1 && selectedBranches[0])
                     return branches.find(
                       (branch) => branch.id === selectedBranches[0]
                     ).title;
                   if (selectedBranches.length === branches.length)
-                    return "همه شعب";
+                    return "All branches";
                   return `${englishNumberToPersianNumber(
                     selectedBranches.length
-                  )} شعبه `;
+                  )} Branch`;
                 }}
                 MenuProps={{
                   getContentAnchorEl: null,
@@ -715,7 +715,7 @@ export function AdminPurchaseReport({
                     checked={selectedBranches.length === branches.length}
                   />
                   <ListItemText
-                    primary="انتخاب همه شعب"
+                    primary="Choosing all branches"
                     className="text-right"
                   />
                 </MenuItem>
@@ -770,16 +770,16 @@ export function AdminPurchaseReport({
               size="large"
               renderValue={() => {
                 if (selectedVendors?.length === 0)
-                  return "تامین‌کننده انتخاب کنید";
+                  return "Select the supplier";
                 if (selectedVendors?.length === 1 && selectedVendors?.[0])
                   return vendors?.find(
                     (vendor) => vendor.id === selectedVendors?.[0]
                   ).title;
                 if (selectedVendors?.length === vendors?.length)
-                  return "همه تامین‌کننده‌ها";
+                  return "All suppliers";
                 return `${englishNumberToPersianNumber(
                   selectedVendors?.length
-                )} تامین‌کننده `;
+                )} Supplier`;
               }}
               MenuProps={{
                 getContentAnchorEl: null,
@@ -814,7 +814,7 @@ export function AdminPurchaseReport({
                   checked={selectedVendors?.length === vendors?.length}
                 />
                 <ListItemText
-                  primary="انتخاب همه تامین‌کننده‌ها"
+                  primary="Choosing all suppliers"
                   className="text-right"
                 />
               </MenuItem>
@@ -872,7 +872,7 @@ export function AdminPurchaseReport({
                 style={{ width: 200 }}
                 className="px-3 u-fontWeightBold u-fontNormal my-1"
               >
-                مرتب‌سازی بر اساس
+                order by
               </div>
             }
             selectOption={(text) =>
@@ -881,7 +881,7 @@ export function AdminPurchaseReport({
               )
             }
             inputData={{
-              defaultValue: "مرتب‌سازی",
+              defaultValue: "Ordering",
             }}
             selected={sortingOptions.find(
               (i) => i.keyword === selectedSortingType

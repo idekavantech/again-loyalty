@@ -69,12 +69,12 @@ function AdminSaleChannel({ slug }) {
         <Paper elevation={2} className="my-4 p-4">
           <div className="col-12 px-0 mb-3">
             <div className="mb-2 u-fontLarge u-fontWeightHeavy">
-              تعریف کانال فروش
+              Definition of sales channel
             </div>
             <div className="mb-4">
-              با ساخت کانال فروش, میتوانید برای دستگاه خود یک کانال فروش تایین
-              کنید. همچنین میتوانید کانال فروش ایجاد شده را بر روی دستگاه خود
-              فعال کنید
+              By building a sales channel, Can be a Tayin sales channel for your device
+              do. You can also make the sales channel created on your device
+              Enable
             </div>
             <Divider />
             <br />
@@ -82,7 +82,7 @@ function AdminSaleChannel({ slug }) {
               <div key={i.id} className="row m-4">
                 <div className="col-sm-2">
                   <p style={{ marginTop: 10, marginRight: 40 }}>
-                    نام کانال فروش
+                    Sales Channel Name
                   </p>
                 </div>
                 <div className="col-sm-3">
@@ -93,7 +93,7 @@ function AdminSaleChannel({ slug }) {
                 </div>
                 <div className="col-sm-2">
                   <p style={{ marginTop: 10, marginRight: 40 }}>
-                    نوع کانال فروش
+                    Type of sales channel
                   </p>
                 </div>
                 <div className="col-sm-3">
@@ -112,7 +112,7 @@ function AdminSaleChannel({ slug }) {
                         marginTop: 5,
                       }}
                     >
-                      فعال
+                      active
                     </p>
                   )}
                 </div>
@@ -122,7 +122,7 @@ function AdminSaleChannel({ slug }) {
               <div key={channel.id} className="row m-4">
                 <div className="col-sm-2">
                   <p style={{ marginTop: 10, marginRight: 40 }}>
-                    نام کانال فروش
+                    Sales Channel Name
                   </p>
                 </div>
                 <div className="col-sm-3">
@@ -134,7 +134,7 @@ function AdminSaleChannel({ slug }) {
                 </div>
                 <div className="col-sm-2">
                   <p style={{ marginTop: 10, marginRight: 40 }}>
-                    نوع کانال فروش
+                    Type of sales channel
                   </p>
                 </div>
                 <div className="col-sm-3">
@@ -191,7 +191,7 @@ function AdminSaleChannel({ slug }) {
                   setChannels([...channels, 1]);
                 }}
               >
-                ساخت کانال فروش جدید
+                Construction of the new sales channel
               </Button>
             )}
           </div>

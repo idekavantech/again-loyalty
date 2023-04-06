@@ -50,13 +50,13 @@ const CreateGateAway = ({
 
   const submitGeneralInfo = () => {
     const _errors = {
-      name: !info.name ? "نام را وارد نمایید" : "",
-      lastname: !info.lastname ? "نام خانوادگی را وارد نمایید" : "",
-      birthday: !info.birthday ? "تاریخ تولد را وارد نمایید" : "",
-      nationalId: !info.nationalId ? "شماره شناسنامه را وارد نمایید" : "",
-      fatherName: !info.fatherName ? "نام پدر را وارد نمایید" : "",
+      name: !info.name ? "Enter the name" : "",
+      lastname: !info.lastname ? "Enter the last name" : "",
+      birthday: !info.birthday ? "Enter the date of birth" : "",
+      nationalId: !info.nationalId ? "Enter the ID number" : "",
+      fatherName: !info.fatherName ? "Enter the father's name" : "",
       nationalCardImg: !info.nationalCardImg
-        ? "عکس کارت ملی را وارد نمایید"
+        ? "Enter the national card photo"
         : errors?.nationalCardImg,
     };
 
@@ -83,14 +83,14 @@ const CreateGateAway = ({
 
   const submitContactInfo = () => {
     const _errors = {
-      phoneNumber: !info.phoneNumber ? "شماره تلفن را وارد نمایید" : "",
-      email: !info.email ? "ایمیل را وارد نمایید" : "",
+      phoneNumber: !info.phoneNumber ? "Enter the phone number" : "",
+      email: !info.email ? "Enter the email" : "",
       postalCode: !info.postalCode
-        ? "کد پستی را وارد نمایید"
+        ? "Enter the zip code"
         : info.postalCode.length < 10
-        ? "کد پستی باید ده رقم باشد"
+        ? "Zip code should be ten digits"
         : "",
-      address: !info.address ? "آدرس کسب و کار را وارد نمایید" : "",
+      address: !info.address ? "Enter the business address" : "",
     };
     setErrors(_errors);
     if (Object.values(_errors).every((error) => !error)) {
@@ -116,9 +116,9 @@ const CreateGateAway = ({
     const _errors = {
       bank_acount_number: info.bank_acount_number
         ? info.bank_acount_number.length < 24
-          ? "شماره شبا باید ۲۴ رقم باشد"
+          ? "The number of nights must be 2 digits"
           : ""
-        : "لطفا شماره شبا را وارد نمایید",
+        : "Please enter the night number",
     };
     setErrors(_errors);
     if (Object.values(_errors).every((error) => !error)) {
@@ -186,7 +186,7 @@ const CreateGateAway = ({
         if (blob.size > 1000000) {
           setErrors({
             ...errors,
-            nationalCardImg: "حجم عکس وارد شده باید کمتر از یک مگا بایت باشد",
+            nationalCardImg: "The entered photo volume should be less than one megabb",
           });
         } else {
           setErrors({
@@ -213,7 +213,7 @@ const CreateGateAway = ({
       />
       <div className="col-12 mt-4 px-0">
         <Paper elevation={1} className="p-2 p-md-4">
-          <p className="title">ساخت حساب در درگاه زیبال</p>
+          <p className="title">Construction of an account in the Zibal port</p>
           <Stepper step={step} />
           {selectComponent()}
         </Paper>

@@ -244,7 +244,7 @@ function DealsItem({ onSelect, slug, products, posId }) {
         )}
       {!menu[superMenu.selectedMenu]?.cells?.length &&
         superMenu.selectedMenu === -1 && (
-          <h1>برای نمایش لیست لطفا ابتدا یک منو انتخاب کنید یا بسازید</h1>
+          <h1>To display the list please select or create a menu first</h1>
         )}
     </Grid>
   );

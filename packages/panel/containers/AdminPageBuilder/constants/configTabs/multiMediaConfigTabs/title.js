@@ -4,41 +4,41 @@ import { sectionsLayout } from "../../sectionsLayout";
 import { SECTION_TITLE } from "@saas/utils/constants/sections";
 
 const title = [
-  // عنوان
+  // Title
   {
     ...sectionsConfigTabsRepeatedParts["content"],
     items: [
       {
         id: uniqueid(),
-        label: "عنوان",
+        label: "Title",
         key: "title",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "عنوان مورد نظر",
-            default_value: "سایت تو با ویترین",
+            label: "The desired title",
+            default_value: "Your site with showcase",
             key: "value",
             type: "text",
           },
           {
             id: uniqueid(),
-            label: "رنگ عنوان",
+            label: "Title color",
             default_value: process.env.NEXT_PUBLIC_ADMIN_THEME_COLOR,
             key: "color",
             type: "color",
           },
           {
             id: uniqueid(),
-            label: "اندازه فونت",
+            label: "Font size",
             key: "font_size",
             default_value: "20px",
             type: "text",
           },
           {
             id: uniqueid(),
-            label: "HTML تگ",
+            label: "HTML tag",
             key: "html_tag",
             default_value: "h1",
             type: "select",
@@ -92,24 +92,24 @@ const title = [
           },
           {
             id: uniqueid(),
-            label: "نوع چینش",
+            label: "The type of layout",
             key: "position",
             default_value: "right",
             type: "select",
             options: [
               {
                 id: uniqueid(),
-                label: "سمت راست",
+                label: "right side",
                 value: "right",
               },
               {
                 id: uniqueid(),
-                label: "سمت چپ",
+                label: "Left side",
                 value: "left",
               },
               {
                 id: uniqueid(),
-                label: "وسط",
+                label: "middle",
                 value: "center",
               },
             ],

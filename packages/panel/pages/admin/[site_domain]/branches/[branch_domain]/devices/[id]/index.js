@@ -14,5 +14,5 @@ DevicesPage.ShouldBeAdmin = true;
 DevicesPage.Wrapper = AdminLayout;
 DevicesPage[INCLUDED_WEBAPPS_ONLY_KEY] = [DARAMAD_WEBAPP_CONSTANT];
 export const breadcrumb = {
-  title: "تنظیمات",
+  title: "Settings",
 };

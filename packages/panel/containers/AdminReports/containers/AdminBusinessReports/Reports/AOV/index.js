@@ -57,7 +57,7 @@ jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
 
 const $ = `/images/$.svg`;
 
-const columns = ["تاریخ", "مجموع فروش", "تعداد سفارش", "میانگین ارزش سفارش"];
+const columns = ["Date", "Total sales", "Number of order", "Average order value"];
 
 export function AdminReports({
   _getReportData,
@@ -439,13 +439,13 @@ export function AdminReports({
               onClick={handleOpen}
               variant="outlined"
             >
-              از{" "}
+              From{" "}
               <span className="px-2">
                 {englishNumberToPersianNumber(
                   formatDateObjectToNormal(selectedDayRange.from)
                 )}
               </span>
-              تا{" "}
+              until the{" "}
               <span className="px-2">
                 {englishNumberToPersianNumber(
                   formatDateObjectToNormal(selectedDayRange.to)
@@ -499,7 +499,7 @@ export function AdminReports({
               orientation: "portrait",
               format: "a4",
             });
-            doc.html("<div style='color: red;'>سلام و علیک</div>", {
+            doc.html("<div style='color: red;'>Hi and Alik</div>", {
               callback: function (doc) {
                 doc.save();
               },
@@ -509,7 +509,7 @@ export function AdminReports({
             });
           }}
         >
-          خروجی
+          Output
         </Button>
       </div>
       <div>
@@ -529,13 +529,13 @@ export function AdminReports({
             ) : (
               <div>
                 <h2 style={{ fontWeight: 700 }} className="mb-2">
-                  میانگین ارزش سفارش‌ها
+                  The average value of orders
                 </h2>
                 <div className="my-2 d-flex justify-content-between align-items-center">
                   <div style={{ fontSize: 20, fontWeight: 700 }}>
                     {reportsData?.[TRANSACTIONS_REPORT_TYPE] &&
                       priceFormatter(totalOrdersAverageValues)}{" "}
-                    تومان
+                    Toman
                   </div>
                   <div
                     className="d-flex justify-content-center align-items-center"
@@ -561,13 +561,13 @@ export function AdminReports({
                   reportsData?.[ORDERS_REPORT_TYPE] &&
                   transactionsXAxiosLabel.length && (
                     <Chart
-                      xAxisNodeTitle="میانگین ارزش سفارش"
+                      xAxisNodeTitle="Average order value"
                       hasToCompare={compareToPrevious}
                       xAxisLabel={transactionsXAxiosLabel}
                       mainLineData={mainDailyOrderAverageValues}
                       compareLineData={comparedDailyOrderAverageValues}
                       selectedBranches
-                      title="میانگین ارزش سفارش‌ها"
+                      title="The average value of orders"
                     />
                   )}
               </div>
@@ -596,7 +596,7 @@ export function AdminReports({
                         fontWeight: 700,
                       }}
                     >
-                      خلاصه
+                      Summary
                     </StyledTableCell>
                     {summary.map((summaryCell) => (
                       <StyledTableCell
@@ -637,7 +637,7 @@ export function AdminReports({
                         fontWeight: 700,
                       }}
                     >
-                      خلاصه
+                      Summary
                     </StyledTableCell>
                     {summary.map((summaryCell) => (
                       <StyledTableCell

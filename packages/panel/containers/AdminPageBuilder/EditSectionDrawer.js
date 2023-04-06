@@ -382,13 +382,13 @@ const EditSectionDrawer = ({
   const sectionLabel = useMemo(
     () =>
       isHeader
-        ? "هدر"
+        ? "Waste"
         : isFooter
-        ? "فوتر"
+        ? "Futury"
         : isNavigationBar
-        ? "نوار اعلانات"
+        ? "Notification bar"
         : isTopPageHeader
-        ? "هدر بالای صفحه"
+        ? "The header above the page"
         : section && sectionsDetails[section.name].label,
     [isHeader, isFooter, section, isNavigationBar, isTopPageHeader]
   );
@@ -465,7 +465,7 @@ const EditSectionDrawer = ({
                   clickedOnSection(null);
                 }}
               >
-                بستن
+                to close
               </Button>
               <Button
                 style={{
@@ -491,7 +491,7 @@ const EditSectionDrawer = ({
                   toggleEditSectionDrawer(false);
                 }}
               >
-                ذخیره
+                Store
               </Button>
             </div>
           </div>
@@ -758,7 +758,7 @@ const EditSectionDrawer = ({
                                               className="px-3"
                                               expandIcon={<ExpandMoreIcon />}
                                             >
-                                              آیتم{" "}
+                                              item{" "}
                                               {englishNumberToPersianNumber(
                                                 index + 1
                                               )}
@@ -942,7 +942,7 @@ const EditSectionDrawer = ({
                                                       );
                                                     }}
                                                   >
-                                                    حذف
+                                                    Delete
                                                   </Button>
                                                 ) : null}
                                               </div>
@@ -1129,7 +1129,7 @@ const EditSectionDrawer = ({
                     cursor: "pointer",
                   }}
                 >
-                  آیا مطمئنید میخواهید این سکشن را حذف کنید؟
+                  Are you sure you want to delete this sequel?
                 </div>
               </Collapse>
               {isSectionAllowedToDelete && (
@@ -1162,7 +1162,7 @@ const EditSectionDrawer = ({
                           toggleEditSectionDrawer(false);
                         }}
                       >
-                        حذف
+                        Delete
                       </Button>
                       <Button
                         variant="text"
@@ -1172,7 +1172,7 @@ const EditSectionDrawer = ({
                           toggleDeleteSection(false);
                         }}
                       >
-                        انصراف
+                        Candifying
                       </Button>
                     </div>
                   ) : (
@@ -1182,7 +1182,7 @@ const EditSectionDrawer = ({
                           fontWeight: "bold",
                         }}
                       >
-                        حذف سکشن
+                        Remove the sequel
                       </div>
                       <DeleteOutlineRoundedIcon />
                     </div>

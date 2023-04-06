@@ -3,7 +3,7 @@ import { sectionsLayout } from "../../sectionsLayout";
 import { SECTION_PRODUCT_ADDITIONAL_INFORMATION } from "@saas/utils/constants/sections";
 
 const productAdditionalInformation = [
-  // مشخصات تکمیلی محصول
+  // Supplementary product specifications
   {
     ...sectionsConfigTabsRepeatedParts["customization"],
     items: [

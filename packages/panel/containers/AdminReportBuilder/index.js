@@ -246,7 +246,7 @@ const AdminReportBuilder = ({
         const isColumnMultiField = Array.isArray(column.uniqe_name);
         if (column.uniqe_name === DATE) {
           return {
-            data: "خلاصه",
+            data: "Summary",
             uniqe_name: DATE,
             is_price: false,
             has_to_shown: column.has_to_shown,
@@ -479,7 +479,7 @@ const AdminReportBuilder = ({
       series: compareToPrevious
         ? [
             {
-              name: `${x_axis_node_title + " بازه‌ی پیشین"}`,
+              name: `${x_axis_node_title + " The previous interval"}`,
               color: "rgb(96, 96, 96)",
               data: previousChartLineData,
             },
@@ -571,7 +571,7 @@ const AdminReportBuilder = ({
                 variant="contained"
                 onClick={(e) => toggleExportAnchor(e.currentTarget)}
               >
-                خروجی
+                Output
               </Button>
               <Menu
                 elevation={1}
@@ -606,9 +606,9 @@ const AdminReportBuilder = ({
                         },
                       },
                       title +
-                        `از ${englishNumberToPersianNumber(
+                        `From${englishNumberToPersianNumber(
                           formatDateObjectToNormal(selectedDayRange.from)
-                        )} تا ${englishNumberToPersianNumber(
+                        )} until the${englishNumberToPersianNumber(
                           formatDateObjectToNormal(selectedDayRange.to)
                         )}` +
                         ".pdf"
@@ -657,15 +657,15 @@ const AdminReportBuilder = ({
             size="large"
             // IconComponent={() => null}
             renderValue={() => {
-              if (selectedBranches.length === 0) return "شعبه انتخاب کنید";
+              if (selectedBranches.length === 0) return "Choose a branch";
               if (selectedBranches.length === 1 && selectedBranches[0])
                 return branches.find(
                   (branch) => branch.id === selectedBranches[0]
                 )?.title;
-              if (selectedBranches.length === branches.length) return "همه شعب";
+              if (selectedBranches.length === branches.length) return "All branches";
               return `${englishNumberToPersianNumber(
                 selectedBranches.length
-              )} شعبه `;
+              )} Branch`;
             }}
             MenuProps={{
               getContentAnchorEl: null,
@@ -699,7 +699,7 @@ const AdminReportBuilder = ({
                 color="primary"
                 checked={selectedBranches.length === branches.length}
               />
-              <ListItemText primary="انتخاب همه شعب" className="text-right" />
+              <ListItemText primary="Choosing all branches" className="text-right" />
             </MenuItem>
             {branches.map((branch) => {
               return (
@@ -744,13 +744,13 @@ const AdminReportBuilder = ({
               onClick={handleOpen}
               variant="outlined"
             >
-              از{" "}
+              From{" "}
               <span className="px-2">
                 {englishNumberToPersianNumber(
                   formatDateObjectToNormal(selectedDayRange.from)
                 )}
               </span>
-              تا{" "}
+              until the{" "}
               <span className="px-2">
                 {englishNumberToPersianNumber(
                   formatDateObjectToNormal(selectedDayRange.to)
@@ -817,7 +817,7 @@ const AdminReportBuilder = ({
                 <div className="my-2 d-flex justify-content-between align-items-center">
                   <div style={{ fontSize: 20, fontWeight: 700 }}>
                     {isPrice
-                      ? priceFormatter(currentTotalValue) + " تومان "
+                      ? priceFormatter(currentTotalValue) + " Toman"
                       : priceFormatter(currentTotalValue)}
                   </div>
                   {compareToPrevious ? (
@@ -852,7 +852,7 @@ const AdminReportBuilder = ({
                     style={{ fontWeight: 700, fontSize: 18 }}
                     className="mb-2 mx-auto text-bold text-center"
                   >
-                    هیچ شعبه‌ای انتخاب نشده است
+                    No branch is selected
                   </div>
                 )}
               </div>
@@ -875,7 +875,7 @@ const AdminReportBuilder = ({
               displayEmpty
               size="large"
               renderValue={() => {
-                return "ستون‌ها";
+                return "columns";
               }}
               MenuProps={{
                 getContentAnchorEl: null,
@@ -1043,7 +1043,7 @@ const AdminReportBuilder = ({
                   style={{ fontSize: 15, fontWeight: 900 }}
                   className="mx-auto text-bold text-center font-weight-bold w-100 mt-3"
                 >
-                  هیج شعبه‌ای انتخاب نشده است
+                  No branch is selected
                 </div>
               </>
             )}

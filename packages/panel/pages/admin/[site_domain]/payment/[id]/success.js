@@ -9,7 +9,7 @@ export default function PaymentPage() {
   return (
     <div>
       <Head>
-        <title>پرداخت موفق</title>
+        <title>Successful payment</title>
         <meta name="robots" content="noindex" />
       </Head>
 
@@ -34,5 +34,5 @@ PaymentPage.getInitialProps = async ({ query, store }) => {
 };
 PaymentPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "موفق",
+  title: "Successful",
 };

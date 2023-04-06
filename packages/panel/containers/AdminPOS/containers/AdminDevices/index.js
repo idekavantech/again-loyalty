@@ -13,13 +13,13 @@ function AdminDevicesContainer() {
   return (
     <div className="container">
       <Head>
-        <title>دستگاه‌ها</title>
+        <title>Devices</title>
       </Head>
 
       <AdminBreadCrumb
         submitAction={goToNewDevicePage}
         submitButtonHasPlus
-        submitButtonText="دستگاه جدید"
+        submitButtonText="New device"
       />
 
       <Paper elevation={1} className="py-4 mt-4">

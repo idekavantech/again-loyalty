@@ -13,5 +13,5 @@ export default function AdminAnalyticsComprehensiveSalesReport() {
 AdminAnalyticsComprehensiveSalesReport.ShouldBeAdmin = true;
 AdminAnalyticsComprehensiveSalesReport.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "گزارش مالی فروش براساس کانال فروش",
+  title: "Financial Sale Financial Report Based on Sales Channel",
 };

@@ -24,7 +24,7 @@ const TutorialVideoModal = ({ videoUrl, title, setShowModal, showModal }) => {
             lineHeight: "32px",
             color: "#202223",
           }}
-          title={`ویدیو آموزشی ${title}`}
+          title={`educational video${title}`}
         />
       }
       body={

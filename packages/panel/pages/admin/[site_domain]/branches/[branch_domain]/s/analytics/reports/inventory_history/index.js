@@ -7,5 +7,5 @@ export default function AdminAnalyticsPurchaseByIngredients() {
 AdminAnalyticsPurchaseByIngredients.ShouldBeAdmin = true;
 AdminAnalyticsPurchaseByIngredients.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "گزارش کامل انبار مواد اولیه",
+  title: "Complete Raw Material Warehouse Report",
 };

@@ -8,5 +8,5 @@ export default function AdminFormResponsesPage() {
 AdminFormResponsesPage.ShouldBeAdmin = true;
 AdminFormResponsesPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "پاسخ‌های فرم",
+  title: "Form Answers",
 };

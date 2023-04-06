@@ -19,9 +19,9 @@ import { makeSelectLoading } from "@saas/stores/global/selectors";
 import { makeSelectAdminUrlPrefix, makeSelectPlugin } from "@saas/stores/plugins/selector";
 import { SHOPPING_PLUGIN } from "@saas/utils/constants/plugins";
 
-const SHORTCUT_MENU_NAME = "حالت میانبر";
-const DEFAULT_MENU_NAME = "حالت پیش فرض";
-const FAST_ORDER_NAME = "ثبت سفارش سریع";
+const SHORTCUT_MENU_NAME = "Shortcut mode";
+const DEFAULT_MENU_NAME = "Default mode";
+const FAST_ORDER_NAME = "Quick order registration";
 const menuTypes = [
   {
     name: SHORTCUT_MENU_NAME,
@@ -43,10 +43,10 @@ const DELIVERY_ON_CAR_KEYWORD = "DELIVERY_ON_CAR";
 const DELIVERY_ON_USER_SITE_KEYWORD = "DELIVERY_ON_USER_SITE";
 
 const deliveryOptions = [
-  { name: "بیرون بر", value: CARRY_OUT_KEYWORD },
-  { name: "تحویل در خودرو", value: DELIVERY_ON_CAR_KEYWORD },
-  { name: "ارسال برای مشتری", value: DELIVERY_ON_USER_SITE_KEYWORD },
-  { name: "سرو در سالن", value: DELIVERY_ON_BUSINESS_SITE_KEYWORD },
+  { name: "Out", value: CARRY_OUT_KEYWORD },
+  { name: "Delivery in the vehicle", value: DELIVERY_ON_CAR_KEYWORD },
+  { name: "Send to the customer", value: DELIVERY_ON_USER_SITE_KEYWORD },
+  { name: "Cedar in the hall", value: DELIVERY_ON_BUSINESS_SITE_KEYWORD },
 ];
 
 export function useAdminDevice() {
@@ -129,11 +129,11 @@ export function useAdminDevice() {
   }, [deviceId]);
 
   const submit = () => {
-    if (!device.name) setNameError("لطفا نام دستگاه را وارد کنید.");
-    if (!branch) setBranchError("لطفا شعبه انتخاب کنید.");
-    if (!phone) setPhoneError("لطفا شماره تلفن کاربر را وارد کنید.");
-    if (!saleChannel) return setSaleChannelError("لطفا کانال فروش انتخاب کنید");
-    if (!defaultDeliveryType && menuType !== 2) return setDefaultDeliveryTypeError("لطفا نحوه تحویل را انتخاب کنید");
+    if (!device.name) setNameError("Please enter the device name..");
+    if (!branch) setBranchError("Please select branch..");
+    if (!phone) setPhoneError("Please enter the user's phone number..");
+    if (!saleChannel) return setSaleChannelError("Please select the sales channel");
+    if (!defaultDeliveryType && menuType !== 2) return setDefaultDeliveryTypeError("Please select how to deliver");
     const defaultDeliveryTypeLowerCase = defaultDeliveryType.toLowerCase()
     if (device.name && branch) {
       if (deviceId) {

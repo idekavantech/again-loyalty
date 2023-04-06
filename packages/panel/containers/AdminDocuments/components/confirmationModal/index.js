@@ -17,7 +17,7 @@ const ConfirmationModal = ({ isOpen, onClose, submit, isLoading }) => {
       <DialogContent className="p-4 w-100">
         <div className="d-flex justify-content-between align-items-center">
           {/* <div style={{ color: night }} className="u-fontLarge">
-            آپدیت موجودی انبار
+            Warehouse Inventory Update
           </div> */}
           <div>
             <IconButton
@@ -30,9 +30,9 @@ const ConfirmationModal = ({ isOpen, onClose, submit, isLoading }) => {
           </div>
         </div>
         <div className="mt-4" style={{ color: night }}>
-          به علت تغییر دامنه تستی به آدرس جدید، اطلاعات سفارش‌های دریافتی پیشین
-          شما در صورت وجود پاک می‌شود. در صورت تمایل اطلاعات مورد نیاز خود را
-          یادداشت کنید و دوباره از این قسمت اقدام کنید.
+          Due to the change of the domain of the test to the new address, the information of the previously received orders
+          You will be erased in case of existence. If you would like the information you need
+          Note and take action again from this section.
         </div>
       </DialogContent>
       <DialogActions
@@ -50,7 +50,7 @@ const ConfirmationModal = ({ isOpen, onClose, submit, isLoading }) => {
           size="large"
           disabled={isLoading}
         >
-          تایید
+          Confirm
         </Button>
         <Button
           onClick={onClose}
@@ -59,7 +59,7 @@ const ConfirmationModal = ({ isOpen, onClose, submit, isLoading }) => {
           className="mr-2 ml-0 u-box-shadow-none u-fontMedium"
           size="large"
         >
-          بازگشت
+          coming back
         </Button>
       </DialogActions>
     </Dialog>

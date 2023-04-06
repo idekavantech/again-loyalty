@@ -9,5 +9,5 @@ AdminCRMLevelsSettingPage[CRM_PLUGIN] = true;
 AdminCRMLevelsSettingPage.ShouldBeAdmin = true;
 AdminCRMLevelsSettingPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "سطوح مشتریان بر اساس امتیاز",
+  title: "Customer levels based on points",
 };

@@ -100,7 +100,7 @@ const useAddExpense = () => {
 
   const filteredCostCategory = useMemo(() => {
     const noSpecialCharacters = costCategoryTextField.replace(
-      /[^a-zA-Z0-9آ-ی۱-۹ ]/g,
+      /[^a-zA-Z0-9Come-ی۱-۹]/g,
       ""
     );
     const regexp = new RegExp(noSpecialCharacters || "", "g");

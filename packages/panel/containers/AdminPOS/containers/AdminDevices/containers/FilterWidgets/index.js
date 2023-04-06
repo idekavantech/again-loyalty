@@ -53,7 +53,7 @@ function AdminDevicesFilterWidgets({ setFilters }) {
         fullWidth={!minWidth768}
         value={search}
         onChange={setSearch}
-        placeholder="جستجوی دستگاه"
+        placeholder="Search device"
         inputProps={{
           className: "pr-5 mr-2",
         }}
@@ -115,7 +115,7 @@ function AdminDevicesFilterWidgets({ setFilters }) {
               color="primary"
               checked={selectedBranches.length === branches.length}
             />
-            <ListItemText primary="انتخاب همه شعب" className="text-right" />
+            <ListItemText primary="Choosing all branches" className="text-right" />
           </MenuItem>
           {branches.map((branch) => (
             <MenuItem key={branch.id} value={branch.id}>
@@ -155,7 +155,7 @@ function AdminDevicesFilterWidgets({ setFilters }) {
             color="primary"
             checked={selectedTypes.length === cashDrawerTypes.length}
           />
-          <ListItemText primary="انتخاب همه وضعیت‌ها" className="text-right" />
+          <ListItemText primary="Choosing all situations" className="text-right" />
         </MenuItem>
         {cashDrawerTypes.map((type) => (
           <MenuItem key={type.id} value={type.id}>

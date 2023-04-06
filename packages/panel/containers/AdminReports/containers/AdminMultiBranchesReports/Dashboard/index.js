@@ -539,7 +539,7 @@ export function AdminReports({
             fontSize: 25,
           }}
         >
-          اطلاعات فروش امروز و دیروز
+          Sales information today and yesterday
         </h1>
         {businessShoppingData && Array.isArray(businessShoppingData.orders_summary) &&
           <div className="container my-5 w-100 text-right">
@@ -547,7 +547,7 @@ export function AdminReports({
             <div className=" my-2 col-sm-6 col-lg-4">
               <Card
                 cardDetail={{
-                  title: "فروش امروز",
+                  title: "Today's sale",
                   isPrice: true,
                   data: priceFormatter( businessShoppingData?.orders_summary[0]?.orders_price ?? 0),
                   icon: <MonetizationOnOutlinedIcon style={{ fontSize: 35 }} />,
@@ -558,7 +558,7 @@ export function AdminReports({
             <div className=" my-2 col-sm-6 col-lg-4">
               <Card
                 cardDetail={{
-                  title: "تعداد سفارش امروز",
+                  title: "The number of order today",
                   isPrice: false,
                   data: englishNumberToPersianNumber(
                     businessShoppingData?.orders_summary[0]?.orders_count ?? 0
@@ -571,7 +571,7 @@ export function AdminReports({
             <div className=" my-2 col-sm-6 col-lg-4">
               <Card
                 cardDetail={{
-                  title: "پرفروش‌ترینِ امروز",
+                  title: "The best -selling today",
                   isPrice: false,
                   data: (
                     <p style={{ fontSize: 18, fontWeight: 900 }}>
@@ -591,7 +591,7 @@ export function AdminReports({
             <div className=" my-2 col-sm-6 col-lg-4">
               <Card
                 cardDetail={{
-                  title: "فروش دیروز",
+                  title: "Yesterday's sale",
                   isPrice: true,
                   data: priceFormatter(
                     businessShoppingData?.orders_summary[1]?.orders_price ?? 0
@@ -604,7 +604,7 @@ export function AdminReports({
             <div className=" my-2 col-sm-6 col-lg-4">
               <Card
                 cardDetail={{
-                  title: "تعداد سفارش دیروز",
+                  title: "The number of order yesterday",
                   isPrice: false,
                   data: englishNumberToPersianNumber(
                     businessShoppingData?.orders_summary[1]?.orders_count ?? 0
@@ -617,7 +617,7 @@ export function AdminReports({
             <div className=" my-2 col-sm-6 col-lg-4">
               <Card
                 cardDetail={{
-                  title: "پرفروش‌ترینِ دیروز",
+                  title: "The best -selling yesterday",
                   isPrice: false,
                   data: (
                     <p style={{ fontSize: 18, fontWeight: 900 }}>
@@ -647,15 +647,15 @@ export function AdminReports({
           displayEmpty
           size="large"
           renderValue={() => {
-            if (selectedBranches.length === 0) return "شعبه انتخاب کنید";
+            if (selectedBranches.length === 0) return "Choose a branch";
             if (selectedBranches.length === 1 && selectedBranches[0])
               return branches.find(
                 (branch) => branch.id === selectedBranches[0]
               ).title;
-            if (selectedBranches.length === branches.length) return "همه شعب";
+            if (selectedBranches.length === branches.length) return "All branches";
             return `${englishNumberToPersianNumber(
               selectedBranches.length
-            )} شعبه `;
+            )} Branch`;
           }}
           MenuProps={{
             getContentAnchorEl: null,
@@ -689,7 +689,7 @@ export function AdminReports({
               color="primary"
               checked={selectedBranches.length === branches.length}
             />
-            <ListItemText primary="انتخاب همه شعب" className="text-right" />
+            <ListItemText primary="Choosing all branches" className="text-right" />
           </MenuItem>
           {branches.map((branch) => {
             return (
@@ -731,13 +731,13 @@ export function AdminReports({
             onClick={handleOpen}
             variant="outlined"
           >
-            از{" "}
+            From{" "}
             <span className="px-2">
               {englishNumberToPersianNumber(
                 formatDateObjectToNormal(selectedDayRange.from)
               )}
             </span>
-            تا{" "}
+            until the{" "}
             <span className="px-2">
               {englishNumberToPersianNumber(
                 formatDateObjectToNormal(selectedDayRange.to)
@@ -824,16 +824,16 @@ export function AdminReports({
                 <Link
                   href={`${urlPrefix}${BRANCHES_PLUGIN}/analytics/reports/total_sales`}
                 >
-                  مشاهده گزارش
+                  View Report
                 </Link>
               </div>
               <div style={{ color: "#000" }}>
                 <h2 style={{ fontWeight: 700 }} className="mb-2">
-                  مجموع فروش
+                  Total sales
                 </h2>
                 <div className="my-2 d-flex justify-content-between align-items-center">
                   <div style={{ fontSize: 20, fontWeight: 700 }}>
-                    {priceFormatter(totalSales)} تومان
+                    {priceFormatter(totalSales)} Toman
                   </div>
                   <div
                     className="d-flex justify-content-center align-items-center"
@@ -854,13 +854,13 @@ export function AdminReports({
                   </div>
                 </div>
                 <Chart
-                  xAxisNodeTitle="مجموع فروش"
-                  yAxisNodeTitle="مجموع فروش"
+                  xAxisNodeTitle="Total sales"
+                  yAxisNodeTitle="Total sales"
                   hasToCompare={compareToPrevious}
                   xAxisLabel={transactionsXAxiosLabel}
                   mainLineData={dailyMainSalesData}
                   compareLineData={dailyComparedSalesData}
-                  title="مجموع فروش‌ها"
+                  title="Total sales"
                 />
               </div>
             </>
@@ -896,18 +896,18 @@ export function AdminReports({
                 <Link
                   href={`${urlPrefix}${BRANCHES_PLUGIN}/analytics/reports/total_orders`}
                 >
-                  مشاهده گزارش
+                  View Report
                 </Link>
               </div>
               <div style={{ color: "#000" }}>
                 <h2 style={{ fontWeight: 700 }} className="mb-2">
-                  مجموع سفارش‌ها
+                  Total orders
                 </h2>
                 <div className="my-2 d-flex justify-content-between align-items-center">
                   <div style={{ fontSize: 20, fontWeight: 700 }}>
                     {reportsData?.[BRANCHES_ORDERS_REPORT_TYPE] &&
                       englishNumberToPersianNumber(totalOrdersCount)}{" "}
-                    سفارش
+                    Order
                   </div>
                   <div
                     className="d-flex justify-content-center align-items-center"
@@ -932,21 +932,21 @@ export function AdminReports({
                 !isTransactionsReportLoading &&
                 mergedMainTransactionsPerDay?.length ? (
                   <Chart
-                    xAxisNodeTitle="مجموع سفارش"
-                    yAxisNodeTitle="مجموع سفارش"
+                    xAxisNodeTitle="The sum of the order"
+                    yAxisNodeTitle="The sum of the order"
                     hasToCompare={compareToPrevious}
                     xAxisLabel={transactionsXAxiosLabel}
                     mainLineData={mainOrdersTotalCountPerDate}
                     compareLineData={comparedOrdersTotalCountPerDate}
                     selectedBranches
-                    title="مجموع سفارش‌ها"
+                    title="Total orders"
                   />
                 ) : selectedBranches.length ? (
                   <div
                     style={{ fontWeight: 700, fontSize: 18 }}
                     className="mb-2 mx-auto text-bold text-center"
                   >
-                    هیچ شعبه‌ای انتخاب نشده است
+                    No branch is selected
                   </div>
                 ) : null}
               </div>
@@ -983,12 +983,12 @@ export function AdminReports({
                 <Link
                   href={`${urlPrefix}${BRANCHES_PLUGIN}/analytics/reports/deals`}
                 >
-                  مشاهده گزارش
+                  View Report
                 </Link>
               </div>
               <div style={{ color: "#000" }}>
                 <h2 style={{ fontWeight: 700 }} className="mb-2">
-                  مجموع محصولات فروخته شده
+                  The sum of the products sold
                 </h2>
                 <div className="my-2 d-flex justify-content-between align-items-center">
                   <div style={{ fontSize: 20, fontWeight: 700 }}>
@@ -1017,21 +1017,21 @@ export function AdminReports({
                 !isDealsReportLoading &&
                 mergedMainDealsPerDay?.length ? (
                   <Chart
-                    xAxisNodeTitle="مجموع محصولات فروخته شده"
-                    yAxisNodeTitle="مجموع محصولات فروخته شده"
+                    xAxisNodeTitle="The sum of the products sold"
+                    yAxisNodeTitle="The sum of the products sold"
                     hasToCompare={compareToPrevious}
                     xAxisLabel={transactionsXAxiosLabel}
                     mainLineData={dailyMainDealsData}
                     compareLineData={dailyComparedDealsData}
                     selectedBranches
-                    title="مجموع محصولات فروخته شده"
+                    title="The sum of the products sold"
                   />
                 ) : selectedBranches.length ? (
                   <div
                     style={{ fontWeight: 700, fontSize: 18 }}
                     className="mb-2 mx-auto text-bold text-center"
                   >
-                    هیچ شعبه‌ای انتخاب نشده است
+                    No branch is selected
                   </div>
                 ) : null}
               </div>
@@ -1066,18 +1066,18 @@ export function AdminReports({
                 <Link
                   href={`${urlPrefix}${BRANCHES_PLUGIN}/analytics/reports/aov`}
                 >
-                  مشاهده گزارش
+                  View Report
                 </Link>
               </div>
               <div style={{ color: "#000" }}>
                 <h2 style={{ fontWeight: 700 }} className="mb-2">
-                  میانگین ارزش سفارش‌ها
+                  The average value of orders
                 </h2>
                 <div className="my-2 d-flex justify-content-between align-items-center">
                   <div style={{ fontSize: 20, fontWeight: 700 }}>
                     {reportsData?.[BRANCHES_TRANSACTIONS_REPORT_TYPE] &&
                       priceFormatter(totalOrdersAverageValues)}{" "}
-                    تومان
+                    Toman
                   </div>
                   <div
                     className="d-flex justify-content-center align-items-center"
@@ -1103,21 +1103,21 @@ export function AdminReports({
                 </div>
                 {selectedBranches.length ? (
                   <Chart
-                    xAxisNodeTitle="میانگین ارزش سفارش"
-                    yAxisNodeTitle="میانگین ارزش سفارش"
+                    xAxisNodeTitle="Average order value"
+                    yAxisNodeTitle="Average order value"
                     hasToCompare={compareToPrevious}
                     xAxisLabel={transactionsXAxiosLabel}
                     mainLineData={mainDailyOrderAverageValues}
                     compareLineData={comparedDailyOrderAverageValues}
                     selectedBranches
-                    title="میانگین ارزش سفارش‌ها"
+                    title="The average value of orders"
                   />
                 ) : (
                   <div
                     style={{ fontWeight: 700, fontSize: 18 }}
                     className="mb-2 mx-auto text-bold text-center"
                   >
-                    هیچ شعبه‌ای انتخاب نشده است
+                    No branch is selected
                   </div>
                 )}
               </div>

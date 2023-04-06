@@ -52,14 +52,14 @@ function Referral({
   const link = `${business.get_vitrin_absolute_url}/invite/${user.inviteCode}`;
   const toFriendText = `${
     business.revised_title
-  } رو بهت پیشنهاد می‌کنم. برای خرید اولت میتونی با ${englishNumberToPersianNumber(
+  } I suggest you. To buy the first one can be with${englishNumberToPersianNumber(
     Math.round(pluginData.data.gift_amount_for_invited / 1000)
-  )} هزار تومن اعتبار هدیه ازش خرید کنی.
-همین الان میتونی امتحانش کنی، از لینک پایین استفاده کن:\n${link}`;
+  )} Thousands of Tomans Credit gifts from her.
+You can try it right now, use the link below:\n${link}`;
   return (
     <div>
       <Head>
-        <title>دعوت دوستان</title>
+        <title>Invite friends</title>
         <meta name="description" content="Description of Referral" />
       </Head>
       <Modal
@@ -67,7 +67,7 @@ function Referral({
         onClose={() => setShareModal(false)}
         body={
           <div className="p-4 w-100" style={{ borderRadius: "8px 8px 0 0" }}>
-            <div className="u-text-black">اشتراک‌گذاری از طریق ...</div>
+            <div className="u-text-black">Share through...</div>
             <div className="d-flex justify-content-center mt-5">
               <div>
                 <Icon
@@ -144,24 +144,24 @@ function Referral({
               color={themeColor}
             />
             <div className="u-fontWeightBold mt-3">
-              {englishNumberToPersianNumber(inviteeGift)} تومان هدیه بده،{" "}
-              {englishNumberToPersianNumber(inviterGift)} تومان هدیه بگیر!
+              {englishNumberToPersianNumber(inviteeGift)} Give the gift,{" "}
+              {englishNumberToPersianNumber(inviterGift)} Take a gift!
             </div>
             <div className="mt-5 mx-5 u-fontNormal">
               <div>
-                با معرفی ۵ نفر از دوستان خود به هر یک{" "}
+                By introducing 4 of your friends to each{" "}
                 {englishNumberToPersianNumber(
                   Math.round(pluginData.data.gift_amount_for_invited / 1000)
                 )}{" "}
-                هزار تومان برای خرید اول هدیه بدهید و با خرید هریک از آن‌ها{" "}
+                Give a thousand tomans for the first purchase and buy each of them{" "}
                 {englishNumberToPersianNumber(
                   Math.round(pluginData.data.gift_amount_for_inviter / 1000)
                 )}{" "}
-                هزار تومان و مجموعا{" "}
+                Thousand Tomans and Total{" "}
                 {englishNumberToPersianNumber(
                   Math.round(pluginData.data.gift_amount_for_inviter / 200)
                 )}{" "}
-                هزارتومان اعتبار هدیه بگیرید.
+                Milk a gift of gift.
               </div>
             </div>
           </div>
@@ -183,18 +183,18 @@ function Referral({
               className="d-flex justify-content-center u-cursor-pointer"
               style={{ width: 100 }}
             >
-              <span>اشتراک‌گذاری</span>
+              <span>share</span>
               <Icon icon={SHARE} size={20} color={themeColor} />
             </div>
             <CopyToClipboard
               text={link}
-              onCopy={() => _setSnackBarMessage("کپی شد.", "default")}
+              onCopy={() => _setSnackBarMessage("Copied.", "default")}
             >
               <div
                 className="d-flex justify-content-center u-cursor-pointer"
                 style={{ width: 100 }}
               >
-                <span>کپی</span>
+                <span>Copy</span>
                 <Icon icon={COPY} size={20} color={themeColor} />
               </div>
             </CopyToClipboard>

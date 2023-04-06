@@ -13,5 +13,5 @@ export default function AdminAnalyticsProductActiveAndUnactiveReport() {
 AdminAnalyticsProductActiveAndUnactiveReport.ShouldBeAdmin = true;
 AdminAnalyticsProductActiveAndUnactiveReport.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "گزارش غیر فعال کردن محصولات",
+  title: "Report to Disable Products",
 };

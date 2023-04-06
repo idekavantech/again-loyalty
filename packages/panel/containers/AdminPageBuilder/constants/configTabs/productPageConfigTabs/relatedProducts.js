@@ -3,7 +3,7 @@ import { sectionsLayout } from "../../sectionsLayout";
 import { SECTION_RELATED_PRODUCTS } from "@saas/utils/constants/sections";
 
 const relatedProducts = [
-  // محصولات مشابه
+  // similar products
   {
     ...sectionsConfigTabsRepeatedParts["customization"],
     items: [

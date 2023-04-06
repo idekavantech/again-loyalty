@@ -81,14 +81,14 @@ function AdminDocuments({
         },
       },
       "",
-      "ثبت دامنه انتخابی ناموفق بود!",
+      "Selected domain registration failed!",
       () => router.push(`${adminUrlPrefix}documents/birthdate`)
     );
   };
   const submit = () => {
     const _errors = {
       availableDomain: !availableDomain
-        ? "دامنه‌ای که در اختیار دارید را وارد کنید."
+        ? "Enter the domain you have."
         : "",
     };
     setErrors(_errors);
@@ -99,8 +99,8 @@ function AdminDocuments({
             selected_domain: availableDomain,
           },
         },
-        "ذخیره اطلاعات با موفقیت انجام شد.",
-        "ذخیره اطلاعات ناموفق بود!",
+        "Save the information successfully performed.",
+        "Save information failed!",
         () => router.push(`${adminUrlPrefix}documents/support_specialist`)
       );
     }
@@ -108,14 +108,14 @@ function AdminDocuments({
   return (
     <div className="container mb-5">
       <Head>
-        <title>داشبورد</title>
+        <title>Dashboard</title>
       </Head>
       <AdminBreadCrumb />
       <div className="col-12 mt-4 px-0">
         <Paper elevation={1} className="p-2">
-          <p style={{ fontWeight: 600 }}>تنظیمات دامنه</p>
+          <p style={{ fontWeight: 600 }}>Domain settings</p>
           <p style={{ marginTop: 40, fontSize: 12 }}>
-            یکی از دو گزینه زیر را انتخاب کنید.
+            Select one of the two options below.
           </p>
           <FormControl component="fieldset" style={{ marginTop: 20 }}>
             <RadioGroup
@@ -129,13 +129,13 @@ function AdminDocuments({
                 className="m-0"
                 value="free_domain"
                 control={<Radio color="primary" />}
-                label="می خواهم از دامنه رایگان .ir استفاده کنم."
+                label="Wishing out free domain.ir use."
               />
               <FormControlLabel
                 className="m-0"
                 value="own-domain"
                 control={<Radio color="primary" />}
-                label="دامنه دارم و می خواهم آن را متصل کنم."
+                label="I have a domain and I want to connect it."
               />
             </RadioGroup>
           </FormControl>
@@ -151,20 +151,20 @@ function AdminDocuments({
                     )[0] ? (
                     isDomainFree ? (
                       <p style={{ marginTop: 40, color: "#00A47C" }}>
-                        دامنه مورد نظر شما همچنان در دسترس است. در صورت تمایل می
-                        توانید آن را تایید کرده یا تغییر دهید.
+                        Your desired domain is still available. If desired.
+                        Can confirm or change it.
                       </p>
                     ) : isDomainFree == false ? (
                       <p style={{ marginTop: 40, color: "#D72C0D" }}>
-                        دامنه مورد نظر شما دیگر در درسترس نیست. دامنه دیگری را
-                        انتخاب کنید.
+                        The domain you want is no longer on the right. Another domain
+                        Select.
                       </p>
                     ) : null
                   ) : null}
 
                   <div className="col-12 col-md-5 position-relative mt-3">
                     <Input
-                      placeholder="دامنه"
+                      placeholder="Domain"
                       value={domain ? domain : ""}
                       onChange={(value) => {
                         _setDomainFree(null);
@@ -221,7 +221,7 @@ function AdminDocuments({
                           <div className="dot-flashing" />
                         </div>
                       ) : (
-                        "جستجو"
+                        "Search"
                       )}
                     </Button>
                   </div>
@@ -232,8 +232,8 @@ function AdminDocuments({
                         style={{ color: actions.critical.default }}
                       >
                         <CancelRoundedIcon className="ml-2" fontSize="small" />
-                        در انتخاب دامنه تنها مجاز به استفاده از حروف کوچک
-                        انگلیسی، اعداد و .خط تیره هستید
+                        In the domain selection only allowed to use lowercase letters
+                        English, numbers and.You're a dash
                       </div>
                     )}
                     {isDisabled && (
@@ -242,8 +242,8 @@ function AdminDocuments({
                         style={{ color: actions.critical.default }}
                       >
                         <CancelRoundedIcon className="ml-2" fontSize="small" />
-                        در بازه زمانی ۲۴:۰۰ تا ۰۲:۰۰ سامانه ایرنیک قادر به ارائه
-                        سرویس نمی‌باشد لطفا در بازه‌ای دیگر اقدام کنید.
+                        At the interval of 1:1 to 1:۰ ۰Irnik system capable of presenting
+                        The service is not to take action in another interval.
                       </div>
                     )}
                     {nikTimeoutError ? (
@@ -262,7 +262,7 @@ function AdminDocuments({
                           fontSize="small"
                         />
 
-                        {`«${domain}» قبلا استفاده شده است. دامنه‌ی دیگری انتخاب کنید. `}
+                        {`«${domain}» Already used. Select another domain. `}
                       </div>
                     ) : null}
                     {!loading &&
@@ -279,7 +279,7 @@ function AdminDocuments({
                           className="ml-2"
                           fontSize="small"
                         />
-                        {`«${domain}» آزاد و قابل استفاده است. `}
+                        {`«${domain}» Free and usable. `}
                       </div>
                     ) : null}
                   </div>
@@ -287,12 +287,12 @@ function AdminDocuments({
               ) : (
                 <div className="col-12 col-lg-5">
                   <p style={{ fontSize: 12, marginTop: 40 }}>
-                    در صورتی که دامنه ای را قبلا خریداری کرده اید آدرس دامنه خود
-                    را در این بخش وارد کنید.
+                    If you have already purchased the domain your domain address
+                    Enter in this section.
                   </p>
                   <Input
-                    label="آدرس دامنه"
-                    placeholder="مثال: vitrin.me"
+                    label="Domain address"
+                    placeholder="Example: vitrin.me"
                     size="medium"
                     className="mt-2"
                     value={availableDomain}
@@ -302,7 +302,7 @@ function AdminDocuments({
                     error={errors.availableDomain}
                     helperText={
                       errors?.availableDomain ||
-                      "لطفا آدرس دامنه خود را به‌صورت کامل با پسوند وارد کنید."
+                      "Please enter your domain address full with extension."
                     }
                   />
                 </div>
@@ -319,7 +319,7 @@ function AdminDocuments({
               disabled={!domain || !isDomainFree}
               onClick={submitDomain}
             >
-              تایید نهایی و تکمیل مدارک
+              Final confirmation and completion of the documents
             </Button>
           </div>
         ) : (
@@ -331,7 +331,7 @@ function AdminDocuments({
               disabled={!availableDomain}
               onClick={submit}
             >
-              تایید
+              Confirm
             </Button>
           </div>
         )}

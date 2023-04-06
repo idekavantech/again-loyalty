@@ -34,7 +34,7 @@ export function AdminFeedback({ review, _getAdminReview }) {
       style={{ minHeight: 600 }}
     >
       <Head>
-        <title>نظرات مشتری‌ها</title>
+        <title>Customer Comments</title>
       </Head>
       <AdminBreadCrumb />
 
@@ -50,7 +50,7 @@ export function AdminFeedback({ review, _getAdminReview }) {
           onClick={call(review.creator_phone)}
           endIcon={<CallIcon />}
         >
-          تماس با مشتری
+          Customer contact
         </Button>
       </div>
     </div>

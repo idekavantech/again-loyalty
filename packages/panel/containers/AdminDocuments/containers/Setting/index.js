@@ -63,11 +63,11 @@ const Setting = ({
         return (
           <div className="col-12 col-lg-5" style={{ marginTop: 35 }}>
             <p style={{ fontSize: 12 }}>
-              آدرس دامنه مورد نظر خود را جست‌و‌جو کنید:
+              Search your desired domain address:
             </p>
             <div className="position-relative mt-2">
               <Input
-                placeholder="دامنه"
+                placeholder="Domain"
                 value={domain ? domain : ""}
                 onChange={(value) => {
                   _setDomainFree(null);
@@ -117,7 +117,7 @@ const Setting = ({
                     <div className="dot-flashing" />
                   </div>
                 ) : (
-                  "جستجو"
+                  "Search"
                 )}
               </Button>
             </div>
@@ -128,8 +128,8 @@ const Setting = ({
                   style={{ color: actions.critical.default }}
                 >
                   <CancelRoundedIcon className="ml-2" fontSize="small" />
-                  در انتخاب دامنه تنها مجاز به استفاده از حروف کوچک انگلیسی،
-                  اعداد و .خط تیره هستید
+                  In the domain selection solely allowed to use the English lowercase letters,
+                  Prepared and.You're a dash
                 </div>
               ) : (
                 <>
@@ -142,7 +142,7 @@ const Setting = ({
                           fontSize="small"
                         />
 
-                        {`«${domain}» قبلا استفاده شده است. دامنه‌ی دیگری انتخاب کنید. `}
+                        {`«${domain}» Already used. Select another domain. `}
                       </div>
                     ) : (
                       <div className="d-flex" style={{ color: text.success }}>
@@ -151,7 +151,7 @@ const Setting = ({
                           className="ml-2"
                           fontSize="small"
                         />
-                        {`«${domain}» آزاد و قابل استفاده است. `}
+                        {`«${domain}» Free and usable. `}
                       </div>
                     )
                   ) : null}
@@ -164,12 +164,12 @@ const Setting = ({
         return (
           <div className="col-12 col-lg-5" style={{ marginTop: 35 }}>
             <p style={{ fontSize: 12 }}>
-              در صورتی که دامنه ای را قبلا خریداری کرده اید آدرس دامنه خود را در
-              این بخش وارد کنید.
+              If you have previously purchased the domain address your domain address in
+              Enter this section.
             </p>
             <Input
-              label="آدرس دامنه"
-              placeholder="مثال: vitrin.me"
+              label="Domain address"
+              placeholder="Example: vitrin.me"
               value={availableDomain}
               onChange={(value) => {
                 setAvailableDomain(value);
@@ -177,7 +177,7 @@ const Setting = ({
               size="medium"
               className="mt-2"
               helperText={
-                "لطفا آدرس دامنه خود را به‌صورت کامل با پسوند وارد کنید."
+                "Please enter your domain address full with extension."
               }
             />
           </div>
@@ -241,8 +241,8 @@ const Setting = ({
           selected_domain: availableDomain,
         },
       },
-      "ذخیره اطلاعات با موفقیت انجام شد.",
-      "ذخیره اطلاعات ناموفق بود!",
+      "Save the information successfully performed.",
+      "Save information failed!",
       () => router.push(`${adminUrlPrefix}documents/support_specialist`)
     );
   };
@@ -250,8 +250,8 @@ const Setting = ({
   const submitIrAppDomain = () => {
     _updateBusiness(
       { acception_state: 7, site_domain: domain },
-      "ثبت دامنه با موفقیت انجام شد",
-      "خطا در ثبت دامنه",
+      "Domain registration successfully performed",
+      "Error in domain registration",
       () => router.push(`/admin/${domain}/documents/support_specialist`)
     );
   };
@@ -259,16 +259,16 @@ const Setting = ({
   return (
     <div className="container mb-5">
       <Head>
-        <title>تنظیمات دامنه</title>
+        <title>Domain settings</title>
       </Head>
       <AdminBreadCrumb />
       <div className="col-12 mt-4 px-0">
-        <WarningBox text="طبق قوانین پایگاه ملی ایرنیک،   داشتن شرایط سن قانونی  برای دریافت دامنه .ir  ضروری است." />
+        <WarningBox text="According to the rules of the IRNIC National Base, having legal age requirements to receive domain.ir  It is essential." />
 
         <Paper elevation={1} className="p-2 p-md-4 mt-4">
-          <p style={{ fontWeight: 600 }}>تنظیمات دامنه</p>
+          <p style={{ fontWeight: 600 }}>Domain settings</p>
           <p style={{ margin: "40px 0", fontSize: 12, lineHeight: "22px" }}>
-            یکی از گزینه‌های زیر را انتخاب کنید:
+            Select one of the following options:
           </p>
           <FormControl component="fieldset">
             <RadioGroup
@@ -282,25 +282,25 @@ const Setting = ({
                 className="m-0"
                 value={OTHER_INFO}
                 control={<Radio color="primary" />}
-                label="دامنه با پسوند .ir می‌خواهم و می‌توانم اطلاعات فرد دیگری دارای شرایط سنی فوق را به عنوان صاحب دامنه وارد کنم."
+                label="Domain with extension.ir I want and can enter the information of another person of the above age as a domain owner."
               />
               <FormControlLabel
                 className="m-0"
                 value={OWN_DOMAIN}
                 control={<Radio color="primary" />}
-                label="دامنه دارم و می خواهم آن را متصل کنم."
+                label="I have a domain and I want to connect it."
               />
               <FormControlLabel
                 className="m-0"
                 value={IR_APP_DOMAIN}
                 control={<Radio color="primary" />}
-                label=" از دامنه ویترین با پسوند ir.ink. استفاده می‌کنم."
+                label=" Of the scope of the showcase with extensionir.ink. I use."
               />
               <FormControlLabel
                 className="m-0"
                 value={OTHER_DOMAIN}
                 control={<Radio color="primary" />}
-                label="دامنه دیگری تهیه می‌کنم."
+                label="I make another domain."
               />
             </RadioGroup>
           </FormControl>
@@ -315,7 +315,7 @@ const Setting = ({
             disabled={isDisabled}
             onClick={submit}
           >
-            تایید و ادامه
+            Confirm and continue
           </Button>
         </div>
       </div>
@@ -329,7 +329,7 @@ const Setting = ({
         isOpen={isOpenSuccessMessageModal}
         onClose={() => setIsOpenSuccessMessageModal(false)}
         next={() => router.push(adminUrlPrefix)}
-        content={`لطفا پس از تهیه دامنه مجددا به داشبورد مدیریتی خود مراجعه کنید و گزینه "اتصال به دامنه"  را انتخاب کنید و دامنه خود را پس از انتخاب گزینه "دامنه دارم و می خواهم آن را متصل کنم" وارد کنید.`}
+        content={`Please re -visit your management dashboard and option"Connect to the domain"  Select and your domain after selecting the option"I have a domain and I want to connect it" enter.`}
         image="/images/Approve.svg"
       />
     </div>

@@ -62,65 +62,65 @@ const FOOD = "food";
 const IS_DISSATISFIED = "is_dissatisfied";
 
 const reasons = {
-  [DELIVERER]: "برخورد پیک",
-  [TIME]: "زمان تحویل سفارش",
-  [WEBSITE]: "سهولت ثبت سفارش",
-  [PACKAGING]: "کیفیت بسته‌بندی",
-  [FOOD]: "کیفیت اقلام سفارش",
-  [IS_DISSATISFIED]: "میزان رضایت کلی",
+  [DELIVERER]: "Peak collision",
+  [TIME]: "The order of delivery of the order",
+  [WEBSITE]: "Ease of order registration",
+  [PACKAGING]: "Packaging quality",
+  [FOOD]: "The quality of the order item",
+  [IS_DISSATISFIED]: "General satisfaction",
 };
 
 const sortingOptions = [
   {
     id: 0,
-    text: "بهترین از نظر برخورد پیک",
+    text: "The best in terms of peak collision",
     keyword: BEST_BRANCH_BY_DELIVERER,
   },
   {
     id: 1,
-    text: "بدترین از نظر برخورد پیک",
+    text: "The worst in terms of peak collision",
     keyword: WORST_BRANCH_BY_DELIVERER,
   },
   {
     id: 2,
-    text: "بهترین از نظر زمان تحویل سفارش",
+    text: "The best in terms of order delivery time",
     keyword: BEST_BRANCH_BY_TIME,
   },
   {
     id: 3,
-    text: "بدترین از نظر زمان تحویل سفارش",
+    text: "The worst in terms of order delivery time",
     keyword: WORST_BRANCH_BY_TIME,
   },
   {
     id: 4,
-    text: "بهترین از نظر سهولت ثبت سفارش",
+    text: "The best in terms of ease of order registration",
     keyword: BEST_BRANCH_BY_WEBSITE,
   },
   {
     id: 5,
-    text: "بدترین از نظر سهولت ثبت سفارش",
+    text: "Worst in terms of ease of order registration",
     keyword: WORST_BRANCH_BY_WEBSITE,
   },
   {
     id: 6,
-    text: "بهترین از نظر کیفیت بسته‌بندی",
+    text: "The best in terms of packaging quality",
     keyword: BEST_BRANCH_BY_PACKAGING,
   },
   {
     id: 7,
-    text: "بدترین از نظر کیفیت بسته‌بندی",
+    text: "The worst in terms of packaging quality",
     keyword: WORST_BRANCH_BY_PACKAGING,
   },
-  { id: 8, text: "بهترین از نظر کیفیت غذا", keyword: BEST_BRANCH_BY_FOOD },
-  { id: 9, text: "بدترین از نظر کیفیت غذا", keyword: WORST_BRANCH_BY_FOOD },
+  { id: 8, text: "The best in terms of food quality", keyword: BEST_BRANCH_BY_FOOD },
+  { id: 9, text: "The worst in terms of food quality", keyword: WORST_BRANCH_BY_FOOD },
   {
     id: 10,
-    text: "بهترین از نظر میزان رضایت کلی",
+    text: "The best in terms of general satisfaction",
     keyword: BEST_BRANCH_BY_IS_DISSATISFIED,
   },
   {
     id: 11,
-    text: "بدترین از نظر میزان رضایت کلی",
+    text: "The worst in terms of general satisfaction",
     keyword: WORST_BRANCH_BY_IS_DISSATISFIED,
   },
 ];
@@ -239,14 +239,14 @@ const sortingFunctions = {
 const branchHeadCells = [
   {
     id: "id",
-    label: "ردیف",
-    name: "ردیف",
+    label: "Row",
+    name: "Row",
     align: "center",
   },
   {
     id: "id",
-    label: "تعداد نظرات",
-    name: "تعداد نظرات",
+    label: "Number of comments",
+    name: "Number of comments",
     align: "center",
   },
 ];
@@ -257,7 +257,7 @@ const reasonsHeadCells = Object.values(reasons)?.map((reason) => ({
   label: (
     <div className="d-flex  justify-content-between">
       <div className="ml-4">{reason}</div>
-      <div>تعداد نظرات</div>
+      <div>Number of comments</div>
     </div>
   ),
   align: "center",
@@ -341,8 +341,8 @@ export function AdminCustomersDissatisfactionReport({
       let mainBranchHeadCells = [...branchHeadCells];
       mainBranchHeadCells.splice(1, 0, {
         id: "id",
-        label: "نام شعبه",
-        name: "نام شعبه",
+        label: "Branch Name",
+        name: "Branch Name",
         align: "center",
       });
       mainBranchHeadCells.splice(3, 0, ...reasonsHeadCells);
@@ -442,13 +442,13 @@ export function AdminCustomersDissatisfactionReport({
   return (
     <div className="container">
       <Head>
-        <title>تحلیل نارضایتی مشتریان</title>
+        <title>Customer dissatisfaction analysis</title>
       </Head>
 
       <AdminBreadCrumb
-        submitButtonText="خروجی گرفتن"
+        submitButtonText="Output"
         submitAction={() =>
-          generateCSVFile(headRow, rows, [], "گزارش تحلیل نارضایتی مشتریان")
+          generateCSVFile(headRow, rows, [], "Report of Customer Disability Analysis")
         }
       />
 
@@ -465,13 +465,13 @@ export function AdminCustomersDissatisfactionReport({
                   onClick={handleOpen}
                   variant="outlined"
                 >
-                  از{" "}
+                  From{" "}
                   <span className="px-2">
                     {englishNumberToPersianNumber(
                       formatDateObjectToNormal(selectedDayRange.from)
                     )}
                   </span>
-                  تا{" "}
+                  until the{" "}
                   <span className="px-2">
                     {englishNumberToPersianNumber(
                       formatDateObjectToNormal(selectedDayRange.to)
@@ -527,16 +527,16 @@ export function AdminCustomersDissatisfactionReport({
                 size="large"
                 // IconComponent={() => null}
                 renderValue={() => {
-                  if (selectedBranches.length === 0) return "شعبه انتخاب کنید";
+                  if (selectedBranches.length === 0) return "Choose a branch";
                   if (selectedBranches.length === 1 && selectedBranches[0])
                     return branches.find(
                       (branch) => branch.id === selectedBranches[0]
                     ).title;
                   if (selectedBranches.length === branches.length)
-                    return "همه شعب";
+                    return "All branches";
                   return `${englishNumberToPersianNumber(
                     selectedBranches.length
-                  )} شعبه `;
+                  )} Branch`;
                 }}
                 MenuProps={{
                   getContentAnchorEl: null,
@@ -571,7 +571,7 @@ export function AdminCustomersDissatisfactionReport({
                     checked={selectedBranches.length === branches.length}
                   />
                   <ListItemText
-                    primary="انتخاب همه شعب"
+                    primary="Choosing all branches"
                     className="text-right"
                   />
                 </MenuItem>
@@ -635,7 +635,7 @@ export function AdminCustomersDissatisfactionReport({
                 style={{ width: 200 }}
                 className="px-3 u-fontWeightBold u-fontNormal my-1"
               >
-                مرتب‌سازی بر اساس
+                order by
               </div>
             }
             selectOption={(text) =>
@@ -644,7 +644,7 @@ export function AdminCustomersDissatisfactionReport({
               )
             }
             inputData={{
-              defaultValue: "مرتب‌سازی",
+              defaultValue: "Ordering",
             }}
             selected={sortingOptions.find(
               (i) => i.keyword === selectedSortingType
@@ -679,7 +679,7 @@ export function AdminCustomersDissatisfactionReport({
                 }}
                 className="ml-2 mb-2"
                 onDelete={() => setSelectedBranches([])}
-                label="همه شعب"
+                label="All branches"
               />
             ) : selectedBranches?.length ? (
               branches
@@ -724,7 +724,7 @@ export function AdminCustomersDissatisfactionReport({
                 onDelete={() =>
                   setSelectedBranches(branches.map((branch) => branch.id))
                 }
-                label="هیچ‌کدام از شعب"
+                label="None of the branches"
               />
             )}
           </div>

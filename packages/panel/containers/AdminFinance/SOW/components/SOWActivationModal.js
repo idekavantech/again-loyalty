@@ -48,7 +48,7 @@ function SOWActivationModal({ isOpen, onClose, hasSOW }) {
             <CloseRoundedIcon style={{ color: night }} />
           </IconButton>
           <div style={{ lineHeight: "initial" }} className="u-fontWeightBold">
-            توضیحات فعال و غیرفعال‌سازی کیف پول مشترک
+            Active description and disabling joint wallet
           </div>
         </div>
         <Divider style={{ backgroundColor: cement }} className="my-4" />
@@ -61,7 +61,7 @@ function SOWActivationModal({ isOpen, onClose, hasSOW }) {
                   className="ml-2"
                   fontSize="small"
                 />
-                <div style={{ lineHeight: "initial" }}>فعال‌سازی:</div>
+                <div style={{ lineHeight: "initial" }}>Activation:</div>
               </div>
               <div className="u-fontMedium mt-3 text-justify">
                 {ACTIVATION_TEXT}
@@ -80,7 +80,7 @@ function SOWActivationModal({ isOpen, onClose, hasSOW }) {
                   className="ml-2"
                   fontSize="small"
                 />
-                <div style={{ lineHeight: "initial" }}>غیرفعال‌سازی:</div>
+                <div style={{ lineHeight: "initial" }}>Disable:</div>
               </div>
               <div className="u-fontMedium mt-3 text-justify">
                 {DE_ACTIVATION_TEXT}
@@ -101,7 +101,7 @@ function SOWActivationModal({ isOpen, onClose, hasSOW }) {
                     className="ml-2"
                     fontSize="small"
                   />
-                  <div style={{ lineHeight: "initial" }}>فعال‌سازی</div>
+                  <div style={{ lineHeight: "initial" }}>Activation</div>
                 </div>
 
                 {isCollapseOpen.activationCollapse ? (
@@ -128,7 +128,7 @@ function SOWActivationModal({ isOpen, onClose, hasSOW }) {
                     className="ml-2"
                     fontSize="small"
                   />
-                  <div style={{ lineHeight: "initial" }}>غیرفعال‌سازی</div>
+                  <div style={{ lineHeight: "initial" }}>Disable</div>
                 </div>
 
                 {isCollapseOpen.deActivationCollapse ? (
@@ -156,8 +156,8 @@ function SOWActivationModal({ isOpen, onClose, hasSOW }) {
               className="u-fontMedium text-justify "
               style={{ lineHeight: "initial" }}
             >
-              برای توضیحات تکمیلی و فعال‌سازی و یا غیرفعال‌سازی کیف پول مشترک
-              می‌توانید با پشتیبانی ویترین تماس حاصل فرمایید.
+              For additional explanations, activation or disabling the joint wallet
+              You can contact showcase support.
             </div>
           </div>
           <Button
@@ -168,7 +168,7 @@ function SOWActivationModal({ isOpen, onClose, hasSOW }) {
             size="large"
             href="tel:+982191070751"
           >
-            تماس با پشتیبانی
+            Call with support
           </Button>
         </div>
       </DialogContent>

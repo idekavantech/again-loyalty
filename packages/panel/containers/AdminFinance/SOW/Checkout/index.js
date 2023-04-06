@@ -98,9 +98,9 @@ function SOWCheckout({
         endIcon={<AccountBalanceWalletRoundedIcon />}
         disabled={true}
       >
-        <div className="mr-1">تومان</div>
+        <div className="mr-1">Toman</div>
         <div>{priceFormatter(treasuryBalance?.balance * -1)}</div>
-        <div className="ml-2">خزانه کل</div>
+        <div className="ml-2">The total treasury</div>
       </Button>
     );
   }, [isSuper, treasuryBalance]);
@@ -142,19 +142,19 @@ function SOWCheckout({
       switch (Math.sign(walletBalance?.balance)) {
         case 1:
           return {
-            text: "(بدهکاری شما)",
+            text: "(Your debt)",
             color: theme.palette.error.main,
             className: "u-fontSmall",
           };
         case -1:
           return {
-            text: "(طلبکاری شما)",
+            text: "(Your credit)",
             color: theme.palette.success.main,
             className: "u-fontSmall",
           };
         default:
           return {
-            text: "تسویه شده است",
+            text: "Has been settled",
             color: "",
             className: "u-fontWeightBold",
           };
@@ -163,19 +163,19 @@ function SOWCheckout({
       switch (Math.sign(walletBalance?.balance)) {
         case 1:
           return {
-            text: "(طلبکاری شما)",
+            text: "(Your credit)",
             color: theme.palette.success.main,
             className: "u-fontSmall",
           };
         case -1:
           return {
-            text: "(بدهکاری شما)",
+            text: "(Your debt)",
             color: theme.palette.error.main,
             className: "u-fontSmall",
           };
         default:
           return {
-            text: "تسویه شده است",
+            text: "Has been settled",
             color: "",
             className: "u-fontWeightBold",
           };
@@ -189,7 +189,7 @@ function SOWCheckout({
     <div>
       <div className="container mb-5">
         <Head>
-          <title>تسویه حساب</title>
+          <title>Checkout</title>
         </Head>
         <AdminBreadCrumb customizedButton={isSuper ? treasuryButton : null} />
         {isSuper ? (
@@ -253,13 +253,13 @@ function SOWCheckout({
         <Paper elevation={1} className="mt-4 p-4">
           <div className="d-flex flex-lg-row flex-column align-items-center justify-content-between">
             <div className="d-flex align-items-center">
-              <div className="ml-2">مبلغ قابل تسویه:</div>
+              <div className="ml-2">The amount of the setable:</div>
               {walletBalance?.balance !== 0 && (
                 <div className="d-flex justify-content-center ml-2 u-fontWeightBold">
                   <div style={{ direction: "ltr" }} className="ml-1">
                     {priceFormatter(Math.abs(walletBalance?.balance))}
                   </div>
-                  <div>تومان</div>
+                  <div>Toman</div>
                 </div>
               )}
               <div
@@ -292,9 +292,9 @@ function SOWCheckout({
                           finalCheckoutPrice <= 0
                         ) {
                           _setSnackBarMessage(
-                            `عدد واره شده باید بین ۰ و ${priceFormatter(
+                            `The numbered number should be between ۰and${priceFormatter(
                               Math.abs(walletBalance?.balance)
-                            )} باشد.`,
+                            )} Be.`,
                             "fail"
                           );
                           setFinalPriceCheckout(
@@ -328,7 +328,7 @@ function SOWCheckout({
                           lineHeight: "initial",
                         }}
                       >
-                        {isFinalCheckoutPriceEditable ? "تایید" : "ویرایش"}
+                        {isFinalCheckoutPriceEditable ? "Confirm" : "Edit"}
                       </div>
                     )}
                   </div>
@@ -340,7 +340,7 @@ function SOWCheckout({
                       <input
                         type="text"
                         className="ml-2 ltr text-left w-100"
-                        placeholder="مبلغ مورد نظر"
+                        placeholder="Amount"
                         value={englishNumberToPersianNumber(finalCheckoutPrice)}
                         onChange={(event) => {
                           if (
@@ -353,7 +353,7 @@ function SOWCheckout({
                             );
                           } else {
                             _setSnackBarMessage(
-                              `تنها مجاز به وارد کردن عدد می‌باشید.`,
+                              `Only allowed to enter the number..`,
                               "fail"
                             );
                           }
@@ -367,9 +367,9 @@ function SOWCheckout({
                               finalCheckoutPrice <= 0
                             ) {
                               _setSnackBarMessage(
-                                `عدد واره شده باید بین ۰ و ${priceFormatter(
+                                `The numbered number should be between ۰and${priceFormatter(
                                   Math.abs(walletBalance?.balance)
-                                )} باشد.`,
+                                )} Be.`,
                                 "fail"
                               );
                               setFinalPriceCheckout(
@@ -384,7 +384,7 @@ function SOWCheckout({
                         className="ml-2 u-fontMedium"
                         style={{ lineHeight: "initial" }}
                       >
-                        تومان
+                        Toman
                       </div>
                     </div>
                   ) : (
@@ -393,7 +393,7 @@ function SOWCheckout({
                       style={{ lineHeight: "initial" }}
                     >
                       {priceFormatter(finalCheckoutPrice)}
-                      &nbsp; تومان
+                      &nbsp; Toman
                     </div>
                   )}
                 </div>
@@ -405,7 +405,7 @@ function SOWCheckout({
                   onClick={() => setCheckoutModalOpen(true)}
                   disabled={walletBalance?.balance === 0}
                 >
-                  تسویه حساب
+                  Checkout
                 </Button>
               </div>
             ) : null}

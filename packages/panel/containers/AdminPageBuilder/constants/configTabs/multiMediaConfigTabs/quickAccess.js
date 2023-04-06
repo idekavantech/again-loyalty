@@ -5,28 +5,28 @@ import { sectionsLayout } from "../../sectionsLayout";
 import { SECTION_QUICK_ACCESS } from "@saas/utils/constants/sections";
 
 const quickAccess = [
-  // دسترسی سریع
+  // quick access
   {
     ...sectionsConfigTabsRepeatedParts["content"],
     items: [
       {
         id: uniqueid(),
-        label: "عکس",
+        label: "Picture",
         key: "image",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "آپلود عکس",
+            label: "Upload a Photo",
             default_value: `${CDN_BASE_URL}mock3.jpg`,
             key: "value",
             type: "image_uploader",
           },
           {
             id: uniqueid(),
-            label: "متن جایگزین عکس",
-            default_value: "ویترین",
+            label: "Replace the photo",
+            default_value: "Showcase",
             key: "alt",
             type: "text",
           },
@@ -34,35 +34,35 @@ const quickAccess = [
       },
       {
         id: uniqueid(),
-        label: "عنوان",
+        label: "Title",
         key: "title",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "عنوان مورد نظر",
-            default_value: "سایت تو با ویترین",
+            label: "The desired title",
+            default_value: "Your site with showcase",
             key: "value",
             type: "text",
           },
           {
             id: uniqueid(),
-            label: "رنگ عنوان",
+            label: "Title color",
             default_value: process.env.NEXT_PUBLIC_ADMIN_THEME_COLOR,
             key: "color",
             type: "color",
           },
           {
             id: uniqueid(),
-            label: "اندازه فونت",
+            label: "Font size",
             key: "font_size",
             default_value: "20px",
             type: "text",
           },
           {
             id: uniqueid(),
-            label: "HTML تگ",
+            label: "HTML tag",
             key: "html_tag",
             default_value: "h1",
             type: "select",
@@ -116,24 +116,24 @@ const quickAccess = [
           },
           {
             id: uniqueid(),
-            label: "نوع چینش",
+            label: "The type of layout",
             key: "position",
             default_value: "right",
             type: "select",
             options: [
               {
                 id: uniqueid(),
-                label: "سمت راست",
+                label: "right side",
                 value: "right",
               },
               {
                 id: uniqueid(),
-                label: "سمت چپ",
+                label: "Left side",
                 value: "left",
               },
               {
                 id: uniqueid(),
-                label: "وسط",
+                label: "middle",
                 value: "center",
               },
             ],
@@ -142,21 +142,21 @@ const quickAccess = [
       },
       {
         id: uniqueid(),
-        label: "رنگ موزاییک‌ها",
+        label: "The color of the mosaics",
         key: "squares_colors",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "رنگ عنوان‌ها",
+            label: "The color of the titles",
             default_value: "rgba(32, 197, 186, 1)",
             key: "color",
             type: "color",
           },
           {
             id: uniqueid(),
-            label: "رنگ زمینه",
+            label: "background color",
             default_value: "rgba(255, 255, 255, 0.2)",
             key: "background_color",
             type: "color",
@@ -165,7 +165,7 @@ const quickAccess = [
       },
       {
         id: uniqueid(),
-        label: "مربع‌ها",
+        label: "Squares",
         key: "squares",
         element_id: "section_34_squares",
         description: "",
@@ -173,19 +173,19 @@ const quickAccess = [
         extendable_items: true,
         max_items: 20,
         min_items: 1,
-        add_new_item_text: "افزودن موزاییک جدید",
+        add_new_item_text: "Adding new mosaic",
         default_items: [],
         items_fields: [
           {
             id: uniqueid(),
-            label: "متن دکمه",
-            default_value: "متن دکمه",
+            label: "Button text",
+            default_value: "Button text",
             type: "text",
             key: "text",
           },
           {
             id: uniqueid(),
-            label: "لینک دکمه",
+            label: "Button link",
             default_value: "/",
             type: "text",
             key: "link",
@@ -211,14 +211,14 @@ const quickAccess = [
       },
       {
         id: uniqueid(),
-        label: "نمایش",
+        label: "the show",
         key: "showcases",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "نمایش عکس",
+            label: "View photo",
             default_value: true,
             type: "switch",
             key: "photo_display",

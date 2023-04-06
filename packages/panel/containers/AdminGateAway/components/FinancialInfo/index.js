@@ -7,10 +7,10 @@ const FinancialInfo = ({ submit, info, setInfo, errors, setErrors }) => {
   return (
     <div>
       <p className="pt-3 mt-2">
-        شماره حسابی که می‌خواهید درگاه پرداخت خود را به آن متصل کنید وارد کنید.
+        Enter the account number you want to connect to your payment gateway.
       </p>
       <p className="pt-3 mt-2" style={{ fontSize: 16 }}>
-        اطلاعات مالی
+        financial information
       </p>
       <div className="mt-4 mt-md-5 col-md-4 px-0">
         <Input
@@ -30,7 +30,7 @@ const FinancialInfo = ({ submit, info, setInfo, errors, setErrors }) => {
               setInfo({ ...info, bank_acount_number });
             }
           }}
-          label="شماره شبا"
+          label="Shaba number"
           InputProps={{
             endAdornment: <InputAdornment position="end">IR</InputAdornment>,
           }}
@@ -38,8 +38,8 @@ const FinancialInfo = ({ submit, info, setInfo, errors, setErrors }) => {
           error={errors.bank_acount_number}
           helperText={
             errors.bank_acount_number ||
-            ` شماره شبای ۲۴ رقمی را برای اتصال درگاه به شماره حساب مورد نظر را وارد
-          کنید.`
+            ` Enter a 2 -digit night number to connect the port to the desired account number
+          do.`
           }
         />
       </div>
@@ -50,7 +50,7 @@ const FinancialInfo = ({ submit, info, setInfo, errors, setErrors }) => {
         size="large"
         onClick={submit}
       >
-        ادامه
+        Continuation
       </Button>
     </div>
   );

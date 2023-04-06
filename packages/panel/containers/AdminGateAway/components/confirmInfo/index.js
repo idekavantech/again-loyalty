@@ -4,14 +4,14 @@ const ConfirmInfo = ({ submit }) => {
   return (
     <div>
       <p className="pt-3 mt-2">
-        کارشناس تیم زیبال، برای هماهنگی جهت دریافت درگاه پرداخت بانکی با شما
-        تماس خواهد گرفت. وضعیت اتصال به درگاه پرداخت زیبال را از طریق این بخش می
-        توانید دنبال کنید.
+        Zibal Team Expert, to coordinate to get a bank payment gateway with you
+        Will call. The status of the attachment to the Zibal payment gateway through this section
+        You can follow.
       </p>
       <div className="success-box d-flex align-items-center">
         <CheckCircleOutlineOutlinedIcon className="icon" />
         <span className="mr-3">
-          اطلاعات شما با موفقیت برای تیم زیبال ارسال شد.
+          Your information was successfully sent to the Zibal team.
         </span>
       </div>
       <Button
@@ -21,7 +21,7 @@ const ConfirmInfo = ({ submit }) => {
         size="large"
         onClick={submit}
       >
-        تایید
+        Confirm
       </Button>
     </div>
   );

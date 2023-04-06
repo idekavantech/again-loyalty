@@ -15,5 +15,5 @@ AdminDrawerAnalyticsPage.Wrapper = AdminLayout;
 AdminDrawerAnalyticsPage[INCLUDED_WEBAPPS_ONLY_KEY] = [DARAMAD_WEBAPP_CONSTANT];
 
 export const breadcrumb = {
-  title: "صندوق‌ها",
+  title: "Funds",
 };

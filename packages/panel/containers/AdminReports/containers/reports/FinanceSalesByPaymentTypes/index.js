@@ -54,70 +54,70 @@ jMoment.locale("fa");
 jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
 
 const paymentTypes = [
-  { id: "0", title: "آنلاین" },
-  { id: "1", title: "نقدی" },
-  { id: "2", title: "کارت به کارت" },
-  { id: "3", title: "کیف پول" },
-  { id: "4", title: "کارت خوان" },
-  { id: "5", title: "کیف پول" },
-  { id: "6", title: "اعتبار هدیه" },
-  { id: "7", title: "شخص ثالث" },
+  { id: "0", title: "Online" },
+  { id: "1", title: "Cash" },
+  { id: "2", title: "Card to card" },
+  { id: "3", title: "wallet" },
+  { id: "4", title: "card reader" },
+  { id: "5", title: "wallet" },
+  { id: "6", title: "Gift credit" },
+  { id: "7", title: "Third person" },
 ];
 
 const branchHeadCells = [
   {
     id: "id",
-    name: "ردیف",
-    label: "ردیف",
+    name: "Row",
+    label: "Row",
     align: "center",
   },
   {
     id: "id",
-    name: "روش پرداخت",
-    label: "روش پرداخت",
+    name: "Payment Method",
+    label: "Payment Method",
     align: "center",
   },
   {
     id: "id",
-    name: "تعداد پرداخت",
-    label: "تعداد پرداخت",
+    name: "The number of payment",
+    label: "The number of payment",
     align: "center",
   },
   {
     id: "id",
-    name: "مبلغ پرداخت",
+    name: "The amount of payment",
     label: (
       <div className="d-flex flex-column">
-        <div>مبلغ پرداخت</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>The amount of payment</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
   },
   {
     id: "id",
-    name: "تعداد بازگشت",
-    label: "تعداد بازگشت",
+    name: "The number of return",
+    label: "The number of return",
     align: "center",
   },
   {
     id: "id",
-    name: "مبلغ برگشت",
+    name: "Return amount",
     label: (
       <div className="d-flex flex-column">
-        <div>مبلغ برگشت</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>Return amount</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
   },
   {
     id: "id",
-    name: "مبلغ نهایی",
+    name: "The final amount",
     label: (
       <div className="d-flex flex-column">
-        <div>مبلغ نهایی</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>The final amount</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
@@ -251,8 +251,8 @@ export function AdminComprehensiveSalesReportReport({
       const mainBranchHeadCells = [...branchHeadCells];
       mainBranchHeadCells.splice(1, 0, {
         id: "id",
-        label: "شعبه",
-        name: "شعبه",
+        label: "Branch",
+        name: "Branch",
         align: "center",
       });
       return mainBranchHeadCells;
@@ -276,7 +276,7 @@ export function AdminComprehensiveSalesReportReport({
           })?.title;
           const paymentType =
             i === 0
-              ? "همه روش‌های پرداخت"
+              ? "All payment methods"
               : paymentTypes.find(
                   (paymentType) => paymentType.id == payment.payment_type
                 )?.title;
@@ -330,7 +330,7 @@ export function AdminComprehensiveSalesReportReport({
   }, [orderTransactions]);
 
   const summaryRow = useMemo(() => {
-    const num = "جمع کل";
+    const num = "total";
     const brancheName = "";
     const paymentType = "";
     const paymentNum = orderTransactions?.totals?.grand_sales_total_count || 0;
@@ -370,21 +370,21 @@ export function AdminComprehensiveSalesReportReport({
       <Head>
         <title>
           {isSuper
-            ? "گزارش تراکنش‌های مالی فروش شعب بر اساس روش پرداخت"
-            : "گزارش تراکنش‌های مالی فروش"}
+            ? "Report of Financial Transactions of Branches Based on Payment Method"
+            : "Report of Sales Financial Transaction"}
         </title>
       </Head>
 
       <AdminBreadCrumb
-        submitButtonText="خروجی گرفتن"
+        submitButtonText="Output"
         submitAction={() =>
           generateCSVFile(
             headRow,
             rows,
             summaryRow,
-            `گزارش تراکنش‌های مالی فروش شعب بر اساس روش پرداخت از ${formatDateObjectToNormal(
+            `Report of Financial Transactions of Branches Based on the Payment Method of${formatDateObjectToNormal(
               selectedDayRange.from
-            )} تا  ${formatDateObjectToNormal(selectedDayRange.to)}`
+            )} until the${formatDateObjectToNormal(selectedDayRange.to)}`
           )
         }
       />
@@ -401,13 +401,13 @@ export function AdminComprehensiveSalesReportReport({
                 onClick={handleOpen}
                 variant="outlined"
               >
-                از{" "}
+                From{" "}
                 <span className="px-2">
                   {englishNumberToPersianNumber(
                     formatDateObjectToNormal(selectedDayRange.from)
                   )}
                 </span>
-                تا{" "}
+                until the{" "}
                 <span className="px-2">
                   {englishNumberToPersianNumber(
                     formatDateObjectToNormal(selectedDayRange.to)
@@ -460,16 +460,16 @@ export function AdminComprehensiveSalesReportReport({
                 size="large"
                 // IconComponent={() => null}
                 renderValue={() => {
-                  if (selectedBranches.length === 0) return "شعبه انتخاب کنید";
+                  if (selectedBranches.length === 0) return "Choose a branch";
                   if (selectedBranches.length === 1 && selectedBranches[0])
                     return branches.find(
                       (branch) => branch.id === selectedBranches[0]
                     )?.title;
                   if (selectedBranches.length === branches.length)
-                    return "همه شعب";
+                    return "All branches";
                   return `${englishNumberToPersianNumber(
                     selectedBranches.length
-                  )} شعبه `;
+                  )} Branch`;
                 }}
                 MenuProps={{
                   getContentAnchorEl: null,
@@ -504,7 +504,7 @@ export function AdminComprehensiveSalesReportReport({
                     checked={selectedBranches.length === branches.length}
                   />
                   <ListItemText
-                    primary="انتخاب همه شعب"
+                    primary="Choosing all branches"
                     className="text-right"
                   />
                 </MenuItem>
@@ -560,16 +560,16 @@ export function AdminComprehensiveSalesReportReport({
               // IconComponent={() => null}
               renderValue={() => {
                 if (selectedPaymentType.length === 0)
-                  return "روش پرداخت انتخاب کنید";
+                  return "Select the payment method";
                 if (selectedPaymentType.length === 1 && selectedPaymentType[0])
                   return paymentTypes.find(
                     (branch) => branch.id === selectedPaymentType[0]
                   )?.title;
                 if (selectedPaymentType.length === paymentTypes.length)
-                  return "همه روش‌های پرداخت";
+                  return "All payment methods";
                 return `${englishNumberToPersianNumber(
                   selectedPaymentType.length
-                )} روش پرداخت `;
+                )} Payment Method`;
               }}
               MenuProps={{
                 getContentAnchorEl: null,
@@ -604,7 +604,7 @@ export function AdminComprehensiveSalesReportReport({
                   checked={selectedPaymentType.length === paymentTypes.length}
                 />
                 <ListItemText
-                  primary="انتخاب همه روش‌های پرداخت"
+                  primary="Select all payment methods"
                   className="text-right"
                 />
               </MenuItem>
@@ -665,7 +665,7 @@ export function AdminComprehensiveSalesReportReport({
                 }}
                 className="ml-2 mb-2"
                 onDelete={() => setSelectedBranches([])}
-                label="همه شعب"
+                label="All branches"
               />
             ) : selectedBranches?.length ? (
               branches
@@ -710,7 +710,7 @@ export function AdminComprehensiveSalesReportReport({
                 onDelete={() =>
                   setSelectedBranches(branches.map((branch) => branch.id))
                 }
-                label="هیچ‌کدام از شعب"
+                label="None of the branches"
               />
             )}
           </div>
@@ -731,7 +731,7 @@ export function AdminComprehensiveSalesReportReport({
               }}
               className="ml-2 mb-2"
               onDelete={() => setSelectedPaymentType([])}
-              label="همه روش‌های پرداخت"
+              label="All payment methods"
             />
           ) : selectedPaymentType?.length ? (
             paymentTypes
@@ -780,7 +780,7 @@ export function AdminComprehensiveSalesReportReport({
                   paymentTypes?.map((paymentType) => paymentType.id)
                 )
               }
-              label="هیچ‌کدام از روش‌های پرداخت"
+              label="None of the payment methods"
             />
           )}
         </div>
@@ -854,7 +854,7 @@ export function AdminComprehensiveSalesReportReport({
                         )}
                         <TableCell align="center" style={{ padding: 0 }}>
                           {report.payment_types.length === 0
-                            ? "بدون پرداخت"
+                            ? "Without pay"
                             : report.payment_types.map((paymentType, index) => {
                                 const paymentItem = paymentTypes.find(
                                   (item) => item.id === paymentType.payment_type
@@ -994,7 +994,7 @@ export function AdminComprehensiveSalesReportReport({
                         align="right"
                       >
                         {payment === 1
-                          ? "همه روش‌های پرداخت"
+                          ? "All payment methods"
                           : paymentTypes.map((item) => {
                               if (item.id == payment.payment_type) {
                                 return item?.title;
@@ -1089,7 +1089,7 @@ export function AdminComprehensiveSalesReportReport({
                   }}
                 >
                   <TableCell align="center" style={{ border: "none" }}>
-                    جمع کل
+                    total
                   </TableCell>
                   {isSuper && (
                     <TableCell
@@ -1178,7 +1178,7 @@ export function AdminComprehensiveSalesReportReport({
             style={{ backgroundColor: "#F1F2F3" }}
             className="d-flex align-items-center justify-content-between px-4 py-5"
           >
-            <div>جمع کل:</div>
+            <div>total:</div>
             <div
               style={{
                 backgroundColor: surface.neutral.default,

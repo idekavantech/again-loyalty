@@ -11,27 +11,27 @@ import { SECTION_FEATURES_CARD } from "@saas/utils/constants/sections";
 import { LOREM_IPSUM_SHORT } from "../sharedConstants";
 
 const featuresCard = [
-  // کارت با مزایا
+  // Card with benefits
   {
     ...sectionsConfigTabsRepeatedParts["content"],
     items: [
       {
         id: uniqueid(),
-        label: "عنوان",
+        label: "Title",
         key: "title",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "عنوان",
+            label: "Title",
             type: "text",
             key: "value",
-            default_value: "عنوان",
+            default_value: "Title",
           },
           {
             id: uniqueid(),
-            label: "رنگ عنوان از رنگ تم پیروی کند.",
+            label: "The color of the title follows the theme color.",
             type: "checkbox",
             key: "color_use_theme_color",
             default_value: true,
@@ -45,14 +45,14 @@ const featuresCard = [
               },
             ],
             id: uniqueid(),
-            label: "رنگ عنوان",
+            label: "Title color",
             type: "color",
             key: "color",
             default_value: "#000000",
           },
           {
             id: uniqueid(),
-            label: "رنگ خط زیر عنوان از رنگ تم پیروی کند.",
+            label: "The color of the line below the title follows the theme color.",
             type: "checkbox",
             key: "underline_color_use_theme_color",
             default_value: true,
@@ -66,7 +66,7 @@ const featuresCard = [
               },
             ],
             id: uniqueid(),
-            label: "رنگ خط زیر عنوان",
+            label: "The color of the line under the title",
             type: "color",
             key: "underline_color",
             default_value: "#000000",
@@ -75,7 +75,7 @@ const featuresCard = [
       },
       {
         id: uniqueid(),
-        label: "کارت‌ها",
+        label: "Cards",
         key: "cards",
         element_id: null,
         description: "",
@@ -83,10 +83,10 @@ const featuresCard = [
         extendable_items: true,
         max_items: 5,
         min_items: 1,
-        add_new_item_text: "افزودن کارت جدید",
+        add_new_item_text: "Add new card",
         default_items: [
           {
-            title: "عنوان",
+            title: "Title",
             image: `${CDN_BASE_URL}mock14.svg`,
             alternative: "",
             description: LOREM_IPSUM_SHORT,
@@ -94,7 +94,7 @@ const featuresCard = [
             title_color_use_theme_color: false,
           },
           {
-            title: "عنوان",
+            title: "Title",
             image: `${CDN_BASE_URL}mock15.svg`,
             alternative: "",
             description: LOREM_IPSUM_SHORT,
@@ -102,7 +102,7 @@ const featuresCard = [
             title_color_use_theme_color: false,
           },
           {
-            title: "عنوان",
+            title: "Title",
             image: `${CDN_BASE_URL}mock16.svg`,
             alternative: "",
             description: LOREM_IPSUM_SHORT,
@@ -114,24 +114,24 @@ const featuresCard = [
         items_fields: [
           {
             id: uniqueid(),
-            label: "انتخاب اکشن موس",
+            label: "Choose Mouse Action",
             default_value: "has_no_link",
             key: "image_action",
             type: "select",
             options: [
               {
                 id: uniqueId(),
-                label: "بدون لینک",
+                label: "No links",
                 value: "has_no_link",
               },
               {
                 id: uniqueId(),
-                label: "با لینک خارجی",
+                label: "With external link",
                 value: HAS_EXTERNAL_LINK,
               },
               {
                 id: uniqueId(),
-                label: "با لینک داخلی",
+                label: "With internal link",
                 value: HAS_INTERNAL_LINK,
               },
             ],
@@ -145,7 +145,7 @@ const featuresCard = [
               },
             ],
             id: uniqueid(),
-            label: "لینک داخلی",
+            label: "Internal link",
             default_value: "/",
             key: "internal_link",
             type: "link",
@@ -159,7 +159,7 @@ const featuresCard = [
               },
             ],
             id: uniqueid(),
-            label: "لینک خارجی",
+            label: "External link",
             default_value: "/",
             type: "text",
             key: "external_link",
@@ -167,14 +167,14 @@ const featuresCard = [
           },
           {
             id: uniqueid(),
-            label: "عنوان",
+            label: "Title",
             type: "text",
             key: "title",
-            default_value: "عنوان",
+            default_value: "Title",
           },
           {
             id: uniqueid(),
-            label: "رنگ عنوان از رنگ تم پیروی کند.",
+            label: "The color of the title follows the theme color.",
             type: "checkbox",
             key: "title_color_use_theme_color",
             default_value: false,
@@ -188,14 +188,14 @@ const featuresCard = [
               },
             ],
             id: uniqueid(),
-            label: "رنگ عنوان",
+            label: "Title color",
             type: "color",
             key: "title_color",
             default_value: "#000000",
           },
           {
             id: uniqueid(),
-            label: "عکس",
+            label: "Picture",
             type: "image_uploader",
             key: "image",
             default_value: `${CDN_BASE_URL}mock14.svg`,
@@ -205,14 +205,14 @@ const featuresCard = [
           },
           {
             id: uniqueId(),
-            label: "زمینه رنگی پشت عکس",
+            label: "Colored background behind the photo",
             default_value: true,
             key: "image_background",
             type: "switch",
           },
           {
             id: uniqueid(),
-            label: "توضیحات",
+            label: "Description",
             type: "richtext",
             key: "description",
             default_value: LOREM_IPSUM_SHORT,
@@ -236,14 +236,14 @@ const featuresCard = [
       },
       {
         id: uniqueid(),
-        label: "نمایش ها",
+        label: "Shows",
         key: "title",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueId(),
-            label: "نمایش عنوان",
+            label: "Show title",
             default_value: true,
             key: "is_title_visible",
             type: "switch",
@@ -252,26 +252,26 @@ const featuresCard = [
       },
       {
         id: uniqueid(),
-        label: "نمایش در حالت موبایل",
+        label: "Display in mobile mode",
         key: "show_in_mobile",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueId(),
-            label: "افقی یا عمودی",
+            label: "Horizontal or vertical",
             default_value: "vertical",
             key: "direction",
             type: "select",
             options: [
               {
                 id: uniqueid(),
-                label: "افقی",
+                label: "Horizontal",
                 value: "horizontal",
               },
               {
                 id: uniqueid(),
-                label: "عمودی",
+                label: "Vertical",
                 value: "vertical",
               },
             ],

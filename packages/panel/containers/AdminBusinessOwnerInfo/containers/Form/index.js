@@ -29,7 +29,7 @@ const BusinessOwnerInfoForm = ({ _updateBusiness, adminUrlPrefix }) => {
 
   const blurHandleEmail = () => {
     if (ownerInfo.email && !emailValidator(ownerInfo.email)) {
-      setErrors({ ...errors, email: "فرمت ایمیل وارد شده اشتباه است" });
+      setErrors({ ...errors, email: "Email format entered is incorrect" });
     } else {
       setErrors({ ...errors, email: "" });
     }
@@ -37,19 +37,19 @@ const BusinessOwnerInfoForm = ({ _updateBusiness, adminUrlPrefix }) => {
 
   const blurHandleLandLine = () => {
     if (ownerInfo.landline && !landlineValidator(ownerInfo.landline)) {
-      setErrors({ ...errors, landline: "شماره ثابت وارد شده اشتباه است" });
+      setErrors({ ...errors, landline: "The fixed number entered is wrong." });
     }
   };
 
   const blurHandleNationalId = () => {
     if (ownerInfo.nationalId && !nationalIdValidator(ownerInfo.nationalId)) {
-      setErrors({ ...errors, nationalId: "کد ملی واد شده اشتباه است" });
+      setErrors({ ...errors, nationalId: "The national code entered is wrong." });
     }
   };
 
   const blurHandlePostalCode = () => {
     if (ownerInfo.postalCode && ownerInfo.postalCode.length < 10) {
-      setErrors({ ...errors, postalCode: "کد پستی باید ده رقم باشد" });
+      setErrors({ ...errors, postalCode: "Zip code should be ten digits" });
     }
   };
 
@@ -59,24 +59,24 @@ const BusinessOwnerInfoForm = ({ _updateBusiness, adminUrlPrefix }) => {
 
   const submitForm = () => {
     const _errors = {
-      firstName: !ownerInfo.firstName?.trim() ? "نام را وارد نمایید" : "",
+      firstName: !ownerInfo.firstName?.trim() ? "Enter the name" : "",
       lastName: !ownerInfo.lastName?.trim()
-        ? "نام خانوادگی را وارد نمایید"
+        ? "Enter the last name"
         : "",
       nationalId: !ownerInfo.nationalId?.trim()
-        ? " کد ملی را وارد نمایید"
+        ? " Enter the national code"
         : errors.nationalId,
       email: errors.email,
       province: !ownerInfo.province?.trim()
-        ? "استان را وارد نمایید"
+        ? "Enter the province"
         : errors.province,
-      city: !ownerInfo.city?.trim() ? "شهر را وارد نمایید" : errors.city,
+      city: !ownerInfo.city?.trim() ? "Enter the city" : errors.city,
       address: !ownerInfo.address?.trim()
-        ? "آدرس را وارد نمایید"
+        ? "Enter the address"
         : errors.address,
       postalCode: errors.postalCode,
       landline: !ownerInfo.landline?.trim()
-        ? "شماره ثابت را وارد نمایید"
+        ? "Enter the fixed number"
         : errors.landline,
     };
 
@@ -111,8 +111,8 @@ const BusinessOwnerInfoForm = ({ _updateBusiness, adminUrlPrefix }) => {
             },
           },
         },
-        "ذخیره اطلاعات با موفقیت انجام شد.",
-        "ذخیره اطلاعات ناموفق بود!",
+        "Save the information successfully performed.",
+        "Save information failed!",
         () => router.push(`${adminUrlPrefix}`)
       );
     }
@@ -121,10 +121,10 @@ const BusinessOwnerInfoForm = ({ _updateBusiness, adminUrlPrefix }) => {
     <Paper elevation={1} className="w-100 p-4 mt-5">
       <div className="p-4">
         <p style={{ fontSize: 22, fontWeight: 700, lineHeight: "44px" }}>
-          مشخصات صاحب کسب‌وکار
+          Business owner profile
         </p>
         <p style={{ fonrSize: 13, lineHeight: "26px" }}>
-          پر کردن تمامی فیلد‌ها الزامی است.
+          Filling all fields is required.
         </p>
       </div>
 
@@ -132,14 +132,14 @@ const BusinessOwnerInfoForm = ({ _updateBusiness, adminUrlPrefix }) => {
         <div className="d-flex align-items-center">
           <InfoOutlinedIcon style={{ color: theme.palette.primary.main }} />
           <p style={{ fonrSize: 13, lineHeight: "26px" }} className="mr-2">
-            نام و نام‌خانوادگی خود را مطابق شناسنامه خود وارد کنید.
+            Enter your name and name in accordance with your birth certificate.
           </p>
         </div>
         <div className="w-100 d-flex flex-col flex-md-row mt-4">
           <div className="flex-1">
             <Input
               InputLabelProps={{ shrink: true }}
-              label="نام*"
+              label="name*"
               type="text"
               size="medium"
               focusedInput
@@ -152,7 +152,7 @@ const BusinessOwnerInfoForm = ({ _updateBusiness, adminUrlPrefix }) => {
           <div className="px-md-4 my-5 my-md-0 flex-1">
             <Input
               InputLabelProps={{ shrink: true }}
-              label="نام خانوادگی*"
+              label="last name*"
               type="text"
               size="medium"
               focusedInput
@@ -166,7 +166,7 @@ const BusinessOwnerInfoForm = ({ _updateBusiness, adminUrlPrefix }) => {
             <Input
               numberOnly
               InputLabelProps={{ shrink: true }}
-              label="کد ملی*"
+              label="National Code*"
               size="medium"
               value={
                 ownerInfo?.nationalId
@@ -190,21 +190,21 @@ const BusinessOwnerInfoForm = ({ _updateBusiness, adminUrlPrefix }) => {
         <div className="d-flex align-items-center mt-4">
           <InfoOutlinedIcon style={{ color: theme.palette.primary.main }} />
           <p style={{ fonrSize: 13, lineHeight: "26px" }} className="mr-2">
-            توجه کنید که شماره ثابت ، کد پستی و آدرس متعلق به یک شهر باشند.
+            Note that the fixed number, zip code and address belong to a city.
           </p>
         </div>
         <div className="w-100 d-flex flex-col flex-md-row mt-4">
           <div className="flex-1">
             <Input
               InputLabelProps={{ shrink: true }}
-              label="آدرس ایمیل"
+              label="E-mail"
               type="text"
               size="medium"
               focusedInput
               onChange={(email) => handleChange({ email })}
               onBlur={blurHandleEmail}
               error={errors.email}
-              helperText={errors.email || "ترجیحا جیمیل وارد کنید"}
+              helperText={errors.email || "Preferably Gmail."}
               onFocus={() => focusHandle("email")}
             />
           </div>
@@ -212,7 +212,7 @@ const BusinessOwnerInfoForm = ({ _updateBusiness, adminUrlPrefix }) => {
             <div className="flex-1">
               <Input
                 InputLabelProps={{ shrink: true }}
-                label="استان *"
+                label="State*"
                 type="text"
                 size="medium"
                 focusedInput
@@ -225,7 +225,7 @@ const BusinessOwnerInfoForm = ({ _updateBusiness, adminUrlPrefix }) => {
             <div className="flex-1 mr-4">
               <Input
                 InputLabelProps={{ shrink: true }}
-                label="شهر *"
+                label="City*"
                 type="text"
                 size="medium"
                 focusedInput
@@ -239,14 +239,14 @@ const BusinessOwnerInfoForm = ({ _updateBusiness, adminUrlPrefix }) => {
           <div className="flex-1">
             <Input
               InputLabelProps={{ shrink: true }}
-              label="آدرس*"
+              label="Address*"
               type="text"
               size="medium"
               focusedInput
               onChange={(address) => handleChange({ address })}
               error={errors.address}
               helperText={
-                errors.address || "آدرس شما در سایت نمایش داده نمی‌شود."
+                errors.address || "Your address is not displayed on the site."
               }
               onFocus={() => focusHandle("address")}
             />
@@ -257,7 +257,7 @@ const BusinessOwnerInfoForm = ({ _updateBusiness, adminUrlPrefix }) => {
             <Input
               numberOnly
               InputLabelProps={{ shrink: true }}
-              label="شماره ثابت *"
+              label="Fixed number*"
               size="medium"
               focusedInput
               value={
@@ -266,7 +266,7 @@ const BusinessOwnerInfoForm = ({ _updateBusiness, adminUrlPrefix }) => {
                   : ""
               }
               helperText={
-                errors.landline || "شماره تلفن را به همراه کد شهر وارد کنید."
+                errors.landline || "Enter the phone number with the city code."
               }
               onBlur={blurHandleLandLine}
               error={errors.landline}
@@ -283,7 +283,7 @@ const BusinessOwnerInfoForm = ({ _updateBusiness, adminUrlPrefix }) => {
               numberOnly
               inputProps={{ maxLength: 10 }}
               InputLabelProps={{ shrink: true }}
-              label="کد پستی"
+              label="Postal code"
               size="medium"
               focusedInput
               helperText={errors.postalCode}
@@ -312,7 +312,7 @@ const BusinessOwnerInfoForm = ({ _updateBusiness, adminUrlPrefix }) => {
               color: theme.palette.primary.main,
             }}
           />
-          <span style={{ fontSize: 12 }}>صحت این اطلاعات را تایید می‌کنم.</span>
+          <span style={{ fontSize: 12 }}>I confirm the accuracy of this information.</span>
         </div>
         <div className="d-flex justify-content-end">
           <Button
@@ -321,7 +321,7 @@ const BusinessOwnerInfoForm = ({ _updateBusiness, adminUrlPrefix }) => {
             onClick={submitForm}
             disabled={!confirmInfo}
           >
-            تایید و ادامه
+            Confirm and continue
           </Button>
         </div>
       </div>

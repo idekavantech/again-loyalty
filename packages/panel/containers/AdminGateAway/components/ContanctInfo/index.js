@@ -12,8 +12,8 @@ const ContactInfo = ({ submit, info, setInfo, errors, setErrors }) => {
           InputLabelProps={{
             shrink: true,
           }}
-          placeholder="مثال: ۰۲۱۷۷۶۰۱۲۳۴"
-          label="شماره تلفن ثابت"
+          placeholder="Example: ۰۲۱۷۷۶۰۱۲۳۴"
+          label="Landline number"
           value={englishNumberToPersianNumber(info.phoneNumber, "")}
           onChange={(phoneNumber) => setInfo({ ...info, phoneNumber })}
           error={errors.phoneNumber}
@@ -27,8 +27,8 @@ const ContactInfo = ({ submit, info, setInfo, errors, setErrors }) => {
           InputLabelProps={{
             shrink: true,
           }}
-          placeholder="مثال: maryamsalmani@gmail.com"
-          label="آدرس ایمیل"
+          placeholder="Example: maryamsalmani@gmail.com"
+          label="E-mail"
           value={info.email}
           onChange={(email) => setInfo({ ...info, email })}
           type="email"
@@ -44,8 +44,8 @@ const ContactInfo = ({ submit, info, setInfo, errors, setErrors }) => {
           InputLabelProps={{
             shrink: true,
           }}
-          placeholder="مثال: ۱۷۱۲۳۲۱۲۴۵"
-          label="کد پستی"
+          placeholder="Example: ۱۷۱۲۳۲۱۲۴۵"
+          label="Postal code"
           value={englishNumberToPersianNumber(info.postalCode, "")}
           onChange={(postalCode) => setInfo({ ...info, postalCode })}
           inputProps={{ maxlength: 10 }}
@@ -60,8 +60,8 @@ const ContactInfo = ({ submit, info, setInfo, errors, setErrors }) => {
           InputLabelProps={{
             shrink: true,
           }}
-          placeholder="مثال: تهران، خیابان آزادی، مرکز نوآوری شریف، ویترین"
-          label="آدرس کسب‌وکار"
+          placeholder="Example: Sharif Innovation Center, Showcase, Tehran"
+          label="Business Address"
           multiline
           rows={2}
           maxRows={4}
@@ -79,7 +79,7 @@ const ContactInfo = ({ submit, info, setInfo, errors, setErrors }) => {
         size="large"
         onClick={submit}
       >
-        ادامه
+        Continuation
       </Button>
     </div>
   );

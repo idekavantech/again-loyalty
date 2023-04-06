@@ -8,5 +8,5 @@ export default function BulkIngredientPage() {
 BulkIngredientPage.ShouldBeAdmin = true;
 BulkIngredientPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "ویرایش جمعی مواد اولیه",
+  title: "Collective editing of raw materials",
 };

@@ -234,7 +234,7 @@ function DomainSelectionModal({
                   style={{ color: actions.critical.default }}
                 >
                   <CancelRoundedIcon className="ml-2" fontSize="small" />
-                  At the interval of 1:1 to 1:۰ Irnik system capable of providing service
+                  At the interval of 1:1 to 1:۰Irnik system capable of providing service
                   Can't take action in another interval.
                 </div>
               )}

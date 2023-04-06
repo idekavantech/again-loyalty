@@ -16,12 +16,12 @@ const AdminGateWay = ({ adminUrlPrefix }) => {
       <AdminBreadCrumb />
       <div className="col-12 mt-4 px-0">
         <Paper elevation={1} className="p-2 p-md-4 gate_away_page">
-          <p className="title">انتخاب درگاه پرداخت </p>
+          <p className="title">Select the payment gateway</p>
           <p className="mt-3 pt-2">
-            برای شروع به فروش آنلاین، مشتریان شما می‌توانند فرآیند پرداخت را از
-            طریق درگاه‌های قابل اتصال به ویترین انجام دهند.
+            To start selling online, your customers can make the payment process from
+            Do the way to showcase portable ports.
           </p>
-          <p className="mt-3 pt-2 gate_away_type">درگاه‌های واسط</p>
+          <p className="mt-3 pt-2 gate_away_type">Intermediate ports</p>
           {interfaceGateWays.map((gateway) => (
             <div
               className="d-flex align-items-center justify-content-between pt-3 mt-2"
@@ -53,7 +53,7 @@ const AdminGateWay = ({ adminUrlPrefix }) => {
             </div>
           ))}
           <hr className="hr-normal mt-5" />
-          <p className="mt-3 pt-2 gate_away_type">درگاه‌های مستقیم</p>
+          <p className="mt-3 pt-2 gate_away_type">Direct ports</p>
           {directGateWays.map((gateway) => (
             <div
               className="d-flex align-items-center pt-3 mt-2"

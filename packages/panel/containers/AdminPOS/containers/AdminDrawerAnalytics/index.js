@@ -60,58 +60,58 @@ const headCells = [
   {
     id: "start_time",
     align: "right",
-    label: "زمان شروع",
+    label: "start time",
   },
   {
     id: "finish_time",
     align: "right",
-    label: "زمان پایان",
+    label: "The end time",
   },
   {
     id: "pos_device",
     align: "right",
-    label: "دستگاه",
+    label: "The device",
   },
   {
     id: "description",
     align: "right",
-    label: "توضیحات",
+    label: "Description",
   },
   {
     id: "branch",
     align: "right",
-    label: "شعبه",
+    label: "Branch",
     super: true,
   },
   {
     id: "paid_in",
     align: "center",
-    label: "دریافت شده",
+    label: "received",
   },
   {
     id: "paid_out",
     align: "center",
-    label: "پرداخت شده",
+    label: "Paid",
   },
   {
     id: "expected",
     align: "center",
-    label: "مورد انتظار",
+    label: "Expected",
   },
   {
     id: "actual",
     align: "center",
-    label: "مقدار واقعی",
+    label: "real amount",
   },
   {
     id: "difference",
     align: "center",
-    label: "اختلاف",
+    label: "Disagreement",
   },
   {
     id: "status",
     align: "center",
-    label: "وضعیت",
+    label: "Condition",
   },
 ];
 
@@ -224,7 +224,7 @@ function CashDrawerAnalytics({
   return (
     <div className="container pb-3">
       <Head>
-        <title>گزارش صندوق</title>
+        <title>Fund report</title>
       </Head>
       <CashTransactionsDrawer
         isOpen={drawerOpen}
@@ -247,13 +247,13 @@ function CashDrawerAnalytics({
                   onClick={handleOpen}
                   variant="outlined"
                 >
-                  از{" "}
+                  From{" "}
                   <span className="px-2">
                     {englishNumberToPersianNumber(
                       formatDateObjectToNormal(selectedDayRange.from)
                     )}
                   </span>
-                  تا{" "}
+                  until the{" "}
                   <span className="px-2">
                     {englishNumberToPersianNumber(
                       formatDateObjectToNormal(selectedDayRange.to)
@@ -330,16 +330,16 @@ function CashDrawerAnalytics({
                 displayEmpty
                 IconComponent={() => null}
                 renderValue={() => {
-                  if (selectedBranches.length === 0) return "شعبه انتخاب کنید";
+                  if (selectedBranches.length === 0) return "Choose a branch";
                   if (selectedBranches.length === 1 && selectedBranches[0])
                     return branches.find(
                       (branch) => branch.id === selectedBranches[0]
                     ).title;
                   if (selectedBranches.length === branches.length)
-                    return "همه شعب";
+                    return "All branches";
                   return `${englishNumberToPersianNumber(
                     selectedBranches.length
-                  )} شعبه `;
+                  )} Branch`;
                 }}
                 MenuProps={{
                   getContentAnchorEl: null,
@@ -384,7 +384,7 @@ function CashDrawerAnalytics({
                     checked={selectedBranches.length === branches.length}
                   />
                   <ListItemText
-                    primary="انتخاب همه شعب"
+                    primary="Choosing all branches"
                     className="text-right"
                   />
                 </MenuItem>
@@ -434,16 +434,16 @@ function CashDrawerAnalytics({
               displayEmpty
               IconComponent={() => null}
               renderValue={() => {
-                if (selectedTypes.length === 0) return "صندوق انتخاب کنید";
+                if (selectedTypes.length === 0) return "Select the fund";
                 if (selectedTypes.length === 1 && selectedTypes[0])
                   return cashDrawerTypes.find(
                     (type) => type.id === selectedTypes[0]
                   ).title;
                 if (selectedTypes.length === cashDrawerTypes.length)
-                  return "همه صندوق‌ها";
+                  return "All boxes";
                 return `${englishNumberToPersianNumber(
                   selectedTypes.length
-                )} صندوق `;
+                )} cash desk`;
               }}
               MenuProps={{
                 getContentAnchorEl: null,
@@ -488,7 +488,7 @@ function CashDrawerAnalytics({
                   checked={selectedTypes.length === cashDrawerTypes.length}
                 />
                 <ListItemText
-                  primary="انتخاب همه صندوق‌ها"
+                  primary="Choosing all boxes"
                   className="text-right"
                 />
               </MenuItem>
@@ -557,24 +557,24 @@ function CashDrawerAnalytics({
                   }}
                   label={
                     key === "from_date"
-                      ? `از ${moment(value).format("jYYYY/jM/jD")}`
+                      ? `From${moment(value).format("jYYYY/jM/jD")}`
                       : key === "to_date"
-                      ? `تا ${moment(value).format("jYYYY/jM/jD")}`
+                      ? `until the${moment(value).format("jYYYY/jM/jD")}`
                       : key === "business"
                       ? Array.isArray(value)
-                        ? ` شعبه${englishNumberToPersianNumber(value.length)}`
-                        : "۱ شعبه"
+                        ? ` Branch${englishNumberToPersianNumber(value.length)}`
+                        : "۱Branch"
                       : key === "no_branches"
-                      ? "هیچ کدام از شعب"
+                      ? "None of the branches"
                       : key === "type"
                       ? Array.isArray(value)
                         ? `${englishNumberToPersianNumber(
                             value.length
-                          )} نوع صندوق `
+                          )} Fund type`
                         : cashDrawerTypes.find((type) => type.id === value)
                             ?.title
                       : key === "no_types"
-                      ? "هیچ کدام از انواع صندوق"
+                      ? "None of the types of boxes"
                       : value
                   }
                 />
@@ -744,7 +744,7 @@ function CashDrawerAnalytics({
                               }}
                             />
                           ) : (
-                            <div>{priceFormatter(total_paid_in)} تومان </div>
+                            <div>{priceFormatter(total_paid_in)} Toman</div>
                           )}
                         </TableCell>
                         <TableCell className="text-nowrap" align="center">
@@ -755,7 +755,7 @@ function CashDrawerAnalytics({
                               }}
                             />
                           ) : (
-                            <div>{priceFormatter(total_paid_out)} تومان </div>
+                            <div>{priceFormatter(total_paid_out)} Toman</div>
                           )}
                         </TableCell>
                         <TableCell className="text-nowrap" align="center">
@@ -771,7 +771,7 @@ function CashDrawerAnalytics({
                                 ? "-"
                                 : `${priceFormatter(Math.abs(balance))}${
                                     balance < 0 ? "-" : ""
-                                  } تومان`}
+                                  } Toman`}
                             </div>
                           )}
                         </TableCell>
@@ -788,7 +788,7 @@ function CashDrawerAnalytics({
                                 ? "-"
                                 : `${priceFormatter(Math.abs(final_money))}${
                                     final_money < 0 ? "-" : ""
-                                  } تومان`}
+                                  } Toman`}
                             </div>
                           )}
                         </TableCell>
@@ -805,7 +805,7 @@ function CashDrawerAnalytics({
                                 ? "-"
                                 : `${priceFormatter(Math.abs(diff))}${
                                     diff < 0 ? "-" : ""
-                                  } تومان`}
+                                  } Toman`}
                             </div>
                           )}
                         </TableCell>
@@ -834,14 +834,14 @@ function CashDrawerAnalytics({
             </TableContainer>
 
             <TablePagination
-              labelRowsPerPage={!maxWidth768 ? "تعداد ردیف در هر صفحه" : ""}
+              labelRowsPerPage={!maxWidth768 ? "The number of rows per page" : ""}
               labelDisplayedRows={({ from, to, count }) =>
                 `${englishNumberToPersianNumber(
                   from
-                )} - ${englishNumberToPersianNumber(to)} از ${
+                )} - ${englishNumberToPersianNumber(to)} From${
                   count !== -1
                     ? englishNumberToPersianNumber(count)
-                    : `بیشتر از  ${englishNumberToPersianNumber(to)}`
+                    : `more than${englishNumberToPersianNumber(to)}`
                 }`
               }
               rowsPerPageOptions={[5, 10, 25]}
@@ -886,7 +886,7 @@ function CashDrawerAnalytics({
           </>
         ) : (
           <TableNoResultMessage
-            title={"صندوقی مطابق با جستجوی شما پیدا نشد!"}
+            title={"The box was not found in accordance with your search!"}
           />
         )}
       </Paper>

@@ -16,7 +16,7 @@ function AdminEmptyStateForTables() {
         className="u-fontExteraLarge mt-5 mb-3"
         style={{ color: textTypes.text.default }}
       >
-        گزارشی یافت نشد!
+        There was no report!
       </div>
     </div>
   );

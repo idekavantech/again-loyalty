@@ -33,7 +33,7 @@ const SalesChannelInformBox = () => {
                   height: 70,
                 }}
                 src={`/images/channel_icon.svg`}
-                alt={"آیکون کانال های بازیابی"}
+                alt={"Recovery channel icon"}
               />
             </div>
           )}
@@ -42,13 +42,13 @@ const SalesChannelInformBox = () => {
               className={"mb-3"}
               style={{ color: "#002880", fontWeight: 500, fontSize: 18 }}
             >
-              سؤال مهم
+              an important question
             </h2>
             <p style={{ fontSize: 16 }}>
-              حالا که سایت خودتان را ساخته‌اید، چطور باید ترافیک آن را بالا
-              ببرید؟ در این صفحه راه‌هایی را معرفی کرده‌ایم که با آن‌ها
-              می‌توانید بازدید سایت خود را افزایش دهید. ویدئوهای آموزشی را
-              ببینید تا با اهمیت و نحوه استفاده از هر روش آشنا شوید.
+              Now that you have built your own site, how should traffic be high
+              take?On this page we have introduced ways with which
+              You can increase your site visit. Training videos
+              See to get acquainted with the importance and how to use any method.
             </p>
           </div>
         </div>

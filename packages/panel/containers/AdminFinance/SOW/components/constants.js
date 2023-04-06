@@ -1,14 +1,14 @@
-export const ACTIVATION_TEXT = `اگر کیف پول مشترک بر روی کسب و کار شما فعال باشد، این امکان را
-به مشتری خود می‌دهید تا بتواند با موجودی کیف پولی که روی یک شعبه
-دارد، روی شعبه‌های دیگر نیز سفارش ثبت کند. یعنی اعتبار هدیه‌ای
-که مشتری روی یک شعبه دریافت می‌کند، روی تمامی شعب دیگر نیز قابل
-استفاده است. همچنین با فعال کردن کیف پول مشترک، یک سیستم
-حسابداری بین هر شعبه و شعبه‌ی مرکزی نیز شکل می‌گیرد تا بتوانید
-از طریق آن بر بدهکاری شعبه‌ها به شعبه مرکزی و بلعکس را نیز
-مدیریت کنید.`;
-export const DE_ACTIVATION_TEXT = ` اگر کیف پول مشترک بر روی کسب و کار شما غیرفعال باشد، مشتریان شما
-با موجودی کیف پول هر شعبه فقط می‌توانند روی همان شعبه اقدام به
-ثبت سفارش کنند. یعنی اعتبار هدیه‌ای که مشتری روی یک شعبه دریافت
-می‌کند، تنها روی همان شعبه قابل استفاده است. همچنین با غیرفعال
-کردن کیف پول مشترک، سیستم حسابداری بین شعبه مرکزی و باقی شعبه‌ها
-نیز وجود نخواهد داشت.`;
+export const ACTIVATION_TEXT = `If the joint wallet on your business is enabled
+Give your customer to be able to inventory with a wallet on a branch
+To, to place an order on other branches as well. That is, gift credit
+That the customer receives on a branch, and on all other branches
+It is use. Also, by activating the joint wallet, a system
+Accounting is also formed between each branch and central branch so you can
+Through the debt of the branches to the central branch and vice versa
+Manage.`;
+export const DE_ACTIVATION_TEXT = ` If the joint wallet is disabled on your business, your customers
+With the wallet inventory each branch can only act on the same branch
+Register an order. Means the credit of the gift that the customer receives on a branch
+It can only be used on the same branch. Also with disabled
+Corporating a joint wallet, accounting system between the central branch and the rest of the branches
+There will be no.`;

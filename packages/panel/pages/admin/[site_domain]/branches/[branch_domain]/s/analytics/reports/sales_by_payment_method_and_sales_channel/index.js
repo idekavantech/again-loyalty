@@ -7,5 +7,5 @@ export default function AdminAnalyticsSalesByPaymentMethodAndSalesChanneleReport
 AdminAnalyticsSalesByPaymentMethodAndSalesChanneleReport.ShouldBeAdmin = true;
 AdminAnalyticsSalesByPaymentMethodAndSalesChanneleReport.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "گزارش تعدادی فاکتور براساس روش پرداخت و کانال فروش",
+  title: "Report a number of factors based on payment method and sales channel",
 };

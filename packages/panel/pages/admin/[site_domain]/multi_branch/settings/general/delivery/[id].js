@@ -14,5 +14,5 @@ AdminShoppingDeliveryTypeSettingsPage[BRANCHES_PLUGIN] = true;
 AdminShoppingDeliveryTypeSettingsPage.ShouldBeAdmin = true;
 AdminShoppingDeliveryTypeSettingsPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "جزئیات روش ارسال",
+  title: "Details of the method of submission",
 };

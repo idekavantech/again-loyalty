@@ -73,10 +73,10 @@ jMoment.locale("fa");
 jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
 
 const sortingOptions = [
-  { id: 0, text: "جدیدترین", keyword: NEWEST },
-  { id: 1, text: "قدیمی‌ترین", keyword: OLDEST },
-  { id: 2, text: "بیشترین مبلغ", keyword: HIGHEST_PRICE },
-  { id: 3, text: "کمترین مبلغ", keyword: LOWEST_PRICE },
+  { id: 0, text: "the newest", keyword: NEWEST },
+  { id: 1, text: "The oldest", keyword: OLDEST },
+  { id: 2, text: "The highest amount", keyword: HIGHEST_PRICE },
+  { id: 3, text: "The least amount", keyword: LOWEST_PRICE },
 ];
 
 const pdf = ({ business, branches, is_super }) => {
@@ -108,7 +108,7 @@ const pdf = ({ business, branches, is_super }) => {
               alignItems: "center",
             }}
           >
-            <div style={{ flex: 1 }}>تاریخ دریافت: {jalaaliDate}</div>
+            <div style={{ flex: 1 }}>Date Received: {jalaaliDate}</div>
             <div
               style={{
                 width: 300,
@@ -125,7 +125,7 @@ const pdf = ({ business, branches, is_super }) => {
                 textAlign: "left",
               }}
             >
-              ش. گزارش:{" "}
+              She. Report:{" "}
               {englishNumberToPersianNumber(
                 Math.floor(100000 + Math.random() * 900000)
               )}
@@ -152,7 +152,7 @@ const pdf = ({ business, branches, is_super }) => {
                 textAlign: "center",
               }}
             >
-              «گزارش انبارگردانی مواد اولیه»
+              «Raw material warehousing report»
             </div>
             <div style={{ flex: 1 }}></div>
           </div>
@@ -194,7 +194,7 @@ const pdf = ({ business, branches, is_super }) => {
                     borderRadius: "4px",
                   }}
                 >
-                  شعبه‌ها:
+                  branches:
                 </span>{" "}
                 {branches.map((branch) => (
                   <div
@@ -216,7 +216,7 @@ const pdf = ({ business, branches, is_super }) => {
       </div>
     ),
     footerTemplate: `<footer style="width: max-content;font-size: 10px;margin:0px auto 0px; border: 0.5px solid #c4c4c4;border-radius: 4px; padding: 4px 12px;font-family: 'dana'">
-      صفحه <span class="pageNumber"></span> / <span class="totalPages"></span>
+      Page<span class="pageNumber"></span> / <span class="totalPages"></span>
       </footer>`,
     main_styles: `
     *{
@@ -289,17 +289,17 @@ const sortingFunctions = {
 const branchHeadCells = [
   {
     id: "id",
-    label: "ردیف",
+    label: "Row",
     align: "center",
   },
   {
     id: "id",
-    label: "تاریخ",
+    label: "Date",
     align: "center",
   },
   {
     id: "id",
-    label: "مبلغ اختلاف(تومان)",
+    label: "The amount of difference(Toman)",
     align: "center",
   },
 ];
@@ -345,8 +345,8 @@ export function AdminIngredientsStorageReport({
       const mainBranchHeadCells = [...branchHeadCells];
       mainBranchHeadCells.splice(1, 0, {
         id: "id",
-        label: "شعبه",
-        name: "شعبه",
+        label: "Branch",
+        name: "Branch",
         align: "center",
       });
       return mainBranchHeadCells;
@@ -484,12 +484,12 @@ export function AdminIngredientsStorageReport({
   return (
     <div className="container">
       <Head>
-        <title>مشاهده نتایج انبارگردانی مواد اولیه</title>
+        <title>View the results of warehousing raw materials</title>
       </Head>
 
       <AdminBreadCrumb
         submitButtonText={
-          hasAnyKeepTrackedIngredient && !isSuper ? "درخواست شمارش جدید" : ""
+          hasAnyKeepTrackedIngredient && !isSuper ? "Asking for a new count" : ""
         }
         submitAction={() =>
           router.push(
@@ -505,7 +505,7 @@ export function AdminIngredientsStorageReport({
               variant="contained"
               onClick={(e) => toggleExportAnchor(e.currentTarget)}
             >
-              خروجی
+              Output
             </Button>
             <Menu
               elevation={1}
@@ -539,9 +539,9 @@ export function AdminIngredientsStorageReport({
                         footerTemplate: PDFConfigs.footerTemplate,
                       },
                     },
-                    `مشاهده نتایج انبارگردانی مواد اولیه از ${formatDateObjectToNormal(
+                    `View the results of warehousing raw materials from${formatDateObjectToNormal(
                       selectedDayRange.from
-                    )} تا  ${formatDateObjectToNormal(selectedDayRange.to)}.pdf`
+                    )} until the${formatDateObjectToNormal(selectedDayRange.to)}.pdf`
                   );
                 }}
               >
@@ -553,9 +553,9 @@ export function AdminIngredientsStorageReport({
                     headRow,
                     rows,
                     [],
-                    `مشاهده نتایج انبارگردانی مواد اولیه از ${formatDateObjectToNormal(
+                    `View the results of warehousing raw materials from${formatDateObjectToNormal(
                       selectedDayRange.from
-                    )} تا  ${formatDateObjectToNormal(selectedDayRange.to)}`
+                    )} until the${formatDateObjectToNormal(selectedDayRange.to)}`
                   )
                 }
               >
@@ -583,16 +583,16 @@ export function AdminIngredientsStorageReport({
                   // IconComponent={() => null}
                   renderValue={() => {
                     if (selectedBranches.length === 0)
-                      return "شعبه انتخاب کنید";
+                      return "Choose a branch";
                     if (selectedBranches.length === 1 && selectedBranches[0])
                       return branches.find(
                         (branch) => branch.id === selectedBranches[0]
                       ).title;
                     if (selectedBranches.length === branches.length)
-                      return "همه شعب";
+                      return "All branches";
                     return `${englishNumberToPersianNumber(
                       selectedBranches.length
-                    )} شعبه `;
+                    )} Branch`;
                   }}
                   MenuProps={{
                     getContentAnchorEl: null,
@@ -627,7 +627,7 @@ export function AdminIngredientsStorageReport({
                       checked={selectedBranches.length === branches.length}
                     />
                     <ListItemText
-                      primary="انتخاب همه شعب"
+                      primary="Choosing all branches"
                       className="text-right"
                     />
                   </MenuItem>
@@ -682,13 +682,13 @@ export function AdminIngredientsStorageReport({
                   onClick={handleOpen}
                   variant="outlined"
                 >
-                  از{" "}
+                  From{" "}
                   <span className="px-2">
                     {englishNumberToPersianNumber(
                       formatDateObjectToNormal(selectedDayRange.from)
                     )}
                   </span>
-                  تا{" "}
+                  until the{" "}
                   <span className="px-2">
                     {englishNumberToPersianNumber(
                       formatDateObjectToNormal(selectedDayRange.to)
@@ -751,7 +751,7 @@ export function AdminIngredientsStorageReport({
                   style={{ width: 200 }}
                   className="px-3 u-fontWeightBold u-fontNormal my-1"
                 >
-                  مرتب‌سازی بر اساس
+                  order by
                 </div>
               }
               selectOption={(text) =>
@@ -760,7 +760,7 @@ export function AdminIngredientsStorageReport({
                 )
               }
               inputData={{
-                defaultValue: "مرتب‌سازی",
+                defaultValue: "Ordering",
               }}
               selected={sortingOptions.find(
                 (i) => i.keyword === selectedSortingType
@@ -795,7 +795,7 @@ export function AdminIngredientsStorageReport({
                   }}
                   className="ml-2 mb-2"
                   onDelete={() => setSelectedBranches([])}
-                  label="همه شعب"
+                  label="All branches"
                 />
               ) : selectedBranches?.length ? (
                 branches
@@ -842,13 +842,13 @@ export function AdminIngredientsStorageReport({
                   onDelete={() =>
                     setSelectedBranches(branches.map((branch) => branch.id))
                   }
-                  label="هیچ‌کدام از شعب"
+                  label="None of the branches"
                 />
               )}
             </div>
           )}
           {!selectedBranches?.length && isSuper ? (
-            <div className="mx-auto">هیچ شعبه‌ای انتخاب نشده است.</div>
+            <div className="mx-auto">No branch is selected.</div>
           ) : hasAnyReport ? (
             <div id="report">
               {PDFConfigs.headerTemplate}
@@ -949,7 +949,7 @@ export function AdminIngredientsStorageReport({
                                     );
                                   }}
                                 >
-                                  دیدن جزییات
+                                  See the details
                                 </div>
                               </div>
                             </TableCell>

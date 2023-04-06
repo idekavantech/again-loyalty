@@ -17,8 +17,8 @@ const reportConfig = {
     type: BRANCHES_DEALS_REPORT_TYPE,
     name: TOTAL_PRODUCT_SOLD,
   },
-  title: "مجموع محصولات فروخته شده",
-  x_axis_node_title: "مجموع محصولات فروخته شده",
+  title: "The sum of the products sold",
+  x_axis_node_title: "The sum of the products sold",
   has_branches_selector: true,
   has_export_button: true,
   has_table: false,
@@ -30,5 +30,5 @@ export default function AdminGrossSales() {
 AdminGrossSales.ShouldBeAdmin = true;
 AdminGrossSales.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "گزارش مجموع محصولات فروخته شده",
+  title: "Report a sum of products sold",
 };

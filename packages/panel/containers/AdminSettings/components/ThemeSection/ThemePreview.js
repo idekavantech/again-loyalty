@@ -38,7 +38,7 @@ function ThemePreview({ theme, selectTheme }) {
             className="u-fontNormal mr-1"
             style={{ color: isMobile ? smoke : coal }}
           >
-            موبایل
+            Mobile
           </span>
         </button>
 
@@ -51,7 +51,7 @@ function ThemePreview({ theme, selectTheme }) {
             className="u-fontNormal mr-1"
             style={{ color: isMobile ? coal : smoke }}
           >
-            دسکتاپ
+            desktop
           </span>
         </button>
         <Button
@@ -60,7 +60,7 @@ function ThemePreview({ theme, selectTheme }) {
           className="col-4"
           onClick={selectTheme}
         >
-          انتخاب
+          Selection
         </Button>
       </div>
     </div>

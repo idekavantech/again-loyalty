@@ -7,5 +7,5 @@ export default function AdminModifierSetListPage() {
 AdminModifierSetListPage.ShouldBeAdmin = true;
 AdminModifierSetListPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "مجموعه‌های افزودنی",
+  title: "Additive sets",
 };

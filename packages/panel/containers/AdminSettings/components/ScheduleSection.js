@@ -23,7 +23,7 @@ function ScheduleSection({
       <div className="col-12 mb-lg-3 mb-0">
         <span className="anchor" id="working_hours" />
         <div className="u-fontLarge d-flex" style={{ color: night }}>
-          <span>ساعت کاری</span>
+          <span>Hours of work</span>
           <div>
             <Switch
               onColor={theme.palette.primary.main}
@@ -35,9 +35,9 @@ function ScheduleSection({
           </div>
         </div>
         <div className="mt-2">
-          برای دریافت سفارش آنلاین در سایت لازم است این بخش را فعال کنید و ساعت
-          دریافت سفارش خود را مشخص کنید. همچنین می توانید ساعت کاری خود را در
-          سایت نمایش دهید.
+          To get an online order on the site you need to enable this section and the clock
+          Identify your order. You can also take your work hours in
+          Display the site.
         </div>
         {showWorkingTime ? (
           <div className="d-flex flex-column">

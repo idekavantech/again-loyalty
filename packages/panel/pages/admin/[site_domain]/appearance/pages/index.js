@@ -7,5 +7,5 @@ export default function AdminPages() {
 AdminPages.ShouldBeAdmin = true;
 AdminPages.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "ویرایش صفحات",
+  title: "Edit pages",
 };

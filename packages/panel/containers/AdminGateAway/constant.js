@@ -8,17 +8,17 @@ export const CONTACT_INFO = "contact_info";
 export const steps = [
   {
     step: 1,
-    title: "اطلاعات عمومی",
+    title: "general information",
     label: GENERAL_INFO,
   },
   {
     step: 2,
-    title: "اطلاعات تماس",
+    title: "Contacts",
     label: CONTACT_INFO,
   },
   {
     step: 3,
-    title: "اطلاعات مالی",
+    title: "financial information",
     label: FINANCIAL_INFO,
   },
 ];
@@ -26,18 +26,18 @@ export const steps = [
 export const interfaceGateWays = [
   {
     id: uniqueId(),
-    title: "درگاه زیبال",
+    title: "Zibal",
     image: `/images/zibal.svg`,
     link: "https://zibal.ir/",
     button: {
-      title: "اتصال خودکار",
+      title: "Automatic connection",
       link: "gate_away/general_info",
     },
   },
 
   {
     id: uniqueId(),
-    title: "درگاه زرین پال(بسته نقره‌ای به اینماد نیاز ندارد)",
+    title: "Zarrin Pal Port(Silver package does not require this)",
     image: `/images/zarinpal.svg`,
     link: "https://www.zarinpal.com/payment-gateway.html",
   },
@@ -45,11 +45,11 @@ export const interfaceGateWays = [
     id: uniqueId(),
     image: `/images/sp.svg`,
     link: "https://merchant.sizpay.ir/Acnt/Reg?MF=00100180",
-    title: "درگاه سیزپی",
+    title: "Siegie port",
   },
   {
     id: uniqueId(),
-    title: "درگاه آیدی پی",
+    title: "IDP",
     image: `/images/idPay.svg`,
     link: "https://idpay.ir/user/auth",
   },
@@ -58,13 +58,13 @@ export const interfaceGateWays = [
 export const directGateWays = [
   {
     id: uniqueId(),
-    title: "درگاه سامان کیش",
+    title: "Saman Kish",
     link: "https://my.sep.ir/InternetMerchant/Register",
     image: `/images/samankish.svg`,
   },
   {
     id: uniqueId(),
-    title: "درگاه پرداخت ملت",
+    title: "Nation's payment door",
     image: `/images/behpardakht.svg`,
     link: "http://www.behpardakht.com/resources/TerminalRegistration.html#",
   },

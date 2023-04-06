@@ -51,8 +51,8 @@ jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
 const headCells = [
   {
     id: "id",
-    name: "کانال فروش",
-    label: "کانال فروش",
+    name: "Sales Channel",
+    label: "Sales Channel",
     align: "center",
     style: {
       position: "sticky",
@@ -64,36 +64,36 @@ const headCells = [
   },
   {
     id: "id",
-    name: "ویترین",
-    label: "ویترین",
+    name: "Showcase",
+    label: "Showcase",
     align: "center",
     collSpan: 5,
   },
   {
     id: "id",
-    name: "حضوری",
-    label: "حضوری",
+    name: "In -person",
+    label: "In -person",
     align: "center",
     collSpan: 5,
   },
   {
     id: "id",
-    name: "تلفنی",
-    label: "تلفنی",
+    name: "Phone",
+    label: "Phone",
     align: "center",
     collSpan: 5,
   },
   {
     id: "id",
-    name: "اسنپ‌فود",
-    label: "اسنپ‌فود",
+    name: "Snaphods",
+    label: "Snaphods",
     align: "center",
     collSpan: 5,
   },
   {
     id: "id",
-    name: "جمع کل",
-    label: "جمع کل",
+    name: "total",
+    label: "total",
     align: "center",
     style: {
       position: "sticky",
@@ -108,39 +108,39 @@ const headCells = [
 ];
 
 const paymentTypes = [
-  { id: 0, title: "آنلاین" },
-  { id: 1, title: "نقدی" },
-  { id: 2, title: "کارت به کارت" },
-  { id: 3, title: "کیف پول" },
-  { id: 4, title: "کارت خوان" },
+  { id: 0, title: "Online" },
+  { id: 1, title: "Cash" },
+  { id: 2, title: "Card to card" },
+  { id: 3, title: "wallet" },
+  { id: 4, title: "card reader" },
 ];
 
 const salesChannel = [
   {
     id: 0,
-    name: "ویترین",
-    label: "ویترین",
+    name: "Showcase",
+    label: "Showcase",
     align: "center",
     collSpan: 5,
   },
   {
     id: 1,
-    name: "حضوری",
-    label: "حضوری",
+    name: "In -person",
+    label: "In -person",
     align: "center",
     collSpan: 5,
   },
   {
     id: 2,
-    name: "تلفنی",
-    label: "تلفنی",
+    name: "Phone",
+    label: "Phone",
     align: "center",
     collSpan: 5,
   },
   {
     id: 3,
-    name: "اسنپ‌فود",
-    label: "اسنپ‌فود",
+    name: "Snaphods",
+    label: "Snaphods",
     align: "center",
     collSpan: 5,
   },
@@ -275,7 +275,7 @@ export function AdminSalesByPaymentMethodAndSalesChannelReport({
   return (
     <div className="container mb-5">
       <Head>
-        <title>گزارش تعدادی فاکتور براساس روش پرداخت و کانال فروش</title>
+        <title>Report a number of factors based on payment method and sales channel</title>
       </Head>
 
       <AdminBreadCrumb />
@@ -292,13 +292,13 @@ export function AdminSalesByPaymentMethodAndSalesChannelReport({
                 onClick={handleOpen}
                 variant="outlined"
               >
-                از{" "}
+                From{" "}
                 <span className="px-2">
                   {englishNumberToPersianNumber(
                     formatDateObjectToNormal(selectedDayRange.from)
                   )}
                 </span>
-                تا{" "}
+                until the{" "}
                 <span className="px-2">
                   {englishNumberToPersianNumber(
                     formatDateObjectToNormal(selectedDayRange.to)
@@ -351,16 +351,16 @@ export function AdminSalesByPaymentMethodAndSalesChannelReport({
                 size="large"
                 // IconComponent={() => null}
                 renderValue={() => {
-                  if (selectedBranches.length === 0) return "شعبه انتخاب کنید";
+                  if (selectedBranches.length === 0) return "Choose a branch";
                   if (selectedBranches.length === 1 && selectedBranches[0])
                     return branches.find(
                       (branch) => branch.id === selectedBranches[0]
                     ).title;
                   if (selectedBranches.length === branches.length)
-                    return "همه شعب";
+                    return "All branches";
                   return `${englishNumberToPersianNumber(
                     selectedBranches.length
-                  )} شعبه `;
+                  )} Branch`;
                 }}
                 MenuProps={{
                   getContentAnchorEl: null,
@@ -395,7 +395,7 @@ export function AdminSalesByPaymentMethodAndSalesChannelReport({
                     checked={selectedBranches.length === branches.length}
                   />
                   <ListItemText
-                    primary="انتخاب همه شعب"
+                    primary="Choosing all branches"
                     className="text-right"
                   />
                 </MenuItem>
@@ -451,7 +451,7 @@ export function AdminSalesByPaymentMethodAndSalesChannelReport({
               // IconComponent={() => null}
               renderValue={() => {
                 if (selectedSalesChannel.length === 0)
-                  return "کانال فروش انتخاب کنید";
+                  return "Select the sales channel";
                 if (
                   selectedSalesChannel.length === 1 &&
                   selectedSalesChannel[0]
@@ -460,10 +460,10 @@ export function AdminSalesByPaymentMethodAndSalesChannelReport({
                     (saleChannel) => saleChannel.id === selectedSalesChannel[0]
                   ).title;
                 if (selectedSalesChannel.length === salesChannelsOptions.length)
-                  return "همه کانال‌های فروش";
+                  return "All sales channels";
                 return `${englishNumberToPersianNumber(
                   selectedSalesChannel.length
-                )} کانال فروش `;
+                )} Sales Channel`;
               }}
               MenuProps={{
                 getContentAnchorEl: null,
@@ -506,7 +506,7 @@ export function AdminSalesByPaymentMethodAndSalesChannelReport({
                   }
                 />
                 <ListItemText
-                  primary="انتخاب همه کانال‌های فروش"
+                  primary="Select all sales channels"
                   className="text-right"
                 />
               </MenuItem>
@@ -569,7 +569,7 @@ export function AdminSalesByPaymentMethodAndSalesChannelReport({
                 }}
                 className="ml-2 mb-2"
                 onDelete={() => setSelectedBranches([])}
-                label="همه شعب"
+                label="All branches"
               />
             ) : selectedBranches?.length ? (
               branches
@@ -614,7 +614,7 @@ export function AdminSalesByPaymentMethodAndSalesChannelReport({
                 onDelete={() =>
                   setSelectedBranches(branches.map((branch) => branch.id))
                 }
-                label="هیچ‌کدام از شعب"
+                label="None of the branches"
               />
             )}
           </div>
@@ -634,7 +634,7 @@ export function AdminSalesByPaymentMethodAndSalesChannelReport({
               }}
               className="ml-2 mb-2"
               onDelete={() => setSelectedSalesChannel([])}
-              label="همه کانال‌های فروش"
+              label="All sales channels"
             />
           ) : selectedSalesChannel?.length ? (
             salesChannelsOptions
@@ -683,7 +683,7 @@ export function AdminSalesByPaymentMethodAndSalesChannelReport({
                   salesChannelsOptions?.map((ingredient) => ingredient.id)
                 )
               }
-              label="هیچ‌کدام از کانال‌های فروش"
+              label="None of the sales channels"
             />
           )}
         </div>
@@ -733,7 +733,7 @@ export function AdminSalesByPaymentMethodAndSalesChannelReport({
                       width: 130,
                     }}
                   >
-                    روش پرداخت
+                    Payment Method
                   </TableCell>
                   {[0, 1, 2, 3].map(() =>
                     paymentTypes.map((pay) => (
@@ -766,7 +766,7 @@ export function AdminSalesByPaymentMethodAndSalesChannelReport({
                       width: 130,
                     }}
                   >
-                    تعداد پرداخت
+                    The number of payment
                   </TableCell>
                   {salesChannel.map(
                     (channels) =>
@@ -830,7 +830,7 @@ export function AdminSalesByPaymentMethodAndSalesChannelReport({
                       width: 130,
                     }}
                   >
-                    درصد پرداخت
+                    Payment percentage
                   </TableCell>
                   {salesChannel.map(
                     (channels) =>
@@ -882,7 +882,7 @@ export function AdminSalesByPaymentMethodAndSalesChannelReport({
                       width: 130,
                     }}
                   >
-                    تعداد بازگشت
+                    The number of return
                   </TableCell>
                   {salesChannel.map((channels) => {
                     let per_channel =
@@ -949,7 +949,7 @@ export function AdminSalesByPaymentMethodAndSalesChannelReport({
                       width: 130,
                     }}
                   >
-                    درصد بازگشت
+                    Return percentage
                   </TableCell>
                   {salesChannel.map((channels) => {
                     let per_channel =
@@ -1004,7 +1004,7 @@ export function AdminSalesByPaymentMethodAndSalesChannelReport({
                       width: 130,
                     }}
                   >
-                    تعداد سهم از فروش
+                    The number of share of the sale
                   </TableCell>
 
                   {salesChannel.map((channels) => (
@@ -1040,7 +1040,7 @@ export function AdminSalesByPaymentMethodAndSalesChannelReport({
                       width: 130,
                     }}
                   >
-                    درصد سهم از فروش
+                    Percentage of sale
                   </TableCell>
                   {salesChannel.map((channels) => (
                     <TableCell key={channels.id} align="center" colSpan={5}>

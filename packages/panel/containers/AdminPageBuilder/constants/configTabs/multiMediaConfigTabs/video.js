@@ -6,21 +6,21 @@ import { SECTION_VIDEO } from "@saas/utils/constants/sections";
 import uniqueId from "lodash/uniqueId";
 
 const video = [
-  // ویدئو
+  // video
   {
     ...sectionsConfigTabsRepeatedParts["content"],
     items: [
       {
         id: uniqueid(),
-        label: "عنوان",
+        label: "Title",
         key: "title",
         element_id: "theme_1_title",
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "متن عنوان",
-            default_value: "عنوان",
+            label: "Title text",
+            default_value: "Title",
             key: "value",
             type: "text",
             rowsMax: 4,
@@ -28,7 +28,7 @@ const video = [
           },
           {
             id: uniqueid(),
-            label: "از رنگ تم سایت استفاده شود.",
+            label: "Use the color of the site theme.",
             default_value: true,
             key: "use_theme_color",
             type: "switch",
@@ -42,32 +42,32 @@ const video = [
               },
             ],
             id: uniqueid(),
-            label: "رنگ عنوان",
+            label: "Title color",
             key: "color",
             type: "color",
           },
           {
             id: uniqueid(),
-            label: "اندازه فونت",
+            label: "Font size",
             key: "font_size",
             default_value: "medium",
             type: "select",
             options: [
               {
                 id: uniqueid(),
-                label: "کوچک",
+                label: "Little",
                 value: "small",
                 // value: ["2vw", "7.5vw", "1.6vw"],
               },
               {
                 id: uniqueid(),
-                label: "متوسط",
+                label: "medium",
                 value: "medium",
                 // value: ["3vw", "9vw", "2.4vw"],
               },
               {
                 id: uniqueid(),
-                label: "بزرگ",
+                label: "big",
                 value: "large",
                 // value: ["4vw", "16vw", "4vw"],
               },
@@ -78,14 +78,14 @@ const video = [
 
       {
         id: uniqueid(),
-        label: "توضیحات",
+        label: "Description",
         key: "description_text",
         element_id: "theme_1_description",
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "متن توضیحات",
+            label: "Text of Description",
             default_value: LOREM_IPSUM_SHORT,
             key: "value",
             type: "text",
@@ -93,7 +93,7 @@ const video = [
           },
           {
             id: uniqueid(),
-            label: "از رنگ تم سایت استفاده شود.",
+            label: "Use the color of the site theme.",
             key: "use_theme_color",
             default_value: true,
             type: "switch",
@@ -108,14 +108,14 @@ const video = [
             ],
             id: uniqueid(),
             key: "color",
-            label: "رنگ توضیحات",
+            label: "Color Description",
 
             default_value: "black",
             type: "color",
           },
           {
             id: uniqueid(),
-            label: "اندازه فونت",
+            label: "Font size",
             default_value: "medium",
             key: "font_size",
             type: "select",
@@ -126,14 +126,14 @@ const video = [
 
       {
         id: uniqueid(),
-        label: "ویدئو",
+        label: "video",
         key: "video",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "کد امبد",
+            label: "Code",
             type: "text",
             key: "value",
             multiline: true,
@@ -171,26 +171,26 @@ const video = [
           },
         ],
         id: uniqueid(),
-        label: "اندازه سکشن",
+        label: "Section size",
         key: "section_size",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "عرض سکشن ها",
+            label: "Width of the sections",
             default_value: "w-100",
             type: "select",
             key: "main_width",
             options: [
               {
                 id: uniqueid(),
-                label: "تمام صفحه",
+                label: "fullscreen",
                 value: "w-100",
               },
               {
                 id: uniqueid(),
-                label: "با فاصله",
+                label: "with Gap",
                 value: "container",
               },
             ],
@@ -209,14 +209,14 @@ const video = [
           },
         ],
         id: uniqueid(),
-        label: "نمایش‌ها",
+        label: "Shows",
         key: "showcases",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "نمایش عنوان",
+            label: "Show title",
             default_value: true,
             type: "switch",
             key: "title",
@@ -224,7 +224,7 @@ const video = [
 
           {
             id: uniqueid(),
-            label: "نمایش توضیحات",
+            label: "Show Description",
             default_value: true,
             type: "switch",
             key: "description",
@@ -243,26 +243,26 @@ const video = [
           },
         ],
         id: uniqueid(),
-        label: "بک‌گراند",
+        label: "back ground",
         key: "background",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "انتخاب نوع پس زمینه",
+            label: "The choice of background type",
             default_value: "color",
             key: "background_type",
             type: "select",
             options: [
               {
                 id: uniqueId(),
-                label: "عکس",
+                label: "Picture",
                 value: "image",
               },
               {
                 id: uniqueId(),
-                label: "رنگ",
+                label: "Color",
                 value: "color",
               },
             ],
@@ -287,7 +287,7 @@ const video = [
               },
             ],
             id: uniqueid(),
-            label: "آپلود عکس جداگانه برای موبایل",
+            label: "Uploading a separate photo for mobile",
             default_value: false,
             type: "switch",
             key: "should_upload_seperate_image_for_mobile",
@@ -329,7 +329,7 @@ const video = [
             ],
 
             id: uniqueId(),
-            label: "رنگ پس‌زمینه",
+            label: "The background color",
             default_value: "#FFFFFF",
             key: "color",
             type: "color",

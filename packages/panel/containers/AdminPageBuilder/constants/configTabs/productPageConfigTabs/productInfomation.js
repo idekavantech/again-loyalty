@@ -3,7 +3,7 @@ import { sectionsLayout } from "../../sectionsLayout";
 import { SECTION_PRODUCT_INFORMATION } from "@saas/utils/constants/sections";
 
 const productInfomation = [
-  // اطلاعات اصلی محصول
+  // Product original information
   {
     ...sectionsConfigTabsRepeatedParts["customization"],
     items: [

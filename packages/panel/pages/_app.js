@@ -323,8 +323,8 @@ function MyApp({ Component }) {
                       fontWeight: 500,
                     }}
                   >
-                    وبسایت {business.revised_title} به صورت موقت از دسترسی خارج
-                    شده‌ است.
+                    website{business.revised_title} Temporarily out of access
+                    It's been.
                   </div>
                 </DialogContent>
               </Dialog>

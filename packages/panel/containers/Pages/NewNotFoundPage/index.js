@@ -15,7 +15,7 @@ import { useResponsive } from "@saas/utils/hooks/useResponsive";
 
 function NewNotFoundPage({
   urlPrefix,
-  item = "صفحه",
+  item = "Page",
   noButton,
   buttonLink,
   buttonText,
@@ -37,7 +37,7 @@ function NewNotFoundPage({
             className="d-flex flex-wrap flex-column justify-content-center align-items-center"
           >
             <h1 style={{ fontSize: `${maxWidth768 ? "30px" : "40px"}` }}>
-              {item} مورد نظرتون پیدا نشد.
+              {item} You were not found..
             </h1>
             <h2
               className="mt-3"
@@ -54,7 +54,7 @@ function NewNotFoundPage({
                 fontSize: `${maxWidth768 ? "14px" : "19.5px"}`,
               }}
             >
-              میتونید دکمه‌ی زیر رو بزنید و به صفحه‌ی اصلی فروشگاه برید.
+              You can press the button below and go to the store's homepage.
             </p>
             {!noButton && (
               <Button
@@ -63,7 +63,7 @@ function NewNotFoundPage({
                 variant="contained"
                 onClick={() => router.push(buttonLink || `${urlPrefix}/`)}
               >
-                {buttonText || "صفحه‌ی اصلی سایت"}
+                {buttonText || "The homepage of the site"}
               </Button>
             )}
           </div>

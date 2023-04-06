@@ -83,7 +83,7 @@ export function AdminForms({ urlPrefix, forms, _getForms, _deleteForm }) {
     >
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
-          آیا مطمئن هستید که می‌خواهید این فرم را حذف کنید؟
+          Are you sure you want to delete this form?
         </DialogContentText>
       </DialogContent>
       <DialogActions>
@@ -94,14 +94,14 @@ export function AdminForms({ urlPrefix, forms, _getForms, _deleteForm }) {
             setIsConfirmationOpen(false);
           }}
         >
-          حذف فرم
+          Remove the form
         </Button>
         <Button
           onClick={() => setIsConfirmationOpen(false)}
           color="primary"
           autoFocus
         >
-          انصراف
+          Candifying
         </Button>
       </DialogActions>
     </Dialog>
@@ -110,7 +110,7 @@ export function AdminForms({ urlPrefix, forms, _getForms, _deleteForm }) {
     <div className="container">
       {renderDeleteItemPopup()}
       <Head>
-        <title>ویرایش فرم‌های سایت</title>
+        <title>Edit site forms</title>
       </Head>
       <AdminBreadCrumb />
       <Paper elevation={1} className="p-3 mt-3">
@@ -119,7 +119,7 @@ export function AdminForms({ urlPrefix, forms, _getForms, _deleteForm }) {
           style={{ color: theme.palette.text.tertiary, fontSize: 16 }}
         >
           <div className="d-flex align-items-center">
-            <span className="ml-1">لیست فرم‌های سایت</span>
+            <span className="ml-1">List of site forms</span>
             <span className="u-font-medium u-fontWeightBold">{`(${englishNumberToPersianNumber(
               numberOfForms
             )})`}</span>
@@ -132,7 +132,7 @@ export function AdminForms({ urlPrefix, forms, _getForms, _deleteForm }) {
               onClick={() => router.push(`${urlPrefix}forms/new`)}
               endIcon={<AddRoundedIcon fontSize="small" />}
             >
-              فرم جدید
+              New form
             </Button>
           </div>
         </div>
@@ -150,7 +150,7 @@ export function AdminForms({ urlPrefix, forms, _getForms, _deleteForm }) {
                     style={{ color: pollution }}
                   >
                     {minWidth768
-                      ? `ساخته‌شده در ${_form.createdAtDate}`
+                      ? `made in${_form.createdAtDate}`
                       : _form.createdAtDate}
                   </div>
                 </div>
@@ -163,7 +163,7 @@ export function AdminForms({ urlPrefix, forms, _getForms, _deleteForm }) {
                     }
                     style={{ direction: "ltr" }}
                   >
-                    نمایش اطلاعات ثبت‌شده
+                    View recorded information
                   </Button>
                   <IconButton
                     color="primary"
@@ -196,7 +196,7 @@ export function AdminForms({ urlPrefix, forms, _getForms, _deleteForm }) {
                       }}
                       className="ml-3"
                     >
-                      ویرایش
+                      Edit
                     </span>
                     <EditRoundedIcon color="primary" fontSize="small" />
                   </MenuItem>
@@ -213,7 +213,7 @@ export function AdminForms({ urlPrefix, forms, _getForms, _deleteForm }) {
                       }}
                       className="ml-3"
                     >
-                      حذف
+                      Delete
                     </span>
                     <DeleteIcon color="primary" fontSize="small" />
                   </MenuItem>

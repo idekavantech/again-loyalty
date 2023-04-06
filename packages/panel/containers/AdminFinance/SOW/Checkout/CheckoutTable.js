@@ -38,24 +38,24 @@ const StyledTableRow = withStyles((theme) => ({
 const headCells = [
   {
     id: "time",
-    label: "تاریخ و ساعت",
+    label: "Date and hour",
     align: "center",
   },
 
   {
     id: "reason",
     align: "center",
-    label: "علت تراکنش",
+    label: "Transaction cause",
   },
   {
     id: "description",
     align: "center",
-    label: "توضیحات",
+    label: "Description",
   },
   {
     id: "price",
     align: "center",
-    label: "مبلغ تراکنش",
+    label: "Transaction amount",
   },
 ];
 
@@ -157,7 +157,7 @@ function CheckoutTable({
             <TableBody>
               <TableRow style={{ height: 50 }}>
                 <TableCell align="center" className="u-fontWeightBold">
-                  مبلغ کل تسویه
+                  The total amount of settlement
                 </TableCell>
                 <TableCell align="center"></TableCell>
                 <TableCell align="center"></TableCell>
@@ -170,7 +170,7 @@ function CheckoutTable({
                     <div style={{ direction: "ltr" }} className="ml-1">
                       {priceFormatter(Math.abs(walletBalance))}
                     </div>
-                    <div>تومان</div>
+                    <div>Toman</div>
                   </div>
                 </TableCell>
               </TableRow>
@@ -257,7 +257,7 @@ function CheckoutTable({
                         <div style={{ direction: "ltr" }} className="ml-1">
                           {priceFormatter(priceObj.price)}
                         </div>
-                        <div>تومان</div>
+                        <div>Toman</div>
                       </div>
                     </TableCell>
                   </StyledTableRow>
@@ -268,7 +268,7 @@ function CheckoutTable({
         </Table>
       </TableContainer>
       <TablePagination
-        labelRowsPerPage={!maxWidth768 ? "تعداد ردیف در هر صفحه" : ""}
+        labelRowsPerPage={!maxWidth768 ? "The number of rows per page" : ""}
         labelDisplayedRows={({ from }) =>
           `${englishNumberToPersianNumber(from)}`
         }

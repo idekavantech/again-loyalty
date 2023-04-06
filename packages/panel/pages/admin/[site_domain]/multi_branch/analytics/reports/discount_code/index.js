@@ -13,5 +13,5 @@ export default function AdminAnalyticsDiscountCodeReport() {
 AdminAnalyticsDiscountCodeReport.ShouldBeAdmin = true;
 AdminAnalyticsDiscountCodeReport.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "گزارش کدهای تخفیف",
+  title: "Report discount codes",
 };

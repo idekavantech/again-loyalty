@@ -7,5 +7,5 @@ export default function AdminShoppingNavigationPage() {
 AdminShoppingNavigationPage.ShouldBeAdmin = true;
 AdminShoppingNavigationPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "دسته‌بندی‌ها",
+  title: "categories",
 };

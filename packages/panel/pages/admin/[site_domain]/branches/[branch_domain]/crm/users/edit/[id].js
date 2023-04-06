@@ -8,5 +8,5 @@ CRMMembershipDetailPage[CRM_PLUGIN] = true;
 CRMMembershipDetailPage.ShouldBeAdmin = true;
 CRMMembershipDetailPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "جزئیات اطلاعات مشتری",
+  title: "Customer information details",
 };

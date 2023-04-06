@@ -8,5 +8,5 @@ export default function AdminReportsDashboard() {
 AdminReportsDashboard.ShouldBeAdmin = true;
 AdminReportsDashboard.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "داشبورد گزارش‌ها",
+  title: "Dashboard Reports",
 };

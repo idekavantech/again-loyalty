@@ -4,21 +4,21 @@ import { sectionsLayout } from "../../sectionsLayout";
 import { SECTION_TEXT } from "@saas/utils/constants/sections";
 
 const text = [
-  // متن
+  // Text
   {
     ...sectionsConfigTabsRepeatedParts["content"],
     items: [
       {
         id: uniqueid(),
-        label: "متن",
+        label: "Text",
         key: "text",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "متن",
-            default_value: "متن",
+            label: "Text",
+            default_value: "Text",
             key: "value",
             type: "richtext",
           },

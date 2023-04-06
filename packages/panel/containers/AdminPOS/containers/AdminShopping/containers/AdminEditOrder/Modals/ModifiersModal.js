@@ -112,7 +112,7 @@ export function ModifiersModal({
           style={{ borderBottom: "1px solid #EDEDED" }}
         >
           <div style={{ color: night, fontWeight: "bold", fontSize: 16 }}>
-            انتخاب افزودنی
+            Additive selection
           </div>
           <div>
             <IconButton
@@ -158,11 +158,11 @@ export function ModifiersModal({
                       </div>
                       <div className="d-flex align-items-center">
                         {hasMinimumChoice && (
-                          <div className="ml-1">اجباری -</div>
+                          <div className="ml-1">Mandatory-</div>
                         )}
                         {modifier_set.minimum_choice && (
                           <div className="ml-1">
-                            حداقل:‌
+                            At least:‌
                             {englishNumberToPersianNumber(
                               modifier_set.minimum_choice
                             )}{" "}
@@ -171,7 +171,7 @@ export function ModifiersModal({
                         )}
                         {modifier_set.maximum_choicce && (
                           <div className="ml-1">
-                            حداکثر:‌
+                            Maximum:‌
                             {englishNumberToPersianNumber(
                               modifier_set.maximum_choicce
                             )}
@@ -248,7 +248,7 @@ export function ModifiersModal({
                               >
                                 <div>
                                   {englishNumberToPersianNumber(inventoryCount)}{" "}
-                                  در انبار
+                                  in stock
                                 </div>
                                 <div className="d-flex align-items-center">
                                   <div>
@@ -280,8 +280,8 @@ export function ModifiersModal({
         style={{ borderTop: "1px solid #EDEDED" }}
       >
         <div>
-          {englishNumberToPersianNumber(selectedModifiers?.length)} افزودنی
-          انتخاب‌شده
+          {englishNumberToPersianNumber(selectedModifiers?.length)} Additive
+          chosen
         </div>
         <div>
           <Button
@@ -294,7 +294,7 @@ export function ModifiersModal({
             size="medium"
             disabled={isLoading}
           >
-            تایید
+            Confirm
           </Button>
           <Button
             onClick={onClose}
@@ -303,7 +303,7 @@ export function ModifiersModal({
             className="u-box-shadow-none u-fontMedium mr-3"
             size="medium"
           >
-            انصراف
+            Candifying
           </Button>
         </div>
       </DialogActions>

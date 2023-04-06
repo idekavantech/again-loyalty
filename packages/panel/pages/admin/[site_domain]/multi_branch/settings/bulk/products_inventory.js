@@ -9,5 +9,5 @@ AdminCategoriesPage[BRANCHES_PLUGIN] = true;
 AdminCategoriesPage.ShouldBeAdmin = true;
 AdminCategoriesPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "تنظیم موجودی محصولات",
+  title: "Adjustment of products",
 };

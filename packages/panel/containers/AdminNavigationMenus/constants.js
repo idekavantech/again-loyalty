@@ -6,28 +6,28 @@ export const TOP_PAGE_HEADER_MENU = "TOP_PAGE_HEADER_MENU";
 export const defaultNavigationMenus = (urlPrefix) => ({
   [MAIN_HEADER_NAVIGATION_MENU]: {
     id: 1,
-    name: "منوی اصلی سایت (هدر)",
+    name: "The main menu of the site(Waste)",
     links: [
       {
         id: uniqueid(),
-        title: "خانه",
+        title: "Home",
         link: `${urlPrefix}/`,
       },
       {
         id: uniqueid(),
-        title: "سفارش آنلاین",
+        title: "online order",
         link: `${urlPrefix}/s`,
       },
     ],
   },
   [MAIN_FOOTER_NAVIGATION_MENU]: {
     id: 2,
-    name: "منوی فوتر",
+    name: "Footer menu",
     links: [],
   },
   [TOP_PAGE_HEADER_MENU]: {
     id: 3,
-    name: "منوی هدر بالای صفحه",
+    name: "The header menu above the screen",
     links: [],
   },
 });

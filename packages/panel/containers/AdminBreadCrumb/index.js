@@ -136,7 +136,7 @@ function AdminBreadCrumb({
           >
             <PlayCircleOutlineIcon style={{ color: "#222633b3" }} />
             <span className="mr-1" style={{ color: "#222633b3" }}>
-              {minWidth768 ? "ویدیو آموزشی" : "آموزش"}
+              {minWidth768 ? "educational video" : "Education"}
             </span>
           </Button>
         </>
@@ -175,7 +175,7 @@ function AdminBreadCrumb({
                 >
                   <PlayCircleOutlineIcon style={{ color: "#222633b3" }} />
                   <span className="mr-1" style={{ color: "#222633b3" }}>
-                    {minWidth768 ? "ویدیو آموزشی" : "آموزش"}
+                    {minWidth768 ? "educational video" : "Education"}
                   </span>
                 </Button>
               ) : null}
@@ -203,7 +203,7 @@ function AdminBreadCrumb({
                 style={{ color: "#222633b3" }}
               />
               <span className="mr-1" style={{ color: "#222633b3" }}>
-                {minWidth768 ? "ویدیو آموزشی" : "آموزش"}
+                {minWidth768 ? "educational video" : "Education"}
               </span>
             </Button>
           )}

@@ -16,11 +16,11 @@ function FailedPayment({ loading,  urlPrefix }) {
       <AdminBreadCrumb />
 
       <div className="u-fontLarge u-text-darkest-grey mt-4">
-        پرداخت شما ناموفق بود.
+        Your payment was unsuccessful.
       </div>
       <div className="u-fontMedium u-text-darkest-grey text-right mt-5 text-center ">
-        چنانچه مبلغی از حساب شما کسر شد، حداکثر تا ۷۲ ساعت به حساب شما بازگشت
-        داده خواهد شد.
+        If you have been deducted from your account, returned to your account for up to 2 hours
+        will be given.
       </div>
       <div className="col-12 col-sm-3 mx-auto c-wrapper-fixed-button u-mt-120-r">
         <Button
@@ -29,7 +29,7 @@ function FailedPayment({ loading,  urlPrefix }) {
           disabled={loading}
           onClick={() => history.replace(urlPrefix)}
         >
-          بازگشت به پنل مدیریت
+          Back to Management Panel
         </Button>
       </div>
     </main>

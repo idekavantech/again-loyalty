@@ -10,5 +10,5 @@ export default function AdminAnalyticsCostOfGoodsSold() {
 AdminAnalyticsCostOfGoodsSold.ShouldBeAdmin = true;
 AdminAnalyticsCostOfGoodsSold.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "گزارش هزینه‌ی محصولات فروخته شده",
+  title: "Report of cost -sold products",
 };

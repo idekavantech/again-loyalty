@@ -9,5 +9,5 @@ AdminCRMLabelPage[CRM_PLUGIN] = true;
 AdminCRMLabelPage.ShouldBeAdmin = true;
 AdminCRMLabelPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "برچسب‌ها",
+  title: "Labels",
 };

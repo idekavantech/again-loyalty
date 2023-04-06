@@ -39,7 +39,7 @@ const FieldCategorySelect = ({ setValue, categories, label, value }) => {
         <Input
           {...params}
           size="medium"
-          label={label || "دسته‌بندی محصولات"}
+          label={label || "products categorization"}
           InputProps={{
             ...params.InputProps,
             className: "pr-2 pl-5",

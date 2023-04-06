@@ -52,7 +52,7 @@ function RenderNewSectionsDrawer({
             zIndex: 1,
           }}
         >
-          <div style={{ fontWeight: "bold" }}>سکشن جدید</div>
+          <div style={{ fontWeight: "bold" }}>New sequel</div>
           <div className="d-flex flex-row-reverse">
             <Button
               style={{
@@ -64,7 +64,7 @@ function RenderNewSectionsDrawer({
               className="mr-2"
               onClick={saveNewSectionAdded}
             >
-              افزودن
+              Add
             </Button>
             <Button
               color="default"
@@ -81,7 +81,7 @@ function RenderNewSectionsDrawer({
                 }
               }}
             >
-              بستن
+              to close
             </Button>
           </div>
         </div>

@@ -49,7 +49,7 @@ function Verify({ _verify, isLoading, resend, themeColor, _sendViaPhone }) {
       _verify(phoneNumber, verificationCode, callback || "/login");
       setError(null);
     } else {
-      setError("لطفا کد تایید را به درستی وارد کنید.");
+      setError("Please enter the confirmation code correctly..");
     }
   };
   useEffect(() => {
@@ -72,15 +72,15 @@ function Verify({ _verify, isLoading, resend, themeColor, _sendViaPhone }) {
             <Icon icon={VERIFY} width={64} height={53} color={themeColor} />
           </div>
           <div className="mt-3 u-fontMedium">
-            کد تایید ارسال شده را وارد کنید
+            Enter the confirmation code sent
           </div>
           <div className="mt-3 u-u-fontNormal u-text-dark-grey">
-            کد تایید چهار رقمی به شماره <span>{phoneNumber}</span> ارسال شد
+            Four -digit confirmation code to number<span>{phoneNumber}</span> Sent
           </div>
           <div className="mt-5 position-relative">
             <Input
               type="tel"
-              label="کد تایید"
+              label="Verification code"
               dir="ltr"
               id="verificationCode"
               themeColor={themeColor}
@@ -104,14 +104,14 @@ function Verify({ _verify, isLoading, resend, themeColor, _sendViaPhone }) {
 
           <div className="d-flex flex-column mt-4">
             <div className="u-text-dark-grey u-font-semi-small">
-              کدی دریافت نکردید؟
+              Didn't get code?
             </div>
             <div className="mt-1 d-flex align-items-center justify-content-center">
               <Button
                 color="secondary"
                 onClick={() => resend(phoneNumber, callback)}
               >
-                پیامک مجدد کد
+                Code SMS
               </Button>
               <span style={{ color: themeColor }} className="mx-2">
                 |
@@ -120,7 +120,7 @@ function Verify({ _verify, isLoading, resend, themeColor, _sendViaPhone }) {
                 color="secondary"
                 onClick={() => _sendViaPhone(phoneNumber)}
               >
-                ارسال کد با تماس
+                Send code by call
               </Button>
             </div>
             <Button
@@ -130,9 +130,9 @@ function Verify({ _verify, isLoading, resend, themeColor, _sendViaPhone }) {
               noShadow
               onKeyDown={(e) => handleKeyDown(e, () => router.back())}
             >
-              <span className="u-fontNormal">تصحیح شماره موبایل</span>
+              <span className="u-fontNormal">Correction of the mobile number</span>
             </Button>
-            {/* <div className="mt-1" onClick={correctEnteredPhoneNumber}><a className="u-fontNormal u-text-primary-light-blue">تصصیح شماره موبایل</a></div> */}
+            {/* <div className="mt-1" onClick={correctEnteredPhoneNumber}><a className="u-fontNormal u-text-primary-light-blue">Correction of the mobile number</a></div> */}
           </div>
         </div>
         <Paper className="sticky-bottom p-3 d-flex">
@@ -142,7 +142,7 @@ function Verify({ _verify, isLoading, resend, themeColor, _sendViaPhone }) {
             style={{ flex: "1", height: 48 }}
             className="ml-2"
           >
-            بازگشت
+            coming back
           </Button>
           <Button
             id="SubmitVerificationCode"
@@ -152,7 +152,7 @@ function Verify({ _verify, isLoading, resend, themeColor, _sendViaPhone }) {
             variant="contained"
             onClick={() => submit(phoneNumber, verificationCode)}
           >
-            تایید
+            Confirm
           </Button>
         </Paper>
       </div>

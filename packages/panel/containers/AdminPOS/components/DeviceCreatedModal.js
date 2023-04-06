@@ -34,8 +34,8 @@ export default function DeviceCreatedModal({
           onRightClick={onClose}
           title={
             branch
-              ? `لیسانس نرم‌افزاری جدید برای ${branch}`
-              : "لیسانس نرم‌افزاری جدید"
+              ? `New software bachelor's degree for${branch}`
+              : "New Software Bachelor"
           }
         />
       }
@@ -56,14 +56,14 @@ export default function DeviceCreatedModal({
               />
               <div className="col-12 col-lg-6 mt-4 mt-lg-0 d-flex flex-column justify-content-end">
                 <div className="u-fontExteraLarge u-fontWeightBold">
-                  دستگاه ساخته شد.
+                  The device was built.
                 </div>
                 <div
                   color="text.disabled"
                   style={{ color: theme.palette.text.disabled }}
                   className="u-fontExteraLarge u-fontWeightBold"
                 >
-                  با کد دستگاه وارد شوید.
+                  Sign in with device code..
                 </div>
               </div>
             </div>
@@ -75,11 +75,11 @@ export default function DeviceCreatedModal({
                     width={50}
                     className="u-border-radius-8"
                     src={`/images/${process.env.NEXT_PUBLIC_APP_NAME}-LOGO.svg`}
-                    alt="درآمد"
+                    alt="Income"
                   />
                   <div className="mr-2 py-1">
                     <div className="u-fontWeightBold">
-                      ۱. نرم افزار دسکتاپ را نصب کنید
+                      ۱. Install desktop software
                     </div>
                   </div>
                 </div>
@@ -102,9 +102,9 @@ export default function DeviceCreatedModal({
                     <LockOpenRoundedIcon fontSize="large" />
                   </div>
                   <div className="mr-2 py-1">
-                    <div className="u-fontWeightBold">۲. وارد شوید</div>
+                    <div className="u-fontWeightBold">۲. enter</div>
                     <div>
-                      از این کد برای وارد شدن به نرم افزار استفاده کنید.
+                      Use this code to log in to the software.
                     </div>
                   </div>
                 </div>
@@ -117,9 +117,9 @@ export default function DeviceCreatedModal({
                   <div className="flex-1">{licenceCode.toUpperCase()}</div>
                   <CopyToClipboard
                     text={licenceCode.toUpperCase()}
-                    onCopy={() => _setSnackBarMessage("کپی شد.", "default")}
+                    onCopy={() => _setSnackBarMessage("Copied.", "default")}
                   >
-                    <Button color="primary">کپی کردن</Button>
+                    <Button color="primary">Copy</Button>
                   </CopyToClipboard>
                 </div>
               </div>

@@ -9,5 +9,5 @@ AdminShoppingCategoryPage[BRANCHES_PLUGIN] = true;
 AdminShoppingCategoryPage.ShouldBeAdmin = true;
 AdminShoppingCategoryPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "جزئیات برچسب",
+  title: "Details of the label",
 };

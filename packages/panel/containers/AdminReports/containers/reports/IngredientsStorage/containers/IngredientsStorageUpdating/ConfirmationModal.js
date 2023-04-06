@@ -17,7 +17,7 @@ function AddDescriptionModal({ isOpen, onClose, submit, isLoading }) {
       <DialogContent className="p-4 w-100">
         <div className="d-flex justify-content-between align-items-center">
           <div style={{ color: night }} className="u-fontLarge">
-            آپدیت موجودی انبار
+            Warehouse Inventory Update
           </div>
           <div>
             <IconButton
@@ -30,7 +30,7 @@ function AddDescriptionModal({ isOpen, onClose, submit, isLoading }) {
           </div>
         </div>
         <div className="mt-4" style={{ color: night }}>
-          آیا از آپدیت موجودی انبار خود اطمینان دارید؟
+          Are you sure of your warehouse inventory update?
         </div>
       </DialogContent>
       <DialogActions
@@ -48,7 +48,7 @@ function AddDescriptionModal({ isOpen, onClose, submit, isLoading }) {
           size="large"
           disabled={isLoading}
         >
-          تایید
+          Confirm
         </Button>
         <Button
           onClick={onClose}
@@ -57,7 +57,7 @@ function AddDescriptionModal({ isOpen, onClose, submit, isLoading }) {
           className="mr-2 ml-0 u-box-shadow-none u-fontMedium"
           size="large"
         >
-          انصراف
+          Candifying
         </Button>
       </DialogActions>
     </Dialog>

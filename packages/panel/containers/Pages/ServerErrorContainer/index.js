@@ -40,7 +40,7 @@ const ServerErrorResponse = ({ urlPrefix, business }) => {
           width: "90%",
         }}
       >
-        به نظر میاد مشکل از سمت ماست.
+        It looks like the problem is from our side.
       </h1>
       <h2
         className="font-bold mt-4"
@@ -60,9 +60,9 @@ const ServerErrorResponse = ({ urlPrefix, business }) => {
         }}
         className="text-center"
       >
-        این مشکل به گوش بچه‌های تیم فنیمون میرسه اما اگر دوست دارید میتونین
-        باهامون تماس بگیرید و کمکمون کنین این مسئله رو دقیق و سریع‌تر براتون حل
-        کنیم.
+        This problem comes to the tech team's kids but if you like you can
+        Call us and help us solve this problem faster and faster
+        do.
       </p>
       <div
         className={`d-flex flex-wrap align-items-center justify-content-around mt-4  ${
@@ -84,7 +84,7 @@ const ServerErrorResponse = ({ urlPrefix, business }) => {
             callPhoneNumber(business.phone_zero_starts);
           }}
         >
-          تماس با ما
+          contact us
         </Button>
 
         <Button
@@ -98,7 +98,7 @@ const ServerErrorResponse = ({ urlPrefix, business }) => {
           color="secondary"
           onClick={() => router.push(`${urlPrefix}/`)}
         >
-          صفحه اصلی سایت
+          The homepage of the site
         </Button>
       </div>
     </div>

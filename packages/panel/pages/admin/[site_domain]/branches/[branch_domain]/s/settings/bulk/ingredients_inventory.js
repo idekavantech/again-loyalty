@@ -18,5 +18,5 @@ BulkSuperIngredientPage[INCLUDED_WEBAPPS_ONLY_KEY] = [
 BulkSuperIngredientPage.ShouldBeAdmin = true;
 BulkSuperIngredientPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "تنظیم موجودی مواد اولیه",
+  title: "Regulating the inventory of raw materials",
 };

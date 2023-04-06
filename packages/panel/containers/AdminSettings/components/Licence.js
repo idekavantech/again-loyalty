@@ -19,7 +19,7 @@ function Licence({
     <Paper elevation={1} className="d-flex mt-3 py-3 flex-wrap">
       <div className="d-flex col-12">
         <span className="u-fontLarge" style={{ color: night }}>
-          مجوزهای کسب‌وکار
+          Business permits
         </span>
         <Switch
           onColor={theme.palette.primary.main}
@@ -30,9 +30,9 @@ function Licence({
         />
       </div>
       <p className="mt-3 col-12">
-        می توانید در صورتی که تمایل دارید اطلاعات مجوزهای کسب‌وکار اینترنتی خود
-        از جمله اینماد،ساماندهی و اتحادیه کسب و کارهای مجازی را در این قسمت وارد
-        کنید. در ادامه می‌توانید در ویرایش صفحات سایت خود آن‌ها را نمایش دهید.
+        Can if you would like your Internet business permits information
+        Including Inmad, the organization and the union of virtual businesses are imported here
+        do. Below you can show them in editing your site pages.
       </p>
       {showLicence ? (
         <>
@@ -40,11 +40,11 @@ function Licence({
           <div className="d-flex flex-wrap w-100 mt-5">
             <div className="col-12 col-lg-6 mb-3">
               <div className="u-fontLarge" style={{ color: night }}>
-                اینماد
+                Inm
               </div>
               <Input
                 className="mt-3"
-                label="اینماد"
+                label="Inm"
                 value={Enamad}
                 onChange={changeEnamad}
                 multiline
@@ -53,11 +53,11 @@ function Licence({
             </div>
             <div className="col-12 col-lg-6 mb-3">
               <div className="u-fontLarge" style={{ color: night }}>
-                ساماندهی
+                Organizing
               </div>
               <Input
                 className="mt-3"
-                label="ساماندهی"
+                label="Organizing"
                 value={samandehi}
                 onChange={changeSamandehi}
                 multiline
@@ -68,11 +68,11 @@ function Licence({
           <div className="d-flex flex-wrap w-100">
             <div className="col-12 col-lg-6 mb-3">
               <div className="u-fontLarge" style={{ color: night }}>
-                اتحادیه کسب‌وکارهای مجازی
+                Virtual Business Union
               </div>
               <Input
                 className="mt-3"
-                label="اتحادیه کسب‌و‌کارهای مجازی"
+                label="Virtual Business Union"
                 value={virtualBusinessAssociation}
                 onChange={changeVirtualBusinessAssociation}
                 multiline

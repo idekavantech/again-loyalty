@@ -62,9 +62,9 @@ function UserSideLayout({ children, business, PWAPlugin }) {
         window.deferredPrompt = e;
         window.deferredPrompt.userChoice.then((choiceResult) => {
           if (choiceResult.outcome === "accepted") {
-            // _setSnackBarMessage('اپلیکیشن با موفقیت نصب شد.', 'success');
+            // _setSnackBarMessage('The app was successfully installed.', 'success');
           } else {
-            // _setSnackBarMessage('اپلیکیشن با موفقیت نصب شد.', 'success');
+            // _setSnackBarMessage('The app was successfully installed.', 'success');
           }
           window.deferredPrompt = null;
         });

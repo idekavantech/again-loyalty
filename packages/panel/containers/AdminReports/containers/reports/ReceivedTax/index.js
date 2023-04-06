@@ -54,25 +54,25 @@ jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
 const branchHeadCells = [
   {
     id: "id",
-    label: "ردیف",
-    name: "ردیف",
+    label: "Row",
+    name: "Row",
     align: "center",
     minWidth: 100,
   },
   {
     id: "id",
-    label: "تعداد فاکتور",
-    name: "تعداد فاکتور",
+    label: "Factor number",
+    name: "Factor number",
     align: "center",
     minWidth: 100,
   },
   {
     id: "id",
-    name: "فروش کل",
+    name: "total sales",
     label: (
       <div className="d-flex justify-content-between flex-column">
-        <div>فروش کل</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>total sales</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
@@ -80,11 +80,11 @@ const branchHeadCells = [
   },
   {
     id: "id",
-    name: "مالیات دریافتی",
+    name: "Tax received",
     label: (
       <div className="d-flex justify-content-between flex-column">
-        <div>مالیات دریافتی</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>Tax received</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
@@ -95,8 +95,8 @@ const branchHeadCells = [
 let timeoutId = null;
 
 const sortingOptions = [
-  { id: 1, text: "بیشترین مالیات", keyword: HIGHEST_TAX },
-  { id: 2, text: "کمترین مالیات", keyword: LOWEST_TAX },
+  { id: 1, text: "Most tax", keyword: HIGHEST_TAX },
+  { id: 2, text: "The lowest taxes", keyword: LOWEST_TAX },
 ];
 const sortingFunctions = {
   [HIGHEST_TAX]: (purchases) =>
@@ -177,8 +177,8 @@ export function AdminReceivedTaxReport({
       const mainBranchHeadCells = [...branchHeadCells];
       mainBranchHeadCells.splice(1, 0, {
         id: "id",
-        label: "شعبه",
-        name: "شعبه",
+        label: "Branch",
+        name: "Branch",
         align: "center",
       });
       return mainBranchHeadCells;
@@ -241,7 +241,7 @@ export function AdminReceivedTaxReport({
   const summaryRow = useMemo(
     () =>
       customersTaxingReports && [
-        "جمع کل",
+        "total",
         "",
         customersTaxingReports?.totals?.[0].total_num_orders,
         customersTaxingReports?.totals?.[0].total_payments,
@@ -253,17 +253,17 @@ export function AdminReceivedTaxReport({
   return (
     <div className="container">
       <Head>
-        <title>گزارش مالیات‌ها براساس شعب</title>
+        <title>Tax report based on branches</title>
       </Head>
 
       <AdminBreadCrumb
-        submitButtonText="خروجی گرفتن"
+        submitButtonText="Output"
         submitAction={() =>
           generateCSVFile(
             headRow,
             rows || [],
             summaryRow || [],
-            "گزارش مالیات‌ها براساس شعب"
+            "Tax report based on branches"
           )
         }
       />
@@ -284,13 +284,13 @@ export function AdminReceivedTaxReport({
                 onClick={handleOpen}
                 variant="outlined"
               >
-                از{" "}
+                From{" "}
                 <span className="px-2">
                   {englishNumberToPersianNumber(
                     formatDateObjectToNormal(selectedDayRange.from)
                   )}
                 </span>
-                تا{" "}
+                until the{" "}
                 <span className="px-2">
                   {englishNumberToPersianNumber(
                     formatDateObjectToNormal(selectedDayRange.to)
@@ -343,16 +343,16 @@ export function AdminReceivedTaxReport({
                 size="large"
                 // IconComponent={() => null}
                 renderValue={() => {
-                  if (selectedBranches.length === 0) return "شعبه انتخاب کنید";
+                  if (selectedBranches.length === 0) return "Choose a branch";
                   if (selectedBranches.length === 1 && selectedBranches[0])
                     return branches.find(
                       (branch) => branch.id === selectedBranches[0]
                     ).title;
                   if (selectedBranches.length === branches.length)
-                    return "همه شعب";
+                    return "All branches";
                   return `${englishNumberToPersianNumber(
                     selectedBranches.length
-                  )} شعبه `;
+                  )} Branch`;
                 }}
                 MenuProps={{
                   getContentAnchorEl: null,
@@ -387,7 +387,7 @@ export function AdminReceivedTaxReport({
                     checked={selectedBranches.length === branches.length}
                   />
                   <ListItemText
-                    primary="انتخاب همه شعب"
+                    primary="Choosing all branches"
                     className="text-right"
                   />
                 </MenuItem>
@@ -451,7 +451,7 @@ export function AdminReceivedTaxReport({
                 style={{ width: 200 }}
                 className="px-3 u-fontWeightBold u-fontNormal my-1"
               >
-                مرتب‌سازی بر اساس
+                order by
               </div>
             }
             selectOption={(text) =>
@@ -460,7 +460,7 @@ export function AdminReceivedTaxReport({
               )
             }
             inputData={{
-              defaultValue: "مرتب‌سازی",
+              defaultValue: "Ordering",
             }}
             selected={sortingOptions.find(
               (i) => i.keyword === selectedSortingType
@@ -495,7 +495,7 @@ export function AdminReceivedTaxReport({
                 }}
                 className="ml-2 mb-2"
                 onDelete={() => setSelectedBranches([])}
-                label="همه شعب"
+                label="All branches"
               />
             ) : selectedBranches?.length ? (
               branches
@@ -540,13 +540,13 @@ export function AdminReceivedTaxReport({
                 onDelete={() =>
                   setSelectedBranches(branches.map((branch) => branch.id))
                 }
-                label="هیچ‌کدام از شعب"
+                label="None of the branches"
               />
             )}
           </div>
         )}
         {!selectedBranches?.length && isSuper ? (
-          <div className="mx-auto">هیچ شعبه‌ای انتخاب نشده است.</div>
+          <div className="mx-auto">No branch is selected.</div>
         ) : (
           <TableContainer
             className="mt-3 purchase-by-order-table"
@@ -634,7 +634,7 @@ export function AdminReceivedTaxReport({
                     }}
                   >
                     <TableCell align="center" style={{ border: "none" }}>
-                      جمع کل
+                      total
                     </TableCell>
                     {isSuper && (
                       <TableCell

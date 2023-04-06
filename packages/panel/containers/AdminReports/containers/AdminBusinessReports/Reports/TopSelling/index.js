@@ -40,7 +40,7 @@ jMoment.locale("fa");
 jMoment.loadPersian({dialect: "persian-modern", usePersianDigits: true});
 
 const $ = `/images/$.svg`;
-const columns = ["نام محصول", "تعداد فروش", "فروش از محصول", "شماره‌ی محصول"];
+const columns = ["Product Name", "Sales number", "Sale of product", "Product number"];
 
 export function AdminTopSellingReport({
                                           _getProductsTopSellingReport,
@@ -155,13 +155,13 @@ export function AdminTopSellingReport({
                         onClick={handleOpenModal}
                         variant="outlined"
                     >
-                        از{" "}
+                        From{" "}
                         <span className="px-2">
               {englishNumberToPersianNumber(
                   formatDateObjectToNormal(selectedDayRange.from)
               )}
             </span>
-                        تا{" "}
+                        until the{" "}
                         <span className="px-2">
               {englishNumberToPersianNumber(
                   formatDateObjectToNormal(selectedDayRange.to)
@@ -203,7 +203,7 @@ export function AdminTopSellingReport({
                     </Popover>
                 </div>
                 <div className="d-flex justify-content-center align-items-center mr-3">
-                    <div className="ml-1">نمایش تعداد محصول:</div>
+                    <div className="ml-1">Display Product Number:</div>
                     <div>
                         <FormControl style={{minWidth: 53}}>
                             <Select
@@ -248,7 +248,7 @@ export function AdminTopSellingReport({
                         link.click();
                     }}
                 >
-                    خروجی
+                    Output
                 </Button>
             </div>
 
@@ -320,7 +320,7 @@ export function AdminTopSellingReport({
                             style={{fontSize: 15, fontWeight: 900}}
                             className="mx-auto text-bold text-center font-weight-bold w-100 mt-3"
                         >
-                            در این بازه‌ی زمانی محصولی وجود ندارد
+                            There is no product in this time interval
                         </div>
                     </>
                 )}

@@ -21,12 +21,12 @@ import { useResponsive } from "@saas/utils/hooks/useResponsive";
 function PaymentFailure({ retry,  transaction, urlPrefix }) {
   const router = useRouter();
   const error = [
-    "متاسفانه خطایی در ثبت سفارش رخ داد.",
-    "نهایی سازی سفارش توسط شما لغو شد.",
+    "Unfortunately an error occurred in order registration.",
+    "Finalization of the order was canceled by you.",
   ];
   const message = [
-    "چنانچه مبلغی از حساب شما کسر شده باشد ظرف ۷۲ ساعت به حسابتان بازگشت داده می‌شود.",
-    "افزودن کالا به سبد خرید به معنای رزرو کالا نبوده و\n طی کردن روند پرداخت برای ثبت نهایی سفارش ضروری است",
+    "If you have been deducted from your account, your account will be returned within 4 hours.",
+    "Adding goods to the shopping cart does not mean booking goods and\n Paying process is required for final order registration",
   ];
   const theme = useTheme();
   const {minWidth768} = useResponsive()
@@ -92,7 +92,7 @@ function PaymentFailure({ retry,  transaction, urlPrefix }) {
                 retry(transaction.order_id, { plugin: transaction.plugin })
               }
             >
-              تلاش مجدد پرداخت
+              Re -pay attempt
             </Button>
             <div
               className="d-flex align-items-center justify-content-between mb-4"
@@ -115,7 +115,7 @@ function PaymentFailure({ retry,  transaction, urlPrefix }) {
                   className="px-2"
                   onClick={() => router.push(`${urlPrefix}/checkout/cart`)}
                 >
-                  ویرایش اقلام سبد خرید
+                  Edit the cart item
                 </Button>
               </div>
               <div
@@ -140,7 +140,7 @@ function PaymentFailure({ retry,  transaction, urlPrefix }) {
                   color="secondary"
                   onClick={() => router.push(`${urlPrefix}/s`)}
                 >
-                  صفحه محصولات
+                  Product Page
                 </Button>
               </div>
             </div>

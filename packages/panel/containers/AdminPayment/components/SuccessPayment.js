@@ -20,10 +20,10 @@ function SuccessPayment({ urlPrefix }) {
       <div className="d-flex justify-content-between flex-col h-80-vh">
         <div className="d-flex flex-col flex-1 justify-content-center">
           <div className="u-fontLarge u-text-primary-green mb-3 text-center">
-            تبریک
+            congratulations
           </div>
           <div className="u-fontLarge u-text-primary-green mb-3 text-center">
-            پرداخت شما موفقیت آمیز بود.
+            Your payment was successful.
           </div>
         </div>
         <div className="col-12 col-sm-3 mx-auto c-wrapper-fixed-button u-mt-120-r">
@@ -32,7 +32,7 @@ function SuccessPayment({ urlPrefix }) {
             variant="contained"
             onClick={() => router.push(urlPrefix)}
           >
-            بازگشت به پنل مدیریت
+            Back to Management Panel
           </Button>
         </div>
       </div>

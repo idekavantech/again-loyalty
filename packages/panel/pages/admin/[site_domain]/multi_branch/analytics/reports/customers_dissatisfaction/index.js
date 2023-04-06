@@ -13,5 +13,5 @@ export default function AdminAnalyticsCustomersDissatisfaction() {
 AdminAnalyticsCustomersDissatisfaction.ShouldBeAdmin = true;
 AdminAnalyticsCustomersDissatisfaction.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "تحلیل نارضایتی مشتریان",
+  title: "Customer dissatisfaction analysis",
 };

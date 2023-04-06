@@ -53,26 +53,26 @@ jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
 const branchHeadCells = [
   {
     id: "id",
-    name: "ردیف",
-    label: "ردیف",
+    name: "Row",
+    label: "Row",
     align: "center",
   },
   {
     id: "id",
-    name: "نام محصول",
-    label: "نام محصول",
+    name: "Product Name",
+    label: "Product Name",
     align: "center",
   },
   {
     id: "id",
-    name: "زمان دقیق",
-    label: "زمان دقیق",
+    name: "exact time",
+    label: "exact time",
     align: "center",
   },
   {
     id: "id",
-    name: "فعال یا غیرفعال شدن",
-    label: "فعال یا غیرفعال شدن",
+    name: "Activate or disable",
+    label: "Activate or disable",
     align: "center",
   },
 ];
@@ -197,8 +197,8 @@ export function AdminComprehensiveSalesReportReport({
       const mainBranchHeadCells = [...branchHeadCells];
       mainBranchHeadCells.splice(1, 0, {
         id: "id",
-        label: "شعبه",
-        name: "شعبه",
+        label: "Branch",
+        name: "Branch",
         align: "center",
       });
       return mainBranchHeadCells;
@@ -220,7 +220,7 @@ export function AdminComprehensiveSalesReportReport({
       })?.title;
       const productName = product?.object_title;
       const date = product.created_at;
-      const state = product?.new_state?.avaiable ? "فعال شد" : "غیر فعال شد";
+      const state = product?.new_state?.avaiable ? "Activated" : "Disabled";
       if (isSuper) {
         return [num, brancheName, productName, date, state];
       }
@@ -231,19 +231,19 @@ export function AdminComprehensiveSalesReportReport({
   return (
     <div className="container">
       <Head>
-        <title>گزارش غیر فعال کردن محصولات</title>
+        <title>Report to Disable Products</title>
       </Head>
 
       <AdminBreadCrumb
-        submitButtonText="خروجی گرفتن"
+        submitButtonText="Output"
         submitAction={() =>
           generateCSVFile(
             headRow,
             rows,
             [],
-            `گزارش غیر فعال کردن محصولات از ${formatDateObjectToNormal(
+            `Report to disable the products from${formatDateObjectToNormal(
               selectedDayRange.from
-            )} تا  ${formatDateObjectToNormal(selectedDayRange.to)}`
+            )} until the${formatDateObjectToNormal(selectedDayRange.to)}`
           )
         }
       />
@@ -259,13 +259,13 @@ export function AdminComprehensiveSalesReportReport({
                 onClick={handleOpen}
                 variant="outlined"
               >
-                از{" "}
+                From{" "}
                 <span className="px-2">
                   {englishNumberToPersianNumber(
                     formatDateObjectToNormal(selectedDayRange.from)
                   )}
                 </span>
-                تا{" "}
+                until the{" "}
                 <span className="px-2">
                   {englishNumberToPersianNumber(
                     formatDateObjectToNormal(selectedDayRange.to)
@@ -318,16 +318,16 @@ export function AdminComprehensiveSalesReportReport({
                 size="large"
                 // IconComponent={() => null}
                 renderValue={() => {
-                  if (selectedBranches.length === 0) return "شعبه انتخاب کنید";
+                  if (selectedBranches.length === 0) return "Choose a branch";
                   if (selectedBranches.length === 1 && selectedBranches[0])
                     return branches.find(
                       (branch) => branch.id === selectedBranches[0]
                     ).title;
                   if (selectedBranches.length === branches.length)
-                    return "همه شعب";
+                    return "All branches";
                   return `${englishNumberToPersianNumber(
                     selectedBranches.length
-                  )} شعبه `;
+                  )} Branch`;
                 }}
                 MenuProps={{
                   getContentAnchorEl: null,
@@ -362,7 +362,7 @@ export function AdminComprehensiveSalesReportReport({
                     checked={selectedBranches.length === branches.length}
                   />
                   <ListItemText
-                    primary="انتخاب همه شعب"
+                    primary="Choosing all branches"
                     className="text-right"
                   />
                 </MenuItem>
@@ -424,7 +424,7 @@ export function AdminComprehensiveSalesReportReport({
                 }}
                 className="ml-2 mb-2"
                 onDelete={() => setSelectedBranches([])}
-                label="همه شعب"
+                label="All branches"
               />
             ) : selectedBranches?.length ? (
               branches
@@ -469,7 +469,7 @@ export function AdminComprehensiveSalesReportReport({
                 onDelete={() =>
                   setSelectedBranches(branches.map((branch) => branch.id))
                 }
-                label="هیچ‌کدام از شعب"
+                label="None of the branches"
               />
             )}
           </div>
@@ -568,12 +568,12 @@ export function AdminComprehensiveSalesReportReport({
                         {productDeactivationData?.new_state?.avaiable ? (
                           <>
                             <DoneIcon style={{ fill: "green" }} />
-                            فعال شد
+                            Activated
                           </>
                         ) : (
                           <>
                             <CloseIcon style={{ fill: "red" }} />
-                            غیرفعال شد
+                            Disabled
                           </>
                         )}
                       </TableCell>

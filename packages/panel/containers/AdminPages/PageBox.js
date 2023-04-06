@@ -86,8 +86,8 @@ const PageBox = ({
                     ))
                   ) : (
                     <TableNoResultMessage
-                      title={`${pageRowProps.entityPersianCopyRight} یافت نشد! `}
-                      description={`برای ساختن ${pageRowProps.entityPersianCopyRight} از دکمه ${pageRowProps.entityPersianCopyRight} جدید استفاده کنید`}
+                      title={`${pageRowProps.entityPersianCopyRight} not found! `}
+                      description={`for making${pageRowProps.entityPersianCopyRight} From the button${pageRowProps.entityPersianCopyRight} Use new`}
                     />
                   )}
                 </TableBody>

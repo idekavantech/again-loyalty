@@ -12,5 +12,5 @@ AdminPageBuilder.getInitialProps = async ({ isServer }) => {
 const Wrapper = ({ children }) => <div>{children}</div>;
 AdminPageBuilder.Wrapper = Wrapper;
 export const breadcrumb = {
-  title: "ویرایش صفحه",
+  title: "Edit page",
 };

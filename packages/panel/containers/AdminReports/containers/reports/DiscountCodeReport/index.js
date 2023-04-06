@@ -58,10 +58,10 @@ jMoment.locale("fa");
 jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
 
 const sortingOptions = [
-  { id: 0, text: "بیشترین مبلغ تخفیف", keyword: HIGHEST_DISCOUNTS },
-  { id: 1, text: "کمترین مبلغ تخفیف", keyword: LOWSET_DISCOUNTS },
-  { id: 2, text: "بیشترین مبلغ سفارش", keyword: HIGHEST_PAYMENT_COUNT },
-  { id: 3, text: "کمترین مبلغ سفارش", keyword: LOWSET_PAYMENT_COUNT },
+  { id: 0, text: "The highest amount of discount", keyword: HIGHEST_DISCOUNTS },
+  { id: 1, text: "The least amount of discount", keyword: LOWSET_DISCOUNTS },
+  { id: 2, text: "The highest amount of order", keyword: HIGHEST_PAYMENT_COUNT },
+  { id: 3, text: "The least amount of order", keyword: LOWSET_PAYMENT_COUNT },
 ];
 
 const sortingFunctions = {
@@ -86,34 +86,34 @@ const sortingFunctions = {
 const branchHeadCells = [
   {
     id: "id",
-    name: "ردیف",
-    label: "ردیف",
+    name: "Row",
+    label: "Row",
     align: "center",
   },
   {
     id: "id",
-    name: "کدتخفیف",
-    label: "کدتخفیف",
+    name: "discount code",
+    label: "discount code",
     align: "center",
   },
   {
     id: "id",
-    name: "مبلغ سفارش",
+    name: "The amount of the order",
     label: (
       <div className="d-flex flex-column">
-        <div>مبلغ سفارش</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>The amount of the order</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
   },
   {
     id: "id",
-    name: "مبلغ تخفیف",
+    name: "The amount of discount",
     label: (
       <div className="d-flex flex-column">
-        <div>مبلغ تخفیف</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>The amount of discount</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
@@ -122,8 +122,8 @@ const branchHeadCells = [
   //   id: "id",
   //   label: (
   //     <div className="d-flex flex-column">
-  //       <div>مبلغ نهایی خرید</div>
-  //       <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+  //       <div>The final amount of purchase</div>
+  //       <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
   //     </div>
   //   ),
   //   align: "center",
@@ -231,8 +231,8 @@ export function AdminDiscountCodeReport({
       const mainBranchHeadCells = [...branchHeadCells];
       mainBranchHeadCells.splice(1, 0, {
         id: "id",
-        label: "شعبه",
-        name: "شعبه",
+        label: "Branch",
+        name: "Branch",
         align: "center",
       });
       return mainBranchHeadCells;
@@ -315,7 +315,7 @@ export function AdminDiscountCodeReport({
             const num = index + 1;
             const branchName = report?.business_title;
             const discountCode =
-              i === 0 ? "همه کدهای تخفیف" : code?.discount_code_name;
+              i === 0 ? "All discount codes" : code?.discount_code_name;
             const orderPrice =
               i == 0 ? report?.total_payments : code?.total_payments;
             const discountAmount =
@@ -341,14 +341,14 @@ export function AdminDiscountCodeReport({
     () =>
       discountCodeReports && isSuper
         ? [
-            "جمع کل",
+            "total",
             "",
             "",
             discountCodeReports?.totals?.[0]?.total_payments,
             discountCodeReports?.totals?.[0]?.total_discounts_given,
           ]
         : [
-            "جمع کل",
+            "total",
             "",
             discountCodeReports?.totals?.[0]?.total_payments,
             discountCodeReports?.totals?.[0]?.total_discounts_given,
@@ -358,19 +358,19 @@ export function AdminDiscountCodeReport({
   return (
     <div className="container">
       <Head>
-        <title>گزارش کدهای تخفیف</title>
+        <title>Report discount codes</title>
       </Head>
 
       <AdminBreadCrumb
-        submitButtonText="خروجی گرفتن"
+        submitButtonText="Output"
         submitAction={() =>
           generateCSVFile(
             headRow,
             rows,
             summaryRow,
-            `گزارش کدهای تخفیف از ${formatDateObjectToNormal(
+            `Report discount codes of${formatDateObjectToNormal(
               selectedDayRange.from
-            )} تا  ${formatDateObjectToNormal(selectedDayRange.to)}`
+            )} until the${formatDateObjectToNormal(selectedDayRange.to)}`
           )
         }
       />
@@ -400,13 +400,13 @@ export function AdminDiscountCodeReport({
                 onClick={handleOpen}
                 variant="outlined"
               >
-                از{" "}
+                From{" "}
                 <span className="px-2">
                   {englishNumberToPersianNumber(
                     formatDateObjectToNormal(selectedDayRange.from)
                   )}
                 </span>
-                تا{" "}
+                until the{" "}
                 <span className="px-2">
                   {englishNumberToPersianNumber(
                     formatDateObjectToNormal(selectedDayRange.to)
@@ -458,16 +458,16 @@ export function AdminDiscountCodeReport({
                 displayEmpty
                 size="large"
                 renderValue={() => {
-                  if (selectedBranches.length === 0) return "شعبه انتخاب کنید";
+                  if (selectedBranches.length === 0) return "Choose a branch";
                   if (selectedBranches.length === 1 && selectedBranches[0])
                     return branches.find(
                       (branch) => branch.id === selectedBranches[0]
                     ).title;
                   if (selectedBranches.length === branches.length)
-                    return "همه شعب";
+                    return "All branches";
                   return `${englishNumberToPersianNumber(
                     selectedBranches.length
-                  )} شعبه `;
+                  )} Branch`;
                 }}
                 MenuProps={{
                   getContentAnchorEl: null,
@@ -502,7 +502,7 @@ export function AdminDiscountCodeReport({
                     checked={selectedBranches.length === branches.length}
                   />
                   <ListItemText
-                    primary="انتخاب همه شعب"
+                    primary="Choosing all branches"
                     className="text-right"
                   />
                 </MenuItem>
@@ -557,7 +557,7 @@ export function AdminDiscountCodeReport({
               size="large"
               renderValue={() => {
                 if (selectedSalesChannel.length === 0)
-                  return "کانال فروش انتخاب کنید";
+                  return "Select the sales channel";
                 if (
                   selectedSalesChannel.length === 1 &&
                   selectedSalesChannel[0]
@@ -566,10 +566,10 @@ export function AdminDiscountCodeReport({
                     (saleChannel) => saleChannel.id === selectedSalesChannel[0]
                   ).title;
                 if (selectedSalesChannel.length === salesChannelsOptions.length)
-                  return "همه کانال‌های فروش";
+                  return "All sales channels";
                 return `${englishNumberToPersianNumber(
                   selectedSalesChannel.length
-                )} کانال فروش `;
+                )} Sales Channel`;
               }}
               MenuProps={{
                 getContentAnchorEl: null,
@@ -612,7 +612,7 @@ export function AdminDiscountCodeReport({
                   }
                 />
                 <ListItemText
-                  primary="انتخاب همه کانال‌های فروش"
+                  primary="Select all sales channels"
                   className="text-right"
                 />
               </MenuItem>
@@ -677,7 +677,7 @@ export function AdminDiscountCodeReport({
                 style={{ width: 200 }}
                 className="px-3 u-fontWeightBold u-fontNormal my-1"
               >
-                مرتب‌سازی بر اساس
+                order by
               </div>
             }
             selectOption={(text) =>
@@ -686,7 +686,7 @@ export function AdminDiscountCodeReport({
               )
             }
             inputData={{
-              defaultValue: "مرتب‌سازی",
+              defaultValue: "Ordering",
             }}
             selected={sortingOptions.find(
               (i) => i.keyword === selectedSortingType
@@ -720,7 +720,7 @@ export function AdminDiscountCodeReport({
               }}
               className="ml-2 mb-2"
               onDelete={() => setSelectedSalesChannel([])}
-              label="همه کانال‌های فروش"
+              label="All sales channels"
             />
           ) : selectedSalesChannel?.length ? (
             salesChannelsOptions
@@ -769,7 +769,7 @@ export function AdminDiscountCodeReport({
                   salesChannelsOptions?.map((ingredient) => ingredient.id)
                 )
               }
-              label="هیچ‌کدام از کانال‌های فروش"
+              label="None of the sales channels"
             />
           )}
         </div>
@@ -858,7 +858,7 @@ export function AdminDiscountCodeReport({
                           }}
                           align="right"
                         >
-                          {i === 0 ? "همه کدهای تخفیف" : code?.discount_code}
+                          {i === 0 ? "All discount codes" : code?.discount_code}
                         </TableCell>
 
                         <TableCell align="center">
@@ -889,7 +889,7 @@ export function AdminDiscountCodeReport({
                   }}
                 >
                   <TableCell align="center" style={{ border: "none" }}>
-                    جمع کل
+                    total
                   </TableCell>
                   {isSuper && (
                     <TableCell

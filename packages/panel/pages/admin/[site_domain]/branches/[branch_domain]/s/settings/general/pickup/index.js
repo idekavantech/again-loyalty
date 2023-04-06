@@ -7,5 +7,5 @@ export default function AdminShoppingDeliveryPickupPage() {
 AdminShoppingDeliveryPickupPage.ShouldBeAdmin = true;
 AdminShoppingDeliveryPickupPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "تحویل حضوری (دریافت در محل)",
+  title: "In-person delivery(Receiving in place)",
 };

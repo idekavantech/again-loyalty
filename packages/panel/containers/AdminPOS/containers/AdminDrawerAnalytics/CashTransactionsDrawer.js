@@ -74,15 +74,15 @@ const CashTransactionsDrawer = ({
       <SendEmailModal
         open={emailModal}
         onClose={() => setEmailModal(false)}
-        title="ایمیل گزارش صندوق"
+        title="Email Report Fund"
         content={{
-          title: "گزارش صندوق",
+          title: "Fund report",
           body:
             '<table style="width: 100%; padding: 30px; background-color: #eeeeee; direction: rtl; font-size: 15px;">' +
             "<tbody>" +
             '<td style="font-family: system-ui,sans-serif;" align="center">' +
             '<div style="width: 400px; padding: 30px; background-color: white; text-align: right; border:1px solid #ccd4d7">' +
-            "<div>گزارش صندوق:</div>" +
+            "<div>Fund report:</div>" +
             `<div style="margin-top: 8px;">${englishNumberToPersianNumber(
               `${createdAt.jDate()} ${getMonthName(
                 createdAt.jMonth() + 1
@@ -94,33 +94,33 @@ const CashTransactionsDrawer = ({
               )} ${finishedAt.jYear()} - ${finishedAt.format("HH:mm")}`
             )}</div>` +
             "<div style='margin-top: 30px; height: 2px; background-color: rgb(87, 87, 87);'></div>" +
-            `<div style="margin-top: 30px; line-height:21px;color:#575757">مبلغ اولیه صندوق: ${priceFormatter(
+            `<div style="margin-top: 30px; line-height:21px;color:#575757">The initial amount of the fund: ${priceFormatter(
               initial_money
-            )} تومان</div>` +
-            `<div style="margin-top: 15px; line-height:21px;color:#575757">مجموع تراکنش‌های دریافت شده: ${priceFormatter(
+            )} Toman</div>` +
+            `<div style="margin-top: 15px; line-height:21px;color:#575757">The sum of the received transactions: ${priceFormatter(
               total_paid_in
-            )} تومان</div>` +
-            `<div style="margin-top: 15px; line-height:21px;color:#575757">مجموع تراکنش‌های پرداخت شده: ${priceFormatter(
+            )} Toman</div>` +
+            `<div style="margin-top: 15px; line-height:21px;color:#575757">The sum of paid transactions: ${priceFormatter(
               total_paid_out
-            )} تومان</div>` +
-            `<div style="margin-top: 15px; line-height:21px;color:#575757">فروش نقدی: ${priceFormatter(
+            )} Toman</div>` +
+            `<div style="margin-top: 15px; line-height:21px;color:#575757">Cash sales: ${priceFormatter(
               total_sales
-            )} تومان</div>` +
-            `<div style="margin-top: 15px; line-height:21px;color:#575757">عودت نقدی: ${priceFormatter(
+            )} Toman</div>` +
+            `<div style="margin-top: 15px; line-height:21px;color:#575757">Critical return: ${priceFormatter(
               total_refunds
-            )} تومان</div>` +
-            `<div style="margin-top: 15px; line-height:21px;color:#575757">مجموع تراکنش‌ها: ${priceFormatter(
+            )} Toman</div>` +
+            `<div style="margin-top: 15px; line-height:21px;color:#575757">Total transactions: ${priceFormatter(
               total_paid_in - total_paid_out
-            )} تومان</div>` +
-            `<div style="margin-top: 15px; line-height:21px;color:#575757">مبلغ مورد انتظار در صندوق: ${priceFormatter(
+            )} Toman</div>` +
+            `<div style="margin-top: 15px; line-height:21px;color:#575757">The expected amount in the box: ${priceFormatter(
               balance
-            )} تومان</div>` +
-            `<div style="margin-top: 15px; line-height:21px;color:#575757">مبلغ واقعی در صندوق: ${priceFormatter(
+            )} Toman</div>` +
+            `<div style="margin-top: 15px; line-height:21px;color:#575757">The actual amount in the box: ${priceFormatter(
               final_money
-            )} تومان</div>` +
-            `<div style="margin-top: 15px; line-height:21px;color:#575757; font-weight: bold;">اختلاف: ${priceFormatter(
+            )} Toman</div>` +
+            `<div style="margin-top: 15px; line-height:21px;color:#575757; font-weight: bold;">Disagreement: ${priceFormatter(
               diff
-            )} تومان</div>` +
+            )} Toman</div>` +
             "<div style='margin-top: 30px; height: 2px; background-color: rgb(87, 87, 87);'></div>" +
             "</div>" +
             "</td>" +
@@ -172,7 +172,7 @@ const CashTransactionsDrawer = ({
                 style={{ color: theme.palette.primary.main }}
                 className="text-right"
               >
-                ارسال ایمیل
+                send mail
               </ListItemText>
             </ListItem>
           </Paper>
@@ -188,7 +188,7 @@ const CashTransactionsDrawer = ({
             <CloseRoundedIcon fontSize="small" />
           </IconButton>
           <div className="u-fontLarge u-fontWeightBold">
-            گزارش صندوق
+            Fund report
             {description ? `: ${description}` : ""}
           </div>
           <IconButton
@@ -204,9 +204,9 @@ const CashTransactionsDrawer = ({
           <div className="p-2 flex-1">
             <Paper className="w-100 position-relative h-100 d-flex flex-column">
               <div className="px-3 py-5 flex-1">
-                <div className="u-fontWeightHeavy mb-2"> گزارش صندوق </div>
+                <div className="u-fontWeightHeavy mb-2"> Fund report</div>
                 <Divider />
-                <div className="mb-1 mt-2">شروع</div>
+                <div className="mb-1 mt-2">Start</div>
                 {opened_at ? (
                   <>
                     <div className="mb-1">
@@ -216,12 +216,12 @@ const CashTransactionsDrawer = ({
                         )} ${createdAt.jYear()} - ${createdAt.format("HH:mm")}`
                       )}
                     </div>
-                    <div className="mb-1"> توسط {initializer?.name}</div>
+                    <div className="mb-1"> By{initializer?.name}</div>
                   </>
                 ) : (
                   "-"
                 )}
-                <div className="mb-1 mt-5">پایان</div>
+                <div className="mb-1 mt-5">End</div>
                 {closed_at ? (
                   <>
                     <div className="mb-1">
@@ -233,29 +233,29 @@ const CashTransactionsDrawer = ({
                         )}`
                       )}
                     </div>
-                    <div className="mb-1"> توسط {finisher?.name}</div>
+                    <div className="mb-1"> By{finisher?.name}</div>
                   </>
                 ) : (
                   "-"
                 )}
-                <div className="mb-1 mt-5">بسته‌شده</div>
+                <div className="mb-1 mt-5">closed</div>
 
                 <div className="d-flex justify-content-between mt-5">
                   <div>
-                    <div>مبلغ مورد انتظار</div>
+                    <div>The expected amount</div>
                     {balance ? (
                       <div className="mt-1">
-                        {priceFormatter(balance)} تومان{" "}
+                        {priceFormatter(balance)} Toman{" "}
                       </div>
                     ) : (
                       <div className="mt-1">-</div>
                     )}
                   </div>
                   <div>
-                    <div>مبلغ واقعی در صندوق</div>
+                    <div>The actual amount in the box</div>
                     {final_money ? (
                       <div className="mt-1">
-                        {priceFormatter(final_money)} تومان{" "}
+                        {priceFormatter(final_money)} Toman{" "}
                       </div>
                     ) : (
                       <div className="mt-1">-</div>
@@ -263,60 +263,60 @@ const CashTransactionsDrawer = ({
                   </div>
                 </div>
                 <div className="mt-4 mb-5">
-                  <div>توضیحات</div>
+                  <div>Description</div>
                   <div className="mt-1">{description || ""}</div>
                 </div>
                 <div className="mt-5">
                   <Divider />
-                  <div className="u-fontWeightBold my-3">گزارش صندوق</div>
+                  <div className="u-fontWeightBold my-3">Fund report</div>
                   <Divider />
                   <div className="d-flex justify-content-between my-4">
-                    <div>مبلغ اولیه صندوق</div>
-                    <div>{priceFormatter(initial_money)} تومان</div>
+                    <div>The initial amount of the fund</div>
+                    <div>{priceFormatter(initial_money)} Toman</div>
                   </div>
                   <div className="d-flex justify-content-between my-4">
-                    <div>فروش نقدی</div>
-                    <div>{priceFormatter(total_sales)} تومان</div>
+                    <div>Cash sales</div>
+                    <div>{priceFormatter(total_sales)} Toman</div>
                   </div>
                   <div className="d-flex justify-content-between my-4">
-                    <div>عودت نقدی</div>
+                    <div>Critical return</div>
                     <div>
                       {priceFormatter(total_refunds)} {total_refunds ? "-" : ""}{" "}
-                      تومان
+                      Toman
                     </div>
                   </div>
                   <div className="d-flex justify-content-between my-4">
-                    <div>مجموع تراکنش‌های دریافت شده</div>
-                    <div>{priceFormatter(total_paid_in)} تومان</div>
+                    <div>The sum of the received transactions</div>
+                    <div>{priceFormatter(total_paid_in)} Toman</div>
                   </div>
                   <div className="d-flex justify-content-between my-4">
-                    <div>مجموع تراکنش‌های پرداخت شده</div>
+                    <div>The sum of paid transactions</div>
                     <div>
                       {priceFormatter(total_paid_out)}
-                      {total_paid_out ? "-" : ""} تومان
+                      {total_paid_out ? "-" : ""} Toman
                     </div>
                   </div>
                   <div className="d-flex justify-content-between my-4">
-                    <div>مجموع تراکنش‌ها</div>
+                    <div>Total transactions</div>
                     <div>
-                      {priceFormatter(total_paid_in - total_paid_out)} تومان{" "}
+                      {priceFormatter(total_paid_in - total_paid_out)} Toman{" "}
                     </div>
                   </div>
                   <div className="d-flex justify-content-between my-4">
-                    <div>مبلغ مورد انتظار در صندوق</div>
-                    <div>{priceFormatter(balance)} تومان</div>
+                    <div>The expected amount in the box</div>
+                    <div>{priceFormatter(balance)} Toman</div>
                   </div>
                   <div className="d-flex justify-content-between my-4">
-                    <div>اختلاف</div>
-                    <div>{priceFormatter(diff)} تومان</div>
+                    <div>Disagreement</div>
+                    <div>{priceFormatter(diff)} Toman</div>
                   </div>
                 </div>
                 <div className="mt-5">
                   <Divider />
-                  <div className="u-fontWeightBold my-3">تاریخچه</div>
+                  <div className="u-fontWeightBold my-3">History</div>
                   <Divider />
                   <div className="d-flex justify-content-between my-4">
-                    <div>شروع صندوق</div>
+                    <div>Starting the box</div>
                     <div className="mb-2">
                       {englishNumberToPersianNumber(
                         `${createdAt.jDate()} ${getMonthName(
@@ -329,8 +329,8 @@ const CashTransactionsDrawer = ({
                     <div key={transaction.id} className="d-flex justify-content-between my-4">
                       <div>
                         <div>
-                          {priceFormatter(Math.abs(transaction.amount))} تومان{" "}
-                          {transaction.amount > 0 ? "دریافت شده" : "پرداخت شده"}
+                          {priceFormatter(Math.abs(transaction.amount))} Toman{" "}
+                          {transaction.amount > 0 ? "received" : "Paid"}
                         </div>
                         <div className="mt-2">{transaction.description}</div>
                       </div>
@@ -357,7 +357,7 @@ const CashTransactionsDrawer = ({
         >
           <div>
             <Button color="default" className="close-btn" onClick={onClose}>
-              بستن
+              to close
             </Button>
           </div>
         </div>

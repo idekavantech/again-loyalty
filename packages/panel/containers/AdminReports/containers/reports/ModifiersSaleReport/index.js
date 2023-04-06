@@ -41,47 +41,47 @@ import Highcharts from "highcharts";
 import { useRouter } from "next/router";
 import { useResponsive } from "@saas/utils/hooks/useResponsive";
 const branches = [
-  { id: 1, title: "شعبه ۱" },
-  { id: 2, title: "شعبه ۲" },
-  { id: 3, title: "شعبه ۳" },
-  { id: 4, title: "شعبه ۴" },
+  { id: 1, title: "Branch 1" },
+  { id: 2, title: "Branch 1" },
+  { id: 3, title: "Branch 1" },
+  { id: 4, title: "Branch 1" },
 ];
 
 const sortOptions = [
-  { id: 0, text: "جدیدترین", keyword: "newest" },
-  { id: 1, text: "قدیمی‌ترین", keyword: "oldest" },
-  { id: 2, text: "بیشترین مقدار آیتم", keyword: "highest_item_amount" },
-  { id: 3, text: "کانال فروش", keyword: "salesChannel" },
+  { id: 0, text: "the newest", keyword: "newest" },
+  { id: 1, text: "The oldest", keyword: "oldest" },
+  { id: 2, text: "The highest amount of item", keyword: "highest_item_amount" },
+  { id: 3, text: "Sales Channel", keyword: "salesChannel" },
 ];
 
 const branchHeadCells = [
   {
     id: "id",
-    label: "ردیف",
+    label: "Row",
     align: "center",
   },
   {
     id: "id",
-    label: "افزودنی",
+    label: "Additive",
     align: "right",
     width: 180,
   },
   {
     id: "id",
-    label: "تعداد فروش",
+    label: "Sales number",
     align: "center",
   },
   {
     id: "id",
-    label: "تعداد بازگشت",
+    label: "The number of return",
     align: "center",
   },
   {
     id: "id",
     label: (
       <div className="d-flex flex-column">
-        <div>مبلغ بازگشت</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>The amount of return</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
@@ -90,8 +90,8 @@ const branchHeadCells = [
     id: "id",
     label: (
       <div className="d-flex flex-column">
-        <div>مالیات</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>Tax</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
@@ -100,8 +100,8 @@ const branchHeadCells = [
     id: "id",
     label: (
       <div className="d-flex flex-column">
-        <div>مبلغ فروش ناخالص</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>The amount of gross sales</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
@@ -110,8 +110,8 @@ const branchHeadCells = [
     id: "id",
     label: (
       <div className="d-flex flex-column">
-        <div>مبلغ فروش خالص</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>The amount of net sales</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
@@ -119,10 +119,10 @@ const branchHeadCells = [
 ];
 
 const products = [
-  { id: 1, title: "نان باگت ۳۲ سانتی" },
-  { id: 2, title: "کاهو" },
-  { id: 3, title: "دیس 1500" },
-  { id: 4, title: "دیس 2500" },
+  { id: 1, title: "2cm" },
+  { id: 2, title: "Lettuce" },
+  { id: 3, title: "Country1500" },
+  { id: 4, title: "Country2500" },
 ];
 
 export function AdminDiscountCodeReport({ isLoading, isSuper }) {
@@ -158,7 +158,7 @@ export function AdminDiscountCodeReport({ isLoading, isSuper }) {
     //   const mainBranchHeadCells = [...branchHeadCells];
     //   mainBranchHeadCells.splice(1, 0, {
     //     id: "id",
-    //     label: "شعبه",
+    //     label: "Branch",
     //     align: "center",
     //   });
     //   return mainBranchHeadCells;
@@ -171,7 +171,7 @@ export function AdminDiscountCodeReport({ isLoading, isSuper }) {
     () => ({
       yAxis: {
         title: {
-          text: "مبلغ خرید به تومان",
+          text: "The amount of purchase to Toman",
           style: {
             fontSize: "14px",
             fontFamily: "IranSans",
@@ -207,16 +207,16 @@ export function AdminDiscountCodeReport({ isLoading, isSuper }) {
       },
       xAxis: {
         categories: [
-          "الویه مرغ",
-          "الویه کالباس",
-          "الویه مرغ",
-          "سالاد مرغ",
-          "کشک بادمجان",
-          "کشک بادمجان",
-          "سالاد مرغ",
-          "بندری قارچ",
-          "کباب گوشت",
-          "الویه کالباس",
+          "Chicken",
+          "Alvi sausage",
+          "Chicken",
+          "Chicken salad",
+          "Eggplant curd",
+          "Eggplant curd",
+          "Chicken salad",
+          "Mushroom port",
+          "beef Kebab",
+          "Alvi sausage",
         ],
       },
       series: [
@@ -249,7 +249,7 @@ export function AdminDiscountCodeReport({ isLoading, isSuper }) {
   return (
     <div className="container">
       <Head>
-        <title>گزارش فروش افزودنی‌ها</title>
+        <title>Sale of additives</title>
       </Head>
 
       <AdminBreadCrumb />
@@ -277,8 +277,8 @@ export function AdminDiscountCodeReport({ isLoading, isSuper }) {
                 initialEndDate={toDate}
                 stateDateWrapper={moment}
                 maxDate={moment()}
-                startDatePlaceholderText="تاریخ شروع"
-                endDatePlaceholderText="تاریخ پایان"
+                startDatePlaceholderText="start date"
+                endDatePlaceholderText="The end date"
                 onFocusChange={(focusedInput) => setFocused({ focusedInput })}
                 onDatesChange={({ startDate, endDate }) => {
                   if (startDate) setFromDate(startDate);
@@ -307,16 +307,16 @@ export function AdminDiscountCodeReport({ isLoading, isSuper }) {
               size="large"
               // IconComponent={() => null}
               renderValue={() => {
-                if (selectedProducts.length === 0) return "کالا انتخاب کنید";
+                if (selectedProducts.length === 0) return "Choose the goods";
                 if (selectedProducts.length === 1 && selectedProducts[0])
                   return products.find(
                     (product) => product.id === selectedProducts[0]
                   ).title;
                 if (selectedProducts.length === products.length)
-                  return "همه کالاها";
+                  return "All goods";
                 return `${englishNumberToPersianNumber(
                   selectedProducts.length
-                )} کالا `;
+                )} commodity`;
               }}
               MenuProps={{
                 getContentAnchorEl: null,
@@ -354,7 +354,7 @@ export function AdminDiscountCodeReport({ isLoading, isSuper }) {
                       });
                     }, 500);
                   }}
-                  placeholder="جستجوی کالا"
+                  placeholder="Search of goods"
                   inputProps={{
                     className: "pr-5 mr-2",
                   }}
@@ -419,7 +419,7 @@ export function AdminDiscountCodeReport({ isLoading, isSuper }) {
                   checked={selectedProducts.length === products.length}
                 />
                 <ListItemText
-                  primary="انتخاب همه کالاها"
+                  primary="Select all goods"
                   className="text-right"
                 />
               </MenuItem>
@@ -472,16 +472,16 @@ export function AdminDiscountCodeReport({ isLoading, isSuper }) {
                 size="large"
                 // IconComponent={() => null}
                 renderValue={() => {
-                  if (selectedBranches.length === 0) return "شعبه انتخاب کنید";
+                  if (selectedBranches.length === 0) return "Choose a branch";
                   if (selectedBranches.length === 1 && selectedBranches[0])
                     return branches.find(
                       (branch) => branch.id === selectedBranches[0]
                     ).title;
                   if (selectedBranches.length === branches.length)
-                    return "همه شعب";
+                    return "All branches";
                   return `${englishNumberToPersianNumber(
                     selectedBranches.length
-                  )} شعبه `;
+                  )} Branch`;
                 }}
                 MenuProps={{
                   getContentAnchorEl: null,
@@ -516,7 +516,7 @@ export function AdminDiscountCodeReport({ isLoading, isSuper }) {
                     checked={selectedBranches.length === branches.length}
                   />
                   <ListItemText
-                    primary="انتخاب همه شعب"
+                    primary="Choosing all branches"
                     className="text-right"
                   />
                 </MenuItem>
@@ -580,7 +580,7 @@ export function AdminDiscountCodeReport({ isLoading, isSuper }) {
                 style={{ width: 200 }}
                 className="px-3 u-fontWeightBold u-fontNormal my-1"
               >
-                مرتب‌سازی بر اساس
+                order by
               </div>
             }
             selectOption={(text) =>
@@ -589,7 +589,7 @@ export function AdminDiscountCodeReport({ isLoading, isSuper }) {
               )
             }
             inputData={{
-              defaultValue: "مرتب‌سازی",
+              defaultValue: "Ordering",
             }}
             selected={sortOptions.find(
               (i) => i.keyword === selectedSortingType
@@ -695,7 +695,7 @@ export function AdminDiscountCodeReport({ isLoading, isSuper }) {
                               {englishNumberToPersianNumber(index + 1)}
                             </TableCell>
                           )}
-                          <TableCell align="right">اسم کالا</TableCell>
+                          <TableCell align="right">Product name</TableCell>
                           <TableCell align="center">1234</TableCell>
                           <TableCell align="center">1234</TableCell>
                           <TableCell align="center">12345</TableCell>
@@ -735,7 +735,7 @@ export function AdminDiscountCodeReport({ isLoading, isSuper }) {
                     }}
                   >
                     <TableCell align="center" style={{ border: "none" }}>
-                      جمع کل
+                      total
                     </TableCell>
                     {isSuper && (
                       <TableCell
@@ -823,7 +823,7 @@ export function AdminDiscountCodeReport({ isLoading, isSuper }) {
               style={{ backgroundColor: "#F1F2F3" }}
               className="d-flex align-items-center justify-content-between px-4 py-5"
             >
-              <div>جمع کل:</div>
+              <div>total:</div>
               <div
                 style={{
                   backgroundColor: surface.neutral.default,

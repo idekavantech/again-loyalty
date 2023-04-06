@@ -24,8 +24,8 @@ export default function RemoveDeal({ isOpen, onClose, slug }) {
       return (
         <>
           <p className={classes.bodyText}>
-            آیا از حذف محصول مطمئا هستید؟ بعد از حذف شما دیگر قادر به مشاهده
-            محصول در نرم افزار درآمد نمیباشید
+            Are you sure of deleting the product?After removing you no longer be able to view
+            Product in the software software don't
           </p>
         </>
       );
@@ -70,14 +70,14 @@ export default function RemoveDeal({ isOpen, onClose, slug }) {
   return (
     <SefareshModal
       isOpen={isOpen}
-      title="حذف محصول"
+      title="Remove Product"
       bodys={bodys}
-      bottomStartText="لغو"
+      bottomStartText="Cancellation"
       bottomEndText={
         menu.loadingSmall ? (
           <CircularProgress size={25} style={{ color: "white" }} />
         ) : (
-          "حذف محصول"
+          "Remove Product"
         )
       }
       bottomStartOnClick={remove_deal}

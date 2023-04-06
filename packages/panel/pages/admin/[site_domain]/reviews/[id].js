@@ -7,5 +7,5 @@ export default function AdminFeedbackPage() {
 AdminFeedbackPage.ShouldBeAdmin = true;
 AdminFeedbackPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "نظر مشتری",
+  title: "Customer opinion",
 };

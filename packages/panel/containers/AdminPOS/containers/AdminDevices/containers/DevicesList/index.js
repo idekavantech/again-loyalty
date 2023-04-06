@@ -71,7 +71,7 @@ function AdminDevicesList({ filters }) {
                       <PosDeviceIcon />
                       <div className="mt-4 u-fontWeightBold">
                         {device.name ||
-                          `دستگاه ${englishNumberToPersianNumber(index + 1)}`}
+                          `The device${englishNumberToPersianNumber(index + 1)}`}
                       </div>
                       {branches.find(
                         (branch) => branch.slug === device.business_slug
@@ -101,13 +101,13 @@ function AdminDevicesList({ filters }) {
             ) : (
               <div className="d-flex flex-1 flex-column justify-content-center align-items-center p-5">
                 <img alt="" src={`${CDN_BASE_URL}empty_devices.png`} />
-                <div className="mt-4">با این فیلتر دستگاهی یافت نشد</div>
+                <div className="mt-4">Was not found with this device filter</div>
               </div>
             )
           ) : (
             <div className="d-flex flex-1 flex-column justify-content-center align-items-center p-5">
               <img alt="" src={`${CDN_BASE_URL}empty_devices.png`} />
-              <div className="mt-4">هنوز دستگاهی اضافه نشده است.</div>
+              <div className="mt-4">The device has not yet been added..</div>
             </div>
           )}
         </div>

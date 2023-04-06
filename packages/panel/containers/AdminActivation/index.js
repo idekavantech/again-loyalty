@@ -49,7 +49,7 @@ function AdminActivation({ vitrinType: _vitrinType, business, user }) {
   return (
     <>
       <Head>
-        <title>راه‌اندازی ویترین</title>
+        <title>Launching a showcase</title>
       </Head>
       <AdminBreadCrumb />
 
@@ -63,7 +63,7 @@ function AdminActivation({ vitrinType: _vitrinType, business, user }) {
               style={{ color: theme.palette.primary.main }}
               className="mt-4 mt-md-0 u-font-weight-extra-bold u-font-30-45"
             >
-              خدمات راه‌اندازی ویترین
+              Showcase Launch Services
             </div>
             <div className="text-center-md-right mt-2 mt-md-4 u-font-weight-extra-bold u-font-30-45">
               {firstSection[vitrinType].title}
@@ -77,7 +77,7 @@ function AdminActivation({ vitrinType: _vitrinType, business, user }) {
                 href={`https://panel.vitrin.site/creation/step8?business_slug=${business.slug}&token=${user.token}&category=${business.vitrin_type}&start_with=initialize`}
               >
                 <Button color="primary" variant="contained">
-                  دیدن بسته‌ها
+                  See the packages
                 </Button>
               </Link>
             </div>
@@ -117,18 +117,18 @@ function AdminActivation({ vitrinType: _vitrinType, business, user }) {
         >
           {[
             {
-              title: "سریع",
-              subtitle: "تیم با تجربه و کاربلد",
+              title: "Fast",
+              subtitle: "Experienced team",
               icon: <TimerIcon style={{ fontSize: 32 }} />,
             },
             {
-              title: "حرفه‌ای",
-              subtitle: "راهکارهای تست شده و مؤثر",
+              title: "professional",
+              subtitle: "Tested and effective solutions",
               icon: <BusinessCenterOutlinedIcon style={{ fontSize: 32 }} />,
             },
             {
-              title: "به‌صرفه",
-              subtitle: "بسته‌های مختلف برای نیازهای متفاوت",
+              title: "Efficient",
+              subtitle: "Different packages for different needs",
               icon: <SavingIcon />,
             },
           ].map((item) => (
@@ -235,7 +235,7 @@ function AdminActivation({ vitrinType: _vitrinType, business, user }) {
                           color="primary"
                           variant="contained"
                         >
-                          دیدن بسته‌ها
+                          See the packages
                         </Button>
                       </Link>
                     ) : null}
@@ -251,7 +251,7 @@ function AdminActivation({ vitrinType: _vitrinType, business, user }) {
                 href={`https://panel.vitrin.site/creation/step8?business_slug=${business.slug}&token=${user.token}&category=${business.vitrin_type}&start_with=initialize`}
               >
                 <Button color="primary" variant="contained">
-                  دیدن بسته‌ها
+                  See the packages
                 </Button>
               </Link>
             ) : null}

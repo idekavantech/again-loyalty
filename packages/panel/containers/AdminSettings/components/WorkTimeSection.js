@@ -164,7 +164,7 @@ function WorkTimeSection({ workingHours, updateWorkingHours }) {
                           >
                             {times.map((time) => (
                               <MenuItem key={time.value} value={time.value}>
-                                از {time.label}
+                                From{time.label}
                               </MenuItem>
                             ))}
                           </Select>
@@ -196,7 +196,7 @@ function WorkTimeSection({ workingHours, updateWorkingHours }) {
                           >
                             {times.map((time) => (
                               <MenuItem key={time.id} value={time.value}>
-                                تا {time.label}
+                                until the{time.label}
                               </MenuItem>
                             ))}
                           </Select>

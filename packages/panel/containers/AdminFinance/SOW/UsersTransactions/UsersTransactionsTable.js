@@ -155,7 +155,7 @@ function UsersTransactionsTable({
                         <div style={{ direction: "ltr" }} className="ml-1">
                           {priceFormatter(priceObj.price)}
                         </div>
-                        <div>تومان</div>
+                        <div>Toman</div>
                       </div>
                     </TableCell>
                   </StyledTableRow>
@@ -166,7 +166,7 @@ function UsersTransactionsTable({
         </Table>
       </TableContainer>
       <TablePagination
-        labelRowsPerPage={!maxWidth768 ? "تعداد ردیف در هر صفحه" : ""}
+        labelRowsPerPage={!maxWidth768 ? "The number of rows per page" : ""}
         labelDisplayedRows={({ from }) =>
           `${englishNumberToPersianNumber(from)}`
         }

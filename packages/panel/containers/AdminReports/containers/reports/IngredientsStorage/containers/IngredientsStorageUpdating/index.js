@@ -60,8 +60,8 @@ import LoadingIndicator from "@saas/components/LoadingIndicator";
 import { generateCSVFile } from "@saas/utils/helpers/generateCSVFile";
 
 const sortingOptions = [
-  { id: 2, text: "بیشترین مبلغ", keyword: HIGHEST_PRICE },
-  { id: 3, text: "کمترین مبلغ", keyword: LOWEST_PRICE },
+  { id: 2, text: "The highest amount", keyword: HIGHEST_PRICE },
+  { id: 3, text: "The least amount", keyword: LOWEST_PRICE },
 ];
 
 const pdf = ({ business }) => {
@@ -93,7 +93,7 @@ const pdf = ({ business }) => {
               alignItems: "center",
             }}
           >
-            <div style={{ flex: 1 }}>تاریخ دریافت: {jalaaliDate}</div>
+            <div style={{ flex: 1 }}>Date Received: {jalaaliDate}</div>
             <div
               style={{
                 width: 300,
@@ -110,7 +110,7 @@ const pdf = ({ business }) => {
                 textAlign: "left",
               }}
             >
-              ش. گزارش:{" "}
+              She. Report:{" "}
               {englishNumberToPersianNumber(
                 Math.floor(100000 + Math.random() * 900000)
               )}
@@ -134,7 +134,7 @@ const pdf = ({ business }) => {
                 flex: 1,
               }}
             >
-              «گزارش انبارگردانی مواد اولیه بر اساس کالا»
+              «Report of warehousing raw materials based on goods»
             </div>
             <div></div>
           </div>
@@ -142,7 +142,7 @@ const pdf = ({ business }) => {
       </div>
     ),
     footerTemplate: `<footer style="width: max-content;font-size: 10px;margin:0px auto 0px; border: 0.5px solid #c4c4c4;border-radius: 4px; padding: 4px 12px;font-family: 'dana'">
-      صفحه <span class="pageNumber"></span> / <span class="totalPages"></span>
+      Page<span class="pageNumber"></span> / <span class="totalPages"></span>
       </footer>`,
     main_styles: `
     *{
@@ -236,42 +236,42 @@ const sortingFunctions = {
 const headCells = [
   {
     id: "id",
-    label: "ردیف",
+    label: "Row",
     align: "center",
   },
   {
     id: "id",
-    label: "شناسه کالا",
+    label: "ID of the product",
     align: "center",
   },
   {
     id: "id",
-    label: "کالا",
+    label: "commodity",
     align: "center",
   },
   {
     id: "id",
-    label: "واحد",
+    label: "One",
     align: "center",
   },
   {
     id: "id",
-    label: "شمارش‌شده",
+    label: "Count",
     align: "center",
   },
   {
     id: "id",
-    label: "موجود در سیستم",
+    label: "Available in the system",
     align: "center",
   },
   {
     id: "id",
-    label: "نتیجه",
+    label: "Result",
     align: "center",
   },
   {
     id: "id",
-    label: "مبلغ‌ اختلاف(تومان)",
+    label: "The amount of difference(Toman)",
     align: "center",
   },
 ];
@@ -324,7 +324,7 @@ export function AdminIngredientsStorageUpdatingReport({
             <span className="ml-1">
               {englishNumberToPersianNumber(Math.abs(amount_diff))}
             </span>
-            <span>بیشتر از سیستم</span>
+            <span>More than the system</span>
           </div>
         );
       case -1:
@@ -340,7 +340,7 @@ export function AdminIngredientsStorageUpdatingReport({
             <span className="ml-1">
               {englishNumberToPersianNumber(Math.abs(amount_diff))}
             </span>
-            <span>کمتر از سیستم</span>
+            <span>Less than the system</span>
           </div>
         );
       default:
@@ -350,7 +350,7 @@ export function AdminIngredientsStorageUpdatingReport({
               style={{ fontSize: 14 }}
               className="ml-1 pdf-display-none"
             />
-            <div>مطابق با انبار</div>
+            <div>In accordance with the warehouse</div>
           </div>
         );
     }
@@ -425,7 +425,7 @@ export function AdminIngredientsStorageUpdatingReport({
   return (
     <div className="container">
       <Head>
-        <title>گزارش انبارگردانی مواد اولیه بر اساس کالا</title>
+        <title>Report of warehousing raw materials based on goods</title>
       </Head>
 
       <AdminBreadCrumb
@@ -438,7 +438,7 @@ export function AdminIngredientsStorageUpdatingReport({
                 variant="outlined"
                 onClick={() => toggleConfirmationModal(true)}
               >
-                آپدیت سیستم با موجودی جدید
+                System update with new inventory
               </Button>
             )}
             <Button
@@ -448,7 +448,7 @@ export function AdminIngredientsStorageUpdatingReport({
               variant="contained"
               onClick={(e) => toggleExportAnchor(e.currentTarget)}
             >
-              خروجی
+              Output
             </Button>
             <Menu
               elevation={1}
@@ -482,7 +482,7 @@ export function AdminIngredientsStorageUpdatingReport({
                         footerTemplate: PDFConfigs.footerTemplate,
                       },
                     },
-                    `گزارش انبارگردانی مواد اولیه بر اساس کالا-تاریخ- ${jalaaliDate} - ساعت- ${jalaaliTime}`
+                    `Report of warehousing raw materials based on goods-Date- ${jalaaliDate} - the watch- ${jalaaliTime}`
                   );
                 }}
               >
@@ -494,7 +494,7 @@ export function AdminIngredientsStorageUpdatingReport({
                     headRow,
                     rows,
                     [],
-                    `گزارش انبارگردانی مواد اولیه بر اساس کالا-تاریخ- ${jalaaliDate} - ساعت- ${jalaaliTime}`
+                    `Report of warehousing raw materials based on goods-Date- ${jalaaliDate} - the watch- ${jalaaliTime}`
                   )
                 }
               >
@@ -540,7 +540,7 @@ export function AdminIngredientsStorageUpdatingReport({
                       });
                     }, 500);
                   }}
-                  placeholder="جستجوی شناسه کالا"
+                  placeholder="Search of the product ID"
                   inputProps={{
                     className: "pr-5 mr-2",
                   }}
@@ -591,11 +591,11 @@ export function AdminIngredientsStorageUpdatingReport({
                   borderRadius: 4,
                 }}
               >
-                <div className="ml-1">تاریخ</div>
+                <div className="ml-1">Date</div>
                 <div className="ml-1">
                   {englishNumberToPersianNumber(jalaaliDate)}
                 </div>
-                -<div className="mx-1">ساعت</div>
+                -<div className="mx-1">the watch</div>
                 <div>{englishNumberToPersianNumber(jalaaliTime)}</div>
               </div>
               {isSuper && (
@@ -607,7 +607,7 @@ export function AdminIngredientsStorageUpdatingReport({
                     opacity: 0.7,
                   }}
                 >
-                  شعبه : {branch?.title}
+                  Branch: {branch?.title}
                 </div>
               )}
             </div>
@@ -630,7 +630,7 @@ export function AdminIngredientsStorageUpdatingReport({
                   style={{ width: 200 }}
                   className="px-3 u-fontWeightBold u-fontNormal my-1"
                 >
-                  مرتب‌سازی بر اساس
+                  order by
                 </div>
               }
               selectOption={(text) =>
@@ -639,7 +639,7 @@ export function AdminIngredientsStorageUpdatingReport({
                 )
               }
               inputData={{
-                defaultValue: "مرتب‌سازی",
+                defaultValue: "Ordering",
               }}
               selected={sortingOptions.find(
                 (i) => i.keyword === selectedSortingType
@@ -755,7 +755,7 @@ export function AdminIngredientsStorageUpdatingReport({
             style={{ backgroundColor: "#F1F2F3" }}
             className="d-flex align-items-center justify-content-between px-4 py-5"
           >
-            <div>جمع اضافات:</div>
+            <div>Collect additions:</div>
             <div
               style={{
                 backgroundColor: surface.neutral.default,
@@ -772,7 +772,7 @@ export function AdminIngredientsStorageUpdatingReport({
             style={{ backgroundColor: "#F1F2F3" }}
             className="d-flex align-items-center justify-content-between px-4 py-5"
           >
-            <div>جمع کسورات:</div>
+            <div>The sum of the deductions:</div>
             <div
               style={{
                 backgroundColor: surface.neutral.default,
@@ -789,7 +789,7 @@ export function AdminIngredientsStorageUpdatingReport({
             style={{ backgroundColor: "#F1F2F3" }}
             className="d-flex align-items-center justify-content-between px-4 py-5"
           >
-            <div>جمع کل:</div>
+            <div>total:</div>
             <div
               style={{
                 backgroundColor: surface.neutral.default,

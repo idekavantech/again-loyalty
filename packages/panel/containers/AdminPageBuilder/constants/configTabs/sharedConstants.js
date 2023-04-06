@@ -1,2 +1,2 @@
 export const LOREM_IPSUM_SHORT =
-  "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.";
+  "Lorem Ipsom is a fabricated text with an inappropriate simplicity of the printing industry and using graphic designers.";

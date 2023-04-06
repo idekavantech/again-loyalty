@@ -82,13 +82,13 @@ function ContactUsSection({
     <Paper elevation={1} className="d-flex mt-3 py-3 flex-wrap">
       <div className="col-12 col-lg-6">
         <div className="u-fontLarge mb-3" style={{ color: night }}>
-          ارتباط با شما
+          Connecting with you
         </div>
         <div>
           <span className="anchor" id="business-address" />
           <div className="d-flex align-items-center">
             <Input
-              label="آدرس کسب‌و‌کار"
+              label="Business Address"
               value={address}
               onChange={changeAddress}
               size="medium"
@@ -121,7 +121,7 @@ function ContactUsSection({
           className="u-fontLarge mb-3"
           style={{ color: night, visibility: "hidden" }}
         >
-          اطلاعات پایه
+          Basic Information
         </div>
         <Map options={mapOptionsPreview} />
         <div className="d-flex align-items-center mt-4">
@@ -135,8 +135,8 @@ function ContactUsSection({
             onClick={handleOpen}
           >
             {latitude && longitude
-              ? "تغییر موقعیت مکانی"
-              : "افزودن موقعیت مکانی"}
+              ? "Change location"
+              : "Adding location"}
           </span>
         </div>
       </div>
@@ -174,7 +174,7 @@ function ContactUsSection({
                 className="u-fontMedium"
                 style={{ color: graphite }}
               >
-                موقعیت مکانی
+                Location
               </span>
               <IconButton style={{ visibility: "hidden" }}>
                 <CloseIcon />
@@ -194,7 +194,7 @@ function ContactUsSection({
                 }
                 onClick={submitMap}
               >
-                تایید و ذخیره
+                Confirm and save
               </Button>
             </div>
           </div>

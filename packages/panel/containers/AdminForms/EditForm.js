@@ -113,7 +113,7 @@ export function AdminEditForm({
   });
   const addFieldToForm = () => {
     if (selectedFieldTypeConfig.title === "") {
-      setError("عنوان بالای فیلد نمی‌تواند خالی باشد.");
+      setError("The title of the top of the field cannot be empty.");
     } else {
       const __form = { ...form };
       __form.inputs.push({ ...selectedFieldTypeConfig, id: uniqueid() });
@@ -142,7 +142,7 @@ export function AdminEditForm({
   };
   const editFieldConfigs = () => {
     if (selectedFieldTypeConfig.title === "") {
-      setError("عنوان بالای فیلد نمی‌تواند خالی باشد.");
+      setError("The title of the top of the field cannot be empty.");
     } else {
       const __form = { ...form };
       const selectedInputIndex = __form.inputs.findIndex(
@@ -165,7 +165,7 @@ export function AdminEditForm({
       _updateForm(form);
     } else {
       _setSnackBarMessage(
-        "لطفا عنوان فرم و توضیحات فرم و حداقل یک فیلد را وارد کنید",
+        "Please enter the form and description of the form and at least one field",
         "fail"
       );
     }
@@ -198,12 +198,12 @@ export function AdminEditForm({
     >
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
-          با انتخاب <span className="u-fontWeightBold">دکمه‌ی حذف</span>، فیلد
-          مربوطه و تمامی{" "}
-          <span className="u-fontWeightBold">اطلاعات جمع‌آوری شده‌ی آن</span> در
-          بخش اطلاعات دریافتی به طور کامل و{" "}
-          <span className="u-fontWeightBold">غیر قابل بازگشت</span> حذف خواهند
-          شد. آیا از انتخاب خود مطمئنید؟
+          by choosing<span className="u-fontWeightBold">Remove button</span>, field
+          Related and all{" "}
+          <span className="u-fontWeightBold">Its collected information</span> At
+          The information section received completely and{" "}
+          <span className="u-fontWeightBold">Irreversible</span> They will delete
+          became. Are you sure of your choice?
         </DialogContentText>
       </DialogContent>
       <DialogActions>
@@ -212,14 +212,14 @@ export function AdminEditForm({
           color="primary"
           autoFocus
         >
-          انصراف
+          Candifying
         </Button>
         <Button
           color="primary"
           onClick={removeFieldFromForm}
           style={{ color: strawberryI }}
         >
-          حذف فیلد
+          Remove field
         </Button>
       </DialogActions>
     </Dialog>
@@ -233,12 +233,12 @@ export function AdminEditForm({
     >
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
-          <div className="u-fontNormal">انتخاب فیلد</div>
+          <div className="u-fontNormal">Field selection</div>
         </DialogContentText>
         <div>
           <Select
             value={selectedFieldType}
-            label="دسته‌بندی فیلد‌ها"
+            label="Classification of fields"
             onChange={(event) => selectFieldType(event.target.value)}
             className="medium w-100"
           >
@@ -281,13 +281,13 @@ export function AdminEditForm({
             }
           }}
         >
-          {selectedFieldTypeConfig.id ? "ذخیره تغییرات" : "ایجاد فیلد"}
+          {selectedFieldTypeConfig.id ? "Save changes" : "Creating a field"}
         </Button>
         <Button
           color="primary"
           onClick={() => toggleSelectFieldModalOpen(false)}
         >
-          بستن
+          to close
         </Button>
       </DialogActions>
     </Dialog>
@@ -295,14 +295,14 @@ export function AdminEditForm({
   return (
     <div className="container">
       <Head>
-        <title>ویرایش فرم</title>
+        <title>Form editing</title>
       </Head>
       {renderDeleteFieldPopup()}
       {renderSelectFieldModal()}
       <AdminBreadCrumb />
       <Paper elevation={1} className="py-3 px-4 mt-3">
         <div className="u-fontLarge" style={{ color: night }}>
-          مشخصات فرم
+          Form Specifications
         </div>
         <div className="row">
           <div className="col-lg-6 col-12">
@@ -310,7 +310,7 @@ export function AdminEditForm({
               <Input
                 type="text"
                 size="medium"
-                label="عنوان فرم"
+                label="Form form"
                 value={form && form.title}
                 onChange={(value) => setForm({ ...form, title: value })}
               />
@@ -319,7 +319,7 @@ export function AdminEditForm({
               <Input
                 type="text"
                 size="medium"
-                label="توضیحات فرم"
+                label="Form description"
                 value={form && form.description}
                 onChange={(value) => setForm({ ...form, description: value })}
               />
@@ -331,7 +331,7 @@ export function AdminEditForm({
         className="px-3 my-3 d-flex justify-content-between align-items-center"
         style={{ color: theme.palette.text.tertiary, fontSize: 16 }}
       >
-        <div>لیست فیلد‌ها</div>
+        <div>List of fields</div>
         <div>
           <Button
             onClick={() => toggleSelectFieldModalOpen(true)}
@@ -340,7 +340,7 @@ export function AdminEditForm({
             variant="outlined"
             endIcon={<AddRoundedIcon fontSize="small" />}
           >
-            فیلد جدید
+            New field
           </Button>
         </div>
       </div>
@@ -421,7 +421,7 @@ export function AdminEditForm({
                                   }}
                                   className="ml-3"
                                 >
-                                  ویرایش
+                                  Edit
                                 </span>
                                 <EditRoundedIcon
                                   color="primary"
@@ -442,7 +442,7 @@ export function AdminEditForm({
                                   }}
                                   className="ml-3"
                                 >
-                                  حذف
+                                  Delete
                                 </span>
                                 <DeleteIcon color="primary" fontSize="small" />
                               </MenuItem>
@@ -461,7 +461,7 @@ export function AdminEditForm({
       </div>
       <SaveAndDiscardButtons
         saveAction={submit}
-        saveText="ذخیره"
+        saveText="Store"
         disabled={loading}
       />
     </div>

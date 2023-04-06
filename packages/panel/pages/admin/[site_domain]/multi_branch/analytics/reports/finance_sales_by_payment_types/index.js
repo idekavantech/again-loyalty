@@ -13,5 +13,5 @@ export default function AdminAnalyticsFinanceSalesByPaymentTypes() {
 AdminAnalyticsFinanceSalesByPaymentTypes.ShouldBeAdmin = true;
 AdminAnalyticsFinanceSalesByPaymentTypes.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "گزارش مالی فروش شعب بر اساس روش پرداخت",
+  title: "Financial Sale of Branches Based on Payment Method",
 };

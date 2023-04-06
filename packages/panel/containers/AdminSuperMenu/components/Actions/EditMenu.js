@@ -39,7 +39,7 @@ export default function EditMenu({ isOpen, onClose, slug }) {
                 menu.value[menu.selectedMenu].title
               }
               menuName={menuName}
-              questionLabel="نام منو"
+              questionLabel="Menu name"
               onChange={(e) => setMenuName(e.target.value)}
             />
             <ColorPickerGrid
@@ -82,12 +82,12 @@ export default function EditMenu({ isOpen, onClose, slug }) {
   return (
     <SefareshModal
       isOpen={isOpen}
-      title="ویرایش منو"
+      title="Editing the menu"
       headerButtonText={
         menu.loadingSmall ? (
           <CircularProgress size={25} style={{ color: "white" }} />
         ) : (
-          "ذخیره"
+          "Store"
         )
       }
       bodys={bodys}

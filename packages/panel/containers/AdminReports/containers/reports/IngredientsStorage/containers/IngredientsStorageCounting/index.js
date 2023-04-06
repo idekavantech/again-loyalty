@@ -39,27 +39,27 @@ import { makeSelectIngredients } from "store/selectors";
 const headCells = [
   {
     id: "id",
-    label: "ردیف",
+    label: "Row",
     align: "center",
   },
   {
     id: "id",
-    label: "شناسه کالا",
+    label: "ID of the product",
     align: "center",
   },
   {
     id: "id",
-    label: "نام کالا",
+    label: "Product Name",
     align: "center",
   },
   {
     id: "id",
-    label: "موجود در سیستم",
+    label: "Available in the system",
     align: "center",
   },
   {
     id: "id",
-    label: "شمارش‌شده",
+    label: "Count",
     align: "center",
   },
 ];
@@ -120,11 +120,11 @@ export function AdminIngredientsStorageCountingReport({
   return (
     <div className="container">
       <Head>
-        <title>درخواست شمارش موجودی مواداولیه</title>
+        <title>Request for Material Inventory Count</title>
       </Head>
 
       <AdminBreadCrumb
-        submitButtonText="دریافت نتیجه انبارگردانی"
+        submitButtonText="Receive a warehouse result"
         submitAction={() =>
           _createIngredientsRecountingReport({
             description,
@@ -140,7 +140,7 @@ export function AdminIngredientsStorageCountingReport({
             style={{ backgroundColor: "#F0F0F0", minWidth: 170 }}
             className="u-fontMedium py-2 px-3"
           >
-            یادداشت
+            Note
           </div>
           <input
             className="d-flex py-2 px-3"
@@ -148,7 +148,7 @@ export function AdminIngredientsStorageCountingReport({
             value={description}
             onChange={(event) => setDescription(event.target.value)}
             ref={descriptionRef}
-            placeholder="افزودن یادداشت"
+            placeholder="Add note"
           />
         </div>
       </Paper>
@@ -157,7 +157,7 @@ export function AdminIngredientsStorageCountingReport({
         className="d-flex align-items-center p-3 mt-4"
         style={{ color: text.critical }}
       >
-        فقط موجودی مواداولیه‌ای تغییر خواهد کرد که شما وارد کرده‌اید.
+        Only the material inventory will change that you have entered.
       </Paper>
       <Paper className="mt-4 d-flex flex-column">
         <TableContainer className="purchase-by-order-table">
@@ -236,7 +236,7 @@ export function AdminIngredientsStorageCountingReport({
                                   ),
                                 })
                               }
-                              placeholder="وارد کنید"
+                              placeholder="enter"
                             />
                           </div>
                           <div>{unitsDictionary[branchIngredient?.unit]}</div>
@@ -258,7 +258,7 @@ export function AdminIngredientsStorageCountingReport({
                 color="primary"
               />
             }
-            label="مقادیری که در آن عددی وارد نشده است صفر در نظر گرفته شود."
+            label="The values in which the numer is not entered should be considered zero."
           />
         </div>
       </Paper>

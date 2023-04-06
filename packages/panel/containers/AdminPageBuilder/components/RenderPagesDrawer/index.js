@@ -42,14 +42,14 @@ function RenderPagesDrawer({
             background: "#ffffff",
           }}
         >
-          <div style={{ fontWeight: "bold" }}>انتخاب صفحه</div>
+          <div style={{ fontWeight: "bold" }}>Page selection</div>
           <div className="d-flex flex-row-reverse">
             <Button
               color="default"
               className="close-btn"
               onClick={() => togglePagesDrawer(false)}
             >
-              بستن
+              to close
             </Button>
           </div>
         </div>
@@ -76,7 +76,7 @@ function RenderPagesDrawer({
                         fontSize: 16,
                       }}
                     >
-                      <div>{pagesObject.pagesLabel.split("ویرایش")[1]}</div>
+                      <div>{pagesObject.pagesLabel.split("Edit")[1]}</div>
                     </div>
                     <div className="mt-3">
                       {Object.values(pagesObject.pages).map((page) => (
@@ -117,7 +117,7 @@ function RenderPagesDrawer({
                 fontSize: 16,
               }}
             >
-              <div>{entityPersianCopyRight} های سایت</div>
+              <div>{entityPersianCopyRight} Site</div>
             </div>
             {loading ? (
               <LoadingIndicator />

@@ -104,7 +104,7 @@ const pdf = ({ business, branches, is_super }) => {
               alignItems: "center",
             }}
           >
-            <div style={{ flex: 1 }}>تاریخ دریافت: {jalaaliDate}</div>
+            <div style={{ flex: 1 }}>Date Received: {jalaaliDate}</div>
             <div
               style={{
                 width: 300,
@@ -121,7 +121,7 @@ const pdf = ({ business, branches, is_super }) => {
                 textAlign: "left",
               }}
             >
-              ش. گزارش:{" "}
+              She. Report:{" "}
               {englishNumberToPersianNumber(
                 Math.floor(100000 + Math.random() * 900000)
               )}
@@ -148,7 +148,7 @@ const pdf = ({ business, branches, is_super }) => {
                 textAlign: "center",
               }}
             >
-              «گزارش انبارگردانی مواد اولیه»
+              «Raw material warehousing report»
             </div>
             <div style={{ flex: 1 }}></div>
           </div>
@@ -190,7 +190,7 @@ const pdf = ({ business, branches, is_super }) => {
                     borderRadius: "4px",
                   }}
                 >
-                  شعبه‌ها:
+                  branches:
                 </span>{" "}
                 {branches.map((branch) => (
                   <div
@@ -212,7 +212,7 @@ const pdf = ({ business, branches, is_super }) => {
       </div>
     ),
     footerTemplate: `<footer style="width: max-content;font-size: 10px;margin:0px auto 0px; border: 0.5px solid #c4c4c4;border-radius: 4px; padding: 4px 12px;font-family: 'dana'">
-      صفحه <span class="pageNumber"></span> / <span class="totalPages"></span>
+      Page<span class="pageNumber"></span> / <span class="totalPages"></span>
       </footer>`,
     main_styles: `
     *{
@@ -267,11 +267,11 @@ const pdf = ({ business, branches, is_super }) => {
 };
 
 const sortingOptions = [
-  { id: 0, text: "جدیدترین", keyword: NEWEST },
-  { id: 1, text: "قدیمی‌ترین", keyword: OLDEST },
-  { id: 2, text: "بیشترین مبلغ خرید", keyword: HIGHEST_PURCHASE_COST },
-  { id: 3, text: "بیشترین مقدار آیتم", keyword: HIGHEST_ITEM_AMOUNT },
-  { id: 4, text: "تامین‌کننده", keyword: VENDORS },
+  { id: 0, text: "the newest", keyword: NEWEST },
+  { id: 1, text: "The oldest", keyword: OLDEST },
+  { id: 2, text: "The highest amount of purchase", keyword: HIGHEST_PURCHASE_COST },
+  { id: 3, text: "The highest amount of item", keyword: HIGHEST_ITEM_AMOUNT },
+  { id: 4, text: "Supplier", keyword: VENDORS },
 ];
 
 const sortingFunctions = {
@@ -290,67 +290,67 @@ const sortingFunctions = {
 const branchHeadCells = [
   {
     id: "id",
-    name: "ردیف",
-    label: "ردیف",
+    name: "Row",
+    label: "Row",
     align: "center",
     minWidth: 100,
   },
   {
     id: "id",
-    name: "کدکالا",
-    label: "کدکالا",
+    name: "Product Code",
+    label: "Product Code",
     align: "center",
     minWidth: 100,
   },
   {
     id: "id",
-    name: "ماده اولیه",
-    label: "ماده اولیه",
+    name: "primary substance",
+    label: "primary substance",
     align: "center",
     minWidth: 100,
   },
   {
     id: "id",
-    name: "واحد",
-    label: "واحد",
+    name: "One",
+    label: "One",
     align: "center",
     minWidth: 100,
   },
   {
     id: "id",
-    name: "تامین‌کننده",
-    label: "تامین‌کننده",
+    name: "Supplier",
+    label: "Supplier",
     align: "center",
     minWidth: 100,
   },
   {
     id: "id",
-    name: "ش.سند",
-    label: "ش.سند",
+    name: "She.Document",
+    label: "She.Document",
     align: "center",
     minWidth: 100,
   },
   {
     id: "id",
-    name: "تاریخ",
-    label: "تاریخ",
+    name: "Date",
+    label: "Date",
     align: "center",
     minWidth: 100,
   },
   {
     id: "id",
-    name: "مقدار",
-    label: "مقدار",
+    name: "the amount of",
+    label: "the amount of",
     align: "center",
     minWidth: 100,
   },
   {
     id: "id",
-    name: "قیمت واحد",
+    name: "Unit price",
     label: (
       <div className="d-flex flex-column">
-        <div>قیمت واحد</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>Unit price</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
@@ -358,11 +358,11 @@ const branchHeadCells = [
   },
   {
     id: "id",
-    name: "مبلغ کل",
+    name: "Total Amount",
     label: (
       <div className="d-flex flex-column">
-        <div>مبلغ کل</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>Total Amount</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
@@ -526,8 +526,8 @@ export function AdminPurchaseByIngredientsReport({
       const mainBranchHeadCells = [...branchHeadCells];
       mainBranchHeadCells.splice(4, 0, {
         id: "id",
-        name: "شعبه",
-        label: "شعبه",
+        name: "Branch",
+        label: "Branch",
         align: "center",
       });
       return mainBranchHeadCells;
@@ -649,7 +649,7 @@ export function AdminPurchaseByIngredientsReport({
 
   const summaryRow = useMemo(
     () => [
-      "جمع کل",
+      "total",
       "",
       "",
       "",
@@ -666,7 +666,7 @@ export function AdminPurchaseByIngredientsReport({
   return (
     <div className="container">
       <Head>
-        <title>گزارش اسناد خرید براساس ماده اولیه</title>
+        <title>Reporting purchase documents based on the raw material</title>
       </Head>
 
       <AdminBreadCrumb
@@ -679,7 +679,7 @@ export function AdminPurchaseByIngredientsReport({
               variant="contained"
               onClick={(e) => toggleExportAnchor(e.currentTarget)}
             >
-              خروجی
+              Output
             </Button>
             <Menu
               elevation={1}
@@ -713,9 +713,9 @@ export function AdminPurchaseByIngredientsReport({
                         footerTemplate: PDFConfigs.footerTemplate,
                       },
                     },
-                    `گزارش اسناد خرید براساس ماده اولیه از ${formatDateObjectToNormal(
+                    `Reporting purchase documents based on the raw material of${formatDateObjectToNormal(
                       selectedDayRange.from
-                    )} تا  ${formatDateObjectToNormal(selectedDayRange.to)}.pdf`
+                    )} until the${formatDateObjectToNormal(selectedDayRange.to)}.pdf`
                   );
                 }}
               >
@@ -727,9 +727,9 @@ export function AdminPurchaseByIngredientsReport({
                     headRow,
                     rows || [],
                     summaryRow || [],
-                    `گزارش اسناد خرید براساس ماده اولیه از ${formatDateObjectToNormal(
+                    `Reporting purchase documents based on the raw material of${formatDateObjectToNormal(
                       selectedDayRange.from
-                    )} تا  ${formatDateObjectToNormal(selectedDayRange.to)}`
+                    )} until the${formatDateObjectToNormal(selectedDayRange.to)}`
                   )
                 }
               >
@@ -771,7 +771,7 @@ export function AdminPurchaseByIngredientsReport({
                     });
                   }, 500);
                 }}
-                placeholder="جستجوی ش.‌سند"
+                placeholder="Search.‌Document"
                 inputProps={{
                   className: "pr-5 mr-2",
                 }}
@@ -823,13 +823,13 @@ export function AdminPurchaseByIngredientsReport({
                 onClick={handleOpen}
                 variant="outlined"
               >
-                از{" "}
+                From{" "}
                 <span className="px-2">
                   {englishNumberToPersianNumber(
                     formatDateObjectToNormal(selectedDayRange.from)
                   )}
                 </span>
-                تا{" "}
+                until the{" "}
                 <span className="px-2">
                   {englishNumberToPersianNumber(
                     formatDateObjectToNormal(selectedDayRange.to)
@@ -882,7 +882,7 @@ export function AdminPurchaseByIngredientsReport({
               // IconComponent={() => null}
               renderValue={() => {
                 if (selectedIngredients?.length === 0)
-                  return "ماده اولیه انتخاب کنید";
+                  return "Select the raw material";
                 if (
                   selectedIngredients?.length === 1 &&
                   selectedIngredients?.[0]
@@ -891,10 +891,10 @@ export function AdminPurchaseByIngredientsReport({
                     (ingredient) => ingredient.id === selectedIngredients?.[0]
                   ).title;
                 if (selectedIngredients?.length === ingredients?.length)
-                  return "همه مواد اولیه";
+                  return "All raw materials";
                 return `${englishNumberToPersianNumber(
                   selectedIngredients?.length
-                )} ماده اولیه `;
+                )} primary substance`;
               }}
               MenuProps={{
                 getContentAnchorEl: null,
@@ -931,7 +931,7 @@ export function AdminPurchaseByIngredientsReport({
                       });
                     }, 500);
                   }}
-                  placeholder="جستجوی ماده اولیه"
+                  placeholder="Search of raw material"
                   inputProps={{
                     className: "pr-5 mr-2",
                   }}
@@ -996,7 +996,7 @@ export function AdminPurchaseByIngredientsReport({
                   checked={selectedIngredients?.length === ingredients?.length}
                 />
                 <ListItemText
-                  primary="انتخاب همه مواد اولیه"
+                  primary="The choice of all raw materials"
                   className="text-right"
                 />
               </MenuItem>
@@ -1053,16 +1053,16 @@ export function AdminPurchaseByIngredientsReport({
                 size="large"
                 // IconComponent={() => null}
                 renderValue={() => {
-                  if (selectedBranches.length === 0) return "شعبه انتخاب کنید";
+                  if (selectedBranches.length === 0) return "Choose a branch";
                   if (selectedBranches.length === 1 && selectedBranches[0])
                     return branches.find(
                       (branch) => branch.id === selectedBranches[0]
                     ).title;
                   if (selectedBranches.length === branches.length)
-                    return "همه شعب";
+                    return "All branches";
                   return `${englishNumberToPersianNumber(
                     selectedBranches.length
-                  )} شعبه `;
+                  )} Branch`;
                 }}
                 MenuProps={{
                   getContentAnchorEl: null,
@@ -1097,7 +1097,7 @@ export function AdminPurchaseByIngredientsReport({
                     checked={selectedBranches.length === branches.length}
                   />
                   <ListItemText
-                    primary="انتخاب همه شعب"
+                    primary="Choosing all branches"
                     className="text-right"
                   />
                 </MenuItem>
@@ -1153,9 +1153,9 @@ export function AdminPurchaseByIngredientsReport({
               // IconComponent={() => null}
               renderValue={() => {
                 if (selectedVendors?.length === vendors?.length)
-                  return "همه تامین‌کننده‌ها";
+                  return "All suppliers";
                 if (selectedVendors?.length === 0)
-                  return "تامین‌کننده انتخاب کنید";
+                  return "Select the supplier";
                 if (selectedVendors?.length === 1 && selectedVendors[0])
                   return vendors?.find(
                     (vendor) => vendor.id === selectedVendors[0]
@@ -1163,7 +1163,7 @@ export function AdminPurchaseByIngredientsReport({
 
                 return `${englishNumberToPersianNumber(
                   selectedVendors?.length
-                )} تامین‌کننده `;
+                )} Supplier`;
               }}
               MenuProps={{
                 getContentAnchorEl: null,
@@ -1198,7 +1198,7 @@ export function AdminPurchaseByIngredientsReport({
                   checked={selectedVendors?.length === vendors?.length}
                 />
                 <ListItemText
-                  primary="انتخاب همه تامین‌کننده‌ها"
+                  primary="Choosing all suppliers"
                   className="text-right"
                 />
               </MenuItem>
@@ -1256,7 +1256,7 @@ export function AdminPurchaseByIngredientsReport({
                 style={{ width: 200 }}
                 className="px-3 u-fontWeightBold u-fontNormal my-1"
               >
-                مرتب‌سازی بر اساس
+                order by
               </div>
             }
             selectOption={(text) =>
@@ -1265,7 +1265,7 @@ export function AdminPurchaseByIngredientsReport({
               )
             }
             inputData={{
-              defaultValue: "مرتب‌سازی",
+              defaultValue: "Ordering",
             }}
             selected={sortingOptions.find(
               (i) => i.keyword === selectedSortingType
@@ -1299,7 +1299,7 @@ export function AdminPurchaseByIngredientsReport({
               }}
               className="ml-2 mb-2"
               onDelete={() => setSelectedBranches([])}
-              label="همه شعب"
+              label="All branches"
             />
           ) : selectedBranches?.length ? (
             branches
@@ -1344,7 +1344,7 @@ export function AdminPurchaseByIngredientsReport({
               onDelete={() =>
                 setSelectedBranches(branches.map((branch) => branch.id))
               }
-              label="هیچ‌کدام از شعب"
+              label="None of the branches"
             />
           )}
         </div>
@@ -1363,7 +1363,7 @@ export function AdminPurchaseByIngredientsReport({
               }}
               className="ml-2 mb-2"
               onDelete={() => setSelectedIngredients([])}
-              label="همه مواداولیه"
+              label="All materials"
             />
           ) : selectedIngredients?.length ? (
             ingredients
@@ -1412,7 +1412,7 @@ export function AdminPurchaseByIngredientsReport({
                   ingredients?.map((ingredient) => ingredient.id)
                 )
               }
-              label="هیچ‌کدام از مواداولیه"
+              label="None of the raw materials"
             />
           )}
         </div>
@@ -1540,7 +1540,7 @@ export function AdminPurchaseByIngredientsReport({
                       }}
                     >
                       <TableCell align="center" style={{ border: "none" }}>
-                        جمع کل
+                        total
                       </TableCell>
                       <TableCell
                         align="center"

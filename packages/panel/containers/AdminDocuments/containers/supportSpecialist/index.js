@@ -46,7 +46,7 @@ const SupportSpecialist = ({
   return (
     <div className="container mb-5">
       <Head>
-        <title>تنظیمات دامنه</title>
+        <title>Domain settings</title>
       </Head>
       <AdminBreadCrumb />
       <div className="col-12 mt-4 px-0"></div>
@@ -70,15 +70,15 @@ const SupportSpecialist = ({
             color: "rgba(0, 0, 0, 0.6)",
           }}
         >
-          <strong>سحر مولی‌زاده - کارشناس پشتیبانی ویترین</strong> همراه شماست
-          تا فرآیند اتصال به دامنه ساده و سریع تر اتفاق بیفتد. از زمان پر کردن
-          فرم شما  10 روز کاری تا ثبت دامنه بر روی وبسایت شما زمان مورد نیاز
-          است. منتظر اتصال دامنه نمانید و از همین امروز بارگزاری محصولات و تکمیل
-          صفحات را با توجه به{" "}
+          <strong>Sahar Molizadeh- Showcase Support Expert</strong> With you
+          Until the process of connecting to a simple and faster domain. Since the time of filling
+          Your form  10 Business Day till domain registration on your website
+          Is. Wait for the domain connection and from the same time the product loading and completing
+          Pages according to{" "}
           <Link style={{ color: "#0050ff" }} href="https://help.vitrin.me/">
-            راهنمای ویترین
+            Showcase guide
           </Link>{" "}
-          آغاز کنید.
+          Start.
         </p>
       </div>
       <div className="d-flex justify-content-end">
@@ -88,7 +88,7 @@ const SupportSpecialist = ({
           color="primary"
           onClick={submit}
         >
-          تایید
+          Confirm
         </Button>
       </div>
       <SuccessMessageModal
@@ -99,9 +99,9 @@ const SupportSpecialist = ({
           (window.location =
             "https://help.vitrin.me/?_gl=1*jd36rr*_ga*MTg4OTAzOTIwNS4xNjUyNzEzNDQ0*_ga_S6SJXQYHNZ*MTY1NTExNDk4Ny40MS4xLjE2NTUxMTU1ODEuNjA.")
         }
-        content="کارشناس پشتیبانی ویترین برای هماهنگی نهایی جهت اتصال دامنه با شما در ارتباط خواهد بود. هم اکنون می‌توانید راه اندازی سایر بخشهای سایت را آغاز کنید."
+        content="Showcase support expert for final coordination to connect domain will be in touch with you. You can start launching other parts of the site now."
         image="/images/Approve.svg"
-        nextTitle="آموزش"
+        nextTitle="Education"
       />
     </div>
   );

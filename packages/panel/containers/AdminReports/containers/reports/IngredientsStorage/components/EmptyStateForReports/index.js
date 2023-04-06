@@ -24,13 +24,13 @@ function AdminIngredientsStorageEmptyStateReports({
         className="u-fontExteraLarge mt-5 mb-3"
         style={{ color: textTypes.text.default }}
       >
-        هنوز گزارشی دریافت نشده است!
+        Has not received any report yet!
       </div>
       <div
         className="u-fontMedium mb-4 text-justify"
         style={{ color: textTypes.text.subdued }}
       >
-        به محض دریافت گزارش شمارش موجودی این قسمت به‌روزرسانی می‌شود.
+        As soon as the inventory count report is received, this section will be updated.
       </div>
       {hasAnyKeepTrackedIngredient && !isSuper && (
         <span>
@@ -43,7 +43,7 @@ function AdminIngredientsStorageEmptyStateReports({
               )
             }
           >
-            درخواست شمارش جدید
+            Asking for a new count
           </Button>
         </span>
       )}

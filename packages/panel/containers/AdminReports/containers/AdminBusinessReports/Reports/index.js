@@ -21,14 +21,14 @@ export function SalesReports({ urlPrefix, business }) {
   return (
     <div className="container">
       <Head>
-        <title>گزارش‌ها</title>
+        <title>reports</title>
       </Head>
       <AdminBreadCrumb />
       <div className="d-flex flex-wrap mt-4">
         <div className="col-12 col-lg-6">
           <Paper className="d-flex flex-column py-3 px-4 mb-4 ">
             <h1 style={{ fontSize: 18 }} className="my-2">
-              گزارش‌های جامع
+              Comprehensive reports
             </h1>
             <div
               style={{
@@ -38,8 +38,8 @@ export function SalesReports({ urlPrefix, business }) {
               }}
               className="mb-5"
             >
-              ارایه اطلاعات عمومی از وضعیت فروش، مقادیر فروش هر یک از کانال‌های
-              فروش، ساعات شروع و پایان کار و غیره.
+              Providing public information on sales status, selling values of each channel
+              Sale, start and end hours of work etc..
             </div>
             <div
               style={{
@@ -49,7 +49,7 @@ export function SalesReports({ urlPrefix, business }) {
               }}
               className="mb-2"
             >
-              گزارش‌ها
+              reports
             </div>
             <div
               className="d-flex flex-column"
@@ -61,7 +61,7 @@ export function SalesReports({ urlPrefix, business }) {
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/analytics/reports/comprehensive`}
                   target="_blank"
                 >
-                  گزارش جامع عملکرد شعبه
+                  Comprehensive Branch Performance Report
                 </Link>
               </div>
               <div className="d-flex justify-content-start align-items-center my-1">
@@ -70,7 +70,7 @@ export function SalesReports({ urlPrefix, business }) {
                   target="_blank"
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/analytics/reports/first_and_last_report`}
                 >
-                  گزارش اولین و آخرین خرید شعبه
+                  Report of the first and last branch purchase
                 </Link>
               </div>
               <div className="d-flex justify-content-start align-items-center my-1">
@@ -79,14 +79,14 @@ export function SalesReports({ urlPrefix, business }) {
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/settings/records`}
                   target="_blank"
                 >
-                  گزارش سوابق پیک‌ها
+                  Report of peak records
                 </Link>
               </div>
             </div>
           </Paper>
           <Paper className="d-flex flex-column py-3 px-4 mb-4 ">
             <h1 style={{ fontSize: 18 }} className="my-2">
-              گزارش‌های فروش(فاکتورها)
+              Sales reports(Factors)
             </h1>
             <div
               style={{
@@ -96,8 +96,8 @@ export function SalesReports({ urlPrefix, business }) {
               }}
               className="mb-5"
             >
-              دسترسی به اطلاعاتی چون فروش محصولات، دسته‌بندی‌ها، افزودنی‌ها و
-              بررسی میزان فروش از کانال‌های فروش
+              Access to information such as selling products, categories, additives and
+              Check sales from sales channels
             </div>
             <div
               style={{
@@ -107,7 +107,7 @@ export function SalesReports({ urlPrefix, business }) {
               }}
               className="mb-2"
             >
-              گزارش‌ها
+              reports
             </div>
             <div
               className="d-flex flex-column"
@@ -119,7 +119,7 @@ export function SalesReports({ urlPrefix, business }) {
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/analytics/reports/total_sales`}
                   target="_blank"
                 >
-                  گزارش مجموع فروش
+                  Total sales report
                 </Link>
               </div>
               <div className="d-flex justify-content-start align-items-center my-1">
@@ -128,7 +128,7 @@ export function SalesReports({ urlPrefix, business }) {
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/analytics/reports/deals`}
                   target="_blank"
                 >
-                  گزارش تعدادی فروش محصولات
+                  Report a number of sales of products
                 </Link>
               </div>
               <div className="d-flex justify-content-start align-items-center my-1">
@@ -137,7 +137,7 @@ export function SalesReports({ urlPrefix, business }) {
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/analytics/reports/gross_sales`}
                   target="_blank"
                 >
-                  گزارش سود ناخالص
+                  Report of gross profit
                 </Link>
               </div>
               {/* <div className="d-flex justify-content-start align-items-center my-1">
@@ -145,7 +145,7 @@ export function SalesReports({ urlPrefix, business }) {
                 <Link
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/analytics/reports/comprehensive_sales`}
                 >
-                  گزارش مالی فروش شعبه براساس کانال فروش
+                  Financial Financial Report Branch Based on Sales Channel
                 </Link>
               </div> */}
 
@@ -154,7 +154,7 @@ export function SalesReports({ urlPrefix, business }) {
                 <Link
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/analytics/reports/sales_by_payment_method_and_sales_channel`}
                 >
-                  گزارش تعدادی فاکتور براساس روش پرداخت و کانال فروش
+                  Report a number of factors based on payment method and sales channel
                 </Link>
               </div> */}
               <div className="d-flex justify-content-start align-items-center my-1">
@@ -163,14 +163,14 @@ export function SalesReports({ urlPrefix, business }) {
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/analytics/reports/product_sales`}
                   target="_blank"
                 >
-                  دریافت خروجی جزییات محصولات فروخته شده
+                  Receive the output of the details of the product sold
                 </Link>
               </div>
             </div>
           </Paper>
           <Paper className="d-flex flex-column py-3 px-4 mb-4">
             <h1 style={{ fontSize: 18 }} className="my-2">
-              گزارش‌های تراکنش‌ها
+              Transaction reports
             </h1>
             <div
               style={{
@@ -180,8 +180,8 @@ export function SalesReports({ urlPrefix, business }) {
               }}
               className="mb-5"
             >
-              دریافت گزارش مالی شامل مالیات، پرداخت، هزینه حمل‌ و نقل و به طور
-              کلی بهای تمام شده محصولات
+              Receive a financial report including taxes, payment, shipping costs and as
+              The overall price of the products
             </div>
             <div
               style={{
@@ -191,7 +191,7 @@ export function SalesReports({ urlPrefix, business }) {
               }}
               className="mb-2"
             >
-              گزارش‌ها
+              reports
             </div>
             <div
               className="d-flex flex-column"
@@ -202,7 +202,7 @@ export function SalesReports({ urlPrefix, business }) {
                 <Link
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/analytics/reports/shipping`}
                 >
-                  گزارش مجموع هزینه ارسال های دریافتی از مشتری
+                  Report the sum of the cost of submission received from the customer
                 </Link>
               </div> */}
               {/* <div className="d-flex justify-content-start align-items-center my-1">
@@ -210,7 +210,7 @@ export function SalesReports({ urlPrefix, business }) {
                 <Link
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/analytics/reports/taxes`}
                 >
-                  گزارش مالیات‌ها براساس سفارش
+                  Tax report based on order
                 </Link>
               </div> */}
               <div className="d-flex justify-content-start align-items-center my-1">
@@ -219,7 +219,7 @@ export function SalesReports({ urlPrefix, business }) {
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/analytics/reports/finance_sales_by_payment_types`}
                   target="_blank"
                 >
-                  گزارش تراکنش‌های مالی فروش شعبه براساس روش پرداخت
+                  Report of branch sales financial transactions based on payment method
                 </Link>
               </div>
               <div className="d-flex justify-content-start align-items-center my-1">
@@ -228,7 +228,7 @@ export function SalesReports({ urlPrefix, business }) {
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/settings/transactions`}
                   target="_blank"
                 >
-                  گزارش تراکنش‌ها
+                  Transaction Report
                 </Link>
               </div>
             </div>
@@ -237,7 +237,7 @@ export function SalesReports({ urlPrefix, business }) {
         <div className="col-12 col-lg-6">
           <Paper className="d-flex flex-column py-3 px-4 mb-4 ">
             <h1 style={{ fontSize: 18 }} className="my-2">
-              گزارش‌های سفارش‌ها
+              Order reports
             </h1>
             <div
               style={{
@@ -247,8 +247,8 @@ export function SalesReports({ urlPrefix, business }) {
               }}
               className="mb-5"
             >
-              بررسی وضعیت سفارش با دریافت گزارش‌های مربوط به تعداد و ارزش
-              سفارش‌ها
+              Check the status of the order by receiving reports of number and value
+              Orders
             </div>
             <div
               style={{
@@ -258,7 +258,7 @@ export function SalesReports({ urlPrefix, business }) {
               }}
               className="mb-2"
             >
-              گزارش‌ها
+              reports
             </div>
             <div
               className="d-flex flex-column"
@@ -270,7 +270,7 @@ export function SalesReports({ urlPrefix, business }) {
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/analytics/reports/total_orders`}
                   target="_blank"
                 >
-                  گزارش مجموع تعداد سفارش‌ها
+                  Report the total number of orders
                 </Link>
               </div>
               <div className="d-flex justify-content-start align-items-center my-1">
@@ -279,14 +279,14 @@ export function SalesReports({ urlPrefix, business }) {
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/analytics/reports/aov`}
                   target="_blank"
                 >
-                  گزارش میانگین ارزش سفارش‌ها
+                  Report of the average value of orders
                 </Link>
               </div>
             </div>
           </Paper>
           <Paper className="d-flex flex-column py-3 px-4 mb-4">
             <h1 style={{ fontSize: 18 }} className="my-2">
-              گزارش‌های تخفیف
+              Discount reports
             </h1>
             <div
               style={{
@@ -296,8 +296,8 @@ export function SalesReports({ urlPrefix, business }) {
               }}
               className="mb-5"
             >
-              مشاهده اطلاعات مربوط به تخفیف، شامل میزان فروش با کد تخفیف، مقادیر
-              تخفیف محصولات و ...
+              View discount information, including sales rates with discount code, values
+              Discount Products and...
             </div>
             <div
               style={{
@@ -307,7 +307,7 @@ export function SalesReports({ urlPrefix, business }) {
               }}
               className="mb-2"
             >
-              گزارش‌ها
+              reports
             </div>
             <div
               className="d-flex flex-column"
@@ -319,14 +319,14 @@ export function SalesReports({ urlPrefix, business }) {
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/analytics/reports/discount_code`}
                   target="_blank"
                 >
-                  گزارش کدهای تخفیف
+                  Report discount codes
                 </Link>
               </div>
             </div>
           </Paper>
           <Paper className="d-flex flex-column py-3 px-4 mb-4">
             <h1 style={{ fontSize: 18 }} className="my-2">
-              گزارش‌های انبارگردانی
+              Warehouse reports
             </h1>
             <div
               style={{
@@ -336,7 +336,7 @@ export function SalesReports({ urlPrefix, business }) {
               }}
               className="mb-5"
             >
-              گزارش‌های مربوط به عملیات‌ انبار، وضعیت موجودی و ...
+              Reports of Warehouse Operations, Status Status and...
             </div>
             <div
               style={{
@@ -346,7 +346,7 @@ export function SalesReports({ urlPrefix, business }) {
               }}
               className="mb-2"
             >
-              گزارش‌ها
+              reports
             </div>
             <div
               className="d-flex flex-column"
@@ -358,7 +358,7 @@ export function SalesReports({ urlPrefix, business }) {
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/analytics/reports/inventory_history`}
                   target="_blank"
                 >
-                  گزارش کامل انبار مواد اولیه شعبه
+                  Complete report of the warehouse of the branch raw materials
                 </Link>
               </div>
               <div className="d-flex justify-content-start align-items-center my-1">
@@ -367,7 +367,7 @@ export function SalesReports({ urlPrefix, business }) {
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/analytics/reports/categories_storage`}
                   target="_blank"
                 >
-                  گزارش انبارگردانی محصولات
+                  Product warehousing report
                 </Link>
               </div>
               <div className="d-flex justify-content-start align-items-center my-1">
@@ -376,7 +376,7 @@ export function SalesReports({ urlPrefix, business }) {
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/analytics/reports/ingredients_storage`}
                   target="_blank"
                 >
-                  مشاهده نتایج انبارگردانی مواد اولیه شعبه
+                  View the warehousing results of the branch raw materials
                 </Link>
               </div>
               <div className="d-flex justify-content-start align-items-center my-1">
@@ -385,14 +385,14 @@ export function SalesReports({ urlPrefix, business }) {
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/analytics/reports/products_deactivation`}
                   target="_blank"
                 >
-                  گزارش غیرفعال کردن محصولات
+                  Report of Disabled Products
                 </Link>
               </div>
             </div>
           </Paper>
           {/* <Paper className="d-flex flex-column py-3 px-4 mb-4">
             <h1 style={{ fontSize: 18 }} className="my-2">
-              گزارش‌های نظرات مشتریان
+              Customer Comments Reports
             </h1>
             <div
               style={{
@@ -402,7 +402,7 @@ export function SalesReports({ urlPrefix, business }) {
               }}
               className="mb-5"
             >
-              مشاهده نطریات مشتریان پس از ثبت سفارش، بررسی علت نارضایتی و ...
+              View customer tips after ordering, checking the cause of dissatisfaction and...
             </div>
             <div
               style={{
@@ -412,7 +412,7 @@ export function SalesReports({ urlPrefix, business }) {
               }}
               className="mb-2"
             >
-              گزارش‌ها
+              reports
             </div>
             <div
               className="d-flex flex-column"
@@ -423,7 +423,7 @@ export function SalesReports({ urlPrefix, business }) {
                 <Link
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/analytics/reports/customers_satisfaction`}
                 >
-                  گزارش میزان رضایت مشتریان
+                  Report the amount of customer satisfaction
                 </Link>
               </div>
               <div className="d-flex justify-content-start align-items-center my-1">
@@ -431,7 +431,7 @@ export function SalesReports({ urlPrefix, business }) {
                 <Link
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/analytics/reports/customers_dissatisfaction`}
                 >
-                  گزارش تحلیل نارضایتی مشتریان
+                  Report of Customer Disability Analysis
                 </Link>
               </div>
             </div>
@@ -439,7 +439,7 @@ export function SalesReports({ urlPrefix, business }) {
           {hasSOW && (
             <Paper className="d-flex flex-column py-3 px-4 mb-4">
               <h1 style={{ fontSize: 18 }} className="my-2">
-                گزارش‌های کیف پول مشترک
+                Joint wallet reports
               </h1>
               <div
                 style={{
@@ -449,7 +449,7 @@ export function SalesReports({ urlPrefix, business }) {
                 }}
                 className="mb-5"
               >
-                مشاهده کلیه تراکنش‌های مربوط به کیف پول
+                View all wallets related transactions
               </div>
               <div
                 style={{
@@ -459,7 +459,7 @@ export function SalesReports({ urlPrefix, business }) {
                 }}
                 className="mb-2"
               >
-                گزارش‌ها
+                reports
               </div>
               <div
                 className="d-flex flex-column"
@@ -471,7 +471,7 @@ export function SalesReports({ urlPrefix, business }) {
                     href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/finance/sow/branch_transactions`}
                     target="_blank"
                   >
-                    گزارش تراکنش‌های شعبه با شعبه مرکزی
+                    Report of Branch Transactions with Central Branch
                   </Link>
                 </div>
               </div>

@@ -9,5 +9,5 @@ AdminShoppingProductsSettingsPage[BRANCHES_PLUGIN] = true;
 AdminShoppingProductsSettingsPage.ShouldBeAdmin = true;
 AdminShoppingProductsSettingsPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "تراکنش‌ها",
+  title: "Transactions",
 };

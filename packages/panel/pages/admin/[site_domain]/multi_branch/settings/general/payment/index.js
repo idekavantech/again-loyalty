@@ -14,5 +14,5 @@ AdminShoppingPaymentSettingsPage[BRANCHES_PLUGIN] = true;
 AdminShoppingPaymentSettingsPage.ShouldBeAdmin = true;
 AdminShoppingPaymentSettingsPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "تنظیمات پرداخت",
+  title: "Payment settings",
 };

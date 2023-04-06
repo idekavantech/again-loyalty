@@ -21,7 +21,7 @@ export function CancelOrderModalVoid({
       <DialogContent className="p-0">
         <div className="px-4 pt-2">
           <div className="d-flex align-items-center justify-content-between">
-            <div style={{ color: night, fontWeight: 500 }}>لغو سفارش</div>
+            <div style={{ color: night, fontWeight: 500 }}>Cancellation of the order</div>
             <IconButton
               aria-label="close"
               onClick={onClose}
@@ -33,7 +33,7 @@ export function CancelOrderModalVoid({
         </div>
       </DialogContent>
       <div className="px-4 py-2">
-        آیا از لغو سفارش و برگشت تمامی موارد به انبار مطمئن هستید؟
+        Are you confident of canceling the order and return all things to the warehouse?
       </div>
       <DialogActions
         className="d-flex align-items-center justify-content-between p-4"
@@ -50,7 +50,7 @@ export function CancelOrderModalVoid({
           disabled={loading}
           style={{ backgroundColor: theme.palette.error.main }}
         >
-          لغو سفارش
+          Cancellation of the order
         </Button>
         <Button
           onClick={onClose}
@@ -64,7 +64,7 @@ export function CancelOrderModalVoid({
             marginLeft: 0,
           }}
         >
-          نگهداشتن سفارش
+          Keeping the order
         </Button>
       </DialogActions>
     </Dialog>

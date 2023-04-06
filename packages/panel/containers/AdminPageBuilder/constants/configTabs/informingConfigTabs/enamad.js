@@ -3,7 +3,7 @@ import { sectionsLayout } from "../../sectionsLayout";
 import { SECTION_ENAMAD } from "@saas/utils/constants/sections";
 
 const enamad = [
-  // اینماد
+  // Inm
   {
     ...sectionsConfigTabsRepeatedParts["customization"],
     items: [

@@ -83,7 +83,7 @@ function RenderSectionsPreview({
                 }}
                 className="ml-3 d-flex"
               ></div>
-              نوار اعلانات
+              Notification bar
             </div>
             <div
               className="d-flex flex-row-reverse align-items-center"
@@ -112,7 +112,7 @@ function RenderSectionsPreview({
                 }}
                 color="primary"
                 inputProps={{
-                  title: "فعال / غیرفعال",
+                  title: "active/ Inactive",
                 }}
               />
             </div>
@@ -151,7 +151,7 @@ function RenderSectionsPreview({
                 }}
                 className="ml-3 d-flex"
               ></div>
-              هدر بالای صفحه
+              The header above the page
             </div>
             <div
               className="d-flex flex-row-reverse align-items-center"
@@ -180,7 +180,7 @@ function RenderSectionsPreview({
                 }}
                 color="primary"
                 inputProps={{
-                  title: "فعال / غیرفعال",
+                  title: "active/ Inactive",
                 }}
               />
             </div>
@@ -219,7 +219,7 @@ function RenderSectionsPreview({
                   }}
                   className="ml-3 d-flex"
                 ></div>
-                هدر
+                Waste
               </div>
             </div>
           </div>
@@ -238,10 +238,10 @@ function RenderSectionsPreview({
               toggleDeleteSectionPopup(true);
             }}
           >
-            <div style={{ fontSize: 14 }}>حذف</div>
+            <div style={{ fontSize: 14 }}>Delete</div>
           </MenuItem>
           <MenuItem onClick={(e) => duplicateSection(e)}>
-            <div style={{ fontSize: 14 }}>کپی کردن</div>
+            <div style={{ fontSize: 14 }}>Copy</div>
           </MenuItem>
         </Menu>
         <DragDropContext onDragEnd={onDragEnd}>
@@ -367,7 +367,7 @@ function RenderSectionsPreview({
                                   }}
                                   color="primary"
                                   inputProps={{
-                                    title: "فعال / غیرفعال",
+                                    title: "active/ Inactive",
                                   }}
                                 />
                               </div>
@@ -415,7 +415,7 @@ function RenderSectionsPreview({
                 }}
                 className="ml-3 d-flex"
               ></div>
-              فوتر
+              Futury
             </div>
           </div>
         </div>
@@ -454,7 +454,7 @@ function RenderSectionsPreview({
               fontWeight: "bold",
             }}
           >
-            سکشن جدید
+            New sequel
           </div>
         </MenuItem>
       </div>

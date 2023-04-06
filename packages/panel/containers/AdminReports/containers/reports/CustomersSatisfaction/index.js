@@ -43,67 +43,67 @@ moment.locale("fa");
 moment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
 
 const sortingOptions = [
-  { id: 0, text: "بیشترین رتبه", keyword: HIGHEST_RATE },
-  { id: 1, text: "کمترین رتبه", keyword: LOWEST_RATE },
+  { id: 0, text: "The highest rank", keyword: HIGHEST_RATE },
+  { id: 1, text: "Lowest rank", keyword: LOWEST_RATE },
 ];
 
 const branchHeadCells = [
   {
     id: "id",
-    name: "ردیف",
-    label: "ردیف",
+    name: "Row",
+    label: "Row",
     align: "center",
   },
   {
     id: "id",
-    name: "فروش شعبه",
+    name: "Branch sales",
     label: (
       <div className="d-flex flex-column">
-        <div>فروش شعبه</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>Branch sales</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
   },
   {
     id: "id",
-    name: "تعداد فاکتور",
-    label: "تعداد فاکتور",
+    name: "Factor number",
+    label: "Factor number",
     align: "center",
   },
   {
     id: "id",
-    name: "میانگین فاکتور",
+    name: "Average invoice",
     label: (
       <div className="d-flex flex-column">
-        <div>میانگین فاکتور</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>Average invoice</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
   },
   {
     id: "id",
-    name: "رتبه",
-    label: "رتبه",
+    name: "Rank",
+    label: "Rank",
     align: "center",
   },
   {
     id: "id",
-    name: "تعداد نظرات",
-    label: "تعداد نظرات",
+    name: "Number of comments",
+    label: "Number of comments",
     align: "center",
   },
   {
     id: "id",
-    name: "راضی",
-    label: "راضی",
+    name: "Satisfied",
+    label: "Satisfied",
     align: "center",
   },
   {
     id: "id",
-    name: "ناراضی",
-    label: "ناراضی",
+    name: "Unhappy",
+    label: "Unhappy",
     align: "center",
   },
 ];
@@ -186,8 +186,8 @@ export function AdminCustomersSatisfactionReport({
       let mainBranchHeadCells = [...branchHeadCells];
       mainBranchHeadCells.splice(1, 0, {
         id: "id",
-        label: "نام شعبه",
-        name: "نام شعبه",
+        label: "Branch Name",
+        name: "Branch Name",
         align: "center",
       });
       return mainBranchHeadCells;
@@ -290,7 +290,7 @@ export function AdminCustomersSatisfactionReport({
     );
   });
   const summaryRow = useMemo(() => {
-    const num = "جمع کل";
+    const num = "total";
     const branchName = "";
     const branchSale =
       customersSatisfactionReviewsReports?.totals?.[0]?.total_order_price;
@@ -332,17 +332,17 @@ export function AdminCustomersSatisfactionReport({
   return (
     <div className="container">
       <Head>
-        <title>میزان رضایت مشتریان</title>
+        <title>Customer satisfaction</title>
       </Head>
 
       <AdminBreadCrumb
-        submitButtonText="خروجی گرفتن"
+        submitButtonText="Output"
         submitAction={() =>
           generateCSVFile(
             headRow,
             rows,
             summaryRow,
-            "گزارش میزان رضایت مشتریان"
+            "Report the amount of customer satisfaction"
           )
         }
       />
@@ -360,13 +360,13 @@ export function AdminCustomersSatisfactionReport({
                   onClick={handleOpen}
                   variant="outlined"
                 >
-                  از{" "}
+                  From{" "}
                   <span className="px-2">
                     {englishNumberToPersianNumber(
                       formatDateObjectToNormal(selectedDayRange.from)
                     )}
                   </span>
-                  تا{" "}
+                  until the{" "}
                   <span className="px-2">
                     {englishNumberToPersianNumber(
                       formatDateObjectToNormal(selectedDayRange.to)
@@ -422,16 +422,16 @@ export function AdminCustomersSatisfactionReport({
                 size="large"
                 // IconComponent={() => null}
                 renderValue={() => {
-                  if (selectedBranches.length === 0) return "شعبه انتخاب کنید";
+                  if (selectedBranches.length === 0) return "Choose a branch";
                   if (selectedBranches.length === 1 && selectedBranches[0])
                     return branches.find(
                       (branch) => branch.id === selectedBranches[0]
                     ).title;
                   if (selectedBranches.length === branches.length)
-                    return "همه شعب";
+                    return "All branches";
                   return `${englishNumberToPersianNumber(
                     selectedBranches.length
-                  )} شعبه `;
+                  )} Branch`;
                 }}
                 MenuProps={{
                   getContentAnchorEl: null,
@@ -466,7 +466,7 @@ export function AdminCustomersSatisfactionReport({
                     checked={selectedBranches.length === branches.length}
                   />
                   <ListItemText
-                    primary="انتخاب همه شعب"
+                    primary="Choosing all branches"
                     className="text-right"
                   />
                 </MenuItem>
@@ -530,7 +530,7 @@ export function AdminCustomersSatisfactionReport({
                 style={{ width: 200 }}
                 className="px-3 u-fontWeightBold u-fontNormal my-1"
               >
-                مرتب‌سازی بر اساس
+                order by
               </div>
             }
             selectOption={(text) =>
@@ -539,7 +539,7 @@ export function AdminCustomersSatisfactionReport({
               )
             }
             inputData={{
-              defaultValue: "مرتب‌سازی",
+              defaultValue: "Ordering",
             }}
             selected={sortingOptions.find(
               (i) => i.keyword === selectedSortingType
@@ -574,7 +574,7 @@ export function AdminCustomersSatisfactionReport({
                 }}
                 className="ml-2 mb-2"
                 onDelete={() => setSelectedBranches([])}
-                label="همه شعب"
+                label="All branches"
               />
             ) : selectedBranches?.length ? (
               branches
@@ -619,7 +619,7 @@ export function AdminCustomersSatisfactionReport({
                 onDelete={() =>
                   setSelectedBranches(branches.map((branch) => branch.id))
                 }
-                label="هیچ‌کدام از شعب"
+                label="None of the branches"
               />
             )}
           </div>
@@ -741,7 +741,7 @@ export function AdminCustomersSatisfactionReport({
                     }}
                   >
                     <TableCell align="center" style={{ border: "none" }}>
-                      جمع کل
+                      total
                     </TableCell>
                     {isSuper && (
                       <TableCell

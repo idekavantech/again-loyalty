@@ -28,18 +28,18 @@ function CheckoutModal({
             fontSize="small"
           />
           <div style={{ lineHeight: "initial" }} className="u-fontWeightBold">
-            تاییده تسویه حساب
+            Penciling confirmation
           </div>
         </div>
         <Divider style={{ backgroundColor: cement }} className="my-4" />
         <div className="d-flex align-items-center">
-          <div className="ml-2">مبلغ تسویه:</div>
+          <div className="ml-2">Settlement amount:</div>
           {finalCheckoutPrice !== 0 && (
             <div className="d-flex justify-content-center ml-2">
               <div style={{ direction: "ltr" }} className="ml-1">
                 {priceFormatter(finalCheckoutPrice)}
               </div>
-              <div>تومان</div>
+              <div>Toman</div>
             </div>
           )}
           <div
@@ -50,25 +50,25 @@ function CheckoutModal({
           </div>
         </div>
         <div className="d-flex align-items-center mt-4">
-          <div className="ml-2">شعبه:</div>
+          <div className="ml-2">Branch:</div>
           <div className="ml-2 u-fontWeightBold">{selectedBranchTitle}</div>
         </div>
-        <div className="mt-5">توضیحات</div>
+        <div className="mt-5">Description</div>
         <Input
           className="mt-2 bg-white"
           color="primary"
           onChange={setDescription}
           value={description}
-          placeholder="متن توضیحات"
+          placeholder="Text of Description"
           multiline
         />
         <div className="mt-1 u-font-semi-small" style={{ color: pollution }}>
-          در این قسمت می‌توانید توضیحات مربوط به پرداخت را وارد نمایید.
+          In this section you can enter the payment description.
         </div>
         <Divider style={{ backgroundColor: cement }} className="my-4" />
         <div className="mb-3 d-flex flex-column flex-md-row align-items-center justify-content-between">
           <div className="u-fontWeightBold">
-            آیا از اطلاعات واردشده اطمینان دارید؟
+            Are you sure of the entered information?
           </div>
           <div className="mt-md-0 mt-3">
             <Button
@@ -77,7 +77,7 @@ function CheckoutModal({
               className="u-box-shadow-none u-fontMedium ml-2"
               size="medium"
             >
-              لغو
+              Cancellation
             </Button>
             <Button
               onClick={() => {
@@ -90,7 +90,7 @@ function CheckoutModal({
               size="medium"
               disabled={finalCheckoutPrice === 0}
             >
-              تایید
+              Confirm
             </Button>
           </div>
         </div>

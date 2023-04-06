@@ -14,5 +14,5 @@ AdminCRMLevelsPage.ShouldBeAdmin = true;
 AdminCRMLevelsPage.Wrapper = AdminLayout;
 AdminCRMLevelsPage[INCLUDED_WEBAPPS_ONLY_KEY] = [DOBARE_WEBAPP_CONSTANT];
 export const breadcrumb = {
-  title: "سطوح مشتریان",
+  title: "Customer levels",
 };

@@ -8,5 +8,5 @@ export default function AdminSettingThemePage() {
 AdminSettingThemePage.ShouldBeAdmin = true;
 AdminSettingThemePage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "ویرایش فونت و رنگ",
+  title: "Edit font and color",
 };

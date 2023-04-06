@@ -14,5 +14,5 @@ AdminCRMSurveySettingPage.ShouldBeAdmin = true;
 AdminCRMSurveySettingPage.Wrapper = AdminLayout;
 AdminCRMSurveySettingPage[INCLUDED_WEBAPPS_ONLY_KEY] = [DOBARE_WEBAPP_CONSTANT];
 export const breadcrumb = {
-  title: "نظرسنجی",
+  title: "Survey",
 };

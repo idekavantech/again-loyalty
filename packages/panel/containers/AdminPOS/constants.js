@@ -7,26 +7,26 @@ export const CASH_DRAWER_TYPE_CLOSED = "3";
 export const cashDrawerTypes = [
   {
     id: CASH_DRAWER_TYPE_OPEN,
-    title: "صندوق‌های باز",
+    title: "Open boxes",
     color: text.success,
     borderColor: border.success,
     surfaceColor: surface.success.default,
-    text: "باز",
+    text: "Open",
   },
   {
     id: CASH_DRAWER_TYPE_FINISHED,
-    title: "صندوق‌های بررسی‌نشده",
+    title: "Untidered funds",
     color: text.critical,
     borderColor: actions.critical.default,
     surfaceColor: surface.critical.default,
-    text: "بررسی‌نشده",
+    text: "Not checked",
   },
   {
     id: CASH_DRAWER_TYPE_CLOSED,
-    title: "صندوق‌های بسته‌شده",
+    title: "Closed boxes",
     color: text.default,
     borderColor: border.default,
     surfaceColor: surface.neutral.default,
-    text: "بسته",
+    text: "Closed",
   },
 ];

@@ -5,8 +5,8 @@ function bodys() {
   return (
     <div style={{ padding: 20 }}>
       <InputLabel
-        note="شما میتوانید از نام های اختصاری برای محصول خود در نرم افزار فروش انتخاب کرده و در دستگاه پوز خود اسامی اختصاری را مشاهده کنید "
-        placeholder="نام محصول"
+        note="You can choose from acronyms for your product in the sales software and see the abbreviation on your device."
+        placeholder="Product Name"
       />
     </div>
   );
@@ -16,8 +16,8 @@ export default function EditDeal({ isOpen, onClose }) {
   return (
     <SefareshModal
       isOpen={isOpen}
-      title="ویرایش محصول"
-      headerButtonText={"ذخیره"}
+      title="Product editing"
+      headerButtonText={"Store"}
       bodys={bodys}
       onClose={onClose}
     />

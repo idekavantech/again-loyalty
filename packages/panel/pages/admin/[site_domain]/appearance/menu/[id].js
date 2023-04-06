@@ -8,5 +8,5 @@ export default function AdminHeaderSettingsMenuPage() {
 AdminHeaderSettingsMenuPage.ShouldBeAdmin = true;
 AdminHeaderSettingsMenuPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "جزئیات منو",
+  title: "Menu Details",
 };

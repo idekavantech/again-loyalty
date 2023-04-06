@@ -40,12 +40,12 @@ function SocialNetworksSection({
     <Paper elevation={1} className=" mt-3 py-3 " ref={socialNetworkRef}>
       <span className="anchor" id="social-media" />
       <div className="col-12 u-fontLarge mb-3" style={{ color: night }}>
-        شبکه اجتماعی
+        social network
       </div>
       <p className="col-12">
-        اطلاعات شبکه های اجتماعی در بخش فوتر سایت تان نمایش داده می شود تا
-        بازدیدکنندگان سایت بتوانند راه های ارتباطی شما یا کانال های محتوایی
-        مرتبط را پیدا کنند.
+        Social Network Information is displayed in your site's footer to
+        Site visitors can communicate your communication or content channels
+        Find relevant.
       </p>
       <div className="d-flex flex-wrap ">
         <div className="col-12 col-lg-6 mt-4">

@@ -8,5 +8,5 @@ export default function AdminEditFormPage() {
 AdminEditFormPage.ShouldBeAdmin = true;
 AdminEditFormPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "ویرایش فرم",
+  title: "Form editing",
 };

@@ -13,16 +13,16 @@ const HeaderAdminBusinessOwner = () => {
           className="mt-4"
           style={{ fontSize: 22, fontWeight: 700, lineHeight: "44px" }}
         >
-          به {process.env.NEXT_PUBLIC_APP_NAME_PERSIAN} خوش آمدید
+          To{process.env.NEXT_PUBLIC_APP_NAME_PERSIAN} welcome
         </p>
         <p className="mt-4 text-center" style={{ lineHeight: "26px" }}>
-          متشکریم که به «{process.env.NEXT_PUBLIC_APP_NAME_PERSIAN}» اعتماد
-          کردید. لطفا قبل از ورود به پنل مدیریت، ابتدا فرم زیر را با مشخصات صاحب
-          سایت پر کنید.
-          {process.env.NEXT_PUBLIC_APP_NAME_PERSIAN == "ویترین"
-            ? ` با وارد کردن این اطلاعات، مراحل راه‌اندازی فروش آنلاین
-          شما مثل ثبت دامنه، درگاه پرداخت و اینماد، ساده‌تر می‌شود. (ویدئوهای
-          آموزشی در پنل شما قرار گرفته است.)`
+          Thank you for«{process.env.NEXT_PUBLIC_APP_NAME_PERSIAN}» the trust
+          you did. Please first form the form below with the owner's profile before logging in to the Management Panel
+          Fill the site.
+          {process.env.NEXT_PUBLIC_APP_NAME_PERSIAN == "Showcase"
+            ? ` By entering this information, stages of online sales
+          You get easier like domain registration, payment gateway and Inm. (Video
+          Tutorials in your panel.)`
             : null}
         </p>
         <LazyImage

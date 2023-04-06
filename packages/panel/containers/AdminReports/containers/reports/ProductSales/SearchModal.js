@@ -23,7 +23,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 let timeoutId = null;
 const SELECT_PRODUCT = "select_product";
 const modalHeaders = {
-  [SELECT_PRODUCT]: "انتخاب محصول",
+  [SELECT_PRODUCT]: "Product selection",
 };
 export function SearchModal({
   isOpen,
@@ -80,7 +80,7 @@ export function SearchModal({
               });
             }, 500);
           }}
-          placeholder="جستجو"
+          placeholder="Search"
           inputProps={{
             className: "pr-5 mr-2",
           }}
@@ -207,7 +207,7 @@ export function SearchModal({
       >
         <div>
           {englishNumberToPersianNumber(Object.keys(selectedProduct).length)}{" "}
-          محصول انتخاب‌شده
+          Product selected
         </div>
         <div>
           <Button
@@ -221,7 +221,7 @@ export function SearchModal({
             size="medium"
             disabled={isLoading || !Object.keys(selectedProduct).length}
           >
-            تایید
+            Confirm
           </Button>
           <Button
             onClick={onClose}
@@ -230,7 +230,7 @@ export function SearchModal({
             className="u-box-shadow-none u-fontMedium mr-3"
             size="medium"
           >
-            انصراف
+            Candifying
           </Button>
         </div>
       </DialogActions>

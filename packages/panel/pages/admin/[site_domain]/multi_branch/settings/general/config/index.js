@@ -9,5 +9,5 @@ AdminShoppingConfigPage[BRANCHES_PLUGIN] = true;
 AdminShoppingConfigPage.ShouldBeAdmin = true;
 AdminShoppingConfigPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "تنظیمات عمومی سفارش‌آنلاین",
+  title: "Public Ordering Online Order Settings",
 };

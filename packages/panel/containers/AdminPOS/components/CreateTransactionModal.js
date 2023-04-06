@@ -32,16 +32,16 @@ export default function CreateTransactionModal({
       onClose={onClose}
       isOpen={isOpen}
       isBig
-      header={<ModalHeader onRightClick={onClose} title="ایجاد تراکنش" />}
+      header={<ModalHeader onRightClick={onClose} title="Transaction creation" />}
       body={
         <div className="flex-1 d-flex flex-column p-4">
           <div className="d-flex flex-wrap mt-2">
             <div className="mt-2 pt-2" style={{ width: 140 }}>
-              مقدار تراکنش (تومان):
+              Transaction Amount(Toman):
             </div>
             <div style={{ minWidth: 250 }} className="flex-1 mt-2">
               <Input
-                placeholder="مقدار تراکنش"
+                placeholder="Transaction Amount"
                 size="small"
                 value={amount}
                 priceInput
@@ -51,13 +51,13 @@ export default function CreateTransactionModal({
           </div>
           <div className="d-flex flex-wrap mt-2">
             <div className="mt-2 pt-2" style={{ width: 140 }}>
-              توضیحات تراکنش:
+              Transaction description:
             </div>
             <div style={{ minWidth: 250 }} className="flex-1 mt-2">
               <Input
                 value={description}
                 onChange={setDescription}
-                placeholder="توضیحات تراکنش"
+                placeholder="Transaction description"
                 size="small"
               />
             </div>
@@ -87,7 +87,7 @@ export default function CreateTransactionModal({
               color="primary"
               className="my-4"
             >
-              {confirmIn ? "تایید دریافت" : "دریافت شده"}
+              {confirmIn ? "Confirmation of receipt" : "received"}
             </Button>
             <Button
               disabled={!amount || !description || loading}
@@ -113,14 +113,14 @@ export default function CreateTransactionModal({
               color="primary"
               className="my-4"
             >
-              {confirmOut ? "تایید پرداخت" : "پرداخت شده"}
+              {confirmOut ? "Payment confirmation" : "Paid"}
             </Button>
           </div>
           <Divider />
-          <div className="u-fontWeightHeavy u-fontLarge mt-5">تراکنش‌ها</div>
+          <div className="u-fontWeightHeavy u-fontLarge mt-5">Transactions</div>
           {device ? (
             <div className="d-flex justify-content-between mt-5">
-              <div>مجموع تراکنش‌ها</div>
+              <div>Total transactions</div>
               <div>
                 {" "}
                 {priceFormatter(
@@ -133,7 +133,7 @@ export default function CreateTransactionModal({
                 device?.active_drawer?.total_paid_in
                   ? "-"
                   : ""}{" "}
-                تومان{" "}
+                Toman{" "}
               </div>
             </div>
           ) : null}

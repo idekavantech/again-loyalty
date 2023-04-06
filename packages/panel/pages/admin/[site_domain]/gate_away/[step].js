@@ -8,5 +8,5 @@ AdminGateAwayPage.ShouldBeAdmin = true;
 AdminGateAwayPage.Wrapper = AdminLayout;
 
 export const breadcrumb = {
-  title: "اتصال درگاه پرداخت",
+  title: "Connecting the payment gateway",
 };

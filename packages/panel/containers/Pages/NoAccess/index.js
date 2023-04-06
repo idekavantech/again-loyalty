@@ -39,7 +39,7 @@ function NoAccess({ urlPrefix }) {
         <div className="d-flex flex-column justify-content-center align-items-center flex-1">
           <LazyImage src={noAccess} alt="" />
           <div className="mt-4 text-center">
-            <div>متاسفانه به این صفحه دسترسی ندارید!</div>
+            <div>Unfortunately you don't have access to this page!</div>
           </div>
         </div>
         <div className="sticky-bottom d-flex flex-column flex-md-row justify-content-between align-items-center">
@@ -49,7 +49,7 @@ function NoAccess({ urlPrefix }) {
             className="w-100 m-2"
             onClick={() => router.push(`${urlPrefix}/`)}
           >
-            بازگشت به صفحه اصلی
+            Return to main page
           </Button>
           <Button
             color="primary"
@@ -62,7 +62,7 @@ function NoAccess({ urlPrefix }) {
               window.location = `/login/?url=${window.location.pathname}`;
             }}
           >
-            خروج
+            Exit
           </Button>
         </div>
       </Paper>

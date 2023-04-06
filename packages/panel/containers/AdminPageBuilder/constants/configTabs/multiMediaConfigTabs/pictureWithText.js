@@ -6,41 +6,41 @@ import { sectionsLayout } from "../../sectionsLayout";
 import { SECTION_PICTURE_WITH_TEXT } from "@saas/utils/constants/sections";
 
 const pictureWithText = [
-  // عکس به همراه متن
+  // Photo with the text
   {
     ...sectionsConfigTabsRepeatedParts["content"],
     items: [
       {
         id: uniqueid(),
-        label: "عنوان",
+        label: "Title",
         key: "title",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "عنوان بخش",
+            label: "Section title",
             type: "text",
             key: "value",
-            default_value: "عنوان بخش",
+            default_value: "Section title",
           },
           {
             id: uniqueid(),
-            label: "رنگ عنوان",
+            label: "Title color",
             default_value: process.env.NEXT_PUBLIC_ADMIN_THEME_COLOR,
             key: "color",
             type: "color",
           },
           {
             id: uniqueid(),
-            label: "اندازه فونت",
+            label: "Font size",
             key: "font_size",
             default_value: "20px",
             type: "text",
           },
           {
             id: uniqueid(),
-            label: "HTML تگ",
+            label: "HTML tag",
             key: "html_tag",
             default_value: "h1",
             type: "select",
@@ -96,14 +96,14 @@ const pictureWithText = [
       },
       {
         id: uniqueid(),
-        label: "توضیحات",
+        label: "Description",
         key: "description",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "توضیحات بخش",
+            label: "Section description",
             type: "richtext",
             key: "value",
             default_value: LOREM_IPSUM_SHORT,
@@ -112,14 +112,14 @@ const pictureWithText = [
       },
       {
         id: uniqueid(),
-        label: "عکس",
+        label: "Picture",
         key: "image",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "آپلود عکس",
+            label: "Upload a Photo",
             type: "image_uploader",
             key: "value",
             default_value: `${CDN_BASE_URL}/home7_img_01.png`,
@@ -131,21 +131,21 @@ const pictureWithText = [
       },
       {
         id: uniqueid(),
-        label: "دکمه",
+        label: "Button",
         key: "button",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "متن",
+            label: "Text",
             type: "text",
             key: "value",
-            default_value: "بیشتر",
+            default_value: "More",
           },
           {
             id: uniqueid(),
-            label: "لینک",
+            label: "link",
             type: "text",
             key: "link",
             default_value: "/",

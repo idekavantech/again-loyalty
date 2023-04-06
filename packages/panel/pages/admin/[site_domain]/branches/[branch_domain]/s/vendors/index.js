@@ -8,5 +8,5 @@ export default function AdminVendorSettingsPage() {
 AdminVendorSettingsPage.ShouldBeAdmin = true;
 AdminVendorSettingsPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "تامین‌کننده‌ها",
+  title: "Suppliers",
 };

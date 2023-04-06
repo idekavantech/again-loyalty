@@ -14,5 +14,5 @@ AdminCRMSegmentsPage.ShouldBeAdmin = true;
 AdminCRMSegmentsPage.Wrapper = AdminLayout;
 AdminCRMSegmentsPage[INCLUDED_WEBAPPS_ONLY_KEY] = [DOBARE_WEBAPP_CONSTANT];
 export const breadcrumb = {
-  title: "بخش‌بندی مشتریان",
+  title: "Customer segmentation",
 };

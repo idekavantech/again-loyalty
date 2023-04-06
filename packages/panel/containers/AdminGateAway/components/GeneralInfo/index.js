@@ -17,7 +17,7 @@ const GeneralInfo = ({
   return (
     <div>
       <p className="pt-3 my-2">
-        اطلاعات زیر را برای ساخت حساب کاربری در زیبال پر کنید.
+        Fill in the following information to build an account in Zebra.
       </p>
       <div className="d-flex flex-wrap">
         <div className="mt-4 col-md-4 px-0 pr-md-0 pl-md-3">
@@ -26,8 +26,8 @@ const GeneralInfo = ({
             InputLabelProps={{
               shrink: true,
             }}
-            placeholder="مثال: مریم"
-            label="نام"
+            placeholder="Example: Mary"
+            label="name"
             value={info.name}
             onChange={(name) => {
               setInfo({ ...info, name });
@@ -43,8 +43,8 @@ const GeneralInfo = ({
             InputLabelProps={{
               shrink: true,
             }}
-            placeholder="مثال: طاهری"
-            label="نام خانوادگی"
+            placeholder="Example: Taheri"
+            label="last name"
             value={info.lastname}
             onChange={(lastname) => {
               setInfo({ ...info, lastname });
@@ -73,8 +73,8 @@ const GeneralInfo = ({
             handleDateChange={(date) =>
               setInfo({ ...info, birthday: date?.format("YYYY-MM-DD") || null })
             }
-            placeholder="مثال : ۱۳۷۶/۱۲/۰۱"
-            label={"تاریخ تولد"}
+            placeholder="Example: ۱۳۷۶/۱۲/۰۱"
+            label={"Date of birth"}
             onFocus={() => setErrors({ ...errors, birthday: "" })}
             helperText={errors.birthday}
             error={errors.birthday}
@@ -88,8 +88,8 @@ const GeneralInfo = ({
               shrink: true,
             }}
             inputProps={{ maxlength: 10 }}
-            placeholder="مثال: ۱۲۳۴۵۶۷۸۹۰"
-            label="کد ملی"
+            placeholder="Example: ۱۲۳۴۵۶۷۸۹۰"
+            label="National Code"
             onChange={(nationalId) => {
               setInfo({ ...info, nationalId });
             }}
@@ -98,7 +98,7 @@ const GeneralInfo = ({
               info.nationalId && info.nationalId.length < 10
                 ? setErrors({
                     ...errors,
-                    nationalId: "کدملی باید ده رقم باشد",
+                    nationalId: "Code must be ten digits",
                   })
                 : setErrors({ nationalId: "" });
             }}
@@ -113,8 +113,8 @@ const GeneralInfo = ({
             InputLabelProps={{
               shrink: true,
             }}
-            placeholder="مثال: علی"
-            label="نام پدر"
+            placeholder="Example: Ali"
+            label="father's name"
             onChange={(fatherName) => {
               setInfo({ ...info, fatherName });
             }}
@@ -126,7 +126,7 @@ const GeneralInfo = ({
         </div>
         <div className="mt-4 px-0 mt-md-5 col-md-6 pr-md-3 pl-md-3">
           <p className="mb-2" style={{ color: "#0050FF", fontWeight: 500 }}>
-            افزودن عکس کارت ملی*
+            Adding a national card photo*
           </p>
           <NationalCardImage
             removeFile={_removeFile}
@@ -144,8 +144,8 @@ const GeneralInfo = ({
       <div className="warning-box mt-5 p-3 d-flex align-items-center">
         <ReportProblemOutlinedIcon className="icon" />
         <span className="mr-2">
-          ورود کامل و صحیح اطلاعات معتبر برای تایید اکانت و شروع فرآیند تهیه
-          درگاه پرداخت ضروری است.
+          Full and correct login valid information to confirm your account and start the preparation process
+          Payment Portal is essential.
         </span>
       </div>
       <Button
@@ -155,7 +155,7 @@ const GeneralInfo = ({
         size="large"
         onClick={submit}
       >
-        ادامه
+        Continuation
       </Button>
     </div>
   );

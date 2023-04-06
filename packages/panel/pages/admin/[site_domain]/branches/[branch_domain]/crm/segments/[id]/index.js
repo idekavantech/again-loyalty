@@ -9,5 +9,5 @@ AdminCRMSegmentsSettingPage[CRM_PLUGIN] = true;
 AdminCRMSegmentsSettingPage.ShouldBeAdmin = true;
 AdminCRMSegmentsSettingPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "تنظیمات بخش‌بندی مشتریان",
+  title: "Customer segmentation settings",
 };

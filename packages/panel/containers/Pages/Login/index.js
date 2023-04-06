@@ -70,11 +70,11 @@ function Login({ _login, isLoading, themeColor }) {
                         />
                     </div>
                     <div className="mt-5 u-text-darkest-grey u-fontMedium">
-                        شماره همراه خود را وارد کنید.
+                        Enter your mobile number..
                     </div>
                     <div className="mt-1 u-text-dark-grey u-fontMedium">
-                        با وارد کردن شماره موبایل کد تاییدی برای شما ارسال خواهد
-                        شد
+                        By entering the mobile number will send you a confirmation code
+                        became
                     </div>
                     <Input
                         type="tel"
@@ -82,7 +82,7 @@ function Login({ _login, isLoading, themeColor }) {
                         id="phoneNumber"
                         value={phoneNumber}
                         noModal
-                        label="شماره همراه"
+                        label="Mobile number"
                         onKeyPress={handleKeyPress}
                         themeColor={themeColor}
                         onChange={(value) =>
@@ -113,7 +113,7 @@ function Login({ _login, isLoading, themeColor }) {
                         className="ml-2"
                         disabled={isLoading}
                     >
-                        بازگشت
+                        coming back
                     </Button>
                     <Button
                         disabled={isLoading}
@@ -125,7 +125,7 @@ function Login({ _login, isLoading, themeColor }) {
                         variant="contained"
                         onClick={submit}
                     >
-                        {isLoading ? <LoadingIndicator /> : "تایید و ادامه"}
+                        {isLoading ? <LoadingIndicator /> : "Confirm and continue"}
                     </Button>
                 </Paper>
             </Paper>

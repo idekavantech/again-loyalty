@@ -156,15 +156,15 @@ export function AdminPageBuilder() {
   const helpVideos = {
     pdp: {
       url: ADMIN_HELP_VIDEOS.productPageBuilder.url,
-      title: "ویرایش صفحه محصول",
+      title: "Product page editing",
     },
     shop: {
       url: ADMIN_HELP_VIDEOS.shopPageBuilder.url,
-      title: "ویرایش صفحه سفارش آنلاین",
+      title: "Edit the online order page",
     },
     main: {
       url: ADMIN_HELP_VIDEOS.mainPageBuilder.url,
-      title: "ویرایش صفحه",
+      title: "Edit page",
     },
   };
   return (
@@ -200,15 +200,15 @@ export function AdminPageBuilder() {
         saveHeaderChanges={() =>
           _updateBusiness(
             { theme_config: { ...themeConfig, header_config: headerConfig } },
-            "هدر سایت شما با موفقیت به روز رسانی شد.",
-            "بروزرسانی هدر سایت شما موفقیت آمیز نبود!"
+            "Your site header was successfully updated.",
+            "Your site header update was not successful!"
           )
         }
         saveFooterChanges={() =>
           _updateBusiness(
             { theme_config: { ...themeConfig, footer_config: footerConfig } },
-            "فوتر سایت شما با موفقیت به روز رسانی شد.",
-            "بروزرسانی فوتر سایت شما موفقیت آمیز نبود!"
+            "Your site footer was successfully updated.",
+            "Your site's footer update was not successful!"
           )
         }
         saveNavigationBarChanges={() => {
@@ -219,8 +219,8 @@ export function AdminPageBuilder() {
                 navigationBar_config: navigationBarConfig,
               },
             },
-            "نوار اعلانات سایت شما با موفقیت به روز رسانی شد.",
-            "بروزرسانی نوار اعلانات سایت شما موفقیت آمیز نبود!"
+            "Your site's notification bar was successfully updated.",
+            "Your site's notification bar update was not successful!"
           );
         }}
         saveTopPageHeaderChanges={() => {
@@ -231,8 +231,8 @@ export function AdminPageBuilder() {
                 top_page_header_config: topPageHeaderConfig,
               },
             },
-            " هدر بالای صفحه سایت شما با موفقیت به روز رسانی شد.",
-            "بروزرسانی هدر بالای صفحه سایت شما موفقیت آمیز نبود!"
+            " The header at the top of your site's page was successfully updated.",
+            "The header of the top of your site was not successful!"
           );
         }}
       />
@@ -336,7 +336,7 @@ export function AdminPageBuilder() {
             }}
           >
             <div style={{ fontWeight: "bold", fontSize: 16, color: "#323b43" }}>
-              آیا از حذف این سکشن مطمئن هستید؟
+              Are you sure to delete this sequel?
             </div>
             <div className="mt-3 d-flex flex-row-reverse">
               <Button
@@ -353,7 +353,7 @@ export function AdminPageBuilder() {
                   clickedOnSection(null);
                 }}
               >
-                حذف
+                Delete
               </Button>
               <Button
                 color="default"
@@ -367,7 +367,7 @@ export function AdminPageBuilder() {
                   clickedOnSection(null);
                 }}
               >
-                انصراف
+                Candifying
               </Button>
             </div>
           </div>
@@ -404,7 +404,7 @@ export function AdminPageBuilder() {
                   }}
                 >
                   <AddRoundedIcon />
-                  افزودن
+                  Add
                 </Button>
               )}
               {isMobile && (
@@ -420,7 +420,7 @@ export function AdminPageBuilder() {
                     _updatePage(_page, updateDashboardState);
                   }}
                 >
-                  ذخیره
+                  Store
                 </Button>
               )}
               <Button
@@ -481,7 +481,7 @@ export function AdminPageBuilder() {
                     <IconButton color="default" size="small">
                       <PhoneIphoneRoundedIcon />
                     </IconButton>
-                    <div style={{ fontSize: 14 }}>موبایل</div>
+                    <div style={{ fontSize: 14 }}>Mobile</div>
                   </MenuItem>
                   <MenuItem
                     onClick={() => handleViewModeItemClick(DESKTOP_MODE)}
@@ -489,7 +489,7 @@ export function AdminPageBuilder() {
                     <IconButton color="default" size="small">
                       <DesktopMacRoundedIcon />
                     </IconButton>
-                    <div style={{ fontSize: 14 }}>دسکتاپ</div>
+                    <div style={{ fontSize: 14 }}>desktop</div>
                   </MenuItem>
                 </Menu>
               </div>
@@ -515,7 +515,7 @@ export function AdminPageBuilder() {
                     });
                   }}
                 >
-                  ذخیره
+                  Store
                 </Button>
                 {_page && previewLink && (
                   <Link target="_blank" href={previewLink} passHref>
@@ -529,7 +529,7 @@ export function AdminPageBuilder() {
                       size="medium"
                       variant="contained"
                     >
-                      پیش‌نمایش
+                      Preview
                     </Button>
                   </Link>
                 )}
@@ -576,7 +576,7 @@ export function AdminPageBuilder() {
             </div>
             <div className="mt-3">
               <div style={{ color: "#adb1b5", fontWeight: "bold" }}>
-                سکشن‌ها
+                Suction
               </div>
               <RenderSectionsPreview
                 tempPage={tempPage}
@@ -619,9 +619,9 @@ export function AdminPageBuilder() {
               textAlign: isMobile ? "right" : "center",
             }}
           >
-            با <strong>کلیک</strong> بر بخشهای مختلف صفحه خودتان می توانید{" "}
-            <strong>محتوا </strong>و <strong>قالب</strong> هر بخش را به سلیقه
-            خودتان شخصی‌سازی کنید.{" "}
+            With<strong>Click</strong> On different parts of your own page can{" "}
+            <strong>Content</strong>And<strong>Format</strong> Each section to taste
+            Customize yourself.{" "}
           </p>
           <div
             style={{ fontFamily: business?.theme_config?.font?.url || "dana" }}
@@ -909,7 +909,7 @@ export function AdminPageBuilder() {
                   className="p-2"
                   onClick={() => setSectionPreviewDrawerForMobile(true)}
                 >
-                  سکشن‌‌‌ها
+                  Suction
                 </Button>
                 <IconButton
                   disabled={
@@ -951,8 +951,8 @@ export function AdminPageBuilder() {
       />
       <SuccessMessageModal
         isOpen={isOpenSuccessModal}
-        title="تغییر شما با موفقیت ثبت شد!"
-        content="شما می‌توانید در ادامه صفحات مختلفی برای سایت خودتان بسازید و بخش‌های موردنیاز را به صفحه اضافه کنید."
+        title="Your change was successfully registered!"
+        content="You can create different pages for your site and add the required sections to the page."
         onClose={() => setIsOpenSuccessModal(false)}
         next={() => setIsOpenSuccessModal(false)}
         returnToDashboard={() => router.back()}
@@ -1002,7 +1002,7 @@ export function AdminPageBuilder() {
                 paddingRight: 16,
               }}
             >
-              اخطار
+              Warning
             </span>
           </div>
           <span style={{ fontSize: 14 }}>
@@ -1020,7 +1020,7 @@ export function AdminPageBuilder() {
               variant="outlined"
               style={{ height: 40, width: 64 }}
             >
-              خیر
+              Good
             </Button>
             <Button
               color="primary"
@@ -1040,7 +1040,7 @@ export function AdminPageBuilder() {
                 )
               }
             >
-              بلی
+              Cat
             </Button>
           </div>
         </Paper>

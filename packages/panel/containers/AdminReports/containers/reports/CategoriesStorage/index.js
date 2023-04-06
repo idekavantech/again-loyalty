@@ -57,10 +57,10 @@ import {
 } from "store/actions";
 
 const sortingOptions = [
-  { id: 0, text: "بیشترین مبلغ", keyword: HIGHEST_PRICE },
-  { id: 1, text: "کمترین مبلغ", keyword: LOWEST_PRICE },
-  { id: 2, text: "بیشترین سود", keyword: HIGHEST_PROFIT },
-  { id: 3, text: "کمترین سود", keyword: LOWEST_PROFIT },
+  { id: 0, text: "The highest amount", keyword: HIGHEST_PRICE },
+  { id: 1, text: "The least amount", keyword: LOWEST_PRICE },
+  { id: 2, text: "Most profit", keyword: HIGHEST_PROFIT },
+  { id: 3, text: "The least profit", keyword: LOWEST_PROFIT },
 ];
 
 const sortingFunctions = {
@@ -81,32 +81,32 @@ const sortingFunctions = {
 const headCells = [
   {
     id: "id",
-    name: "ردیف",
-    label: "ردیف",
+    name: "Row",
+    label: "Row",
     align: "center",
     minWidth: 100,
   },
   {
     id: "id",
-    name: "نام دسته‌بندی",
-    label: "نام دسته‌بندی",
+    name: "Category name",
+    label: "Category name",
     align: "center",
     minWidth: 100,
   },
   {
     id: "id",
-    name: "تعداد موجودی",
-    label: "تعداد موجودی",
+    name: "Inventory Number",
+    label: "Inventory Number",
     align: "center",
     minWidth: 100,
   },
   {
     id: "id",
-    name: "مجموع قیمت کل",
+    name: "Total total price",
     label: (
       <div className="d-flex justify-content-between flex-column">
-        <div>مجموع قیمت کل</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>Total total price</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
@@ -114,11 +114,11 @@ const headCells = [
   },
   {
     id: "id",
-    name: "سود مورد انتطار",
+    name: "expected profit",
     label: (
       <div className="d-flex justify-content-between flex-column">
-        <div>سود مورد انتطار</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>expected profit</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
@@ -218,7 +218,7 @@ export function AdminCategoriesStorageReport({
   const summaryRow = useMemo(
     () =>
       warehouseReportingCategories && [
-        "جمع کل",
+        "total",
         "",
         warehouseReportingCategories?.totals.inventory_count,
         warehouseReportingCategories?.totals.expected_sales,
@@ -243,17 +243,17 @@ export function AdminCategoriesStorageReport({
   return (
     <div className="container">
       <Head>
-        <title>گزارش انبارگردانی محصولات</title>
+        <title>Product warehousing report</title>
       </Head>
 
       <AdminBreadCrumb
-        submitButtonText="خروجی گرفتن"
+        submitButtonText="Output"
         submitAction={() =>
           generateCSVFile(
             headRow,
             rows,
             summaryRow,
-            "گزارش انبارگردانی محصولات"
+            "Product warehousing report"
           )
         }
       />
@@ -285,7 +285,7 @@ export function AdminCategoriesStorageReport({
                     style={{ width: 200 }}
                     className="px-3 u-fontWeightBold u-fontNormal my-1"
                   >
-                    انتخاب شعبه
+                    Choosing a branch
                   </div>
                 }
                 selectOption={(text) => {
@@ -295,7 +295,7 @@ export function AdminCategoriesStorageReport({
                   );
                 }}
                 inputData={{
-                  defaultValue: "شعبه",
+                  defaultValue: "Branch",
                 }}
                 selected={serilizedBrnaches.find(
                   (branch) => branch.slug === selectedBranch
@@ -327,16 +327,16 @@ export function AdminCategoriesStorageReport({
               // IconComponent={() => null}
               renderValue={() => {
                 if (!selectedCategories?.length === 0)
-                  return "دسته‌بندی انتخاب کنید";
+                  return "Select the category";
                 if (selectedCategories?.length === 1 && selectedCategories[0])
                   return categories?.find(
                     (category) => category.id === selectedCategories[0]
                   ).name;
                 if (selectedCategories?.length === categories?.length)
-                  return "همه دسته‌بندی‌ها";
+                  return "All categories";
                 return `${englishNumberToPersianNumber(
                   selectedCategories?.length
-                )} دسته‌بندی `;
+                )} Grouping`;
               }}
               MenuProps={{
                 getContentAnchorEl: null,
@@ -371,7 +371,7 @@ export function AdminCategoriesStorageReport({
                   checked={selectedCategories?.length === categories?.length}
                 />
                 <ListItemText
-                  primary="انتخاب همه دسته‌بندی‌ها"
+                  primary="Choosing all categories"
                   className="text-right"
                 />
               </MenuItem>
@@ -436,7 +436,7 @@ export function AdminCategoriesStorageReport({
                 style={{ width: 200 }}
                 className="px-3 u-fontWeightBold u-fontNormal my-1"
               >
-                مرتب‌سازی بر اساس
+                order by
               </div>
             }
             selectOption={(text) => {
@@ -445,7 +445,7 @@ export function AdminCategoriesStorageReport({
               );
             }}
             inputData={{
-              defaultValue: "مرتب‌سازی",
+              defaultValue: "Ordering",
             }}
             selected={sortingOptions.find(
               (i) => i.keyword === selectedSortingType
@@ -480,7 +480,7 @@ export function AdminCategoriesStorageReport({
               }}
               className="ml-2 mb-2"
               onDelete={() => setselectedCategories([])}
-              label="همه دسته‌بندی‌ها"
+              label="All categories"
             />
           ) : selectedCategories?.length ? (
             categories
@@ -529,7 +529,7 @@ export function AdminCategoriesStorageReport({
                   categories?.map((category) => category.id)
                 )
               }
-              label="‌هیچ‌کدام از دسته‌بندی‌ها"
+              label="‌None of the categories"
             />
           )}
         </div>
@@ -620,7 +620,7 @@ export function AdminCategoriesStorageReport({
                     }}
                   >
                     <TableCell align="center" style={{ border: "none" }}>
-                      جمع کل
+                      total
                     </TableCell>
                     <TableCell
                       align="center"

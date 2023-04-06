@@ -7,21 +7,21 @@ import uniqueId from "lodash/uniqueId";
 import { LOREM_IPSUM_SHORT } from "../sharedConstants";
 
 const specialBanner = [
-  // بنر ویژه
+  // Special banner
   {
     ...sectionsConfigTabsRepeatedParts["content"],
     items: [
       {
         id: uniqueid(),
-        label: "عنوان",
+        label: "Title",
         key: "title",
         element_id: "theme_1_title",
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "متن عنوان",
-            default_value: "عنوان",
+            label: "Title text",
+            default_value: "Title",
             key: "value",
             type: "text",
             rowsMax: 4,
@@ -29,26 +29,26 @@ const specialBanner = [
           },
           {
             id: uniqueid(),
-            label: "اندازه فونت",
+            label: "Font size",
             key: "font_size",
             default_value: "medium",
             type: "select",
             options: [
               {
                 id: uniqueid(),
-                label: "کوچک",
+                label: "Little",
                 value: "small",
                 // value: ["2vw", "7.5vw", "1.6vw"],
               },
               {
                 id: uniqueid(),
-                label: "متوسط",
+                label: "medium",
                 value: "medium",
                 // value: ["3vw", "9vw", "2.4vw"],
               },
               {
                 id: uniqueid(),
-                label: "بزرگ",
+                label: "big",
                 value: "large",
                 // value: ["4vw", "16vw", "4vw"],
               },
@@ -56,7 +56,7 @@ const specialBanner = [
           },
           {
             id: uniqueid(),
-            label: "از رنگ تم سایت استفاده شود.",
+            label: "Use the color of the site theme.",
             default_value: true,
             key: "use_theme_color",
             type: "switch",
@@ -70,7 +70,7 @@ const specialBanner = [
               },
             ],
             id: uniqueid(),
-            label: "رنگ عنوان",
+            label: "Title color",
             key: "color",
             type: "color",
           },
@@ -78,15 +78,15 @@ const specialBanner = [
       },
       {
         id: uniqueid(),
-        label: "زیر عنوان",
+        label: "Sub-headings",
         key: "slogan",
         element_id: "theme_1_slogan",
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "زیر عنوان",
-            default_value: "زیر عنوان",
+            label: "Sub-headings",
+            default_value: "Sub-headings",
             key: "value",
             type: "text",
             rowsMax: 8,
@@ -98,7 +98,7 @@ const specialBanner = [
           },
           {
             id: uniqueid(),
-            label: "از رنگ تم سایت استفاده شود.",
+            label: "Use the color of the site theme.",
             key: "use_theme_color",
             default_value: true,
             type: "switch",
@@ -113,21 +113,21 @@ const specialBanner = [
             ],
             id: uniqueid(),
             key: "color",
-            label: "رنگ زیر عنوان",
+            label: "Color under the title",
             type: "color",
           },
         ],
       },
       {
         id: uniqueid(),
-        label: "توضیحات",
+        label: "Description",
         key: "description_text",
         element_id: "theme_1_description",
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "متن توضیحات",
+            label: "Text of Description",
             default_value: LOREM_IPSUM_SHORT,
             key: "value",
             type: "text",
@@ -135,7 +135,7 @@ const specialBanner = [
           },
           {
             id: uniqueid(),
-            label: "اندازه فونت",
+            label: "Font size",
             default_value: "medium",
             key: "font_size",
             type: "select",
@@ -143,7 +143,7 @@ const specialBanner = [
           },
           {
             id: uniqueid(),
-            label: "از رنگ تم سایت استفاده شود.",
+            label: "Use the color of the site theme.",
             key: "use_theme_color",
             default_value: true,
             type: "switch",
@@ -158,21 +158,21 @@ const specialBanner = [
             ],
             id: uniqueid(),
             key: "color",
-            label: "رنگ توضیحات",
+            label: "Color Description",
             type: "color",
           },
         ],
       },
       {
         id: uniqueid(),
-        label: "عکس پس‌زمینه",
+        label: "back ground Photo",
         key: "background_image",
         element_id: null,
-        // description: "حجم عکس زیر ۲ میگابایت باشد",
+        // description: "The size of the photo below is 1 megabyte",
         fields: [
           {
             id: uniqueid(),
-            label: "اپلود عکس",
+            label: "Upload a Photo",
             type: "image_uploader",
             default_value: `${CDN_BASE_URL}mock8.jpg`,
             key: "value",
@@ -180,7 +180,7 @@ const specialBanner = [
           },
           {
             id: uniqueid(),
-            label: "اپلود عکس جداگانه برای موبایل",
+            label: "Upload Separate Photo for Mobile",
             type: "switch",
             key: "has_banner_image_for_mobile",
             default_value: false,
@@ -194,7 +194,7 @@ const specialBanner = [
               },
             ],
             id: uniqueid(),
-            label: "آپلود عکس",
+            label: "Upload a Photo",
             type: "image_uploader",
             key: "banner_image_in_mobile",
             default_value: `${CDN_BASE_URL}mock8.jpg`,
@@ -204,14 +204,14 @@ const specialBanner = [
           },
           {
             id: uniqueid(),
-            label: "لایه رنگی روی عکس",
+            label: "The colored layer on the photo",
             type: "switch",
             default_value: true,
             key: "has_overlay",
           },
           {
             id: uniqueid(),
-            label: "تصویر پارالکس شود.",
+            label: "Parallex image.",
             default_value: false,
             key: "parallax",
             type: "switch",
@@ -220,7 +220,7 @@ const specialBanner = [
       },
       {
         id: uniqueid(),
-        label: "دکمه‌ها",
+        label: "buttons",
         key: "buttons",
         element_id: "theme_1_buttons",
         description: "",
@@ -228,23 +228,23 @@ const specialBanner = [
         extendable_items: true,
         min_items: 1,
         max_items: 8,
-        add_new_item_text: "افزودن دکمه جدید",
+        add_new_item_text: "Add new button",
         items_fields: [
           {
             id: uniqueid(),
-            label: "لینک دکمه",
+            label: "Button link",
             default_value: "link",
             key: "link_type",
             type: "select",
             options: [
               {
                 id: uniqueid(),
-                label: "لینک",
+                label: "link",
                 value: "link",
               },
               {
                 id: uniqueid(),
-                label: "‌شماره تلفن",
+                label: "‌phone number",
                 value: "phone_num",
               },
             ],
@@ -259,8 +259,8 @@ const specialBanner = [
             ],
 
             id: uniqueid(),
-            label: "متن دکمه",
-            default_value: "متن دکمه",
+            label: "Button text",
+            default_value: "Button text",
             type: "text",
             key: "text",
           },
@@ -273,8 +273,8 @@ const specialBanner = [
               },
             ],
             id: uniqueid(),
-            label: "متن دکمه",
-            default_value: "تماس",
+            label: "Button text",
+            default_value: "Contact",
             type: "text",
             key: "num",
           },
@@ -288,7 +288,7 @@ const specialBanner = [
             ],
 
             id: uniqueid(),
-            label: "لینک دکمه",
+            label: "Button link",
             default_value: "/",
             type: "text",
             key: "link",
@@ -304,7 +304,7 @@ const specialBanner = [
             ],
 
             id: uniqueid(),
-            label: "‌شماره تلفن",
+            label: "‌phone number",
             default_value: "",
             type: "text",
             inputType: "number",
@@ -313,50 +313,50 @@ const specialBanner = [
           },
           {
             id: uniqueid(),
-            label: "نوع دکمه",
+            label: "Button type",
             default_value: "contained",
             type: "select",
             key: "variant",
             options: [
               {
                 id: uniqueid(),
-                label: "تو پر",
+                label: "So on",
                 value: "contained",
               },
               {
                 id: uniqueid(),
-                label: "تو خالی",
+                label: "You are empty",
                 value: "outlined",
               },
               {
                 id: uniqueid(),
-                label: "متنی",
+                label: "Text",
                 value: "text",
               },
             ],
           },
           {
             id: uniqueid(),
-            label: "شکل دکمه",
+            label: "Button shape",
             default_value: "normal",
             type: "select",
             key: "button_shape",
             options: [
               {
                 id: uniqueid(),
-                label: "بیضی",
+                label: "Oval",
                 value: "rounded",
               },
               {
                 id: uniqueid(),
-                label: "مستطیل",
+                label: "Rectangle",
                 value: "normal",
               },
             ],
           },
           {
             id: uniqueid(),
-            label: "استفاده از رنگ تم",
+            label: "The use of theme color",
             type: "checkbox",
             key: "use_theme_color",
             default_value: true,
@@ -371,7 +371,7 @@ const specialBanner = [
               },
             ],
             id: uniqueid(),
-            label: "رنگ بکگراند دکمه",
+            label: "Background button",
             type: "color",
             key: "background_color",
           },
@@ -385,7 +385,7 @@ const specialBanner = [
               },
             ],
             id: uniqueid(),
-            label: "رنگ خط دور دکمه",
+            label: "The color of the button round",
             type: "color",
             key: "border_color",
           },
@@ -399,7 +399,7 @@ const specialBanner = [
             ],
 
             id: uniqueid(),
-            label: "رنگ متن دکمه",
+            label: "The color of the button text",
             type: "color",
             key: "color",
           },
@@ -407,31 +407,31 @@ const specialBanner = [
         fields: [
           {
             id: uniqueid(),
-            label: "استفاده از دکمه‌های پیشفرض",
+            label: "The use of default buttons",
             type: "switch",
             key: "use_default_buttons",
             default_value: true,
           },
           {
             id: uniqueid(),
-            label: "اندازه دکمه",
+            label: "Button size",
             default_value: "__medium",
             key: "button_size",
             type: "select",
             options: [
               {
                 id: uniqueid(),
-                label: "کوچک",
+                label: "Little",
                 value: "__small",
               },
               {
                 id: uniqueid(),
-                label: "متوسط",
+                label: "medium",
                 value: "__medium",
               },
               {
                 id: uniqueid(),
-                label: "بزرگ",
+                label: "big",
                 value: "__large",
               },
             ],
@@ -456,14 +456,14 @@ const specialBanner = [
       },
       {
         id: uniqueid(),
-        label: "ارتفاع‌ها",
+        label: "Its height",
         key: "heights",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "دارای نسبت عرض به ارتفاع ثابت در موبایل",
+            label: "Convenient",
             type: "switch",
             key: "use_ratio_height_in_mobile",
             default_value: false,
@@ -477,34 +477,34 @@ const specialBanner = [
               },
             ],
             id: uniqueid(),
-            label: "ارتفاع سکشن در موبایل",
+            label: "The height of the sequel to the mobile",
             default_value: "60vh",
             type: "select",
             key: "mobile_height",
             options: [
               {
                 id: uniqueid(),
-                label: "خیلی کوتاه",
+                label: "Too short",
                 value: "20vh",
               },
               {
                 id: uniqueid(),
-                label: "کوتاه",
+                label: "Short",
                 value: "30vh",
               },
               {
                 id: uniqueid(),
-                label: "متوسط",
+                label: "medium",
                 value: "40vh",
               },
               {
                 id: uniqueid(),
-                label: "بلند",
+                label: "Tall",
                 value: "50vh",
               },
               {
                 id: uniqueid(),
-                label: "خیلی بلند",
+                label: "very tall",
                 value: "60vh",
               },
             ],
@@ -517,7 +517,7 @@ const specialBanner = [
               },
             ],
             id: uniqueid(),
-            label: "نسبت عرض به ارتفاع سکشن در موبایل",
+            label: "Ratio",
             default_value: "16:9",
             type: "select",
             key: "mobile_ratio",
@@ -581,7 +581,7 @@ const specialBanner = [
           },
           {
             id: uniqueid(),
-            label: "دارای نسبت عرض به ارتفاع ثابت در دسکتاپ",
+            label: "Desktop",
             type: "switch",
             key: "use_ratio_height_in_desktop",
             default_value: false,
@@ -593,34 +593,34 @@ const specialBanner = [
               },
             ],
             id: uniqueid(),
-            label: "ارتفاع سکشن در دسکتاپ",
+            label: "Sequel height on the desktop",
             default_value: "80vh",
             type: "select",
             key: "desktop_height",
             options: [
               {
                 id: uniqueid(),
-                label: "خیلی کوتاه",
+                label: "Too short",
                 value: "40vh",
               },
               {
                 id: uniqueid(),
-                label: "کوتاه",
+                label: "Short",
                 value: "50vh",
               },
               {
                 id: uniqueid(),
-                label: "متوسط",
+                label: "medium",
                 value: "60vh",
               },
               {
                 id: uniqueid(),
-                label: "بلند",
+                label: "Tall",
                 value: "70vh",
               },
               {
                 id: uniqueid(),
-                label: "خیلی بلند",
+                label: "very tall",
                 value: "80vh",
               },
             ],
@@ -632,7 +632,7 @@ const specialBanner = [
               },
             ],
             id: uniqueid(),
-            label: "نسبت عرض به ارتفاع سکشن در دسکتاپ",
+            label: "The ratio of width to the height of the sequel in the desktop",
             default_value: "16:9",
             type: "select",
             key: "desktop_ratio",
@@ -693,26 +693,26 @@ const specialBanner = [
       },
       {
         id: uniqueid(),
-        label: "بک‌گراند",
+        label: "back ground",
         key: "background",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "انتخاب نوع پس زمینه",
+            label: "The choice of background type",
             default_value: "image",
             key: "background_type",
             type: "select",
             options: [
               {
                 id: uniqueId(),
-                label: "عکس",
+                label: "Picture",
                 value: "image",
               },
               {
                 id: uniqueId(),
-                label: "رنگ",
+                label: "Color",
                 value: "color",
               },
             ],
@@ -727,7 +727,7 @@ const specialBanner = [
             ],
 
             id: uniqueId(),
-            label: "وضوح عکس",
+            label: "Photo resolution",
             default_value: "80",
             key: "opacity",
             type: "slider",
@@ -742,7 +742,7 @@ const specialBanner = [
             ],
 
             id: uniqueId(),
-            label: "رنگ پس‌زمینه",
+            label: "The background color",
             default_value: "#f2e9ea",
             key: "color",
             type: "color",
@@ -751,35 +751,35 @@ const specialBanner = [
       },
       {
         id: uniqueid(),
-        label: "نمایش‌ها",
+        label: "Shows",
         key: "showcases",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "نمایش عنوان",
+            label: "Show title",
             default_value: true,
             type: "switch",
             key: "title",
           },
           {
             id: uniqueid(),
-            label: "نمایش زیر عنوان",
+            label: "View under the title",
             default_value: true,
             type: "switch",
             key: "slogan",
           },
           {
             id: uniqueid(),
-            label: "نمایش توضیحات",
+            label: "Show Description",
             default_value: true,
             type: "switch",
             key: "description",
           },
           {
             id: uniqueid(),
-            label: "نمایش دکمه‌ها",
+            label: "Buttons display",
             default_value: true,
             type: "switch",
             key: "buttons",
@@ -789,26 +789,26 @@ const specialBanner = [
 
       {
         id: uniqueid(),
-        label: "اندازه سکشن",
+        label: "Section size",
         key: "section_size",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "عرض سکشن",
+            label: "Request",
             default_value: "w-100",
             type: "select",
             key: "main_width",
             options: [
               {
                 id: uniqueid(),
-                label: "تمام صفحه",
+                label: "fullscreen",
                 value: "w-100",
               },
               {
                 id: uniqueid(),
-                label: "با فاصله",
+                label: "with Gap",
                 value: "container",
               },
             ],
@@ -817,41 +817,41 @@ const specialBanner = [
       },
       {
         id: uniqueId(),
-        label: "محل نمایش محتوا روی تصویر",
+        label: "The content of the content on the image",
         key: "content_location",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueId(),
-            label: "انتخاب محل محتوا",
+            label: "Select the location of the content",
             key: "value",
             default_value: "center",
             type: "select",
             options: [
               {
                 id: uniqueId(),
-                label: "وسط",
+                label: "middle",
                 value: "center",
               },
               {
                 id: uniqueId(),
-                label: "بالا وسط",
+                label: "The upper middle",
                 value: "top_center",
               },
               {
                 id: uniqueId(),
-                label: "پایین وسط",
+                label: "The bottom of the middle",
                 value: "bottom_center",
               },
               {
                 id: uniqueId(),
-                label: "وسط راست",
+                label: "The middle of the right",
                 value: "center_right",
               },
               {
                 id: uniqueId(),
-                label: "پایین راست",
+                label: "The bottom right",
                 value: "bottom_right",
               },
             ],

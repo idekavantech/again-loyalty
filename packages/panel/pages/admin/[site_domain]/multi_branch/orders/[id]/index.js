@@ -9,5 +9,5 @@ AdminOrderPage[BRANCHES_PLUGIN] = true;
 AdminOrderPage.ShouldBeAdmin = true;
 AdminOrderPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "جزئیات سفارش",
+  title: "Order details",
 };

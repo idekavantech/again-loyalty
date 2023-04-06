@@ -58,7 +58,7 @@ function MainInfoSection({
       <div className="col-12 col-lg-6 mb-3">
         <span className="anchor" id="business-logo" />
         <div className="u-fontLarge" style={{ color: night }}>
-          تصویر لوگو
+          Logo image
         </div>
 
         <MainIconImage
@@ -69,7 +69,7 @@ function MainInfoSection({
         />
         <span className="anchor" id="business-logo" />
         <div className="mt-4 u-fontLarge" style={{ color: night }}>
-          فاو‌آیکون
+          Fu akon
           <ClickAwayListener onClickAway={() => setIsOpenTooltip(false)}>
             <Tooltip
               placement="left"
@@ -91,8 +91,8 @@ function MainInfoSection({
                       src={`/images/tooltip-favicon.svg`}
                     />
                     <p className="mt-2">
-                      فاوآیکون نمادی تصویری است که وب سایت شما در فضای اینترنت
-                      را به دیگران نشان می‌دهد.
+                      Fawaikon is a symbol of the image that your website on the Internet
+                      Shows to others.
                     </p>
                   </div>
                 </React.Fragment>
@@ -122,7 +122,7 @@ function MainInfoSection({
 
         <span className="anchor" id="business-image" />
         <div className="mt-4 u-fontLarge" style={{ color: night }}>
-          عکس اصلی کسب‌وکار
+          Main Business Photo
         </div>
         <CoverPhotoImage
           removeFile={removingFile}
@@ -133,13 +133,13 @@ function MainInfoSection({
       </div>
       <div className="col-12 col-lg-6">
         <div className="u-fontLarge mb-3" style={{ color: night }}>
-          اطلاعات پایه
+          Basic Information
         </div>
         <span className="anchor" id="business-title" />
         <div>
           <Input
-            label="عنوان کسب‌و‌کار"
-            placeholder="مثلا رستوران ریحون"
+            label="Business title"
+            placeholder="For example Reyhun Restaurant"
             value={title}
             onChange={changeTitle}
             size="medium"
@@ -147,7 +147,7 @@ function MainInfoSection({
           <div className="mt-4">
             <Input
               className="mt-1"
-              label="شعار کسب‌و‌کار"
+              label="Business slogan"
               value={slogan}
               onChange={changeSlogan}
               size="medium"
@@ -157,7 +157,7 @@ function MainInfoSection({
           <div className="mt-4">
             <Input
               className="mt-1"
-              label="درباره ما"
+              label="about us"
               value={stringAboutUs}
               multiline
               inputProps={{ maxLength: 250 }}
@@ -166,7 +166,7 @@ function MainInfoSection({
                 if (value.length < 250) {
                   setError("");
                 } else {
-                  setError("متن شما نمی‌تواند بیشتر از ۲۵۰ کاراکتر باشد.");
+                  setError("Your text cannot be more than 2 characters.");
                 }
               }}
             />

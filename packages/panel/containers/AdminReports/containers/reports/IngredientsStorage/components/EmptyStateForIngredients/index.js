@@ -27,14 +27,14 @@ function AdminIngredientsStorageEmptyStateIngredients({ urlPrefix, isSuper }) {
         className="u-fontExteraLarge mt-5 mb-3"
         style={{ color: textTypes.text.default }}
       >
-        مواد اولیه شما فاقد انبارگردانی است!
+        Your raw materials lack warehouse!
       </div>
       <div
         className="u-fontMedium mb-4 text-justify"
         style={{ color: textTypes.text.subdued }}
       >
-        به منظور گزارش‌گیری از مواد اولیه لازم است ابتدا انبارگردانی را برای
-        مواداولیه موردنظر خود فعال کنید.
+        In order to report the raw materials it is necessary to first direct the warehouse for
+        Activate the raw materials you want.
       </div>
       <span>
         <Button
@@ -48,7 +48,7 @@ function AdminIngredientsStorageEmptyStateIngredients({ urlPrefix, isSuper }) {
             )
           }
         >
-          فعالسازی انبارگردانی
+          Warehouse activation
         </Button>
       </span>
     </Paper>

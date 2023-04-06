@@ -5,5 +5,5 @@ export default function AdminActivationPage() {
 AdminActivationPage.ShouldBeAdmin = true;
 
 export const breadcrumb = {
-  title: "راه‌اندازی",
+  title: "Setting up",
 };

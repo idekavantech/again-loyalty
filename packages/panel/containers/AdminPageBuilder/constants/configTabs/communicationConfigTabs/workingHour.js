@@ -4,21 +4,21 @@ import { sectionsLayout } from "../../sectionsLayout";
 import { SECTION_WORKING_HOUR } from "@saas/utils/constants/sections";
 
 const workingHour = [
-  // ساعت کاری
+  // Hours of work
   {
     is_not_prop: true,
     ...sectionsConfigTabsRepeatedParts["content"],
     items: [
       {
         id: uniqueid(),
-        label: "تنظیمات",
+        label: "Settings",
         key: "setting",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "تغییر ساعت کاری",
+            label: "Change the working hours",
             key: "button",
             type: "button",
             link: "setting#working_hours",

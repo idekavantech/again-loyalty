@@ -99,7 +99,7 @@ const FieldMultipleImageUploader = ({
           <GridItem key={0} style={{ padding: 5 }}>
             <AddNewItemSection
               className="h-100 u-box-shadow-none flex-column-reverse align-items-center justify-content-center p-2 u-border-radius-4"
-              title="عکس"
+              title="Picture"
               onClick={() => myFiles.current.click()}
             />
           </GridItem>

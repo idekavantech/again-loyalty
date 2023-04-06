@@ -84,8 +84,8 @@ export function AdminPages({
   );
   const pagesData = [
     {
-      title: "ویرایش صفحات سایت",
-      name: "صفحه",
+      title: "Edit site pages",
+      name: "Page",
       type: "page",
       pages,
       nextPageNumber,
@@ -93,8 +93,8 @@ export function AdminPages({
       _setNextPageNumber,
     },
     {
-      title: "ویرایش پست‌ها",
-      name: "پست",
+      title: "Edit posts",
+      name: "Post",
       type: "blog",
       pages: blogPages,
       nextPageNumber: nextBlogPageNumber,
@@ -120,12 +120,12 @@ export function AdminPages({
     }, 0);
   }, [nextBlogPageNumber]);
   const createPage = ({ currentPage, entityName }) => {
-    const isBlog = entityName === "پست";
+    const isBlog = entityName === "Post";
     if (currentPage)
       _createBusinessPage(
         {
           business: business.id,
-          data: { ...currentPage.data, name: `کپی ${currentPage.data.name}` },
+          data: { ...currentPage.data, name: `Copy${currentPage.data.name}` },
         },
         (id) => {
           if (isBlog) _getBusinessBlogPages();
@@ -141,7 +141,7 @@ export function AdminPages({
         {
           business: business.id,
           data: {
-            name: `${entityName} جدید`,
+            name: `${entityName} New`,
             seo_title: "",
             keyphrase: "",
             meta_description: "",
@@ -174,7 +174,7 @@ export function AdminPages({
   return (
     <div className="container pb-3">
       <Head>
-        <title>ویرایش صفحات وب سایت</title>
+        <title>Edit web pages</title>
       </Head>
       <AdminBreadCrumb />
       {pagesData.map((page) => (
@@ -189,7 +189,7 @@ export function AdminPages({
             entityName: page.name,
           })}
           newBtnData={{
-            text: `${page.name} جدید`,
+            text: `${page.name} New`,
             onClick: ({ currentPage }) =>
               createPage({ entityName: page.name, currentPage }),
           }}
@@ -199,10 +199,10 @@ export function AdminPages({
               labelDisplayedRows={({ from, to, count }) =>
                 `${englishNumberToPersianNumber(
                   from
-                )} - ${englishNumberToPersianNumber(to)} از ${
+                )} - ${englishNumberToPersianNumber(to)} From${
                   count !== -1
                     ? englishNumberToPersianNumber(count)
-                    : `بیشتر از  ${englishNumberToPersianNumber(to)}`
+                    : `more than${englishNumberToPersianNumber(to)}`
                 }`
               }
               rowsPerPageOptions={[10]}
@@ -255,7 +255,7 @@ export function AdminPages({
             pageRowProps={{
               ...pageRowProps({
                 isBlog: false,
-                entityName: "صفحه",
+                entityName: "Page",
               }),
               plugin: pagesObject.id,
             }}
@@ -263,7 +263,7 @@ export function AdminPages({
               onClick: (currentPage) =>
                 createPage({
                   ...(currentPage && { currentPage }),
-                  entityName: "صفحه",
+                  entityName: "Page",
                 }),
             }}
           />

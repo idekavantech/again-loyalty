@@ -12,47 +12,47 @@ export const SELECTABLE_FORM_FIELDS = [
   {
     id: uniqueid(),
     type: "text",
-    text: "تکست ساده",
+    text: "Simple text",
   },
   {
     id: uniqueid(),
     type: "tel",
-    text: "شماره تلفن",
+    text: "phone number",
   },
   {
     id: uniqueid(),
     type: "number",
-    text: "عدد",
+    text: "number",
   },
   {
     id: uniqueid(),
     type: "email",
-    text: "ایمیل",
+    text: "email",
   },
   {
     id: uniqueid(),
     type: "button",
-    text: "دکمه",
+    text: "Button",
   },
   {
     id: uniqueid(),
     type: "location",
-    text: "موقعیت",
+    text: "Location",
   },
   {
     id: uniqueid(),
     type: "image",
-    text: "عکس",
+    text: "Picture",
   },
   {
     id: uniqueid(),
     type: "checkbox",
-    text: "چک باکس"
+    text: "Checkbox"
   },
   {
     id: uniqueid(),
     type: "radio",
-    text: "دکمه رادیویی"
+    text: "Radio button"
   }
 ];
 
@@ -80,7 +80,7 @@ export const FIELDS_CONFIGS_COMPONENTS = {
           color="primary"
         />
       }
-      label="ضروری بودن فیلد"
+      label="The necessary field"
     />
   )
   },
@@ -90,7 +90,7 @@ export const FIELDS_CONFIGS_COMPONENTS = {
       size="medium"
       value={value}
       onChange={(v) => setValue(v)}
-      label="برچسب فیلد"
+      label="Field label"
     />
   ),
   placeholder: ({ value, setValue }) => (
@@ -99,7 +99,7 @@ export const FIELDS_CONFIGS_COMPONENTS = {
       size="medium"
       value={value}
       onChange={(v) => setValue(v)}
-      label="placeholder فیلد"
+      label="placeholder field"
     />
   ),
   title: ({ value, setValue }) => (
@@ -108,7 +108,7 @@ export const FIELDS_CONFIGS_COMPONENTS = {
       size="medium"
       value={value}
       onChange={(v) => setValue(v)}
-      label="عنوان بالای فیلد"
+      label="The top of the field"
     />
   ),
   titleOfRadioOrCheckbox: ({ value, setValue }) => (
@@ -117,7 +117,7 @@ export const FIELDS_CONFIGS_COMPONENTS = {
       size="medium"
       value={value}
       onChange={(v) => setValue(v)}
-      label="متن سوال"
+      label="Question Text"
     />
   ),
   text: ({ value, setValue }) => (
@@ -126,7 +126,7 @@ export const FIELDS_CONFIGS_COMPONENTS = {
       size="medium"
       value={value}
       onChange={(v) => setValue(v)}
-      label="متن دکمه"
+      label="Button text"
     />
   ),
   callback: ({ value, setValue }) => (
@@ -136,7 +136,7 @@ export const FIELDS_CONFIGS_COMPONENTS = {
       value={value}
       style={{ direction: "ltr" }}
       onChange={(v) => setValue(v)}
-      label="آدرس لینک بعد از کلیک شدن دکمه"
+      label="Link address after the button is clicked"
     />
   ),
 
@@ -150,7 +150,7 @@ export const FIELDS_CONFIGS_COMPONENTS = {
           color="primary"
         />
       }
-      label="قابلیت انتخاب چند عکس"
+      label="Multiplication"
     />
   ),
   useCheckboxField: ({ value, setValue }) => {
@@ -186,9 +186,9 @@ export const FIELDS_CONFIGS_COMPONENTS = {
                 size="medium"
                 value={checkbox.text}
                 onChange={(v) => handleChange(v, checkbox.id)}
-                label={`گزینه ${index + 1}`}
+                label={`option${index + 1}`}
                 error={checkbox.text === ""}
-                helperText={checkbox.text === "" ? "پر کردن فیلد الزامی است" : ""}
+                helperText={checkbox.text === "" ? "Filling the field is required" : ""}
               />
             </div>
             <div>
@@ -238,9 +238,9 @@ export const FIELDS_CONFIGS_COMPONENTS = {
                 size="medium"
                 value={radio.text}
                 onChange={(v) => handleChange(v, radio.id)}
-                label={`گزینه ${index + 1}`}
+                label={`option${index + 1}`}
                 error={radio.text === ""}
-                helperText={radio.text === "" ? "پر کردن فیلد الزامی است" : ""}
+                helperText={radio.text === "" ? "Filling the field is required" : ""}
               />
             </div>
             <div>

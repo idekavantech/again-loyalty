@@ -9,5 +9,5 @@ AdminCRMSurveyPage[CRM_PLUGIN] = true;
 AdminCRMSurveyPage.ShouldBeAdmin = true;
 AdminCRMSurveyPage.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "جزئیات نظرسنجی",
+  title: "Details of survey",
 };

@@ -61,7 +61,7 @@ export function AdminNavigationMenus({
     const id = uniqueid();
     _menus[id] = {
       id,
-      name: "منوی جدید",
+      name: "New menu",
       links: [],
     };
     setMenus(_menus);
@@ -81,19 +81,19 @@ export function AdminNavigationMenus({
     >
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
-          آیا مطمئن هستید که می‌خواهید این منو آيتم را حذف کنید؟
+          Are you sure you want to delete this item menu?
         </DialogContentText>
       </DialogContent>
       <DialogActions>
         <Button onClick={deleteMenu} color="primary">
-          حذف منو آیتم
+          Remove the item menu
         </Button>
         <Button
           onClick={() => setIsConfirmationOpen(false)}
           color="primary"
           autoFocus
         >
-          انصراف
+          Candifying
         </Button>
       </DialogActions>
     </Dialog>
@@ -107,8 +107,8 @@ export function AdminNavigationMenus({
     };
     _updateBusiness(
       editedBusiness,
-      "منوها با موفقیت ذخیره شدند.",
-      "ذخیره تغییرات منوها ناموفق بود!"
+      "Menus were successfully stored.",
+      "Save menus changes were unsuccessful!"
     );
   };
   useEffect(() => {
@@ -121,7 +121,7 @@ export function AdminNavigationMenus({
     <div className="container">
       {renderDeleteItemPopup}
       <Head>
-        <title>ویرایش منوهای سایت</title>
+        <title>Edit site menus</title>
       </Head>
       <AdminBreadCrumb helpVideo={{ url: ADMIN_HELP_VIDEOS.menus.url }} />
       <Paper elevation={1} className="p-3 mt-3">
@@ -129,7 +129,7 @@ export function AdminNavigationMenus({
           className="px-3 d-flex justify-content-between align-items-center"
           style={{ color: theme.palette.text.tertiary, fontSize: 16 }}
         >
-          <div>لیست منوهای سایت</div>
+          <div>List of site menus</div>
           <div>
             <Button
               style={{ direction: "ltr" }}
@@ -138,7 +138,7 @@ export function AdminNavigationMenus({
               onClick={addNewMenuItem}
               endIcon={<AddRoundedIcon fontSize="small" />}
             >
-              منوآیتم جدید
+              The new menu
             </Button>
           </div>
         </div>
@@ -169,7 +169,7 @@ export function AdminNavigationMenus({
                     </div>
                   }
                 >
-                  ویرایش
+                  Edit
                 </Button>
                 {item !== MAIN_HEADER_NAVIGATION_MENU &&
                 item !== MAIN_FOOTER_NAVIGATION_MENU &&
@@ -191,7 +191,7 @@ export function AdminNavigationMenus({
       </Paper>
       <SaveAndDiscardButtons
         saveAction={submit}
-        saveText="ذخیره منوها"
+        saveText="Save menus"
         disabled={loading}
       />
     </div>

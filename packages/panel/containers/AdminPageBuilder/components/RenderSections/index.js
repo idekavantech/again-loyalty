@@ -63,7 +63,7 @@ function RenderSections({
           />
           <SectionPreviewBorderWrapper
             clickedSection={clickedSection}
-            renderSection={"نوار اعلانات"}
+            renderSection={"Notification bar"}
             id={"navigationBar"}
             theme={theme}
             style={{ minHeight: 40, top: 0, zIndex: 1001 }}
@@ -89,7 +89,7 @@ function RenderSections({
           />
           <SectionPreviewBorderWrapper
             clickedSection={clickedSection}
-            renderSection={"هدر بالای صفحه"}
+            renderSection={"The header above the page"}
             id={"topPageHeader"}
             theme={theme}
             style={{ minHeight: 40, top: 0, zIndex: 1001 }}
@@ -115,7 +115,7 @@ function RenderSections({
           />
           <SectionPreviewBorderWrapper
             clickedSection={clickedSection}
-            renderSection={"هدر"}
+            renderSection={"Waste"}
             id={"header"}
             theme={theme}
             style={{ minHeight: headerHeight, top: 0 }}
@@ -204,7 +204,7 @@ function RenderSections({
               <AspectRatioRoundedIcon fontSize="large" />
             </div>
             <div className="mt-3">
-              لطفا یک سکشن از لیست سکشن‌ها انتخاب کنید.
+              Please select a sequel from the list of sections.
             </div>
           </div>
         </div>
@@ -229,7 +229,7 @@ function RenderSections({
           />
           <SectionPreviewBorderWrapper
             clickedSection={clickedSection}
-            renderSection={"فوتر"}
+            renderSection={"Futury"}
             id={"footer"}
             theme={theme}
             style={{ minHeight: 40, top: 0, zIndex: 1000 }}

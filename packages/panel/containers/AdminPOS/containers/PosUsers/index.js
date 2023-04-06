@@ -43,11 +43,11 @@ function PosUsers({
     <div style={{ borderTop: `1px solid ${border.subdued}` }}>
       <Paper elevation={2} className="my-4 py-4">
         <div className="col-12 mb-3">
-          <div className="mb-2 u-fontLarge u-fontWeightHeavy">تعریف کاربر</div>
+          <div className="mb-2 u-fontLarge u-fontWeightHeavy">Definition of the user</div>
           <div className="mb-4">
-            برای استفاده از دستگاه، به تعداد کسانی که از دستگاه استفاده می‌کنند،
-            نیاز به حساب کاربری بر روی آن دستگاه دارید. بدین شکل می‌توانید
-            عملیات هر کاربر روی دستگاه را از طریق حساب کاربری او مدیریت کنید.
+            To use the device, to the number of people using the device,
+            Need an account on that device. You can
+            Manage the operation of each user on the device through his account.
           </div>
           <Divider />
         </div>
@@ -83,7 +83,7 @@ function PosUsers({
                     className="u-fontMedium u-cursor-pointer"
                     style={{ color: process.env.NEXT_PUBLIC_ADMIN_THEME_COLOR }}
                   >
-                    افزودن کاربر جدید
+                    Add new user
                   </span>
                 </Button>
               </div>
@@ -94,7 +94,7 @@ function PosUsers({
             <div className="col-12 mt-4 col-lg-6">
               <Input
                 labelPlacement="top"
-                label="نام کاربر"
+                label="user name"
                 value={name}
                 onChange={setName}
                 size="medium"
@@ -102,7 +102,7 @@ function PosUsers({
             </div>
             <div className="col-12 mt-4 col-lg-6">
               <Input
-                label="شماره تلفن کاربر"
+                label="User phone number"
                 helperText={phoneError}
                 labelPlacement="top"
                 numberOnly

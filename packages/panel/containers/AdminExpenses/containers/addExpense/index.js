@@ -56,13 +56,13 @@ const AddExpense = () => {
       <AdminBreadCrumb responsive={false} />
       <Paper className="p-4">
         <div className="mb-4 px-2" style={{ fontSize: "1.3rem" }}>
-          ثبت هزینه جدید
+          Register a new fee
         </div>
         <div className="d-flex mb-4 flex-row flex-wrap">
           <ClickAwayListener onClickAway={handleCloseCostCategoryAutocomplite}>
             <div className="col-12 px-2 col-lg-3 col-md-4 col-sm-12">
               <p style={{ fontSize: 12, fontWeight: 600, position: "relative" }} className="mb-1">
-                دسته‌بندی‌
+                Grouping
               </p>
 
               <TextField
@@ -112,7 +112,7 @@ const AddExpense = () => {
                     })
                   ) : (
                     <MenuItem onClick={() => createNewCostCategory(updateCostCategoryId)}>
-                      ساخت{" "}
+                      Build{" "}
                       <span style={{ padding: "0 1rem " }}>
                         <b>{costCategoryTextField}</b>
                       </span>
@@ -124,7 +124,7 @@ const AddExpense = () => {
           </ClickAwayListener>
           <div className="col-12 px-2 col-lg-3 col-md-4 col-sm-12">
             <p style={{ fontSize: 12, fontWeight: 600, position: "relative" }} className="mb-1">
-              مبلغ
+              Amount
             </p>
             <TextField
               error={priceErr}
@@ -145,12 +145,12 @@ const AddExpense = () => {
                 color: "rgba(0,0,0,.12)",
               }}
             >
-              تومان
+              Toman
             </div>
           </div>
           <div className="col-12 px-2 col-lg-3 col-md-4 col-sm-12">
             <p style={{ fontSize: 12, fontWeight: 600 }} className="mb-1">
-              تاریخ
+              Date
             </p>
             <MuiPickersUtilsProvider utils={JalaliUtils} locale={"fa"}>
               <DatePicker
@@ -165,12 +165,12 @@ const AddExpense = () => {
                 InputProps={{ disableUnderline: true }}
                 inputVariant="standard"
                 fullWidth={true}
-                okLabel="تأیید"
-                cancelLabel="لغو"
+                okLabel="Confirmation"
+                cancelLabel="Cancellation"
                 ampm={false}
                 required
-                invalidDateMessage="زمان انتخاب شده صحیح نیست"
-                minDateMessage="تاریخ روزهای گذشته مجاز نیست"
+                invalidDateMessage="The selected time is not correct."
+                minDateMessage="Date of the past days is not allowed"
                 minTime={new Date(0, 0, 0, 9)}
                 placeholder="0000/00/00"
                 labelFunc={(date) => {
@@ -196,7 +196,7 @@ const AddExpense = () => {
         </div>
         <div className="px-2 mb-4">
           <p style={{ color: text.default }} className="mb-2 u-fontWeightHeavy u-font-semi-small">
-            شرح
+            Rate
           </p>
           <TextField
             error={descriptionErr}
@@ -204,7 +204,7 @@ const AddExpense = () => {
             InputProps={{
               style: { borderRadius: 8 },
             }}
-            placeholder="یادداشتی برای این‌که بعدا یادتان بیاید"
+            placeholder="A note to remember you later"
             floatingLabelText="MultiLine and FloatingLabel"
             multiline
             value={cost?.description || ""}
@@ -217,11 +217,11 @@ const AddExpense = () => {
         </div>
         <div className="col-12 px-2 col-lg-3 col-md-5 col-sm-12">
           <p style={{ fontSize: 12, fontWeight: 600 }} className="mb-1">
-            نحوه پرداخت
+            payment method
           </p>
           <Select
             error={paymentTypeErr}
-            placeholder="بخش بندی"
+            placeholder="Section"
             variant="outlined"
             style={{
               height: "44px",
@@ -248,10 +248,10 @@ const AddExpense = () => {
         </div>
         <div className="d-flex flex-row-reverse my-2 flex-wrap">
           <Button onClick={clearAllData} className="mx-2 mt-2" color="primary" variant="outlined">
-            انصراف
+            Candifying
           </Button>
           <Button onClick={submitAndClear} className="mx-2 mt-2" color="primary" variant="outlined">
-            ذخیره و ثبت خرید جدید
+            Save and register a new purchase
           </Button>
           <Button
             className="mx-2 mt-2"
@@ -260,7 +260,7 @@ const AddExpense = () => {
             variant="contained"
             onClick={submit}
           >
-            ذخیره
+            Store
           </Button>
         </div>
       </Paper>

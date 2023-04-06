@@ -13,5 +13,5 @@ export default function AdminAnalyticsFirstAndLastReportReport() {
 AdminAnalyticsFirstAndLastReportReport.ShouldBeAdmin = true;
 AdminAnalyticsFirstAndLastReportReport.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "گزارش اولین و آخرین خرید",
+  title: "Report the first and last purchase",
 };

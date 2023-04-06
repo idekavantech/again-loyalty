@@ -61,18 +61,18 @@ jMoment.locale("fa");
 jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
 
 const sortingOptions = [
-  { id: 0, text: "بیشترین مبلغ فروش", keyword: HIGHEST_SALES_AMOUNT },
-  { id: 1, text: "کمترین مبلغ فروش", keyword: LOWEST_SALES_AMOUNT },
-  { id: 2, text: "بیشترین مبلغ تخفیف", keyword: HIGHEST_DISCOUNTS },
-  { id: 3, text: "کمترین مبلغ تخفیف", keyword: LOWSET_DISCOUNTS },
+  { id: 0, text: "The highest amount of sale", keyword: HIGHEST_SALES_AMOUNT },
+  { id: 1, text: "The least amount of sale", keyword: LOWEST_SALES_AMOUNT },
+  { id: 2, text: "The highest amount of discount", keyword: HIGHEST_DISCOUNTS },
+  { id: 3, text: "The least amount of discount", keyword: LOWSET_DISCOUNTS },
   {
     id: 4,
-    text: "کمترین مبلغ خالص دریافتی",
+    text: "The lowest net receipt amount",
     keyword: LOWEST_NET_SALES_AMOUNT,
   },
   {
     id: 5,
-    text: "بیشترین مبلغ خالص دریافتی",
+    text: "The highest amount of net receipt",
     keyword: HIGHEST_NET_SALES_AMOUNT,
   },
 ];
@@ -140,77 +140,77 @@ const sortingItemFunctions = {
 const branchHeadCells = [
   {
     id: "id",
-    name: "ردیف",
-    label: "ردیف",
+    name: "Row",
+    label: "Row",
     align: "center",
   },
   {
     id: "id",
-    name: "کانال‌فروش",
-    label: "کانال‌فروش",
+    name: "Channel",
+    label: "Channel",
     align: "center",
   },
   {
     id: "id",
-    name: "فروش",
+    name: "Sale",
     label: (
       <div className="d-flex flex-column">
-        <div>فروش</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>Sale</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
   },
   {
     id: "id",
-    name: "برگشت از فروش",
+    name: "Back from sales",
     label: (
       <div className="d-flex flex-column">
-        <div>برگشت از فروش</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>Back from sales</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
   },
   {
     id: "id",
-    name: "مانده فروش",
+    name: "Sale balance",
     label: (
       <div className="d-flex flex-column">
-        <div>مانده فروش</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>Sale balance</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
   },
   {
     id: "id",
-    name: "تخفیف",
+    name: "Discount",
     label: (
       <div className="d-flex flex-column">
-        <div>تخفیف</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>Discount</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
   },
   {
     id: "id",
-    name: "فروش خالص",
+    name: "net sales",
     label: (
       <div className="d-flex flex-column">
-        <div>فروش خالص</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>net sales</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
   },
   {
     id: "id",
-    name: "مالیات بر ارزش افزوده",
+    name: "Value added tax",
     label: (
       <div className="d-flex flex-column">
-        <div>مالیات بر ارزش افزوده</div>
+        <div>Value added tax</div>
         <div className="u-font-semi-small u-fontWeightNormal">(۹٪)</div>
       </div>
     ),
@@ -218,11 +218,11 @@ const branchHeadCells = [
   },
   {
     id: "id",
-    name: "خالص دریافتی",
+    name: "The net received",
     label: (
       <div className="d-flex flex-column">
-        <div>خالص دریافتی</div>
-        <div className="u-font-semi-small u-fontWeightNormal">(تومان)</div>
+        <div>The net received</div>
+        <div className="u-font-semi-small u-fontWeightNormal">(Toman)</div>
       </div>
     ),
     align: "center",
@@ -323,8 +323,8 @@ export function AdminComprehensiveSalesReportReport({
       const mainBranchHeadCells = [...branchHeadCells];
       mainBranchHeadCells.splice(1, 0, {
         id: "id",
-        name: "نام شعبه",
-        label: "نام شعبه",
+        name: "Branch Name",
+        label: "Branch Name",
         align: "center",
       });
       return mainBranchHeadCells;
@@ -413,7 +413,7 @@ export function AdminComprehensiveSalesReportReport({
           })?.title;
           const salesChannelName =
             i === 0
-              ? "همه"
+              ? "All"
               : salesChannelsOptions.find(
                   (saleChannel) => saleChannel?.id === channel?.sales_channel
                 )?.title;
@@ -509,7 +509,7 @@ export function AdminComprehensiveSalesReportReport({
         ?.total_grand_total_payments;
     if (isSuper) {
       return [
-        "جمع کل",
+        "total",
         "",
         "",
         saleAmount,
@@ -522,7 +522,7 @@ export function AdminComprehensiveSalesReportReport({
       ];
     }
     return [
-      "جمع کل",
+      "total",
       "",
       saleAmount,
       saleRefund,
@@ -537,19 +537,19 @@ export function AdminComprehensiveSalesReportReport({
   return (
     <div className="container">
       <Head>
-        <title>{"گزارش مالی فروش براساس کانال فروش"}</title>
+        <title>{"Financial Sale Financial Report Based on Sales Channel"}</title>
       </Head>
 
       <AdminBreadCrumb
-        submitButtonText="خروجی گرفتن"
+        submitButtonText="Output"
         submitAction={() =>
           generateCSVFile(
             headRow,
             rows,
             summaryRow,
-            `گزارش مالی فروش شعب براساس کانال فروش از ${formatDateObjectToNormal(
+            `Financial Financial Report Branches Based on Sales Channel from${formatDateObjectToNormal(
               selectedDayRange.from
-            )} تا  ${formatDateObjectToNormal(selectedDayRange.to)}`
+            )} until the${formatDateObjectToNormal(selectedDayRange.to)}`
           )
         }
       />
@@ -566,13 +566,13 @@ export function AdminComprehensiveSalesReportReport({
                 onClick={handleOpen}
                 variant="outlined"
               >
-                از{" "}
+                From{" "}
                 <span className="px-2">
                   {englishNumberToPersianNumber(
                     formatDateObjectToNormal(selectedDayRange.from)
                   )}
                 </span>
-                تا{" "}
+                until the{" "}
                 <span className="px-2">
                   {englishNumberToPersianNumber(
                     formatDateObjectToNormal(selectedDayRange.to)
@@ -624,16 +624,16 @@ export function AdminComprehensiveSalesReportReport({
                 displayEmpty
                 size="large"
                 renderValue={() => {
-                  if (selectedBranches.length === 0) return "شعبه انتخاب کنید";
+                  if (selectedBranches.length === 0) return "Choose a branch";
                   if (selectedBranches.length === 1 && selectedBranches[0])
                     return branches.find(
                       (branch) => branch.id === selectedBranches[0]
                     ).title;
                   if (selectedBranches.length === branches.length)
-                    return "همه شعب";
+                    return "All branches";
                   return `${englishNumberToPersianNumber(
                     selectedBranches.length
-                  )} شعبه `;
+                  )} Branch`;
                 }}
                 MenuProps={{
                   getContentAnchorEl: null,
@@ -668,7 +668,7 @@ export function AdminComprehensiveSalesReportReport({
                     checked={selectedBranches.length === branches.length}
                   />
                   <ListItemText
-                    primary="انتخاب همه شعب"
+                    primary="Choosing all branches"
                     className="text-right"
                   />
                 </MenuItem>
@@ -724,7 +724,7 @@ export function AdminComprehensiveSalesReportReport({
               // IconComponent={() => null}
               renderValue={() => {
                 if (selectedSalesChannel.length === 0)
-                  return "کانال فروش انتخاب کنید";
+                  return "Select the sales channel";
                 if (
                   selectedSalesChannel.length === 1 &&
                   selectedSalesChannel[0]
@@ -733,10 +733,10 @@ export function AdminComprehensiveSalesReportReport({
                     (saleChannel) => saleChannel.id === selectedSalesChannel[0]
                   ).title;
                 if (selectedSalesChannel.length === salesChannelsOptions.length)
-                  return "همه کانال‌های فروش";
+                  return "All sales channels";
                 return `${englishNumberToPersianNumber(
                   selectedSalesChannel.length
-                )} کانال فروش `;
+                )} Sales Channel`;
               }}
               MenuProps={{
                 getContentAnchorEl: null,
@@ -779,7 +779,7 @@ export function AdminComprehensiveSalesReportReport({
                   }
                 />
                 <ListItemText
-                  primary="انتخاب همه کانال‌های فروش"
+                  primary="Select all sales channels"
                   className="text-right"
                 />
               </MenuItem>
@@ -844,7 +844,7 @@ export function AdminComprehensiveSalesReportReport({
                 style={{ width: 200 }}
                 className="px-3 u-fontWeightBold u-fontNormal my-1"
               >
-                مرتب‌سازی بر اساس
+                order by
               </div>
             }
             selectOption={(text) =>
@@ -853,7 +853,7 @@ export function AdminComprehensiveSalesReportReport({
               )
             }
             inputData={{
-              defaultValue: "مرتب‌سازی",
+              defaultValue: "Ordering",
             }}
             selected={sortingOptions.find(
               (i) => i.keyword === selectedSortingType
@@ -888,7 +888,7 @@ export function AdminComprehensiveSalesReportReport({
                 }}
                 className="ml-2 mb-2"
                 onDelete={() => setSelectedBranches([])}
-                label="همه شعب"
+                label="All branches"
               />
             ) : selectedBranches?.length ? (
               branches
@@ -933,7 +933,7 @@ export function AdminComprehensiveSalesReportReport({
                 onDelete={() =>
                   setSelectedBranches(branches.map((branch) => branch.id))
                 }
-                label="هیچ‌کدام از شعب"
+                label="None of the branches"
               />
             )}
           </div>
@@ -953,7 +953,7 @@ export function AdminComprehensiveSalesReportReport({
               }}
               className="ml-2 mb-2"
               onDelete={() => setSelectedSalesChannel([])}
-              label="همه کانال‌های فروش"
+              label="All sales channels"
             />
           ) : selectedSalesChannel?.length ? (
             salesChannelsOptions
@@ -1002,7 +1002,7 @@ export function AdminComprehensiveSalesReportReport({
                   salesChannelsOptions?.map((ingredient) => ingredient.id)
                 )
               }
-              label="هیچ‌کدام از کانال‌های فروش"
+              label="None of the sales channels"
             />
           )}
         </div>
@@ -1097,7 +1097,7 @@ export function AdminComprehensiveSalesReportReport({
                             align="center"
                           >
                             {i == 0
-                              ? "همه"
+                              ? "All"
                               : salesChannelsOptions.find(
                                   (saleChannel) =>
                                     saleChannel?.id === channel?.sales_channel
@@ -1255,7 +1255,7 @@ export function AdminComprehensiveSalesReportReport({
                   }}
                 >
                   <TableCell align="center" style={{ border: "none" }}>
-                    جمع کل
+                    total
                   </TableCell>
                   {isSuper && (
                     <TableCell

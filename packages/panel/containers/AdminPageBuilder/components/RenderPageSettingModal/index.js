@@ -66,7 +66,7 @@ function RenderPageSettingModal({
         header={
           <ModalHeader
             onRightClick={() => togglePageSettingModal(false)}
-            title="تنظیمات صفحه"
+            title="Page Settings"
             LeftItem={() => (
               <IconButton>
                 <DeleteOutlineRoundedIcon
@@ -96,12 +96,12 @@ function RenderPageSettingModal({
             style={{ minHeight: 48 }}
             onClick={() => handleCollapse("firstCollapse")}
           >
-            <span>عنوان {entityPersianCopyRight}</span>
+            <span>Title{entityPersianCopyRight}</span>
           </div>
 
           <Input
-            label={`عنوان ${entityPersianCopyRight}`}
-            placeholder="برای مثال درباره ما"
+            label={`Title${entityPersianCopyRight}`}
+            placeholder="For example about us"
             value={pageSettingData ? pageSettingData.name : ""}
             onChange={(value) => {
               setPageSettingData({
@@ -129,7 +129,7 @@ function RenderPageSettingModal({
             style={{ minHeight: 48 }}
             onClick={() => handleCollapse("secondCollapse")}
           >
-            <span>تنظیمات سئو</span>
+            <span>SEO settings</span>
             {isCollapseOpen.secondCollapse ? (
               <ArrowDropUpRoundedIcon />
             ) : (
@@ -144,8 +144,8 @@ function RenderPageSettingModal({
             isOpened={isCollapseOpen.secondCollapse}
           >
             <Input
-              label="عنوان سئو"
-              placeholder="برای مثال درباره ما"
+              label="SEO title"
+              placeholder="For example about us"
               value={pageSettingData ? pageSettingData.seo_title : ""}
               onChange={(value) => {
                 setPageSettingData({
@@ -168,8 +168,8 @@ function RenderPageSettingModal({
               size="medium"
             />
             <Input
-              label="کلید واژه"
-              placeholder="برای مثال ویترین"
+              label="Key word"
+              placeholder="For example, showcase"
               value={pageSettingData ? pageSettingData.keyphrase : ""}
               onChange={(value) => {
                 setPageSettingData({
@@ -184,12 +184,12 @@ function RenderPageSettingModal({
               className="u-font-semi-small mt-1 pr-1"
               style={{ color: theme.palette.text.secondary }}
             >
-              کلید واژه همان کلماتی است که در گوگل جست‌وجو و{" "}
-              {entityPersianCopyRight}‌های مرتبط با آن نمایش داده می‌شود.
+              Keywords are the same words that search Google and{" "}
+              {entityPersianCopyRight}‌Relevant to it is displayed.
             </div>
             <TextField
-              label="توضیحات متا"
-              placeholder="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است"
+              label="Meta Description"
+              placeholder="Lorem Ipsom is a fake text with an inappropriate simplicity of the printing industry, using graphic designers"
               value={pageSettingData ? pageSettingData.meta_description : ""}
               onChange={(e) =>
                 setPageSettingData({
@@ -207,13 +207,13 @@ function RenderPageSettingModal({
               className="u-font-semi-small mt-1 pr-1"
               style={{ color: theme.palette.text.secondary }}
             >
-              توضیحات متا همان متن کوتاهی است که در گوگل زیر عنوان هر لینک نمایش
-              داده می‌شود.
+              Meta's description is the same short text that is on Google below the title of each display link
+              It will be given.
             </div>
             {hasSlug !== false ? (
               <Input
-                label="اسلاگ"
-                placeholder="برای مثال درست کردن قهوه"
+                label="Dust"
+                placeholder="For example making coffee"
                 value={pageSettingData ? pageSettingData.slug : ""}
                 onChange={(value) =>
                   setPageSettingData({
@@ -229,13 +229,13 @@ function RenderPageSettingModal({
               className="u-font-semi-small mt-1 pr-1"
               style={{ color: theme.palette.text.secondary }}
             >
-              اسلاگ قسمتی از آدرس وبسایت است که برای راحت خوانده شدن آدرس، بعد
-              از دامنه می‌آید.
+              Slag is a part of the website address that is easy to read, then
+              It comes from the domain.
             </div>
 
             <TextField
-              label="اسکریپت دلخواه"
-              placeholder="اسکریپت دلخواه را اینجا وارد کنید"
+              label="Arbitrary script"
+              placeholder="Enter the desired script here"
               value={pageSettingData ? pageSettingData?.head_script : ""}
               onChange={(e) =>
                 setPageSettingData({
@@ -255,8 +255,8 @@ function RenderPageSettingModal({
               className="u-font-semi-small mt-1 pr-1"
               style={{ color: "red" }}
             >
-              هشدار: در صورت عدم اطلاع از روش استفاده از اسکریپت این فیلد را
-              تغییر ندهید.
+              Warning: If you do not know how to use the script this field
+              Don't change.
             </div>
             <div className="form-check pt-2">
               <FormControlLabel
@@ -273,14 +273,14 @@ function RenderPageSettingModal({
                     color="primary"
                   />
                 }
-                label="ایندکس"
+                label="index"
               />
             </div>
             <div className="u-fontLarge mt-4 mb-2" style={{ color: night }}>
-              نحوه نمایش در نتایج گوگل
+              How to display in Google Results
             </div>
             <ModernSwtich
-              texts={["موبایل", "دسکتاپ"]}
+              texts={["Mobile", "desktop"]}
               toggleSwitch={() => setDesktopPreview(!isDesktopPreview)}
               isSwitchOn={isDesktopPreview}
             />
@@ -305,7 +305,7 @@ function RenderPageSettingModal({
                     }}
                   >
                     {(pageSettingData ? pageSettingData.seo_title : "") ||
-                      "عنوان نوشته"}
+                      "The title of the post"}
                   </div>
                   <div
                     className="mt-1 text-left"
@@ -317,7 +317,7 @@ function RenderPageSettingModal({
                     {(pageSettingData
                       ? pageSettingData.meta_description
                       : "") ||
-                      "لطفا توضیحات متا را وارد نمایید.اگر این فیلد را خالی بگذارید،به طور خودکار قسمتی ازمتن اصلی به عنوان توضیحات متا نمایش داده می‌شود."}
+                      "Please enter meta description.If you leave this field blank, automatically portrait part of the main tranquility as meta description."}
                   </div>
                 </Paper>
               </div>
@@ -343,7 +343,7 @@ function RenderPageSettingModal({
                     }}
                   >
                     {(pageSettingData ? pageSettingData.seo_title : "") ||
-                      "عنوان نوشته"}
+                      "The title of the post"}
                   </div>
                   <div
                     className="mt-1 text-left"
@@ -355,7 +355,7 @@ function RenderPageSettingModal({
                   >
                     {pageSettingData.meta_description !== ""
                       ? pageSettingData.meta_description
-                      : "لطفا توضیحات متا را وارد نمایید.اگر این فیلد را خالی بگذارید،به طور خودکار قسمتی ازمتن اصلی به عنوان توضیحات متا نمایش داده می‌شود."}
+                      : "Please enter meta description.If you leave this field blank, it automatically displays part of the main tranquility as meta description."}
                   </div>
                 </div>
               </div>
@@ -383,7 +383,7 @@ function RenderPageSettingModal({
             style={{ minHeight: 48 }}
             onClick={() => handleCollapse("thirdCollapse")}
           >
-            <span>تحلیل سئو در این {entityPersianCopyRight}</span>
+            <span>SEO analysis in this{entityPersianCopyRight}</span>
             {isCollapseOpen.thirdCollapse ? (
               <ArrowDropUpRoundedIcon />
             ) : (
@@ -486,7 +486,7 @@ function RenderPageSettingModal({
             }}
           >
             <div>
-              <div>تصویر پیش‌نمایش</div>
+              <div>Preview image</div>
               <div
                 className="mt-2"
                 style={{
@@ -494,9 +494,9 @@ function RenderPageSettingModal({
                   fontSize: 14,
                 }}
               >
-                این تصویر فقط در زمان به اشتراک گذاری لینک{" "}
-                {entityPersianCopyRight} در پست‌های شبکه‌های اجتماعی به کاربر
-                نمایش داده می‌شود.
+                This image only on the time of sharing the link{" "}
+                {entityPersianCopyRight} In social network posts to the user
+                is shown.
               </div>
               <div className="mt-3">
                 <ImageUploader
@@ -528,7 +528,7 @@ function RenderPageSettingModal({
       header={
         <ModalHeader
           onRightClick={() => togglePageSettingModal(false)}
-          title="تنظیمات صفحه"
+          title="Page Settings"
         />
       }
       body={
@@ -547,10 +547,10 @@ function RenderPageSettingModal({
                 textColor="primary"
                 centered
               >
-                {hasGeneralTab !== false ? <Tab label="تنظیمات عمومی" /> : null}
-                {hasSeoTab !== false ? <Tab label="سئو" /> : null}
+                {hasGeneralTab !== false ? <Tab label="General settings" /> : null}
+                {hasSeoTab !== false ? <Tab label="The article" /> : null}
                 {hasSocialTab !== false ? (
-                  <Tab label="شبکه‌های اجتماعی" />
+                  <Tab label="Social Networks" />
                 ) : null}
               </Tabs>
             </div>
@@ -573,7 +573,7 @@ function RenderPageSettingModal({
                   disabled={loading}
                   onClick={savePageSettingChanges}
                 >
-                  ذخیره
+                  Store
                 </Button>
                 <Button
                   color="default"
@@ -582,7 +582,7 @@ function RenderPageSettingModal({
                   variant="contained"
                   onClick={() => togglePageSettingModal(false)}
                 >
-                  بستن
+                  to close
                 </Button>
               </div>
             </div>

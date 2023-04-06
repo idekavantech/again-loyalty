@@ -46,32 +46,32 @@ jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: false });
 const branchHeadCells = [
   {
     id: "id",
-    name: "ردیف",
-    label: "ردیف",
+    name: "Row",
+    label: "Row",
     align: "center",
   },
   {
     id: "id",
-    name: "اولین خرید",
-    label: "اولین خرید",
+    name: "First purchase",
+    label: "First purchase",
     align: "center",
   },
   {
     id: "id",
-    name: "آخرین خرید",
-    label: "آخرین خرید",
+    name: "Last purchase",
+    label: "Last purchase",
     align: "center",
   },
   {
     id: "id",
-    name: "اولین ساعت ورود",
-    label: "اولین ساعت ورود",
+    name: "The first hour of arrival",
+    label: "The first hour of arrival",
     align: "center",
   },
   {
     id: "id",
-    name: "آخرین ساعت خروج",
-    label: "آخرین ساعت خروج",
+    name: "The last hour of departure",
+    label: "The last hour of departure",
     align: "center",
   },
 ];
@@ -173,8 +173,8 @@ export function AdminFirstAndLastReport({
       let mainBranchHeadCells = [...branchHeadCells];
       mainBranchHeadCells.splice(1, 0, {
         id: "id",
-        name: "نام شعبه",
-        label: "نام شعبه",
+        name: "Branch Name",
+        label: "Branch Name",
         align: "center",
       });
       return mainBranchHeadCells;
@@ -293,7 +293,7 @@ export function AdminFirstAndLastReport({
   return (
     <div className="container">
       <Head>
-        <title>گزارش اولین و آخرین خرید، اولین ورود و آخرین خروج</title>
+        <title>Report first and last purchase, first entry and last exit</title>
       </Head>
 
       <AdminBreadCrumb
@@ -302,12 +302,12 @@ export function AdminFirstAndLastReport({
             headRow,
             rows || [],
             [],
-            `گزارش اولین و آخرین خرید، اولین ورود و آخرین خروج از ${formatDateObjectToNormal(
+            `Report of the first and last purchase, first entry and last exit from${formatDateObjectToNormal(
               selectedDayRange.from
-            )} تا  ${formatDateObjectToNormal(selectedDayRange.to)}`
+            )} until the${formatDateObjectToNormal(selectedDayRange.to)}`
           )
         }
-        submitButtonText="خروجی گرفتن"
+        submitButtonText="Output"
       />
 
       <Paper elevation={2} className="d-flex flex-column mt-4">
@@ -322,13 +322,13 @@ export function AdminFirstAndLastReport({
                 onClick={handleOpen}
                 variant="outlined"
               >
-                از{" "}
+                From{" "}
                 <span className="px-2">
                   {englishNumberToPersianNumber(
                     formatDateObjectToNormal(selectedDayRange.from)
                   )}
                 </span>
-                تا{" "}
+                until the{" "}
                 <span className="px-2">
                   {englishNumberToPersianNumber(
                     formatDateObjectToNormal(selectedDayRange.to)
@@ -383,7 +383,7 @@ export function AdminFirstAndLastReport({
               // IconComponent={() => null}
               renderValue={() => {
                 if (selectedSalesChannel.length === 0)
-                  return "کانال فروش انتخاب کنید";
+                  return "Select the sales channel";
                 if (
                   selectedSalesChannel.length === 1 &&
                   selectedSalesChannel[0]
@@ -392,10 +392,10 @@ export function AdminFirstAndLastReport({
                     (saleChannel) => saleChannel.id === selectedSalesChannel[0]
                   ).title;
                 if (selectedSalesChannel.length === salesChannelsOptions.length)
-                  return "همه کانال فروش‌ها";
+                  return "All sales channels";
                 return `${englishNumberToPersianNumber(
                   selectedSalesChannel.length
-                )} کانال‌فروش `;
+                )} Channel`;
               }}
               MenuProps={{
                 getContentAnchorEl: null,
@@ -438,7 +438,7 @@ export function AdminFirstAndLastReport({
                   }
                 />
                 <ListItemText
-                  primary="انتخاب همه کانال فروش‌ها"
+                  primary="Select all sales channels"
                   className="text-right"
                 />
               </MenuItem>
@@ -493,16 +493,16 @@ export function AdminFirstAndLastReport({
                 size="large"
                 // IconComponent={() => null}
                 renderValue={() => {
-                  if (selectedBranches.length === 0) return "شعبه انتخاب کنید";
+                  if (selectedBranches.length === 0) return "Choose a branch";
                   if (selectedBranches.length === 1 && selectedBranches[0])
                     return branches.find(
                       (branch) => branch.id === selectedBranches[0]
                     ).title;
                   if (selectedBranches.length === branches.length)
-                    return "همه شعب";
+                    return "All branches";
                   return `${englishNumberToPersianNumber(
                     selectedBranches.length
-                  )} شعبه `;
+                  )} Branch`;
                 }}
                 MenuProps={{
                   getContentAnchorEl: null,
@@ -537,7 +537,7 @@ export function AdminFirstAndLastReport({
                     checked={selectedBranches.length === branches.length}
                   />
                   <ListItemText
-                    primary="انتخاب همه شعب"
+                    primary="Choosing all branches"
                     className="text-right"
                   />
                 </MenuItem>
@@ -599,7 +599,7 @@ export function AdminFirstAndLastReport({
                 }}
                 className="ml-2 mb-2"
                 onDelete={() => setSelectedBranches([])}
-                label="همه شعب"
+                label="All branches"
               />
             ) : selectedBranches?.length ? (
               branches
@@ -644,7 +644,7 @@ export function AdminFirstAndLastReport({
                 onDelete={() =>
                   setSelectedBranches(branches.map((branch) => branch.id))
                 }
-                label="هیچ‌کدام از شعب"
+                label="None of the branches"
               />
             )}
           </div>
@@ -664,7 +664,7 @@ export function AdminFirstAndLastReport({
               }}
               className="ml-2 mb-2"
               onDelete={() => setSelectedSalesChannel([])}
-              label="همه کانال‌های فروش"
+              label="All sales channels"
             />
           ) : selectedSalesChannel?.length ? (
             salesChannelsOptions
@@ -713,14 +713,14 @@ export function AdminFirstAndLastReport({
                   salesChannelsOptions?.map((ingredient) => ingredient.id)
                 )
               }
-              label="هیچ‌کدام از کانال‌های فروش"
+              label="None of the sales channels"
             />
           )}
         </div>
         {!selectedBranches?.length && isSuper ? (
-          <div className="mx-auto">هیچ شعبه‌ای انتخاب نشده است.</div>
+          <div className="mx-auto">No branch is selected.</div>
         ) : !selectedSalesChannel?.length ? (
-          <div className="mx-auto">هیچ کانال فروشی انتخاب نشده است.</div>
+          <div className="mx-auto">No Selected Channels have been selected.</div>
         ) : (
           <TableContainer
             className="mt-3 purchase-by-order-table"

@@ -8,5 +8,5 @@ export default function AdminGrossSalesReport() {
 AdminGrossSalesReport.ShouldBeAdmin = true;
 AdminGrossSalesReport.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "گزارش فروش ناخالص",
+  title: "GDP Sale Report",
 };

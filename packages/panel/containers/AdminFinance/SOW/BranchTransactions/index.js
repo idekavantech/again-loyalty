@@ -45,33 +45,33 @@ jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
 const headCells = [
   {
     id: "id",
-    name: "شناسه",
-    label: "شناسه",
+    name: "ID",
+    label: "ID",
     align: "center",
   },
   {
     id: "time",
-    name: "تاریخ و ساعت",
-    label: "تاریخ و ساعت",
+    name: "Date and hour",
+    label: "Date and hour",
     align: "center",
   },
   {
     id: "type",
     align: "center",
-    name: "نوع تراکنش",
-    label: "نوع تراکنش",
+    name: "Transaction type",
+    label: "Transaction type",
   },
   {
     id: "description",
     align: "center",
-    name: "توضیحات",
-    label: "توضیحات",
+    name: "Description",
+    label: "Description",
   },
   {
     id: "price",
     align: "center",
-    name: "مبلغ تراکنش",
-    label: "مبلغ تراکنش",
+    name: "Transaction amount",
+    label: "Transaction amount",
   },
 ];
 function SOWBranchTransactions({
@@ -228,12 +228,12 @@ function SOWBranchTransactions({
     <div>
       <div className="container mb-5">
         <Head>
-          <title>گزارش‌های کیف پول شعبه</title>
+          <title>Branch wallet reports</title>
         </Head>
         <AdminBreadCrumb
-          submitButtonText="خروجی گرفتن"
+          submitButtonText="Output"
           submitAction={() =>
-            generateCSVFile(headRow, rows, [], "گزارشات کیف پول کاربران")
+            generateCSVFile(headRow, rows, [], "Wallet reports of users")
           }
         />
         {isSuper ? (
@@ -270,13 +270,13 @@ function SOWBranchTransactions({
                 onClick={handleOpen}
                 variant="outlined"
               >
-                از{" "}
+                From{" "}
                 <span className="px-2">
                   {englishNumberToPersianNumber(
                     formatDateObjectToNormal(selectedDayRange.from)
                   )}
                 </span>
-                تا{" "}
+                until the{" "}
                 <span className="px-2">
                   {englishNumberToPersianNumber(
                     formatDateObjectToNormal(selectedDayRange.to)
@@ -318,7 +318,7 @@ function SOWBranchTransactions({
               </Popover>
             </div>
             <div className="d-flex flex-wrap align-items-center mb-4 mb-lg-0">
-              <p className="pl-1">نوع تراکنش:</p>
+              <p className="pl-1">Transaction type:</p>
               <FormControl variant="outlined" style={{ width: 199 }}>
                 <Select
                   value={transactionType}

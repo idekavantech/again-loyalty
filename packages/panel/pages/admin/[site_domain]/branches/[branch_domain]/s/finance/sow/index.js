@@ -7,5 +7,5 @@ export default function AdminSOW() {
 AdminSOW.ShouldBeAdmin = true;
 AdminSOW.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "کیف پول مشترک",
+  title: "Joint wallet",
 };

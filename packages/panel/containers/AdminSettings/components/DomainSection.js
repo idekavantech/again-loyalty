@@ -8,7 +8,7 @@ function DomainSection() {
     <Paper elevation={1} className="d-flex mt-3 py-3 flex-wrap">
       <div className="col-12 mb-lg-3 mb-0">
         <div className="u-fontLarge mb-3" style={{ color: night }}>
-          دامنه
+          Domain
         </div>
         <div className="d-flex flex-column">
           <div className="d-flex align-items-center">

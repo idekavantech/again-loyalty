@@ -7,5 +7,5 @@ export default function AdminTags() {
 AdminTags.ShouldBeAdmin = true;
 AdminTags.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "ویرایش تگ‌های سایت",
+  title: "Edit site tags",
 };

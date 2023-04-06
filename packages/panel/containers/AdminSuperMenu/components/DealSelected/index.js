@@ -37,18 +37,18 @@ function DealSelected({
                     onClose={() => dispatch(editDeal(null))}
                     slug={slug}
                 />
-                <SectionContainer title={'محصول'}  btns={
+                <SectionContainer title={'the product'}  btns={
                     <>
                         <p className={classes.text}>
                             {reducer.selectedDeal.titleAppended}
                         </p>
                         <SectionButton 
-                            title='ویرایش محصول' 
+                            title='Product editing' 
                             textColor='black' 
                             onClick={() => dispatch(editDeal(reducer.selectedDeal))} 
                         />
                         <SectionButton 
-                            title='حذف محصول' 
+                            title='Remove Product' 
                             textColor='black'
                             onClick={() => dispatch(removeDeal(reducer.selectedDeal))} 
                         />

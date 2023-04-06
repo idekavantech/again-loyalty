@@ -3,7 +3,7 @@ import { sectionsLayout } from "../../sectionsLayout";
 import { SECTION_CONTACT_US } from "@saas/utils/constants/sections";
 
 const contactUs = [
-  // تماس با ما
+  // contact us
   {
     ...sectionsConfigTabsRepeatedParts["customization"],
     items: [

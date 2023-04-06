@@ -13,5 +13,5 @@ export default function AdminAnalyticsCustomersSatisfaction() {
 AdminAnalyticsCustomersSatisfaction.ShouldBeAdmin = true;
 AdminAnalyticsCustomersSatisfaction.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "گزارش میزان رضایت مشتریان",
+  title: "Report the amount of customer satisfaction",
 };

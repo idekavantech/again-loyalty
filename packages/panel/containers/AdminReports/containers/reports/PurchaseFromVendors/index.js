@@ -87,7 +87,7 @@ const pdf = ({ business, branches, is_super }) => {
               alignItems: "center",
             }}
           >
-            <div style={{ flex: 1 }}>تاریخ دریافت: {jalaaliDate}</div>
+            <div style={{ flex: 1 }}>Date Received: {jalaaliDate}</div>
             <div
               style={{
                 width: 300,
@@ -104,7 +104,7 @@ const pdf = ({ business, branches, is_super }) => {
                 textAlign: "left",
               }}
             >
-              ش. گزارش:{" "}
+              She. Report:{" "}
               {englishNumberToPersianNumber(
                 Math.floor(100000 + Math.random() * 900000)
               )}
@@ -131,7 +131,7 @@ const pdf = ({ business, branches, is_super }) => {
                 textAlign: "center",
               }}
             >
-              «گزارش انبارگردانی مواد اولیه»
+              «Raw material warehousing report»
             </div>
             <div style={{ flex: 1 }}></div>
           </div>
@@ -173,7 +173,7 @@ const pdf = ({ business, branches, is_super }) => {
                     borderRadius: "4px",
                   }}
                 >
-                  شعبه‌ها:
+                  branches:
                 </span>{" "}
                 {branches.map((branch) => (
                   <div
@@ -195,7 +195,7 @@ const pdf = ({ business, branches, is_super }) => {
       </div>
     ),
     footerTemplate: `<footer style="width: max-content;font-size: 10px;margin:0px auto 0px; border: 0.5px solid #c4c4c4;border-radius: 4px; padding: 4px 12px;font-family: 'dana'">
-      صفحه <span class="pageNumber"></span> / <span class="totalPages"></span>
+      Page<span class="pageNumber"></span> / <span class="totalPages"></span>
       </footer>`,
     main_styles: `
     *{
@@ -250,9 +250,9 @@ const pdf = ({ business, branches, is_super }) => {
 };
 
 const sortingOptions = [
-  { id: 0, text: "جدیدترین", keyword: NEWEST },
-  { id: 1, text: "قدیمی‌ترین", keyword: OLDEST },
-  { id: 4, text: "تامین‌کننده", keyword: VENDORS },
+  { id: 0, text: "the newest", keyword: NEWEST },
+  { id: 1, text: "The oldest", keyword: OLDEST },
+  { id: 4, text: "Supplier", keyword: VENDORS },
 ];
 
 const sortingFunctions = {
@@ -267,20 +267,20 @@ const sortingFunctions = {
 const baseHeadCells = [
   {
     id: "id",
-    name: "ردیف",
-    label: "ردیف",
+    name: "Row",
+    label: "Row",
     align: "center",
   },
   {
     id: "id",
-    name: "تامین‌کننده",
-    label: "تامین‌کننده",
+    name: "Supplier",
+    label: "Supplier",
     align: "center",
   },
   {
     id: "id",
-    name: "تاریخ",
-    label: "تاریخ",
+    name: "Date",
+    label: "Date",
     align: "center",
   },
 ];
@@ -410,8 +410,8 @@ export function AdminPurchaseFromVendorsReport({
         );
         mainBranchHeadCells.splice(1, 0, {
           id: "id",
-          name: "نام شعبه",
-          label: "نام شعبه",
+          name: "Branch Name",
+          label: "Branch Name",
           align: "center",
         });
         return mainBranchHeadCells;
@@ -505,9 +505,9 @@ export function AdminPurchaseFromVendorsReport({
     const counts =
       purchaseReports?.items?.map((item) => item.total_count) || [];
     if (isSuper) {
-      return ["جمع کل", "", "", "", ...counts];
+      return ["total", "", "", "", ...counts];
     }
-    return ["جمع کل", "", "", ...counts];
+    return ["total", "", "", ...counts];
   }, [purchaseReports, isSuper]);
 
   return (
@@ -515,8 +515,8 @@ export function AdminPurchaseFromVendorsReport({
       <Head>
         <title>
           {isSuper
-            ? "گزارش اسناد خرید شعب از تامین‌کنندگان"
-            : "گزارش اسناد خرید از تامین‌کنندگان"}
+            ? "Report branch purchase documents from suppliers"
+            : "Report purchase documents from suppliers"}
         </title>
       </Head>
 
@@ -530,7 +530,7 @@ export function AdminPurchaseFromVendorsReport({
               variant="contained"
               onClick={(e) => toggleExportAnchor(e.currentTarget)}
             >
-              خروجی
+              Output
             </Button>
             <Menu
               elevation={1}
@@ -564,9 +564,9 @@ export function AdminPurchaseFromVendorsReport({
                         footerTemplate: PDFConfigs.footerTemplate,
                       },
                     },
-                    `گزارش اسناد خرید براساس ماده اولیه از ${formatDateObjectToNormal(
+                    `Reporting purchase documents based on the raw material of${formatDateObjectToNormal(
                       selectedDayRange.from
-                    )} تا  ${formatDateObjectToNormal(selectedDayRange.to)}.pdf`
+                    )} until the${formatDateObjectToNormal(selectedDayRange.to)}.pdf`
                   );
                 }}
               >
@@ -579,8 +579,8 @@ export function AdminPurchaseFromVendorsReport({
                     rows || [],
                     summaryRow || [],
                     isSuper
-                      ? "گزارش اسناد خرید شعب از تامین‌کنندگان"
-                      : "گزارش اسناد خرید از تامین‌کنندگان"
+                      ? "Report branch purchase documents from suppliers"
+                      : "Report purchase documents from suppliers"
                   )
                 }
               >
@@ -601,8 +601,8 @@ export function AdminPurchaseFromVendorsReport({
                 initialEndDate={toDate}
                 stateDateWrapper={moment}
                 maxDate={moment()}
-                startDatePlaceholderText="تاریخ شروع"
-                endDatePlaceholderText="تاریخ پایان"
+                startDatePlaceholderText="start date"
+                endDatePlaceholderText="The end date"
                 onFocusChange={(focusedInput) => setFocused({ focusedInput })}
                 onDatesChange={({ startDate, endDate }) => {
                   if (startDate) setFromDate(startDate);
@@ -632,7 +632,7 @@ export function AdminPurchaseFromVendorsReport({
               // IconComponent={() => null}
               renderValue={() => {
                 if (selectedIngredients?.length === 0)
-                  return "کالا انتخاب کنید";
+                  return "Choose the goods";
                 if (
                   selectedIngredients?.length === 1 &&
                   selectedIngredients?.[0]
@@ -641,10 +641,10 @@ export function AdminPurchaseFromVendorsReport({
                     (ingredient) => ingredient.id === selectedIngredients?.[0]
                   ).title;
                 if (selectedIngredients?.length === ingredients?.length)
-                  return "همه کالاها";
+                  return "All goods";
                 return `${englishNumberToPersianNumber(
                   selectedIngredients?.length
-                )} کالا `;
+                )} commodity`;
               }}
               MenuProps={{
                 getContentAnchorEl: null,
@@ -682,7 +682,7 @@ export function AdminPurchaseFromVendorsReport({
                       });
                     }, 500);
                   }}
-                  placeholder="جستجوی ماده اولیه"
+                  placeholder="Search of raw material"
                   inputProps={{
                     className: "pr-5 mr-2",
                   }}
@@ -747,7 +747,7 @@ export function AdminPurchaseFromVendorsReport({
                   checked={selectedIngredients?.length === ingredients?.length}
                 />
                 <ListItemText
-                  primary="انتخاب همه کالاها"
+                  primary="Select all goods"
                   className="text-right"
                 />
               </MenuItem>
@@ -804,16 +804,16 @@ export function AdminPurchaseFromVendorsReport({
                 size="large"
                 // IconComponent={() => null}
                 renderValue={() => {
-                  if (selectedBranches.length === 0) return "شعبه انتخاب کنید";
+                  if (selectedBranches.length === 0) return "Choose a branch";
                   if (selectedBranches.length === 1 && selectedBranches[0])
                     return branches.find(
                       (branch) => branch.id === selectedBranches[0]
                     ).title;
                   if (selectedBranches.length === branches.length)
-                    return "همه شعب";
+                    return "All branches";
                   return `${englishNumberToPersianNumber(
                     selectedBranches.length
-                  )} شعبه `;
+                  )} Branch`;
                 }}
                 MenuProps={{
                   getContentAnchorEl: null,
@@ -848,7 +848,7 @@ export function AdminPurchaseFromVendorsReport({
                     checked={selectedBranches.length === branches.length}
                   />
                   <ListItemText
-                    primary="انتخاب همه شعب"
+                    primary="Choosing all branches"
                     className="text-right"
                   />
                 </MenuItem>
@@ -904,16 +904,16 @@ export function AdminPurchaseFromVendorsReport({
               // IconComponent={() => null}
               renderValue={() => {
                 if (selectedVendors?.length === 0)
-                  return "تامین‌کننده انتخاب کنید";
+                  return "Select the supplier";
                 if (selectedVendors?.length === 1 && selectedVendors[0])
                   return vendors?.find(
                     (vendor) => vendor.id === selectedVendors[0]
                   ).title;
                 if (selectedVendors?.length === vendors?.length)
-                  return "همه تامین‌کننده‌ها";
+                  return "All suppliers";
                 return `${englishNumberToPersianNumber(
                   selectedVendors?.length
-                )} تامین‌کننده `;
+                )} Supplier`;
               }}
               MenuProps={{
                 getContentAnchorEl: null,
@@ -948,7 +948,7 @@ export function AdminPurchaseFromVendorsReport({
                   checked={selectedVendors?.length === vendors?.length}
                 />
                 <ListItemText
-                  primary="انتخاب همه تامین‌کننده‌ها"
+                  primary="Choosing all suppliers"
                   className="text-right"
                 />
               </MenuItem>
@@ -1006,7 +1006,7 @@ export function AdminPurchaseFromVendorsReport({
                 style={{ width: 200 }}
                 className="px-3 u-fontWeightBold u-fontNormal my-1"
               >
-                مرتب‌سازی بر اساس
+                order by
               </div>
             }
             selectOption={(text) =>
@@ -1015,7 +1015,7 @@ export function AdminPurchaseFromVendorsReport({
               )
             }
             inputData={{
-              defaultValue: "مرتب‌سازی",
+              defaultValue: "Ordering",
             }}
             selected={sortingOptions.find(
               (i) => i.keyword === selectedSortingType
@@ -1049,7 +1049,7 @@ export function AdminPurchaseFromVendorsReport({
               }}
               className="ml-2 mb-2"
               onDelete={() => setSelectedBranches([])}
-              label="همه شعب"
+              label="All branches"
             />
           ) : selectedBranches?.length ? (
             branches
@@ -1094,7 +1094,7 @@ export function AdminPurchaseFromVendorsReport({
               onDelete={() =>
                 setSelectedBranches(branches.map((branch) => branch.id))
               }
-              label="هیچ‌کدام از شعب"
+              label="None of the branches"
             />
           )}
         </div>
@@ -1113,7 +1113,7 @@ export function AdminPurchaseFromVendorsReport({
               }}
               className="ml-2 mb-2"
               onDelete={() => setSelectedIngredients([])}
-              label="همه مواداولیه"
+              label="All materials"
             />
           ) : selectedIngredients?.length ? (
             ingredients
@@ -1162,7 +1162,7 @@ export function AdminPurchaseFromVendorsReport({
                   ingredients?.map((ingredient) => ingredient.id)
                 )
               }
-              label="هیچ‌کدام از مواداولیه"
+              label="None of the raw materials"
             />
           )}
         </div>
@@ -1277,7 +1277,7 @@ export function AdminPurchaseFromVendorsReport({
                       }}
                     >
                       <TableCell align="center" style={{ border: "none" }}>
-                        جمع کل
+                        total
                       </TableCell>
                       {isSuper && (
                         <TableCell

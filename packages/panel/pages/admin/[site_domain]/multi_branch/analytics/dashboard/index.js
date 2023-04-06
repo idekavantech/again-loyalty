@@ -9,5 +9,5 @@ AdminReportsDashboard.ShouldBeAdmin = true;
 AdminReportsDashboard.Wrapper = AdminLayout;
 // AdminFeedbacksPage.layoutConfig = { isSmall: true };
 export const breadcrumb = {
-  title: "داشبورد گزارش‌ها",
+  title: "Dashboard Reports",
 };

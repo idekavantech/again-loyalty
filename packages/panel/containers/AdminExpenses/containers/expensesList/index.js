@@ -95,7 +95,7 @@ const ExpenseList = () => {
           onClick={() => toggleHeaderState(tableHeaderModals.DATE)}
         >
           <p className="pr-1">
-          تاریخ
+          Date
           </p>
           <ArrowDropDownIcon />
         </div>
@@ -124,7 +124,7 @@ const ExpenseList = () => {
           className="d-flex justify-content-center align-center cursor-pointer mx-2"
           onClick={() => toggleHeaderState(tableHeaderModals.AMOUNT)}
         >
-          <p className="pr-1">مبلغ</p>
+          <p className="pr-1">Amount</p>
           <ArrowDropDownIcon />
         </div>
       </div>
@@ -138,7 +138,7 @@ const ExpenseList = () => {
   //       className="d-flex justify-content-center align-center cursor-pointer"
   //       onClick={() => toggleHeaderState(tableHeaderModals.PAYMENT)}
   //     >
-  //       نحوه پرداخت
+  //       payment method
   //       <ArrowDropDownIcon />
   //     </div>
   //   );
@@ -151,7 +151,7 @@ const ExpenseList = () => {
   //       className="d-flex justify-content-center align-center cursor-pointer"
   //       onClick={() => toggleHeaderState(tableHeaderModals.CATEGORY)}
   //     >
-  //       دسته‌بندی
+  //       Grouping
   //       <ArrowDropDownIcon />
   //     </div>
   //   );
@@ -183,7 +183,7 @@ const ExpenseList = () => {
   //               onClick={onClickAllPaymentMethods}
   //               className="text-right"
   //             >
-  //               نمایش همه
+  //               View all
   //             </ListItemText>
   //           </MenuItem>
   //           <Divider />
@@ -223,11 +223,11 @@ const ExpenseList = () => {
       >
         <Grow in={isVisible}>
           <Paper style={{ width: "16rem" }} className="p-4 m-4">
-            <h1 className="mb-4">نمایش هزینه ها</h1>
+            <h1 className="mb-4">Show costs</h1>
             <div>
               <div style={{ position: "relative" }} className="w-100 mb-4">
                 <p style={{ fontSize: 12, fontWeight: 600 }} className="mb-1">
-                  از مبلغ
+                  Of the amount
                 </p>
                 <input
                   value={
@@ -252,12 +252,12 @@ const ExpenseList = () => {
                     color: "rgba(0,0,0,.12)",
                   }}
                 >
-                  تومان
+                  Toman
                 </div>
               </div>
               <div style={{ position: "relative" }} className="w-100 mb-4">
                 <p style={{ fontSize: 12, fontWeight: 600 }} className="mb-1">
-                  تا مبلغ
+                  Up to the amount
                 </p>
                 <input
                   value={priceFilter.to ? priceFormatter(priceFilter.to) : ""}
@@ -280,7 +280,7 @@ const ExpenseList = () => {
                     color: "rgba(0,0,0,.12)",
                   }}
                 >
-                  تومان
+                  Toman
                 </div>
               </div>
               <div className="d-flex mt-4">
@@ -291,7 +291,7 @@ const ExpenseList = () => {
                   fullWidth
                   onClick={onSubmitPriceFilter}
                 >
-                  اعمال
+                  actions
                 </Button>
                 <Button
                   color="primary"
@@ -300,7 +300,7 @@ const ExpenseList = () => {
                   fullWidth
                   onClick={onClearPriceFilter}
                 >
-                  پاک کردن
+                  clean
                 </Button>
               </div>
             </div>
@@ -335,7 +335,7 @@ const ExpenseList = () => {
   //               }
   //               color="primary"
   //             />
-  //             <ListItemText className="text-right">نمایش همه</ListItemText>
+  //             <ListItemText className="text-right">View all</ListItemText>
   //           </MenuItem>
   //           <Divider />
   //           {_costCategory.map((costCategory) => {
@@ -393,7 +393,7 @@ const ExpenseList = () => {
               variant="contained"
               color="primary"
             >
-              انتخاب
+              Selection
             </Button>
             <Button
               onClick={onClearDateRange}
@@ -402,7 +402,7 @@ const ExpenseList = () => {
               variant="outlined"
               color="primary"
             >
-              پاک کردن
+              clean
             </Button>
           </div>
         </CustomCalendar>
@@ -413,7 +413,7 @@ const ExpenseList = () => {
   const tableConfig = [
     {
       id: 1,
-      name: "شماره",
+      name: "No",
       value: "number",
       align: "right",
       headerItemMap: null,
@@ -423,7 +423,7 @@ const ExpenseList = () => {
     },
     {
       id: 2,
-      name: "دسته بندی",
+      name: "Grouping",
       value: "type",
       align: "center",
       headerItemMap: tableHeaderModals.CATEGORY,
@@ -433,7 +433,7 @@ const ExpenseList = () => {
     },
     {
       id: 3,
-      name: "تاریخ",
+      name: "Date",
       value: "date",
       align: "center",
       headerItemMap: tableHeaderModals.DATE,
@@ -443,7 +443,7 @@ const ExpenseList = () => {
     },
     {
       id: 4,
-      name: "مبلغ",
+      name: "Amount",
       value: "amount",
       align: "center",
       headerItemMap: tableHeaderModals.AMOUNT,
@@ -453,7 +453,7 @@ const ExpenseList = () => {
     },
     {
       id: 5,
-      name: "نحوه پرداخت",
+      name: "payment method",
       value: "payment_type",
       align: "center",
       headerItemMap: tableHeaderModals.PAYMENT,
@@ -463,7 +463,7 @@ const ExpenseList = () => {
     },
     {
       id: 6,
-      name: "شرح",
+      name: "Rate",
       value: "description",
       align: "center",
       headerItemMap: null,
@@ -486,11 +486,11 @@ const ExpenseList = () => {
           })
         }
         submitButtonHasPlus
-        submitButtonText="هزینه جدید"
+        submitButtonText="New fee"
       />
       <Paper className="p-4">
         <div className="mb-4 px-2" style={{ fontSize: "1.3rem" }}>
-          لیست هزینه‌ها
+          Cost List
         </div>
         <TableContainer>
           <Table stickyHeader aria-label="customized table">
@@ -588,14 +588,14 @@ const ExpenseList = () => {
               position: "sticky",
               top: 0,
             }}
-            labelRowsPerPage={!maxWidth768 ? "تعداد نمایش در یک صفحه" : ""}
+            labelRowsPerPage={!maxWidth768 ? "The number of views on a page" : ""}
             labelDisplayedRows={({ from, to, count }) =>
               `${englishNumberToPersianNumber(
                 from
-              )} - ${englishNumberToPersianNumber(to)} از ${
+              )} - ${englishNumberToPersianNumber(to)} From${
                 count !== -1
                   ? englishNumberToPersianNumber(count)
-                  : `بیشتر از  ${englishNumberToPersianNumber(to)}`
+                  : `more than${englishNumberToPersianNumber(to)}`
               }`
             }
             rowsPerPageOptions={[5, 10, 20]}

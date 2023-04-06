@@ -219,7 +219,7 @@ export function AdminSettings({
       showWorkingTime &&
       !Object.values(workingHours).find((hour) => hour.length > 0)
     ) {
-      setTextError("تکمیل ساعت کاری برای فعال‌سازی سفارش‌گیری سایت ضروری است.");
+      setTextError("Completion of working hours is essential to activate site ordering.");
       workingHourRef.current.scrollIntoView();
     } else {
       const editedBusiness = {
@@ -265,8 +265,8 @@ export function AdminSettings({
       if (Object.values(socialErrors).every((error) => !error)) {
         _updateBusiness(
           editedBusiness,
-          "تنظیمات اصلی با موفقیت ذخیره شد.",
-          "ذخیره تغییرات تنظیمات اصلی ناموفق بود!",
+          "The original settings were successfully saved.",
+          "Save the changes to the original settings failed!",
           () => {
             if (!dashboardState?.address_and_phone_step && isVitrin) {
               _updateJourneyState(
@@ -297,16 +297,16 @@ export function AdminSettings({
           style={{ fontSize: 15 }}
           onClick={() => setIsOpenOnboarding(false)}
         >
-          <h1>علائم راهنمای پنل</h1>
+          <h1>Panel Guide Symptoms</h1>
           <p className="mt-3">
-            با کلیک بر علامت سوال در کنار تیتر آیتم‌های پیشرفته‌ یا جدید ویترین،
-            توضیحات راهنما دریافت کنید.
+            Clicking the question mark next to the headline of advanced or new showcase items,
+            Get Help Description.
           </p>
           <button
             className="mt-3"
             style={{ fontWeight: 500, color: "#0050ff" }}
           >
-            خوبه
+            Is it good
           </button>
         </div>
       ),
@@ -318,16 +318,16 @@ export function AdminSettings({
           className="d-flex flex-column align-items-center"
           style={{ fontSize: 15 }}
         >
-          <h1>علائم راهنمای پنل</h1>
+          <h1>Panel Guide Symptoms</h1>
           <p className="mt-3">
-            با کلیک بر علامت سوال در کنار تیتر آیتم‌های پیشرفته‌ یا جدید ویترین،
-            توضیحات راهنما دریافت کنید.
+            Clicking the question mark next to the headline of advanced or new showcase items,
+            Get Help Description.
           </p>
           <button
             className="mt-3"
             style={{ fontWeight: 500, color: "#0050ff" }}
           >
-            خوبه
+            Is it good
           </button>
         </div>
       ),
@@ -348,7 +348,7 @@ export function AdminSettings({
     if (normalizedURL && !normalizedURL.startsWith(socialNetworkink)) {
       setSocialErrors({
         ...socialErrors,
-        [social]: `آدرس با عبارت /${socialNetworkink} شروع شود . بطور مثال : ${socialNetworkink}/${
+        [social]: `Address with phrase/${socialNetworkink} Start. for example: ${socialNetworkink}/${
           social == "whatsapp" ? "989121234567" : "vitrin"
         }`,
       });
@@ -369,11 +369,11 @@ export function AdminSettings({
   return (
     <div className="container pb-5 pb-md-0">
       <Head>
-        <title>تنظیمات اصلی</title>
+        <title>Main settings</title>
       </Head>
 
       <AdminBreadCrumb
-        submitButtonText="ذخیره تغییرات"
+        submitButtonText="Save changes"
         submitAction={submit}
         isLoading={loading}
         helpVideo={{
@@ -464,7 +464,7 @@ export function AdminSettings({
           className="d-flex mt-3 py-3 flex-wrap mb-5 mb-md-0"
         >
           <div className="col-12 d-flex u-fontLarge" style={{ color: night }}>
-            <span>ریدایرکت</span>
+            <span>Redirect</span>
             <Switch
               onColor={theme.palette.primary.main}
               isSwitchOn={showRedirectsMap}
@@ -474,16 +474,16 @@ export function AdminSettings({
             />
           </div>
           <p className="mt-3 col-12" style={{ fontSize: 12 }}>
-            در صورتی که هم اکنون میخواهید کاربران خود را از دامنه قبلی خود به
-            دامنه جدید منتقل کنید می‌توانید از این بخش استفاده کنید.
+            If you now want your users from your previous domain to
+            Move a new domain. You can use this section.
           </p>
           {showRedirectsMap ? (
             <>
               <div className="d-flex mt-3 col-12" style={{ fontSize: 12 }}>
                 <InfoOutlinedIcon />
                 <div className="text-right u-fontNormal pr-2">
-                  لطفا در صورتی‌که در مورد این بخش اطلاعاتی ندارید تغییری در آن
-                  ایجاد نکنید.
+                  Please change if you have no information about this section
+                  Don't create.
                 </div>
               </div>
               <div className="col-12">
@@ -496,7 +496,7 @@ export function AdminSettings({
                     <div className="d-flex flex-wrap w-100 align-items-center">
                       <div className="w-100">
                         <Input
-                          label="لینک قدیمی"
+                          label="Old link"
                           value={origin}
                           placeholder="/a/b/c"
                           size="medium"
@@ -510,7 +510,7 @@ export function AdminSettings({
                             } else
                               setInputError({
                                 value:
-                                  "مقدار لینک جدید و لینک قدیمی نباید یکی باشد.",
+                                  "New link value and old link should not be one.",
                                 id: index,
                               });
 
@@ -525,7 +525,7 @@ export function AdminSettings({
                         <Input
                           placeholder="/a/b/c"
                           size="medium"
-                          label="لینک جدید"
+                          label="New link"
                           value={destination}
                           onChange={(value) => {
                             const newRedirectsMap = JSON.parse(
@@ -537,7 +537,7 @@ export function AdminSettings({
                             } else
                               setInputError({
                                 value:
-                                  "مقدار لینک جدید و لینک قدیمی نباید یکی باشد.",
+                                  "New link value and old link should not be one.",
                                 id: index,
                               });
 
@@ -603,13 +603,13 @@ export function AdminSettings({
       )}
       <SaveAndDiscardButtons
         saveAction={submit}
-        saveText="ذخیره تغییرات"
+        saveText="Save changes"
         disabled={loading}
       />
       <SuccessMessageModal
         isOpen={isOpenSuccessModal}
-        title="اطلاعات اصلی با موفقیت ذخیره شد."
-        content="آیا می‌دانستید کاربران هنگام خرید به سایت‌هایی که حاوی اطلاعاتی چون آیکون، نام برند، شعار و درباره ما  هستند بیشتر اعتماد می‌کنند؟"
+        title="The original information was successfully stored."
+        content="Did you know that users trust sites that contain information such as icon, brand name, slogan and about us when buying?"
         onClose={() => setIsOpenSuccessModal(false)}
         next={() => router.back()}
         image="/images/success-info-main.svg"

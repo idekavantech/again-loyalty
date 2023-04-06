@@ -25,14 +25,14 @@ import {
 const headCells = [
   {
     id: "id",
-    name: "نام شعبه",
-    label: "نام شعبه",
+    name: "Branch Name",
+    label: "Branch Name",
     align: "center",
   },
   {
     id: "time",
-    name: "مبلغ کل تراکنش",
-    label: "مبلغ کل تراکنش",
+    name: "The total amount of transaction",
+    label: "The total amount of transaction",
     align: "center",
   },
 ];
@@ -68,7 +68,7 @@ function SOWAllBranchTransactions({
     <div>
       <div className="container mb-5">
         <Head>
-          <title>گزارش کیف پول(حساب‌های شعب)</title>
+          <title>Wallet Report(Branch accounts)</title>
         </Head>
         <AdminBreadCrumb />
         <AllBranchTransactionsTable

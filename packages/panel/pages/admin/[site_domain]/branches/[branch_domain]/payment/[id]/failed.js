@@ -9,7 +9,7 @@ export default function PaymentPage() {
   return (
     <div>
       <Head>
-        <title>پرداخت ناموفق</title>
+        <title>Failed payment</title>
         <meta name="robots" content="noindex" />
       </Head>
       <PaymentFailedPageContainer />

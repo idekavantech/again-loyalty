@@ -17,22 +17,22 @@ function PhoneNumberSection({
   const [error, setError] = useState("");
   const blur = () => {
     if (!isPhoneNumber(phone)) {
-      setError("شماره تماس نادرست وارد شده است.");
+      setError("Incorrect contact number entered.");
     } else {
       setError("");
     }
   };
   const helpText =
     process.env.NEXT_PUBLIC_APP_NAME === DARAMAD_WEBAPP_CONSTANT
-      ? "این شماره تماس بر روی فاکتور چاپ می شود."
-      : "این شماره تماس جهت ارتباط کاربران با شماست و به کاربران نمایش داده می‌شود.";
+      ? "This contact number is printed on the invoice."
+      : "This contact number is for users to communicate with you and is displayed to users.";
   return (
     <>
       <div className="d-flex align-items-center">
         <Input
           dir="rtl"
           className="mt-1"
-          label="شماره تماس کسب‌و‌کار"
+          label="Business Contact Number"
           helperText={error}
           error={error}
           type="tel"
@@ -62,7 +62,7 @@ function PhoneNumberSection({
             className="mt-4"
             value={mpn}
             onBlur={blur}
-            label="شماره تماس بیشتر"
+            label="More contact number"
             onChange={(value) => {
               const newArray = [...morePhoneNumbers];
               newArray[index] = persianToEnglishNumber(value);
@@ -114,7 +114,7 @@ function PhoneNumberSection({
               addMorePhoneNumbers([...morePhoneNumbers, ""]);
             }}
           >
-            افزودن شماره تماس بیشتر
+            Add more contact number
           </span>
         </div>
       ) : null}

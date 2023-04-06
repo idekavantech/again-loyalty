@@ -7,5 +7,5 @@ export default function AdminAnalyticsModifiersSale() {
 AdminAnalyticsModifiersSale.ShouldBeAdmin = true;
 AdminAnalyticsModifiersSale.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "گزارش فروش افزودنی‌ها",
+  title: "Sale of additives",
 };

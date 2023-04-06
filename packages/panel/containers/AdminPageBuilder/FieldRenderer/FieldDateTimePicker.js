@@ -9,14 +9,14 @@ const FieldDateTimePicker = ({ setDisable, setValue, value }) => {
         <DateTimePicker
           inputVariant="outlined"
           fullWidth={true}
-          okLabel="تأیید"
-          cancelLabel="لغو"
+          okLabel="Confirmation"
+          cancelLabel="Cancellation"
           disablePast={true}
           ampm={false}
           required
-          invalidDateMessage="زمان انتخاب شده صحیح نیست"
-          minDateMessage="تاریخ روزهای گذشته مجاز نیست"
-          label="مدت زمان تخفیف"
+          invalidDateMessage="The selected time is not correct."
+          minDateMessage="Date of the past days is not allowed"
+          label="The discount time"
           minTime={new Date(0, 0, 0, 9)}
           labelFunc={(date) =>
             date ? date.format("jYYYY/jMM/jDD hh:mm:ss a") : ""

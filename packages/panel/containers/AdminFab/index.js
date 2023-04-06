@@ -56,24 +56,24 @@ export function AdminSettings({
   const router = useRouter();
   const visibilityTab = [
     {
-      text: "فعال",
+      text: "active",
       color: theme.palette.primary.main,
       value: true,
     },
     {
-      text: `غیرفعال`,
+      text: `Inactive`,
       color: smoke,
       value: false,
     },
   ];
   const positionTab = [
     {
-      text: "پایین سمت راست",
+      text: "The bottom right",
       color: theme.palette.primary.main,
       value: true,
     },
     {
-      text: `پایین سمت چپ`,
+      text: `The bottom left`,
       color: theme.palette.primary.main,
       value: false,
     },
@@ -158,7 +158,7 @@ export function AdminSettings({
       }
     });
     if (emptyFields.length) {
-      _setSnackBarMessage("فیلد‌های اضافه شده نباید خالی باشند.", "fail");
+      _setSnackBarMessage("Added fields should not be empty.", "fail");
       setEmptyContactChannels(emptyFields);
     } else {
       _setPluginData(ONLINE_SUPPORT_PLUGIN, {
@@ -210,7 +210,7 @@ export function AdminSettings({
   return (
     <div className="container" style={{ marginBottom: minWidth768 ? "" : 60 }}>
       <Head>
-        <title>تنظیمات دکمه شناور تماس</title>
+        <title>Settings of the Call Floating button</title>
       </Head>
 
       <AdminBreadCrumb helpVideo={{ url: ADMIN_HELP_VIDEOS.fab.url }} />
@@ -223,21 +223,21 @@ export function AdminSettings({
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
             <div className="u-fontNormal">
-              {` امکان فعال‌سازی دو سرویس چت به صورت همزمان وجود ندارد. لطفا ابتدا
-              یکی از سرویس‌های "رایچت" یا "کریسپ" را غیر‌فعال نموده و سپس اقدام
-              به فعال‌سازی سرویس دیگر کنید.`}
+              {` It is not possible to activate two chat services simultaneously. Please first
+              One of the services"Rice" Or"Crispe" Make non -active and then action
+              To activate another service.`}
             </div>
           </DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button onClick={onClosePopupHandler} color="primary">
-            فهمیدم
+            I understood
           </Button>
         </DialogActions>
       </Dialog>
 
       <Paper elevation={1} className="d-flex flex-column mt-3 py-3 px-1">
-        <div className="col-6">تنظیمات</div>
+        <div className="col-6">Settings</div>
         <div className="d-flex flex-column flex-md-row mt-4">
           <div className="w-100 w-md-25 col-12 col-md-6">
             <Tabs
@@ -253,8 +253,8 @@ export function AdminSettings({
               className="p-1 u-font-semi-small text-justify"
               style={{ color: graphite }}
             >
-              {`از طریق گزینه بالا می‌توانید نسبت به فعال یا غیرفعال‌سازی "دکمه
-              شناور تماس" اقدام نمایید.`}
+              {`You can be enabled or disabled through the option above"Button
+              Call float" Take action.`}
             </div>
           </div>
           <div className="w-100 w-md-25 col-12 col-md-6 mt-3 mt-md-0">
@@ -269,22 +269,22 @@ export function AdminSettings({
               className="p-1 u-font-semi-small text-justify"
               style={{ color: graphite }}
             >
-              {`از طریق گزینه بالا می‌توانید نسبت به تغییر محل نمایش "دکمه شناور
-              تماس" اقدام نمایید.`}
+              {`From the above option you can change the show's location"The floating button
+              Contact" Take action.`}
             </div>
           </div>
         </div>
       </Paper>
       <Paper elevation={1} className="d-flex flex-column mt-3 py-3 px-5">
         <div style={{ color: theme.palette.text.tertiary }}>
-          راه‌های ارتباطی
+          Communication ways
         </div>
         <div
           style={{ color: theme.palette.text.tertiary }}
           className="mt-1 u-font-semi-small"
         >
-          برای افزودن راه‌های ارتباطی جدید برای مشتریان خود روی هر کدام از
-          آیکن‌های زیر برای اضافه شدن یک راه ارتباطی جدید کلیک نمایید.
+          To add new communication ways for their customers on each of
+          The following icons click to add a new way of communication.
         </div>
         <div className="d-flex flex-wrap">
           {contactChannelsInitialState.map((channel) => {
@@ -382,7 +382,7 @@ export function AdminSettings({
                             className="p-1 u-font-semi-small text-justify"
                             style={{ color: strawberryI }}
                           >
-                            لطفا این فیلد را تکمیل نمایید.
+                            Please complete this field.
                           </div>
                         ) : null}
                         <div
@@ -404,19 +404,19 @@ export function AdminSettings({
       </DragDropContext>
       <SuccessMessageModal
         isOpen={isOpenSuccessModal}
-        title="آماده دریافت تماس هستید؟!"
-        content="در صورتی که پیام یا تماس جدیدی دریافت کنید در این قسمت می‌توانید از آن مطلع شوید.
-        تا چند ثانیه دیگر شما یک تماس تستی از ویترین دریافت می‌کنید تا نحوه دریافت گزارش کلیک بر دکمه شناور تماس را بررسی کنید."
+        title="Ready to get a call?!"
+        content="If you receive a new message or call, you can be informed of it.
+        In a few seconds you will receive a test of a showcase to check out how to get the click on the contact button."
         onClose={() => setIsOpenSuccessModal(false)}
         image={`/images/success-call.svg`}
-        returnToDashboardText="تمایل ندارم"
+        returnToDashboardText="I don't want"
         returnToDashboard={() => updateJourneyStateData({ fab_step: 1 })}
-        nextTitle="تست و دریافت تماس تستی"
+        nextTitle="Testing and receiving test calls"
         next={() => updateJourneyStateData({ fab_step: 1, fab_bot_step: 1 })}
       />
       <SaveAndDiscardButtons
         saveAction={submit}
-        saveText="ذخیره"
+        saveText="Store"
         disabled={loading}
       />
     </div>

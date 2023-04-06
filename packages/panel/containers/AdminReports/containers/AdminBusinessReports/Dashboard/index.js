@@ -558,7 +558,7 @@ export function AdminReports({
             fontSize: 25,
           }}
         >
-          اطلاعات فروش امروز و دیروز
+          Sales information today and yesterday
         </h1>
          
         <div className="container my-5 w-100 text-right">
@@ -566,7 +566,7 @@ export function AdminReports({
             <div className=" my-2 col-sm-6 col-lg-4">
               <Card
                 cardDetail={{
-                  title: "فروش امروز",
+                  title: "Today's sale",
                   isPrice: true,
                   data: priceFormatter(
                     todayOrderSummary?.orders_price ?? 0
@@ -579,7 +579,7 @@ export function AdminReports({
             <div className=" my-2 col-sm-6 col-lg-4">
               <Card
                 cardDetail={{
-                  title: "تعداد سفارش امروز",
+                  title: "The number of order today",
                   isPrice: false,
                   data: englishNumberToPersianNumber(
                     todayOrderSummary?.orders_count ?? 0
@@ -592,7 +592,7 @@ export function AdminReports({
             <div className=" my-2 col-sm-6 col-lg-4">
               <Card
                 cardDetail={{
-                  title: "پرفروش‌ترینِ امروز",
+                  title: "The best -selling today",
                   isPrice: false,
                   data: (
                     <p style={{ fontSize: 18, fontWeight: 900 }}>
@@ -611,7 +611,7 @@ export function AdminReports({
             <div className=" my-2 col-sm-6 col-lg-4">
               <Card
                 cardDetail={{
-                  title: "فروش دیروز",
+                  title: "Yesterday's sale",
                   isPrice: true,
                   data: priceFormatter(
                     yesterdayOrderSummary?.orders_price ?? 0
@@ -624,7 +624,7 @@ export function AdminReports({
             <div className=" my-2 col-sm-6 col-lg-4">
               <Card
                 cardDetail={{
-                  title: "تعداد سفارش دیروز",
+                  title: "The number of order yesterday",
                   isPrice: false,
                   data: englishNumberToPersianNumber(
                     yesterdayOrderSummary?.orders_count ?? 0
@@ -637,7 +637,7 @@ export function AdminReports({
             <div className=" my-2 col-sm-6 col-lg-4">
               <Card
                 cardDetail={{
-                  title: "پرفروش‌ترینِ دیروز",
+                  title: "The best -selling yesterday",
                   isPrice: false,
                   data: (
                     <p style={{ fontSize: 18, fontWeight: 900 }}>
@@ -665,13 +665,13 @@ export function AdminReports({
             onClick={handleOpen}
             variant="outlined"
           >
-            از{" "}
+            From{" "}
             <span className="px-2">
               {englishNumberToPersianNumber(
                 formatDateObjectToNormal(selectedDayRange.from)
               )}
             </span>
-            تا{" "}
+            until the{" "}
             <span className="px-2">
               {englishNumberToPersianNumber(
                 formatDateObjectToNormal(selectedDayRange.to)
@@ -757,16 +757,16 @@ export function AdminReports({
                 <Link
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/analytics/reports/total_sales`}
                 >
-                  مشاهده گزارش
+                  View Report
                 </Link>
               </div>
               <div>
                 <h2 style={{ fontWeight: 700 }} className="mb-2">
-                  مجموع فروش
+                  Total sales
                 </h2>
                 <div className="my-2 d-flex justify-content-between align-items-center">
                   <div style={{ fontSize: 20, fontWeight: 700 }}>
-                    {priceFormatter(totalSales)} تومان
+                    {priceFormatter(totalSales)} Toman
                   </div>
                   <div
                     className="d-flex justify-content-center align-items-center"
@@ -787,13 +787,13 @@ export function AdminReports({
                   </div>
                 </div>
                 <Chart
-                  xAxisNodeTitle="مجموع فروش"
-                  yAxisNodeTitle="مجموع فروش"
+                  xAxisNodeTitle="Total sales"
+                  yAxisNodeTitle="Total sales"
                   hasToCompare={compareToPrevious}
                   xAxisLabel={transactionsXAxiosLabel}
                   mainLineData={dailyMainSalesData}
                   compareLineData={dailyComparedSalesData}
-                  title="مجموع فروش‌ها"
+                  title="Total sales"
                 />
               </div>
             </>
@@ -829,18 +829,18 @@ export function AdminReports({
                 <Link
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/analytics/reports/total_orders`}
                 >
-                  مشاهده گزارش
+                  View Report
                 </Link>
               </div>
               <div>
                 <h2 style={{ fontWeight: 700 }} className="mb-2">
-                  مجموع سفارش‌ها
+                  Total orders
                 </h2>
                 <div className="my-2 d-flex justify-content-between align-items-center">
                   <div style={{ fontSize: 20, fontWeight: 700 }}>
                     {reportsData[ORDERS_REPORT_TYPE] &&
                       englishNumberToPersianNumber(totalOrdersCount)}{" "}
-                    سفارش
+                    Order
                   </div>
                   <div
                     className="d-flex justify-content-center align-items-center"
@@ -866,13 +866,13 @@ export function AdminReports({
                   mergedMainShoppingOrdersPerDay?.length && (
                     <Chart
                       className="w-100"
-                      xAxisNodeTitle="مجموع سفارش"
-                      yAxisNodeTitle="مجموع سفارش"
+                      xAxisNodeTitle="The sum of the order"
+                      yAxisNodeTitle="The sum of the order"
                       hasToCompare={compareToPrevious}
                       xAxisLabel={transactionsXAxiosLabel}
                       mainLineData={mainOrdersTotalCountPerDate}
                       compareLineData={comparedOrdersTotalCountPerDate}
-                      title="مجموع سفارش‌ها"
+                      title="Total orders"
                     />
                   )}
               </div>
@@ -911,18 +911,18 @@ export function AdminReports({
                 <Link
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/analytics/reports/aov`}
                 >
-                  مشاهده گزارش
+                  View Report
                 </Link>
               </div>
               <div>
                 <h2 style={{ fontWeight: 700 }} className="mb-2">
-                  میانگین ارزش سفارش‌ها
+                  The average value of orders
                 </h2>
                 <div className="my-2 d-flex justify-content-between align-items-center">
                   <div style={{ fontSize: 20, fontWeight: 700 }}>
                     {reportsData[TRANSACTIONS_REPORT_TYPE] &&
                       priceFormatter(totalOrdersAverageValues)}{" "}
-                    تومان
+                    Toman
                   </div>
                   <div
                     className="d-flex justify-content-center align-items-center"
@@ -947,13 +947,13 @@ export function AdminReports({
                   </div>
                 </div>
                 <Chart
-                  xAxisNodeTitle="میانگین ارزش سفارش"
-                  yAxisNodeTitle="میانگین ارزش سفارش"
+                  xAxisNodeTitle="Average order value"
+                  yAxisNodeTitle="Average order value"
                   hasToCompare={compareToPrevious}
                   xAxisLabel={transactionsXAxiosLabel}
                   mainLineData={mainDailyOrderAverageValues}
                   compareLineData={comparedDailyOrderAverageValues}
-                  title="میانگین ارزش سفارش‌ها"
+                  title="The average value of orders"
                 />
               </div>
             </>
@@ -987,12 +987,12 @@ export function AdminReports({
                 <Link
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/analytics/reports/top_selling`}
                 >
-                  مشاهده گزارش
+                  View Report
                 </Link>
               </div>
               <div>
                 <h2 style={{ fontWeight: 700 }} className="mb-2">
-                  بهترین محصولات از نظر تعداد فروش
+                  The best products in terms of sales number
                 </h2>
                 {topSellingProducts &&
                 topSellingProducts.data &&
@@ -1020,12 +1020,12 @@ export function AdminReports({
                         />
                       </div>
                       <div style={{ fontSize: 15 }}>
-                        {priceFormatter(deal.count_deal_sold)} عدد{" "}
+                        {priceFormatter(deal.count_deal_sold)} number{" "}
                       </div>
                     </div>
                   ))
                 ) : (
-                  <div>در این بازه‌ی زمانی محصولی وجود ندارد</div>
+                  <div>There is no product in this time interval</div>
                 )}
               </div>
             </>
@@ -1059,12 +1059,12 @@ export function AdminReports({
                 <Link
                   href={`${urlPrefix}${SHOPPING_PLUGIN_URL}/analytics/reports/deals`}
                 >
-                  مشاهده گزارش
+                  View Report
                 </Link>
               </div>
               <div>
                 <h2 style={{ fontWeight: 700 }} className="mb-2">
-                  مجموع محصولات فروخته شده
+                  The sum of the products sold
                 </h2>
                 <div className="my-2 d-flex justify-content-between align-items-center">
                   <div style={{ fontSize: 20, fontWeight: 700 }}>
@@ -1092,13 +1092,13 @@ export function AdminReports({
                   !isDealsReportLoading &&
                   mergedMainDealsPerDay?.length && (
                     <Chart
-                      xAxisNodeTitle="مجموع محصولات فروخته شده"
-                      yAxisNodeTitle="مجموع محصولات فروخته شده"
+                      xAxisNodeTitle="The sum of the products sold"
+                      yAxisNodeTitle="The sum of the products sold"
                       hasToCompare={compareToPrevious}
                       xAxisLabel={transactionsXAxiosLabel}
                       mainLineData={dailyMainDealsData}
                       compareLineData={dailyComparedDealsData}
-                      title="مجموع محصولات فروخته شده"
+                      title="The sum of the products sold"
                     />
                   )}
               </div>

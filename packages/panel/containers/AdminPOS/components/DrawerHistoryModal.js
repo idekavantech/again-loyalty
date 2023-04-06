@@ -77,7 +77,7 @@ export default function DrawerHistoryModal({
             if (detailsOpen) setDetailsOpen(null);
             else onClose();
           }}
-          title="تاریخچه صندوق‌ها"
+          title="Fund history"
         />
       }
       body={
@@ -87,9 +87,9 @@ export default function DrawerHistoryModal({
           ) : detailsOpen ? (
             <>
               <div className="px-3 py-5 flex-1">
-                <div className="u-fontWeightHeavy mb-2"> گزارش صندوق </div>
+                <div className="u-fontWeightHeavy mb-2"> Fund report</div>
                 <Divider />
-                <div className="mb-1 mt-2">شروع</div>
+                <div className="mb-1 mt-2">Start</div>
                 {opened_at ? (
                   <>
                     <div className="mb-1">
@@ -99,12 +99,12 @@ export default function DrawerHistoryModal({
                         )} ${createdAt.jYear()} - ${createdAt.format("HH:mm")}`
                       )}
                     </div>
-                    <div className="mb-1"> توسط {initializer?.name}</div>
+                    <div className="mb-1"> By{initializer?.name}</div>
                   </>
                 ) : (
                   "-"
                 )}
-                <div className="mb-1 mt-5">پایان</div>
+                <div className="mb-1 mt-5">End</div>
                 {closed_at ? (
                   <>
                     <div className="mb-1">
@@ -116,73 +116,73 @@ export default function DrawerHistoryModal({
                         )}`
                       )}
                     </div>
-                    <div className="mb-1"> توسط {finisher?.name}</div>
+                    <div className="mb-1"> By{finisher?.name}</div>
                   </>
                 ) : (
                   "-"
                 )}
 
                 <div className="d-flex justify-content-between mt-5">
-                  <div>مبلغ مورد انتظار</div>
+                  <div>The expected amount</div>
                   {balance ? (
-                    <div className="mt-1">{priceFormatter(balance)} تومان </div>
+                    <div className="mt-1">{priceFormatter(balance)} Toman</div>
                   ) : (
                     <div className="mt-1">-</div>
                   )}
                 </div>
                 <div className="mt-4 mb-5">
-                  <div>توضیحات</div>
+                  <div>Description</div>
                   <div className="mt-1">{description || ""}</div>
                 </div>
                 <div className="mt-5">
                   <Divider />
-                  <div className="u-fontWeightBold my-3">گزارش صندوق</div>
+                  <div className="u-fontWeightBold my-3">Fund report</div>
                   <Divider />
                   <div className="d-flex justify-content-between my-4">
-                    <div>مبلغ اولیه صندوق</div>
-                    <div>{priceFormatter(initial_money)} تومان</div>
+                    <div>The initial amount of the fund</div>
+                    <div>{priceFormatter(initial_money)} Toman</div>
                   </div>
                   <div className="d-flex justify-content-between my-4">
-                    <div>فروش نقدی</div>
-                    <div>{priceFormatter(total_sales)} تومان</div>
+                    <div>Cash sales</div>
+                    <div>{priceFormatter(total_sales)} Toman</div>
                   </div>
                   <div className="d-flex justify-content-between my-4">
-                    <div>عودت نقدی</div>
+                    <div>Critical return</div>
                     <div>
                       {priceFormatter(total_refunds)}
-                      {total_refunds ? "-" : ""} تومان
+                      {total_refunds ? "-" : ""} Toman
                     </div>
                   </div>
                   <div className="d-flex justify-content-between my-4">
-                    <div>مجموع تراکنش‌های دریافت شده</div>
-                    <div>{priceFormatter(total_paid_in)} تومان</div>
+                    <div>The sum of the received transactions</div>
+                    <div>{priceFormatter(total_paid_in)} Toman</div>
                   </div>
                   <div className="d-flex justify-content-between my-4">
-                    <div>مجموع تراکنش‌های پرداخت شده</div>
+                    <div>The sum of paid transactions</div>
                     <div>
                       {priceFormatter(total_paid_out)}
-                      {total_paid_out ? "-" : ""} تومان
+                      {total_paid_out ? "-" : ""} Toman
                     </div>
                   </div>
                   <div className="d-flex justify-content-between my-4">
-                    <div>مجموع تراکنش‌ها</div>
+                    <div>Total transactions</div>
                     <div>
-                      {priceFormatter(total_paid_in - total_paid_out)} تومان{" "}
+                      {priceFormatter(total_paid_in - total_paid_out)} Toman{" "}
                     </div>
                   </div>
                   <div className="d-flex justify-content-between my-4">
-                    <div>مبلغ مورد انتظار در صندوق</div>
-                    <div>{priceFormatter(balance)} تومان</div>
+                    <div>The expected amount in the box</div>
+                    <div>{priceFormatter(balance)} Toman</div>
                   </div>
                   {parseInt(status) === parseInt(CASH_DRAWER_TYPE_FINISHED) ? (
                     <div className="d-flex flex-wrap mt-2">
                       <div className="mt-2 pt-2" style={{ width: 140 }}>
-                        مبلغ واقعی در صندوق:
+                        The actual amount in the box:
                       </div>
                       <div style={{ minWidth: 250 }} className="flex-1 mt-2">
                         <Input
                           priceInput
-                          placeholder="مبلغ واقعی"
+                          placeholder="The actual amount"
                           size="small"
                           value={remaining}
                           onChange={setRemaining}
@@ -191,16 +191,16 @@ export default function DrawerHistoryModal({
                     </div>
                   ) : (
                     <div className="d-flex justify-content-between my-4">
-                      <div>مبلغ واقعی در صندوق:</div>
-                      <div>{priceFormatter(final_money)} تومان</div>
+                      <div>The actual amount in the box:</div>
+                      <div>{priceFormatter(final_money)} Toman</div>
                     </div>
                   )}
                   <div className="d-flex justify-content-between my-4">
-                    <div>اختلاف</div>
+                    <div>Disagreement</div>
                     <div>
                       {`${priceFormatter(Math.abs(_diff))}${
                         _diff < 0 ? "-" : ""
-                      } تومان`}
+                      } Toman`}
                     </div>
                   </div>
                   {parseInt(status) === parseInt(CASH_DRAWER_TYPE_FINISHED) ? (
@@ -228,7 +228,7 @@ export default function DrawerHistoryModal({
                       color="primary"
                       disabled={!remaining}
                     >
-                      بستن صندوق
+                      Close the box
                     </Button>
                   ) : null}
                 </div>

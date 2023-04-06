@@ -30,7 +30,7 @@ function FontSection({ _themeConfigFont, changeThemeConfigFont }) {
     <Paper elevation={1} className="d-flex mt-3 py-3 flex-wrap">
       <div className="col-12">
         <div className="u-fontLarge" style={{ color: night }}>
-          انتخاب فونت
+          Font selection
         </div>
         <div className="my-2">
           <FormControl
@@ -67,7 +67,7 @@ function FontSection({ _themeConfigFont, changeThemeConfigFont }) {
             fontFamily: selectedTempFont ? selectedTempFont.url : "inherit",
           }}
         >
-          نمونه فونت: ویترین، نرم‌افزار جامع فروش و بازاریابی
+          Font sample: Showcase, Comprehensive Sales and Marketing Software
         </div>
       </div>
     </Paper>

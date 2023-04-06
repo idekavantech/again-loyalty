@@ -7,5 +7,5 @@ export default function AdminAnalyticsIngredientsStorageDetails() {
 AdminAnalyticsIngredientsStorageDetails.ShouldBeAdmin = true;
 AdminAnalyticsIngredientsStorageDetails.Wrapper = AdminLayout;
 export const breadcrumb = {
-  title: "درخواست شمارش موجودی مواداولیه",
+  title: "Request for Material Inventory Count",
 };

@@ -87,7 +87,7 @@ function AllBranchTransactionsTable({ isLoading, headCells, walletBalance }) {
                       <div style={{ direction: "ltr" }} className="ml-1">
                         {priceFormatter(item.balance)}
                       </div>
-                      <div>تومان</div>
+                      <div>Toman</div>
                     </div>
                   </TableCell>
                 </StyledTableRow>

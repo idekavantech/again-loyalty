@@ -21,7 +21,7 @@ function ColorSection({ _themeColorConfig, changeThemeColorConfig }) {
     >
       <div className="col-12">
         <div className="u-fontLarge mb-3" style={{ color: night }}>
-          انتخاب رنگ
+          Color selection
         </div>
         <div className="d-flex flex-wrap">
           {spectrums.map((eachSpectrum, index) => (
@@ -54,15 +54,15 @@ function ColorSection({ _themeColorConfig, changeThemeColorConfig }) {
         </div>
         <div className="u-fontMedium mt-4">
           <div className="u-fontLarge mb-3" style={{ color: night }}>
-            انتخاب رنگ
+            Color selection
           </div>
-          <span style={{ color: night }}>رنگ مورد نظر خود را پیدا نکردید؟</span>
+          <span style={{ color: night }}>Didn't find your desired color?</span>
           <span
             className="mr-1 u-cursor-pointer"
             style={{ color: process.env.NEXT_PUBLIC_ADMIN_THEME_COLOR }}
             onClick={() => setOpen(!open)}
           >
-            انتخاب رنگ دلخواه
+            Choosing the desired color
           </span>
           <span
             className="u-rectangle d-flex justify-content-center align-items-center ml-3 mt-2"

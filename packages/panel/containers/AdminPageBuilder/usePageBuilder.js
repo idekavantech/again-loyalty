@@ -85,7 +85,7 @@ export function usePageBuilder() {
   const pluginPages = useSelector(makeSelectPluginPages());
   const allPages = useSelector(makeSelectAllPages());
   const journeyData = useSelector(makeSelectJourneyState());
-  const entityPersianCopyRight = _page?.data?.is_blog ? "پست" : "صفحه";
+  const entityPersianCopyRight = _page?.data?.is_blog ? "Post" : "Page";
   const tempPage = JSON.parse(JSON.stringify(_page));
   const theme = useTheme();
   const router = useRouter();
@@ -575,17 +575,17 @@ export function usePageBuilder() {
           className="d-flex flex-column align-items-center"
           onClick={() => goTo(1)}
         >
-          <h1>صفحه ساز ویترین را بشناسید</h1>
+          <h1>Know the showcase maker</h1>
           <p className="mt-3">
-            این صفحه، پیشفرض قالب شما را نشان می‌دهد. شما می‌توانید با کلیک بر
-            روی بخشی که علاقه دارید آن را تغییر دهید محتوای آن قسمت را ویرایش
-            کرده یا ویژگی های آن را به سلیقه خودتان شخصی‌سازی کنید.
+            This page shows the default of your template. You can click by clicking
+            On the part you would like to change the content of that section
+            Customize it or characterize it to your taste.
           </p>
           <button
             className="mt-2"
             style={{ color: theme.palette.primary.main, fontWeight: 500 }}
           >
-            خوبه
+            Is it good
           </button>
         </div>
       ),
@@ -599,15 +599,15 @@ export function usePageBuilder() {
           onClick={() => setIsOpenOnboarding(false)}
         >
           <p>
-            پس از هر تغییر با فشردن دکمه ذخیره تغییرات را ثبت کنید و به کمک پیش
-            نمایش آن را مشاهده کنید.
+            After any change by pressing the save button, record the changes and with the help of ahead
+            View it..
           </p>
           <button
             className="d-flex align-items-center mt-4"
             style={{ color: theme.palette.primary.main, fontWeight: 500 }}
             onClick={() => goTo(2)}
           >
-            <span>خوبه</span>
+            <span>Is it good</span>
           </button>
         </div>
       ),

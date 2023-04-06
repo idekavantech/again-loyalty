@@ -10,27 +10,27 @@ import { sectionsLayout } from "../../sectionsLayout";
 import { SECTION_PRODUCTS } from "@saas/utils/constants/sections";
 
 const products = [
-  // محصولات
+  // Products
   {
     ...sectionsConfigTabsRepeatedParts["content"],
     items: [
       {
         id: uniqueid(),
-        label: "عنوان",
+        label: "Title",
         key: "title",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "عنوان",
+            label: "Title",
             type: "text",
             key: "value",
-            default_value: "عنوان",
+            default_value: "Title",
           },
           {
             id: uniqueid(),
-            label: "رنگ عنوان از رنگ تم پیروی کند.",
+            label: "The color of the title follows the theme color.",
             type: "checkbox",
             key: "color_use_theme_color",
             default_value: true,
@@ -44,14 +44,14 @@ const products = [
               },
             ],
             id: uniqueid(),
-            label: "رنگ عنوان",
+            label: "Title color",
             type: "color",
             key: "color",
             default_value: "#000000",
           },
           {
             id: uniqueid(),
-            label: "رنگ خط زیر عنوان از رنگ تم پیروی کند.",
+            label: "The color of the line below the title follows the theme color.",
             type: "checkbox",
             key: "underline_color_use_theme_color",
             default_value: true,
@@ -65,7 +65,7 @@ const products = [
               },
             ],
             id: uniqueid(),
-            label: "رنگ خط زیر عنوان",
+            label: "The color of the line under the title",
             type: "color",
             key: "underline_color",
             default_value: "#000000",
@@ -74,7 +74,7 @@ const products = [
       },
       {
         id: uniqueid(),
-        label: "زیرعنوان",
+        label: "Sour",
         key: "subtitle",
         element_id: null,
         description: "",
@@ -90,15 +90,15 @@ const products = [
         fields: [
           {
             id: uniqueid(),
-            label: "زیر‌عنوان",
-            default_value: "عنوان فرعی",
+            label: "Underwent",
+            default_value: "Substitious title",
             key: "value",
             type: "text",
           },
 
           {
             id: uniqueid(),
-            label: "رنگ زیرعنوان از رنگ تم پیروی کند.",
+            label: "The color of the subdivision follows the color of the theme.",
             type: "checkbox",
             key: "color_use_theme_color",
             default_value: true,
@@ -112,7 +112,7 @@ const products = [
               },
             ],
             id: uniqueid(),
-            label: "رنگ زیرعنوان",
+            label: "Color",
             type: "color",
             key: "color",
             default_value: "#000000",
@@ -121,19 +121,19 @@ const products = [
       },
       {
         id: uniqueid(),
-        label: "بخش‌ها",
+        label: "Sections",
         key: "sections",
         element_id: null,
         description: "",
         has_multiple_items: true,
         extendable_items: true,
-        add_new_item_text: "افزودن بخش جدید",
+        add_new_item_text: "Add the new section",
         max_items: 20,
         min_items: 2,
         default_items: [
           {
-            title: "عنوان",
-            subtitle: "عنوان فرعی",
+            title: "Title",
+            subtitle: "Substitious title",
             texts_color: "#ffffff",
             link_type: HAS_INTERNAL_LINK,
             internal_link: "/",
@@ -141,8 +141,8 @@ const products = [
             image: `${CDN_BASE_URL}mock18.jpg`,
           },
           {
-            title: "عنوان",
-            subtitle: "عنوان فرعی",
+            title: "Title",
+            subtitle: "Substitious title",
             texts_color: "#ffffff",
             link_type: HAS_INTERNAL_LINK,
             internal_link: "/",
@@ -153,33 +153,33 @@ const products = [
         items_fields: [
           {
             id: uniqueid(),
-            label: "عنوان",
-            default_value: "عنوان",
+            label: "Title",
+            default_value: "Title",
             type: "text",
             key: "title",
           },
           {
             id: uniqueid(),
-            label: "زیرعنوان",
-            default_value: "عنوان فرعی",
+            label: "Sour",
+            default_value: "Substitious title",
             type: "text",
             key: "subtitle",
           },
           {
             id: uniqueid(),
-            label: "انتخاب لینک داخلی یا خارجی",
+            label: "Select the internal or external link",
             default_value: HAS_INTERNAL_LINK,
             key: "link_type",
             type: "select",
             options: [
               {
                 id: uniqueId(),
-                label: "با لینک خارجی",
+                label: "With external link",
                 value: HAS_EXTERNAL_LINK,
               },
               {
                 id: uniqueId(),
-                label: "با لینک داخلی",
+                label: "With internal link",
                 value: HAS_INTERNAL_LINK,
               },
             ],
@@ -193,7 +193,7 @@ const products = [
               },
             ],
             id: uniqueid(),
-            label: "لینک داخلی",
+            label: "Internal link",
             default_value: "/",
             key: "internal_link",
             type: "link",
@@ -207,7 +207,7 @@ const products = [
               },
             ],
             id: uniqueid(),
-            label: "لینک خارجی",
+            label: "External link",
             default_value: "/",
             key: "external_link",
             type: "text",
@@ -215,7 +215,7 @@ const products = [
           },
           {
             id: uniqueid(),
-            label: "عکس",
+            label: "Picture",
             default_value: `${CDN_BASE_URL}mock24.jpg`,
             type: "image_uploader",
             key: "image",
@@ -252,14 +252,14 @@ const products = [
           },
         ],
         id: uniqueId(),
-        label: "تنظیمات اسلایدر",
+        label: "Slider Settings",
         key: "slider_setting",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueId(),
-            label: "حرکت اتوماتیک",
+            label: "Automatic movement",
             default_value: false,
             key: "autoplay",
             type: "switch",
@@ -273,14 +273,14 @@ const products = [
               },
             ],
             id: uniqueId(),
-            label: "فاصله زمانی حرکت اتوماتیک محصولات (به میلی ثانیه) ",
+            label: "Automatic Movement of Products(To milliseconds) ",
             default_value: 3000,
             key: "timer",
             type: "number",
           },
           {
             id: uniqueId(),
-            label: "حرکت به صورت بی‌انتها",
+            label: "The movements of the infinite",
             default_value: false,
             key: "infinite",
             type: "switch",

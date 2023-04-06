@@ -41,18 +41,18 @@ export function useAdminDevicesFilterWidgets(setFilters) {
     else setSelectedTypes(selectedTypes.filter((id) => id !== typeId));
   };
   const renderSelectedStatusesValue = (selected) => {
-    if (selected.length === 0) return "وضعیت انتخاب کنید";
+    if (selected.length === 0) return "Select the status";
     if (selected.length === 1 && selected[0])
       return cashDrawerTypes.find((type) => type.id === selected[0]).text;
-    if (selected.length === branches.length) return "همه وضعیت‌ها";
-    return `${englishNumberToPersianNumber(selected.length)} وضعیت `;
+    if (selected.length === branches.length) return "All situations";
+    return `${englishNumberToPersianNumber(selected.length)} Condition`;
   };
   const renderSelectedBranchValue = (selected) => {
-    if (selected.length === 0) return "شعبه انتخاب کنید";
+    if (selected.length === 0) return "Choose a branch";
     if (selected.length === 1 && selected[0])
       return branches.find((branch) => branch.id === selected[0]).title;
-    if (selected.length === branches.length) return "همه شعب";
-    return `${englishNumberToPersianNumber(selected.length)} شعبه `;
+    if (selected.length === branches.length) return "All branches";
+    return `${englishNumberToPersianNumber(selected.length)} Branch`;
   };
 
   useEffect(() => {

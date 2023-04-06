@@ -63,7 +63,7 @@ jMoment.loadPersian({dialect: "persian-modern", usePersianDigits: true});
 
 const $ = `/images/$.svg`;
 
-const columns = ["تاریخ", "مجموع فروش", "تعداد سفارش", "میانگین ارزش سفارش"];
+const columns = ["Date", "Total sales", "Number of order", "Average order value"];
 
 export function AdminAovReport({
                                    _getReportData,
@@ -420,7 +420,7 @@ export function AdminAovReport({
             const pdf = new jsPDF("p", "mm", "a4");
             let position = 0;
             pdf.addImage(imgData, "JPEG", 0, position, imgWidth, imgHeight);
-            pdf.save("میانگین ارزش سفارش‌ها.pdf");
+            pdf.save("The average value of orders.pdf");
         });
     };
     return (
@@ -438,15 +438,15 @@ export function AdminAovReport({
                     displayEmpty
                     size="large"
                     renderValue={() => {
-                        if (selectedBranches?.length === 0) return "شعبه انتخاب کنید";
+                        if (selectedBranches?.length === 0) return "Choose a branch";
                         if (selectedBranches?.length === 1 && selectedBranches[0])
                             return branches.find(
                                 (branch) => branch.id === selectedBranches[0]
                             ).title;
-                        if (selectedBranches?.length === branches?.length) return "همه شعب";
+                        if (selectedBranches?.length === branches?.length) return "All branches";
                         return `${englishNumberToPersianNumber(
                             selectedBranches?.length
-                        )} شعبه `;
+                        )} Branch`;
                     }}
                     MenuProps={{
                         getContentAnchorEl: null,
@@ -480,7 +480,7 @@ export function AdminAovReport({
                             color="primary"
                             checked={selectedBranches?.length === branches?.length}
                         />
-                        <ListItemText primary="انتخاب همه شعب" className="text-right"/>
+                        <ListItemText primary="Choosing all branches" className="text-right"/>
                     </MenuItem>
                     {branches.map((branch) => {
                         return (
@@ -522,13 +522,13 @@ export function AdminAovReport({
                         onClick={handleOpenModal}
                         variant="outlined"
                     >
-                        از{" "}
+                        From{" "}
                         <span className="px-2">
               {englishNumberToPersianNumber(
                   formatDateObjectToNormal(selectedDayRange.from)
               )}
             </span>
-                        تا{" "}
+                        until the{" "}
                         <span className="px-2">
               {englishNumberToPersianNumber(
                   formatDateObjectToNormal(selectedDayRange.to)
@@ -581,7 +581,7 @@ export function AdminAovReport({
                         variant="contained"
                         onClick={handleClick}
                     >
-                        خروجی
+                        Output
                     </Button>
                     <Menu
                         id="simple-menu"
@@ -595,7 +595,7 @@ export function AdminAovReport({
                                 let csvContent = "data:text/csv;charset=utf-8,%EF%BB%BF";
                                 const content = [
                                     columns,
-                                    [{data: "خلاصه"}, ...summary],
+                                    [{data: "Summary"}, ...summary],
                                     ...rows,
                                 ]
                                     .map((e) =>
@@ -640,13 +640,13 @@ export function AdminAovReport({
                         ) : (
                             <div>
                                 <h2 style={{fontWeight: 700}} className="mb-2">
-                                    میانگین ارزش سفارش‌ها
+                                    The average value of orders
                                 </h2>
                                 <div className="my-2 d-flex justify-content-between align-items-center">
                                     <div style={{fontSize: 20, fontWeight: 700}}>
                                         {reportsData?.[BRANCHES_TRANSACTIONS_REPORT_TYPE] &&
                                             priceFormatter(totalOrdersAverageValues)}{" "}
-                                        تومان
+                                        Toman
                                     </div>
                                     <div
                                         className="d-flex justify-content-center align-items-center"
@@ -670,20 +670,20 @@ export function AdminAovReport({
                                 </div>
                                 {transactionsXAxiosLabel?.length || selectedBranches?.length ? (
                                     <Chart
-                                        xAxisNodeTitle="میانگین ارزش سفارش"
+                                        xAxisNodeTitle="Average order value"
                                         hasToCompare={compareToPrevious}
                                         xAxisLabel={transactionsXAxiosLabel}
                                         mainLineData={mainDailyOrderAverageValues}
                                         compareLineData={comparedDailyOrderAverageValues}
                                         selectedBranches
-                                        title="میانگین ارزش سفارش‌ها"
+                                        title="The average value of orders"
                                     />
                                 ) : (
                                     <div
                                         style={{fontWeight: 700, fontSize: 18}}
                                         className="mb-2 mx-auto text-bold text-center"
                                     >
-                                        هیچ شعبه‌ای انتخاب نشده است
+                                        No branch is selected
                                     </div>
                                 )}
                             </div>
@@ -712,7 +712,7 @@ export function AdminAovReport({
                                                 fontWeight: 700,
                                             }}
                                         >
-                                            خلاصه
+                                            Summary
                                         </StyledTableCell>
                                         {summary.map((summaryCell) => (
                                             <StyledTableCell
@@ -752,7 +752,7 @@ export function AdminAovReport({
                                                 fontWeight: 700,
                                             }}
                                         >
-                                            خلاصه
+                                            Summary
                                         </StyledTableCell>
                                         {summary.map((summaryCell) => (
                                             <StyledTableCell
@@ -793,7 +793,7 @@ export function AdminAovReport({
                             style={{fontSize: 15, fontWeight: 900}}
                             className="mx-auto text-bold text-center font-weight-bold w-100 mt-3"
                         >
-                            هیج شعبه‌ای انتخاب نشده است
+                            No branch is selected
                         </div>
                     </>
                 )}

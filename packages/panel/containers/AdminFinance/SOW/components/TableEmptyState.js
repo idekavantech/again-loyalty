@@ -11,7 +11,7 @@ function TableEmptyState() {
           height={70}
           src={`/images/tableEmptyState.svg`}
         />
-        <div className="mt-4">گزارشی ثبت نشده است !</div>
+        <div className="mt-4">The report is not recorded!</div>
       </div>
     </div>
   );

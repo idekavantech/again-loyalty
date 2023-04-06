@@ -25,10 +25,10 @@ export default function MenuSectionContainer({
                 id={superMenu.value[superMenu.selectedMenu]?.id}
                 onClose={() => dispatch(removeMenu(false))}
             />
-            <SectionContainer title={'منو'}  btns={
+            <SectionContainer title={'Menu'}  btns={
                 <>
                     <SectionButton 
-                        title='ویرایش منو' 
+                        title='Editing the menu' 
                         disabled={
                             (superMenu.selectedMenu !== 0 && superMenu.selectedMenu < 0)
                         }
@@ -36,7 +36,7 @@ export default function MenuSectionContainer({
                     />
                     <SectionButton 
                         textColor='red' 
-                        title='حذف منو'
+                        title='Remove the menu'
                         disabled={
                             (
                                 superMenu.selectedMenu < 0 ||

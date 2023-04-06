@@ -62,10 +62,10 @@ const HIGHEST_PURCHASE_COST = "HIGHEST_PURCHASE_COST";
 const HIGHEST_ITEM_AMOUNT = "HIGHEST_ITEM_AMOUNT";
 
 const sortingOptions = [
-    {id: 0, text: "جدیدترین", keyword: NEWEST},
-    {id: 1, text: "قدیمی‌ترین", keyword: OLDEST},
-    {id: 2, text: "بیشترین مبلغ خرید", keyword: HIGHEST_PURCHASE_COST},
-    {id: 3, text: "بیشترین مقدار آیتم", keyword: HIGHEST_ITEM_AMOUNT},
+    {id: 0, text: "the newest", keyword: NEWEST},
+    {id: 1, text: "The oldest", keyword: OLDEST},
+    {id: 2, text: "The highest amount of purchase", keyword: HIGHEST_PURCHASE_COST},
+    {id: 3, text: "The highest amount of item", keyword: HIGHEST_ITEM_AMOUNT},
 ];
 
 const sortingFunctions = {
@@ -89,10 +89,10 @@ const reasonType = (reason, amount) => {
                             className="ml-3"
                             style={{color: "#00A47C", fontSize: 12}}
                         />
-                        <span>{Math.abs(amount).toFixed(3)} دریافت شده</span>
+                        <span>{Math.abs(amount).toFixed(3)} received</span>
                     </>
                 ),
-                label: "دریافت شده",
+                label: "received",
                 amount,
             };
         case "sales":
@@ -103,10 +103,10 @@ const reasonType = (reason, amount) => {
                             className="ml-3"
                             style={{color: "#D82C0D", fontSize: 12}}
                         />
-                        <span>{Math.abs(amount).toFixed(3)} فروخته شده</span>
+                        <span>{Math.abs(amount).toFixed(3)} Sold</span>
                     </>
                 ),
-                label: "فروخته شده",
+                label: "Sold",
                 amount,
             };
         case "recount":
@@ -119,10 +119,10 @@ const reasonType = (reason, amount) => {
                             className="ml-3"
                             alt=""
                         />
-                        <span>{Math.abs(amount).toFixed(3)} شمارش مجدد</span>
+                        <span>{Math.abs(amount).toFixed(3)} Re -count</span>
                     </>
                 ),
-                label: "شمارش مجدد",
+                label: "Re -count",
                 amount,
             };
         case "damage":
@@ -133,10 +133,10 @@ const reasonType = (reason, amount) => {
                             className="ml-3"
                             style={{color: "#D82C0D", fontSize: 12}}
                         />
-                        <span>{Math.abs(amount).toFixed(3)} خرابی</span>
+                        <span>{Math.abs(amount).toFixed(3)} Error</span>
                     </>
                 ),
-                label: "خرابی",
+                label: "Error",
                 amount,
             };
         case "theft":
@@ -147,10 +147,10 @@ const reasonType = (reason, amount) => {
                             className="ml-3"
                             style={{fontSize: 12, color: "#D82C0D"}}
                         />
-                        <span>{Math.abs(amount).toFixed(3)} سرقت</span>
+                        <span>{Math.abs(amount).toFixed(3)} Theft</span>
                     </>
                 ),
-                label: "سرقت",
+                label: "Theft",
                 amount,
             };
         case "loss":
@@ -161,10 +161,10 @@ const reasonType = (reason, amount) => {
                             className="ml-3"
                             style={{fontSize: 12, color: "#D82C0D"}}
                         />
-                        <span>{Math.abs(amount).toFixed(3)} مفقود شده</span>
+                        <span>{Math.abs(amount).toFixed(3)} lost</span>
                     </>
                 ),
-                label: "مفقود شده",
+                label: "lost",
                 amount,
             };
         case "return":
@@ -175,10 +175,10 @@ const reasonType = (reason, amount) => {
                             className="ml-3"
                             style={{fontSize: 12, color: "#00A47C"}}
                         />
-                        <span>{Math.abs(amount).toFixed(3)} مرجوعی</span>
+                        <span>{Math.abs(amount).toFixed(3)} returned</span>
                     </>
                 ),
-                label: "مرجوعی",
+                label: "returned",
                 amount,
             };
         case "order_item_not_found":
@@ -192,10 +192,10 @@ const reasonType = (reason, amount) => {
                             className="ml-3"
                             style={{fontSize: 12, color: "#00A47C"}}
                         />
-                        <span>{Math.abs(amount).toFixed(3)}بازگشت به انبار</span>
+                        <span>{Math.abs(amount).toFixed(3)}Back to the warehouse</span>
                     </>
                 ),
-                label: "بازگشت به انبار",
+                label: "Back to the warehouse",
                 amount,
             };
         case "lend":
@@ -206,7 +206,7 @@ const reasonType = (reason, amount) => {
                             className="ml-3"
                             style={{fontSize: 12, color: "#D82C0D"}}
                         />
-                        <span>{Math.abs(amount).toFixed(3)} قرض دادن</span>
+                        <span>{Math.abs(amount).toFixed(3)} Borrow</span>
                     </>
                 ),
                 label: "",
@@ -220,10 +220,10 @@ const reasonType = (reason, amount) => {
                             className="ml-3"
                             style={{fontSize: 12, color: "#00A47C"}}
                         />
-                        <span>{Math.abs(amount).toFixed(3)}قرض گرفتن</span>
+                        <span>{Math.abs(amount).toFixed(3)}To borrow</span>
                     </>
                 ),
-                label: "قرض گرفتن",
+                label: "To borrow",
                 amount,
             };
         case "move_in":
@@ -234,10 +234,10 @@ const reasonType = (reason, amount) => {
                             className="ml-3"
                             style={{fontSize: 12, color: "#D82C0D"}}
                         />
-                        <span>{Math.abs(amount).toFixed(3)} انتقال‌به</span>
+                        <span>{Math.abs(amount).toFixed(3)} Transfer to</span>
                     </>
                 ),
-                label: "انتقال به",
+                label: "Transfer to",
                 amount,
             };
         case "move_out":
@@ -248,10 +248,10 @@ const reasonType = (reason, amount) => {
                             className="ml-3"
                             style={{fontSize: 12, color: "#00A47C"}}
                         />
-                        <span>{Math.abs(amount).toFixed(3)}انتقال‌از</span>
+                        <span>{Math.abs(amount).toFixed(3)}Transition</span>
                     </>
                 ),
-                label: "انتقال از",
+                label: "Transfer from",
                 amount,
             };
         default:
@@ -262,77 +262,77 @@ const reasonType = (reason, amount) => {
 const causesType = [
     {
         id: 0,
-        title: "فروش",
+        title: "Sale",
         type: "sales",
     },
     {
         id: 1,
-        title: "دریافت",
+        title: "Receive",
         type: "stock_received",
     },
     {
         id: 2,
-        title: "شمارش مجدد",
+        title: "Re -count",
         type: "recount",
     },
     {
         id: 3,
-        title: "خرابی",
+        title: "Error",
         type: "damage",
     },
     {
         id: 4,
-        title: "سرقت",
+        title: "Theft",
         type: "theft",
     },
     {
         id: 5,
-        title: "گم شدن",
+        title: "getting lost",
         type: "loss",
     },
     {
         id: 6,
-        title: "مرجوعی",
+        title: "returned",
         type: "return",
     },
     {
         id: 7,
-        title: "سفارش جعلی",
+        title: "Fake order",
         type: "order_fraud",
     },
     {
         id: 8,
-        title: "آیتم‌های سفارش در دسترس نیستند.",
+        title: "Order items are not available.",
         type: "order_item_not_found",
     },
     {
         id: 9,
-        title: "پرداخت انجام نشد.",
+        title: "Failed to pay.",
         type: "order_without_payment",
     },
     {
         id: 10,
-        title: "دلایل دیگر",
+        title: "Other reasons",
         type: "other_reason",
     },
     {
         id: 11,
-        title: "قرض‌دادن",
+        title: "To borrow",
         type: "lend",
     },
     {
         id: 12,
-        title: "قرض‌گرفتن",
+        title: "Borrowers",
         type: "borrow",
     },
     {
         id: 13,
-        title: "انتقال‌به",
+        title: "Transfer to",
         type: "move_in",
     },
     {
         id: 14,
-        title: "انتقال‌از",
+        title: "Transition",
         type: "move_out",
     },
 ];
@@ -340,36 +340,36 @@ const causesType = [
 const branchHeadCells = [
     {
         id: "id",
-        name: "ردیف",
-        label: "ردیف",
+        name: "Row",
+        label: "Row",
         align: "center",
         minWidth: 100,
     },
     {
         id: "id",
-        name: "ش.کالا",
-        label: "ش.کالا",
+        name: "She.commodity",
+        label: "She.commodity",
         align: "center",
         minWidth: 100,
     },
     {
         id: "id",
-        name: "کالا",
-        label: "کالا",
+        name: "commodity",
+        label: "commodity",
         align: "center",
         minWidth: 100,
     },
     {
         id: "id",
-        name: "واحد",
-        label: "واحد",
+        name: "One",
+        label: "One",
         align: "center",
         minWidth: 100,
     },
     {
         id: "id",
-        name: "دلیل",
-        label: "دلیل",
+        name: "the reason",
+        label: "the reason",
         align: "center",
         minWidth: 100,
     },
@@ -534,8 +534,8 @@ export function AdminPurchaseByIngredientsReport({
             const mainBranchHeadCells = [...branchHeadCells];
             mainBranchHeadCells.splice(4, 0, {
                 id: "id",
-                label: "شعبه",
-                name: "شعبه",
+                label: "Branch",
+                name: "Branch",
                 align: "center",
             });
             return mainBranchHeadCells;
@@ -573,19 +573,19 @@ export function AdminPurchaseByIngredientsReport({
     return (
         <div className="container">
             <Head>
-                <title>گزارش کامل انبار مواد اولیه</title>
+                <title>Complete Raw Material Warehouse Report</title>
             </Head>
 
             <AdminBreadCrumb
-                submitButtonText="خروجی گرفتن"
+                submitButtonText="Output"
                 submitAction={() =>
                     generateCSVFile(
                         headRow,
                         rows,
                         [],
-                        `گزارش گزارش کامل انبار مواد اولیه از ${formatDateObjectToNormal(
+                        `Full Raw Material Warehouse Report from${formatDateObjectToNormal(
                             selectedDayRange.from
-                        )} تا  ${formatDateObjectToNormal(selectedDayRange.to)}`
+                        )} until the${formatDateObjectToNormal(selectedDayRange.to)}`
                     )
                 }
             />
@@ -629,7 +629,7 @@ export function AdminPurchaseByIngredientsReport({
                                         }, 500);
                                     }
                                 }}
-                                placeholder="جستجوی ش.کالا"
+                                placeholder="Search.commodity"
                                 inputProps={{
                                     className: "pr-5 mr-2",
                                 }}
@@ -671,7 +671,7 @@ export function AdminPurchaseByIngredientsReport({
                                     ),
                                 }}
                             />
-                            <p>بعد از ورود شماره کالا، اینتر بزنید.</p>
+                            <p>After entering the goods number, click Inter.</p>
                         </div>
                         <div className="d-flex flex-wrap align-items-center mb-3 ml-3">
                             <Button
@@ -682,13 +682,13 @@ export function AdminPurchaseByIngredientsReport({
                                 onClick={handleOpen}
                                 variant="outlined"
                             >
-                                از{" "}
+                                From{" "}
                                 <span className="px-2">
                   {englishNumberToPersianNumber(
                       formatDateObjectToNormal(selectedDayRange.from)
                   )}
                 </span>
-                                تا{" "}
+                                until the{" "}
                                 <span className="px-2">
                   {englishNumberToPersianNumber(
                       formatDateObjectToNormal(selectedDayRange.to)
@@ -740,16 +740,16 @@ export function AdminPurchaseByIngredientsReport({
                                 displayEmpty
                                 size="large"
                                 renderValue={() => {
-                                    if (selectedBranches.length === 0) return "شعبه انتخاب کنید";
+                                    if (selectedBranches.length === 0) return "Choose a branch";
                                     if (selectedBranches.length === 1 && selectedBranches[0])
                                         return branches.find(
                                             (branch) => branch.id === selectedBranches[0]
                                         ).title;
                                     if (selectedBranches.length === branches.length)
-                                        return "همه شعب";
+                                        return "All branches";
                                     return `${englishNumberToPersianNumber(
                                         selectedBranches.length
-                                    )} شعبه `;
+                                    )} Branch`;
                                 }}
                                 MenuProps={{
                                     getContentAnchorEl: null,
@@ -784,7 +784,7 @@ export function AdminPurchaseByIngredientsReport({
                                         checked={selectedBranches.length === branches.length}
                                     />
                                     <ListItemText
-                                        primary="انتخاب همه شعب"
+                                        primary="Choosing all branches"
                                         className="text-right"
                                     />
                                 </MenuItem>
@@ -838,16 +838,16 @@ export function AdminPurchaseByIngredientsReport({
                             displayEmpty
                             size="large"
                             renderValue={() => {
-                                if (selectedCauseTypes.length === 0) return "علت انتخاب کنید";
+                                if (selectedCauseTypes.length === 0) return "Choose the reason";
                                 if (selectedCauseTypes.length === 1 && selectedCauseTypes[0])
                                     return causesType.find(
                                         (cause) => cause.type === selectedCauseTypes[0]
                                     ).title;
                                 if (selectedCauseTypes.length === causesType.length)
-                                    return "همه علت ها";
+                                    return "All causes";
                                 return `${englishNumberToPersianNumber(
                                     selectedCauseTypes.length
-                                )} دلیل `;
+                                )} the reason`;
                             }}
                             MenuProps={{
                                 getContentAnchorEl: null,
@@ -882,7 +882,7 @@ export function AdminPurchaseByIngredientsReport({
                                     checked={selectedCauseTypes.length === causesType.length}
                                 />
                                 <ListItemText
-                                    primary="انتخاب همه علت ها"
+                                    primary="The choice of all the causes"
                                     className="text-right"
                                 />
                             </MenuItem>
@@ -942,7 +942,7 @@ export function AdminPurchaseByIngredientsReport({
                                 style={{width: 200}}
                                 className="px-3 u-fontWeightBold u-fontNormal my-1"
                             >
-                                مرتب‌سازی بر اساس
+                                order by
                             </div>
                         }
                         selectOption={(text) =>
@@ -951,7 +951,7 @@ export function AdminPurchaseByIngredientsReport({
                             )
                         }
                         inputData={{
-                            defaultValue: "مرتب‌سازی",
+                            defaultValue: "Ordering",
                         }}
                         selected={sortingOptions.find(
                             (i) => i.keyword === selectedSortingType
@@ -985,7 +985,7 @@ export function AdminPurchaseByIngredientsReport({
                             }}
                             className="ml-2 mb-2"
                             onDelete={() => setSearchedSkus([])}
-                            label="همه کالاها"
+                            label="All goods"
                         />
                     ) : (
                         searchedSkus?.map((sku, index) => {
@@ -1018,7 +1018,7 @@ export function AdminPurchaseByIngredientsReport({
                                             });
                                         }, 500);
                                     }}
-                                    label={`کالا با شماره‌ی ${englishNumberToPersianNumber(sku)}`}
+                                    label={`Product by number${englishNumberToPersianNumber(sku)}`}
                                 />
                             );
                         })
@@ -1039,7 +1039,7 @@ export function AdminPurchaseByIngredientsReport({
                             }}
                             className="ml-2 mb-2"
                             onDelete={() => setSelectedBranches([])}
-                            label="همه شعب"
+                            label="All branches"
                         />
                     ) : selectedBranches?.length ? (
                         branches
@@ -1084,7 +1084,7 @@ export function AdminPurchaseByIngredientsReport({
                             onDelete={() =>
                                 setSelectedBranches(branches.map((branch) => branch.id))
                             }
-                            label="هیچ‌کدام از شعب"
+                            label="None of the branches"
                         />
                     )}
                 </div>
@@ -1103,7 +1103,7 @@ export function AdminPurchaseByIngredientsReport({
                             }}
                             className="ml-2 mb-2"
                             onDelete={() => setCauseTypes([])}
-                            label="همه علت ها"
+                            label="All causes"
                         />
                     ) : selectedCauseTypes?.length ? (
                         causesType
@@ -1148,7 +1148,7 @@ export function AdminPurchaseByIngredientsReport({
                             onDelete={() =>
                                 setCauseTypes(causesType?.map(() => ingredient.id))
                             }
-                            label="هیچ‌کدام از دلیل‌ها"
+                            label="None of the reasons"
                         />
                     )}
                 </div>
@@ -1243,7 +1243,7 @@ export function AdminPurchaseByIngredientsReport({
                         </Table>
                     </TableContainer>
                 ) : (
-                    <div>دیتایی وجود ندارد.</div>
+                    <div>There is no data.</div>
                 )}
             </Paper>
         </div>

@@ -4,7 +4,7 @@ import { sectionsLayout } from "../../sectionsLayout";
 import { SECTION_ONLINE_PRODUCTS_LIST } from "@saas/utils/constants/sections";
 
 const onlineProductsList = [
-  // لیست محصولات فروش آنلاین
+  // List of Online Sales Products
   {
     ...sectionsConfigTabsRepeatedParts["customization"],
     items: [
@@ -14,7 +14,7 @@ const onlineProductsList = [
           {
             dependencies: [],
             id: uniqueid(),
-            label: "نوع دسته‌بندی‌ها",
+            label: "The type of categories",
             type: "select",
             key: "categories_type",
             default_value: "nested",
@@ -22,12 +22,12 @@ const onlineProductsList = [
               {
                 id: uniqueid(),
                 value: "nested",
-                label: "تودرتو",
+                label: "Status",
               },
               {
                 id: uniqueid(),
                 value: "flat",
-                label: "تک‌لایه‌ای",
+                label: "Singlely",
               },
             ],
           },
@@ -78,7 +78,7 @@ const onlineProductsList = [
               },
             ],
             id: uniqueid(),
-            label: "ویرایش منوی تودرتو",
+            label: "Edit the nested menu",
             type: "button",
             color: "primary",
             variant: "outlined",
@@ -96,7 +96,7 @@ const onlineProductsList = [
               },
             ],
             id: uniqueid(),
-            label: "سایدبار",
+            label: "Sidebar",
             type: "switch",
             color: "primary",
             key: "has_side_bar",
@@ -115,14 +115,14 @@ const onlineProductsList = [
           },
         ],
         id: uniqueid(),
-        label: "برچسب",
+        label: "Label",
         key: "category",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "نمایش عکس برچسب",
+            label: "View the tag photo",
             type: "switch",
             key: "has_category_image",
             default_value: false,
