@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 40</title>
+    <defs>
+        <linearGradient x1="50%" y1="98.0010364%" x2="50%" y2="1.87306668%" id="linearGradient-1">
+            <stop stop-color="#137ECE" offset="0%"></stop>
+            <stop stop-color="#288BD5" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Website" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-40">
+            <circle id="Oval-Copy-6" fill="#FFFFFF" cx="30" cy="30" r="30"></circle>
+            <g id="Logo" transform="translate(11.000000, 15.000000)" fill="url(#linearGradient-1)" fill-rule="nonzero">
+                <polygon id="Border" transform="translate(19.007892, 15.502825) rotate(0.250000) translate(-19.007892, -15.502825) " points="14.9244199 24.5412552 20.9206876 30.8759542 25.5410818 23.3183861 37.8824848 21.8968545 35.7948124 0.129694982 0.133298781 4.23732911 2.22097116 26.0044887"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,20 @@
+export const DIVITION = "panel/contaners/AdminReportBuilder/DIVITION";
+export const TOTAL_PAYMENTS = "total_payment_at_checkout";
+export const TOTAL_COUNT = "total_count";
+export const TOTAL_GROSS = "total_gross_sales";
+export const TOTAL_NET = "total_net_sales";
+export const TOTAL_TAX = "total_taxes";
+export const TOTAL_ORDER = "total_num_orders";
+export const TOTAL_SHIPPING = "total_delivery_price";
+export const TOTAL_DISCOUNT = "total_discounts_given";
+export const TOTAL_COUPON_DISCOUNT_AMOUNT = "total_coupon_discount_amount"
+export const TOTAL_CUSTOM_DISCOUNT_AMOUNT = "total_custom_discount_amount"
+export const TOTAL_CREDIT_USED = "total_gift_credit_used";
+export const DATE = "date";
+export const TOTAL_PRODUCT_SOLD = "total_count_variations_sold";
+
+export const TOTOAL_SUM_INITIAL_PRICE = "total_sum_initial_price";
+export const TOTOAL_COUNT_VARIATIONS_SOLD = "total_count_variations_sold";
+export const TOTOAL_SUM_DISCOUNTED_PRICE = "total_sum_discounted_price";
+export const TOTOAL_SUM_FINAL_UNIT_COST = "total_sum_final_unit_cost";
+export const TOTOAL_SUM_MODIFIERS_SOLD = "total_count_modifiers_sold";

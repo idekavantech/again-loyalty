@@ -1,0 +1,128 @@
+import {
+  SECTION_ABOUT_US,
+  SECTION_ADDRESS_WITH_MAP,
+  SECTION_BANNER_WITH_ANIMATED_TEXT,
+  SECTION_BANNER_WITH_SLIDER,
+  SECTION_CATEGORIES,
+  SECTION_CONTACT_US,
+  SECTION_COUNTER_CARD,
+  SECTION_ENAMAD,
+  SECTION_FAQ,
+  SECTION_FEATURES_CARD,
+  SECTION_FORMS,
+  SECTION_GENERAL_BANNER,
+  SECTION_IMAGE_GALLERY,
+  SECTION_MENU,
+  SECTION_MULTI_BRANCH,
+  SECTION_ONLINE_PRODUCTS_LIST,
+  SECTION_ORDER_ONLINE_HEADER,
+  SECTION_PICTURE_WITH_TEXT,
+  SECTION_PRODUCT_ADDITIONAL_INFORMATION,
+  SECTION_PRODUCT_INFORMATION,
+  SECTION_PRODUCTS,
+  SECTION_QUICK_ACCESS,
+  SECTION_RECOMMENDED_LABEL,
+  SECTION_RELATED_PRODUCTS,
+  SECTION_SLIDER,
+  SECTION_SOUND,
+  SECTION_SPECIAL_BANNER,
+  SECTION_TESTIMONIALS,
+  SECTION_TEXT,
+  SECTION_TITLE,
+  SECTION_VIDEO,
+  SECTION_WORKING_HOUR,
+} from "@saas/utils/constants/sections";
+import { uniqueid } from "@saas/utils/helpers/uniqueid";
+
+const getSectionLayoutObj = (typeNumber, imageUrl, name = "", type) => ({
+  id: uniqueid(),
+  value: `type_${typeNumber}`,
+  name: name,
+  image: `https://hs3-cdn-saas.behtarino.com/static/sections_skeleton${imageUrl}`,
+  ...(type && { type }),
+});
+
+export const sectionsLayout = {
+  [SECTION_ABOUT_US]: [getSectionLayoutObj(1, "/about-us.png")],
+  [SECTION_ADDRESS_WITH_MAP]: [getSectionLayoutObj(1, "/about-us.png")],
+  [SECTION_WORKING_HOUR]: [getSectionLayoutObj(1, "/worktime.png")],
+  [SECTION_CONTACT_US]: [getSectionLayoutObj(1, "/contact-us.png")],
+  [SECTION_ENAMAD]: [getSectionLayoutObj(1, "/certificate.png")],
+  [SECTION_SPECIAL_BANNER]: [getSectionLayoutObj(1, "/special-banner.png")],
+  [SECTION_FEATURES_CARD]: [getSectionLayoutObj(1, "/features-card.png")],
+  [SECTION_TESTIMONIALS]: [getSectionLayoutObj(1, "/testimonials.png")],
+  [SECTION_IMAGE_GALLERY]: [
+    getSectionLayoutObj(1, "/image-gallery.png"),
+    getSectionLayoutObj(2, "/image-with-category.png"),
+    getSectionLayoutObj(3, "/image-gallery3.png"),
+  ],
+  [SECTION_MULTI_BRANCH]: [
+    getSectionLayoutObj(1, "/multi-branch1.png"),
+    getSectionLayoutObj(2, "/multi-branch2.png"),
+    getSectionLayoutObj(3, "/multi-branch3.png"),
+  ],
+  [SECTION_FORMS]: [getSectionLayoutObj(1, "/form.png")],
+  [SECTION_TEXT]: [getSectionLayoutObj(1, "/text.png")],
+  [SECTION_TITLE]: [getSectionLayoutObj(1, "/text.png")],
+  [SECTION_COUNTER_CARD]: [getSectionLayoutObj(1, "/counter-card.png")],
+  [SECTION_FAQ]: [getSectionLayoutObj(1, "/faq.png")],
+  [SECTION_BANNER_WITH_SLIDER]: [
+    getSectionLayoutObj(1, "/banner-with-slider.png"),
+  ],
+  [SECTION_QUICK_ACCESS]: [getSectionLayoutObj(1, "/quick-access.png")],
+  [SECTION_ONLINE_PRODUCTS_LIST]: [
+    getSectionLayoutObj(1, "/items-list-1.png", "", "flat"),
+    getSectionLayoutObj(2, "/items-list-2.png", "", "flat"),
+    getSectionLayoutObj(3, "/items-list-2.png", "", "nested"),
+  ],
+  [SECTION_PRODUCT_INFORMATION]: [
+    getSectionLayoutObj(1, "/product-details.png"),
+  ],
+  [SECTION_RELATED_PRODUCTS]: [getSectionLayoutObj(1, "/same-product.png")],
+  [SECTION_PRODUCT_ADDITIONAL_INFORMATION]: [
+    getSectionLayoutObj(1, "/completed-product-details.png"),
+  ],
+  [SECTION_ORDER_ONLINE_HEADER]: [
+    getSectionLayoutObj(1, "/online-header1.png"),
+    getSectionLayoutObj(2, "/online-header2.png"),
+    getSectionLayoutObj(3, "/online-header3.png"),
+  ],
+  [SECTION_RECOMMENDED_LABEL]: [
+    getSectionLayoutObj(1, "/featured-item-category-right.png"),
+    getSectionLayoutObj(2, "/featured-item-category-center.png"),
+    getSectionLayoutObj(3, "/featured-item-category-left.png"),
+  ],
+  [SECTION_PRODUCTS]: [
+    getSectionLayoutObj(1, "/items-right.png"),
+    getSectionLayoutObj(2, "/items-left.png"),
+  ],
+  [SECTION_VIDEO]: [
+    getSectionLayoutObj(1, "/image-video1.png"),
+    getSectionLayoutObj(2, "/image-video2.png"),
+  ],
+  [SECTION_CATEGORIES]: [
+    getSectionLayoutObj(1, "/category-right.png"),
+    getSectionLayoutObj(2, "/category-left.png"),
+  ],
+  [SECTION_GENERAL_BANNER]: [
+    getSectionLayoutObj(1, "/general-up-right.png"),
+    getSectionLayoutObj(2, "/general-up-center.png"),
+    getSectionLayoutObj(3, "/general-up-left.png"),
+    getSectionLayoutObj(4, "/general-down-right.png"),
+  ],
+  [SECTION_MENU]: [
+    getSectionLayoutObj(1, "/menu.png"),
+    getSectionLayoutObj(2, "/menu2.png"),
+  ],
+  [SECTION_BANNER_WITH_ANIMATED_TEXT]: [
+    getSectionLayoutObj(1, "/with-movable-text-right.png"),
+    getSectionLayoutObj(2, "/with-movable-text-center.png"),
+    getSectionLayoutObj(3, "/with-movable-text-left.png"),
+  ],
+  [SECTION_PICTURE_WITH_TEXT]: [
+    getSectionLayoutObj(1, "/picture-with-text-right.png"),
+    getSectionLayoutObj(2, "/picture-with-text-left.png"),
+  ],
+  [SECTION_SLIDER]: [getSectionLayoutObj(1, "/slideshow.png")],
+  [SECTION_SOUND]: [getSectionLayoutObj(1, "/sound.png")],
+};

@@ -1,0 +1,97 @@
+.elementor-container {
+  margin: 0% 15px 0% 15px;
+  padding: 0% 0% 0% 52%;
+  @media (max-width: 1024px) {
+    margin: 0% 0% 0% 30%;
+    padding: 0% 8% 0% 20%;
+  }
+  @media (max-width: 767px) {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 20px 0px 20px;
+  }
+}
+.elementor-spacer {
+  height: 220px;
+  @media (max-width: 1024px) {
+    height: 120px;
+  }
+  @media (max-width: 767px) {
+    height: 116px;
+  }
+}
+.moved-element {
+  -webkit-animation: movedElement 5s linear infinite;
+  animation: movedElement 5s linear infinite;
+}
+.rotated-element {
+  -webkit-animation: rotatedElement 5s linear infinite;
+  animation: rotatedElement 5s linear infinite;
+}
+@keyframes movedElement {
+  0% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+  25% {
+    -webkit-transform: translate(10px, 10px);
+    transform: translate(10px, 10px);
+  }
+  50% {
+    -webkit-transform: translate(5px, 5px);
+    transform: translate(5px, 5px);
+  }
+  75% {
+    -webkit-transform: translate(10px, -5px);
+    transform: translate(10px, -5px);
+  }
+  100% {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+@keyframes rotatedElement {
+  0% {
+    -webkit-transform: translate(0) rotate(0deg);
+    transform: translate(0) rotate(0deg);
+  }
+  25% {
+    -webkit-transform: translate(-10px, 10px) rotate(10deg);
+    transform: translate(-10px, 10px) rotate(10deg);
+  }
+  50% {
+    -webkit-transform: translate(5px, -5px) rotate(25deg);
+    transform: translate(5px, -5px) rotate(25deg);
+  }
+  75% {
+    -webkit-transform: translate(15px, -5px) rotate(15deg);
+    transform: translate(15px, -5px) rotate(15deg);
+  }
+  100% {
+    -webkit-transform: translate(0) rotate(0deg);
+    transform: translate(0) rotate(0deg);
+  }
+}
+
+.hover-slide {
+  --x: 0;
+  --y: 0;
+  --d: 50;
+  transition: transform calc(500ms / 4) cubic-bezier(0.25, 0.46, 0.45, 0.84) !important;
+  &:hover {
+    transform: scale(1.125)
+      translate(
+        calc(var(--x) / var(--d) * 1px),
+        calc(var(--y) / var(--d) * 1px)
+      );
+  }
+}
+
+.hover-slide__image {
+  --d: 20;
+
+  transform: translate(
+    calc(var(--x) / var(--d) * 1px),
+    calc(var(--y) / var(--d) * 1px)
+  );
+}
