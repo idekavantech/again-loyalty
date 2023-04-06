@@ -37,7 +37,7 @@ function CRMMembershipLabelModal(props) {
           }}
         >
           <div
-            className="d-flex align-items-center pb-4 mb-4"
+            className="d-flex align-items-center justify-content-between row-rev pb-4 mb-4"
             style={{
               borderBottom: "1px solid rgba(0, 0, 0, 0.12)",
             }}
@@ -95,10 +95,10 @@ function CRMMembershipLabelModal(props) {
                     key={label?.title}
                     value={label?.id}
                   >
-                    <div className="w-100 d-flex align-items-center">
+                    <div className="w-100 d-flex align-items-center px-4">
                       <ListItemText
                         primary={label?.title}
-                        className="text-right"
+                        className="text-left"
                       />
                     </div>
                   </MenuItem>
@@ -107,7 +107,7 @@ function CRMMembershipLabelModal(props) {
             </Select>
           </div>
           <div
-            className="d-flex justify-content-end align-center"
+            className="d-flex justify-content-end row-rev align-center"
             style={{ paddingTop: 24 }}
           >
             <Button

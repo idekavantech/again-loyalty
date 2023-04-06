@@ -5,8 +5,9 @@ import { priceFormatter } from "@saas/utils/helpers/priceFormatter";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 
 import Link from "next/link";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { Checkbox } from "@material-ui/core";
+import { persianToEnglishNumber } from "@saas/utils/helpers/persianToEnglishNumber";
 
 const timeFormatter = (date) => {
   if (!date) return "--";
@@ -15,7 +16,7 @@ const timeFormatter = (date) => {
     `${orderDate.getFullYear()}-${orderDate.getMonth() + 1}-${orderDate.getDate()}`,
     "YYYY-MM-DD"
   );
-  return orderTime ? englishNumberToPersianNumber(orderTime.format("jYYYY/jMM/jDD")) : "--";
+  return orderTime ? persianToEnglishNumber(orderTime.format("YYYY/MM/DD")) : "--";
 };
 const averagePurchaseAmount = (total, count) => {
   return priceFormatter(total / count);
@@ -41,57 +42,57 @@ export default function CRMMembershipsListTable({
     >
       <TableCell
         className="text-nowrap"
-        align="right"
+        align="left"
         style={{ fontSize: "16px", fontWeight: 600 }}
         onClick={(e) => onMembershipClick(e, CRMMembership.id)}
       >
         <Checkbox checked={Boolean(selectedMembershipIds.includes(CRMMembership.id))} color="primary" />
       </TableCell>
-      <TableCell className="text-nowrap" align="right" style={{ fontSize: "16px", fontWeight: 600 }}>
+      <TableCell className="text-nowrap" align="left" style={{ fontSize: "16px", fontWeight: 600 }}>
         {CRMMembership.name}
       </TableCell>
-      <TableCell className="text-nowrap" align="right" style={{ fontSize: "16px", fontWeight: 600 }}>
+      <TableCell className="text-nowrap" align="left" style={{ fontSize: "16px", fontWeight: 600 }}>
         {englishNumberToPersianNumber(CRMMembership?.user?.phone_zero_starts)}
       </TableCell>
-      <TableCell className="text-nowrap" align="right" style={{ fontSize: "16px", fontWeight: 600 }}>
+      <TableCell className="text-nowrap" align="left" style={{ fontSize: "16px", fontWeight: 600 }}>
         {englishNumberToPersianNumber(CRMMembership?.point_credit)}
       </TableCell>
-      <TableCell className="text-nowrap" align="right" style={{ fontSize: "16px", fontWeight: 600 }}>
+      <TableCell className="text-nowrap" align="left" style={{ fontSize: "16px", fontWeight: 600 }}>
         {priceFormatter(CRMMembership.gift_credit)}
         <span className="mr-1">$</span>
       </TableCell>
-      <TableCell className="text-nowrap" align="right" style={{ fontSize: "16px", fontWeight: 600 }}>
+      <TableCell className="text-nowrap" align="left" style={{ fontSize: "16px", fontWeight: 600 }}>
         {priceFormatter(CRMMembership.wallet_credit)}
         <span className="mr-1">$</span>
       </TableCell>
-      <TableCell className="text-nowrap" align="right" style={{ fontSize: "16px", fontWeight: 600 }}>
+      <TableCell className="text-nowrap" align="left" style={{ fontSize: "16px", fontWeight: 600 }}>
         {priceFormatter(CRMMembership.aggregated_data?.review?.satisfaction)}
       </TableCell>
-      <TableCell className="text-nowrap" align="right" style={{ fontSize: "16px", fontWeight: 600 }}>
+      <TableCell className="text-nowrap" align="left" style={{ fontSize: "16px", fontWeight: 600 }}>
         {CRMMembership?.labels
           ?.map((label) => labels?.find((labelItem) => labelItem?.id === label)?.title || "")
           .join(" , ")}
       </TableCell>
-      <TableCell className="text-nowrap" align="right" style={{ fontSize: "16px", fontWeight: 600 }}>
+      <TableCell className="text-nowrap" align="left" style={{ fontSize: "16px", fontWeight: 600 }}>
         {CRMMembership?.utm_data?.medium}
       </TableCell>
-      <TableCell className="text-nowrap" align="right" style={{ fontSize: "16px", fontWeight: 600 }}>
+      <TableCell className="text-nowrap" align="left" style={{ fontSize: "16px", fontWeight: 600 }}>
         {timeFormatter(CRMMembership.aggregated_data?.order?.first_date)}
       </TableCell>
-      <TableCell className="text-nowrap" align="right" style={{ fontSize: "16px", fontWeight: 600 }}>
+      <TableCell className="text-nowrap" align="left" style={{ fontSize: "16px", fontWeight: 600 }}>
         {timeFormatter(CRMMembership.aggregated_data?.order?.last_date)}
       </TableCell>
-      <TableCell className="text-nowrap" align="right" style={{ fontSize: "16px", fontWeight: 600 }}>
+      <TableCell className="text-nowrap" align="left" style={{ fontSize: "16px", fontWeight: 600 }}>
         {englishNumberToPersianNumber(CRMMembership.aggregated_data?.order?.count)}
       </TableCell>
-      <TableCell className="text-nowrap" align="right" style={{ fontSize: "16px", fontWeight: 600 }}>
+      <TableCell className="text-nowrap" align="left" style={{ fontSize: "16px", fontWeight: 600 }}>
         {averagePurchaseAmount(
           CRMMembership.aggregated_data?.order?.total,
           CRMMembership.aggregated_data?.order?.count
         )}
         <span className="mr-1">$</span>
       </TableCell>
-      <TableCell className="text-nowrap" align="right" style={{ fontSize: "16px", fontWeight: 600 }}>
+      <TableCell className="text-nowrap" align="left" style={{ fontSize: "16px", fontWeight: 600 }}>
         {priceFormatter(CRMMembership.aggregated_data?.order?.total)}
         <span className="mr-1">$</span>
       </TableCell>

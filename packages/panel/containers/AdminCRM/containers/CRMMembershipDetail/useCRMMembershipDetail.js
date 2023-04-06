@@ -30,7 +30,7 @@ import { GET_CRM_MEMBERSHIP } from "@saas/stores/business/constants";
 import Link from "next/link";
 import { priceFormatter } from "@saas/utils/helpers/priceFormatter";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { automatedProcessesActionsType } from "containers/AdminCRM/constants";
 import { persianToEnglishNumber } from "@saas/utils/helpers/persianToEnglishNumber";
 import { useMediaQuery } from "@material-ui/core";
@@ -273,7 +273,7 @@ export function useCRMMembershipDetail() {
     [AUTOMATED_PROCESS_EXECUTED_FOR_CRM_MEMBERSHIP]: (event) => {
       const { data, created_at } = event;
       return (
-        <div className="d-flex justify-content-between px-2">
+        <div className="d-flex justify-content-between ltr_force px-2">
           <span style={{ maxWidth: "60%" }}>
           Automated process <b>{data.automated_process_title}</b> Ran for customer 
           </span>
@@ -291,7 +291,7 @@ export function useCRMMembershipDetail() {
     //   const { created_at } = event;
 
     //   return (
-    //     <div className="d-flex justify-content-between px-2">
+    //     <div className="d-flex justify-content-between ltr_force px-2">
     //       <span style={{ maxWidth: "60%" }}>Membership in the club</span>
     //       {created_at && (
     //         <span>
@@ -306,15 +306,15 @@ export function useCRMMembershipDetail() {
       const { data, created_at } = event;
 
       return (
-        <div className="d-flex justify-content-between px-2">
+        <div className="d-flex justify-content-between ltr_force px-2">
           <span style={{ maxWidth: "60%" }}>
             {creditChangeEventTypes[data.operation]} Gift credit  in the amount of {" "}
             <b>{priceFormatter(data.amount)}$</b> Due to :{data.reason}{" "}
             {data.operation === INCREASE &&
               data.expiry &&
               moment(data.expiry).isValid() &&
-              `Expiration date${persianToEnglishNumber(
-                moment(data.expiry).format("jYYYY/jMM/jDD")
+              `Expiration date ${persianToEnglishNumber(
+                moment(data.expiry).format("YYYY/MM/DD")
               )}`}
           </span>
 
@@ -330,15 +330,15 @@ export function useCRMMembershipDetail() {
     [POINT_CREDIT_MODIFIED]: (event) => {
       const { data, created_at } = event;
       return (
-        <div className="d-flex justify-content-between px-2">
+        <div className="d-flex justify-content-between ltr_force px-2">
           <span style={{ maxWidth: "60%" }}>
             {creditChangeEventTypes[data.operation]} point credit in the amount of {" "}
             <b>{priceFormatter(data.amount)}$</b> Due to : {data.reason}{" "}
             {data.operation === INCREASE &&
               data.expiry &&
               moment(data.expiry).isValid() &&
-              `Expiration date${persianToEnglishNumber(
-                moment(data.expiry).format("jYYYY/jMM/jDD")
+              `Expiration date ${persianToEnglishNumber(
+                moment(data.expiry).format("YYYY/MM/DD")
               )}`}
           </span>
 
@@ -354,15 +354,15 @@ export function useCRMMembershipDetail() {
     [WALLET_CREDIT_MODIFIED]: (event) => {
       const { data, created_at } = event;
       return (
-        <div className="d-flex justify-content-between px-2">
+        <div className="d-flex justify-content-between ltr_force px-2">
           <span style={{ maxWidth: "60%" }}>
             {creditChangeEventTypes[data.operation]} wallet credit in the amount of
             <b>{priceFormatter(data.amount)}</b> $ Due to : {data.reason}{" "}
             {data.operation === INCREASE &&
               data.expiry &&
               moment(data.expiry).isValid() &&
-              `Expiration date${persianToEnglishNumber(
-                moment(data.expiry).format("jYYYY/jMM/jDD")
+              `Expiration date ${persianToEnglishNumber(
+                moment(data.expiry).format("YYYY/MM/DD")
               )}`}
           </span>
 
@@ -378,7 +378,7 @@ export function useCRMMembershipDetail() {
     [SHOPPING_ORDER_ACCEPTED_EVENT]: (event) => {
       const { data, created_at } = event;
       return (
-        <div className="d-flex justify-content-between px-2">
+        <div className="d-flex justify-content-between ltr_force px-2">
           <span style={{ maxWidth: "60%" }}>
             Confirm the order in the amount of <b>{priceFormatter(data.order_price)}$</b>
             {generateUILink("View order", `s/orders/${data.order_id}`)}
@@ -396,7 +396,7 @@ export function useCRMMembershipDetail() {
     [SHOPPING_ORDER_EVENT]: (event) => {
       const { data, created_at } = event;
       return (
-        <div className="d-flex justify-content-between px-2">
+        <div className="d-flex justify-content-between ltr_force px-2">
           <span style={{ maxWidth: "60%" }}>
             Register an order in the amount of <b>{priceFormatter(data.order_price)}$</b>
             {generateUILink("View order", `s/orders/${data.order_id}`)}
@@ -415,7 +415,7 @@ export function useCRMMembershipDetail() {
       const { created_at } = event;
 
       return (
-        <div className="d-flex justify-content-between px-2">
+        <div className="d-flex justify-content-between ltr_force px-2">
           <span style={{ maxWidth: "60%" }}>Participate in survey</span>
           {created_at && (
             <span>
@@ -430,7 +430,7 @@ export function useCRMMembershipDetail() {
       const { created_at } = event;
 
       return (
-        <div className="d-flex justify-content-between px-2">
+        <div className="d-flex justify-content-between ltr_force px-2">
           {" "}
           <span style={{ maxWidth: "60%" }}>Campaign SMS sent for customer</span>
           {created_at && (
@@ -444,7 +444,7 @@ export function useCRMMembershipDetail() {
     [CASH_BACK_SMS_SENT]: (event) => {
       const { created_at } = event;
       return (
-        <div className="d-flex justify-content-between px-2">
+        <div className="d-flex justify-content-between ltr_force px-2">
           <span style={{ maxWidth: "60%" }}>Cashback SMS sent for customer</span>
           {created_at && (
             <span>
@@ -457,7 +457,7 @@ export function useCRMMembershipDetail() {
     [PROFILE_COMPLITED]: (event) => {
       const { created_at } = event;
       return (
-        <div className="d-flex justify-content-between px-2">
+        <div className="d-flex justify-content-between ltr_force px-2">
           <span style={{ maxWidth: "60%" }}>Complete the profile</span>
           {created_at && (
             <span>
@@ -471,7 +471,7 @@ export function useCRMMembershipDetail() {
     [DISCOUNT_CODE_USED]: (event) => {
       const { data, created_at } = event;
       return (
-        <div className="d-flex justify-content-between px-2">
+        <div className="d-flex justify-content-between ltr_force px-2">
           <span style={{ maxWidth: "60%" }}>
             Customer used <b>{data.code}</b> discount code
             {generateUILink("View order", `s/orders/${data.order_id}`)}
@@ -488,7 +488,7 @@ export function useCRMMembershipDetail() {
     [CAMPAIGN_EXECUTED_FOR_CRM_MEMBERSHIP]: (event) => {
       const { data, created_at } = event;
       return (
-        <div className="d-flex justify-content-between px-2">
+        <div className="d-flex justify-content-between ltr_force px-2">
           <span style={{ maxWidth: "60%" }}>
           <b>{data.campaign_title}</b> Campaign executed for customer
             {generateUILink(
@@ -508,7 +508,7 @@ export function useCRMMembershipDetail() {
     [SMS_FOR_MEMBERSHIP_SENT]: (event) => {
       const { data, created_at } = event;
       return (
-        <div className="d-flex justify-content-between px-2">
+        <div className="d-flex justify-content-between ltr_force px-2">
           <span style={{ maxWidth: "60%" }}>
             SMS for customer sent because{data.sms_type}
           </span>
