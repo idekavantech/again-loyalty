@@ -70,8 +70,19 @@ const lightTheme = (business, isAdminPanel) =>
       divider: tiramisoo,
     },
     overrides: {
+      MuiTableBody:{
+        root:{
+          direction:"ltr"
+        }
+      },
+      MuiTablePagination:{
+        root:{
+          direction:"rtl"
+        }
+      },
       MuiTableRow: {
         root: {
+          direction:"ltr",
           "&.Mui-selected": {
             backgroundColor: hexToRGBA(process.env.NEXT_PUBLIC_ADMIN_THEME_COLOR, 0.08),
           },
@@ -83,6 +94,9 @@ const lightTheme = (business, isAdminPanel) =>
         },
       },
       MuiPaper: {
+        root:{
+          direction:"ltr"
+        },
         elevation0: {
           boxShadow: "0px 0px 20px rgba(204, 212, 215, 0.2)",
           borderRadius: 8,
