@@ -191,7 +191,7 @@ function DobareDashboard() {
           <AddShoppingCartIcon style={{ width: 27, height: 27 }} />
         </Button>
       </Link>
-      <div className="container py-3 d-flex flex-wrap">
+      <div className="container py-3 d-flex flex-wrap row-rev">
         <div className="col-12 col-md-8">
           <Paper elevation={1} className="p-4">
             <div className="d-flex justify-content-between align-items-start">
