@@ -1,0 +1,41 @@
+{
+  "name": "@saas/stores",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {},
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.9.1",
+    "@saas/components": "^1.0.0",
+    "@saas/utils": "^1.0.0",
+    "axios": "^0.21.1",
+    "compressorjs": "^1.0.7",
+    "hoist-non-react-statics": "3.3.2",
+    "immer": "3.0.0",
+    "invariant": "2.2.4",
+    "js-cookie": "^2.2.1",
+    "lodash": "^4.17.19",
+    "moment": "^2.29.1",
+    "next": "^13.2.3",
+    "next-redux-wrapper": "^6.0.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^7.1.0-rc.1",
+    "react-router-dom": "5.2.0",
+    "react-tiny-fab": "^4.0.2",
+    "redux": "4.0.5",
+    "redux-saga": "1.0.2",
+    "reselect": "4.0.0"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^13.2.3",
+    "duplicate-package-checker-webpack-plugin": "^3.0.0",
+    "eslint": "^8.35.0",
+    "eslint-config-next": "^13.2.3",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "prettier": "^2.8.4"
+  }
+}

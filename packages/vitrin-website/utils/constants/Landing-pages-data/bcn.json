@@ -1,0 +1,4202 @@
+[
+  {
+    "english": { "city": "tehran", "business": "corporate" },
+    "persian": { "city": "تهران", "business": "شرکتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "corporate" },
+    "persian": { "city": "مشهد", "business": "شرکتی" },
+    "show": true
+  },
+  {
+    "english": { "city": "esfahan", "business": "corporate" },
+    "persian": { "city": "اصفهان", "business": "شرکتی" },
+    "show": true
+  },
+  {
+    "english": { "city": "tabriz", "business": "corporate" },
+    "persian": { "city": "تبریز", "business": "شرکتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "corporate" },
+    "persian": { "city": "شیراز", "business": "شرکتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "corporate" },
+    "persian": { "city": "اهواز", "business": "شرکتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "corporate" },
+    "persian": { "city": "ارومیه", "business": "شرکتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "corporate" },
+    "persian": { "city": "کرمان", "business": "شرکتی" },
+    "show": true
+  },
+  {
+    "english": { "city": "yazd", "business": "corporate" },
+    "persian": { "city": "یزد", "business": "شرکتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "corporate" },
+    "persian": { "city": "بندرعباس", "business": "شرکتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "corporate" },
+    "persian": { "city": "اردبیل", "business": "شرکتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "corporate" },
+    "persian": { "city": "سمنان", "business": "شرکتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "corporate" },
+    "persian": { "city": "قزوین", "business": "شرکتی" },
+    "show": true
+  },
+  {
+    "english": { "city": "karaj", "business": "corporate" },
+    "persian": { "city": "کرج", "business": "شرکتی" },
+    "show": true
+  },
+  {
+    "english": { "city": "birjand", "business": "corporate" },
+    "persian": { "city": "بیرجند", "business": "شرکتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "corporate" },
+    "persian": { "city": "بجنورد", "business": "شرکتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "corporate" },
+    "persian": { "city": "زاهدان", "business": "شرکتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "corporate" },
+    "persian": { "city": "خرم آباد", "business": "شرکتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "corporate" },
+    "persian": { "city": "ایلام", "business": "شرکتی" },
+    "show": true
+  },
+  {
+    "english": { "city": "kermanshah", "business": "corporate" },
+    "persian": { "city": "کرمانشاه", "business": "شرکتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "corporate" },
+    "persian": { "city": "سنندج", "business": "شرکتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "personal" },
+    "persian": { "city": "تهران", "business": "شخصی" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "personal" },
+    "persian": { "city": "مشهد", "business": "شخصی" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "personal" },
+    "persian": { "city": "اصفهان", "business": "شخصی" },
+    "show": true
+  },
+  {
+    "english": { "city": "tabriz", "business": "personal" },
+    "persian": { "city": "تبریز", "business": "شخصی" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "personal" },
+    "persian": { "city": "شیراز", "business": "شخصی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "personal" },
+    "persian": { "city": "اهواز", "business": "شخصی" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "personal" },
+    "persian": { "city": "ارومیه", "business": "شخصی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "personal" },
+    "persian": { "city": "کرمان", "business": "شخصی" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "personal" },
+    "persian": { "city": "یزد", "business": "شخصی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "personal" },
+    "persian": { "city": "بندرعباس", "business": "شخصی" },
+    "show": true
+  },
+  {
+    "english": { "city": "ardabil", "business": "personal" },
+    "persian": { "city": "اردبیل", "business": "شخصی" },
+    "show": true
+  },
+  {
+    "english": { "city": "semnan", "business": "personal" },
+    "persian": { "city": "سمنان", "business": "شخصی" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "personal" },
+    "persian": { "city": "قزوین", "business": "شخصی" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "personal" },
+    "persian": { "city": "کرج", "business": "شخصی" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "personal" },
+    "persian": { "city": "بیرجند", "business": "شخصی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "personal" },
+    "persian": { "city": "بجنورد", "business": "شخصی" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "personal" },
+    "persian": { "city": "زاهدان", "business": "شخصی" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "personal" },
+    "persian": { "city": "خرم آباد", "business": "شخصی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "personal" },
+    "persian": { "city": "ایلام", "business": "شخصی" },
+    "show": true
+  },
+  {
+    "english": { "city": "kermanshah", "business": "personal" },
+    "persian": { "city": "کرمانشاه", "business": "شخصی" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "personal" },
+    "persian": { "city": "سنندج", "business": "شخصی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "commercial" },
+    "persian": { "city": "تهران", "business": "تجاری" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "commercial" },
+    "persian": { "city": "مشهد", "business": "تجاری" },
+    "show": true
+  },
+  {
+    "english": { "city": "esfahan", "business": "commercial" },
+    "persian": { "city": "اصفهان", "business": "تجاری" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "commercial" },
+    "persian": { "city": "تبریز", "business": "تجاری" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "commercial" },
+    "persian": { "city": "شیراز", "business": "تجاری" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "commercial" },
+    "persian": { "city": "اهواز", "business": "تجاری" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "commercial" },
+    "persian": { "city": "ارومیه", "business": "تجاری" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "commercial" },
+    "persian": { "city": "کرمان", "business": "تجاری" },
+    "show": true
+  },
+  {
+    "english": { "city": "yazd", "business": "commercial" },
+    "persian": { "city": "یزد", "business": "تجاری" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "commercial" },
+    "persian": { "city": "بندرعباس", "business": "تجاری" },
+    "show": true
+  },
+  {
+    "english": { "city": "ardabil", "business": "commercial" },
+    "persian": { "city": "اردبیل", "business": "تجاری" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "commercial" },
+    "persian": { "city": "سمنان", "business": "تجاری" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "commercial" },
+    "persian": { "city": "قزوین", "business": "تجاری" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "commercial" },
+    "persian": { "city": "کرج", "business": "تجاری" },
+    "show": true
+  },
+  {
+    "english": { "city": "birjand", "business": "commercial" },
+    "persian": { "city": "بیرجند", "business": "تجاری" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "commercial" },
+    "persian": { "city": "بجنورد", "business": "تجاری" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "commercial" },
+    "persian": { "city": "زاهدان", "business": "تجاری" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "commercial" },
+    "persian": { "city": "خرم آباد", "business": "تجاری" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "commercial" },
+    "persian": { "city": "ایلام", "business": "تجاری" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "commercial" },
+    "persian": { "city": "کرمانشاه", "business": "تجاری" },
+    "show": true
+  },
+  {
+    "english": { "city": "sanandaj", "business": "commercial" },
+    "persian": { "city": "سنندج", "business": "تجاری" },
+    "show": true
+  },
+  {
+    "english": { "city": "tehran", "business": "advertisement" },
+    "persian": { "city": "تهران", "business": "تبلیغاتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "advertisement" },
+    "persian": { "city": "مشهد", "business": "تبلیغاتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "advertisement" },
+    "persian": { "city": "اصفهان", "business": "تبلیغاتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "advertisement" },
+    "persian": { "city": "تبریز", "business": "تبلیغاتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "advertisement" },
+    "persian": { "city": "شیراز", "business": "تبلیغاتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "advertisement" },
+    "persian": { "city": "اهواز", "business": "تبلیغاتی" },
+    "show": true
+  },
+  {
+    "english": { "city": "urmia", "business": "advertisement" },
+    "persian": { "city": "ارومیه", "business": "تبلیغاتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "advertisement" },
+    "persian": { "city": "کرمان", "business": "تبلیغاتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "advertisement" },
+    "persian": { "city": "یزد", "business": "تبلیغاتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "advertisement" },
+    "persian": { "city": "بندرعباس", "business": "تبلیغاتی" },
+    "show": true
+  },
+  {
+    "english": { "city": "ardabil", "business": "advertisement" },
+    "persian": { "city": "اردبیل", "business": "تبلیغاتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "advertisement" },
+    "persian": { "city": "سمنان", "business": "تبلیغاتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "advertisement" },
+    "persian": { "city": "قزوین", "business": "تبلیغاتی" },
+    "show": true
+  },
+  {
+    "english": { "city": "karaj", "business": "advertisement" },
+    "persian": { "city": "کرج", "business": "تبلیغاتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "advertisement" },
+    "persian": { "city": "بیرجند", "business": "تبلیغاتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "advertisement" },
+    "persian": { "city": "بجنورد", "business": "تبلیغاتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "advertisement" },
+    "persian": { "city": "زاهدان", "business": "تبلیغاتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "advertisement" },
+    "persian": { "city": "خرم آباد", "business": "تبلیغاتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "advertisement" },
+    "persian": { "city": "ایلام", "business": "تبلیغاتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "advertisement" },
+    "persian": { "city": "کرمانشاه", "business": "تبلیغاتی" },
+    "show": true
+  },
+  {
+    "english": { "city": "sanandaj", "business": "advertisement" },
+    "persian": { "city": "سنندج", "business": "تبلیغاتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "service" },
+    "persian": { "city": "تهران", "business": "خدماتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "service" },
+    "persian": { "city": "مشهد", "business": "خدماتی" },
+    "show": true
+  },
+  {
+    "english": { "city": "esfahan", "business": "service" },
+    "persian": { "city": "اصفهان", "business": "خدماتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "service" },
+    "persian": { "city": "تبریز", "business": "خدماتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "service" },
+    "persian": { "city": "شیراز", "business": "خدماتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "service" },
+    "persian": { "city": "اهواز", "business": "خدماتی" },
+    "show": true
+  },
+  {
+    "english": { "city": "urmia", "business": "service" },
+    "persian": { "city": "ارومیه", "business": "خدماتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "service" },
+    "persian": { "city": "کرمان", "business": "خدماتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "service" },
+    "persian": { "city": "یزد", "business": "خدماتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "service" },
+    "persian": { "city": "بندرعباس", "business": "خدماتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "service" },
+    "persian": { "city": "اردبیل", "business": "خدماتی" },
+    "show": true
+  },
+  {
+    "english": { "city": "semnan", "business": "service" },
+    "persian": { "city": "سمنان", "business": "خدماتی" },
+    "show": true
+  },
+  {
+    "english": { "city": "qazvin", "business": "service" },
+    "persian": { "city": "قزوین", "business": "خدماتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "service" },
+    "persian": { "city": "کرج", "business": "خدماتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "service" },
+    "persian": { "city": "بیرجند", "business": "خدماتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "service" },
+    "persian": { "city": "بجنورد", "business": "خدماتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "service" },
+    "persian": { "city": "زاهدان", "business": "خدماتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "service" },
+    "persian": { "city": "خرم آباد", "business": "خدماتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "service" },
+    "persian": { "city": "ایلام", "business": "خدماتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "service" },
+    "persian": { "city": "کرمانشاه", "business": "خدماتی" },
+    "show": true
+  },
+  {
+    "english": { "city": "sanandaj", "business": "service" },
+    "persian": { "city": "سنندج", "business": "خدماتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "realtor" },
+    "persian": { "city": "تهران", "business": "املاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "realtor" },
+    "persian": { "city": "مشهد", "business": "املاک" },
+    "show": true
+  },
+  {
+    "english": { "city": "esfahan", "business": "realtor" },
+    "persian": { "city": "اصفهان", "business": "املاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "realtor" },
+    "persian": { "city": "تبریز", "business": "املاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "realtor" },
+    "persian": { "city": "شیراز", "business": "املاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "realtor" },
+    "persian": { "city": "اهواز", "business": "املاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "realtor" },
+    "persian": { "city": "ارومیه", "business": "املاک" },
+    "show": true
+  },
+  {
+    "english": { "city": "kerman", "business": "realtor" },
+    "persian": { "city": "کرمان", "business": "املاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "realtor" },
+    "persian": { "city": "یزد", "business": "املاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "realtor" },
+    "persian": { "city": "بندرعباس", "business": "املاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "realtor" },
+    "persian": { "city": "اردبیل", "business": "املاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "realtor" },
+    "persian": { "city": "سمنان", "business": "املاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "realtor" },
+    "persian": { "city": "قزوین", "business": "املاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "realtor" },
+    "persian": { "city": "کرج", "business": "املاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "realtor" },
+    "persian": { "city": "بیرجند", "business": "املاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "realtor" },
+    "persian": { "city": "بجنورد", "business": "املاک" },
+    "show": true
+  },
+  {
+    "english": { "city": "zahedan", "business": "realtor" },
+    "persian": { "city": "زاهدان", "business": "املاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "realtor" },
+    "persian": { "city": "خرم آباد", "business": "املاک" },
+    "show": true
+  },
+  {
+    "english": { "city": "ilam", "business": "realtor" },
+    "persian": { "city": "ایلام", "business": "املاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "realtor" },
+    "persian": { "city": "کرمانشاه", "business": "املاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "realtor" },
+    "persian": { "city": "سنندج", "business": "املاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "tourism" },
+    "persian": { "city": "تهران", "business": "گردشگری" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "tourism" },
+    "persian": { "city": "مشهد", "business": "گردشگری" },
+    "show": true
+  },
+  {
+    "english": { "city": "esfahan", "business": "tourism" },
+    "persian": { "city": "اصفهان", "business": "گردشگری" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "tourism" },
+    "persian": { "city": "تبریز", "business": "گردشگری" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "tourism" },
+    "persian": { "city": "شیراز", "business": "گردشگری" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "tourism" },
+    "persian": { "city": "اهواز", "business": "گردشگری" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "tourism" },
+    "persian": { "city": "ارومیه", "business": "گردشگری" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "tourism" },
+    "persian": { "city": "کرمان", "business": "گردشگری" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "tourism" },
+    "persian": { "city": "یزد", "business": "گردشگری" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "tourism" },
+    "persian": { "city": "بندرعباس", "business": "گردشگری" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "tourism" },
+    "persian": { "city": "اردبیل", "business": "گردشگری" },
+    "show": true
+  },
+  {
+    "english": { "city": "semnan", "business": "tourism" },
+    "persian": { "city": "سمنان", "business": "گردشگری" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "tourism" },
+    "persian": { "city": "قزوین", "business": "گردشگری" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "tourism" },
+    "persian": { "city": "کرج", "business": "گردشگری" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "tourism" },
+    "persian": { "city": "بیرجند", "business": "گردشگری" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "tourism" },
+    "persian": { "city": "بجنورد", "business": "گردشگری" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "tourism" },
+    "persian": { "city": "زاهدان", "business": "گردشگری" },
+    "show": true
+  },
+  {
+    "english": { "city": "khorramabad", "business": "tourism" },
+    "persian": { "city": "خرم آباد", "business": "گردشگری" },
+    "show": true
+  },
+  {
+    "english": { "city": "ilam", "business": "tourism" },
+    "persian": { "city": "ایلام", "business": "گردشگری" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "tourism" },
+    "persian": { "city": "کرمانشاه", "business": "گردشگری" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "tourism" },
+    "persian": { "city": "سنندج", "business": "گردشگری" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "phtography" },
+    "persian": { "city": "تهران", "business": "عکاسی" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "phtography" },
+    "persian": { "city": "مشهد", "business": "عکاسی" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "phtography" },
+    "persian": { "city": "اصفهان", "business": "عکاسی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "phtography" },
+    "persian": { "city": "تبریز", "business": "عکاسی" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "phtography" },
+    "persian": { "city": "شیراز", "business": "عکاسی" },
+    "show": true
+  },
+  {
+    "english": { "city": "ahwaz", "business": "phtography" },
+    "persian": { "city": "اهواز", "business": "عکاسی" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "phtography" },
+    "persian": { "city": "ارومیه", "business": "عکاسی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "phtography" },
+    "persian": { "city": "کرمان", "business": "عکاسی" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "phtography" },
+    "persian": { "city": "یزد", "business": "عکاسی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "phtography" },
+    "persian": { "city": "بندرعباس", "business": "عکاسی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "phtography" },
+    "persian": { "city": "اردبیل", "business": "عکاسی" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "phtography" },
+    "persian": { "city": "سمنان", "business": "عکاسی" },
+    "show": true
+  },
+  {
+    "english": { "city": "qazvin", "business": "phtography" },
+    "persian": { "city": "قزوین", "business": "عکاسی" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "phtography" },
+    "persian": { "city": "کرج", "business": "عکاسی" },
+    "show": true
+  },
+  {
+    "english": { "city": "birjand", "business": "phtography" },
+    "persian": { "city": "بیرجند", "business": "عکاسی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "phtography" },
+    "persian": { "city": "بجنورد", "business": "عکاسی" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "phtography" },
+    "persian": { "city": "زاهدان", "business": "عکاسی" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "phtography" },
+    "persian": { "city": "خرم آباد", "business": "عکاسی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "phtography" },
+    "persian": { "city": "ایلام", "business": "عکاسی" },
+    "show": true
+  },
+  {
+    "english": { "city": "kermanshah", "business": "phtography" },
+    "persian": { "city": "کرمانشاه", "business": "عکاسی" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "phtography" },
+    "persian": { "city": "سنندج", "business": "عکاسی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "hospital" },
+    "persian": { "city": "تهران", "business": "بیمارستان" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "hospital" },
+    "persian": { "city": "مشهد", "business": "بیمارستان" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "hospital" },
+    "persian": { "city": "اصفهان", "business": "بیمارستان" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "hospital" },
+    "persian": { "city": "تبریز", "business": "بیمارستان" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "hospital" },
+    "persian": { "city": "شیراز", "business": "بیمارستان" },
+    "show": true
+  },
+  {
+    "english": { "city": "ahwaz", "business": "hospital" },
+    "persian": { "city": "اهواز", "business": "بیمارستان" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "hospital" },
+    "persian": { "city": "ارومیه", "business": "بیمارستان" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "hospital" },
+    "persian": { "city": "کرمان", "business": "بیمارستان" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "hospital" },
+    "persian": { "city": "یزد", "business": "بیمارستان" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "hospital" },
+    "persian": { "city": "بندرعباس", "business": "بیمارستان" },
+    "show": true
+  },
+  {
+    "english": { "city": "ardabil", "business": "hospital" },
+    "persian": { "city": "اردبیل", "business": "بیمارستان" },
+    "show": true
+  },
+  {
+    "english": { "city": "semnan", "business": "hospital" },
+    "persian": { "city": "سمنان", "business": "بیمارستان" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "hospital" },
+    "persian": { "city": "قزوین", "business": "بیمارستان" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "hospital" },
+    "persian": { "city": "کرج", "business": "بیمارستان" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "hospital" },
+    "persian": { "city": "بیرجند", "business": "بیمارستان" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "hospital" },
+    "persian": { "city": "بجنورد", "business": "بیمارستان" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "hospital" },
+    "persian": { "city": "زاهدان", "business": "بیمارستان" },
+    "show": true
+  },
+  {
+    "english": { "city": "khorramabad", "business": "hospital" },
+    "persian": { "city": "خرم آباد", "business": "بیمارستان" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "hospital" },
+    "persian": { "city": "ایلام", "business": "بیمارستان" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "hospital" },
+    "persian": { "city": "کرمانشاه", "business": "بیمارستان" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "hospital" },
+    "persian": { "city": "سنندج", "business": "بیمارستان" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "insurance" },
+    "persian": { "city": "تهران", "business": "بیمه" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "insurance" },
+    "persian": { "city": "مشهد", "business": "بیمه" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "insurance" },
+    "persian": { "city": "اصفهان", "business": "بیمه" },
+    "show": true
+  },
+  {
+    "english": { "city": "tabriz", "business": "insurance" },
+    "persian": { "city": "تبریز", "business": "بیمه" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "insurance" },
+    "persian": { "city": "شیراز", "business": "بیمه" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "insurance" },
+    "persian": { "city": "اهواز", "business": "بیمه" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "insurance" },
+    "persian": { "city": "ارومیه", "business": "بیمه" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "insurance" },
+    "persian": { "city": "کرمان", "business": "بیمه" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "insurance" },
+    "persian": { "city": "یزد", "business": "بیمه" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "insurance" },
+    "persian": { "city": "بندرعباس", "business": "بیمه" },
+    "show": true
+  },
+  {
+    "english": { "city": "ardabil", "business": "insurance" },
+    "persian": { "city": "اردبیل", "business": "بیمه" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "insurance" },
+    "persian": { "city": "سمنان", "business": "بیمه" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "insurance" },
+    "persian": { "city": "قزوین", "business": "بیمه" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "insurance" },
+    "persian": { "city": "کرج", "business": "بیمه" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "insurance" },
+    "persian": { "city": "بیرجند", "business": "بیمه" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "insurance" },
+    "persian": { "city": "بجنورد", "business": "بیمه" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "insurance" },
+    "persian": { "city": "زاهدان", "business": "بیمه" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "insurance" },
+    "persian": { "city": "خرم آباد", "business": "بیمه" },
+    "show": true
+  },
+  {
+    "english": { "city": "ilam", "business": "insurance" },
+    "persian": { "city": "ایلام", "business": "بیمه" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "insurance" },
+    "persian": { "city": "کرمانشاه", "business": "بیمه" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "insurance" },
+    "persian": { "city": "سنندج", "business": "بیمه" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "travel-agency" },
+    "persian": { "city": "تهران", "business": "آژانس مسافرتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "travel-agency" },
+    "persian": { "city": "مشهد", "business": "آژانس مسافرتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "travel-agency" },
+    "persian": { "city": "اصفهان", "business": "آژانس مسافرتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "travel-agency" },
+    "persian": { "city": "تبریز", "business": "آژانس مسافرتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "travel-agency" },
+    "persian": { "city": "شیراز", "business": "آژانس مسافرتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "travel-agency" },
+    "persian": { "city": "اهواز", "business": "آژانس مسافرتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "travel-agency" },
+    "persian": { "city": "ارومیه", "business": "آژانس مسافرتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "travel-agency" },
+    "persian": { "city": "کرمان", "business": "آژانس مسافرتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "travel-agency" },
+    "persian": { "city": "یزد", "business": "آژانس مسافرتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "travel-agency" },
+    "persian": { "city": "بندرعباس", "business": "آژانس مسافرتی" },
+    "show": true
+  },
+  {
+    "english": { "city": "ardabil", "business": "travel-agency" },
+    "persian": { "city": "اردبیل", "business": "آژانس مسافرتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "travel-agency" },
+    "persian": { "city": "سمنان", "business": "آژانس مسافرتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "travel-agency" },
+    "persian": { "city": "قزوین", "business": "آژانس مسافرتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "travel-agency" },
+    "persian": { "city": "کرج", "business": "آژانس مسافرتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "travel-agency" },
+    "persian": { "city": "بیرجند", "business": "آژانس مسافرتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "travel-agency" },
+    "persian": { "city": "بجنورد", "business": "آژانس مسافرتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "travel-agency" },
+    "persian": { "city": "زاهدان", "business": "آژانس مسافرتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "travel-agency" },
+    "persian": { "city": "خرم آباد", "business": "آژانس مسافرتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "travel-agency" },
+    "persian": { "city": "ایلام", "business": "آژانس مسافرتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "travel-agency" },
+    "persian": { "city": "کرمانشاه", "business": "آژانس مسافرتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "travel-agency" },
+    "persian": { "city": "سنندج", "business": "آژانس مسافرتی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "medical" },
+    "persian": { "city": "تهران", "business": "پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "medical" },
+    "persian": { "city": "مشهد", "business": "پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "medical" },
+    "persian": { "city": "اصفهان", "business": "پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "medical" },
+    "persian": { "city": "تبریز", "business": "پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "medical" },
+    "persian": { "city": "شیراز", "business": "پزشکی" },
+    "show": true
+  },
+  {
+    "english": { "city": "ahwaz", "business": "medical" },
+    "persian": { "city": "اهواز", "business": "پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "medical" },
+    "persian": { "city": "ارومیه", "business": "پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "medical" },
+    "persian": { "city": "کرمان", "business": "پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "medical" },
+    "persian": { "city": "یزد", "business": "پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "medical" },
+    "persian": { "city": "بندرعباس", "business": "پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "medical" },
+    "persian": { "city": "اردبیل", "business": "پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "medical" },
+    "persian": { "city": "سمنان", "business": "پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "medical" },
+    "persian": { "city": "قزوین", "business": "پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "medical" },
+    "persian": { "city": "کرج", "business": "پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "medical" },
+    "persian": { "city": "بیرجند", "business": "پزشکی" },
+    "show": true
+  },
+  {
+    "english": { "city": "bojnourd", "business": "medical" },
+    "persian": { "city": "بجنورد", "business": "پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "medical" },
+    "persian": { "city": "زاهدان", "business": "پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "medical" },
+    "persian": { "city": "خرم آباد", "business": "پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "medical" },
+    "persian": { "city": "ایلام", "business": "پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "medical" },
+    "persian": { "city": "کرمانشاه", "business": "پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "medical" },
+    "persian": { "city": "سنندج", "business": "پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "hotel" },
+    "persian": { "city": "تهران", "business": "هتل" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "hotel" },
+    "persian": { "city": "مشهد", "business": "هتل" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "hotel" },
+    "persian": { "city": "اصفهان", "business": "هتل" },
+    "show": true
+  },
+  {
+    "english": { "city": "tabriz", "business": "hotel" },
+    "persian": { "city": "تبریز", "business": "هتل" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "hotel" },
+    "persian": { "city": "شیراز", "business": "هتل" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "hotel" },
+    "persian": { "city": "اهواز", "business": "هتل" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "hotel" },
+    "persian": { "city": "ارومیه", "business": "هتل" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "hotel" },
+    "persian": { "city": "کرمان", "business": "هتل" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "hotel" },
+    "persian": { "city": "یزد", "business": "هتل" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "hotel" },
+    "persian": { "city": "بندرعباس", "business": "هتل" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "hotel" },
+    "persian": { "city": "اردبیل", "business": "هتل" },
+    "show": true
+  },
+  {
+    "english": { "city": "semnan", "business": "hotel" },
+    "persian": { "city": "سمنان", "business": "هتل" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "hotel" },
+    "persian": { "city": "قزوین", "business": "هتل" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "hotel" },
+    "persian": { "city": "کرج", "business": "هتل" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "hotel" },
+    "persian": { "city": "بیرجند", "business": "هتل" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "hotel" },
+    "persian": { "city": "بجنورد", "business": "هتل" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "hotel" },
+    "persian": { "city": "زاهدان", "business": "هتل" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "hotel" },
+    "persian": { "city": "خرم آباد", "business": "هتل" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "hotel" },
+    "persian": { "city": "ایلام", "business": "هتل" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "hotel" },
+    "persian": { "city": "کرمانشاه", "business": "هتل" },
+    "show": true
+  },
+  {
+    "english": { "city": "sanandaj", "business": "hotel" },
+    "persian": { "city": "سنندج", "business": "هتل" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "beauty-salon" },
+    "persian": { "city": "تهران", "business": "سالن زیبایی" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "beauty-salon" },
+    "persian": { "city": "مشهد", "business": "سالن زیبایی" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "beauty-salon" },
+    "persian": { "city": "اصفهان", "business": "سالن زیبایی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "beauty-salon" },
+    "persian": { "city": "تبریز", "business": "سالن زیبایی" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "beauty-salon" },
+    "persian": { "city": "شیراز", "business": "سالن زیبایی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "beauty-salon" },
+    "persian": { "city": "اهواز", "business": "سالن زیبایی" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "beauty-salon" },
+    "persian": { "city": "ارومیه", "business": "سالن زیبایی" },
+    "show": true
+  },
+  {
+    "english": { "city": "kerman", "business": "beauty-salon" },
+    "persian": { "city": "کرمان", "business": "سالن زیبایی" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "beauty-salon" },
+    "persian": { "city": "یزد", "business": "سالن زیبایی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "beauty-salon" },
+    "persian": { "city": "بندرعباس", "business": "سالن زیبایی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "beauty-salon" },
+    "persian": { "city": "اردبیل", "business": "سالن زیبایی" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "beauty-salon" },
+    "persian": { "city": "سمنان", "business": "سالن زیبایی" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "beauty-salon" },
+    "persian": { "city": "قزوین", "business": "سالن زیبایی" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "beauty-salon" },
+    "persian": { "city": "کرج", "business": "سالن زیبایی" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "beauty-salon" },
+    "persian": { "city": "بیرجند", "business": "سالن زیبایی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "beauty-salon" },
+    "persian": { "city": "بجنورد", "business": "سالن زیبایی" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "beauty-salon" },
+    "persian": { "city": "زاهدان", "business": "سالن زیبایی" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "beauty-salon" },
+    "persian": { "city": "خرم آباد", "business": "سالن زیبایی" },
+    "show": true
+  },
+  {
+    "english": { "city": "ilam", "business": "beauty-salon" },
+    "persian": { "city": "ایلام", "business": "سالن زیبایی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "beauty-salon" },
+    "persian": { "city": "کرمانشاه", "business": "سالن زیبایی" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "beauty-salon" },
+    "persian": { "city": "سنندج", "business": "سالن زیبایی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "sports" },
+    "persian": { "city": "تهران", "business": "ورزشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "sports" },
+    "persian": { "city": "مشهد", "business": "ورزشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "sports" },
+    "persian": { "city": "اصفهان", "business": "ورزشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "sports" },
+    "persian": { "city": "تبریز", "business": "ورزشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "sports" },
+    "persian": { "city": "شیراز", "business": "ورزشی" },
+    "show": true
+  },
+  {
+    "english": { "city": "ahwaz", "business": "sports" },
+    "persian": { "city": "اهواز", "business": "ورزشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "sports" },
+    "persian": { "city": "ارومیه", "business": "ورزشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "sports" },
+    "persian": { "city": "کرمان", "business": "ورزشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "sports" },
+    "persian": { "city": "یزد", "business": "ورزشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "sports" },
+    "persian": { "city": "بندرعباس", "business": "ورزشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "sports" },
+    "persian": { "city": "اردبیل", "business": "ورزشی" },
+    "show": true
+  },
+  {
+    "english": { "city": "semnan", "business": "sports" },
+    "persian": { "city": "سمنان", "business": "ورزشی" },
+    "show": true
+  },
+  {
+    "english": { "city": "qazvin", "business": "sports" },
+    "persian": { "city": "قزوین", "business": "ورزشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "sports" },
+    "persian": { "city": "کرج", "business": "ورزشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "sports" },
+    "persian": { "city": "بیرجند", "business": "ورزشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "sports" },
+    "persian": { "city": "بجنورد", "business": "ورزشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "sports" },
+    "persian": { "city": "زاهدان", "business": "ورزشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "sports" },
+    "persian": { "city": "خرم آباد", "business": "ورزشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "sports" },
+    "persian": { "city": "ایلام", "business": "ورزشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "sports" },
+    "persian": { "city": "کرمانشاه", "business": "ورزشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "sports" },
+    "persian": { "city": "سنندج", "business": "ورزشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "lawyer" },
+    "persian": { "city": "تهران", "business": "وکالت" },
+    "show": true
+  },
+  {
+    "english": { "city": "mashhad", "business": "lawyer" },
+    "persian": { "city": "مشهد", "business": "وکالت" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "lawyer" },
+    "persian": { "city": "اصفهان", "business": "وکالت" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "lawyer" },
+    "persian": { "city": "تبریز", "business": "وکالت" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "lawyer" },
+    "persian": { "city": "شیراز", "business": "وکالت" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "lawyer" },
+    "persian": { "city": "اهواز", "business": "وکالت" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "lawyer" },
+    "persian": { "city": "ارومیه", "business": "وکالت" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "lawyer" },
+    "persian": { "city": "کرمان", "business": "وکالت" },
+    "show": true
+  },
+  {
+    "english": { "city": "yazd", "business": "lawyer" },
+    "persian": { "city": "یزد", "business": "وکالت" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "lawyer" },
+    "persian": { "city": "بندرعباس", "business": "وکالت" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "lawyer" },
+    "persian": { "city": "اردبیل", "business": "وکالت" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "lawyer" },
+    "persian": { "city": "سمنان", "business": "وکالت" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "lawyer" },
+    "persian": { "city": "قزوین", "business": "وکالت" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "lawyer" },
+    "persian": { "city": "کرج", "business": "وکالت" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "lawyer" },
+    "persian": { "city": "بیرجند", "business": "وکالت" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "lawyer" },
+    "persian": { "city": "بجنورد", "business": "وکالت" },
+    "show": true
+  },
+  {
+    "english": { "city": "zahedan", "business": "lawyer" },
+    "persian": { "city": "زاهدان", "business": "وکالت" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "lawyer" },
+    "persian": { "city": "خرم آباد", "business": "وکالت" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "lawyer" },
+    "persian": { "city": "ایلام", "business": "وکالت" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "lawyer" },
+    "persian": { "city": "کرمانشاه", "business": "وکالت" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "lawyer" },
+    "persian": { "city": "سنندج", "business": "وکالت" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "arts" },
+    "persian": { "city": "تهران", "business": "هنری" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "arts" },
+    "persian": { "city": "مشهد", "business": "هنری" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "arts" },
+    "persian": { "city": "اصفهان", "business": "هنری" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "arts" },
+    "persian": { "city": "تبریز", "business": "هنری" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "arts" },
+    "persian": { "city": "شیراز", "business": "هنری" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "arts" },
+    "persian": { "city": "اهواز", "business": "هنری" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "arts" },
+    "persian": { "city": "ارومیه", "business": "هنری" },
+    "show": true
+  },
+  {
+    "english": { "city": "kerman", "business": "arts" },
+    "persian": { "city": "کرمان", "business": "هنری" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "arts" },
+    "persian": { "city": "یزد", "business": "هنری" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "arts" },
+    "persian": { "city": "بندرعباس", "business": "هنری" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "arts" },
+    "persian": { "city": "اردبیل", "business": "هنری" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "arts" },
+    "persian": { "city": "سمنان", "business": "هنری" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "arts" },
+    "persian": { "city": "قزوین", "business": "هنری" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "arts" },
+    "persian": { "city": "کرج", "business": "هنری" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "arts" },
+    "persian": { "city": "بیرجند", "business": "هنری" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "arts" },
+    "persian": { "city": "بجنورد", "business": "هنری" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "arts" },
+    "persian": { "city": "زاهدان", "business": "هنری" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "arts" },
+    "persian": { "city": "خرم آباد", "business": "هنری" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "arts" },
+    "persian": { "city": "ایلام", "business": "هنری" },
+    "show": true
+  },
+  {
+    "english": { "city": "kermanshah", "business": "arts" },
+    "persian": { "city": "کرمانشاه", "business": "هنری" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "arts" },
+    "persian": { "city": "سنندج", "business": "هنری" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "factory" },
+    "persian": { "city": "تهران", "business": "کارخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "factory" },
+    "persian": { "city": "مشهد", "business": "کارخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "factory" },
+    "persian": { "city": "اصفهان", "business": "کارخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "factory" },
+    "persian": { "city": "تبریز", "business": "کارخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "factory" },
+    "persian": { "city": "شیراز", "business": "کارخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "factory" },
+    "persian": { "city": "اهواز", "business": "کارخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "factory" },
+    "persian": { "city": "ارومیه", "business": "کارخانه" },
+    "show": true
+  },
+  {
+    "english": { "city": "kerman", "business": "factory" },
+    "persian": { "city": "کرمان", "business": "کارخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "factory" },
+    "persian": { "city": "یزد", "business": "کارخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "factory" },
+    "persian": { "city": "بندرعباس", "business": "کارخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "factory" },
+    "persian": { "city": "اردبیل", "business": "کارخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "factory" },
+    "persian": { "city": "سمنان", "business": "کارخانه" },
+    "show": true
+  },
+  {
+    "english": { "city": "qazvin", "business": "factory" },
+    "persian": { "city": "قزوین", "business": "کارخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "factory" },
+    "persian": { "city": "کرج", "business": "کارخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "factory" },
+    "persian": { "city": "بیرجند", "business": "کارخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "factory" },
+    "persian": { "city": "بجنورد", "business": "کارخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "factory" },
+    "persian": { "city": "زاهدان", "business": "کارخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "factory" },
+    "persian": { "city": "خرم آباد", "business": "کارخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "factory" },
+    "persian": { "city": "ایلام", "business": "کارخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "factory" },
+    "persian": { "city": "کرمانشاه", "business": "کارخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "factory" },
+    "persian": { "city": "سنندج", "business": "کارخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "architecture" },
+    "persian": { "city": "تهران", "business": "معماری" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "architecture" },
+    "persian": { "city": "مشهد", "business": "معماری" },
+    "show": true
+  },
+  {
+    "english": { "city": "esfahan", "business": "architecture" },
+    "persian": { "city": "اصفهان", "business": "معماری" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "architecture" },
+    "persian": { "city": "تبریز", "business": "معماری" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "architecture" },
+    "persian": { "city": "شیراز", "business": "معماری" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "architecture" },
+    "persian": { "city": "اهواز", "business": "معماری" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "architecture" },
+    "persian": { "city": "ارومیه", "business": "معماری" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "architecture" },
+    "persian": { "city": "کرمان", "business": "معماری" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "architecture" },
+    "persian": { "city": "یزد", "business": "معماری" },
+    "show": true
+  },
+  {
+    "english": { "city": "bandarabas", "business": "architecture" },
+    "persian": { "city": "بندرعباس", "business": "معماری" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "architecture" },
+    "persian": { "city": "اردبیل", "business": "معماری" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "architecture" },
+    "persian": { "city": "سمنان", "business": "معماری" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "architecture" },
+    "persian": { "city": "قزوین", "business": "معماری" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "architecture" },
+    "persian": { "city": "کرج", "business": "معماری" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "architecture" },
+    "persian": { "city": "بیرجند", "business": "معماری" },
+    "show": true
+  },
+  {
+    "english": { "city": "bojnourd", "business": "architecture" },
+    "persian": { "city": "بجنورد", "business": "معماری" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "architecture" },
+    "persian": { "city": "زاهدان", "business": "معماری" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "architecture" },
+    "persian": { "city": "خرم آباد", "business": "معماری" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "architecture" },
+    "persian": { "city": "ایلام", "business": "معماری" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "architecture" },
+    "persian": { "city": "کرمانشاه", "business": "معماری" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "architecture" },
+    "persian": { "city": "سنندج", "business": "معماری" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "reservation" },
+    "persian": { "city": "تهران", "business": "رزرواسیون" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "reservation" },
+    "persian": { "city": "مشهد", "business": "رزرواسیون" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "reservation" },
+    "persian": { "city": "اصفهان", "business": "رزرواسیون" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "reservation" },
+    "persian": { "city": "تبریز", "business": "رزرواسیون" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "reservation" },
+    "persian": { "city": "شیراز", "business": "رزرواسیون" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "reservation" },
+    "persian": { "city": "اهواز", "business": "رزرواسیون" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "reservation" },
+    "persian": { "city": "ارومیه", "business": "رزرواسیون" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "reservation" },
+    "persian": { "city": "کرمان", "business": "رزرواسیون" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "reservation" },
+    "persian": { "city": "یزد", "business": "رزرواسیون" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "reservation" },
+    "persian": { "city": "بندرعباس", "business": "رزرواسیون" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "reservation" },
+    "persian": { "city": "اردبیل", "business": "رزرواسیون" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "reservation" },
+    "persian": { "city": "سمنان", "business": "رزرواسیون" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "reservation" },
+    "persian": { "city": "قزوین", "business": "رزرواسیون" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "reservation" },
+    "persian": { "city": "کرج", "business": "رزرواسیون" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "reservation" },
+    "persian": { "city": "بیرجند", "business": "رزرواسیون" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "reservation" },
+    "persian": { "city": "بجنورد", "business": "رزرواسیون" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "reservation" },
+    "persian": { "city": "زاهدان", "business": "رزرواسیون" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "reservation" },
+    "persian": { "city": "خرم آباد", "business": "رزرواسیون" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "reservation" },
+    "persian": { "city": "ایلام", "business": "رزرواسیون" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "reservation" },
+    "persian": { "city": "کرمانشاه", "business": "رزرواسیون" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "reservation" },
+    "persian": { "city": "سنندج", "business": "رزرواسیون" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "automobiles" },
+    "persian": { "city": "تهران", "business": "خودرو" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "automobiles" },
+    "persian": { "city": "مشهد", "business": "خودرو" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "automobiles" },
+    "persian": { "city": "اصفهان", "business": "خودرو" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "automobiles" },
+    "persian": { "city": "تبریز", "business": "خودرو" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "automobiles" },
+    "persian": { "city": "شیراز", "business": "خودرو" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "automobiles" },
+    "persian": { "city": "اهواز", "business": "خودرو" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "automobiles" },
+    "persian": { "city": "ارومیه", "business": "خودرو" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "automobiles" },
+    "persian": { "city": "کرمان", "business": "خودرو" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "automobiles" },
+    "persian": { "city": "یزد", "business": "خودرو" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "automobiles" },
+    "persian": { "city": "بندرعباس", "business": "خودرو" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "automobiles" },
+    "persian": { "city": "اردبیل", "business": "خودرو" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "automobiles" },
+    "persian": { "city": "سمنان", "business": "خودرو" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "automobiles" },
+    "persian": { "city": "قزوین", "business": "خودرو" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "automobiles" },
+    "persian": { "city": "کرج", "business": "خودرو" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "automobiles" },
+    "persian": { "city": "بیرجند", "business": "خودرو" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "automobiles" },
+    "persian": { "city": "بجنورد", "business": "خودرو" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "automobiles" },
+    "persian": { "city": "زاهدان", "business": "خودرو" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "automobiles" },
+    "persian": { "city": "خرم آباد", "business": "خودرو" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "automobiles" },
+    "persian": { "city": "ایلام", "business": "خودرو" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "automobiles" },
+    "persian": { "city": "کرمانشاه", "business": "خودرو" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "automobiles" },
+    "persian": { "city": "سنندج", "business": "خودرو" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "accounting" },
+    "persian": { "city": "تهران", "business": "حسابداری" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "accounting" },
+    "persian": { "city": "مشهد", "business": "حسابداری" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "accounting" },
+    "persian": { "city": "اصفهان", "business": "حسابداری" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "accounting" },
+    "persian": { "city": "تبریز", "business": "حسابداری" },
+    "show": true
+  },
+  {
+    "english": { "city": "shiraz", "business": "accounting" },
+    "persian": { "city": "شیراز", "business": "حسابداری" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "accounting" },
+    "persian": { "city": "اهواز", "business": "حسابداری" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "accounting" },
+    "persian": { "city": "ارومیه", "business": "حسابداری" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "accounting" },
+    "persian": { "city": "کرمان", "business": "حسابداری" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "accounting" },
+    "persian": { "city": "یزد", "business": "حسابداری" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "accounting" },
+    "persian": { "city": "بندرعباس", "business": "حسابداری" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "accounting" },
+    "persian": { "city": "اردبیل", "business": "حسابداری" },
+    "show": true
+  },
+  {
+    "english": { "city": "semnan", "business": "accounting" },
+    "persian": { "city": "سمنان", "business": "حسابداری" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "accounting" },
+    "persian": { "city": "قزوین", "business": "حسابداری" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "accounting" },
+    "persian": { "city": "کرج", "business": "حسابداری" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "accounting" },
+    "persian": { "city": "بیرجند", "business": "حسابداری" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "accounting" },
+    "persian": { "city": "بجنورد", "business": "حسابداری" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "accounting" },
+    "persian": { "city": "زاهدان", "business": "حسابداری" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "accounting" },
+    "persian": { "city": "خرم آباد", "business": "حسابداری" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "accounting" },
+    "persian": { "city": "ایلام", "business": "حسابداری" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "accounting" },
+    "persian": { "city": "کرمانشاه", "business": "حسابداری" },
+    "show": true
+  },
+  {
+    "english": { "city": "sanandaj", "business": "accounting" },
+    "persian": { "city": "سنندج", "business": "حسابداری" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "carpet-cleaning" },
+    "persian": { "city": "تهران", "business": "قالیشویی" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "carpet-cleaning" },
+    "persian": { "city": "مشهد", "business": "قالیشویی" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "carpet-cleaning" },
+    "persian": { "city": "اصفهان", "business": "قالیشویی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "carpet-cleaning" },
+    "persian": { "city": "تبریز", "business": "قالیشویی" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "carpet-cleaning" },
+    "persian": { "city": "شیراز", "business": "قالیشویی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "carpet-cleaning" },
+    "persian": { "city": "اهواز", "business": "قالیشویی" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "carpet-cleaning" },
+    "persian": { "city": "ارومیه", "business": "قالیشویی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "carpet-cleaning" },
+    "persian": { "city": "کرمان", "business": "قالیشویی" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "carpet-cleaning" },
+    "persian": { "city": "یزد", "business": "قالیشویی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "carpet-cleaning" },
+    "persian": { "city": "بندرعباس", "business": "قالیشویی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "carpet-cleaning" },
+    "persian": { "city": "اردبیل", "business": "قالیشویی" },
+    "show": true
+  },
+  {
+    "english": { "city": "semnan", "business": "carpet-cleaning" },
+    "persian": { "city": "سمنان", "business": "قالیشویی" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "carpet-cleaning" },
+    "persian": { "city": "قزوین", "business": "قالیشویی" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "carpet-cleaning" },
+    "persian": { "city": "کرج", "business": "قالیشویی" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "carpet-cleaning" },
+    "persian": { "city": "بیرجند", "business": "قالیشویی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "carpet-cleaning" },
+    "persian": { "city": "بجنورد", "business": "قالیشویی" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "carpet-cleaning" },
+    "persian": { "city": "زاهدان", "business": "قالیشویی" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "carpet-cleaning" },
+    "persian": { "city": "خرم آباد", "business": "قالیشویی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "carpet-cleaning" },
+    "persian": { "city": "ایلام", "business": "قالیشویی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "carpet-cleaning" },
+    "persian": { "city": "کرمانشاه", "business": "قالیشویی" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "carpet-cleaning" },
+    "persian": { "city": "سنندج", "business": "قالیشویی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "dentist" },
+    "persian": { "city": "تهران", "business": "دندانپزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "dentist" },
+    "persian": { "city": "مشهد", "business": "دندانپزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "dentist" },
+    "persian": { "city": "اصفهان", "business": "دندانپزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "dentist" },
+    "persian": { "city": "تبریز", "business": "دندانپزشکی" },
+    "show": true
+  },
+  {
+    "english": { "city": "shiraz", "business": "dentist" },
+    "persian": { "city": "شیراز", "business": "دندانپزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "dentist" },
+    "persian": { "city": "اهواز", "business": "دندانپزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "dentist" },
+    "persian": { "city": "ارومیه", "business": "دندانپزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "dentist" },
+    "persian": { "city": "کرمان", "business": "دندانپزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "dentist" },
+    "persian": { "city": "یزد", "business": "دندانپزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "dentist" },
+    "persian": { "city": "بندرعباس", "business": "دندانپزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "dentist" },
+    "persian": { "city": "اردبیل", "business": "دندانپزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "dentist" },
+    "persian": { "city": "سمنان", "business": "دندانپزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "dentist" },
+    "persian": { "city": "قزوین", "business": "دندانپزشکی" },
+    "show": true
+  },
+  {
+    "english": { "city": "karaj", "business": "dentist" },
+    "persian": { "city": "کرج", "business": "دندانپزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "dentist" },
+    "persian": { "city": "بیرجند", "business": "دندانپزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "dentist" },
+    "persian": { "city": "بجنورد", "business": "دندانپزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "dentist" },
+    "persian": { "city": "زاهدان", "business": "دندانپزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "dentist" },
+    "persian": { "city": "خرم آباد", "business": "دندانپزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "dentist" },
+    "persian": { "city": "ایلام", "business": "دندانپزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "dentist" },
+    "persian": { "city": "کرمانشاه", "business": "دندانپزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "dentist" },
+    "persian": { "city": "سنندج", "business": "دندانپزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "restaurant" },
+    "persian": { "city": "تهران", "business": "رستوران" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "restaurant" },
+    "persian": { "city": "مشهد", "business": "رستوران" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "restaurant" },
+    "persian": { "city": "اصفهان", "business": "رستوران" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "restaurant" },
+    "persian": { "city": "تبریز", "business": "رستوران" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "restaurant" },
+    "persian": { "city": "شیراز", "business": "رستوران" },
+    "show": true
+  },
+  {
+    "english": { "city": "ahwaz", "business": "restaurant" },
+    "persian": { "city": "اهواز", "business": "رستوران" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "restaurant" },
+    "persian": { "city": "ارومیه", "business": "رستوران" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "restaurant" },
+    "persian": { "city": "کرمان", "business": "رستوران" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "restaurant" },
+    "persian": { "city": "یزد", "business": "رستوران" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "restaurant" },
+    "persian": { "city": "بندرعباس", "business": "رستوران" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "restaurant" },
+    "persian": { "city": "اردبیل", "business": "رستوران" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "restaurant" },
+    "persian": { "city": "سمنان", "business": "رستوران" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "restaurant" },
+    "persian": { "city": "قزوین", "business": "رستوران" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "restaurant" },
+    "persian": { "city": "کرج", "business": "رستوران" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "restaurant" },
+    "persian": { "city": "بیرجند", "business": "رستوران" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "restaurant" },
+    "persian": { "city": "بجنورد", "business": "رستوران" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "restaurant" },
+    "persian": { "city": "زاهدان", "business": "رستوران" },
+    "show": true
+  },
+  {
+    "english": { "city": "khorramabad", "business": "restaurant" },
+    "persian": { "city": "خرم آباد", "business": "رستوران" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "restaurant" },
+    "persian": { "city": "ایلام", "business": "رستوران" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "restaurant" },
+    "persian": { "city": "کرمانشاه", "business": "رستوران" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "restaurant" },
+    "persian": { "city": "سنندج", "business": "رستوران" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "coffeeshop" },
+    "persian": { "city": "تهران", "business": "کافی شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "coffeeshop" },
+    "persian": { "city": "مشهد", "business": "کافی شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "coffeeshop" },
+    "persian": { "city": "اصفهان", "business": "کافی شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "coffeeshop" },
+    "persian": { "city": "تبریز", "business": "کافی شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "coffeeshop" },
+    "persian": { "city": "شیراز", "business": "کافی شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "coffeeshop" },
+    "persian": { "city": "اهواز", "business": "کافی شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "coffeeshop" },
+    "persian": { "city": "ارومیه", "business": "کافی شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "coffeeshop" },
+    "persian": { "city": "کرمان", "business": "کافی شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "coffeeshop" },
+    "persian": { "city": "یزد", "business": "کافی شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "coffeeshop" },
+    "persian": { "city": "بندرعباس", "business": "کافی شاپ" },
+    "show": true
+  },
+  {
+    "english": { "city": "ardabil", "business": "coffeeshop" },
+    "persian": { "city": "اردبیل", "business": "کافی شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "coffeeshop" },
+    "persian": { "city": "سمنان", "business": "کافی شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "coffeeshop" },
+    "persian": { "city": "قزوین", "business": "کافی شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "coffeeshop" },
+    "persian": { "city": "کرج", "business": "کافی شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "coffeeshop" },
+    "persian": { "city": "بیرجند", "business": "کافی شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "coffeeshop" },
+    "persian": { "city": "بجنورد", "business": "کافی شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "coffeeshop" },
+    "persian": { "city": "زاهدان", "business": "کافی شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "coffeeshop" },
+    "persian": { "city": "خرم آباد", "business": "کافی شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "coffeeshop" },
+    "persian": { "city": "ایلام", "business": "کافی شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "coffeeshop" },
+    "persian": { "city": "کرمانشاه", "business": "کافی شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "coffeeshop" },
+    "persian": { "city": "سنندج", "business": "کافی شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "florist" },
+    "persian": { "city": "تهران", "business": "گل فروشی" },
+    "show": true
+  },
+  {
+    "english": { "city": "mashhad", "business": "florist" },
+    "persian": { "city": "مشهد", "business": "گل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "florist" },
+    "persian": { "city": "اصفهان", "business": "گل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "florist" },
+    "persian": { "city": "تبریز", "business": "گل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "florist" },
+    "persian": { "city": "شیراز", "business": "گل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "florist" },
+    "persian": { "city": "اهواز", "business": "گل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "florist" },
+    "persian": { "city": "ارومیه", "business": "گل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "florist" },
+    "persian": { "city": "کرمان", "business": "گل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "florist" },
+    "persian": { "city": "یزد", "business": "گل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "florist" },
+    "persian": { "city": "بندرعباس", "business": "گل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "florist" },
+    "persian": { "city": "اردبیل", "business": "گل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "florist" },
+    "persian": { "city": "سمنان", "business": "گل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "florist" },
+    "persian": { "city": "قزوین", "business": "گل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "florist" },
+    "persian": { "city": "کرج", "business": "گل فروشی" },
+    "show": true
+  },
+  {
+    "english": { "city": "birjand", "business": "florist" },
+    "persian": { "city": "بیرجند", "business": "گل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "florist" },
+    "persian": { "city": "بجنورد", "business": "گل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "florist" },
+    "persian": { "city": "زاهدان", "business": "گل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "florist" },
+    "persian": { "city": "خرم آباد", "business": "گل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "florist" },
+    "persian": { "city": "ایلام", "business": "گل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "florist" },
+    "persian": { "city": "کرمانشاه", "business": "گل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "florist" },
+    "persian": { "city": "سنندج", "business": "گل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "clothes" },
+    "persian": { "city": "تهران", "business": "پوشاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "clothes" },
+    "persian": { "city": "مشهد", "business": "پوشاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "clothes" },
+    "persian": { "city": "اصفهان", "business": "پوشاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "clothes" },
+    "persian": { "city": "تبریز", "business": "پوشاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "clothes" },
+    "persian": { "city": "شیراز", "business": "پوشاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "clothes" },
+    "persian": { "city": "اهواز", "business": "پوشاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "clothes" },
+    "persian": { "city": "ارومیه", "business": "پوشاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "clothes" },
+    "persian": { "city": "کرمان", "business": "پوشاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "clothes" },
+    "persian": { "city": "یزد", "business": "پوشاک" },
+    "show": true
+  },
+  {
+    "english": { "city": "bandarabas", "business": "clothes" },
+    "persian": { "city": "بندرعباس", "business": "پوشاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "clothes" },
+    "persian": { "city": "اردبیل", "business": "پوشاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "clothes" },
+    "persian": { "city": "سمنان", "business": "پوشاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "clothes" },
+    "persian": { "city": "قزوین", "business": "پوشاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "clothes" },
+    "persian": { "city": "کرج", "business": "پوشاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "clothes" },
+    "persian": { "city": "بیرجند", "business": "پوشاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "clothes" },
+    "persian": { "city": "بجنورد", "business": "پوشاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "clothes" },
+    "persian": { "city": "زاهدان", "business": "پوشاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "clothes" },
+    "persian": { "city": "خرم آباد", "business": "پوشاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "clothes" },
+    "persian": { "city": "ایلام", "business": "پوشاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "clothes" },
+    "persian": { "city": "کرمانشاه", "business": "پوشاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "clothes" },
+    "persian": { "city": "سنندج", "business": "پوشاک" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "shoes" },
+    "persian": { "city": "تهران", "business": "کیف و کفش" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "shoes" },
+    "persian": { "city": "مشهد", "business": "کیف و کفش" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "shoes" },
+    "persian": { "city": "اصفهان", "business": "کیف و کفش" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "shoes" },
+    "persian": { "city": "تبریز", "business": "کیف و کفش" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "shoes" },
+    "persian": { "city": "شیراز", "business": "کیف و کفش" },
+    "show": true
+  },
+  {
+    "english": { "city": "ahwaz", "business": "shoes" },
+    "persian": { "city": "اهواز", "business": "کیف و کفش" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "shoes" },
+    "persian": { "city": "ارومیه", "business": "کیف و کفش" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "shoes" },
+    "persian": { "city": "کرمان", "business": "کیف و کفش" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "shoes" },
+    "persian": { "city": "یزد", "business": "کیف و کفش" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "shoes" },
+    "persian": { "city": "بندرعباس", "business": "کیف و کفش" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "shoes" },
+    "persian": { "city": "اردبیل", "business": "کیف و کفش" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "shoes" },
+    "persian": { "city": "سمنان", "business": "کیف و کفش" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "shoes" },
+    "persian": { "city": "قزوین", "business": "کیف و کفش" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "shoes" },
+    "persian": { "city": "کرج", "business": "کیف و کفش" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "shoes" },
+    "persian": { "city": "بیرجند", "business": "کیف و کفش" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "shoes" },
+    "persian": { "city": "بجنورد", "business": "کیف و کفش" },
+    "show": true
+  },
+  {
+    "english": { "city": "zahedan", "business": "shoes" },
+    "persian": { "city": "زاهدان", "business": "کیف و کفش" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "shoes" },
+    "persian": { "city": "خرم آباد", "business": "کیف و کفش" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "shoes" },
+    "persian": { "city": "ایلام", "business": "کیف و کفش" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "shoes" },
+    "persian": { "city": "کرمانشاه", "business": "کیف و کفش" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "shoes" },
+    "persian": { "city": "سنندج", "business": "کیف و کفش" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "appliances" },
+    "persian": { "city": "تهران", "business": "لوازم خانگی" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "appliances" },
+    "persian": { "city": "مشهد", "business": "لوازم خانگی" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "appliances" },
+    "persian": { "city": "اصفهان", "business": "لوازم خانگی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "appliances" },
+    "persian": { "city": "تبریز", "business": "لوازم خانگی" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "appliances" },
+    "persian": { "city": "شیراز", "business": "لوازم خانگی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "appliances" },
+    "persian": { "city": "اهواز", "business": "لوازم خانگی" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "appliances" },
+    "persian": { "city": "ارومیه", "business": "لوازم خانگی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "appliances" },
+    "persian": { "city": "کرمان", "business": "لوازم خانگی" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "appliances" },
+    "persian": { "city": "یزد", "business": "لوازم خانگی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "appliances" },
+    "persian": { "city": "بندرعباس", "business": "لوازم خانگی" },
+    "show": true
+  },
+  {
+    "english": { "city": "ardabil", "business": "appliances" },
+    "persian": { "city": "اردبیل", "business": "لوازم خانگی" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "appliances" },
+    "persian": { "city": "سمنان", "business": "لوازم خانگی" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "appliances" },
+    "persian": { "city": "قزوین", "business": "لوازم خانگی" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "appliances" },
+    "persian": { "city": "کرج", "business": "لوازم خانگی" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "appliances" },
+    "persian": { "city": "بیرجند", "business": "لوازم خانگی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "appliances" },
+    "persian": { "city": "بجنورد", "business": "لوازم خانگی" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "appliances" },
+    "persian": { "city": "زاهدان", "business": "لوازم خانگی" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "appliances" },
+    "persian": { "city": "خرم آباد", "business": "لوازم خانگی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "appliances" },
+    "persian": { "city": "ایلام", "business": "لوازم خانگی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "appliances" },
+    "persian": { "city": "کرمانشاه", "business": "لوازم خانگی" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "appliances" },
+    "persian": { "city": "سنندج", "business": "لوازم خانگی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "mobileshop" },
+    "persian": { "city": "تهران", "business": "موبایل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "mobileshop" },
+    "persian": { "city": "مشهد", "business": "موبایل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "mobileshop" },
+    "persian": { "city": "اصفهان", "business": "موبایل فروشی" },
+    "show": true
+  },
+  {
+    "english": { "city": "tabriz", "business": "mobileshop" },
+    "persian": { "city": "تبریز", "business": "موبایل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "mobileshop" },
+    "persian": { "city": "شیراز", "business": "موبایل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "mobileshop" },
+    "persian": { "city": "اهواز", "business": "موبایل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "mobileshop" },
+    "persian": { "city": "ارومیه", "business": "موبایل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "mobileshop" },
+    "persian": { "city": "کرمان", "business": "موبایل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "mobileshop" },
+    "persian": { "city": "یزد", "business": "موبایل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "mobileshop" },
+    "persian": { "city": "بندرعباس", "business": "موبایل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "mobileshop" },
+    "persian": { "city": "اردبیل", "business": "موبایل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "mobileshop" },
+    "persian": { "city": "سمنان", "business": "موبایل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "mobileshop" },
+    "persian": { "city": "قزوین", "business": "موبایل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "mobileshop" },
+    "persian": { "city": "کرج", "business": "موبایل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "mobileshop" },
+    "persian": { "city": "بیرجند", "business": "موبایل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "mobileshop" },
+    "persian": { "city": "بجنورد", "business": "موبایل فروشی" },
+    "show": true
+  },
+  {
+    "english": { "city": "zahedan", "business": "mobileshop" },
+    "persian": { "city": "زاهدان", "business": "موبایل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "mobileshop" },
+    "persian": { "city": "خرم آباد", "business": "موبایل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "mobileshop" },
+    "persian": { "city": "ایلام", "business": "موبایل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "mobileshop" },
+    "persian": { "city": "کرمانشاه", "business": "موبایل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "mobileshop" },
+    "persian": { "city": "سنندج", "business": "موبایل فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "tools" },
+    "persian": { "city": "تهران", "business": "ابزارآلات" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "tools" },
+    "persian": { "city": "مشهد", "business": "ابزارآلات" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "tools" },
+    "persian": { "city": "اصفهان", "business": "ابزارآلات" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "tools" },
+    "persian": { "city": "تبریز", "business": "ابزارآلات" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "tools" },
+    "persian": { "city": "شیراز", "business": "ابزارآلات" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "tools" },
+    "persian": { "city": "اهواز", "business": "ابزارآلات" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "tools" },
+    "persian": { "city": "ارومیه", "business": "ابزارآلات" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "tools" },
+    "persian": { "city": "کرمان", "business": "ابزارآلات" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "tools" },
+    "persian": { "city": "یزد", "business": "ابزارآلات" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "tools" },
+    "persian": { "city": "بندرعباس", "business": "ابزارآلات" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "tools" },
+    "persian": { "city": "اردبیل", "business": "ابزارآلات" },
+    "show": true
+  },
+  {
+    "english": { "city": "semnan", "business": "tools" },
+    "persian": { "city": "سمنان", "business": "ابزارآلات" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "tools" },
+    "persian": { "city": "قزوین", "business": "ابزارآلات" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "tools" },
+    "persian": { "city": "کرج", "business": "ابزارآلات" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "tools" },
+    "persian": { "city": "بیرجند", "business": "ابزارآلات" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "tools" },
+    "persian": { "city": "بجنورد", "business": "ابزارآلات" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "tools" },
+    "persian": { "city": "زاهدان", "business": "ابزارآلات" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "tools" },
+    "persian": { "city": "خرم آباد", "business": "ابزارآلات" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "tools" },
+    "persian": { "city": "ایلام", "business": "ابزارآلات" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "tools" },
+    "persian": { "city": "کرمانشاه", "business": "ابزارآلات" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "tools" },
+    "persian": { "city": "سنندج", "business": "ابزارآلات" },
+    "show": true
+  },
+  {
+    "english": { "city": "tehran", "business": "confectionery" },
+    "persian": { "city": "تهران", "business": "قنادی" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "confectionery" },
+    "persian": { "city": "مشهد", "business": "قنادی" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "confectionery" },
+    "persian": { "city": "اصفهان", "business": "قنادی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "confectionery" },
+    "persian": { "city": "تبریز", "business": "قنادی" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "confectionery" },
+    "persian": { "city": "شیراز", "business": "قنادی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "confectionery" },
+    "persian": { "city": "اهواز", "business": "قنادی" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "confectionery" },
+    "persian": { "city": "ارومیه", "business": "قنادی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "confectionery" },
+    "persian": { "city": "کرمان", "business": "قنادی" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "confectionery" },
+    "persian": { "city": "یزد", "business": "قنادی" },
+    "show": true
+  },
+  {
+    "english": { "city": "bandarabas", "business": "confectionery" },
+    "persian": { "city": "بندرعباس", "business": "قنادی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "confectionery" },
+    "persian": { "city": "اردبیل", "business": "قنادی" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "confectionery" },
+    "persian": { "city": "سمنان", "business": "قنادی" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "confectionery" },
+    "persian": { "city": "قزوین", "business": "قنادی" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "confectionery" },
+    "persian": { "city": "کرج", "business": "قنادی" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "confectionery" },
+    "persian": { "city": "بیرجند", "business": "قنادی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "confectionery" },
+    "persian": { "city": "بجنورد", "business": "قنادی" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "confectionery" },
+    "persian": { "city": "زاهدان", "business": "قنادی" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "confectionery" },
+    "persian": { "city": "خرم آباد", "business": "قنادی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "confectionery" },
+    "persian": { "city": "ایلام", "business": "قنادی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "confectionery" },
+    "persian": { "city": "کرمانشاه", "business": "قنادی" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "confectionery" },
+    "persian": { "city": "سنندج", "business": "قنادی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "drugstore" },
+    "persian": { "city": "تهران", "business": "داروخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "drugstore" },
+    "persian": { "city": "مشهد", "business": "داروخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "drugstore" },
+    "persian": { "city": "اصفهان", "business": "داروخانه" },
+    "show": true
+  },
+  {
+    "english": { "city": "tabriz", "business": "drugstore" },
+    "persian": { "city": "تبریز", "business": "داروخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "drugstore" },
+    "persian": { "city": "شیراز", "business": "داروخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "drugstore" },
+    "persian": { "city": "اهواز", "business": "داروخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "drugstore" },
+    "persian": { "city": "ارومیه", "business": "داروخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "drugstore" },
+    "persian": { "city": "کرمان", "business": "داروخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "drugstore" },
+    "persian": { "city": "یزد", "business": "داروخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "drugstore" },
+    "persian": { "city": "بندرعباس", "business": "داروخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "drugstore" },
+    "persian": { "city": "اردبیل", "business": "داروخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "drugstore" },
+    "persian": { "city": "سمنان", "business": "داروخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "drugstore" },
+    "persian": { "city": "قزوین", "business": "داروخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "drugstore" },
+    "persian": { "city": "کرج", "business": "داروخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "drugstore" },
+    "persian": { "city": "بیرجند", "business": "داروخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "drugstore" },
+    "persian": { "city": "بجنورد", "business": "داروخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "drugstore" },
+    "persian": { "city": "زاهدان", "business": "داروخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "drugstore" },
+    "persian": { "city": "خرم آباد", "business": "داروخانه" },
+    "show": true
+  },
+  {
+    "english": { "city": "ilam", "business": "drugstore" },
+    "persian": { "city": "ایلام", "business": "داروخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "drugstore" },
+    "persian": { "city": "کرمانشاه", "business": "داروخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "drugstore" },
+    "persian": { "city": "سنندج", "business": "داروخانه" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "bookstore" },
+    "persian": { "city": "تهران", "business": "کتاب فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "bookstore" },
+    "persian": { "city": "مشهد", "business": "کتاب فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "bookstore" },
+    "persian": { "city": "اصفهان", "business": "کتاب فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "bookstore" },
+    "persian": { "city": "تبریز", "business": "کتاب فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "bookstore" },
+    "persian": { "city": "شیراز", "business": "کتاب فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "bookstore" },
+    "persian": { "city": "اهواز", "business": "کتاب فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "bookstore" },
+    "persian": { "city": "ارومیه", "business": "کتاب فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "bookstore" },
+    "persian": { "city": "کرمان", "business": "کتاب فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "bookstore" },
+    "persian": { "city": "یزد", "business": "کتاب فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "bookstore" },
+    "persian": { "city": "بندرعباس", "business": "کتاب فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "bookstore" },
+    "persian": { "city": "اردبیل", "business": "کتاب فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "bookstore" },
+    "persian": { "city": "سمنان", "business": "کتاب فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "bookstore" },
+    "persian": { "city": "قزوین", "business": "کتاب فروشی" },
+    "show": true
+  },
+  {
+    "english": { "city": "karaj", "business": "bookstore" },
+    "persian": { "city": "کرج", "business": "کتاب فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "bookstore" },
+    "persian": { "city": "بیرجند", "business": "کتاب فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "bookstore" },
+    "persian": { "city": "بجنورد", "business": "کتاب فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "bookstore" },
+    "persian": { "city": "زاهدان", "business": "کتاب فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "bookstore" },
+    "persian": { "city": "خرم آباد", "business": "کتاب فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "bookstore" },
+    "persian": { "city": "ایلام", "business": "کتاب فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "bookstore" },
+    "persian": { "city": "کرمانشاه", "business": "کتاب فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "bookstore" },
+    "persian": { "city": "سنندج", "business": "کتاب فروشی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "petshop" },
+    "persian": { "city": "تهران", "business": "پت شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "petshop" },
+    "persian": { "city": "مشهد", "business": "پت شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "petshop" },
+    "persian": { "city": "اصفهان", "business": "پت شاپ" },
+    "show": true
+  },
+  {
+    "english": { "city": "tabriz", "business": "petshop" },
+    "persian": { "city": "تبریز", "business": "پت شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "petshop" },
+    "persian": { "city": "شیراز", "business": "پت شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "petshop" },
+    "persian": { "city": "اهواز", "business": "پت شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "petshop" },
+    "persian": { "city": "ارومیه", "business": "پت شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "petshop" },
+    "persian": { "city": "کرمان", "business": "پت شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "petshop" },
+    "persian": { "city": "یزد", "business": "پت شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "petshop" },
+    "persian": { "city": "بندرعباس", "business": "پت شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "petshop" },
+    "persian": { "city": "اردبیل", "business": "پت شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "petshop" },
+    "persian": { "city": "سمنان", "business": "پت شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "petshop" },
+    "persian": { "city": "قزوین", "business": "پت شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "petshop" },
+    "persian": { "city": "کرج", "business": "پت شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "petshop" },
+    "persian": { "city": "بیرجند", "business": "پت شاپ" },
+    "show": true
+  },
+  {
+    "english": { "city": "bojnourd", "business": "petshop" },
+    "persian": { "city": "بجنورد", "business": "پت شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "petshop" },
+    "persian": { "city": "زاهدان", "business": "پت شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "petshop" },
+    "persian": { "city": "خرم آباد", "business": "پت شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "petshop" },
+    "persian": { "city": "ایلام", "business": "پت شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "petshop" },
+    "persian": { "city": "کرمانشاه", "business": "پت شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "petshop" },
+    "persian": { "city": "سنندج", "business": "پت شاپ" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "perfumes" },
+    "persian": { "city": "تهران", "business": "عطرو ادکلن" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "perfumes" },
+    "persian": { "city": "مشهد", "business": "عطرو ادکلن" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "perfumes" },
+    "persian": { "city": "اصفهان", "business": "عطرو ادکلن" },
+    "show": true
+  },
+  {
+    "english": { "city": "tabriz", "business": "perfumes" },
+    "persian": { "city": "تبریز", "business": "عطرو ادکلن" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "perfumes" },
+    "persian": { "city": "شیراز", "business": "عطرو ادکلن" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "perfumes" },
+    "persian": { "city": "اهواز", "business": "عطرو ادکلن" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "perfumes" },
+    "persian": { "city": "ارومیه", "business": "عطرو ادکلن" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "perfumes" },
+    "persian": { "city": "کرمان", "business": "عطرو ادکلن" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "perfumes" },
+    "persian": { "city": "یزد", "business": "عطرو ادکلن" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "perfumes" },
+    "persian": { "city": "بندرعباس", "business": "عطرو ادکلن" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "perfumes" },
+    "persian": { "city": "اردبیل", "business": "عطرو ادکلن" },
+    "show": true
+  },
+  {
+    "english": { "city": "semnan", "business": "perfumes" },
+    "persian": { "city": "سمنان", "business": "عطرو ادکلن" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "perfumes" },
+    "persian": { "city": "قزوین", "business": "عطرو ادکلن" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "perfumes" },
+    "persian": { "city": "کرج", "business": "عطرو ادکلن" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "perfumes" },
+    "persian": { "city": "بیرجند", "business": "عطرو ادکلن" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "perfumes" },
+    "persian": { "city": "بجنورد", "business": "عطرو ادکلن" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "perfumes" },
+    "persian": { "city": "زاهدان", "business": "عطرو ادکلن" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "perfumes" },
+    "persian": { "city": "خرم آباد", "business": "عطرو ادکلن" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "perfumes" },
+    "persian": { "city": "ایلام", "business": "عطرو ادکلن" },
+    "show": true
+  },
+  {
+    "english": { "city": "kermanshah", "business": "perfumes" },
+    "persian": { "city": "کرمانشاه", "business": "عطرو ادکلن" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "perfumes" },
+    "persian": { "city": "سنندج", "business": "عطرو ادکلن" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "medical-equipment" },
+    "persian": { "city": "تهران", "business": "تجهیزات پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "medical-equipment" },
+    "persian": { "city": "مشهد", "business": "تجهیزات پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "medical-equipment" },
+    "persian": { "city": "اصفهان", "business": "تجهیزات پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "medical-equipment" },
+    "persian": { "city": "تبریز", "business": "تجهیزات پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "medical-equipment" },
+    "persian": { "city": "شیراز", "business": "تجهیزات پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "medical-equipment" },
+    "persian": { "city": "اهواز", "business": "تجهیزات پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "medical-equipment" },
+    "persian": { "city": "ارومیه", "business": "تجهیزات پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "medical-equipment" },
+    "persian": { "city": "کرمان", "business": "تجهیزات پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "medical-equipment" },
+    "persian": { "city": "یزد", "business": "تجهیزات پزشکی" },
+    "show": true
+  },
+  {
+    "english": { "city": "bandarabas", "business": "medical-equipment" },
+    "persian": { "city": "بندرعباس", "business": "تجهیزات پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "medical-equipment" },
+    "persian": { "city": "اردبیل", "business": "تجهیزات پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "medical-equipment" },
+    "persian": { "city": "سمنان", "business": "تجهیزات پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "medical-equipment" },
+    "persian": { "city": "قزوین", "business": "تجهیزات پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "medical-equipment" },
+    "persian": { "city": "کرج", "business": "تجهیزات پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "medical-equipment" },
+    "persian": { "city": "بیرجند", "business": "تجهیزات پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "medical-equipment" },
+    "persian": { "city": "بجنورد", "business": "تجهیزات پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "medical-equipment" },
+    "persian": { "city": "زاهدان", "business": "تجهیزات پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "medical-equipment" },
+    "persian": { "city": "خرم آباد", "business": "تجهیزات پزشکی" },
+    "show": true
+  },
+  {
+    "english": { "city": "ilam", "business": "medical-equipment" },
+    "persian": { "city": "ایلام", "business": "تجهیزات پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "medical-equipment" },
+    "persian": { "city": "کرمانشاه", "business": "تجهیزات پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "medical-equipment" },
+    "persian": { "city": "سنندج", "business": "تجهیزات پزشکی" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "rugs" },
+    "persian": { "city": "تهران", "business": "فرش" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "rugs" },
+    "persian": { "city": "مشهد", "business": "فرش" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "rugs" },
+    "persian": { "city": "اصفهان", "business": "فرش" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "rugs" },
+    "persian": { "city": "تبریز", "business": "فرش" },
+    "show": false
+  },
+  {
+    "english": { "city": "shiraz", "business": "rugs" },
+    "persian": { "city": "شیراز", "business": "فرش" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "rugs" },
+    "persian": { "city": "اهواز", "business": "فرش" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "rugs" },
+    "persian": { "city": "ارومیه", "business": "فرش" },
+    "show": true
+  },
+  {
+    "english": { "city": "kerman", "business": "rugs" },
+    "persian": { "city": "کرمان", "business": "فرش" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "rugs" },
+    "persian": { "city": "یزد", "business": "فرش" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "rugs" },
+    "persian": { "city": "بندرعباس", "business": "فرش" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "rugs" },
+    "persian": { "city": "اردبیل", "business": "فرش" },
+    "show": false
+  },
+  {
+    "english": { "city": "semnan", "business": "rugs" },
+    "persian": { "city": "سمنان", "business": "فرش" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "rugs" },
+    "persian": { "city": "قزوین", "business": "فرش" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "rugs" },
+    "persian": { "city": "کرج", "business": "فرش" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "rugs" },
+    "persian": { "city": "بیرجند", "business": "فرش" },
+    "show": true
+  },
+  {
+    "english": { "city": "bojnourd", "business": "rugs" },
+    "persian": { "city": "بجنورد", "business": "فرش" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "rugs" },
+    "persian": { "city": "زاهدان", "business": "فرش" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "rugs" },
+    "persian": { "city": "خرم آباد", "business": "فرش" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "rugs" },
+    "persian": { "city": "ایلام", "business": "فرش" },
+    "show": false
+  },
+  {
+    "english": { "city": "kermanshah", "business": "rugs" },
+    "persian": { "city": "کرمانشاه", "business": "فرش" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "rugs" },
+    "persian": { "city": "سنندج", "business": "فرش" },
+    "show": false
+  },
+  {
+    "english": { "city": "tehran", "business": "jewelery" },
+    "persian": { "city": "تهران", "business": "طلا و جواهر" },
+    "show": false
+  },
+  {
+    "english": { "city": "mashhad", "business": "jewelery" },
+    "persian": { "city": "مشهد", "business": "طلا و جواهر" },
+    "show": false
+  },
+  {
+    "english": { "city": "esfahan", "business": "jewelery" },
+    "persian": { "city": "اصفهان", "business": "طلا و جواهر" },
+    "show": false
+  },
+  {
+    "english": { "city": "tabriz", "business": "jewelery" },
+    "persian": { "city": "تبریز", "business": "طلا و جواهر" },
+    "show": true
+  },
+  {
+    "english": { "city": "shiraz", "business": "jewelery" },
+    "persian": { "city": "شیراز", "business": "طلا و جواهر" },
+    "show": false
+  },
+  {
+    "english": { "city": "ahwaz", "business": "jewelery" },
+    "persian": { "city": "اهواز", "business": "طلا و جواهر" },
+    "show": false
+  },
+  {
+    "english": { "city": "urmia", "business": "jewelery" },
+    "persian": { "city": "ارومیه", "business": "طلا و جواهر" },
+    "show": false
+  },
+  {
+    "english": { "city": "kerman", "business": "jewelery" },
+    "persian": { "city": "کرمان", "business": "طلا و جواهر" },
+    "show": false
+  },
+  {
+    "english": { "city": "yazd", "business": "jewelery" },
+    "persian": { "city": "یزد", "business": "طلا و جواهر" },
+    "show": false
+  },
+  {
+    "english": { "city": "bandarabas", "business": "jewelery" },
+    "persian": { "city": "بندرعباس", "business": "طلا و جواهر" },
+    "show": false
+  },
+  {
+    "english": { "city": "ardabil", "business": "jewelery" },
+    "persian": { "city": "اردبیل", "business": "طلا و جواهر" },
+    "show": true
+  },
+  {
+    "english": { "city": "semnan", "business": "jewelery" },
+    "persian": { "city": "سمنان", "business": "طلا و جواهر" },
+    "show": false
+  },
+  {
+    "english": { "city": "qazvin", "business": "jewelery" },
+    "persian": { "city": "قزوین", "business": "طلا و جواهر" },
+    "show": false
+  },
+  {
+    "english": { "city": "karaj", "business": "jewelery" },
+    "persian": { "city": "کرج", "business": "طلا و جواهر" },
+    "show": false
+  },
+  {
+    "english": { "city": "birjand", "business": "jewelery" },
+    "persian": { "city": "بیرجند", "business": "طلا و جواهر" },
+    "show": false
+  },
+  {
+    "english": { "city": "bojnourd", "business": "jewelery" },
+    "persian": { "city": "بجنورد", "business": "طلا و جواهر" },
+    "show": false
+  },
+  {
+    "english": { "city": "zahedan", "business": "jewelery" },
+    "persian": { "city": "زاهدان", "business": "طلا و جواهر" },
+    "show": false
+  },
+  {
+    "english": { "city": "khorramabad", "business": "jewelery" },
+    "persian": { "city": "خرم آباد", "business": "طلا و جواهر" },
+    "show": false
+  },
+  {
+    "english": { "city": "ilam", "business": "jewelery" },
+    "persian": { "city": "ایلام", "business": "طلا و جواهر" },
+    "show": true
+  },
+  {
+    "english": { "city": "kermanshah", "business": "jewelery" },
+    "persian": { "city": "کرمانشاه", "business": "طلا و جواهر" },
+    "show": false
+  },
+  {
+    "english": { "city": "sanandaj", "business": "jewelery" },
+    "persian": { "city": "سنندج", "business": "طلا و جواهر" },
+    "show": false
+  }
+]

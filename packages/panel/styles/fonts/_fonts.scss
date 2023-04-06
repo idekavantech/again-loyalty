@@ -1,0 +1,2274 @@
+@font-face {
+  font-family: "IranSans";
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANSansWeb.ttf")
+      format("truetype"),
+    url("https://hs3-cf.behtarino.com/static/fonts/IRANSansWeb.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Vazir";
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Vazir.ttf") format("truetype"),
+    url("https://hs3-cf.behtarino.com/static/fonts/Vazir.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gandom";
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Gandom.ttf")
+      format("truetype"),
+    url("https://hs3-cf.behtarino.com/static/fonts/Gandom.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Parastoo";
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Parastoo.ttf")
+      format("truetype"),
+    url("https://hs3-cf.behtarino.com/static/fonts/Parastoo.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Sahel";
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Sahel.ttf") format("truetype"),
+    url("https://hs3-cf.behtarino.com/static/fonts/Sahel.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Samim";
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Samim.ttf") format("truetype"),
+    url("https://hs3-cf.behtarino.com/static/fonts/Samim.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Tanha";
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Tanha.ttf") format("truetype"),
+    url("https://hs3-cf.behtarino.com/static/fonts/Tanha.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "XMYekan";
+  src: url("https://hs3-cf.behtarino.com/static/fonts/XMYekan.ttf")
+      format("truetype"),
+    url("https://hs3-cf.behtarino.com/static/fonts/XMYekan.woff") format("woff");
+  font-weight: normal;
+  font-display: swap;
+}
+
+/**
+*
+*	Name:			DANA Fonts
+*	Version:			1.0
+*	Author:			Moslem Ebrahimi (moslemebrahimi.com)
+*	Created on:		May 22, 2019
+*	Updated on:		May 22, 2019
+*	Website:			http://fontiran.com
+*	Copyright:		Commercial/Proprietary Software
+--------------------------------------------------------------------------------------
+فونت دانا یک نرم افزار مالکیتی محسوب می شود. جهت آگاهی از قوانین استفاده از این فونت‌ها لطفا به وب سایت (فونت ایران دات کام) مراجعه نمایید
+--------------------------------------------------------------------------------------
+DANA fonts are considered a proprietary software. To gain information about the laws regarding the use of these fonts, please visit www.fontiran.com 
+--------------------------------------------------------------------------------------
+This set of fonts are used in this project under the license: (.....)
+------------------------------------------------------------------------------------- fonts/-
+*	
+**/
+
+// @font-face {
+// 	font-family: "dana";
+// 	font-style: normal;
+// 	font-weight: 10;
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-thin.eot');
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-thin.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-thin.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-thin.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+// }
+// @font-face {
+// 	font-family: "dana";
+// 	font-style: normal;
+// 	font-weight: 200;
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-extralight.eot');
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-extralight.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-extralight.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-extralight.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+// }
+// @font-face {
+// 	font-family: "dana";
+// 	font-style: normal;
+// 	font-weight: 300;
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-light.eot');
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-light.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-light.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-light.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+// }
+// @font-face {
+// 	font-family: "dana";
+// 	font-style: normal;
+// 	font-weight: 500;
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-medium.eot');
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-medium.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-medium.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-medium.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+// }
+// @font-face {
+// 	font-family: "dana";
+// 	font-style: normal;
+// 	font-weight: 600;
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-demibold.eot');
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-demibold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-demibold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-demibold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+// }
+// @font-face {
+// 	font-family: "dana";
+// 	font-style: normal;
+// 	font-weight: 750;
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-ultrabold.eot');
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-ultrabold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-ultrabold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-ultrabold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+// }
+// @font-face {
+// 	font-family: "dana";
+// 	font-style: normal;
+// 	font-weight: 800;
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-extrabold.eot');
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-extrabold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-extrabold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-extrabold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+// }
+// @font-face {
+// 	font-family: "dana";
+// 	font-style: normal;
+// 	font-weight: 900;
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-black.eot');
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-black.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-black.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-black.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+// }
+// @font-face {
+// 	font-family: "dana";
+// 	font-style: normal;
+// 	font-weight: bold;
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-bold.eot');
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-bold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-bold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+// }
+// @font-face {
+// 	font-family: "dana";
+// 	font-style: normal;
+// 	font-weight: normal;
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-regular.eot');
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-regular.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-regular.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-regular.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+// }
+
+// /**
+// Iranic fonts
+// **/
+
+// @font-face {
+// 	font-family: "dana";
+// 	font-style: italic;
+// 	font-weight: 10;
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-thinitalic.eot');
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-thinitalic.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-thinitalic.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-thinitalic.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+// }
+// @font-face {
+// 	font-family: "dana";
+// 	font-style: italic;
+// 	font-weight: 200;
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-extralightitalic.eot');
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-extralightitalic.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-extralightitalic.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-extralightitalic.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+// }
+// @font-face {
+// 	font-family: "dana";
+// 	font-style: italic;
+// 	font-weight: 300;
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-lightitalic.eot');
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-lightitalic.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-lightitalic.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-lightitalic.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+// }
+// @font-face {
+// 	font-family: "dana";
+// 	font-style: italic;
+// 	font-weight: 500;
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-mediumitalic.eot');
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-mediumitalic.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-mediumitalic.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-mediumitalic.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+// }
+// @font-face {
+// 	font-family: "dana";
+// 	font-style: italic;
+// 	font-weight: 600;
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-demibolditalic.eot');
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-demibolditalic.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-demibolditalic.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-demibolditalic.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+// }
+// @font-face {
+// 	font-family: "dana";
+// 	font-style: italic;
+// 	font-weight: 750;
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-ultrabolditalic.eot');
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-ultrabolditalic.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-ultrabolditalic.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-ultrabolditalic.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+// }
+// @font-face {
+// 	font-family: "dana";
+// 	font-style: italic;
+// 	font-weight: 800;
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-extrabolditalic.eot');
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-extrabolditalic.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-extrabolditalic.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-extrabolditalic.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+// }
+// @font-face {
+// 	font-family: "dana";
+// 	font-style: italic;
+// 	font-weight: 900;
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-blackitalic.eot');
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-blackitalic.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-blackitalic.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-blackitalic.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+// }
+// @font-face {
+// 	font-family: "dana";
+// 	font-style: italic;
+// 	font-weight: bold;
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-bolditalic.eot');
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-bolditalic.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-bolditalic.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-bolditalic.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+// }
+// @font-face {
+// 	font-family: "dana";
+// 	font-style: italic;
+// 	font-weight: normal;
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-regularitalic.eot');
+// 	src: url('https://hs3-cf.behtarino.com/static/fonts/dana-regularitalic.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-regularitalic.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+// 		 url('https://hs3-cf.behtarino.com/static/fonts/dana-regularitalic.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+// }
+///////////////////**anjoman normal start**///////////////////
+@font-face {
+  font-family: "anjoman";
+  font-style: normal;
+  font-weight: 100;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Thin.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Thin.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Thin.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Thin.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: normal;
+  font-weight: 100;
+  font-stretch: condensed;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedThin.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedThin.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedThin.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedThin.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: normal;
+  font-weight: 200;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-ExtraLight.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-ExtraLight.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-ExtraLight.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-ExtraLight.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: condensed;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedLight.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedLight.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedLight.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedLight.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: normal;
+  font-weight: 500;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Medium.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Medium.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Medium.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: condensed;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedMedium.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedMedium.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedMedium.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedMedium.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-SemiBold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-SemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-SemiBold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-SemiBold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: condensed;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedSemiBold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedSemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedSemiBold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedSemiBold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: normal;
+  font-weight: 750;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-UltraBold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-UltraBold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-UltraBold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-UltraBold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: normal;
+  font-weight: 750;
+  font-stretch: condensed;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedUltraBold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedUltraBold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedUltraBold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedUltraBold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: normal;
+  font-weight: 800;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-ExtraBold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-ExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-ExtraBold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-ExtraBold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: normal;
+  font-weight: 800;
+  font-stretch: condensed;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedExtraBold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedExtraBold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedExtraBold.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedExtraBold.ttf")
+      format("truetype"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: normal;
+  font-weight: 950;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Black.woff");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Black.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Black.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Black.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Heavy.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Heavy.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Heavy.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Heavy.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: normal;
+  font-weight: 900;
+  font-stretch: condensed;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedHeavy.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedHeavy.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedHeavy.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedHeavy.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: normal;
+  font-weight: 950;
+  font-stretch: condensed;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedBlack.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedBlack.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedBlack.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedBlack.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Regular.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Regular.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Regular.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: condensed;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Condensed.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Condensed.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Condensed.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Condensed.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: normal;
+  font-weight: bold;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Bold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Bold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Bold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: normal;
+  font-weight: bold;
+  font-stretch: condensed;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedBold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedBold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedBold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedBold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: normal;
+  font-weight: bolder;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-SuperHeavy.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-SuperHeavy.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-SuperHeavy.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-SuperHeavy.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: normal;
+  font-weight: bolder;
+  font-stretch: condensed;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedSuperHeavy.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedSuperHeavy.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedSuperHeavy.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedSuperHeavy.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+///////////////////**anjoman normal end**///////////////////
+
+//////////////////**anjoman italic start**//////////////////
+@font-face {
+  font-family: "anjoman";
+  font-style: italic;
+  font-weight: 100;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-ThinItalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-ThinItalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-ThinItalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-ThinItalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: italic;
+  font-weight: 100;
+  font-stretch: condensed;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedThinItalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedThinItalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedThinItalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedThinItalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: italic;
+  font-weight: 200;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-ExtraLightItalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-ExtraLightItalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-ExtraLightItalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-ExtraLightItalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: italic;
+  font-weight: 200;
+  font-stretch: condensed;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedExtraLightItalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedExtraLightItalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedExtraLightItalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedExtraLightItalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: italic;
+  font-weight: 300;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-LightItalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-LightItalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-LightItalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-LightItalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: italic;
+  font-weight: 300;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Light.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Light.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Light.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Light.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: italic;
+  font-weight: 300;
+  font-stretch: condensed;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedLightItalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedLightItalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedLightItalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedLightItalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: italic;
+  font-weight: 400;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Italic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Italic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Italic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-Italic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: italic;
+  font-weight: 400;
+  font-stretch: condensed;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedItalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedItalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedItalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedItalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: italic;
+  font-weight: 500;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-MediumItalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-MediumItalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-MediumItalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-MediumItalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: italic;
+  font-weight: 500;
+  font-stretch: condensed;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedMediumItalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedMediumItalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedMediumItalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedMediumItalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: italic;
+  font-weight: 600;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-SemiBoldItalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-SemiBoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-SemiBoldItalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-SemiBoldItalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: italic;
+  font-weight: 750;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-UltraBoldItalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-UltraBoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-UltraBoldItalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-UltraBoldItalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: italic;
+  font-weight: 750;
+  font-stretch: condensed;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedUltraBoldItalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedUltraBoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedUltraBoldItalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedUltraBoldItalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: italic;
+  font-weight: 800;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-ExtraBoldItalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-ExtraBoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-ExtraBoldItalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-ExtraBoldItalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: italic;
+  font-weight: 800;
+  font-stretch: condensed;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedExtraLight.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedExtraLight.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedExtraLight.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedExtraLight.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: italic;
+  font-weight: 900;
+  font-stretch: condensed;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedHeavyItalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedHeavyItalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedHeavyItalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedHeavyItalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: italic;
+  font-weight: 950;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-BlackItalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-BlackItalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-BlackItalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-BlackItalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: italic;
+  font-weight: 950;
+  font-stretch: condensed;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedBlackItalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedBlackItalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedBlackItalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedBlackItalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: italic;
+  font-weight: bold;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-BoldItalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-BoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-BoldItalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-BoldItalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: italic;
+  font-weight: bold;
+  font-stretch: condensed;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedBoldItalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedBoldItalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedBoldItalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedBoldItalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: italic;
+  font-weight: bold;
+  font-stretch: condensed;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedSemiBoldItalic.woff.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedSemiBoldItalic.woff.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedSemiBoldItalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedSemiBoldItalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: italic;
+  font-weight: bolder;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-SuperHeavyItalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-SuperHeavyItalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-SuperHeavyItalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-SuperHeavyItalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "anjoman";
+  font-style: italic;
+  font-weight: bolder;
+  font-stretch: condensed;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedSuperHeavyItalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedSuperHeavyItalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedSuperHeavyItalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Anjoman/Anjoman-CondensedSuperHeavyItalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+//////////////////**anjoman italic end**//////////////////
+
+////////////////**iranYekan normal start**////////////////
+@font-face {
+  font-family: "iranYekan";
+  font-style: normal;
+  font-weight: 100;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebThin.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebThin.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebThin.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebThin.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebThin.ttf")
+      format("truetype"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "iranYekan";
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebLight.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebLight.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebLight.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebLight.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebLight.ttf")
+      format("truetype"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "iranYekan";
+  font-style: normal;
+  font-weight: 500;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebMedium.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebMedium.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebMedium.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebMedium.woff")
+      format("woff") و /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebMedium.ttf")
+      format("truetype"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "iranYekan";
+  font-style: normal;
+  font-weight: 800;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebExtraBold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebExtraBold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebExtraBold.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebExtraBold.ttf")
+      format("truetype"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "iranYekan";
+  font-style: normal;
+  font-weight: 800;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebExtraBold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebExtraBold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebExtraBold.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebExtraBold.ttf")
+      format("truetype"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "iranYekan";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebBlack.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebBlack.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebBlack.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebBlack.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebBlack.ttf")
+      format("truetype"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "iranYekan";
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebRegular.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebRegular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebRegular.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebRegular.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebRegular.ttf")
+      format("truetype"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "iranYekan";
+  font-style: normal;
+  font-weight: bold;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebBold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebBold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebBold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebBold.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANYekan/IRANYekanWebBold.ttf")
+      format("truetype"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+////////////////**iranYekan normal end**////////////////
+
+///////////////**iranSansX normal start**///////////////
+@font-face {
+  font-family: "iranSansX";
+  font-style: normal;
+  font-weight: 100;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANSansX/IRANSansX-Thin.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANSansX/IRANSansX-Thin.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "iranSansX";
+  font-style: normal;
+  font-weight: 200;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANSansX/IRANSansX-UltraLight.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANSansX/IRANSansX-UltraLight.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "iranSansX";
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANSansX/IRANSansX-Light.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANSansX/IRANSansX-Light.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "iranSansX";
+  font-style: normal;
+  font-weight: 500;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANSansX/IRANSansX-Medium.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANSansX/IRANSansX-Medium.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "iranSansX";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANSansX/IRANSansX-DemiBold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANSansX/IRANSansX-DemiBold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "iranSansX";
+  font-style: normal;
+  font-weight: 800;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANSansX/IRANSansX-ExtraBold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANSansX/IRANSansX-ExtraBold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "iranSansX";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANSansX/IRANSansX-Black.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANSansX/IRANSansX-Black.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "iranSansX";
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANSansX/IRANSansX-Regular.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANSansX/IRANSansX-Regular.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "iranSansX";
+  font-style: normal;
+  font-weight: bold;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANSansX/IRANSansX-Bold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANSansX/IRANSansX-Bold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+///////////////**iranSansX normal end**///////////////
+
+///////////////**iranSansDn normal start**///////////////
+@font-face {
+  font-family: "iranSansDn";
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANSansDN/iransansdnlight.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANSansDN/iransansdnlight.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANSansDN/iransansdnlight.ttf")
+      format("truetype"),
+    url("https://hs3-cf.behtarino.com/static/fonts/IRANSansDN/iransansdnlight.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANSansDN/iransansdnlight.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "iranSansDn";
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANSansDN/iransansdn.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANSansDN/iransansdn.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANSansDN/iransansdn.ttf")
+      format("truetype"),
+    url("https://hs3-cf.behtarino.com/static/fonts/IRANSansDN/iransansdn.woff")
+      format("woff"),
+    url("https://hs3-cf.behtarino.com/static/fonts/IRANSansDN/iransansdn.woff2")
+      format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "iranSansDn";
+  font-style: normal;
+  font-weight: bold;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANSansDN/iransansdnbold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/IRANSansDN/iransansdnbold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANSansDN/iransansdnbold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/IRANSansDN/iransansdnbold.ttf")
+      format("truetype"),
+    url("https://hs3-cf.behtarino.com/static/fonts/IRANSansDN/iransansdnbold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+///////////////**iranSansDn normal end**///////////////
+
+///////////////**daftar normal start**///////////////
+@font-face {
+  font-family: "daftar";
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Daftar/SD-Daftar-Regular.ttf")
+      format("truetype"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Daftar/SD-Daftar-Regular.otf")
+      format("otf"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+///////////////**daftar normal end**///////////////
+
+/////////////**dana pro normal start**/////////////
+@font-face {
+  font-family: "dana";
+  font-style: normal;
+  font-weight: 100;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-thin.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-thin.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-thin.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-thin.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dana";
+  font-style: normal;
+  font-weight: 200;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extralight.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extralight.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extralight.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extralight.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dana";
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-light.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-light.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-light.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-light.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dana";
+  font-style: normal;
+  font-weight: 500;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-medium.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-medium.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-medium.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-medium.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dana";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-demibold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-demibold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-demibold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-demibold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dana";
+  font-style: normal;
+  font-weight: 750;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-ultrabold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-ultrabold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-ultrabold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-ultrabold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dana";
+  font-style: normal;
+  font-weight: 800;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extrabold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extrabold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extrabold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extrabold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dana";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-black.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-black.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-black.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-black.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dana";
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-regular.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-regular.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-regular.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dana";
+  font-style: normal;
+  font-weight: bold;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-bold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-bold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-bold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-bold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+/////////////**dana normal end**/////////////
+
+/////////////**dana italic start**/////////////
+@font-face {
+  font-family: "dana";
+  font-style: italic;
+  font-weight: 100;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-thinitalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-thinitalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-thinitalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-thinitalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dana";
+  font-style: italic;
+  font-weight: 200;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extralightitalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extralightitalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extralightitalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extralightitalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dana";
+  font-style: italic;
+  font-weight: 300;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-lightitalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-lightitalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-lightitalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-lightitalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dana";
+  font-style: italic;
+  font-weight: 500;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-mediumitalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-mediumitalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-mediumitalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-mediumitalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dana";
+  font-style: italic;
+  font-weight: 600;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-demibolditalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-demibolditalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-demibolditalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-demibolditalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dana";
+  font-style: italic;
+  font-weight: 750;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-ultrabolditalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-ultrabolditalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-ultrabolditalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-ultrabolditalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dana";
+  font-style: italic;
+  font-weight: 800;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extrabolditalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extrabolditalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extrabolditalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extrabolditalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dana";
+  font-style: italic;
+  font-weight: 900;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-blackitalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-blackitalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-blackitalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-blackitalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dana";
+  font-style: italic;
+  font-weight: normal;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-regularitalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-regularitalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-regularitalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-regularitalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dana";
+  font-style: italic;
+  font-weight: bold;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-bolditalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-bolditalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-bolditalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-bolditalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+/////////////**dana italic end**/////////////
+
+/////////////**dibaj normal start**/////////////
+@font-face {
+  font-family: "dibaj";
+  font-style: normal;
+  font-weight: 200;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dibaj/Dibaj UltraLight.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dibaj/Dibaj UltraLight.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dibaj";
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dibaj/Dibaj Light.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dibaj/Dibaj Light.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dibaj";
+  font-style: normal;
+  font-weight: 500;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dibaj/Dibaj Medium.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dibaj/Dibaj Medium.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dibaj";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dibaj/Dibaj SemiBold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dibaj/Dibaj SemiBold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dibaj";
+  font-style: normal;
+  font-weight: 800;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dibaj/Dibaj ExtraBold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dibaj/Dibaj ExtraBold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dibaj";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dibaj/Dibaj Black.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dibaj/Dibaj Black.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dibaj";
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dibaj/Dibaj Regular.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dibaj/Dibaj Regular.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dibaj";
+  font-style: normal;
+  font-weight: bold;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dibaj/Dibaj Bold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dibaj/Dibaj Bold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "dibaj";
+  font-style: normal;
+  font-weight: bolder;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dibaj/Dibaj SuperBlack.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dibaj/Dibaj SuperBlack.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+/////////////**dibaj normal end**/////////////
+
+/////////////**emkan normal start**/////////////
+@font-face {
+  font-family: "emkan";
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/EmkanEco/Emkan Regular .woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/EmkanEco/Emkan Regular .woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "emkan";
+  font-style: normal;
+  font-weight: bold;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/EmkanEco/Emkan Bold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/EmkanEco/Emkan Bold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+/////////////**emkan normal end**/////////////
+
+/////////////**morabbaPro normal start**/////////////
+@font-face {
+  font-family: "morabba pro";
+  font-style: normal;
+  font-weight: 200;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Morabba/Morabba-UltraLight.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Morabba/Morabba-UltraLight.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "morabba pro";
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Morabba/Morabba-Light.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Morabba/Morabba-Light.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "morabba pro";
+  font-style: normal;
+  font-weight: 500;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Morabba/Morabba-Medium.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Morabba/Morabba-Medium.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "morabba pro";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Morabba/Morabba-SemiBold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Morabba/Morabba-SemiBold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "morabba pro";
+  font-style: normal;
+  font-weight: 800;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Morabba/Morabba-ExtraBold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Morabba/Morabba-ExtraBold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "morabba pro";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Morabba/Morabba-Black.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Morabba/Morabba-Black.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "morabba pro";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Morabba/Morabba-Heavy.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Morabba/Morabba-Heavy.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "morabba pro";
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Morabba/Morabba-Regular.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Morabba/Morabba-Regular.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "morabba pro";
+  font-style: normal;
+  font-weight: bold;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Morabba/Morabba-Bold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Morabba/Morabba-Bold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+/////////////**morabbaPro normal end**/////////////
+
+///////////////**on normal start**////////////////
+@font-face {
+  font-family: "on";
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/On/OnLight.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/On/OnLight.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/On/OnLight.otf") format("otf"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/On/OnLight.ttf")
+      format("truetype"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "on";
+  font-style: normal;
+  font-weight: 500;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/On/OnMedium.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/On/OnMedium.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/On/OnMedium.otf") format("otf"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/On/OnMedium.ttf")
+      format("truetype"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "on";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/On/OnSemiBold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/On/OnSemiBold.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/On/OnSemiBold.otf")
+      format("otf"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/On/OnSemiBold.ttf")
+      format("truetype"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "on";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/On/OnBlack.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/On/OnBlack.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/On/OnBlack.otf") format("otf"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/On/OnBlack.ttf")
+      format("truetype"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "on";
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/On/OnNormal.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/On/OnNormal.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/On/OnNormal.otf") format("otf"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/On/OnNormal.ttf")
+      format("truetype"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "on";
+  font-style: normal;
+  font-weight: bold;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/On/OnBold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/On/OnBold.woff") format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/On/OnBold.otf") format("otf"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/On/OnBold.ttf")
+      format("truetype"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+///////////////**on normal end**////////////////
+
+/////////////**tajrid normal start**////////////
+@font-face {
+  font-family: "tajrid";
+  font-style: normal;
+  font-weight: 200;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Tajrid/Tajrid-UltraLight.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Tajrid/Tajrid-UltraLight.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Tajrid/Tajrid-UltraLight.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Tajrid/Tajrid-UltraLight.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "tajrid";
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Tajrid/Tajrid-Light.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Tajrid/Tajrid-Light.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Tajrid/Tajrid-Light.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Tajrid/Tajrid-Light.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "tajrid";
+  font-style: normal;
+  font-weight: 500;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Tajrid/Tajrid-Medium.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Tajrid/Tajrid-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Tajrid/Tajrid-Medium.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Tajrid/Tajrid-Medium.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "tajrid";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Tajrid/Tajrid-SemiBold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Tajrid/Tajrid-SemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Tajrid/Tajrid-SemiBold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Tajrid/Tajrid-SemiBold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "tajrid";
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Tajrid/Tajrid-Regular.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Tajrid/Tajrid-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Tajrid/Tajrid-Regular.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Tajrid/Tajrid-Regular.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "tajrid";
+  font-style: normal;
+  font-weight: bold;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Tajrid/Tajrid-Bold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Tajrid/Tajrid-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Tajrid/Tajrid-Bold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Tajrid/Tajrid-Bold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+/////////////**tajrid normal end**////////////
+
+/////////////**peyda normal start**////////////
+@font-face {
+  font-family: "peyda";
+  font-style: normal;
+  font-weight: 100;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-Thin.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-Thin.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-Thin.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-Thin.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-Thin.ttf")
+      format("truetype"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "peyda";
+  font-style: normal;
+  font-weight: 200;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Peyda/peydaWeb-extralight.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Peyda/peydaWeb-extralight.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/peydaWeb-extralight.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/peydaWeb-extralight.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/peydaWeb-extralight.ttf")
+      format("truetype"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "peyda";
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Peyda/peydaWeb-light.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Peyda/peydaWeb-light.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/peydaWeb-light.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/peydaWeb-light.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/peydaWeb-light.ttf")
+      format("truetype"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "peyda";
+  font-style: normal;
+  font-weight: 500;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-Medium.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-Medium.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-Medium.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-Medium.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-Medium.ttf")
+      format("truetype"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "peyda";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-SemiBold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-SemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-SemiBold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-SemiBold.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-SemiBold.ttf")
+      format("truetype"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "peyda";
+  font-style: normal;
+  font-weight: 800;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-ExtraBold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-ExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-ExtraBold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-ExtraBold.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-ExtraBold.ttf")
+      format("truetype"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "peyda";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-Black.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-Black.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-Black.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-Black.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-Black.ttf")
+      format("truetype"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "peyda";
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-Regular.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-Regular.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-Regular.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-Regular.ttf")
+      format("truetype"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "peyda";
+  font-style: normal;
+  font-weight: bold;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-Bold.woff2.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-Bold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-Bold.woff2.woff")
+      format("woff"),
+    /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Peyda/PeydaWeb-Bold.woff2.ttf")
+      format("truetype"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+/////////////**peyda normal end**////////////
+
+/////////////**noora normal start**////////////
+@font-face {
+  font-family: "noora";
+  font-style: normal;
+  font-weight: 200;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Noora/Noora Fa-En 01 ExtraLight.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Noora/Noora Fa-En 01 ExtraLight.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Noora/Noora Fa-En 01 ExtraLight.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Noora/Noora Fa-En 01 ExtraLight.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "noora";
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Noora/Noora Fa-En 02 Light.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Noora/Noora Fa-En 02 Light.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Noora/Noora Fa-En 02 Light.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Noora/Noora Fa-En 02 Light.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "noora";
+  font-style: normal;
+  font-weight: 800;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Noora/Noora Fa-En 05 ExtraBold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Noora/Noora Fa-En 05 ExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Noora/Noora Fa-En 05 ExtraBold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Noora/Noora Fa-En 05 ExtraBold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "noora";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Noora/Noora Fa-En 06 Black.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Noora/Noora Fa-En 06 Black.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Noora/Noora Fa-En 06 Black.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Noora/Noora Fa-En 06 Black.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "noora";
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Noora/Noora Fa-En 03 Regular.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Noora/Noora Fa-En 03 Regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Noora/Noora Fa-En 03 Regular.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Noora/Noora Fa-En 03 Regular.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "noora";
+  font-style: normal;
+  font-weight: bold;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Noora/Noora Fa-En 04 Bold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Noora/Noora Fa-En 04 Bold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Noora/Noora Fa-En 04 Bold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Noora/Noora Fa-En 04 Bold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+/////////////**noora normal end**////////////
+
+/////////////**ravi normal start**////////////
+
+@font-face {
+  font-family: "ravi";
+  font-style: normal;
+  font-weight: 100;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 01 Thin.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 01 Thin.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 01 Thin.ttf")
+      format("truetype"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 01 Thin.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "ravi";
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 02 Light.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 02 Light.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 02 Light.ttf")
+      format("truetype"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 02 Light.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "ravi";
+  font-style: normal;
+  font-weight: 500;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 04 Medium.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 04 Medium.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 04 Medium.ttf")
+      format("truetype"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 04 Medium.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "ravi";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 05 SemiBold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 05 SemiBold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 05 SemiBold.ttf")
+      format("truetype"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 05 SemiBold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "ravi";
+  font-style: normal;
+  font-weight: 800;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 07 ExtraBold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 07 ExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 07 ExtraBold.ttf")
+      format("truetype"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 07 ExtraBold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "ravi";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 08 Black.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 08 Black.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 08 Black.ttf")
+      format("truetype"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 08 Black.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "ravi";
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 03 Regular.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 03 Regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 03 Regular.ttf")
+      format("truetype"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 03 Regular.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}
+@font-face {
+  font-family: "ravi";
+  font-style: normal;
+  font-weight: bold;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 06 Bold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 06 Bold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 06 Bold.ttf")
+      format("truetype"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Ravi/Ravi FA 06 Bold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+}

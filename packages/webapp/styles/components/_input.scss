@@ -1,0 +1,79 @@
+.c-input {
+  width: 100%;
+  // background-color: $tiramisoo;
+  // color: $pollution;
+  border-radius: 4px;
+  padding: 10px;
+  // @extend .u-fontNormal-r;
+}
+
+.c-input-text-area {
+  resize: none;
+  height: 168px;
+  font-size: 12px;
+  color: $pollution;
+}
+
+.c-input-img {
+  position: absolute;
+  right: 10px;
+  top: 20px;
+}
+
+.c-input-file-label {
+  display: table;
+}
+
+.c-input-price-unit {
+  position: absolute;
+  left: 10px;
+  top: 16px;
+}
+
+::placeholder {
+  color: $cement;
+  font-size: 13px;
+}
+
+.MuiAutocomplete-option[data-focus="true"] {
+  background-color: rgba(0, 80, 255, 0.04) !important;
+}
+.MuiAutocomplete-option[aria-selected="true"] {
+  background-color: rgba(0, 80, 255, 0.08) !important;
+}
+.MuiAutocomplete-endAdornment {
+  right: unset !important;
+  left: 9px !important;
+}
+
+.MuiSelect-select.MuiSelect-select {
+  padding-right: 8px !important;
+  padding-left: 16px !important;
+}
+.MuiTablePagination-actions {
+  margin-left: 0 !important;
+  margin-right: 15px;
+}
+.MuiTablePagination-spacer {
+  display: none;
+}
+.MuiTablePagination-toolbar {
+  padding-left: 12px !important;
+  > p:nth-child(2) {
+    font-size: 12px;
+    margin-right: 12px !important;
+  }
+
+  > p:nth-child(4) {
+    font-size: 12px;
+    flex-grow: 1;
+    text-align: left;
+  }
+}
+.MuiTablePagination-selectRoot {
+  margin-right: 0 !important;
+}
+.MuiFormHelperText-root {
+  margin: 3px !important;
+  font-size: 12px !important;
+}

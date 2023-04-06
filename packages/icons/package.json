@@ -1,0 +1,27 @@
+{
+  "name": "@saas/icons",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "komeilmehranfar",
+  "license": "ISC",
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "@saas/utils": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.35.0",
+    "eslint-config-next": "^13.2.3",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "prettier": "^2.8.4"
+  }
+}

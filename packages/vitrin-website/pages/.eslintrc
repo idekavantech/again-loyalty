@@ -1,0 +1,7 @@
+{
+  "rules": {
+    "import/no-unused-modules": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "@next/next/no-img-element": "off"
+  }
+}

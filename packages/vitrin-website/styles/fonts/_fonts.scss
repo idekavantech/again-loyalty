@@ -1,0 +1,305 @@
+/////////////**dana pro normal start**/////////////
+@font-face {
+  font-family: "dana";
+  font-style: normal;
+  font-weight: 100;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-thin.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-thin.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-thin.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-thin.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-display: swap;
+}
+@font-face {
+  font-family: "dana";
+  font-style: normal;
+  font-weight: 200;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extralight.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extralight.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extralight.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extralight.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-display: swap;
+}
+@font-face {
+  font-family: "dana";
+  font-style: normal;
+  font-weight: 300;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-light.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-light.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-light.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-light.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-display: swap;
+}
+@font-face {
+  font-family: "dana";
+  font-style: normal;
+  font-weight: 500;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-medium.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-medium.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-medium.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-medium.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-display: swap;
+}
+@font-face {
+  font-family: "dana";
+  font-style: normal;
+  font-weight: 600;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-demibold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-demibold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-demibold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-demibold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-display: swap;
+}
+@font-face {
+  font-family: "dana";
+  font-style: normal;
+  font-weight: 750;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-ultrabold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-ultrabold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-ultrabold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-ultrabold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-display: swap;
+}
+@font-face {
+  font-family: "dana";
+  font-style: normal;
+  font-weight: 800;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extrabold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extrabold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extrabold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extrabold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-display: swap;
+}
+@font-face {
+  font-family: "dana";
+  font-style: normal;
+  font-weight: 900;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-black.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-black.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-black.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-black.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-display: swap;
+}
+@font-face {
+  font-family: "dana";
+  font-style: normal;
+  font-weight: normal;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-regular.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-regular.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-regular.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-display: swap;
+}
+@font-face {
+  font-family: "dana";
+  font-style: normal;
+  font-weight: bold;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-bold.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-bold.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-bold.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-bold.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-display: swap;
+}
+/////////////**dana normal end**/////////////
+
+/////////////**dana italic start**/////////////
+@font-face {
+  font-family: "dana";
+  font-style: italic;
+  font-weight: 100;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-thinitalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-thinitalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-thinitalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-thinitalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-display: swap;
+}
+@font-face {
+  font-family: "dana";
+  font-style: italic;
+  font-weight: 200;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extralightitalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extralightitalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extralightitalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extralightitalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-display: swap;
+}
+@font-face {
+  font-family: "dana";
+  font-style: italic;
+  font-weight: 300;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-lightitalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-lightitalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-lightitalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-lightitalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-display: swap;
+}
+@font-face {
+  font-family: "dana";
+  font-style: italic;
+  font-weight: 500;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-mediumitalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-mediumitalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-mediumitalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-mediumitalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-display: swap;
+}
+@font-face {
+  font-family: "dana";
+  font-style: italic;
+  font-weight: 600;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-demibolditalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-demibolditalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-demibolditalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-demibolditalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-display: swap;
+}
+@font-face {
+  font-family: "dana";
+  font-style: italic;
+  font-weight: 750;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-ultrabolditalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-ultrabolditalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-ultrabolditalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-ultrabolditalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-display: swap;
+}
+@font-face {
+  font-family: "dana";
+  font-style: italic;
+  font-weight: 800;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extrabolditalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extrabolditalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extrabolditalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-extrabolditalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-display: swap;
+}
+@font-face {
+  font-family: "dana";
+  font-style: italic;
+  font-weight: 900;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-blackitalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-blackitalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-blackitalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-blackitalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-display: swap;
+}
+@font-face {
+  font-family: "dana";
+  font-style: italic;
+  font-weight: normal;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-regularitalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-regularitalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-regularitalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-regularitalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-display: swap;
+}
+@font-face {
+  font-family: "dana";
+  font-style: italic;
+  font-weight: bold;
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-bolditalic.eot");
+  src: url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-bolditalic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-8 */
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-bolditalic.woff2")
+      format("woff2"),
+    /* FF39+,Chrome36+, Opera24+*/
+      url("https://hs3-cf.behtarino.com/static/fonts/Dana/dana-bolditalic.woff")
+      format("woff"); /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  font-display: swap;
+}
+/////////////**dana italic end**/////////////
