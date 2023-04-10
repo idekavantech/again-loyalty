@@ -98,7 +98,7 @@ export function AdminLayout({
   const { has_admin_panel_access = true } = business?.ui_access_config || {};
   const [ordersCountSelected, setOrdersCountSelected] = useState("");
   const isSocketInitialized = useRef(false);
-  const isTrial = basePlugin.status === PLUGIN_TRIAL_STATUS;
+  const isTrial = false;
   const nextJourney =
     journeyData?.vitrin_journey_state?.automation_data?.next_journey;
   const trialDays = 14;

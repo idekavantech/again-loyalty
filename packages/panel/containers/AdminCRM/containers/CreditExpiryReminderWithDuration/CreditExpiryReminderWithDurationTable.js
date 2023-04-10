@@ -138,7 +138,7 @@ function CreditExpiryReminderWithDurationTable(props) {
     {
       id: 0,
       value: ["action", "expiration_in_days"],
-      align: "right",
+      align: "left",
       width: 180,
       bodyFormatter: ExpirationInDaysFormatter,
       headerName: "Interval",
@@ -147,7 +147,7 @@ function CreditExpiryReminderWithDurationTable(props) {
     {
       id: 1,
       value: ["periodic_task", "crontab"],
-      align: "right",
+      align: "center",
       width: 160,
       bodyFormatter: crontabFormatter,
       headerName: "Send time",
@@ -156,7 +156,7 @@ function CreditExpiryReminderWithDurationTable(props) {
     {
       id: 2,
       value: ["enabled"],
-      align: "right",
+      align: "center",
       width: 140,
       bodyFormatter: enabledStatusFormatter,
       headerName: "Confirmation status",
@@ -165,7 +165,7 @@ function CreditExpiryReminderWithDurationTable(props) {
     {
       id: 3,
       value: [],
-      align: "right",
+      align: "center",
       width: 30,
       bodyFormatter: infoFormatter,
       headerName: "Description",
@@ -174,7 +174,7 @@ function CreditExpiryReminderWithDurationTable(props) {
     {
       id: 4,
       value: ["id"],
-      align: "right",
+      align: "center",
       width: 30,
       bodyFormatter: editFormatter,
       headerName: "Edit",
@@ -183,7 +183,7 @@ function CreditExpiryReminderWithDurationTable(props) {
     {
       id: 0,
       value: [],
-      align: "right",
+      align: "center",
       width: 130,
       bodyFormatter: switchFormatter,
       headerName: "active/Inactive",

@@ -1,4 +1,4 @@
-import fs, { unlink } from "fs";
+import fs from "fs";
 import path from "path";
 import translate from "translate-google";
 
@@ -11,6 +11,7 @@ const generateChunk = (data = [], chunkSize = 10) => {
   for (let i = 0; i < Math.ceil(data.length / chunkSize); i++) {
     res.push(new Array(chunkSize));
   }
+
 
   for (let i = 0; i < data.length; i++) {
     const x = i % chunkSize;

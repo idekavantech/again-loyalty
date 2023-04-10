@@ -70,19 +70,27 @@ const lightTheme = (business, isAdminPanel) =>
       divider: tiramisoo,
     },
     overrides: {
-      MuiTableBody:{
-        root:{
-          direction:"ltr"
-        }
+      MuiTableBody: {
+        root: {
+          direction: "ltr",
+          textAlign:"left"
+        },
       },
-      MuiTablePagination:{
-        root:{
-          direction:"rtl"
-        }
+      MuiTableHead: {
+        root: {
+          direction: "ltr",
+          textAlign:"left"
+        },
+      },
+      MuiTablePagination: {
+        root: {
+          direction: "rtl",
+          textAlign:"left"
+        },
       },
       MuiTableRow: {
         root: {
-          direction:"ltr",
+          direction: "ltr",
           "&.Mui-selected": {
             backgroundColor: hexToRGBA(process.env.NEXT_PUBLIC_ADMIN_THEME_COLOR, 0.08),
           },
@@ -94,8 +102,8 @@ const lightTheme = (business, isAdminPanel) =>
         },
       },
       MuiPaper: {
-        root:{
-          direction:"ltr"
+        root: {
+          direction: "ltr",
         },
         elevation0: {
           boxShadow: "0px 0px 20px rgba(204, 212, 215, 0.2)",
@@ -201,14 +209,16 @@ const lightTheme = (business, isAdminPanel) =>
         root: {
           borderBottom: "unset",
           color: night,
+          direction:"ltr",
+          textAlign:"left"
         },
         sizeSmall: {
           padding: "6px 16px 6px 24px",
         },
       },
       MuiSelect: {
-        icon:{
-          left:"calc(100% - 30px)"
+        icon: {
+          left: "calc(100% - 30px)",
         },
         root: {
           direction: "ltr",
