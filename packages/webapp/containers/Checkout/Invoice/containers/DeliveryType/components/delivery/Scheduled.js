@@ -51,7 +51,7 @@ function Scheduled({
               return (
                 <div className="p-4" style={{ minWidth: "fit-content" }}>
                   <div style={{ color: night }} className="u-fontNormal mb-3">
-                    {date.date === _today.format("jYYYY/jM/jD")
+                    {date.date === _today.format("YYYY/jM/jD")
                       ? "امروز"
                       : getWeekDay(date.weekDay)}
                     ،{"  "}

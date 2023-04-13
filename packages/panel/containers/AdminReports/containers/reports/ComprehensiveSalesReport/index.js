@@ -16,7 +16,7 @@ import { generateCSVFile } from "@saas/utils/helpers/generateCSVFile";
 
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 
-import jMoment from "moment-jalaali";
+import jMoment from "moment";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import Chip from "@material-ui/core/Chip";
@@ -57,8 +57,8 @@ import CustomCalendar from "@saas/components/CustomCalendar";
 import { defaultFromDate, defaultToDate } from "@saas/utils/constants/date";
 import { formatDateObjectToNormal } from "../../../../../utils/helpers";
 
-jMoment.locale("fa");
-jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 
 const sortingOptions = [
   { id: 0, text: "The highest amount of sale", keyword: HIGHEST_SALES_AMOUNT },
@@ -282,13 +282,13 @@ export function AdminComprehensiveSalesReportReport({
             from_date: persianToEnglishNumber(
               jMoment(
                 formatDateObjectToNormal(selectedDayRange.from),
-                "jYYYY-jM-jD"
+                "YYYY-jM-jD"
               ).format("YYYY-M-D")
             ),
             to_date: persianToEnglishNumber(
               jMoment(
                 formatDateObjectToNormal(selectedDayRange.to),
-                "jYYYY-jM-jD"
+                "YYYY-jM-jD"
               ).format("YYYY-M-D")
             ),
           });
@@ -303,13 +303,13 @@ export function AdminComprehensiveSalesReportReport({
           from_date: persianToEnglishNumber(
             jMoment(
               formatDateObjectToNormal(selectedDayRange.from),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           ),
           to_date: persianToEnglishNumber(
             jMoment(
               formatDateObjectToNormal(selectedDayRange.to),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           ),
         });
@@ -367,13 +367,13 @@ export function AdminComprehensiveSalesReportReport({
             from_date: persianToEnglishNumber(
               jMoment(
                 formatDateObjectToNormal(selectedDayRange.from),
-                "jYYYY-jM-jD"
+                "YYYY-jM-jD"
               ).format("YYYY-M-D")
             ),
             to_date: persianToEnglishNumber(
               jMoment(
                 formatDateObjectToNormal(selectedDayRange.to),
-                "jYYYY-jM-jD"
+                "YYYY-jM-jD"
               ).format("YYYY-M-D")
             ),
           });
@@ -389,13 +389,13 @@ export function AdminComprehensiveSalesReportReport({
           from_date: persianToEnglishNumber(
             jMoment(
               formatDateObjectToNormal(selectedDayRange.from),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           ),
           to_date: persianToEnglishNumber(
             jMoment(
               formatDateObjectToNormal(selectedDayRange.to),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           ),
         });

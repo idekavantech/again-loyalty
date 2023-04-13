@@ -18,7 +18,7 @@ import Head from "next/head";
 import AdminBreadCrumb from "containers/AdminBreadCrumb";
 import Paper from "@material-ui/core/Paper";
 
-import moment from "moment-jalaali";
+import moment from "moment";
 import { persianToEnglishNumber } from "@saas/utils/helpers/persianToEnglishNumber";
 import { downloaderRequest } from "@saas/utils/helpers/downloaderRequest";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
@@ -58,8 +58,8 @@ import Popover from "@material-ui/core/Popover";
 import Button from "@material-ui/core/Button";
 import CloseIcon from "@material-ui/icons/Close";
 
-moment.locale("fa");
-moment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 
 export function AdminProductSalesReport({
   isLoading,
@@ -148,22 +148,22 @@ export function AdminProductSalesReport({
             .join("&")}&from_date=${persianToEnglishNumber(
             moment(
               formatDateObjectToNormal(selectedDayRange.from),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           )}&to_date=${persianToEnglishNumber(
             moment(
               formatDateObjectToNormal(selectedDayRange.to),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           )}&from_delivery_date=${persianToEnglishNumber(
             moment(
               formatDateObjectToNormal(selectedDeliveryDayRange.from),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           )}&to_delivery_date=${persianToEnglishNumber(
             moment(
               formatDateObjectToNormal(selectedDeliveryDayRange.to),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           )}`
         : `${BASE_URL_V2}resources/reports/sold-by-count/excel/?${selectedSalesChannel
@@ -173,22 +173,22 @@ export function AdminProductSalesReport({
             .join("&")}&from_date=${persianToEnglishNumber(
             moment(
               formatDateObjectToNormal(selectedDayRange.from),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           )}&to_date=${persianToEnglishNumber(
             moment(
               formatDateObjectToNormal(selectedDayRange.to),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           )}&from_delivery_date=${persianToEnglishNumber(
             moment(
               formatDateObjectToNormal(selectedDeliveryDayRange.from),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           )}&to_delivery_date=${persianToEnglishNumber(
             moment(
               formatDateObjectToNormal(selectedDeliveryDayRange.to),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           )}`,
 

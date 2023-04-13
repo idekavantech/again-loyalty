@@ -18,7 +18,7 @@ import {
   CASH_DRAWER_TYPE_FINISHED,
   CASH_DRAWER_TYPE_OPEN,
 } from "containers/AdminPOS/constants";
-import moment from "moment-jalaali";
+import moment from "moment";
 import DrawerHistoryModal from "containers/AdminPOS/components/DrawerHistoryModal";
 import { useResponsive } from "@saas/utils/hooks/useResponsive";
 
@@ -161,7 +161,7 @@ function CashDrawer({
                 <div>
                   {englishNumberToPersianNumber(
                     moment(device?.active_drawer?.opened_at).format(
-                      "jYYYY/jMM/jDD"
+                      "YYYY/MM/DD"
                     )
                   )}
                 </div>

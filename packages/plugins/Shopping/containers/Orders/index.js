@@ -9,7 +9,7 @@ import React, {memo, useEffect, useState} from "react";
 import {connect} from "react-redux";
 import {createStructuredSelector} from "reselect";
 import Paper from "@material-ui/core/Paper";
-import moment from "moment-jalaali";
+import moment from "moment";
 import Link from "next/link";
 import {compose} from "redux";
 import {
@@ -444,7 +444,7 @@ export function Orders({
                                                         className="py-2"
                                                     >
                                                         {englishNumberToPersianNumber(
-                                                            orderTime.format("jYYYY/jMM/jDD")
+                                                            orderTime.format("YYYY/MM/DD")
                                                         )}
                                                     </TableCell>
                                                     {isSuper ? (
@@ -806,7 +806,7 @@ export function Orders({
                                                 }}
                                             >
                                                 {englishNumberToPersianNumber(
-                                                    orderTime.format("jYYYY/jMM/jDD")
+                                                    orderTime.format("YYYY/MM/DD")
                                                 )}
                                             </div>
                                         </div>

@@ -41,7 +41,7 @@ import { downloaderRequest } from "@saas/utils/helpers/downloaderRequest";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 
 import { useRouter } from "next/router";
-import moment from "moment-jalaali";
+import moment from "moment";
 import MaterialSelect from "@saas/components/Select/MaterialSelect";
 import TablePagination from "@material-ui/core/TablePagination";
 import { paymentStatusOptions, paymentTypeOptions } from "store/constants";
@@ -81,8 +81,8 @@ import { useResponsive } from "@saas/utils/hooks/useResponsive";
 import { formatDateObjectToNormal } from "../../../../utils/helpers";
 import CustomCalendar from "@saas/components/CustomCalendar";
 
-moment.locale("fa");
-moment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 const PAYMENT_TYPE_QUERY_KEY = "payment_type";
 const PAYMENT_STATE_QUERY_KEY = "paid_status";
 const REMINDING_QUERY_KEY = "reminding";
@@ -189,13 +189,13 @@ export function AdminCouriersRecords({
     [PAYMENT_TYPE_QUERY_KEY]: (value) => `payment type: ${value}`,
     [PAYMENT_STATE_QUERY_KEY]: (value) => `Payment status: ${value}`,
     [FROM_DATE_QUERY_KEY]: (value) =>
-      `Date of registration from${moment(value).format("jYYYY/jMM/jDD")}`,
+      `Date of registration from${moment(value).format("YYYY/MM/DD")}`,
     [TO_DATE_QUERY_KEY]: (value) =>
-      `Registration date${moment(value).format("jYYYY/jMM/jDD")}`,
+      `Registration date${moment(value).format("YYYY/MM/DD")}`,
     [DELIVERY_FROM_DATE]: (value) =>
-      `Date of submission from${moment(value).format("jYYYY/jMM/jDD")}`,
+      `Date of submission from${moment(value).format("YYYY/MM/DD")}`,
     [DELIVERY_TO_DATE]: (value) =>
-      `Post date up${moment(value).format("jYYYY/jMM/jDD")}`,
+      `Post date up${moment(value).format("YYYY/MM/DD")}`,
     [DELIVERY_COMPANY_QUERY_KEY]: (value) => value,
     [COURIER_ID_KEY]: (value) => value,
     [START_TIME]: (value) => `The time of submission from${value}`,
@@ -275,14 +275,14 @@ export function AdminCouriersRecords({
       ? moment(router.query.from_delivery, "YYYY-MM-DD")
       : moment().add(-6, "day");
     const defaultFromDate = {
-      year: defaultMomentFromDate.jYear(),
-      month: defaultMomentFromDate.jMonth() + 1,
-      day: defaultMomentFromDate.jDate(),
+      year: defaultMomentFromDate.year(),
+      month: defaultMomentFromDate.month() + 1,
+      day: defaultMomentFromDate.date(),
     };
     const defaultToDate = {
-      year: defaultMomentToDate.jYear(),
-      month: defaultMomentToDate.jMonth() + 1,
-      day: defaultMomentToDate.jDate(),
+      year: defaultMomentToDate.year(),
+      month: defaultMomentToDate.month() + 1,
+      day: defaultMomentToDate.date(),
     };
     setSelectedDeliveryRange({
       from: defaultFromDate,
@@ -402,7 +402,7 @@ export function AdminCouriersRecords({
                               formatDateObjectToNormal(
                                 selectedDeliveryRange.from
                               ),
-                              "jYYYY-jM-jD"
+                              "YYYY-jM-jD"
                             ).format("YYYY-M-D")
                           );
                         else delete query[DELIVERY_FROM_DATE];
@@ -412,7 +412,7 @@ export function AdminCouriersRecords({
                               formatDateObjectToNormal(
                                 selectedDeliveryRange.to
                               ),
-                              "jYYYY-jM-jD"
+                              "YYYY-jM-jD"
                             ).format("YYYY-M-D")
                           );
                         else delete query[DELIVERY_TO_DATE];
@@ -736,7 +736,7 @@ export function AdminCouriersRecords({
                       </TableCell>
                       <TableCell align="center">
                         {moment(order?.first_delivery_time).format(
-                          "jYYYY/jMM/jDD | HH:mm"
+                          "YYYY/MM/DD | HH:mm"
                         )}
                       </TableCell>
                       <TableCell align="center">

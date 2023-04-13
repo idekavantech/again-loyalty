@@ -11,12 +11,12 @@ import Head from "next/head";
 import AdminBreadCrumb from "containers/AdminBreadCrumb";
 import Paper from "@material-ui/core/Paper";
 import DateRangePickerWrapper from "@saas/components/DateRangePickerWrapper";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { priceFormatter } from "@saas/utils/helpers/priceFormatter";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 
-moment.locale("fa");
-moment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import Checkbox from "@material-ui/core/Checkbox";
@@ -288,7 +288,7 @@ export function AdminDiscountCodeReport({ isLoading, isSuper }) {
                 }}
                 focused={focused}
                 numberOfMonths={!minWidth768 ? 1 : 2}
-                renderMonthText={(month) => moment(month).format("jMMMM jYYYY")}
+                renderMonthText={(month) => moment(month).format("MMMM YYYY")}
                 renderDayContents={(day) => moment(day).format("jD")}
                 hasSubmitButton
                 onSubmit={submitDate}

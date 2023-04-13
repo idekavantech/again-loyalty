@@ -41,7 +41,7 @@ import IconButton from "@material-ui/core/IconButton";
 
 import { makeSelectLoading } from "@saas/stores/global/selectors";
 import Skeleton from "@material-ui/lab/Skeleton";
-import moment from "moment-jalaali";
+import moment from "moment";
 import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
 import Checkbox from "@material-ui/core/Checkbox";
@@ -168,14 +168,14 @@ function CashDrawerAnalytics({
       ? moment(router.query.from_date, "YYYY-MM-DD")
       : moment().add(-6, "day");
     const defaultFromDate = {
-      year: defaultMomentFromDate.jYear(),
-      month: defaultMomentFromDate.jMonth() + 1,
-      day: defaultMomentFromDate.jDate(),
+      year: defaultMomentFromDate.year(),
+      month: defaultMomentFromDate.month() + 1,
+      day: defaultMomentFromDate.date(),
     };
     const defaultToDate = {
-      year: defaultMomentToDate.jYear(),
-      month: defaultMomentToDate.jMonth() + 1,
-      day: defaultMomentToDate.jDate(),
+      year: defaultMomentToDate.year(),
+      month: defaultMomentToDate.month() + 1,
+      day: defaultMomentToDate.date(),
     };
     setSelectedDayRange({
       from: defaultFromDate,
@@ -297,7 +297,7 @@ function CashDrawerAnalytics({
                           query.from_date = persianToEnglishNumber(
                             moment(
                               formatDateObjectToNormal(selectedDayRange.from),
-                              "jYYYY-jM-jD"
+                              "YYYY-jM-jD"
                             ).format("YYYY-M-D")
                           );
                         else delete query.from_date;
@@ -305,7 +305,7 @@ function CashDrawerAnalytics({
                           query.to_date = persianToEnglishNumber(
                             moment(
                               formatDateObjectToNormal(selectedDayRange.to),
-                              "jYYYY-jM-jD"
+                              "YYYY-jM-jD"
                             ).format("YYYY-M-D")
                           );
                         else delete query.to_date;
@@ -557,9 +557,9 @@ function CashDrawerAnalytics({
                   }}
                   label={
                     key === "from_date"
-                      ? `From${moment(value).format("jYYYY/jM/jD")}`
+                      ? `From${moment(value).format("YYYY/jM/jD")}`
                       : key === "to_date"
-                      ? `until the${moment(value).format("jYYYY/jM/jD")}`
+                      ? `until the${moment(value).format("YYYY/jM/jD")}`
                       : key === "business"
                       ? Array.isArray(value)
                         ? ` Branch${englishNumberToPersianNumber(value.length)}`
@@ -662,9 +662,9 @@ function CashDrawerAnalytics({
                           ) : (
                             <div style={{ width: 150 }}>
                               {englishNumberToPersianNumber(
-                                `${createdAt.jDate()} ${getMonthName(
-                                  createdAt.jMonth() + 1
-                                )} ${createdAt.jYear()} - ${createdAt.format(
+                                `${createdAt.date()} ${getMonthName(
+                                  createdAt.month() + 1
+                                )} ${createdAt.year()} - ${createdAt.format(
                                   "HH:mm"
                                 )}`
                               )}
@@ -678,9 +678,9 @@ function CashDrawerAnalytics({
                             <div style={{ width: 150 }}>
                               {closed_at
                                 ? englishNumberToPersianNumber(
-                                    `${finishedAt.jDate()} ${getMonthName(
-                                      finishedAt.jMonth() + 1
-                                    )} ${finishedAt.jYear()} - ${finishedAt.format(
+                                    `${finishedAt.date()} ${getMonthName(
+                                      finishedAt.month() + 1
+                                    )} ${finishedAt.year()} - ${finishedAt.format(
                                       "HH:mm"
                                     )}`
                                   )

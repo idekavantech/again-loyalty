@@ -1,6 +1,6 @@
 import React from "react";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
-import moment from "moment-jalaali";
+import moment from "moment";
 import Paper from "@material-ui/core/Paper";
 import TableBody from "@material-ui/core/TableBody";
 import TableContainer from "@material-ui/core/TableContainer";
@@ -136,7 +136,7 @@ function CRMRExpiryReminderTable( props ) {
                     }}
                   >
                     {englishNumberToPersianNumber(
-                      moment(item?.created_at).format("jYYYY/jMM/jDD")
+                      moment(item?.created_at).format("YYYY/MM/DD")
                     )}
                   </div>
                   <div

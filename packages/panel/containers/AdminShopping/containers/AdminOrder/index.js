@@ -24,7 +24,7 @@ import { createStructuredSelector } from "reselect";
 import { connect, useDispatch } from "react-redux";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
-import moment from "moment-jalaali";
+import moment from "moment";
 import dynamic from "next/dynamic";
 import EditRoundedIcon from "@material-ui/icons/EditRounded";
 import AddRoundedIcon from "@material-ui/icons/AddRounded";
@@ -885,7 +885,7 @@ export function AdminOrder({
                   style={{ color: smoke, bottom: -30 }}
                 >
                   {englishNumberToPersianNumber(
-                    orderTime.format("jYYYY/jMM/jDD")
+                    orderTime.format("YYYY/MM/DD")
                   )}
                   <span className="mx-1">|</span>
                   {englishNumberToPersianNumber(
@@ -966,7 +966,7 @@ export function AdminOrder({
                 style={{ color: smoke, fontSize: 12 }}
               >
                 {englishNumberToPersianNumber(
-                  orderTime.format("jYYYY/jMM/jDD")
+                  orderTime.format("YYYY/MM/DD")
                 )}
                 <span className="mx-1">|</span>
                 {englishNumberToPersianNumber(
@@ -2739,7 +2739,7 @@ export function AdminOrder({
                         }}
                         numberOfMonths={1}
                         renderMonthText={(month) =>
-                          moment(month).format("jMMMM jYYYY")
+                          moment(month).format("MMMM YYYY")
                         }
                         renderDayContents={(day) => moment(day).format("jD")}
                       />
@@ -2762,7 +2762,7 @@ export function AdminOrder({
                           label="shipping time"
                           minTime={new Date(0, 0, 0, 9)}
                           labelFunc={(date) =>
-                            date ? date.format("jYYYY/jMM/jDD hh:mm:ss a") : ""
+                            date ? date.format("YYYY/MM/DD hh:mm:ss a") : ""
                           }
                           value={absoluteDeliveryTime}
                           onChange={(date) => setAbsoluteDeliveryTime(date)}
@@ -3725,7 +3725,7 @@ export function AdminOrder({
                           </span>
                           <span style={{ fontSize: 12 }}>
                             {englishNumberToPersianNumber(
-                              moment(note.timestamp).format("jYYYY/jMM/jDD")
+                              moment(note.timestamp).format("YYYY/MM/DD")
                             )}
                           </span>
                         </p>
@@ -3843,7 +3843,7 @@ export function AdminOrder({
                                 new Date(
                                   orderCRM?.orders_report?.first_date * 1000
                                 )
-                              ).format("jYYYY/jMM/jDD")
+                              ).format("YYYY/MM/DD")
                             )}
                           </span>
                         </div>
@@ -3887,7 +3887,7 @@ export function AdminOrder({
                                 new Date(
                                   orderCRM?.orders_report?.last_date * 1000
                                 )
-                              ).format("jYYYY/jMM/jDD")
+                              ).format("YYYY/MM/DD")
                             )
                           : "-"}
                       </div>

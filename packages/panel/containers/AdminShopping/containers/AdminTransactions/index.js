@@ -44,7 +44,7 @@ import IconButton from "@material-ui/core/IconButton";
 
 import { makeSelectLoading } from "@saas/stores/global/selectors";
 import Skeleton from "@material-ui/lab/Skeleton";
-import moment from "moment-jalaali";
+import moment from "moment";
 import KeyboardArrowLeft from "@material-ui/icons/KeyboardArrowLeft";
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
 import OrderTransactionsDrawer from "containers/AdminShopping/containers/AdminTransactions/OrderTransactionsDrawer";
@@ -65,8 +65,8 @@ import { formatDateObjectToNormal } from "../../../../utils/helpers";
 import CustomCalendar from "@saas/components/CustomCalendar";
 import TableNoResultMessage from "../../../../components/TableNoResultMessage";
 
-moment.locale("fa");
-moment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 
 const headCells = [
   {
@@ -176,14 +176,14 @@ function AdminTransactions({
       ? moment(router.query.from_date, "YYYY-MM-DD")
       : moment().add(-6, "day");
     const defaultFromDate = {
-      year: defaultMomentFromDate.jYear(),
-      month: defaultMomentFromDate.jMonth() + 1,
-      day: defaultMomentFromDate.jDate(),
+      year: defaultMomentFromDate.year(),
+      month: defaultMomentFromDate.month() + 1,
+      day: defaultMomentFromDate.date(),
     };
     const defaultToDate = {
-      year: defaultMomentToDate.jYear(),
-      month: defaultMomentToDate.jMonth() + 1,
-      day: defaultMomentToDate.jDate(),
+      year: defaultMomentToDate.year(),
+      month: defaultMomentToDate.month() + 1,
+      day: defaultMomentToDate.date(),
     };
     setSelectedDayRange({
       from: defaultFromDate,
@@ -455,7 +455,7 @@ function AdminTransactions({
                           query.from_date = persianToEnglishNumber(
                             moment(
                               formatDateObjectToNormal(selectedDayRange.from),
-                              "jYYYY-jM-jD"
+                              "YYYY-jM-jD"
                             ).format("YYYY-M-D")
                           );
                         else delete query.from_date;
@@ -463,7 +463,7 @@ function AdminTransactions({
                           query.to_date = persianToEnglishNumber(
                             moment(
                               formatDateObjectToNormal(selectedDayRange.to),
-                              "jYYYY-jM-jD"
+                              "YYYY-jM-jD"
                             ).format("YYYY-M-D")
                           );
                         else delete query.to_date;
@@ -754,9 +754,9 @@ function AdminTransactions({
                     key === "payment_type"
                       ? paymentTypeOptions.find((o) => o.keyword === value).text
                       : key === "from_date"
-                      ? `From${moment(value).format("jYYYY/jM/jD")}`
+                      ? `From${moment(value).format("YYYY/jM/jD")}`
                       : key === "to_date"
-                      ? `until the${moment(value).format("jYYYY/jM/jD")}`
+                      ? `until the${moment(value).format("YYYY/jM/jD")}`
                       : key === "business"
                       ? Array.isArray(value)
                         ? ` Branch${englishNumberToPersianNumber(value.length)}`
@@ -861,9 +861,9 @@ function AdminTransactions({
                             <Skeleton style={{ width: 150 }} />
                           ) : (
                             englishNumberToPersianNumber(
-                              `${createdAt.jDate()} ${getMonthName(
-                                createdAt.jMonth() + 1
-                              )} ${createdAt.jYear()} - ${`0${date.getHours()}`.slice(
+                              `${createdAt.date()} ${getMonthName(
+                                createdAt.month() + 1
+                              )} ${createdAt.year()} - ${`0${date.getHours()}`.slice(
                                 -2
                               )}:${`0${date.getMinutes()}`.slice(-2)}`
                             )

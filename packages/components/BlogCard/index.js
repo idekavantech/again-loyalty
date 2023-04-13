@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 import { useResponsive } from "@saas/utils/hooks/useResponsive";
 
@@ -71,7 +71,7 @@ export default function BlogCard({ blog }) {
           <time>
             {englishNumberToPersianNumber(
               moment(blog?._updated_at || blog?._created_at).format(
-                "jYYYY/jMM/jDD"
+                "YYYY/MM/DD"
               )
             )}
           </time>

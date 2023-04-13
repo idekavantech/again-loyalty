@@ -22,7 +22,7 @@ import { useRouter } from "next/router";
 import { priceFormatter } from "utils/helpers/priceFormatter";
 import { setSnackBarMessage } from "stores/global/actions";
 import { makeSelectUser } from "stores/user/selector";
-import moment from "moment-jalaali";
+import moment from "moment";
 
 const PaymentPage = ({
   user,
@@ -90,9 +90,9 @@ const PaymentPage = ({
     } else {
       date.setMonth(date.getMonth() + 3);
     }
-    let day = moment(date).format("jDD");
-    let month = moment(date).format("jMMMM");
-    let year = moment(date).format("jYYYY");
+    let day = moment(date).format("DD");
+    let month = moment(date).format("MMMM");
+    let year = moment(date).format("YYYY");
     setPackageDate({ day, month, year });
     setTaxAmount(
       time == "oneYear"

@@ -15,7 +15,7 @@ import TableRow from "@material-ui/core/TableRow";
 import { Skeleton } from "@material-ui/lab";
 import { Button, Paper } from "@material-ui/core";
 import KeyboardArrowLeftIcon from "@material-ui/icons/KeyboardArrowLeft";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 import { deleteCrmLevel, getCrmLevels } from "store/actions";
 import { makeSelectCrmLevels } from "store/selectors";
@@ -224,7 +224,7 @@ function CRMLevels({ adminUrlPrefix, _getCrmLevels, allCrmLevels, isLoading  ,_d
                     }}
                   >
                     {englishNumberToPersianNumber(
-                      moment(level?._created_at).format("jYYYY/jMM/jDD")
+                      moment(level?._created_at).format("YYYY/MM/DD")
                     )}
                   </TableCell>
                   <TableCell

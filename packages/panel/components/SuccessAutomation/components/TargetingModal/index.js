@@ -24,7 +24,7 @@ import MenuList from "@material-ui/core/MenuList";
 import CheckCircleOutlineIcon from "@material-ui/icons/CheckCircleOutline";
 import Input from "@saas/components/Input";
 import DateRangePickerWrapper from "@saas/components/DateRangePickerWrapper";
-import moment from "moment-jalaali";
+import moment from "moment";
 import EditRoundedIcon from "@mui/icons-material/EditRounded";
 import Progress from "components/Progress";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
@@ -385,7 +385,7 @@ const TargetingModal = ({
                   if (endDate) setToDate(endDate);
                 }}
                 ref={datePickerRef}
-                renderMonthText={(month) => moment(month).format("jMMMM jYYYY")}
+                renderMonthText={(month) => moment(month).format("MMMM YYYY")}
                 renderDayContents={(day) => moment(day).format("jD")}
                 hasSubmitButton
                 onSubmit={() =>

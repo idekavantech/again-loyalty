@@ -1,7 +1,7 @@
 import React from "react";
-import jMoment from "moment-jalaali";
-jMoment.locale("fa");
-jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+import jMoment from "moment";
+ 
+ 
 import omit from "lodash/omit";
 import { DateRangePicker } from "react-dates";
 
@@ -224,8 +224,8 @@ class DateRangePickerWrapper extends React.Component {
                     variant="contained"
                     style={{ boxShadow: "none" }}
                     onClick={() => {
-                      const startDate = jMoment().startOf("jMonth");
-                      const endDate = jMoment().endOf("jMonth");
+                      const startDate = jMoment().startOf("month");
+                      const endDate = jMoment().endOf("month");
                       this.onDatesChange({ startDate, endDate });
                     }}
                   >
@@ -238,8 +238,8 @@ class DateRangePickerWrapper extends React.Component {
                     variant="contained"
                     style={{ boxShadow: "none" }}
                     onClick={() => {
-                      const startDate = jMoment().startOf("jYear");
-                      const endDate = jMoment().endOf("jYear");
+                      const startDate = jMoment().startOf("year");
+                      const endDate = jMoment().endOf("year");
                       this.onDatesChange({ startDate, endDate });
                     }}
                   >
@@ -284,14 +284,14 @@ class DateRangePickerWrapper extends React.Component {
                     style={{ boxShadow: "none" }}
                     onClick={() => {
                       const lastDayOfPreviousMonth = jMoment()
-                        .startOf("jMonth")
+                        .startOf("month")
                         .add(-1, "day");
                       const startDate = lastDayOfPreviousMonth
                         .clone()
-                        .startOf("jMonth");
+                        .startOf("month");
                       const endDate = lastDayOfPreviousMonth
                         .clone()
-                        .endOf("jMonth");
+                        .endOf("month");
                       this.onDatesChange({ startDate, endDate });
                     }}
                   >
@@ -305,14 +305,14 @@ class DateRangePickerWrapper extends React.Component {
                     style={{ boxShadow: "none" }}
                     onClick={() => {
                       const lastDayOfPreviousYear = jMoment()
-                        .startOf("jYear")
+                        .startOf("year")
                         .add(-1, "day");
                       const startDate = lastDayOfPreviousYear
                         .clone()
-                        .startOf("jYear");
+                        .startOf("year");
                       const endDate = lastDayOfPreviousYear
                         .clone()
-                        .endOf("jYear");
+                        .endOf("year");
                       this.onDatesChange({ startDate, endDate });
                     }}
                   >

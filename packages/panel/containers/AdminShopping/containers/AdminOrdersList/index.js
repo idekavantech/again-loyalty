@@ -58,7 +58,7 @@ import Chip from "@material-ui/core/Chip";
 import { useRouter } from "next/router";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import ClearRoundedIcon from "@material-ui/icons/ClearRounded";
-import moment from "moment-jalaali";
+import moment from "moment";
 import DateRangePickerWrapper from "@saas/components/DateRangePickerWrapper";
 import { paymentTypeOptions } from "store/constants";
 import "react-dates/initialize";
@@ -114,8 +114,8 @@ import { formatDateObjectToNormal } from "../../../../utils/helpers";
 import CustomCalendar from "@saas/components/CustomCalendar";
 import { ADMIN_HELP_VIDEOS } from "containers/AdminBreadCrumb/constants";
 
-moment.locale("fa");
-moment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 const StyledMenu = withStyles({
   paper: {
     width: 110,
@@ -335,14 +335,14 @@ export function AdminOrders({
       : null;
     if (defaultMomentFromDate && defaultMomentToDate) {
       const defaultFromDate = {
-        year: defaultMomentFromDate.jYear(),
-        month: defaultMomentFromDate.jMonth() + 1,
-        day: defaultMomentFromDate.jDate(),
+        year: defaultMomentFromDate.year(),
+        month: defaultMomentFromDate.month() + 1,
+        day: defaultMomentFromDate.date(),
       };
       const defaultToDate = {
-        year: defaultMomentToDate.jYear(),
-        month: defaultMomentToDate.jMonth() + 1,
-        day: defaultMomentToDate.jDate(),
+        year: defaultMomentToDate.year(),
+        month: defaultMomentToDate.month() + 1,
+        day: defaultMomentToDate.date(),
       };
       setSelectedDayRange({
         from: defaultFromDate,
@@ -357,14 +357,14 @@ export function AdminOrders({
       : null;
     if (defaultDeliveryMomentToDate && defaultDeliveryMomentFromDate) {
       const defaultDeliveryFromDate = {
-        year: defaultDeliveryMomentFromDate.jYear(),
-        month: defaultDeliveryMomentFromDate.jMonth() + 1,
-        day: defaultDeliveryMomentFromDate.jDate(),
+        year: defaultDeliveryMomentFromDate.year(),
+        month: defaultDeliveryMomentFromDate.month() + 1,
+        day: defaultDeliveryMomentFromDate.date(),
       };
       const defaultDeliveryToDate = {
-        year: defaultDeliveryMomentToDate.jYear(),
-        month: defaultDeliveryMomentToDate.jMonth() + 1,
-        day: defaultDeliveryMomentToDate.jDate(),
+        year: defaultDeliveryMomentToDate.year(),
+        month: defaultDeliveryMomentToDate.month() + 1,
+        day: defaultDeliveryMomentToDate.date(),
       };
       setSelectedDeliveryDayRange({
         from: defaultDeliveryFromDate,
@@ -2169,7 +2169,7 @@ export function AdminOrders({
                           query[FROM_DATE_QUERY_KEY] = persianToEnglishNumber(
                             moment(
                               formatDateObjectToNormal(selectedDayRange.from),
-                              "jYYYY-jM-jD"
+                              "YYYY-jM-jD"
                             ).format("YYYY-M-D")
                           );
                         else delete query[FROM_DATE_QUERY_KEY];
@@ -2177,7 +2177,7 @@ export function AdminOrders({
                           query[TO_DATE_QUERY_KEY] = persianToEnglishNumber(
                             moment(
                               formatDateObjectToNormal(selectedDayRange.to),
-                              "jYYYY-jM-jD"
+                              "YYYY-jM-jD"
                             ).format("YYYY-M-D")
                           );
                         else delete query[TO_DATE_QUERY_KEY];
@@ -2281,7 +2281,7 @@ export function AdminOrders({
                             formatDateObjectToNormal(
                               selectedDeliveryDayRange.from
                             ),
-                            "jYYYY-jM-jD"
+                            "YYYY-jM-jD"
                           ).format("YYYY-M-D")
                         );
                       else delete query[FROM_DELIVERY_QUERY_KEY];
@@ -2291,7 +2291,7 @@ export function AdminOrders({
                             formatDateObjectToNormal(
                               selectedDeliveryDayRange.to
                             ),
-                            "jYYYY-jM-jD"
+                            "YYYY-jM-jD"
                           ).format("YYYY-M-D")
                         );
                       else delete query[TO_DELIVERY_QUERY_KEY];

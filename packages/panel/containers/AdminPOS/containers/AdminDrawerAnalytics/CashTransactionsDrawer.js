@@ -10,7 +10,7 @@ import { getCashDrawerTransactions } from "store/actions";
 import { connect } from "react-redux";
 import { compose } from "redux";
 import { border, dust } from "@saas/utils/colors";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { makeSelectBranches } from "@saas/stores/business/selector";
 import MoreHorizRoundedIcon from "@material-ui/icons/MoreHorizRounded";
 import IconButton from "@material-ui/core/IconButton";
@@ -84,14 +84,14 @@ const CashTransactionsDrawer = ({
             '<div style="width: 400px; padding: 30px; background-color: white; text-align: right; border:1px solid #ccd4d7">' +
             "<div>Fund report:</div>" +
             `<div style="margin-top: 8px;">${englishNumberToPersianNumber(
-              `${createdAt.jDate()} ${getMonthName(
-                createdAt.jMonth() + 1
-              )} ${createdAt.jYear()} - ${createdAt.format("HH:mm")}`
+              `${createdAt.date()} ${getMonthName(
+                createdAt.month() + 1
+              )} ${createdAt.year()} - ${createdAt.format("HH:mm")}`
             )} —</div>` +
             `<div>${englishNumberToPersianNumber(
-              `${finishedAt.jDate()} ${getMonthName(
-                finishedAt.jMonth() + 1
-              )} ${finishedAt.jYear()} - ${finishedAt.format("HH:mm")}`
+              `${finishedAt.date()} ${getMonthName(
+                finishedAt.month() + 1
+              )} ${finishedAt.year()} - ${finishedAt.format("HH:mm")}`
             )}</div>` +
             "<div style='margin-top: 30px; height: 2px; background-color: rgb(87, 87, 87);'></div>" +
             `<div style="margin-top: 30px; line-height:21px;color:#575757">The initial amount of the fund: ${priceFormatter(
@@ -211,9 +211,9 @@ const CashTransactionsDrawer = ({
                   <>
                     <div className="mb-1">
                       {englishNumberToPersianNumber(
-                        `${createdAt.jDate()} ${getMonthName(
-                          createdAt.jMonth() + 1
-                        )} ${createdAt.jYear()} - ${createdAt.format("HH:mm")}`
+                        `${createdAt.date()} ${getMonthName(
+                          createdAt.month() + 1
+                        )} ${createdAt.year()} - ${createdAt.format("HH:mm")}`
                       )}
                     </div>
                     <div className="mb-1"> By{initializer?.name}</div>
@@ -226,9 +226,9 @@ const CashTransactionsDrawer = ({
                   <>
                     <div className="mb-1">
                       {englishNumberToPersianNumber(
-                        `${finishedAt.jDate()} ${getMonthName(
-                          finishedAt.jMonth() + 1
-                        )} ${finishedAt.jYear()} - ${finishedAt.format(
+                        `${finishedAt.date()} ${getMonthName(
+                          finishedAt.month() + 1
+                        )} ${finishedAt.year()} - ${finishedAt.format(
                           "HH:mm"
                         )}`
                       )}
@@ -319,9 +319,9 @@ const CashTransactionsDrawer = ({
                     <div>Starting the box</div>
                     <div className="mb-2">
                       {englishNumberToPersianNumber(
-                        `${createdAt.jDate()} ${getMonthName(
-                          createdAt.jMonth() + 1
-                        )} ${createdAt.jYear()} - ${createdAt.format("HH:mm")}`
+                        `${createdAt.date()} ${getMonthName(
+                          createdAt.month() + 1
+                        )} ${createdAt.year()} - ${createdAt.format("HH:mm")}`
                       )}
                     </div>
                   </div>

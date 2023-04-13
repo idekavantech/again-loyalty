@@ -62,7 +62,7 @@ import KeyboardArrowLeftRoundedIcon from "@material-ui/icons/KeyboardArrowLeftRo
 import { makeSelectIsAuthenticated } from "@saas/stores/user/selector";
 import CustomDrawer from "@saas/components/CustomDrawer";
 import CloseIcon from "@material-ui/icons/Close";
-import moment from "moment-jalaali";
+import moment from "moment";
 import MallIcon from "@saas/icons/MallIcon";
 import AccountIcon from "@saas/icons/accountIcon";
 import {

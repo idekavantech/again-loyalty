@@ -14,7 +14,7 @@ import { persianToEnglishNumber } from "@saas/utils/helpers/persianToEnglishNumb
 import { getSurveyTemplate } from "@saas/stores/business/actions";
 import { makeSelectSurveyTemplate } from "@saas/stores/business/selector";
 
-import jMoment from "moment-jalaali";
+import jMoment from "moment";
 import { defaultFromDate, defaultToDate } from "@saas/utils/constants/date";
 import { formatDateObjectToNormal } from "../../../../utils/helpers";
 
@@ -107,13 +107,13 @@ function useCRMReport (){
       from_date_range: persianToEnglishNumber(
         jMoment(
           formatDateObjectToNormal(selectedDayRange.from),
-          "jYYYY-jM-jD"
+          "YYYY-jM-jD"
         ).format("YYYY-M-D")
       ),
       to_date_range: persianToEnglishNumber(
         jMoment(
           formatDateObjectToNormal(selectedDayRange.to),
-          "jYYYY-jM-jD"
+          "YYYY-jM-jD"
         ).format("YYYY-M-D")
       ),
       satisfaction: selectedSatisfactionChoices.map((item) => item.keyword),
@@ -133,13 +133,13 @@ function useCRMReport (){
         from_date_range: persianToEnglishNumber(
           jMoment(
             formatDateObjectToNormal(selectedDayRange.from),
-            "jYYYY-jM-jD"
+            "YYYY-jM-jD"
           ).format("YYYY-M-D")
         ),
         to_date_range: persianToEnglishNumber(
           jMoment(
             formatDateObjectToNormal(selectedDayRange.to),
-            "jYYYY-jM-jD"
+            "YYYY-jM-jD"
           ).format("YYYY-M-D")
         ),
         satisfaction: selectedSatisfactionChoices.map((item) => item.keyword),

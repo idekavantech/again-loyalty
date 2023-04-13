@@ -10,7 +10,7 @@ import TableRow from "@material-ui/core/TableRow";
 import Button from "@material-ui/core/Button";
 import router from "next/router";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
-import moment from "moment-jalaali";
+import moment from "moment";
 import Switch from "@saas/components/Switch";
 import AssuranceDialog from "@saas/components/AssuranceDialog";
 import { Skeleton } from "@material-ui/lab";
@@ -193,7 +193,7 @@ function AutomatedProcess({ props }) {
                           >
                             {englishNumberToPersianNumber(
                               moment(automatedProcess?.created_at).format(
-                                "jYYYY/jMM/jDD"
+                                "YYYY/MM/DD"
                               )
                             )}
                           </TableCell>

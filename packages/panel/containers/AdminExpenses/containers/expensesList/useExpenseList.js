@@ -14,7 +14,7 @@ import {
   makeSelectCostsPagination,
   makeSelectPaymentMethods,
 } from "store/selectors";
-import jMoment from "moment-jalaali";
+import jMoment from "moment";
 import { formatDateObjectToNormal } from "utils/helpers";
 import { persianToEnglishNumber } from "@saas/utils/helpers/persianToEnglishNumber";
 import { useResponsive } from "@saas/utils/hooks/useResponsive";
@@ -216,13 +216,13 @@ const useExpensesList = () => {
     const from_date_range = persianToEnglishNumber(
       jMoment(
         formatDateObjectToNormal(dateRangeFilter.from),
-        "jYYYY-jM-jD"
+        "YYYY-jM-jD"
       ).format("YYYY-M-D")
     );
     const to_date_range = persianToEnglishNumber(
       jMoment(
         formatDateObjectToNormal(dateRangeFilter.to),
-        "jYYYY-jM-jD"
+        "YYYY-jM-jD"
       ).format("YYYY-M-D")
     );
 

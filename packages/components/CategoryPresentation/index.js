@@ -6,7 +6,7 @@
  */
 
 import React, { memo, useState, useEffect } from "react";
-import moment from "moment-jalaali";
+import moment from "moment";
 import ProductCard from "../ProductCard";
 import CategoryHeader from "./CategoryHeader";
 import AddNewProductCard from "../ProductCard/AddNewProductCard";

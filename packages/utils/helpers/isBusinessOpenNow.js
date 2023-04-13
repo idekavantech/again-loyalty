@@ -1,4 +1,4 @@
-import moment from "moment-jalaali";
+import moment from "moment";
 
 const isLocalTimeIncorrect = (date = null) => {
   const utc = moment.utc();

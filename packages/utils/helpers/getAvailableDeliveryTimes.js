@@ -1,5 +1,5 @@
 import { defaultDeliveryTimes } from "../constants/defaultDeliveryTimes";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { persianToEnglishNumber } from "./persianToEnglishNumber";
 
 export function getAvailableDeliveryTimes(
@@ -24,24 +24,24 @@ export function getAvailableDeliveryTimes(
               persianToEnglishNumber(
                 moment()
                   .add(startTimeBaseValue, startTimeBaseType)
-                  .format("jYYYY/jM/jD HH:mm")
+                  .format("YYYY/jM/jD HH:mm")
               )
             ) <
               Date.parse(
                 persianToEnglishNumber(
-                  `${today.format("jYYYY/jM/jD")} ${timeRange.from}`
+                  `${today.format("YYYY/jM/jD")} ${timeRange.from}`
                 )
               ) &&
             Date.parse(
               persianToEnglishNumber(
                 moment()
                   .add(startTimeBaseValue, startTimeBaseType)
-                  .format("jYYYY/jM/jD HH:mm")
+                  .format("YYYY/jM/jD HH:mm")
               )
             ) <
               Date.parse(
                 persianToEnglishNumber(
-                  `${today.format("jYYYY/jM/jD")} ${timeRange.to}`
+                  `${today.format("YYYY/jM/jD")} ${timeRange.to}`
                 )
               )
           );
@@ -49,7 +49,7 @@ export function getAvailableDeliveryTimes(
       }) || [];
     if (shifts.length) {
       nextWeekDeliveryTimes.push({
-        date: persianToEnglishNumber(today.format("jYYYY/jM/jD")),
+        date: persianToEnglishNumber(today.format("YYYY/jM/jD")),
         weekDay: today.isoWeekday(),
         shifts,
       });

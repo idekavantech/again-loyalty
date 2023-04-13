@@ -1,4 +1,4 @@
-import moment from "moment-jalaali";
+import moment from "moment";
 import { getWeekDay } from "./getWeekDay";
 export function getNextWorkingDayStart(workingHours) {
   const tomorrow = moment().add(1, "day").isoWeekday();

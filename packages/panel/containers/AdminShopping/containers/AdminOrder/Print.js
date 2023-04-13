@@ -1,6 +1,6 @@
 /* eslint-disable indent */
 import React from "react";
-import moment from "moment-jalaali";
+import moment from "moment";
 import QRCode from "qrcode.react";
 import { priceFormatter } from "@saas/utils/helpers/priceFormatter";
 import { getCountDown } from "@saas/utils/helpers/getCountDown";
@@ -34,7 +34,7 @@ class Print extends React.Component {
       phone_zero_starts: phone,
       theme_config,
     } = business;
-    const date = moment(order.submitted_at).format("jYYYY/jMM/jDD - HH:mm:ss");
+    const date = moment(order.submitted_at).format("YYYY/MM/DD - HH:mm:ss");
     const sortedItems = order.items ? [...order.items] : [];
     sortedItems.sort((a, b) => {
       let firstTotal = a.discounted_price;

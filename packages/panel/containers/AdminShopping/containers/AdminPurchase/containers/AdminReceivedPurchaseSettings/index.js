@@ -30,7 +30,7 @@ import TableCell from "@material-ui/core/TableCell";
 import TableBody from "@material-ui/core/TableBody";
 import TableContainer from "@material-ui/core/TableContainer";
 import Link from "next/link";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { getReceivedPurchases } from "store/actions";
 import {
   makeSelectReceivedPurchases,
@@ -166,14 +166,14 @@ function AdminReceivedPurchaseSettings({
       ? moment(router.query.from_date, "YYYY-MM-DD")
       : moment().add(-6, "day");
     const defaultFromDate = {
-      year: defaultMomentFromDate.jYear(),
-      month: defaultMomentFromDate.jMonth() + 1,
-      day: defaultMomentFromDate.jDate(),
+      year: defaultMomentFromDate.year(),
+      month: defaultMomentFromDate.month() + 1,
+      day: defaultMomentFromDate.date(),
     };
     const defaultToDate = {
-      year: defaultMomentToDate.jYear(),
-      month: defaultMomentToDate.jMonth() + 1,
-      day: defaultMomentToDate.jDate(),
+      year: defaultMomentToDate.year(),
+      month: defaultMomentToDate.month() + 1,
+      day: defaultMomentToDate.date(),
     };
     setSelectedDayRange({
       from: defaultFromDate,
@@ -329,7 +329,7 @@ function AdminReceivedPurchaseSettings({
                         query.from_date = persianToEnglishNumber(
                           moment(
                             formatDateObjectToNormal(selectedDayRange.from),
-                            "jYYYY-jM-jD"
+                            "YYYY-jM-jD"
                           ).format("YYYY-M-D")
                         );
                       else delete query.from_date;
@@ -337,7 +337,7 @@ function AdminReceivedPurchaseSettings({
                         query.to_date = persianToEnglishNumber(
                           moment(
                             formatDateObjectToNormal(selectedDayRange.to),
-                            "jYYYY-jM-jD"
+                            "YYYY-jM-jD"
                           ).format("YYYY-M-D")
                         );
                       else delete query.to_date;
@@ -438,7 +438,7 @@ function AdminReceivedPurchaseSettings({
                             ) : (
                               <>
                                 {englishNumberToPersianNumber(
-                                  createdTime.format("jYYYY/jMM/jDD")
+                                  createdTime.format("YYYY/MM/DD")
                                 )}
                                 {"  "}-{"  "}
                                 {englishNumberToPersianNumber(
@@ -457,7 +457,7 @@ function AdminReceivedPurchaseSettings({
                             ) : (
                               <>
                                 {englishNumberToPersianNumber(
-                                  expectedTime.format("jYYYY/jMM/jDD")
+                                  expectedTime.format("YYYY/MM/DD")
                                 )}
                                 {"  "}-{"  "}
                                 {englishNumberToPersianNumber(

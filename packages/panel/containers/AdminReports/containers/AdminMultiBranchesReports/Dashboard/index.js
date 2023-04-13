@@ -7,7 +7,7 @@ import React, { memo, useEffect, useMemo, useState } from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { compose } from "redux";
-import jMoment from "moment-jalaali";
+import jMoment from "moment";
 import { makeSelectBranches } from "@saas/stores/business/selector";
 
 import { getBusinessShoppingReportData, getReportData } from "store/actions";
@@ -65,8 +65,8 @@ import LoyaltyOutlinedIcon from "@material-ui/icons/LoyaltyOutlined";
 import Card from "../../components/Card";
 import { SHOPPING_DATA } from "store/constants";
 
-jMoment.locale("fa");
-jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 
 export function AdminReports({
   _getReportData,
@@ -101,13 +101,13 @@ export function AdminReports({
       persianToEnglishNumber(
         jMoment(
           formatDateObjectToNormal(selectedDayRange.from),
-          "jYYYY-jM-jD"
+          "YYYY-jM-jD"
         ).format("YYYY-M-D")
       ),
       persianToEnglishNumber(
         jMoment(
           formatDateObjectToNormal(selectedDayRange.to),
-          "jYYYY-jM-jD"
+          "YYYY-jM-jD"
         ).format("YYYY-M-D")
       ),
       BRANCHES_DEALS_REPORT_TYPE,
@@ -119,13 +119,13 @@ export function AdminReports({
       persianToEnglishNumber(
         jMoment(
           formatDateObjectToNormal(selectedDayRange.from),
-          "jYYYY-jM-jD"
+          "YYYY-jM-jD"
         ).format("YYYY-M-D")
       ),
       persianToEnglishNumber(
         jMoment(
           formatDateObjectToNormal(selectedDayRange.to),
-          "jYYYY-jM-jD"
+          "YYYY-jM-jD"
         ).format("YYYY-M-D")
       ),
       BRANCHES_TRANSACTIONS_REPORT_TYPE,
@@ -137,13 +137,13 @@ export function AdminReports({
       persianToEnglishNumber(
         jMoment(
           formatDateObjectToNormal(selectedDayRange.from),
-          "jYYYY-jM-jD"
+          "YYYY-jM-jD"
         ).format("YYYY-M-D")
       ),
       persianToEnglishNumber(
         jMoment(
           formatDateObjectToNormal(selectedDayRange.to),
-          "jYYYY-jM-jD"
+          "YYYY-jM-jD"
         ).format("YYYY-M-D")
       ),
       BRANCHES_ORDERS_REPORT_TYPE,
@@ -282,11 +282,11 @@ export function AdminReports({
               "YYYY-MM-DD"
             );
             const formattedDate =
-              transactionJalaaliFormat.jYear() +
+              transactionJalaaliFormat.year() +
               "-" +
-              (transactionJalaaliFormat.jMonth() + 1) +
+              (transactionJalaaliFormat.month() + 1) +
               "-" +
-              transactionJalaaliFormat.jDate();
+              transactionJalaaliFormat.date();
             return englishNumberToPersianNumber(formattedDate);
           })
         : [],

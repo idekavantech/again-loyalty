@@ -10,9 +10,9 @@ import {
 } from "@saas/stores/business/selector";
 import { makeSelectLoading } from "@saas/stores/global/selectors";
 import AllBranchTransactionsTable from "./AllBranchTransactionsTable";
-import moment from "moment-jalaali";
-moment.locale("fa");
-moment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+import moment from "moment";
+ 
+ 
 import {
   getWalletBalance,
   getWalletTransactions,

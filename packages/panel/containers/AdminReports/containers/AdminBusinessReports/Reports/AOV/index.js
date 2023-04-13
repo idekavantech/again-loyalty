@@ -27,8 +27,8 @@ import { persianToEnglishNumber } from "@saas/utils/helpers/persianToEnglishNumb
 import { priceFormatter } from "@saas/utils/helpers/priceFormatter";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 
-import jMoment from "moment-jalaali";
-import moment from "moment-jalaali";
+import jMoment from "moment";
+import moment from "moment";
 import { makeSelectReportsLoading } from "@saas/stores/global/selectors";
 import {
   ORDERS_REPORT_TYPE,
@@ -52,8 +52,8 @@ import { defaultFromDate, defaultToDate } from "@saas/utils/constants/date";
 import { formatDateObjectToNormal } from "../../../../../../utils/helpers";
 
 
-jMoment.locale("fa");
-jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 
 const $ = `/images/$.svg`;
 
@@ -83,13 +83,13 @@ export function AdminReports({
       persianToEnglishNumber(
         jMoment(
           formatDateObjectToNormal(selectedDayRange.from),
-          "jYYYY-jM-jD"
+          "YYYY-jM-jD"
         ).format("YYYY-M-D")
       ),
       persianToEnglishNumber(
         jMoment(
           formatDateObjectToNormal(selectedDayRange.to),
-          "jYYYY-jM-jD"
+          "YYYY-jM-jD"
         ).format("YYYY-M-D")
       ),
       TRANSACTIONS_REPORT_TYPE,
@@ -101,13 +101,13 @@ export function AdminReports({
       persianToEnglishNumber(
         jMoment(
           formatDateObjectToNormal(selectedDayRange.from),
-          "jYYYY-jM-jD"
+          "YYYY-jM-jD"
         ).format("YYYY-M-D")
       ),
       persianToEnglishNumber(
         jMoment(
           formatDateObjectToNormal(selectedDayRange.to),
-          "jYYYY-jM-jD"
+          "YYYY-jM-jD"
         ).format("YYYY-M-D")
       ),
       ORDERS_REPORT_TYPE,
@@ -191,11 +191,11 @@ export function AdminReports({
           "YYYY-MM-DD"
         );
         const jalaaliDate =
-          currentFormattedDate.jYear() +
+          currentFormattedDate.year() +
           "-" +
-          (currentFormattedDate.jMonth() + 1) +
+          (currentFormattedDate.month() + 1) +
           "-" +
-          currentFormattedDate.jDate();
+          currentFormattedDate.date();
         if (transaction[TOTAL_PAYMENTS]) {
           const newRow = [
             {
@@ -395,11 +395,11 @@ export function AdminReports({
               "YYYY-MM-DD"
             );
             const formattedDate =
-              newDate.jYear() +
+              newDate.year() +
               "-" +
-              (newDate.jMonth() + 1) +
+              (newDate.month() + 1) +
               "-" +
-              newDate.jDate();
+              newDate.date();
             return englishNumberToPersianNumber(formattedDate);
           })
         : [],

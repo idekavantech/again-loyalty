@@ -13,7 +13,7 @@ import Paper from "@material-ui/core/Paper";
 import { priceFormatter } from "@saas/utils/helpers/priceFormatter";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 
-import jMoment from "moment-jalaali";
+import jMoment from "moment";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import Checkbox from "@material-ui/core/Checkbox";
@@ -47,8 +47,8 @@ import Popover from "@material-ui/core/Popover";
 import { defaultFromDate, defaultToDate } from "@saas/utils/constants/date";
 import CustomCalendar from "@saas/components/CustomCalendar";
 
-jMoment.locale("fa");
-jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 
 const categories = [
   { id: 1, title: "Bread" },

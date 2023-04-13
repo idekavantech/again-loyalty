@@ -6,7 +6,7 @@ import { getMonthName } from "@saas/utils/helpers/getMonthName";
 import SectionRenderer from "@saas/builder/SectionRenderer";
 import NewNotFoundPage from "containers/Pages/NewNotFoundPage";
 import parse from "html-react-parser";
-import moment from "moment-jalaali";
+import moment from "moment";
 import request from "@saas/utils/request";
 import { CATEGORY_RESOURCE_API } from "@saas/utils/api";
 
@@ -27,8 +27,8 @@ export default function MenuPage({ page = {}, business, categoriesDeals }) {
   const title =
     page?.data?.seo_title ||
     `منو دیجیتال ${business.revised_title} با قیمت | ${getMonthName(
-      date.jMonth() + 1
-    )} ${date.jYear()}`;
+      date.month() + 1
+    )} ${date.year()}`;
 
   return (
     <>

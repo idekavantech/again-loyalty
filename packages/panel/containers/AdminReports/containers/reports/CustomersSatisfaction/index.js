@@ -5,7 +5,7 @@ import { compose } from "redux";
 import Head from "next/head";
 import AdminBreadCrumb from "containers/AdminBreadCrumb";
 import Paper from "@material-ui/core/Paper";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { persianToEnglishNumber } from "@saas/utils/helpers/persianToEnglishNumber";
 import { priceFormatter } from "@saas/utils/helpers/priceFormatter";
 import { generateCSVFile } from "@saas/utils/helpers/generateCSVFile";
@@ -39,8 +39,8 @@ import { defaultFromDate, defaultToDate } from "@saas/utils/constants/date";
 import { formatDateObjectToNormal } from "../../../../../utils/helpers";
 import CustomCalendar from "@saas/components/CustomCalendar";
 
-moment.locale("fa");
-moment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 
 const sortingOptions = [
   { id: 0, text: "The highest rank", keyword: HIGHEST_RATE },
@@ -145,13 +145,13 @@ export function AdminCustomersSatisfactionReport({
             from_date: persianToEnglishNumber(
               moment(
                 formatDateObjectToNormal(selectedDayRange.from),
-                "jYYYY-jM-jD"
+                "YYYY-jM-jD"
               ).format("YYYY-M-D")
             ),
             to_date: persianToEnglishNumber(
               moment(
                 formatDateObjectToNormal(selectedDayRange.to),
-                "jYYYY-jM-jD"
+                "YYYY-jM-jD"
               ).format("YYYY-M-D")
             ),
           });
@@ -166,13 +166,13 @@ export function AdminCustomersSatisfactionReport({
           from_date: persianToEnglishNumber(
             moment(
               formatDateObjectToNormal(selectedDayRange.from),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           ),
           to_date: persianToEnglishNumber(
             moment(
               formatDateObjectToNormal(selectedDayRange.to),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           ),
         });
@@ -206,13 +206,13 @@ export function AdminCustomersSatisfactionReport({
             from_date: persianToEnglishNumber(
               moment(
                 formatDateObjectToNormal(selectedDayRange.from),
-                "jYYYY-jM-jD"
+                "YYYY-jM-jD"
               ).format("YYYY-M-D")
             ),
             to_date: persianToEnglishNumber(
               moment(
                 formatDateObjectToNormal(selectedDayRange.to),
-                "jYYYY-jM-jD"
+                "YYYY-jM-jD"
               ).format("YYYY-M-D")
             ),
           });
@@ -227,13 +227,13 @@ export function AdminCustomersSatisfactionReport({
           from_date: persianToEnglishNumber(
             moment(
               formatDateObjectToNormal(selectedDayRange.from),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           ),
           to_date: persianToEnglishNumber(
             moment(
               formatDateObjectToNormal(selectedDayRange.to),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           ),
         });

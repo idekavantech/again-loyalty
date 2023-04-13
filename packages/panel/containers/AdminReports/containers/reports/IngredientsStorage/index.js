@@ -58,7 +58,7 @@ import {
 } from "../constants";
 import Menu from "@material-ui/core/Menu";
 import Button from "@material-ui/core/Button";
-import jMoment from "moment-jalaali";
+import jMoment from "moment";
 import Chip from "@material-ui/core/Chip";
 import useTheme from "@material-ui/core/styles/useTheme";
 import ClearRoundedIcon from "@material-ui/icons/ClearRounded";
@@ -69,8 +69,8 @@ import CustomCalendar from "@saas/components/CustomCalendar";
 import { defaultFromDate, defaultToDate } from "@saas/utils/constants/date";
 import { formatDateObjectToNormal } from "../../../../../utils/helpers";
 
-jMoment.locale("fa");
-jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 
 const sortingOptions = [
   { id: 0, text: "the newest", keyword: NEWEST },
@@ -86,7 +86,7 @@ const pdf = ({ business, branches, is_super }) => {
     }-${new Date().getDate()}`,
     "YYYY-MM-DD"
   );
-  const jalaaliDate = createdAtFormattedDate.format("jYYYY/jMM/jDD");
+  const jalaaliDate = createdAtFormattedDate.format("YYYY/MM/DD");
   return {
     headerTemplate: (
       <div className="d-none">
@@ -394,13 +394,13 @@ export function AdminIngredientsStorageReport({
             from_date: persianToEnglishNumber(
               jMoment(
                 formatDateObjectToNormal(selectedDayRange.from),
-                "jYYYY-jM-jD"
+                "YYYY-jM-jD"
               ).format("YYYY-M-D")
             ),
             to_date: persianToEnglishNumber(
               jMoment(
                 formatDateObjectToNormal(selectedDayRange.to),
-                "jYYYY-jM-jD"
+                "YYYY-jM-jD"
               ).format("YYYY-M-D")
             ),
           });
@@ -415,13 +415,13 @@ export function AdminIngredientsStorageReport({
           from_date: persianToEnglishNumber(
             jMoment(
               formatDateObjectToNormal(selectedDayRange.from),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           ),
           to_date: persianToEnglishNumber(
             jMoment(
               formatDateObjectToNormal(selectedDayRange.to),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           ),
         });
@@ -463,11 +463,11 @@ export function AdminIngredientsStorageReport({
           "YYYY-MM-DD"
         );
         const formattedDate =
-          itemJalaaliFormat.jYear() +
+          itemJalaaliFormat.year() +
           "-" +
-          (itemJalaaliFormat.jMonth() + 1) +
+          (itemJalaaliFormat.month() + 1) +
           "-" +
-          itemJalaaliFormat.jDate();
+          itemJalaaliFormat.date();
         const num = index + 1;
         const branchName = branches?.find(
           (branch) => branch.id === report.business_id
@@ -904,11 +904,11 @@ export function AdminIngredientsStorageReport({
                           "YYYY-MM-DD"
                         );
                         const formattedDate =
-                          itemJalaaliFormat.jYear() +
+                          itemJalaaliFormat.year() +
                           "-" +
-                          (itemJalaaliFormat.jMonth() + 1) +
+                          (itemJalaaliFormat.month() + 1) +
                           "-" +
-                          itemJalaaliFormat.jDate();
+                          itemJalaaliFormat.date();
                         return (
                           <TableRow key={report.id}>
                             <TableCell align="center">

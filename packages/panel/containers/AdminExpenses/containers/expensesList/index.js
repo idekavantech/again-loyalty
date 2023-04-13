@@ -26,7 +26,7 @@ import Paper from "@material-ui/core/Paper";
 // import MenuItem from "@material-ui/core/MenuItem";
 
 import { priceFormatter } from "@saas/utils/helpers/priceFormatter";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { Skeleton } from "@material-ui/lab";
 import { TablePagination } from "@material-ui/core";
 import KeyboardArrowRight from "@material-ui/icons/KeyboardArrowRight";
@@ -564,7 +564,7 @@ const ExpenseList = () => {
                         {costRow.CostsCategory.title}
                       </TableCell>
                       <TableCell style={{ width: 100 }} align="center">
-                        {moment(costRow.date).format("jDD jMMMM jYYYY")}
+                        {moment(costRow.date).format("DD MMMM YYYY")}
                       </TableCell>
                       <TableCell style={{ width: 100 }} align="center">
                         {priceFormatter(costRow.price)}

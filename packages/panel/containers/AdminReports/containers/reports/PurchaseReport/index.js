@@ -16,7 +16,7 @@ import { generateCSVFile } from "@saas/utils/helpers/generateCSVFile";
 
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 
-import jMoment from "moment-jalaali";
+import jMoment from "moment";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import Checkbox from "@material-ui/core/Checkbox";
@@ -67,8 +67,8 @@ import CustomCalendar from "@saas/components/CustomCalendar";
 import { defaultFromDate, defaultToDate } from "@saas/utils/constants/date";
 import { formatDateObjectToNormal } from "../../../../../utils/helpers";
 
-jMoment.locale("fa");
-jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 
 const sortingOptions = [
   { id: 0, text: "The latest order registration", keyword: NEWEST_CREATED_PURCHASE_DATE },
@@ -294,13 +294,13 @@ export function AdminPurchaseReport({
             from_date: persianToEnglishNumber(
               jMoment(
                 formatDateObjectToNormal(selectedDayRange.from),
-                "jYYYY-jM-jD"
+                "YYYY-jM-jD"
               ).format("YYYY-M-D")
             ),
             to_date: persianToEnglishNumber(
               jMoment(
                 formatDateObjectToNormal(selectedDayRange.to),
-                "jYYYY-jM-jD"
+                "YYYY-jM-jD"
               ).format("YYYY-M-D")
             ),
           });
@@ -317,13 +317,13 @@ export function AdminPurchaseReport({
           from_date: persianToEnglishNumber(
             jMoment(
               formatDateObjectToNormal(selectedDayRange.from),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           ),
           to_date: persianToEnglishNumber(
             jMoment(
               formatDateObjectToNormal(selectedDayRange.to),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           ),
         });
@@ -358,13 +358,13 @@ export function AdminPurchaseReport({
             from_date: persianToEnglishNumber(
               jMoment(
                 formatDateObjectToNormal(selectedDayRange.from),
-                "jYYYY-jM-jD"
+                "YYYY-jM-jD"
               ).format("YYYY-M-D")
             ),
             to_date: persianToEnglishNumber(
               jMoment(
                 formatDateObjectToNormal(selectedDayRange.to),
-                "jYYYY-jM-jD"
+                "YYYY-jM-jD"
               ).format("YYYY-M-D")
             ),
           });
@@ -381,13 +381,13 @@ export function AdminPurchaseReport({
           from_date: persianToEnglishNumber(
             jMoment(
               formatDateObjectToNormal(selectedDayRange.from),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           ),
           to_date: persianToEnglishNumber(
             jMoment(
               formatDateObjectToNormal(selectedDayRange.to),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           ),
         });
@@ -421,11 +421,11 @@ export function AdminPurchaseReport({
         );
         const num = index + 1;
         const jalaaliDateCreatedAt =
-          createdAtFormattedDate.jYear() +
+          createdAtFormattedDate.year() +
           "-" +
-          (createdAtFormattedDate.jMonth() + 1) +
+          (createdAtFormattedDate.month() + 1) +
           "-" +
-          createdAtFormattedDate.jDate();
+          createdAtFormattedDate.date();
         const updatedAt = new Date(report.updated_at);
         const updatedAtFormattedDate = jMoment(
           `${updatedAt.getFullYear()}-${
@@ -434,11 +434,11 @@ export function AdminPurchaseReport({
           "YYYY-MM-DD"
         );
         const jalaaliDateUpdatedAt =
-          updatedAtFormattedDate.jYear() +
+          updatedAtFormattedDate.year() +
           "-" +
-          (updatedAtFormattedDate.jMonth() + 1) +
+          (updatedAtFormattedDate.month() + 1) +
           "-" +
-          updatedAtFormattedDate.jDate();
+          updatedAtFormattedDate.date();
         const acceptedAt = new Date(report.expected_date_to_receive);
         const acceptedAtFormattedDate = jMoment(
           `${acceptedAt.getFullYear()}-${
@@ -447,11 +447,11 @@ export function AdminPurchaseReport({
           "YYYY-MM-DD"
         );
         const jalaaliDateAcceptedAt =
-          acceptedAtFormattedDate.jYear() +
+          acceptedAtFormattedDate.year() +
           "-" +
-          (acceptedAtFormattedDate.jMonth() + 1) +
+          (acceptedAtFormattedDate.month() + 1) +
           "-" +
-          acceptedAtFormattedDate.jDate();
+          acceptedAtFormattedDate.date();
         const branch = branches?.find(
           (branch) => branch.id === report?.submitter_business?.id
         )?.title;
@@ -965,11 +965,11 @@ export function AdminPurchaseReport({
                     "YYYY-MM-DD"
                   );
                   const jalaaliDateCreatedAt =
-                    createdAtFormattedDate.jYear() +
+                    createdAtFormattedDate.year() +
                     "-" +
-                    (createdAtFormattedDate.jMonth() + 1) +
+                    (createdAtFormattedDate.month() + 1) +
                     "-" +
-                    createdAtFormattedDate.jDate();
+                    createdAtFormattedDate.date();
                   const updatedAt = new Date(report.updated_at);
                   const updatedAtFormattedDate = jMoment(
                     `${updatedAt.getFullYear()}-${
@@ -978,11 +978,11 @@ export function AdminPurchaseReport({
                     "YYYY-MM-DD"
                   );
                   const jalaaliDateUpdatedAt =
-                    updatedAtFormattedDate.jYear() +
+                    updatedAtFormattedDate.year() +
                     "-" +
-                    (updatedAtFormattedDate.jMonth() + 1) +
+                    (updatedAtFormattedDate.month() + 1) +
                     "-" +
-                    updatedAtFormattedDate.jDate();
+                    updatedAtFormattedDate.date();
                   const acceptedAt = new Date(report.expected_date_to_receive);
                   const acceptedAtFormattedDate = jMoment(
                     `${acceptedAt.getFullYear()}-${
@@ -991,11 +991,11 @@ export function AdminPurchaseReport({
                     "YYYY-MM-DD"
                   );
                   const jalaaliDateAcceptedAt =
-                    acceptedAtFormattedDate.jYear() +
+                    acceptedAtFormattedDate.year() +
                     "-" +
-                    (acceptedAtFormattedDate.jMonth() + 1) +
+                    (acceptedAtFormattedDate.month() + 1) +
                     "-" +
-                    acceptedAtFormattedDate.jDate();
+                    acceptedAtFormattedDate.date();
                   return (
                     <TableRow key={index}>
                       <TableCell align="center">

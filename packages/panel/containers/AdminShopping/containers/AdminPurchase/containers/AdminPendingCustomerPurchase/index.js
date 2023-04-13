@@ -31,7 +31,7 @@ import { makeSelectPurchase } from "store/selectors";
 import Popover from "@material-ui/core/Popover";
 import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import Divider from "@material-ui/core/Divider";
-import moment from "moment-jalaali";
+import moment from "moment";
 import ModalHeader from "@saas/components/Modal/ModalHeader";
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
@@ -262,7 +262,7 @@ function AdminPendingCustomerPurchase({
                 <span className="u-fontWeightBold">Delivery time: </span>
                 <span>
                   {englishNumberToPersianNumber(
-                    expectedTime.format("jYYYY/jMM/jDD")
+                    expectedTime.format("YYYY/MM/DD")
                   )}
                 </span>
               </div>
@@ -270,7 +270,7 @@ function AdminPendingCustomerPurchase({
                 <span className="u-fontWeightBold">Register time: </span>
                 <span>
                   {englishNumberToPersianNumber(
-                    createdTime.format("jYYYY/jMM/jDD HH:mm")
+                    createdTime.format("YYYY/MM/DD HH:mm")
                   )}
                 </span>
               </div>

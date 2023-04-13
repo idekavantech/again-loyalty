@@ -13,7 +13,7 @@ import {
   makeSelectPlugin,
 } from "@saas/stores/plugins/selector";
 import { CRM_PLUGIN } from "@saas/utils/constants/plugins";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 import { JoiningTheCustomerClubLink } from "./JoiningTheCustomerClubLink";
 import { setPluginData } from "@saas/stores/plugins/actions";
@@ -320,7 +320,7 @@ function DobareDashboard() {
                     {" "}
                     {englishNumberToPersianNumber(
                       moment(CRMPluginData.expirationDate).format(
-                        "jYYYY/jMM/jDD"
+                        "YYYY/MM/DD"
                       )
                     )}
                   </span>

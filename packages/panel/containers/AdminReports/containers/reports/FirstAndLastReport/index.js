@@ -10,7 +10,7 @@ import { generateCSVFile } from "@saas/utils/helpers/generateCSVFile";
 
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 
-import jMoment from "moment-jalaali";
+import jMoment from "moment";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import Checkbox from "@material-ui/core/Checkbox";
@@ -41,7 +41,7 @@ import CustomCalendar from "@saas/components/CustomCalendar";
 import { defaultFromDate, defaultToDate } from "@saas/utils/constants/date";
 import { formatDateObjectToNormal } from "../../../../../utils/helpers";
 
-jMoment.locale("fa");
+ 
 jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: false });
 const branchHeadCells = [
   {
@@ -131,13 +131,13 @@ export function AdminFirstAndLastReport({
             from_date: persianToEnglishNumber(
               jMoment(
                 formatDateObjectToNormal(selectedDayRange.from),
-                "jYYYY-jM-jD"
+                "YYYY-jM-jD"
               ).format("YYYY-M-D")
             ),
             to_date: persianToEnglishNumber(
               jMoment(
                 formatDateObjectToNormal(selectedDayRange.to),
-                "jYYYY-jM-jD"
+                "YYYY-jM-jD"
               ).format("YYYY-M-D")
             ),
           });
@@ -153,13 +153,13 @@ export function AdminFirstAndLastReport({
           from_date: persianToEnglishNumber(
             jMoment(
               formatDateObjectToNormal(selectedDayRange.from),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           ),
           to_date: persianToEnglishNumber(
             jMoment(
               formatDateObjectToNormal(selectedDayRange.to),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           ),
         });
@@ -193,13 +193,13 @@ export function AdminFirstAndLastReport({
             from_date: persianToEnglishNumber(
               jMoment(
                 formatDateObjectToNormal(selectedDayRange.from),
-                "jYYYY-jM-jD"
+                "YYYY-jM-jD"
               ).format("YYYY-M-D")
             ),
             to_date: persianToEnglishNumber(
               jMoment(
                 formatDateObjectToNormal(selectedDayRange.to),
-                "jYYYY-jM-jD"
+                "YYYY-jM-jD"
               ).format("YYYY-M-D")
             ),
           });
@@ -215,13 +215,13 @@ export function AdminFirstAndLastReport({
           from_date: persianToEnglishNumber(
             jMoment(
               formatDateObjectToNormal(selectedDayRange.from),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           ),
           to_date: persianToEnglishNumber(
             jMoment(
               formatDateObjectToNormal(selectedDayRange.to),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           ),
         });
@@ -248,11 +248,11 @@ export function AdminFirstAndLastReport({
         const jalaaliTimeForFirstDate =
           firstDate.getHours() + ":" + firstDate.getMinutes();
         const jalaaliDateForFirstDate =
-          firstDateFormattedDate.jYear() +
+          firstDateFormattedDate.year() +
           "-" +
-          (firstDateFormattedDate.jMonth() + 1) +
+          (firstDateFormattedDate.month() + 1) +
           "-" +
-          firstDateFormattedDate.jDate();
+          firstDateFormattedDate.date();
         const lastDate = new Date(report?.last_date);
         const lastDateFormattedDate = jMoment(
           `${lastDate.getFullYear()}-${
@@ -263,11 +263,11 @@ export function AdminFirstAndLastReport({
         const jalaaliTimeForLastDate =
           lastDate.getHours() + ":" + lastDate.getMinutes();
         const jalaaliDateForLastDate =
-          lastDateFormattedDate.jYear() +
+          lastDateFormattedDate.year() +
           "-" +
-          (lastDateFormattedDate.jMonth() + 1) +
+          (lastDateFormattedDate.month() + 1) +
           "-" +
-          lastDateFormattedDate.jDate();
+          lastDateFormattedDate.date();
 
         const num = index + 1;
         const branch = branches?.find(
@@ -880,7 +880,7 @@ export function AdminFirstAndLastReport({
                                       reportDataPerBranch?.logs?.login
                                         .first_login,
                                       "YYYY-M-D HH:mm:ss"
-                                    ).format("jYYYY/jM/jD")
+                                    ).format("YYYY/jM/jD")
                                   : "-"}
                                 {reportDataPerBranch?.logs?.login && (
                                   <div className="mx-2">|</div>
@@ -901,7 +901,7 @@ export function AdminFirstAndLastReport({
                                       reportDataPerBranch?.logs?.logout
                                         .last_login,
                                       "YYYY-M-D HH:mm:ss"
-                                    ).format("jYYYY/jM/jD")
+                                    ).format("YYYY/jM/jD")
                                   : "-"}
                                 {reportDataPerBranch?.logs?.logout && (
                                   <div className="mx-2">|</div>
@@ -1066,7 +1066,7 @@ export function AdminFirstAndLastReport({
 }
 
 const getJalaaliDate = (date) =>
-  date.jYear() + "-" + (date.jMonth() + 1) + "-" + date.jDate();
+  date.year() + "-" + (date.month() + 1) + "-" + date.date();
 
 const getFormatedDate = (date) =>
   jMoment(

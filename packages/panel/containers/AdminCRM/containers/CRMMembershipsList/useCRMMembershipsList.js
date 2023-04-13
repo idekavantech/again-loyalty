@@ -9,7 +9,7 @@ import {
   getLabels,
   importMemberships,
 } from "store/actions";
-import jMoment from "moment-jalaali";
+import jMoment from "moment";
 import {
   makeSelectCrmLabels,
   makeSelectCRMMemberShipsByQuery,
@@ -32,8 +32,8 @@ import { UPLOAD_FILE } from "@saas/stores/global/constants";
 import { IMPORT_MEMBERSHIPS } from "store/constants";
 import { formatDateObjectToNormal } from "utils/helpers";
 
-jMoment.locale("fa");
-jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 
 const UPDATE_DELAY_IN_MILLISECONDS = 500;
 
@@ -461,7 +461,7 @@ export function useCRMMembershipsList() {
 
   const formatDate = (date) => {
     if (!date) return null;
-    return persianToEnglishNumber(jMoment(formatDateObjectToNormal(date), "jYYYY-jM-jD").format("YYYY-M-D"));
+    return persianToEnglishNumber(jMoment(formatDateObjectToNormal(date), "YYYY-jM-jD").format("YYYY-M-D"));
   };
 
   const handleCRMLastOrderDateChange = (from , to) => {

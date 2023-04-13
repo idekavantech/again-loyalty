@@ -11,7 +11,7 @@ import {
   makeSelectCampaignCreditReports,
 } from "store/selectors";
 import { defaultFromDate, defaultToDate } from "@saas/utils/constants/date";
-import jMoment from "moment-jalaali";
+import jMoment from "moment";
 import { persianToEnglishNumber } from "@saas/utils/helpers/persianToEnglishNumber";
 import { formatDateObjectToNormal } from "utils/helpers";
 import { priceFormatter } from "@saas/utils/helpers/priceFormatter";
@@ -67,7 +67,7 @@ function useCRMReport() {
   const formatDate = (date) => {
     if (!date) return null;
     return persianToEnglishNumber(
-      jMoment(formatDateObjectToNormal(date), "jYYYY-jM-jD").format("YYYY-M-D")
+      jMoment(formatDateObjectToNormal(date), "YYYY-jM-jD").format("YYYY-M-D")
     );
   };
 

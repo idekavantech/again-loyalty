@@ -36,7 +36,7 @@ import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberT
 import { updateProfile } from "@saas/stores/user/actions";
 import AddRoundedIcon from "@material-ui/icons/AddRounded";
 import { AddNoteModal } from "../../AdminShopping/containers/AdminOrder/containers/Modals/AddNoteModal";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { satisfactionTitle } from "store/constants";
 import { SelectLabelmodal } from "./modals/selectLabelmodal";
 import {
@@ -579,7 +579,7 @@ function CRMListEdit({
                   </span>
                   <span style={{ fontSize: 12 }}>
                     {englishNumberToPersianNumber(
-                      moment(comment?.created_at).format("jYYYY/jMM/jDD")
+                      moment(comment?.created_at).format("YYYY/MM/DD")
                     )}
                   </span>
                 </p>

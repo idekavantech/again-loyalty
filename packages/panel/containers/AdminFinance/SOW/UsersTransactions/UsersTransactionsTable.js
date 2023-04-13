@@ -12,9 +12,9 @@ import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberT
 
 import { withStyles } from "@material-ui/core/styles";
 import { transactionDescription } from "@saas/stores/plugins/constants";
-import moment from "moment-jalaali";
-moment.locale("fa");
-moment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+import moment from "moment";
+ 
+ 
 import TablePagination from "@material-ui/core/TablePagination";
 import useTheme from "@material-ui/core/styles/useTheme";
 import ArrowDropDownRoundedIcon from "@material-ui/icons/ArrowDropDownRounded";
@@ -110,11 +110,11 @@ function UsersTransactionsTable({
                 const jalaaliTime =
                   createdAt.getHours() + ":" + createdAt.getMinutes();
                 const jalaaliDate =
-                  createdAtFormattedDate.jYear() +
+                  createdAtFormattedDate.year() +
                   "-" +
-                  (createdAtFormattedDate.jMonth() + 1) +
+                  (createdAtFormattedDate.month() + 1) +
                   "-" +
-                  createdAtFormattedDate.jDate();
+                  createdAtFormattedDate.date();
 
                 let priceObj = {};
                 if (Math.sign(transaction.amount) === 1) {

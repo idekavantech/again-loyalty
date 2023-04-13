@@ -14,7 +14,7 @@ import { englishNumberToPersianNumber } from "utils/helpers/englishNumberToPersi
 import { makeSelectUser } from "stores/user/selector";
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined";
 import { priceFormatter } from "utils/helpers/priceFormatter";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { makeSelectBusiness } from "../../stores/global/selector";
 import Link from "next/link";
 const packages = [
@@ -70,9 +70,9 @@ const ReceiptPage = ({
   useEffect(() => {
     let date = new Date();
     setCurrentDate({
-      day: moment(date).format("jDD"),
-      month: moment(date).format("jMMMM"),
-      year: moment(date).format("jYYYY"),
+      day: moment(date).format("DD"),
+      month: moment(date).format("MMMM"),
+      year: moment(date).format("YYYY"),
       time: moment(date).format("h:mm a"),
     });
     if (transaction?.data?.duration == 365) {
@@ -80,9 +80,9 @@ const ReceiptPage = ({
     } else {
       date.setMonth(date.getMonth() + 3);
     }
-    let day = moment(date).format("jDD");
-    let month = moment(date).format("jMMMM");
-    let year = moment(date).format("jYYYY");
+    let day = moment(date).format("DD");
+    let month = moment(date).format("MMMM");
+    let year = moment(date).format("YYYY");
     setPackageDate({ day, month, year });
     if (transaction) {
       _getBusiness(transaction?.business?.site_domain);

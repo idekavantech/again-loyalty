@@ -1,17 +1,17 @@
-import jMoment from "moment-jalaali";
+import jMoment from "moment";
 
-jMoment.locale("fa");
-jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 export const getWeekDays = ["6", "7", "1", "2", "3", "4", "5"];
 const defaultMomentToDate = jMoment();
 const defaultMomentFromDate = jMoment().add(-6, "day");
 export const defaultFromDate = {
-  year: defaultMomentFromDate.jYear(),
-  month: defaultMomentFromDate.jMonth() + 1,
-  day: defaultMomentFromDate.jDate(),
+  year: defaultMomentFromDate.year(),
+  month: defaultMomentFromDate.month() + 1,
+  day: defaultMomentFromDate.date(),
 };
 export const defaultToDate = {
-  year: defaultMomentToDate.jYear(),
-  month: defaultMomentToDate.jMonth() + 1,
-  day: defaultMomentToDate.jDate(),
+  year: defaultMomentToDate.year(),
+  month: defaultMomentToDate.month() + 1,
+  day: defaultMomentToDate.date(),
 };

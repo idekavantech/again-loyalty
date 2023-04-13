@@ -1,4 +1,4 @@
-import moment from "moment-jalaali";
+import moment from "moment";
 export function isCurrentTimeAvailable(shifts) {
   const nowDate = moment();
   const day = shifts;

@@ -6,7 +6,7 @@ import Head from "next/head";
 import AdminBreadCrumb from "containers/AdminBreadCrumb";
 import Paper from "@material-ui/core/Paper";
 import DateRangePickerWrapper from "@saas/components/DateRangePickerWrapper";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { persianToEnglishNumber } from "@saas/utils/helpers/persianToEnglishNumber";
 import { exportPDFFromHTML } from "@saas/utils/helpers/exportPDFFromHTML";
 
@@ -14,8 +14,8 @@ import { generateCSVFile } from "@saas/utils/helpers/generateCSVFile";
 
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 
-moment.locale("fa");
-moment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import Checkbox from "@material-ui/core/Checkbox";
@@ -65,7 +65,7 @@ const pdf = ({ business, branches, is_super }) => {
     }-${new Date().getDate()}`,
     "YYYY-MM-DD"
   );
-  const jalaaliDate = createdAtFormattedDate.format("jYYYY/jMM/jDD");
+  const jalaaliDate = createdAtFormattedDate.format("YYYY/MM/DD");
   return {
     headerTemplate: (
       <div className="d-none">
@@ -471,11 +471,11 @@ export function AdminPurchaseFromVendorsReport({
         "YYYY-MM-DD"
       );
       const jalaaliDate =
-        createdAtFormattedDate.jYear() +
+        createdAtFormattedDate.year() +
         "-" +
-        (createdAtFormattedDate.jMonth() + 1) +
+        (createdAtFormattedDate.month() + 1) +
         "-" +
-        createdAtFormattedDate.jDate();
+        createdAtFormattedDate.date();
       const num = index + 1;
       const branch = branches?.find(
         (branch) => branch.id === report.business_id
@@ -612,7 +612,7 @@ export function AdminPurchaseFromVendorsReport({
                 }}
                 focused={focused}
                 numberOfMonths={!minWidth768 ? 1 : 2}
-                renderMonthText={(month) => moment(month).format("jMMMM jYYYY")}
+                renderMonthText={(month) => moment(month).format("MMMM YYYY")}
                 renderDayContents={(day) => moment(day).format("jD")}
                 hasSubmitButton
                 onSubmit={submitDate}
@@ -1229,11 +1229,11 @@ export function AdminPurchaseFromVendorsReport({
                         "YYYY-MM-DD"
                       );
                       const jalaaliDate =
-                        createdAtFormattedDate.jYear() +
+                        createdAtFormattedDate.year() +
                         "-" +
-                        (createdAtFormattedDate.jMonth() + 1) +
+                        (createdAtFormattedDate.month() + 1) +
                         "-" +
-                        createdAtFormattedDate.jDate();
+                        createdAtFormattedDate.date();
                       return (
                         <TableRow key={report.id}>
                           <TableCell align="center">

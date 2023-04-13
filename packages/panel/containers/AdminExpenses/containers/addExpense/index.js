@@ -12,7 +12,7 @@ import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import { useAddExpense } from "./useAddExpense";
 import { priceFormatter } from "@saas/utils/helpers/priceFormatter";
 import { MuiPickersUtilsProvider , DatePicker } from "@material-ui/pickers";
-import moment from "moment-jalaali";
+import moment from "moment";
 import JalaliUtils from "@date-io/jalaali";
 import { useResponsive } from "@saas/utils/hooks/useResponsive";
 import AdminBreadCrumb from "containers/AdminBreadCrumb";
@@ -174,7 +174,7 @@ const AddExpense = () => {
                 minTime={new Date(0, 0, 0, 9)}
                 placeholder="0000/00/00"
                 labelFunc={(date) => {
-                  return cost?.date ? date.format(" jDD jMMMM - jYYYY") : "";
+                  return cost?.date ? date.format(" DD MMMM - YYYY") : "";
                 }}
                 value={cost?.date}
                 onChange={onDataChange}

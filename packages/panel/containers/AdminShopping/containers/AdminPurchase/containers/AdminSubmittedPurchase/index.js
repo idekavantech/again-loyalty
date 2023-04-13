@@ -27,7 +27,7 @@ import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Divider from "@material-ui/core/Divider";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { ITEM_RECEIVE_REASON_RECEIVED } from "store/constants";
 import PurchaseOrderExcelExport from "containers/AdminShopping/containers/AdminPurchase/components/PurchaseOrderExcelExport";
 import PurchaseItemRow from "containers/AdminShopping/containers/AdminPurchase/containers/AdminSubmittedPurchase/PurchaseItemRow";
@@ -269,7 +269,7 @@ function AdminSubmittedPurchase({
                 <span className="u-fontWeightBold">Delivery time: </span>
                 <span>
                   {englishNumberToPersianNumber(
-                    expectedTime.format("jYYYY/jMM/jDD")
+                    expectedTime.format("YYYY/MM/DD")
                   )}
                 </span>
               </div>
@@ -277,7 +277,7 @@ function AdminSubmittedPurchase({
                 <span className="u-fontWeightBold">Register time: </span>
                 <span>
                   {englishNumberToPersianNumber(
-                    createdTime.format("jYYYY/jMM/jDD HH:mm")
+                    createdTime.format("YYYY/MM/DD HH:mm")
                   )}
                 </span>
               </div>

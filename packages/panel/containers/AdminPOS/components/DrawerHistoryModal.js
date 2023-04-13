@@ -8,7 +8,7 @@ import { priceFormatter } from "@saas/utils/helpers/priceFormatter";
 import { getMonthName } from "@saas/utils/helpers/getMonthName";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 
-import moment from "moment-jalaali";
+import moment from "moment";
 import {
   CASH_DRAWER_TYPE_CLOSED,
   CASH_DRAWER_TYPE_FINISHED,
@@ -94,9 +94,9 @@ export default function DrawerHistoryModal({
                   <>
                     <div className="mb-1">
                       {englishNumberToPersianNumber(
-                        `${createdAt.jDate()} ${getMonthName(
-                          createdAt.jMonth() + 1
-                        )} ${createdAt.jYear()} - ${createdAt.format("HH:mm")}`
+                        `${createdAt.date()} ${getMonthName(
+                          createdAt.month() + 1
+                        )} ${createdAt.year()} - ${createdAt.format("HH:mm")}`
                       )}
                     </div>
                     <div className="mb-1"> By{initializer?.name}</div>
@@ -109,9 +109,9 @@ export default function DrawerHistoryModal({
                   <>
                     <div className="mb-1">
                       {englishNumberToPersianNumber(
-                        `${finishedAt.jDate()} ${getMonthName(
-                          finishedAt.jMonth() + 1
-                        )} ${finishedAt.jYear()} - ${finishedAt.format(
+                        `${finishedAt.date()} ${getMonthName(
+                          finishedAt.month() + 1
+                        )} ${finishedAt.year()} - ${finishedAt.format(
                           "HH:mm"
                         )}`
                       )}
@@ -256,7 +256,7 @@ export default function DrawerHistoryModal({
                         className="u-fontWeightHeavy u-fontLarge"
                       >
                         {englishNumberToPersianNumber(
-                          moment(opened_at).format("jYYYY/jMM/jDD")
+                          moment(opened_at).format("YYYY/MM/DD")
                         )}{" "}
                         |{" "}
                         {englishNumberToPersianNumber(

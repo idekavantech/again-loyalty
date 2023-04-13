@@ -11,7 +11,7 @@ import Input from "@saas/components/Input";
 import AssuranceDialog from "@saas/components/AssuranceDialog";
 import { MuiPickersUtilsProvider, TimePicker } from "@material-ui/pickers";
 import JalaliUtils from "@date-io/jalaali";
-import moment from "moment-jalaali";
+import moment from "moment";
 import LoadingIndicator from "@saas/components/LoadingIndicator";
 import CRMRExpiryReminderTableDetails from "./CRMExpiryReminderTableDetails";
 import { useCampaignDetail } from "./useExpiryReminderDetail";

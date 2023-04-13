@@ -13,7 +13,7 @@ import ProductAmountController from "./ProductAmountController";
 import TomanIcon from "@saas/icons/TomanIcon";
 import DiscountedPriceView from "./DiscountPriceView";
 import VariantCard from "../VariantCard";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { useRouter } from "next/router";
 import ModifierModal from "../ModifierModal";
 import Image from "next/image";

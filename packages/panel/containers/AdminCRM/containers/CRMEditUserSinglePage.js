@@ -1,7 +1,7 @@
 /* eslint-disable no-nested-ternary */
 /* eslint-disable indent */
 import React, { memo, useState, useEffect, useMemo } from "react";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { connect } from "react-redux";
 import { compose } from "redux";
 import { createStructuredSelector } from "reselect";
@@ -424,7 +424,7 @@ function CRMEditUserSinglePage({
                   </span>
                   <span style={{ fontSize: 12 }}>
                     {englishNumberToPersianNumber(
-                      moment(comment?.created_at).format("jYYYY/jMM/jDD")
+                      moment(comment?.created_at).format("YYYY/MM/DD")
                     )}
                   </span>
                 </p>

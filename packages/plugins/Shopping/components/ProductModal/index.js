@@ -27,7 +27,7 @@ import CustomizedOrderItemCard from "@saas/components/CustomizedOrderItemCard";
 import TomanIcon from "@saas/icons/TomanIcon";
 import DiscountedPriceView from "../ProductCard2/DiscountPriceView";
 import VariantCard from "../VariantCard";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { makeSelectUrlPrefix } from "@saas/stores/plugins/selector";
 import { SHOPPING_PLUGIN_URL } from "@saas/utils/constants/plugins";
 import Chip from "@material-ui/core/Chip";

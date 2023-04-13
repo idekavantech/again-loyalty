@@ -23,7 +23,7 @@ import { satisfactionChoices, satisfactionTitle } from "store/constants";
 import FormControl from "@material-ui/core/FormControl";
 import Checkbox from "@material-ui/core/Checkbox";
 import ListItemText from "@material-ui/core/ListItemText";
-import jMoment from "moment-jalaali";
+import jMoment from "moment";
 import CloseIcon from "@material-ui/icons/Close";
 import Popover from "@material-ui/core/Popover";
 import Button from "@material-ui/core/Button";
@@ -31,8 +31,8 @@ import CustomCalendar from "@saas/components/CustomCalendar";
 import { formatDateObjectToNormal } from "../../../../utils/helpers";
 import {useCRMReport} from './useCRMReports'
 
-jMoment.locale("fa");
-jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 
 const tableHead = [
   {
@@ -620,7 +620,7 @@ const {
                       }}
                     >
                       {englishNumberToPersianNumber(
-                        jMoment(review?._created_at).format("jYYYY/jMM/jDD")
+                        jMoment(review?._created_at).format("YYYY/MM/DD")
                       )}
                     </div>
                     <div
@@ -706,7 +706,7 @@ const {
                       }}
                     >
                       {englishNumberToPersianNumber(
-                        jMoment(review?._created_at).format("jYYYY/jMM/jDD")
+                        jMoment(review?._created_at).format("YYYY/MM/DD")
                       )}
                     </div>
                     <div

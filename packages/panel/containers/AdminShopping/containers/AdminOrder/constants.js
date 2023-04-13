@@ -4,7 +4,7 @@ import { persianToEnglishNumber } from "@saas/utils/helpers/persianToEnglishNumb
 import { priceFormatter } from "@saas/utils/helpers/priceFormatter";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 
-import moment from "moment-jalaali";
+import moment from "moment";
 import CheckCircleRoundedIcon from "@material-ui/icons/CheckCircleRounded";
 import ErrorRoundedIcon from "@material-ui/icons/ErrorRounded";
 

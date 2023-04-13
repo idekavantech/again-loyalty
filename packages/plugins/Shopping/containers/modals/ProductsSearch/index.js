@@ -7,7 +7,7 @@ import React, { memo, useEffect, useRef, useState } from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { compose } from "redux";
-import moment from "moment-jalaali";
+import moment from "moment";
 import Close from "@material-ui/icons/Close";
 import {
   makeSelectBusinessThemeColor,

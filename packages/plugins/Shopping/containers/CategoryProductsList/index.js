@@ -2,7 +2,7 @@ import { useResponsive } from "@saas/utils/hooks/useResponsive";
 import { memo, useEffect, useMemo, useState } from "react";
 import DesktopProductCard from "../../components/ProductCard2/DesktopProductCard";
 import MobileProductCard from "../../components/ProductCard2/MobileProductCard";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { isCurrentTimeAvailable } from "@saas/utils/helpers/isCurrentTimeAvailable";
 
 const CategoryProductList = ({

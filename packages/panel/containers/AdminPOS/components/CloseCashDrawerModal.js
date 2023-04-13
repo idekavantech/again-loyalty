@@ -8,7 +8,7 @@ import { priceFormatter } from "@saas/utils/helpers/priceFormatter";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 
 import { text } from "@saas/utils/colors";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { useRouter } from "next/router";
 import ConfirmFinishCashDrawer from "containers/AdminPOS/components/ConfirmFinishCashDrawer";
 
@@ -147,7 +147,7 @@ export default function CloseCashDrawerModal({
               <div>Beginning time</div>
               <div>
                 {englishNumberToPersianNumber(
-                  moment(opened_at).format("jYYYY/jMM/jDD")
+                  moment(opened_at).format("YYYY/MM/DD")
                 )}
               </div>
             </div>

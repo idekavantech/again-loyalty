@@ -1,4 +1,4 @@
-import moment from "moment-jalaali";
+import moment from "moment";
 import { groupByKey } from "./groupByKey";
 import { persianToEnglishNumber } from "./persianToEnglishNumber";
 

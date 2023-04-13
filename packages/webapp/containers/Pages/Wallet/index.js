@@ -9,7 +9,7 @@ import {connect} from "react-redux";
 import Head from "next/head";
 import {createStructuredSelector} from "reselect";
 import {compose} from "redux";
-import moment from "moment-jalaali";
+import moment from "moment";
 import Button from "@material-ui/core/Button";
 import {getSelfMembership} from "@saas/stores/user/actions";
 import {
@@ -150,7 +150,7 @@ export function Wallet({
                                 >
                                     <div className="col-2 px-0">
                                         {englishNumberToPersianNumber(
-                                            moment(transaction.created_at).format("jYYYY/jM/jD")
+                                            moment(transaction.created_at).format("YYYY/jM/jD")
                                         )}
                                     </div>
                                     <div className="d-flex col-7 px-0 align-items-center justify-content-center">

@@ -3,7 +3,7 @@
 import React, { memo, useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { compose } from "redux";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { createStructuredSelector } from "reselect";
 import Button from "@material-ui/core/Button";
 import useTheme from "@material-ui/core/styles/useTheme";
@@ -77,7 +77,7 @@ const CustomDeliveryTimeModal = ({
             </div>
             <span className="u-text-medium-grey">Day: </span>
             <span className="u-text-darkest-grey">
-              {getWeekDay(moment(selectedDay, "jYYYY/jM/jD").isoWeekday())}
+              {getWeekDay(moment(selectedDay, "YYYY/jM/jD").isoWeekday())}
             </span>
           </div>
           <div className=" flex-1">

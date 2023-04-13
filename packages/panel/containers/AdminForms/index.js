@@ -29,7 +29,7 @@ import { deleteForm, getForms } from "store/actions";
 import MoreHorizRoundedIcon from "@material-ui/icons/MoreHorizRounded";
 import Menu from "@material-ui/core/Menu";
 import MenuItem from "@material-ui/core/MenuItem";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 import { useResponsive } from "@saas/utils/hooks/useResponsive";
 export function AdminForms({ urlPrefix, forms, _getForms, _deleteForm }) {
@@ -61,7 +61,7 @@ export function AdminForms({ urlPrefix, forms, _getForms, _deleteForm }) {
         return {
           ..._form,
           createdAtDate: englishNumberToPersianNumber(
-            createdTime.format("jYYYY/jMM/jDD")
+            createdTime.format("YYYY/MM/DD")
           ),
         };
       });

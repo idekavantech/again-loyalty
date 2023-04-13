@@ -64,7 +64,7 @@ import { downloaderRequest } from "@saas/utils/helpers/downloaderRequest";
 import { makeSelectUser } from "@saas/stores/user/selector";
 import { BASE_URL_V2 } from "@saas/utils/api";
 
-import jMoment from "moment-jalaali";
+import jMoment from "moment";
 import CloseIcon from "@material-ui/icons/Close";
 import Popover from "@material-ui/core/Popover";
 import Button from "@material-ui/core/Button";
@@ -73,8 +73,8 @@ import { defaultFromDate, defaultToDate } from "@saas/utils/constants/date";
 import { formatDateObjectToNormal } from "../../utils/helpers";
 
 const Map = dynamic(() => import("@saas/components/Map"), { ssr: false });
-jMoment.locale("fa");
-jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 
 let timeoutId = null;
 
@@ -128,13 +128,13 @@ export function AdminForms({
         persianToEnglishNumber(
           jMoment(
             formatDateObjectToNormal(selectedDayRange.from),
-            "jYYYY-jM-jD"
+            "YYYY-jM-jD"
           ).format("YYYY-M-D")
         ),
         persianToEnglishNumber(
           jMoment(
             formatDateObjectToNormal(selectedDayRange.to),
-            "jYYYY-jM-jD"
+            "YYYY-jM-jD"
           ).format("YYYY-M-D")
         ),
         router.query.id
@@ -148,13 +148,13 @@ export function AdminForms({
         persianToEnglishNumber(
           jMoment(
             formatDateObjectToNormal(selectedDayRange.from),
-            "jYYYY-jM-jD"
+            "YYYY-jM-jD"
           ).format("YYYY-M-D")
         ),
         persianToEnglishNumber(
           jMoment(
             formatDateObjectToNormal(selectedDayRange.to),
-            "jYYYY-jM-jD"
+            "YYYY-jM-jD"
           ).format("YYYY-M-D")
         ),
         router.query.id
@@ -169,12 +169,12 @@ export function AdminForms({
       }/export/csv/?from=${persianToEnglishNumber(
         jMoment(
           formatDateObjectToNormal(selectedDayRange.from),
-          "jYYYY-jM-jD"
+          "YYYY-jM-jD"
         ).format("YYYY-M-D")
       )}&to=${persianToEnglishNumber(
         jMoment(
           formatDateObjectToNormal(selectedDayRange.to),
-          "jYYYY-jM-jD"
+          "YYYY-jM-jD"
         ).format("YYYY-M-D")
       )}`,
     [selectedDayRange]
@@ -199,7 +199,7 @@ export function AdminForms({
         return {
           ..._response,
           createdAtDate: englishNumberToPersianNumber(
-            createdTime.format("jYYYY/jM/jD HH:mm:ss")
+            createdTime.format("YYYY/jM/jD HH:mm:ss")
           ),
         };
       });

@@ -11,7 +11,7 @@ import { exportPDFFromHTML } from "@saas/utils/helpers/exportPDFFromHTML";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 
 import { DATE } from "./constants";
-import jMoment from "moment-jalaali";
+import jMoment from "moment";
 import Paper from "@material-ui/core/Paper";
 import LoadingIndicator from "@saas/components/LoadingIndicator";
 import { getReportData } from "store/actions";
@@ -48,8 +48,8 @@ import CustomCalendar from "@saas/components/CustomCalendar";
 import { defaultFromDate, defaultToDate } from "@saas/utils/constants/date";
 import { formatDateObjectToNormal } from "../../utils/helpers";
 
-jMoment.locale("fa");
-jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 
 const AdminReportBuilder = ({
   reportsData,
@@ -101,13 +101,13 @@ const AdminReportBuilder = ({
         persianToEnglishNumber(
           jMoment(
             formatDateObjectToNormal(selectedDayRange.from),
-            "jYYYY-jM-jD"
+            "YYYY-jM-jD"
           ).format("YYYY-M-D")
         ),
         persianToEnglishNumber(
           jMoment(
             formatDateObjectToNormal(selectedDayRange.to),
-            "jYYYY-jM-jD"
+            "YYYY-jM-jD"
           ).format("YYYY-M-D")
         ),
         request.type,
@@ -178,11 +178,11 @@ const AdminReportBuilder = ({
             "YYYY-MM-DD"
           );
           const jalaaliDate =
-            currentFormattedDate.jYear() +
+            currentFormattedDate.year() +
             "-" +
-            (currentFormattedDate.jMonth() + 1) +
+            (currentFormattedDate.month() + 1) +
             "-" +
-            currentFormattedDate.jDate();
+            currentFormattedDate.date();
           if (data.id) {
             const newRow = _columns.map((column) => {
               const isColumnMultiField = Array.isArray(column.uniqe_name);
@@ -300,11 +300,11 @@ const AdminReportBuilder = ({
           "YYYY-MM-DD"
         );
         const formattedDate =
-          itemJalaaliFormat.jYear() +
+          itemJalaaliFormat.year() +
           "-" +
-          (itemJalaaliFormat.jMonth() + 1) +
+          (itemJalaaliFormat.month() + 1) +
           "-" +
-          itemJalaaliFormat.jDate();
+          itemJalaaliFormat.date();
         return englishNumberToPersianNumber(formattedDate);
       }) || []
     );
@@ -536,11 +536,11 @@ const AdminReportBuilder = ({
               : null,
             from_date: jMoment(
               formatDateObjectToNormal(selectedDayRange.from),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ),
             to_date: jMoment(
               formatDateObjectToNormal(selectedDayRange.to),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ),
           })
         : {},

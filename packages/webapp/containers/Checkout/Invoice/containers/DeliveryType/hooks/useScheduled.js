@@ -32,7 +32,7 @@ export const useScheduled = (selectedDeliveryMethod, _today, moment) => {
               moment()
                 .add(scheduledDeliveryDaysShownNumber, "day")
                 .locale("fa")
-                .format("jYYYY/jM/jD")
+                .format("YYYY/jM/jD")
             )
           )
       );
@@ -46,7 +46,7 @@ export const useScheduled = (selectedDeliveryMethod, _today, moment) => {
           date.date === selectedDayForDeliveryScheduled &&
           date.shifts.map((shift) => {
             if (
-              Date.parse(moment().format("jYYYY/jM/jD HH:mm")) <
+              Date.parse(moment().format("YYYY/jM/jD HH:mm")) <
               Date.parse(
                 `${selectedDayForDeliveryScheduled} ${shift.to.substr(0, 5)}`
               )
@@ -64,11 +64,11 @@ export const useScheduled = (selectedDeliveryMethod, _today, moment) => {
       return {
         from_time: moment(
           `${selectedDayForDeliveryScheduled} ${selectedTimeForDeliveryScheduled.from}`,
-          "jYYYY/jM/jD HH:mm"
+          "YYYY/jM/jD HH:mm"
         ).unix(),
         to_time: moment(
           `${selectedDayForDeliveryScheduled} ${selectedTimeForDeliveryScheduled.to}`,
-          "jYYYY/jM/jD HH:mm"
+          "YYYY/jM/jD HH:mm"
         ).unix(),
       };
     } else {

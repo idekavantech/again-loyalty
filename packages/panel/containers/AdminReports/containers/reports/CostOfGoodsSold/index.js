@@ -10,7 +10,7 @@ import { compose } from "redux";
 import Head from "next/head";
 import AdminBreadCrumb from "containers/AdminBreadCrumb";
 import Paper from "@material-ui/core/Paper";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { priceFormatter } from "@saas/utils/helpers/priceFormatter";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 import CloseIcon from "@material-ui/icons/Close";
@@ -37,8 +37,8 @@ import { formatDateObjectToNormal } from "../../../../../utils/helpers";
 import CustomCalendar from "@saas/components/CustomCalendar";
 import { defaultFromDate, defaultToDate } from "@saas/utils/constants/date";
 
-moment.locale("fa");
-moment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 
 const branches = [
   { id: 1, title: "Branch 1" },

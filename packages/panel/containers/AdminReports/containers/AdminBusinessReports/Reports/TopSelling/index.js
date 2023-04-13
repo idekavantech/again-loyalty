@@ -7,7 +7,7 @@ import React, {memo, useEffect, useState} from "react";
 import {connect} from "react-redux";
 import {createStructuredSelector} from "reselect";
 import {compose} from "redux";
-import jMoment from "moment-jalaali";
+import jMoment from "moment";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
 import TableCell from "@material-ui/core/TableCell";
@@ -36,7 +36,7 @@ import CustomCalendar from "@saas/components/CustomCalendar";
 import {formatDateObjectToNormal} from "../../../../../../utils/helpers";
 
 
-jMoment.locale("fa");
+ 
 jMoment.loadPersian({dialect: "persian-modern", usePersianDigits: true});
 
 const $ = `/images/$.svg`;
@@ -79,13 +79,13 @@ export function AdminTopSellingReport({
             persianToEnglishNumber(
                 jMoment(
                     formatDateObjectToNormal(selectedDayRange.from),
-                    "jYYYY-jM-jD"
+                    "YYYY-jM-jD"
                 ).format("YYYY-M-D")
             ),
             persianToEnglishNumber(
                 jMoment(
                     formatDateObjectToNormal(selectedDayRange.to),
-                    "jYYYY-jM-jD"
+                    "YYYY-jM-jD"
                 ).format("YYYY-M-D")
             ),
             countOfTopSelling

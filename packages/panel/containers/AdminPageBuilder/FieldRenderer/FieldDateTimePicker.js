@@ -19,7 +19,7 @@ const FieldDateTimePicker = ({ setDisable, setValue, value }) => {
           label="The discount time"
           minTime={new Date(0, 0, 0, 9)}
           labelFunc={(date) =>
-            date ? date.format("jYYYY/jMM/jDD hh:mm:ss a") : ""
+            date ? date.format("YYYY/MM/DD hh:mm:ss a") : ""
           }
           value={value}
           onChange={(date) => {

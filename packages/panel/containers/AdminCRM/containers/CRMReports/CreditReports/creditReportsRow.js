@@ -1,9 +1,9 @@
 import TableRow from "@material-ui/core/TableRow";
 import { memo } from "react";
-import jMoment from "moment-jalaali";
+import jMoment from "moment";
 
-jMoment.locale("fa");
-jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 
 function CreditReportRow(props) {
   const { reportRow, tableHeaders } = props;

@@ -20,7 +20,7 @@ import { getCrmSegments } from "store/actions";
 import { makeSelectCrmSegments } from "store/selectors";
 import { makeSelectLoading } from "@saas/stores/global/selectors";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { useCRMSegments } from "./useCRMSegments";
 import AssuranceDialog from "@saas/components/AssuranceDialog";
 import IconButton from "@material-ui/core/IconButton";
@@ -210,7 +210,7 @@ function CRMSegments() {
                       style={{ fontSize: "16px", fontWeight: 600 }}
                     >
                       {englishNumberToPersianNumber(
-                        moment(segment?.created_at).format("jYYYY/jMM/jDD")
+                        moment(segment?.created_at).format("YYYY/MM/DD")
                       )}
                     </TableCell>
                     <TableCell

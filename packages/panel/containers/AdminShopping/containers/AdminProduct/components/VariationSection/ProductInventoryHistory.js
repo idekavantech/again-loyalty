@@ -24,7 +24,7 @@ import { makeSelectBranches } from "@saas/stores/business/selector";
 import { makeSelectDealReport } from "store/selectors";
 import LoadingIndicator from "@saas/components/LoadingIndicator";
 import { getProductReport } from "store/actions";
-import moment from "moment-jalaali";
+import moment from "moment";
 
 function ProductInventoryHistory({
   isOpen,
@@ -409,9 +409,9 @@ function ProductInventoryHistory({
                           scope="row"
                         >
                           {englishNumberToPersianNumber(
-                            `${timestamp.jDate()} ${getMonthName(
-                              timestamp.jMonth() + 1
-                            )} ${timestamp.jYear()} - ${`0${date.getHours()}`.slice(
+                            `${timestamp.date()} ${getMonthName(
+                              timestamp.month() + 1
+                            )} ${timestamp.year()} - ${`0${date.getHours()}`.slice(
                               -2
                             )}:${`0${date.getMinutes()}`.slice(-2)}`
                           )}

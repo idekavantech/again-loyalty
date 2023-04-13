@@ -19,9 +19,9 @@ import TableRow from "@material-ui/core/TableRow";
 import { makeSelectLoading } from "@saas/stores/global/selectors";
 import Skeleton from "@material-ui/lab/Skeleton";
 import { makeSelectAdminUrlPrefix } from "@saas/stores/plugins/selector";
-import moment from "moment-jalaali";
-moment.locale("fa");
-moment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+import moment from "moment";
+ 
+ 
 import Checkbox from "@material-ui/core/Checkbox";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import { pollution, text } from "@saas/utils/colors";

@@ -2,7 +2,7 @@ import React, { memo } from "react";
 
 import { getDifferenceBetweenTwoTimes } from "@saas/utils/helpers/getDifferenceBetweenTwoTimes";
 
-import moment from "moment-jalaali";
+import moment from "moment";
 import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import FormControl from "@material-ui/core/FormControl";
@@ -98,7 +98,7 @@ function PreOrderForm({
                 return;
               }
               if (
-                Date.parse(moment().format("jYYYY/jM/jD HH:mm")) >
+                Date.parse(moment().format("YYYY/jM/jD HH:mm")) >
                   Date.parse(`${today} ${timeRange.value}`) &&
                 selectedDayForDeliveryPreOrder === today
               ) {

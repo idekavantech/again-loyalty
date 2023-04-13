@@ -90,7 +90,7 @@ function ScheduledTimeSelectDrawer({
                       borderRadius: 8,
                     }}
                   >
-                    {date.date === today?.format("jYYYY/jM/jD")
+                    {date.date === today?.format("YYYY/jM/jD")
                       ? "امروز"
                       : getWeekDay(date.weekDay)}
                     ،{"  "}

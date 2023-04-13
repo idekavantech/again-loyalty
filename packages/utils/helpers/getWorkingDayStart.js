@@ -1,4 +1,4 @@
-import moment from "moment-jalaali";
+import moment from "moment";
 import { getNextWorkingDayStart } from "./getNextWorkingDayStart";
 import { persianToEnglishNumber } from "./persianToEnglishNumber";
 

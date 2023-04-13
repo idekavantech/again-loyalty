@@ -74,7 +74,7 @@ import { useAddressDetailsField } from "containers/Checkout/Invoice/containers/D
 import { useDelivery } from "containers/Checkout/Invoice/containers/DeliveryType/hooks/useDelivery";
 import Styles from "containers/Checkout/Invoice/containers/DeliveryType/components/Styles";
 
-import moment from "moment-jalaali";
+import moment from "moment";
 import Paper from "@material-ui/core/Paper";
 import Divider from "@material-ui/core/Divider";
 import useTheme from "@material-ui/core/styles/useTheme";
@@ -112,8 +112,8 @@ function DeliveryType({
   const { popupHTML } = usePop(nextDay);
   const _today = moment();
   const _tomorrow = moment().add(1, "day");
-  const today = _today.format("jYYYY/jM/jD");
-  const tomorrow = _tomorrow.format("jYYYY/jM/jD");
+  const today = _today.format("YYYY/jM/jD");
+  const tomorrow = _tomorrow.format("YYYY/jM/jD");
 
   const deliveryTimingElementRef = useRef();
 

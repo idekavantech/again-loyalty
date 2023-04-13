@@ -30,7 +30,7 @@ import {
   TimePicker,
 } from "@material-ui/pickers";
 import JalaliUtils from "@date-io/jalaali";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { textTypes } from "@saas/utils/colors";
 import LoadingIndicator from "@saas/components/LoadingIndicator";
 import CRMRCampaignTableDetails from "./CRMRCampaignTableDetails";
@@ -549,7 +549,7 @@ function CRMCampaignDetails() {
                       placeholder="00/00/00"
                       labelFunc={(date) => {
                         return campaignDetail.periodic_task?.start_time
-                          ? date.format("jYYYY/jMM/jDD   HH:mm ")
+                          ? date.format("YYYY/MM/DD   HH:mm ")
                           : "";
                       }}
                       value={campaignDetail.periodic_task?.start_time}

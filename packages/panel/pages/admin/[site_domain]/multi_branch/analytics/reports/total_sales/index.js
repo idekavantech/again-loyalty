@@ -14,10 +14,10 @@ import {
 import { BRANCHES_TRANSACTIONS_REPORT_TYPE } from "@saas/stores/global/constants";
 import { NEW_TRANSACTION_API } from "@saas/utils/api";
 
-import moment from "moment-jalaali";
+import moment from "moment";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
-moment.locale("fa");
-moment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 const reportConfig = {
   is_multibranch: true,
   has_date_picker: true,
@@ -44,7 +44,7 @@ const reportConfig = {
       }-${new Date().getDate()}`,
       "YYYY-MM-DD"
     );
-    const jalaaliDate = createdAtFormattedDate.format("jYYYY/jMM/jDD");
+    const jalaaliDate = createdAtFormattedDate.format("YYYY/MM/DD");
     return {
       headerTemplate: (
         <div
@@ -102,8 +102,8 @@ const reportConfig = {
                 flex: 1,
               }}
             >
-              from{from_date.format("jYYYY/jMM/jDD")} - Up to date{" "}
-              {to_date.format("jYYYY/jMM/jDD")}
+              from{from_date.format("YYYY/MM/DD")} - Up to date{" "}
+              {to_date.format("YYYY/MM/DD")}
             </div>
             <div
               style={{

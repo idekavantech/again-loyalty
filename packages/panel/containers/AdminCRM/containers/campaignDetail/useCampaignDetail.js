@@ -28,7 +28,7 @@ import {
   setCrmSegment,
 } from "store/actions";
 import { useRouter } from "next/router";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { useDispatch, useSelector } from "react-redux";
 import { makeSelectLoading } from "@saas/stores/global/selectors";
 import { GET_CAMPAIGN_BY_ID } from "store/constants";

@@ -18,7 +18,7 @@ import { generateCSVFile } from "@saas/utils/helpers/generateCSVFile";
 
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 
-import jMoment from "moment-jalaali";
+import jMoment from "moment";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import Checkbox from "@material-ui/core/Checkbox";
@@ -73,8 +73,8 @@ import CustomCalendar from "@saas/components/CustomCalendar";
 import { defaultFromDate, defaultToDate } from "@saas/utils/constants/date";
 import { formatDateObjectToNormal } from "../../../../../utils/helpers";
 
-jMoment.locale("fa");
-jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 const pdf = ({ business, branches, is_super }) => {
   const createdAtFormattedDate = jMoment(
     `${new Date().getFullYear()}-${
@@ -82,7 +82,7 @@ const pdf = ({ business, branches, is_super }) => {
     }-${new Date().getDate()}`,
     "YYYY-MM-DD"
   );
-  const jalaaliDate = createdAtFormattedDate.format("jYYYY/jMM/jDD");
+  const jalaaliDate = createdAtFormattedDate.format("YYYY/MM/DD");
   return {
     headerTemplate: (
       <div className="d-none">
@@ -429,13 +429,13 @@ export function AdminPurchaseByIngredientsReport({
             from_date: persianToEnglishNumber(
               jMoment(
                 formatDateObjectToNormal(selectedDayRange.from),
-                "jYYYY-jM-jD"
+                "YYYY-jM-jD"
               ).format("YYYY-M-D")
             ),
             to_date: persianToEnglishNumber(
               jMoment(
                 formatDateObjectToNormal(selectedDayRange.to),
-                "jYYYY-jM-jD"
+                "YYYY-jM-jD"
               ).format("YYYY-M-D")
             ),
           });
@@ -451,13 +451,13 @@ export function AdminPurchaseByIngredientsReport({
           from_date: persianToEnglishNumber(
             jMoment(
               formatDateObjectToNormal(selectedDayRange.from),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           ),
           to_date: persianToEnglishNumber(
             jMoment(
               formatDateObjectToNormal(selectedDayRange.to),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           ),
         });
@@ -476,13 +476,13 @@ export function AdminPurchaseByIngredientsReport({
             from_date: persianToEnglishNumber(
               jMoment(
                 formatDateObjectToNormal(selectedDayRange.from),
-                "jYYYY-jM-jD"
+                "YYYY-jM-jD"
               ).format("YYYY-M-D")
             ),
             to_date: persianToEnglishNumber(
               jMoment(
                 formatDateObjectToNormal(selectedDayRange.to),
-                "jYYYY-jM-jD"
+                "YYYY-jM-jD"
               ).format("YYYY-M-D")
             ),
           });
@@ -498,13 +498,13 @@ export function AdminPurchaseByIngredientsReport({
           from_date: persianToEnglishNumber(
             jMoment(
               formatDateObjectToNormal(selectedDayRange.from),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           ),
           to_date: persianToEnglishNumber(
             jMoment(
               formatDateObjectToNormal(selectedDayRange.to),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           ),
         });
@@ -597,11 +597,11 @@ export function AdminPurchaseByIngredientsReport({
             "YYYY-MM-DD"
           );
           const jalaaliDate =
-            createdAtFormattedDate.jYear() +
+            createdAtFormattedDate.year() +
             "-" +
-            (createdAtFormattedDate.jMonth() + 1) +
+            (createdAtFormattedDate.month() + 1) +
             "-" +
-            createdAtFormattedDate.jDate();
+            createdAtFormattedDate.date();
 
           const num = index + 1;
           const sku = report.sku;
@@ -1484,11 +1484,11 @@ export function AdminPurchaseByIngredientsReport({
                           "YYYY-MM-DD"
                         );
                         const jalaaliDate =
-                          createdAtFormattedDate.jYear() +
+                          createdAtFormattedDate.year() +
                           "-" +
-                          (createdAtFormattedDate.jMonth() + 1) +
+                          (createdAtFormattedDate.month() + 1) +
                           "-" +
-                          createdAtFormattedDate.jDate();
+                          createdAtFormattedDate.date();
                         return (
                           <TableRow key={report.id}>
                             <TableCell align="center">

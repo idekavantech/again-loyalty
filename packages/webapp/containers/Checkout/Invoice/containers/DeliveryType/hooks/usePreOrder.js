@@ -28,12 +28,12 @@ export const usePreOrder = (
   const availableTimeRangeForTodayDeliveryPreOrder = useMemo(() => {
     return preOrderTimeRanges.filter(
       (timeRange) =>
-        Date.parse(moment().format("jYYYY/jM/jD HH:mm")) <
+        Date.parse(moment().format("YYYY/jM/jD HH:mm")) <
           Date.parse(`${today} ${timeRange.value}`) &&
         isBusinessOpenNow(
           workingHours,
           Date.parse(
-            `${moment(today, "jYYYY/jM/jD").format("YYYY-M-D")} ${
+            `${moment(today, "YYYY/jM/jD").format("YYYY-M-D")} ${
               timeRange.value
             }`
           )
@@ -45,7 +45,7 @@ export const usePreOrder = (
       isBusinessOpenNow(
         workingHours,
         Date.parse(
-          `${moment(tomorrow, "jYYYY/jM/jD").format("YYYY-M-D")} ${
+          `${moment(tomorrow, "YYYY/jM/jD").format("YYYY-M-D")} ${
             timeRange.value
           }`
         )
@@ -60,12 +60,12 @@ export const usePreOrder = (
       return {
         from_time: moment(
           `${convertedToEnglishDay} ${selectedTimeForDeliveryPreOrder}`,
-          "jYYYY/jM/jD HH:mm"
+          "YYYY/jM/jD HH:mm"
         ).unix(),
         to_time:
           moment(
             `${convertedToEnglishDay} ${selectedTimeForDeliveryPreOrder}`,
-            "jYYYY/jM/jD HH:mm"
+            "YYYY/jM/jD HH:mm"
           ).unix() +
           30 * 60,
       };

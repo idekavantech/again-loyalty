@@ -4,7 +4,7 @@ import LoadingIndicator from "@saas/components/LoadingIndicator";
 import { textTypes } from "@saas/utils/colors";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { isCurrentTimeAvailable } from "@saas/utils/helpers/isCurrentTimeAvailable";
-import moment from "moment-jalaali";
+import moment from "moment";
 
 export default function DealsPresentation({
   categories,

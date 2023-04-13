@@ -3,7 +3,7 @@ import ListItem from "@material-ui/core/ListItem";
 import { purchaseLogStatusOptions } from "store/constants";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 import ListItemText from "@material-ui/core/ListItemText";
-import moment from "moment-jalaali";
+import moment from "moment";
 
 export default function PurchaseOrderExcelExport({ purchase }) {
   const expectedDate = new Date(purchase.expected_date_to_receive);
@@ -57,7 +57,7 @@ export default function PurchaseOrderExcelExport({ purchase }) {
           ["Phone number", purchase.submitter_business.phone],
           [
             "Delivery time",
-            englishNumberToPersianNumber(expectedTime.format("jYYYY/jMM/jDD")),
+            englishNumberToPersianNumber(expectedTime.format("YYYY/MM/DD")),
           ],
           ["notes", purchase.description],
           ["email", purchase.submitter_business.email],

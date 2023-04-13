@@ -11,7 +11,7 @@ import Head from "next/head";
 import AdminBreadCrumb from "containers/AdminBreadCrumb";
 import Paper from "@material-ui/core/Paper";
 import CloseIcon from "@material-ui/icons/Close";
-import jMoment from "moment-jalaali";
+import jMoment from "moment";
 import Button from "@material-ui/core/Button";
 import Popover from "@material-ui/core/Popover";
 import { priceFormatter } from "@saas/utils/helpers/priceFormatter";
@@ -42,8 +42,8 @@ import { defaultFromDate, defaultToDate } from "@saas/utils/constants/date";
 import { formatDateObjectToNormal } from "../../../../../utils/helpers";
 import CustomCalendar from "@saas/components/CustomCalendar";
 
-jMoment.locale("fa");
-jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 const branches = [
   { id: 1, title: "Branch 1" },
   { id: 2, title: "Branch 1" },

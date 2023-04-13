@@ -5,7 +5,7 @@ import LoadingIndicator from "@saas/components/LoadingIndicator";
 import { getDifferenceBetweenTwoTimes } from "@saas/utils/helpers/getDifferenceBetweenTwoTimes";
 import { coal, night } from "@saas/utils/colors";
 
-import moment from "moment-jalaali";
+import moment from "moment";
 import Paper from "@material-ui/core/Paper";
 import CancelRoundedIcon from "@material-ui/icons/CancelRounded";
 import Divider from "@material-ui/core/Divider";
@@ -132,7 +132,7 @@ function PreorderTimeSelectDrawer({
                   return;
                 }
                 if (
-                  Date.parse(moment().format("jYYYY/jM/jD HH:mm")) >
+                  Date.parse(moment().format("YYYY/jM/jD HH:mm")) >
                     Date.parse(`${todayPreOrder} ${timeRange.value}`) &&
                   selectedDayForDeliveryPreOrder === todayPreOrder
                 ) {

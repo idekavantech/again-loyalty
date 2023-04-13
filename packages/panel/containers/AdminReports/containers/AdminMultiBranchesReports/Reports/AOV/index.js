@@ -8,7 +8,7 @@ import {connect} from "react-redux";
 import {createStructuredSelector} from "reselect";
 import {compose} from "redux";
 import "jspdf-autotable";
-import jMoment from "moment-jalaali";
+import jMoment from "moment";
 import {makeSelectBranches} from "@saas/stores/business/selector";
 
 import Table from "@material-ui/core/Table";
@@ -58,7 +58,7 @@ import CustomCalendar from "@saas/components/CustomCalendar";
 import {formatDateObjectToNormal} from "../../../../../../utils/helpers";
 
 
-jMoment.locale("fa");
+ 
 jMoment.loadPersian({dialect: "persian-modern", usePersianDigits: true});
 
 const $ = `/images/$.svg`;
@@ -101,13 +101,13 @@ export function AdminAovReport({
             persianToEnglishNumber(
                 jMoment(
                     formatDateObjectToNormal(selectedDayRange.from),
-                    "jYYYY-jM-jD"
+                    "YYYY-jM-jD"
                 ).format("YYYY-M-D")
             ),
             persianToEnglishNumber(
                 jMoment(
                     formatDateObjectToNormal(selectedDayRange.to),
-                    "jYYYY-jM-jD"
+                    "YYYY-jM-jD"
                 ).format("YYYY-M-D")
             ),
             BRANCHES_ORDERS_REPORT_TYPE,
@@ -119,13 +119,13 @@ export function AdminAovReport({
             persianToEnglishNumber(
                 jMoment(
                     formatDateObjectToNormal(selectedDayRange.from),
-                    "jYYYY-jM-jD"
+                    "YYYY-jM-jD"
                 ).format("YYYY-M-D")
             ),
             persianToEnglishNumber(
                 jMoment(
                     formatDateObjectToNormal(selectedDayRange.to),
-                    "jYYYY-jM-jD"
+                    "YYYY-jM-jD"
                 ).format("YYYY-M-D")
             ),
             BRANCHES_TRANSACTIONS_REPORT_TYPE,
@@ -181,11 +181,11 @@ export function AdminAovReport({
                     "YYYY-MM-DD"
                 );
                 const jalaaliDate =
-                    currentFormattedDate.jYear() +
+                    currentFormattedDate.year() +
                     "-" +
-                    (currentFormattedDate.jMonth() + 1) +
+                    (currentFormattedDate.month() + 1) +
                     "-" +
-                    currentFormattedDate.jDate();
+                    currentFormattedDate.date();
                 if (transaction[TOTAL_PAYMENTS]) {
                     const newRow = [
                         {
@@ -382,11 +382,11 @@ export function AdminAovReport({
                         "YYYY-MM-DD"
                     );
                     const formattedDate =
-                        transactionJalaaliFormat.jYear() +
+                        transactionJalaaliFormat.year() +
                         "-" +
-                        (transactionJalaaliFormat.jMonth() + 1) +
+                        (transactionJalaaliFormat.month() + 1) +
                         "-" +
-                        transactionJalaaliFormat.jDate();
+                        transactionJalaaliFormat.date();
                     return englishNumberToPersianNumber(formattedDate);
                 })
                 : [],

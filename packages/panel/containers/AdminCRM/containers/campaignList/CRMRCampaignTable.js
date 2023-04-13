@@ -26,7 +26,7 @@ import Switch from "@saas/components/Switch";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 import { actionTypes } from "containers/AdminCRM/constants";
 import { useCampaignDetail } from "./useCampaignList";
-import moment from "moment-jalaali";
+import moment from "moment";
 
 const tableHead = [
   {
@@ -305,7 +305,7 @@ function CRMRCampaignTable() {
                     }}
                   >
                     {englishNumberToPersianNumber(
-                      moment(item?.created_at).format("jYYYY/jMM/jDD")
+                      moment(item?.created_at).format("YYYY/MM/DD")
                     )}
                   </div>
                   <div

@@ -22,7 +22,7 @@ import { priceFormatter } from "@saas/utils/helpers/priceFormatter";
 import { getMonthName } from "@saas/utils/helpers/getMonthName";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 
-import moment from "moment-jalaali";
+import moment from "moment";
 import { makeSelectBranches } from "@saas/stores/business/selector";
 import { orderStatus } from "@saas/plugins/Shopping/containers/Orders";
 import { paymentTypeOptions } from "store/constants";
@@ -143,9 +143,9 @@ const OrderTransactionsDrawer = ({
                       className="mt-2 mb-4"
                     >
                       {englishNumberToPersianNumber(
-                        `${submittedAt.jDate()} ${getMonthName(
-                          submittedAt.jMonth() + 1
-                        )} ${submittedAt.jYear()} - ${`0${date.getHours()}`.slice(
+                        `${submittedAt.date()} ${getMonthName(
+                          submittedAt.month() + 1
+                        )} ${submittedAt.year()} - ${`0${date.getHours()}`.slice(
                           -2
                         )}:${`0${date.getMinutes()}`.slice(-2)}`
                       )}
@@ -262,9 +262,9 @@ const OrderTransactionsDrawer = ({
                           className="mt-1 u-fontNormal"
                         >
                           {englishNumberToPersianNumber(
-                            `${createdAt.jDate()} ${getMonthName(
-                              createdAt.jMonth() + 1
-                            )} ${createdAt.jYear()} - ${`0${date.getHours()}`.slice(
+                            `${createdAt.date()} ${getMonthName(
+                              createdAt.month() + 1
+                            )} ${createdAt.year()} - ${`0${date.getHours()}`.slice(
                               -2
                             )}:${`0${date.getMinutes()}`.slice(-2)}`
                           )}

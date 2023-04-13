@@ -1,4 +1,4 @@
-import moment from "moment-jalaali";
+import moment from "moment";
 import {
   ALO_PEYK,
   FULFILLMENT_CARRY_OUT,
@@ -24,8 +24,8 @@ import { jungleI, oceanII, strawberryII } from "@saas/utils/colors";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 
 
-moment.locale("fa");
-moment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 
 export const IS_EDITED_ORDER_QUERY_KEY = "is_edited";
 export const PAGE_QUERY_KEY = "page";
@@ -516,7 +516,7 @@ export const pdf = ({ business, branches, from_date, to_date }) => {
     }-${new Date().getDate()}`,
     "YYYY-MM-DD"
   );
-  const jalaaliDate = createdAtFormattedDate.format("jYYYY/jMM/jDD");
+  const jalaaliDate = createdAtFormattedDate.format("YYYY/MM/DD");
   return {
     headerTemplate: (
       <div
@@ -574,8 +574,8 @@ export const pdf = ({ business, branches, from_date, to_date }) => {
               flex: 1,
             }}
           >
-            from{from_date?.format("jYYYY/jMM/jDD")} - Up to date{" "}
-            {to_date?.format("jYYYY/jMM/jDD")}
+            from{from_date?.format("YYYY/MM/DD")} - Up to date{" "}
+            {to_date?.format("YYYY/MM/DD")}
           </div>
           <div
             style={{

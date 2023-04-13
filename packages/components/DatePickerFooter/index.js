@@ -2,9 +2,9 @@ import React from "react";
 import { Button, Checkbox, FormControlLabel } from "@material-ui/core";
 import { dust } from "@saas/utils/colors";
 
-import jMoment from "moment-jalaali";
-jMoment.locale("fa");
-jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+import jMoment from "moment";
+ 
+ 
 
 function DatePickerFooter({
   submitDate,
@@ -30,9 +30,9 @@ function DatePickerFooter({
             style={{ boxShadow: "none" }}
             onClick={() => {
               const startDate = {
-                year: jMoment().jYear(),
-                month: jMoment().jMonth() + 1,
-                day: jMoment().jDate(),
+                year: jMoment().year(),
+                month: jMoment().month() + 1,
+                day: jMoment().date(),
               };
               handleSelectedRangeDayChange(startDate, startDate);
             }}
@@ -48,15 +48,15 @@ function DatePickerFooter({
             onClick={() => {
               const momentStartDate = jMoment().startOf("week");
               const startDate = {
-                year: momentStartDate.jYear(),
-                month: momentStartDate.jMonth() + 1,
-                day: momentStartDate.jDate(),
+                year: momentStartDate.year(),
+                month: momentStartDate.month() + 1,
+                day: momentStartDate.date(),
               };
               const momentEndDate = jMoment().endOf("week");
               const endDate = {
-                year: momentEndDate.jYear(),
-                month: momentEndDate.jMonth() + 1,
-                day: momentEndDate.jDate(),
+                year: momentEndDate.year(),
+                month: momentEndDate.month() + 1,
+                day: momentEndDate.date(),
               };
               handleSelectedRangeDayChange(startDate, endDate);
             }}
@@ -70,17 +70,17 @@ function DatePickerFooter({
             variant="contained"
             style={{ boxShadow: "none" }}
             onClick={() => {
-              const momentStartDate = jMoment().startOf("jMonth");
+              const momentStartDate = jMoment().startOf("month");
               const startDate = {
-                year: momentStartDate.jYear(),
-                month: momentStartDate.jMonth() + 1,
-                day: momentStartDate.jDate(),
+                year: momentStartDate.year(),
+                month: momentStartDate.month() + 1,
+                day: momentStartDate.date(),
               };
-              const momentEndDate = jMoment().endOf("jMonth");
+              const momentEndDate = jMoment().endOf("month");
               const endDate = {
-                year: momentEndDate.jYear(),
-                month: momentEndDate.jMonth() + 1,
-                day: momentEndDate.jDate(),
+                year: momentEndDate.year(),
+                month: momentEndDate.month() + 1,
+                day: momentEndDate.date(),
               };
               handleSelectedRangeDayChange(startDate, endDate);
             }}
@@ -95,14 +95,14 @@ function DatePickerFooter({
             style={{ boxShadow: "none" }}
             onClick={() => {
               const startDate = {
-                year: jMoment().add(-7, "day").jYear(),
-                month: jMoment().add(-7, "day").jMonth() + 1,
-                day: jMoment().add(-7, "day").jDate(),
+                year: jMoment().add(-7, "day").year(),
+                month: jMoment().add(-7, "day").month() + 1,
+                day: jMoment().add(-7, "day").date(),
               };
               const endDate = {
-                year: jMoment().jYear(),
-                month: jMoment().jMonth() + 1,
-                day: jMoment().jDate(),
+                year: jMoment().year(),
+                month: jMoment().month() + 1,
+                day: jMoment().date(),
               };
               handleSelectedRangeDayChange(startDate, endDate);
             }}
@@ -117,9 +117,9 @@ function DatePickerFooter({
             style={{ boxShadow: "none" }}
             onClick={() => {
               const startDate = {
-                year: jMoment().add(-1, "day").jYear(),
-                month: jMoment().add(-1, "day").jMonth() + 1,
-                day: jMoment().add(-1, "day").jDate(),
+                year: jMoment().add(-1, "day").year(),
+                month: jMoment().add(-1, "day").month() + 1,
+                day: jMoment().add(-1, "day").date(),
               };
               handleSelectedRangeDayChange(startDate, startDate);
             }}
@@ -135,15 +135,15 @@ function DatePickerFooter({
             onClick={() => {
               const momentStartDate = jMoment().add(-7, "day").startOf("week");
               const startDate = {
-                year: momentStartDate.jYear(),
-                month: momentStartDate.jMonth() + 1,
-                day: momentStartDate.jDate(),
+                year: momentStartDate.year(),
+                month: momentStartDate.month() + 1,
+                day: momentStartDate.date(),
               };
               const momentEndDate = jMoment().add(-7, "day").endOf("week");
               const endDate = {
-                year: momentEndDate.jYear(),
-                month: momentEndDate.jMonth() + 1,
-                day: momentEndDate.jDate(),
+                year: momentEndDate.year(),
+                month: momentEndDate.month() + 1,
+                day: momentEndDate.date(),
               };
               handleSelectedRangeDayChange(startDate, endDate);
             }}
@@ -158,24 +158,24 @@ function DatePickerFooter({
             style={{ boxShadow: "none" }}
             onClick={() => {
               const lastDayOfPreviousMonth = jMoment()
-                .startOf("jMonth")
+                .startOf("month")
                 .add(-1, "day");
 
               const momentStartDate = lastDayOfPreviousMonth
                 .clone()
-                .startOf("jMonth");
+                .startOf("month");
               const startDate = {
-                year: momentStartDate.jYear(),
-                month: momentStartDate.jMonth() + 1,
-                day: momentStartDate.jDate(),
+                year: momentStartDate.year(),
+                month: momentStartDate.month() + 1,
+                day: momentStartDate.date(),
               };
               const momentEndDate = lastDayOfPreviousMonth
                 .clone()
-                .endOf("jMonth");
+                .endOf("month");
               const endDate = {
-                year: momentEndDate.jYear(),
-                month: momentEndDate.jMonth() + 1,
-                day: momentEndDate.jDate(),
+                year: momentEndDate.year(),
+                month: momentEndDate.month() + 1,
+                day: momentEndDate.date(),
               };
               handleSelectedRangeDayChange(startDate, endDate);
             }}
@@ -191,14 +191,14 @@ function DatePickerFooter({
             onClick={() => {
               const _startDate = jMoment().add(-30, "day");
               const startDate = {
-                year: _startDate.jYear(),
-                month: _startDate.jMonth() + 1,
-                day: _startDate.jDate(),
+                year: _startDate.year(),
+                month: _startDate.month() + 1,
+                day: _startDate.date(),
               };
               const endDate = {
-                year: jMoment().jYear(),
-                month: jMoment().jMonth() + 1,
-                day: jMoment().jDate(),
+                year: jMoment().year(),
+                month: jMoment().month() + 1,
+                day: jMoment().date(),
               };
               handleSelectedRangeDayChange(startDate, endDate);
             }}

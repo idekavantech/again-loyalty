@@ -1,6 +1,6 @@
 /* eslint-disable indent */
 import React, { memo } from "react";
-import moment from "moment-jalaali";
+import moment from "moment";
 import Link from "next/link";
 import Paper from "@material-ui/core/Paper";
 import Chip from "@material-ui/core/Chip";
@@ -57,7 +57,7 @@ function ReviewCard({ review, link, brief }) {
               فرستنده:‌ {user_details.full_name}{" "}
             </div>
             <div className="">
-              {englishNumberToPersianNumber(orderTime.format("jYYYY/jMM/jDD"))}
+              {englishNumberToPersianNumber(orderTime.format("YYYY/MM/DD"))}
             </div>
           </div>
           <div className="d-flex text-center py-1 u-text-darkest-grey">

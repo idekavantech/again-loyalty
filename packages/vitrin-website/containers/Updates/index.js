@@ -2,7 +2,7 @@ import { Paper } from "@material-ui/core";
 import useTheme from "@material-ui/core/styles/useTheme";
 import Header from "containers/Header";
 
-import moment from "moment-jalaali";
+import moment from "moment";
 import { useMemo } from "react";
 
 import { updatesSerializer } from "utils/helpers/updatesSerializer";
@@ -47,8 +47,8 @@ export default function VitrinUpdates({ items }) {
                   weekday === "امروز"
                     ? weekday
                     : `${englishNumberToPersianNumber(
-                        momentTime.jDate()
-                      )} ${getMonthName(momentTime.jMonth() + 1)}`;
+                        momentTime.date()
+                      )} ${getMonthName(momentTime.month() + 1)}`;
                 return (
                   <div className="mt-5" key={date}>
                     <div style={{ color: "#6D7175" }}>{formattedTime}</div>

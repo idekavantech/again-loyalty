@@ -3,7 +3,7 @@ import Paper from "@material-ui/core/Paper";
 import AdminBreadCrumb from "../../../../AdminBreadCrumb";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
-import jMoment from "moment-jalaali";
+import jMoment from "moment";
 import { useCRMReport } from "./useCreditReports";
 import CreditReportTable from "./creditReportsTable";
 import CustomCalendar from "@saas/components/CustomCalendar";
@@ -13,8 +13,8 @@ import { Popover } from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
 import { formatDateObjectToNormal } from "../../../../../utils/helpers";
 
-jMoment.locale("fa");
-jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 
 function CRMReports() {
   const {

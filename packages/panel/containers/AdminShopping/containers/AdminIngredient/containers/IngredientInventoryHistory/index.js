@@ -18,7 +18,7 @@ import { getMonthName } from "@saas/utils/helpers/getMonthName";
 
 import { inventoryAdjustmentReasons } from "@saas/stores/plugins/constants";
 import LoadingIndicator from "@saas/components/LoadingIndicator";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { useIngredientInventoryHistory } from "./useIngredientInventoryHistory";
 
 function IngredientInventoryHistory({ isOpen, onClose, ingredient, isSuper }) {
@@ -213,9 +213,9 @@ function IngredientInventoryHistory({ isOpen, onClose, ingredient, isSuper }) {
                           scope="row"
                         >
                           {englishNumberToPersianNumber(
-                            `${timestamp.jDate()} ${getMonthName(
-                              timestamp.jMonth() + 1
-                            )} ${timestamp.jYear()} - ${`0${date.getHours()}`.slice(
+                            `${timestamp.date()} ${getMonthName(
+                              timestamp.month() + 1
+                            )} ${timestamp.year()} - ${`0${date.getHours()}`.slice(
                               -2
                             )}:${`0${date.getMinutes()}`.slice(-2)}`
                           )}

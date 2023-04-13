@@ -27,7 +27,7 @@ import Slider from "@material-ui/core/Slider";
 import { makeSelectForms } from "store/selectors";
 import { getForms } from "store/actions";
 
-import jMoment from "moment-jalaali";
+import jMoment from "moment";
 import styled from "styled-components";
 
 import MaterialSelect from "@saas/components/Select/MaterialSelect";
@@ -40,8 +40,8 @@ import FieldCategorySelect from "./FieldCategorySelect";
 import FieldRichText from "./FieldRichText";
 import FieldLayoutSelect from "./FieldLayoutSelect";
 
-jMoment.locale("fa");
-jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 
 let timeoutId = null;
 

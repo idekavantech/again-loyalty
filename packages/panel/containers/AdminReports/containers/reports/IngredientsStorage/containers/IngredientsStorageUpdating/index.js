@@ -10,14 +10,14 @@ import { compose } from "redux";
 import Head from "next/head";
 import AdminBreadCrumb from "containers/AdminBreadCrumb";
 import Paper from "@material-ui/core/Paper";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { priceFormatter } from "@saas/utils/helpers/priceFormatter";
 import { exportPDFFromHTML } from "@saas/utils/helpers/exportPDFFromHTML";
 
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 
-moment.locale("fa");
-moment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 import { pollution, surface } from "@saas/utils/colors";
 import MaterialSelect from "@saas/components/Select/MaterialSelect";
 import Table from "@material-ui/core/Table";
@@ -71,7 +71,7 @@ const pdf = ({ business }) => {
     }-${new Date().getDate()}`,
     "YYYY-MM-DD"
   );
-  const jalaaliDate = createdAtFormattedDate.format("jYYYY/jMM/jDD");
+  const jalaaliDate = createdAtFormattedDate.format("YYYY/MM/DD");
   return {
     headerTemplate: (
       <div className="d-none">
@@ -364,11 +364,11 @@ export function AdminIngredientsStorageUpdatingReport({
   );
   const jalaaliTime = createdAt.getHours() + ":" + createdAt.getMinutes();
   const jalaaliDate =
-    createdAtFormattedDate?.jYear() +
+    createdAtFormattedDate?.year() +
     "-" +
-    (createdAtFormattedDate?.jMonth() + 1) +
+    (createdAtFormattedDate?.month() + 1) +
     "-" +
-    createdAtFormattedDate?.jDate();
+    createdAtFormattedDate?.date();
   const PDFConfigs = useMemo(() => {
     return typeof pdf === "function"
       ? pdf({

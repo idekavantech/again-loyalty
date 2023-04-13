@@ -8,7 +8,7 @@
 /* eslint-disable func-names */
 /* eslint-disable no-unused-vars */
 
-import moment from "moment-jalaali";
+import moment from "moment";
 import Highcharts from "highcharts/highstock";
 import { englishNumberToPersianNumber } from "./helpers/englishNumberToPersianNumber";
 import JalaliDate from "./jalaliDate";
@@ -220,7 +220,7 @@ export function setChartOptions(H) {
       let rows = proceed.call(this, multiLevelHeaders);
       rows = rows.map((row) => {
         if (!row.name && row.x) {
-          row[0] = moment(row.x).format("jYYYY/jMM/jDD");
+          row[0] = moment(row.x).format("YYYY/MM/DD");
         }
         return row;
       });

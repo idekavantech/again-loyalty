@@ -30,7 +30,7 @@ import {
   transactionDescription,
 } from "@saas/stores/plugins/constants";
 
-import jMoment from "moment-jalaali";
+import jMoment from "moment";
 import CloseIcon from "@material-ui/icons/Close";
 import Popover from "@material-ui/core/Popover";
 import Button from "@material-ui/core/Button";
@@ -39,8 +39,8 @@ import CustomCalendar from "@saas/components/CustomCalendar";
 import { defaultFromDate, defaultToDate } from "@saas/utils/constants/date";
 import { formatDateObjectToNormal } from "../../../../utils/helpers";
 
-jMoment.locale("fa");
-jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
+ 
+ 
 
 const headCells = [
   {
@@ -131,13 +131,13 @@ function SOWBranchTransactions({
           from_date: persianToEnglishNumber(
             jMoment(
               formatDateObjectToNormal(selectedDayRange.from),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           ),
           to_date: persianToEnglishNumber(
             jMoment(
               formatDateObjectToNormal(selectedDayRange.to),
-              "jYYYY-jM-jD"
+              "YYYY-jM-jD"
             ).format("YYYY-M-D")
           ),
           description: transactionType,
@@ -181,11 +181,11 @@ function SOWBranchTransactions({
         );
         const jalaaliTime = createdAt.getHours() + ":" + createdAt.getMinutes();
         const jalaaliDate =
-          createdAtFormattedDate.jYear() +
+          createdAtFormattedDate.year() +
           "-" +
-          (createdAtFormattedDate.jMonth() + 1) +
+          (createdAtFormattedDate.month() + 1) +
           "-" +
-          createdAtFormattedDate.jDate();
+          createdAtFormattedDate.date();
 
         let priceObj = {};
         if (isSuper) {

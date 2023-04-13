@@ -2,7 +2,7 @@ import React, { memo, useEffect, useRef, useState } from "react";
 import { connect } from "react-redux";
 import { createStructuredSelector } from "reselect";
 import { compose } from "redux";
-import moment from "moment-jalaali";
+import moment from "moment";
 import Button from "@material-ui/core/Button";
 import Paper from "@material-ui/core/Paper";
 import AccessTimeIcon from "@material-ui/icons/AccessTime";
@@ -455,7 +455,7 @@ export function OrderStatus({
               <div style={{ fontSize: 14, color: hexToRGBA(night, 0.8) }}>
                 {order
                   ? englishNumberToPersianNumber(
-                      orderTime.format("jYYYY/jMM/jDD")
+                      orderTime.format("YYYY/MM/DD")
                     )
                   : null}
               </div>

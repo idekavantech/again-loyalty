@@ -25,7 +25,7 @@ import Link from "next/link";
 import { makeSelectUrlPrefix } from "@saas/stores/plugins/selector";
 import { useRouter } from "next/router";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
-import moment from "moment-jalaali";
+import moment from "moment";
 
 export function Blog({ posts, urlPrefix, postsPagination }) {
   const router = useRouter();
@@ -47,7 +47,7 @@ export function Blog({ posts, urlPrefix, postsPagination }) {
               "YYYY-MM-DD"
             );
             const time = englishNumberToPersianNumber(
-              createdTime.format("jYYYY/jMM/jDD")
+              createdTime.format("YYYY/MM/DD")
             );
             return (
               <div

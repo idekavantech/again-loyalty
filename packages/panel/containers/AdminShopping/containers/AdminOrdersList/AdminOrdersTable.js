@@ -6,7 +6,7 @@ import TableCell from "@material-ui/core/TableCell";
 import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
-import moment from "moment-jalaali";
+import moment from "moment";
 import Skeleton from "@material-ui/lab/Skeleton";
 import { useRouter } from "next/router";
 
@@ -127,10 +127,10 @@ export default function AdminOrdersTable({
                   ? "Today"
                   : getWeekDay(momentTime.isoWeekday());
               const formattedTime = `${weekday}،${englishNumberToPersianNumber(
-                momentTime.jDate()
+                momentTime.date()
               )} ${getMonthName(
-                momentTime.jMonth() + 1
-              )} ${englishNumberToPersianNumber(momentTime.jYear())}`;
+                momentTime.month() + 1
+              )} ${englishNumberToPersianNumber(momentTime.year())}`;
               return (
                 <>
                   {(router.query.ordering === LAST_SUBMITTED_AT_ORDER ||
