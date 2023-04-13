@@ -96,7 +96,7 @@ function AdminHeaderMenu({
 
   const logout = useCallback(() => {
     delete Axios.defaults.headers.common.Authorization;
-    window.location = "/";
+    window.location = "/login";
     localStorage.removeItem(VITRIN_TOKEN);
     Cookies.remove(VITRIN_TOKEN);
   }, []);
@@ -662,8 +662,8 @@ function AdminHeaderMenu({
                 <NewLogoutMenuIcon style={{ color: "#202223" }} />
               </ListItemIcon>
               <ListItemText
-                className="text-right"
-                primary="Exit from the account"
+                className="text-left"
+                primary="Logout"
                 style={{
                   color: "#202223",
                 }}

@@ -70,11 +70,10 @@ function Login({ _login, isLoading, themeColor }) {
                         />
                     </div>
                     <div className="mt-5 u-text-darkest-grey u-fontMedium">
-                        Enter your mobile number..
+                        Enter your phone number.
                     </div>
                     <div className="mt-1 u-text-dark-grey u-fontMedium">
-                        By entering the mobile number will send you a confirmation code
-                        became
+                        By entering your phone number we will send you a confirmation code
                     </div>
                     <Input
                         type="tel"
@@ -82,7 +81,7 @@ function Login({ _login, isLoading, themeColor }) {
                         id="phoneNumber"
                         value={phoneNumber}
                         noModal
-                        label="Mobile number"
+                        label="Phone number"
                         onKeyPress={handleKeyPress}
                         themeColor={themeColor}
                         onChange={(value) =>
@@ -103,18 +102,6 @@ function Login({ _login, isLoading, themeColor }) {
                     )}
                 </div>
                 <Paper elevation={2} className="sticky-bottom d-flex p-3">
-                    <Button
-                        onClick={() => router.back()}
-                        color="secondary"
-                        style={{
-                            flex: "1",
-                            height: 48,
-                        }}
-                        className="ml-2"
-                        disabled={isLoading}
-                    >
-                        coming back
-                    </Button>
                     <Button
                         disabled={isLoading}
                         color="secondary"

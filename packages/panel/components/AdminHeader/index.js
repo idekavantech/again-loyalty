@@ -76,7 +76,10 @@ function AdminHeader({
             <MenuRoundedIcon data-tour="menu" />
           </IconButton>
         ) : (
-          <span className="mr-4">{`control panel${businessTitle}`}</span>
+          <span className="ml-4">
+            <span style={{fontWeight:600}}>{businessTitle}</span>
+            {` Admin Panel `}
+          </span>
         )}
       </div>
 
@@ -86,15 +89,8 @@ function AdminHeader({
       />
       {!noItemLeft && !isDobare ? (
         <div className={"d-flex align-items-center justify-content-center"}>
-          <Button
-            className={"h-100"}
-            color="primary"
-            onClick={() => onPreviewClick("/s")}
-          >
-            <div
-              data-tour="preview"
-              className="u-cursor-pointer u-fontNormal-r d-flex "
-            >
+          <Button className={"h-100"} color="primary" onClick={() => onPreviewClick("/s")}>
+            <div data-tour="preview" className="u-cursor-pointer u-fontNormal-r d-flex ">
               <VisibilityRoundedIcon className="ml-1" />
               {previewText}
             </div>
@@ -131,9 +127,7 @@ function AdminHeader({
             disableScrollLock
             MenuListProps={{ minWidth: 140 }}
           >
-            <MenuItem onClick={() => onPreviewClick("/s")}>
-              View store
-            </MenuItem>
+            <MenuItem onClick={() => onPreviewClick("/s")}>View store</MenuItem>
             <MenuItem onClick={() => onPreviewClick("/")}>View home</MenuItem>
           </Menu>
           <KeyboardArrowDownRoundedIcon
