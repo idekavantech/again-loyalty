@@ -39,7 +39,8 @@ const MaterialSelect = ({
           )}
           {options &&
             options.map((o) => (
-              <MenuItem className="u-fontNormal px-2" key={o.id} value={o.text}>
+              <MenuItem className="u-fontNormal d-flex justify-content-between px-2" key={o.id} value={o.text}>
+                  {o.text}
                 {selected !== undefined && (
                   <Radio
                     className="p-1"
@@ -48,7 +49,7 @@ const MaterialSelect = ({
                     checked={selected && selected.id === o.id}
                   />
                 )}
-                {o.text}
+              
               </MenuItem>
             ))}
         </Select>

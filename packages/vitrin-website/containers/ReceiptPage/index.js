@@ -88,7 +88,6 @@ const ReceiptPage = ({
       _getBusiness(transaction?.business?.site_domain);
     }
   }, [transaction]);
-  moment.loadPersian(true);
 
   if (transaction) {
     return (

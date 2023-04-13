@@ -105,7 +105,6 @@ const PaymentPage = ({
         : amount * 1000 * 3
     );
   }, [time, amount]);
-  moment.loadPersian(true);
 
   useEffect(() => {
     if (discount) {

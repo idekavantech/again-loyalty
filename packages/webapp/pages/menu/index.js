@@ -10,7 +10,6 @@ import moment from "moment";
 import request from "@saas/utils/request";
 import { CATEGORY_RESOURCE_API } from "@saas/utils/api";
 
-moment.loadPersian({ dialect: "persian-modern" });
 export default function MenuPage({ page = {}, business, categoriesDeals }) {
   if (!page) {
     return (

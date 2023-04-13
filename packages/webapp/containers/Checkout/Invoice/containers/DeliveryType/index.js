@@ -79,7 +79,6 @@ import Paper from "@material-ui/core/Paper";
 import Divider from "@material-ui/core/Divider";
 import useTheme from "@material-ui/core/styles/useTheme";
 import PreOrderForm from "./components/delivery/PreOrderForm";
-moment.loadPersian({ dialect: "persian-modern", usePersianDigits: false });
 
 function DeliveryType({
   themeColor,
