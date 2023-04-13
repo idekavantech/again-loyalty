@@ -27,7 +27,7 @@ export default function AssuranceDialog({
           {contentText}
         </DialogContentText>
       </DialogContent>
-      <DialogActions>
+      <DialogActions className="row-rev">
         <Button onClick={dialogSecondActions} color="disabled">
           {dialogSecondActionText}
         </Button>

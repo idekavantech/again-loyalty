@@ -32,7 +32,7 @@ const tableHead = [
   {
     id: 0,
     label: "created at",
-    align: "right",
+    align: "left",
     minWidth: 100,
     width: 160,
     maxWidth: 170,
@@ -40,7 +40,7 @@ const tableHead = [
   {
     id: 1,
     label: "Name of segmentation",
-    align: "right",
+    align: "left",
     minWidth: 100,
     width: 160,
     maxWidth: 170,
@@ -48,7 +48,7 @@ const tableHead = [
   {
     id: 2,
     label: "Customer level",
-    align: "right",
+    align: "left",
     minWidth: 100,
     width: 160,
     maxWidth: 170,
@@ -56,7 +56,7 @@ const tableHead = [
   {
     id: 3,
     label: "Label",
-    align: "right",
+    align: "left",
     minWidth: 100,
     width: 160,
     maxWidth: 170,
@@ -64,7 +64,7 @@ const tableHead = [
   {
     id: 4,
     label: "",
-    align: "right",
+    align: "left",
     minWidth: 80,
     width: 80,
     maxWidth: 80,
@@ -118,7 +118,7 @@ function CRMSegments() {
         }}
         dialogMainActionText="Yes"
         dialogSecondActions={() => setIsDeleteModalOpen(false)}
-        dialogSecondActionText="Cancel"
+        dialogSecondActionText="No"
       />
         <p
           className="mt-2"
@@ -206,7 +206,7 @@ function CRMSegments() {
                   >
                     <TableCell
                       className="text-nowrap"
-                      align="right"
+                      align="left"
                       style={{ fontSize: "16px", fontWeight: 600 }}
                     >
                       {englishNumberToPersianNumber(
@@ -215,14 +215,14 @@ function CRMSegments() {
                     </TableCell>
                     <TableCell
                       className="text-nowrap"
-                      align="right"
+                      align="left"
                       style={{ fontSize: "16px", fontWeight: 600 }}
                     >
                       {segment?.title}
                     </TableCell>
                     <TableCell
                       className="text-nowrap"
-                      align="right"
+                      align="left"
                       style={{ fontSize: "16px", fontWeight: 600 }}
                     >
                       {segment?.levels
@@ -241,7 +241,7 @@ function CRMSegments() {
                     </TableCell>
                     <TableCell
                       className="text-nowrap"
-                      align="right"
+                      align="left"
                       style={{ fontSize: "16px", fontWeight: 600 }}
                     >
                       {segment?.labels
@@ -260,7 +260,7 @@ function CRMSegments() {
                     </TableCell>
                     <TableCell
                       className="text-nowrap"
-                      align="right"
+                      align="left"
                       style={{ fontSize: "16px", fontWeight: 600 }}
                     >
                       <span

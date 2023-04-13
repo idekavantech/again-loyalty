@@ -66,11 +66,11 @@ function CRMCustomerLevelsSetting() {
             </div>
             <div className="col-12 col-md-12 pl-md-6 mb-4">
               <p>Rating</p>
-              <div className="d-flex flex-row-reverse">
+              <div className="d-flex">
                 <Input
                   variant="outlined"
                   placeholder="Minimum rating"
-                  className="customInput px-2"
+                  className="customInput pr-2"
                   onChange={onMinScoreChange}
                   type="number"
                   value={levelDetails?.min_score}
@@ -151,7 +151,7 @@ function CRMCustomerLevelsSetting() {
             }}
             dialogMainActionText="Yes"
             dialogSecondActions={() => setIsOpenSaveModal(false)}
-            dialogSecondActionText="Cancel"
+            dialogSecondActionText="No"
           />
           <AssuranceDialog
             isOpen={openCancelModal}
@@ -164,7 +164,7 @@ function CRMCustomerLevelsSetting() {
             }}
             dialogMainActionText="Yes"
             dialogSecondActions={() => setOpenCancelModal(false)}
-            dialogSecondActionText="Cancel"
+            dialogSecondActionText="No"
           />
         </div>
       </div>

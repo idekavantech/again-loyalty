@@ -354,7 +354,7 @@ function CRMLabelsPage({
         }}
         dialogMainActionText="Yes"
         dialogSecondActions={() => toggleModals(SAVE_MODAL)}
-        dialogSecondActionText="Cancel"
+        dialogSecondActionText="No"
       />
       <AssuranceDialog
         isOpen={modals[CANCEL_MODAL]}
@@ -368,7 +368,7 @@ function CRMLabelsPage({
         }}
         dialogMainActionText="Yes"
         dialogSecondActions={() => toggleModals(CANCEL_MODAL)}
-        dialogSecondActionText="Cancel"
+        dialogSecondActionText="No"
       />
       <div className="container">
         <AdminBreadCrumb

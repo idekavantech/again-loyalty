@@ -136,7 +136,7 @@ function CRMLevels({ adminUrlPrefix, _getCrmLevels, allCrmLevels, isLoading  ,_d
             }
           }
           dialogMainActionText="Yes"
-          dialogSecondActionText="Cancel"
+          dialogSecondActionText="No"
         />
         <Table
           aria-labelledby="tableTitle"
@@ -224,7 +224,7 @@ function CRMLevels({ adminUrlPrefix, _getCrmLevels, allCrmLevels, isLoading  ,_d
                     }}
                   >
                     {englishNumberToPersianNumber(
-                      moment(level?._created_at).format("YYYY/MM/DD")
+                      moment(level?._created_at).format("YYYY/MM/jDD")
                     )}
                   </TableCell>
                   <TableCell

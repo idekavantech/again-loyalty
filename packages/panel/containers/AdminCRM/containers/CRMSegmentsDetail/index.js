@@ -128,7 +128,7 @@ function CRMSegmentsSetting() {
           }}
           dialogMainActionText="Yes"
           dialogSecondActions={() => setIsSaveModalOpen(false)}
-          dialogSecondActionText="Cancel"
+          dialogSecondActionText="No"
         />
         <Paper elevation={3} style={{ marginTop: 24, padding: 24 }}>
           <p style={{ fontSize: 16, fontWeight: 500 }} className="pb-2">
@@ -904,6 +904,7 @@ function CRMSegmentsSetting() {
                         <div className="d-flex row-rev justify-content-center align-items-center">
                           <Select
                             className="w-100"
+                            IconComponent={() => null}
                             style={{
                               minWidth: 120,
                               display: "flex",

@@ -68,7 +68,7 @@ function CRMLabelsPage({
         <p
           className="w-100"
           style={{
-            textAlign: "right",
+            textAlign: "left",
             color: textTypes.text.default,
             fontSize: 20,
             fontWeight: 600,
@@ -89,7 +89,7 @@ function CRMLabelsPage({
                 backgroundColor: "#FAFBFB",
                 border: "1px solid #E4E6E7",
                 borderLeft: "none",
-                borderRadius: "0 8px 8px 0",
+                borderRadius: "8px 0px 0px 8px",
               }}
               placeholder="add tags"
               value={labelValue}
@@ -104,7 +104,7 @@ function CRMLabelsPage({
                 height: 56,
                 padding: 0,
                 minWidth: 56,
-                borderRadius: "8px 0 0 8px",
+                borderRadius: "0px 8px 8px 0px",
               }}
               onClick={addNewLable}
             >
@@ -141,7 +141,7 @@ function CRMLabelsPage({
             }}
             dialogMainActionText="Yes"
             dialogSecondActions={() => setOpenCancelModal(false)}
-            dialogSecondActionText="Cancel"
+            dialogSecondActionText="No"
           />
         </div>
       </div>

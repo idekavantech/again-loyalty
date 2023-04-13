@@ -34,7 +34,7 @@ const tableHead = [
   {
     id: 1,
     label: "Level name",
-    align: "right",
+    align: "center",
     minWidth: 100,
     width: 160,
     maxWidth: 170,
@@ -42,7 +42,7 @@ const tableHead = [
   {
     id: 2,
     label: "Minimum rating",
-    align: "right",
+    align: "center",
     minWidth: 100,
     width: 160,
     maxWidth: 170,
@@ -50,7 +50,7 @@ const tableHead = [
   {
     id: 3,
     label: "Maximum rating",
-    align: "right",
+    align: "center",
     minWidth: 100,
     width: 160,
     maxWidth: 170,
@@ -58,7 +58,7 @@ const tableHead = [
   {
     id: 4,
     label: "Number of customers",
-    align: "right",
+    align: "center",
     minWidth: 100,
     width: 120,
     maxWidth: 130,
@@ -66,7 +66,7 @@ const tableHead = [
   {
     id: 5,
     label: "",
-    align: "right",
+    align: "center",
     minWidth: 50,
     width: 50,
     maxWidth: 70,
@@ -100,7 +100,7 @@ function CRMLevels() {
           router.push(`${adminUrlPrefix}crm/customer_levels/details/new`);
         }}
       />
-      <div className="d-flex align-items-center position-relative mb-5 ">
+      <div className="d-flex align-items-center position-relative mb-5 ltr_force">
         <p
           className="mt-2"
           style={{ fontSize: 14, fontWeight: 400, lineHeight: "24px" }}
@@ -123,7 +123,7 @@ function CRMLevels() {
             }
           }
           dialogMainActionText="Yes"
-          dialogSecondActionText="Cancel"
+          dialogSecondActionText="No"
         />
         <Table
           aria-labelledby="tableTitle"
@@ -216,7 +216,7 @@ function CRMLevels() {
                   </TableCell>
                   <TableCell
                     className="d-flex align-items-center justify-content-end text-nowrap"
-                    align="right"
+                    align="center"
                     style={{
                       fontSize: "16px",
                       fontWeight: 600,
@@ -240,21 +240,21 @@ function CRMLevels() {
                   </TableCell>
                   <TableCell
                     className="text-nowrap"
-                    align="right"
+                    align="center"
                     style={{ fontSize: "16px", fontWeight: 600 }}
                   >
                     {englishNumberToPersianNumber(level.min_score)}
                   </TableCell>
                   <TableCell
                     className="text-nowrap"
-                    align="right"
+                    align="center"
                     style={{ fontSize: "16px", fontWeight: 600 }}
                   >
                     {englishNumberToPersianNumber(level.max_score)}
                   </TableCell>
                   <TableCell
                     className="text-nowrap"
-                    align="right"
+                    align="center"
                     style={{ fontSize: "16px", fontWeight: 600 }}
                   >
                     {englishNumberToPersianNumber(level?.num_of_memberships)}

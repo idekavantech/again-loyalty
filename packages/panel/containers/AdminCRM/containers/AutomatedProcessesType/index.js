@@ -55,7 +55,9 @@ function AutomatedProcess() {
                       {automatedProcess.title}
                     </p>
                   </div>
+                  <div style={{transform:"scaleX(-1)"}}>
                   <LeftIcon />
+                  </div>
                 </Paper>
               );
             })}

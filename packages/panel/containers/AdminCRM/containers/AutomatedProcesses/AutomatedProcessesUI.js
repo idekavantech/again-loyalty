@@ -25,7 +25,7 @@ const tableHead = [
   {
     id: 0,
     label: "created at",
-    align: "right",
+    align: "left",
     minWidth: 100,
     width: 220,
     maxWidth: 200,
@@ -33,7 +33,7 @@ const tableHead = [
   {
     id: 1,
     label: "Name of the process",
-    align: "right",
+    align: "left",
     minWidth: 100,
     width: 400,
     maxWidth: 200,
@@ -41,7 +41,7 @@ const tableHead = [
   {
     id: 4,
     label: "",
-    align: "right",
+    align: "left",
     minWidth: 100,
     width: 300,
     maxWidth: 300,
@@ -83,7 +83,7 @@ function AutomatedProcess({ props }) {
                 )
               }
             >
-              Build new automated trend
+              new automated trend
             </Button>
           </div>
         }
@@ -188,7 +188,7 @@ function AutomatedProcess({ props }) {
                         >
                           <TableCell
                             className="text-nowrap"
-                            align="right"
+                            align="left"
                             style={{ fontSize: "16px", fontWeight: 600 }}
                           >
                             {englishNumberToPersianNumber(
@@ -199,7 +199,7 @@ function AutomatedProcess({ props }) {
                           </TableCell>
                           <TableCell
                             className="text-nowrap"
-                            align="right"
+                            align="left"
                             style={{ fontSize: "16px", fontWeight: 600 }}
                           >
                             {automatedProcess?.title}
@@ -209,16 +209,11 @@ function AutomatedProcess({ props }) {
                             align="left"
                             style={{ fontSize: "16px", fontWeight: 600 }}
                           >
-                            <div className="d-flex align-items-center">
+                            <div className="d-flex align-items-center justify-content-between">
                               <div
                                 style={{ width: 100 }}
                                 className="d-flex align-items-center justify-content-end"
                               >
-                                <div>
-                                  {automatedProcess.is_active
-                                    ? "active"
-                                    : "Inactive"}
-                                </div>
                                 <Switch
                                   className="d-flex mx-2"
                                   onColor={theme.palette.primary.main}

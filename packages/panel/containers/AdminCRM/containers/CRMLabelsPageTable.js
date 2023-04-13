@@ -39,13 +39,13 @@ function CRMLabelsPageTable({ labels, isLoading, setLabels, adminUrlPrefix , _up
               className="p-4"
               style={{
                 fontWeight: 600,
-                textAlign: "right",
+                textAlign: "left",
                 fontSize: 12,
               }}
             >
               Label name
             </TableCell>
-            <TableCell className="p-4" style={{ fontWeight: 600, fontSize: 12, whiteSpace: "nowrap" }}>
+            <TableCell className="p-4" style={{ fontWeight: 600, fontSize: 12, whiteSpace: "nowrap"   ,textAlign: "right",}}>
               Number of customers
             </TableCell>
           </TableRow>
@@ -85,7 +85,7 @@ function CRMLabelsPageTable({ labels, isLoading, setLabels, adminUrlPrefix , _up
                   className="p-4 cursor-pointer"
                   style={{
                     fontWeight: 600,
-                    textAlign: "right",
+                    textAlign: "left",
                     fontSize: 16,
                     lineHeight: "24px",
                   }}

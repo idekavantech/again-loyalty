@@ -88,7 +88,6 @@ function CRMDiscountEdit() {
         </p>
         <div
           className="d-flex align-items-center justify-content-between flex-lg-row flex-md-column flex-sm-column flex-column ltr-force"
-          style={{ padding: "0px 24px" }}
         >
           <div
             className="col-12 col-lg-4 mb-4 mb-xl-0 pl-lg-4"
@@ -304,7 +303,7 @@ function CRMDiscountEdit() {
                 style={{ fontsize: 12, fontWeight: 600, whiteSpace: "nowrap" }}
                 className="mb-2"
               >
-                Maximum discount rate
+                Maximum discount amount
               </p>
               <div
                 className="d-flex align-items-center justify-content-between px-4 py-3"
@@ -451,7 +450,7 @@ function CRMDiscountEdit() {
           }}
           dialogMainActionText="Yes"
           dialogSecondActions={() => setIsSaveMoalOpen(false)}
-          dialogSecondActionText="Back"
+          dialogSecondActionText="No"
         />
         <AssuranceDialog
           isOpen={isCancelModalOpen}
@@ -464,7 +463,7 @@ function CRMDiscountEdit() {
           }}
           dialogMainActionText="Yes"
           dialogSecondActions={() => setIsCancelModalOpen(false)}
-          dialogSecondActionText="Back"
+          dialogSecondActionText="No"
         />
       </div>
     </div>

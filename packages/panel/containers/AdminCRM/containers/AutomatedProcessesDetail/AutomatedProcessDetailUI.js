@@ -358,9 +358,9 @@ function AddActionCRMAutomatedTrends({ props }) {
     ),
     [DISCOUNT_CEILING_AMOUNT]: () => (
       <div className="col-12 col-lg-4 mt-3 mt-md-0" style={{ padding: 0 }}>
-        <div className="px-lg-2">
+        <div className="pr-lg-4">
           <p style={{ fontSize: 12, fontWeight: 600 }} className="mb-1">
-            Maximum discount rate
+            Maximum discount Amount
           </p>
           <div className="position-relative">
             <input
@@ -454,7 +454,7 @@ function AddActionCRMAutomatedTrends({ props }) {
         dialogMainActionText="Yes"
         dialogSecondActions={() => toggleModals(SAVE_MODAL)}
         dialogSecondActionTextColor="primary"
-        dialogSecondActionText="Cancel"
+        dialogSecondActionText="No"
       />
       <AssuranceDialog
         isOpen={modals[CANCEL_MODAL]}
@@ -468,7 +468,7 @@ function AddActionCRMAutomatedTrends({ props }) {
         }}
         dialogMainActionText="Yes"
         dialogSecondActions={() => toggleModals(CANCEL_MODAL)}
-        dialogSecondActionText="Cancel"
+        dialogSecondActionText="No"
       />
 
       {isLoading ? (
@@ -500,7 +500,7 @@ function AddActionCRMAutomatedTrends({ props }) {
               >
                 In this section you can determine that some time after<b>{au.title.replace("To" , "")}</b> on witch automated process run for the customer.
               </p>
-              <div className="d-flex flex-wrap row-rev justify-content-start mt-3 pb-3">
+              <div className="d-flex flex-wrap mt-3 pb-3">
                 <div className="col-12 col-lg-4 mt-3" style={{ padding: 0 }}>
                   <div className="pl-lg-4">
                     <p
@@ -642,7 +642,7 @@ function AddActionCRMAutomatedTrends({ props }) {
                 </div>
               </div>
               <div
-                className="d-flex mt-3 pb-3 row-rev flex-wrap justify-content-start"
+                className="d-flex mt-3 pb-3 flex-wrap justify-content-start"
                 style={{
                   gap: "15px 0px",
                 }}
@@ -743,7 +743,7 @@ function AddActionCRMAutomatedTrends({ props }) {
                         ]?.({ businessTitle: business.revised_title })
                       : null}
                   </div>
-                  <div className="d-flex row-rev flex-wrap justify-content-between">
+                  <div className="d-flex flex-wrap justify-content-between">
                     <div
                       className=" col-sm-12 col-md-12 col-lg-4 col-xl-3 "
                       style={{ padding: "0" }}

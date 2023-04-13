@@ -250,7 +250,7 @@ function CRMCustomerLevelsSetting({
           }}
           dialogMainActionText="Yes"
           dialogSecondActions={() => setOpenCancelModal(false)}
-          dialogSecondActionText="Cancel"
+          dialogSecondActionText="No"
         />
       </div>
     </div>

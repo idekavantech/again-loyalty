@@ -88,7 +88,7 @@ function CreditExpiryReminderWithDurationModal(props) {
           </>
         ) : (
           <>
-            <div className="d-flex justify-content-between mb-4">
+            <div className="d-flex justify-content-between row-rev mb-4">
               <IconButton onClick={handleCloseDetailModal} size="small">
                 <CloseIcon />
               </IconButton>
@@ -104,7 +104,7 @@ function CreditExpiryReminderWithDurationModal(props) {
               </p>
             </div>
             <div className="my-5">
-              <span className="d-flex justify-content-start row-rev align-items-center" style={{ fontSize: 15 }}>
+              <span className="d-flex justify-content-start align-items-center" style={{ fontSize: 15 }}>
                 <p>SMS time interval*</p>
                 <Tooltip
                   enterTouchDelay={0}
@@ -144,7 +144,7 @@ function CreditExpiryReminderWithDurationModal(props) {
               </div>
             </div>
             <div className="my-5">
-              <span className="d-flex justify-content-start row-rev align-items-center" style={{ fontSize: 15 }}>
+              <span className="d-flex justify-content-start align-items-center" style={{ fontSize: 15 }}>
                 <p>SMS time*</p>
                 <Tooltip
                   enterTouchDelay={0}
@@ -198,7 +198,7 @@ function CreditExpiryReminderWithDurationModal(props) {
             <div className="my-3">
               <span style={{ fontSize: 15 }}>SMS text*</span>
               <div
-                className="d-flex justify-content-between row-rev align-items-center"
+                className="d-flex justify-content-between align-items-center"
                 style={{ fontSize: 12, height: "35px" }}
               >
                 <p>You can edit the text of the SMS with the help of keywords.</p>
@@ -239,7 +239,7 @@ function CreditExpiryReminderWithDurationModal(props) {
                 maxRows={4}
               />
             </div>
-            <div className="d-flex flex-row-reverse">
+            <div className="d-flex">
               <Button
                 onClick={submit}
                 disabled={!isActiveSubmitBtn}
