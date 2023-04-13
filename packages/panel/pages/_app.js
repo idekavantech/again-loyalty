@@ -113,7 +113,9 @@ function MyApp({ Component }) {
     if (router.asPath.includes("/food/") || router.asPath === "/food") {
       router.push(router.asPath.replace("/food", `/${SHOPPING_PLUGIN_URL}`));
     }
-    let subdomain = router.query.site_domain;
+    let subdomain = new RegExp(/\/admin\//m).test(router.asPath.split("?")[0])
+      ? router.query.branch_domain || router.query.site_domain
+      : router.query.site_domain || getSiteDomain(window.location.host);
     if (
       router.asPath.includes("/s/categories") ||
       router.asPath === "/s/categories"
