@@ -25,7 +25,7 @@ export const FOOTER_COMIUNICATION_VISIBILITY =
 
 const footerConstants = [
   {
-    label: "محتوا",
+    label: "Content",
     key: "content",
     id: uniqueid(),
     dependencies: [
@@ -40,14 +40,14 @@ const footerConstants = [
     items: [
       {
         id: uniqueid(),
-        label: "نمایش",
+        label: "the show",
         key: "display",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "نمایش لوگو",
+            label: "Logo Show",
             type: "switch",
             key: FOOTER_LOGO_VISIBILITY,
             default_value: true,
@@ -55,28 +55,28 @@ const footerConstants = [
           {
             id: uniqueid(),
             type: "switch",
-            label: "نمایش عنوان کسب‌و‌کار",
+            label: "Show Business Title",
             key: FOOTER_TITLE_VISIBILITY,
             default_value: true,
           },
           {
             id: uniqueid(),
             type: "switch",
-            label: "نمایش ارتباط با ما",
+            label: "Show communication with us",
             key: FOOTER_COMIUNICATION_VISIBILITY,
             default_value: true,
           },
           {
             id: uniqueid(),
             type: "switch",
-            label: "نمایش تماس با ما",
+            label: "Show contact with us",
             key: FOOTER_CONTACT_US_VISIBILITY,
             default_value: true,
           },
           {
             id: uniqueid(),
             type: "switch",
-            label: "نمایش منو",
+            label: "Menu display",
             key: FOOTER_MENU_VISIBILITY,
             default_value: true,
           },
@@ -85,7 +85,7 @@ const footerConstants = [
     ],
   },
   {
-    label: "محتوا",
+    label: "Content",
     key: "content",
     id: uniqueid(),
     dependencies: [
@@ -100,7 +100,7 @@ const footerConstants = [
     items: [
       {
         id: uniqueid(),
-        label: "نمایش",
+        label: "the show",
         key: "display",
         element_id: null,
         description: "",
@@ -108,7 +108,7 @@ const footerConstants = [
           {
             id: uniqueid(),
             type: "switch",
-            label: "نمایش ارتباط با ما",
+            label: "Show communication with us",
             key: FOOTER_COMIUNICATION_VISIBILITY,
             default_value: true,
           },
@@ -123,7 +123,7 @@ const footerConstants = [
               },
             ],
             id: uniqueid(),
-            label: "عدم نمایش نمادهای الکترونیک",
+            label: "Non -display of electronic symbols",
             type: "switch",
             key: "hide_namad",
             default_value: false,
@@ -133,20 +133,20 @@ const footerConstants = [
     ],
   },
   {
-    label: "شخصی‌سازی",
+    label: "Personalization",
     key: "customization",
     id: uniqueid(),
     items: [
       {
         id: uniqueid(),
-        label: "نوع فوتر",
+        label: "Footer type",
         key: "layout",
         element_id: null,
         description: "",
         fields: [
           {
             id: uniqueid(),
-            label: "نوع هدر",
+            label: "The type of header",
             default_value: FOOTER_1,
             type: "layout_select",
             options: [
@@ -154,31 +154,31 @@ const footerConstants = [
                 id: uniqueid(),
                 value: FOOTER_1,
                 image: footer_1_img,
-                label: "فوتر ۱",
+                label: "Fuver ۱",
               },
               {
                 id: uniqueid(),
                 value: FOOTER_2,
                 image: footer_2_img,
-                label: "فوتر ۲",
+                label: "Fuver ۲",
               },
               {
                 id: uniqueid(),
                 value: FOOTER_3,
                 image: footer_3_img,
-                label: "فوتر ۳",
+                label: "Fuver ۳",
               },
               {
                 id: uniqueid(),
                 value: FOOTER_4,
                 image: footer_4_img,
-                label: "فوتر ۴",
+                label: "Fuver ۴",
               },
               {
                 id: uniqueid(),
                 value: FOOTER_5,
                 image: footer_5_img,
-                label: "فوتر ۵",
+                label: "Fuver ۵",
               },
             ],
             key: "type",
@@ -193,7 +193,7 @@ const footerConstants = [
             ],
             id: uniqueid(),
             type: "switch",
-            label: "نمایش نقشه",
+            label: "Map Display",
             key: FOOTER_MAP_VISIBILITY,
             default_value: true,
           },
@@ -201,7 +201,7 @@ const footerConstants = [
       },
       {
         id: uniqueid(),
-        label: "لوگو",
+        label: "People",
         key: "logo",
         description: "",
         dependencies: [
@@ -225,7 +225,7 @@ const footerConstants = [
               },
             ],
             id: uniqueid(),
-            label: "استفاده از لوگوی پیش فرض",
+            label: "Use the default logo",
             type: "switch",
             key: "use_default_logo",
             default_value: true,
@@ -239,7 +239,7 @@ const footerConstants = [
               },
             ],
             id: uniqueid(),
-            label: "لوگو",
+            label: "People",
             default_value: "",
             type: "image_uploader",
             key: "logo_url",
@@ -249,7 +249,7 @@ const footerConstants = [
 
       {
         id: uniqueid(),
-        label: "تنظیمات پس زمینه",
+        label: "Background settings",
         key: "background",
         description: "",
         dependencies: [
@@ -264,19 +264,19 @@ const footerConstants = [
         fields: [
           {
             id: uniqueid(),
-            label: "انتخاب نوع پس زمینه",
+            label: "The choice of background type",
             default_value: "color",
             key: "background_type",
             type: "select",
             options: [
               {
                 id: uniqueid(),
-                label: "عکس",
+                label: "Picture",
                 value: "image",
               },
               {
                 id: uniqueid(),
-                label: "رنگ",
+                label: "Color",
                 value: "color",
               },
             ],
@@ -290,7 +290,7 @@ const footerConstants = [
               },
             ],
             id: uniqueid(),
-            label: "عکس",
+            label: "Picture",
             default_value: "",
             type: "image_uploader",
             key: "background_image",
@@ -304,7 +304,7 @@ const footerConstants = [
               },
             ],
             id: uniqueid(),
-            label: "وضوح عکس",
+            label: "Photo resolution",
             default_value: 100,
             key: "opacity",
             type: "slider",
@@ -318,14 +318,14 @@ const footerConstants = [
               },
             ],
             id: uniqueid(),
-            label: "رنگ پس‌زمینه",
+            label: "The background color",
             default_value: "#FFFFFF",
             key: "background_color",
             type: "color",
           },
           {
             id: uniqueid(),
-            label: "رنگ متن از رنگ تم سایت استفاده کند",
+            label: "The color of the text use the color of the site theme",
             type: "switch",
             key: "use_theme_color",
             default_value: true,
@@ -339,7 +339,7 @@ const footerConstants = [
               },
             ],
             id: uniqueid(),
-            label: "رنگ متن پس‌زمینه",
+            label: "The color of the background text",
             type: "color",
             key: "text_color",
             default_value: "#325767",
@@ -348,7 +348,7 @@ const footerConstants = [
       },
       {
         id: uniqueid(),
-        label: "نمایش فوتر",
+        label: "Footer display",
         key: "presentation",
         element_id: null,
         description: "",
@@ -356,7 +356,7 @@ const footerConstants = [
           {
             id: uniqueid(),
             type: "switch",
-            label: "نمایش فوتر",
+            label: "Footer display",
             key: FOOTER_VISIBILITY,
             default_value: true,
           },

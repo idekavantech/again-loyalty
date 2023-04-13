@@ -51,7 +51,7 @@ function CRMDiscountPage() {
         <title>discount code</title>
       </Head>
       <AdminBreadCrumb
-        submitButtonText="Create a new discount"
+        submitButtonText="new discount code"
         submitButtonHasPlus
         submitAction={() => {
           router.push(`${adminUrlPrefix}crm/customer_discount/edit/new?`);

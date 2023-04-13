@@ -1,9 +1,7 @@
-import jMoment from "moment-jalaali";
 import React from "react";
 import momentUtils from "@date-io/moment";
 import { DatePicker, MuiPickersUtilsProvider } from "@material-ui/pickers";
 
-jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: true });
 
 function SingleDatePicker({
   inputProps,
@@ -23,12 +21,12 @@ function SingleDatePicker({
         okLabel="submit"
         cancelLabel="cancel"
         clearLabel="clear"
-        label={label}
+        // label={label}
         inputVariant="outlined"
         className="w-100"
         inputProps={inputProps}
         InputLabelProps={InputLabelProps}
-        labelFunc={(date) => (date ? date.format("YYYY/MM/DD") : "")}
+        // labelFunc={(date) => (date ? date.format("YYYY/MM/DD") : "")}
         value={selectedDate || null}
         disableFuture={disableFuture}
         autoOk

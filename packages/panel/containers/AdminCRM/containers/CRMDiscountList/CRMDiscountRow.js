@@ -5,6 +5,7 @@ import Link from "next/link";
 import moment from "moment";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 import { priceFormatter } from "@saas/utils/helpers/priceFormatter";
+import { persianToEnglishNumber } from "@saas/utils/helpers/persianToEnglishNumber";
 
 const timeFormatter = (date) => {
   const orderDate = new Date(date);
@@ -12,7 +13,7 @@ const timeFormatter = (date) => {
     `${orderDate.getFullYear()}-${orderDate.getMonth() + 1}-${orderDate.getDate()}`,
     "YYYY-MM-DD"
   );
-  return date ? englishNumberToPersianNumber(orderTime.format("jYYYY/jMM/jDD")) : "-";
+  return date ? persianToEnglishNumber(orderTime.format("YYYY/MM/DD")) : "-";
 };
 
 export default function CRMDiscountRow({ discountCodeData, adminUrlPrefix }) {

@@ -29,62 +29,62 @@ function wordifyfa(num = 0, level = 0) {
   // convert negative number to positive and get wordify value
   if (num < 0) {
     num = num * -1;
-    return "منفی " + wordifyfa(num, level);
+    return "Negative" + wordifyfa(num, level);
   }
   if (num === 0) {
     if (level === 0) {
-      return "صفر";
+      return "Zero";
     } else {
       return "";
     }
   }
   let result = "";
   const yekan = [
-      " یک ",
-      " دو ",
-      " سه ",
-      " چهار ",
-      " پنج ",
-      " شش ",
-      " هفت ",
-      " هشت ",
-      " نه ",
+      " One",
+      " two",
+      " Three",
+      " Four",
+      " Five",
+      " Six",
+      " Seven",
+      " eight",
+      " No",
     ],
     dahgan = [
-      " بیست ",
-      " سی ",
-      " چهل ",
-      " پنجاه ",
-      " شصت ",
-      " هفتاد ",
-      " هشتاد ",
-      " نود ",
+      " twenty",
+      " C.",
+      " Forty",
+      " Fifty",
+      " Sixty",
+      " Seventy",
+      " Eighty",
+      " Ninety",
     ],
     sadgan = [
-      " یکصد ",
-      " دویست ",
-      " سیصد ",
-      " چهارصد ",
-      " پانصد ",
-      " ششصد ",
-      " هفتصد ",
-      " هشتصد ",
-      " نهصد ",
+      " One hundred",
+      " two hundred",
+      " three hundred",
+      " four hundred",
+      " five hundred",
+      " six hundred",
+      " seven hundred",
+      " eight hundred",
+      " nine hundred",
     ],
     dah = [
-      " ده ",
-      " یازده ",
-      " دوازده ",
-      " سیزده ",
-      " چهارده ",
-      " پانزده ",
-      " شانزده ",
-      " هفده ",
-      " هیجده ",
-      " نوزده ",
+      " Is",
+      " Eleven",
+      " twelve",
+      " Thirteen",
+      " fourteen",
+      " Fifteen",
+      " Sixteen",
+      " Seventeen",
+      " Eighteen",
+      " Nineteen",
     ];
   if (level > 0) {
-    result += " و ";
+    result += " And";
     level -= 1;
   }
 
@@ -100,22 +100,22 @@ function wordifyfa(num = 0, level = 0) {
   } else if (num < 1000000) {
     result +=
       wordifyfa(Math.floor(num / 1000), level) +
-      " هزار " +
+      " Thousand" +
       wordifyfa(num % 1000, level + 1);
   } else if (num < 1000000000) {
     result +=
       wordifyfa(Math.floor(num / 1000000), level) +
-      " میلیون " +
+      " Million" +
       wordifyfa(num % 1000000, level + 1);
   } else if (num < 1000000000000) {
     result +=
       wordifyfa(Math.floor(num / 1000000000), level) +
-      " میلیارد " +
+      " billion" +
       wordifyfa(num % 1000000000, level + 1);
   } else if (num < 1000000000000000) {
     result +=
       wordifyfa(Math.floor(num / 1000000000000), level) +
-      " تریلیارد " +
+      " Trip" +
       wordifyfa(num % 1000000000000, level + 1);
   }
 
@@ -123,10 +123,10 @@ function wordifyfa(num = 0, level = 0) {
 }
 
 export function wordifyRials(num) {
-  return wordifyfa(num, 0) + " ریال";
+  return wordifyfa(num, 0) + " Rial";
 }
 export function wordifyTomans(num) {
-  return wordifyfa(num, 0) + " تومان";
+  return wordifyfa(num, 0) + " Toman";
 }
 export function wordifyRialsInTomans(num) {
   if (typeof num == "string") {
@@ -137,5 +137,5 @@ export function wordifyRialsInTomans(num) {
   } else {
     num = 0;
   }
-  return wordifyfa(num, 0) + " تومان";
+  return wordifyfa(num, 0) + " Toman";
 }

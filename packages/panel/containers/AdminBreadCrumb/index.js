@@ -213,7 +213,7 @@ function AdminBreadCrumb({
               variant="contained"
               color="primary"
               style={{ direction: "ltr" }}
-              endIcon={submitButtonHasPlus ? <AddRoundedIcon /> : ""}
+              startIcon={submitButtonHasPlus ? <AddRoundedIcon /> : ""}
               disabled={isLoading}
             >
               {submitButtonText}

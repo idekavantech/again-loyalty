@@ -87,7 +87,7 @@ function CRMDiscountEdit() {
           Note that after saving the changes, the discount code title will not be editable. 
         </p>
         <div
-          className="d-flex align-items-center justify-content-between flex-lg-row-reverse flex-md-column flex-sm-column flex-column ltr-force"
+          className="d-flex align-items-center justify-content-between flex-lg-row flex-md-column flex-sm-column flex-column ltr-force"
           style={{ padding: "0px 24px" }}
         >
           <div
@@ -171,7 +171,7 @@ function CRMDiscountEdit() {
                   style={{
                     position: "absolute",
                     top: 0,
-                    left: 0,
+                    right: 0,
                     height: 44,
                     padding: 0,
                     border: "none",
@@ -179,8 +179,8 @@ function CRMDiscountEdit() {
                   labelId="demo-customized-select-label"
                   id="demo-customized-select"
                   disableUnderline
+                  IconComponent={() => null}
                   className="w-25 "
-                  variant="outlined"
                   inputProps={{ style: { border: "none" } }}
                   onChange={onDiscountSelectChange}
                   value={discountCodeAmount}
@@ -217,8 +217,9 @@ function CRMDiscountEdit() {
                 disableFuture={false}
                 selectedDate={discountData?.expiration_date ?? null}
                 handleDateChange={onExpirationDateChange}
-                placeholder="۰۰/ ۰۰/ ۰۰"
+                placeholder="00/ 00/ 00"
               />
+              <div className="mx-3 d-flex align-items-center ">
               <svg
                 width="14"
                 height="16"
@@ -232,6 +233,7 @@ function CRMDiscountEdit() {
                   fillOpacity="0.54"
                 />
               </svg>
+              </div>
             </div>
           </div>
         </div>

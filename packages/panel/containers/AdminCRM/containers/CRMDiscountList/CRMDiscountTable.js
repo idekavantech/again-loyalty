@@ -27,7 +27,7 @@ export const customerDiscountConstant = [
   },
   {
     id: 3,
-    label: "Discount rate",
+    label: "Discount amount",
     align: "right",
     minWidth: 100,
     width: 160,

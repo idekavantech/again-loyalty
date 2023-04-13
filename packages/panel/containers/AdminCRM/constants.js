@@ -160,7 +160,7 @@ export const discountCodeValue = [
     query: "discount_percent",
   },
   {
-    name: "$",
+    name: "USD",
     type: "price",
     placeHolder: "Enter the amount",
     query: "discount_price",

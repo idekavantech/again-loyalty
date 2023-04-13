@@ -36,27 +36,27 @@ function getPersianLocal() {
     date: PersianLocalizationDate,
     i18n: {
       weekdays: [
-        "شنبه",
-        "یکشنبه",
-        "دوشنبه",
-        "سه شنبه",
-        "چهارشنبه",
-        "پنج شنبه",
-        "جمعه",
+        "Saturday",
+        "Sunday",
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
       ],
       months: [
-        "فروردین",
-        "اردیبهشت",
-        "خرداد",
-        "تیر",
-        "مرداد",
-        "شهریور",
-        "مهر",
-        "آبان",
-        "آذر",
-        "دی",
-        "بهمن",
-        "اسفند",
+        "farvardin",
+        "Ordibehesht",
+        "Khordad",
+        "Tir",
+        "Mordad",
+        "Shahrivar",
+        "stamp",
+        "Aban",
+        "Fire",
+        "Held",
+        "Avalanche",
+        "Esfand",
       ],
     },
   };
@@ -202,15 +202,15 @@ export function setChartOptions(H) {
     lang: {
       decimalPoint: "\u066B",
       thousandsSep: "\u066C",
-      resetZoom: "ریست کردن زوم",
-      resetZoomTitle: "ریست کردن زوم",
-      numericSymbols: [" هزار", " میلیون", "G", "T", "P", "E"],
-      drillUpText: "بازگشت به {series.name}",
-      downloadCSV: "دانلود داده در فایل اکسل",
-      downloadJPEG: "دانلود نمودار به صورت عکس",
-      downloadPDF: "دانلود داد در فایل پی‌دی‌اف",
-      printChart: "چاپ نمودار",
-      viewData: "مشاهده‌ی داده به صورت جدول",
+      resetZoom: "Reset zoom",
+      resetZoomTitle: "Reset zoom",
+      numericSymbols: [" Thousand", " Million", "G", "T", "P", "E"],
+      drillUpText: "Return to{series.name}",
+      downloadCSV: "Download data in Excel file",
+      downloadJPEG: "Download the chart as a photo",
+      downloadPDF: "Download Dad in PDF file",
+      printChart: "Diagram printing",
+      viewData: "Data view as a table",
     },
   });
   H.wrap(
@@ -264,12 +264,12 @@ export function getBaseChartOptions(
           if (displaySum) {
             this.setTitle(
               {
-                text: `${title} (جمع:  ${this.numberFormatter(
+                text: `${title} (Total:  ${this.numberFormatter(
                   sum,
                   0,
                   ",",
                   ","
-                )}${isEarnings ? " تومان" : ""})`,
+                )}${isEarnings ? " Toman" : ""})`,
               },
               false,
               false
@@ -289,7 +289,7 @@ export function getBaseChartOptions(
     yAxis: {
       min: 0,
       title: {
-        text: isEarnings ? `${title} (تومان)` : title,
+        text: isEarnings ? `${title} (Toman)` : title,
         useHTML: true,
         style: {
           direction: "rtl",
@@ -316,7 +316,7 @@ export function getBaseChartOptions(
         textAlign: "center",
       },
       valueDecimals: 0,
-      valueSuffix: isEarnings ? " تومان" : "",
+      valueSuffix: isEarnings ? " Toman" : "",
       pointFormat:
         '<table><tr><td style="color: {series.color}">{series.name}:&nbsp;</td>' +
         '<td style="text-align: right"><b>{point.y}</b></td></tr>',
@@ -331,7 +331,7 @@ export function getBaseChartOptions(
       csv: {
         columnHeaderFormatter(item, key) {
           if (!item || item instanceof Highcharts.Axis) {
-            return "تاریخ";
+            return "Date";
           }
           return item.name;
         },
@@ -392,7 +392,7 @@ export function getStockChartOptions(
       formatter(tooltip) {
         const format = tooltip.defaultFormatter.call(this, tooltip);
         format[0] = `<span style="font-size: 10px">${getDate(
-          "%A، %d %B",
+          "%A،%d %B",
           this.points[0].x
         )}</span><br/>`;
         return format;
@@ -419,17 +419,17 @@ export function getStockChartOptions(
       buttons: [
         {
           type: "all",
-          text: "همه",
+          text: "All",
         },
         {
           count: 1,
           type: "month",
-          text: "سی روز گذشته",
+          text: "The past thirty days",
         },
         {
           count: 7,
           type: "day",
-          text: "هفت روز گذشته‌",
+          text: "The past seven days",
         },
       ],
       labelStyle: {
