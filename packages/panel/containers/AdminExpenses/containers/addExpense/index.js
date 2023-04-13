@@ -17,8 +17,6 @@ import JalaliUtils from "@date-io/jalaali";
 import { useResponsive } from "@saas/utils/hooks/useResponsive";
 import AdminBreadCrumb from "containers/AdminBreadCrumb";
 
-moment.locale("en");
-moment.loadPersian({ usePersianDigits: true });
 
 const AddExpense = () => {
   const {

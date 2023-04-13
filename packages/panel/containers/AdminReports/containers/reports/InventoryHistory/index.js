@@ -53,8 +53,6 @@ import {defaultFromDate, defaultToDate} from "@saas/utils/constants/date";
 import {formatDateObjectToNormal} from "../../../../../utils/helpers";
 
 
- 
-jMoment.loadPersian({dialect: "persian-modern", usePersianDigits: true});
 
 const NEWEST = "NEWEST";
 const OLDEST = "OLDEST";

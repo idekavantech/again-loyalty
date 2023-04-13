@@ -286,7 +286,7 @@ const SubmitFactor = ({
                 className="cursor-pointer"
               />
               <p style={{ fontSize: 16, fontWeight: 500, paddingRight: 13 }}>
-                Quick order registration
+                Quick order
               </p>
             </div>
             <div>
@@ -629,7 +629,7 @@ const SubmitFactor = ({
                 className="cursor-pointer"
               />
               <p style={{ fontSize: 16, fontWeight: 500, paddingRight: 13 }}>
-                Quick order registration
+                Quick order
               </p>
             </div>
             <div>

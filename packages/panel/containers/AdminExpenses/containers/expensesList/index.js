@@ -35,8 +35,6 @@ import ArrowDropDownRoundedIcon from "@material-ui/icons/ArrowDropDownRounded";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 import AdminBreadCrumb from "containers/AdminBreadCrumb";
 
-moment.locale("en");
-moment.loadPersian({ usePersianDigits: true });
 
 const ExpenseList = () => {
   const {

@@ -40,8 +40,6 @@ import { priceFormatter } from "@saas/utils/helpers/priceFormatter";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 import TextField from '@material-ui/core/TextField'
 
-moment.locale("en");
-moment.loadPersian({ usePersianDigits: true });
 
 
 function CRMCampaignDetails() {

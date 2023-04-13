@@ -59,7 +59,6 @@ import {formatDateObjectToNormal} from "../../../../../../utils/helpers";
 
 
  
-jMoment.loadPersian({dialect: "persian-modern", usePersianDigits: true});
 
 const $ = `/images/$.svg`;
 

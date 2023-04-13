@@ -37,7 +37,6 @@ import {formatDateObjectToNormal} from "../../../../../../utils/helpers";
 
 
  
-jMoment.loadPersian({dialect: "persian-modern", usePersianDigits: true});
 
 const $ = `/images/$.svg`;
 const columns = ["Product Name", "Sales number", "Sale of product", "Product number"];

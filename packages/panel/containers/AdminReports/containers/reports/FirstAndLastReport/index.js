@@ -42,7 +42,6 @@ import { defaultFromDate, defaultToDate } from "@saas/utils/constants/date";
 import { formatDateObjectToNormal } from "../../../../../utils/helpers";
 
  
-jMoment.loadPersian({ dialect: "persian-modern", usePersianDigits: false });
 const branchHeadCells = [
   {
     id: "id",

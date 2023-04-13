@@ -20,8 +20,6 @@ import HelpOutlineRoundedIcon from "@material-ui/icons/HelpOutlineRounded";
 import { makeStyles } from "@material-ui/core/styles";
 import { replaceEnglishSmsKeywordsWithPersian } from "containers/AdminCRM/helpers/smsKeywords";
 
-moment.locale("en");
-moment.loadPersian({ usePersianDigits: true });
 
 function CRMCampaignDetails() {
   const {

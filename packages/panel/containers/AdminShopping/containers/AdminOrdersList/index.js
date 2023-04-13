@@ -610,7 +610,7 @@ export function AdminOrders({
         >
           {process.env.NEXT_PUBLIC_APP_NAME === DOBARE_WEBAPP_CONSTANT ? (
             <AdminBreadCrumb
-              submitButtonText="Quick order registration"
+              submitButtonText="Quick order"
               size="large"
               style={{ direction: "ltr", whiteSpace: "nowrap", height: 36 }}
               submitAction={() => {
@@ -677,7 +677,7 @@ export function AdminOrders({
             }))}
           />
         ) : null}
-        <div className="d-flex align-items-center justify-content-between px-3">
+        <div className="d-flex align-items-center justify-content-between px-4">
           <Input
             size="small"
             inputRef={inputRef}
@@ -761,7 +761,7 @@ export function AdminOrders({
               open={Boolean(anchorEl)}
               onClose={() => setAnchorEl(null)}
             >
-              <MenuItem
+              {/* <MenuItem
                 className="px-2 "
                 onClick={() => {
                   setAnchorEl(null);
@@ -773,11 +773,11 @@ export function AdminOrders({
                 }}
               >
                 <ListItemText
-                  primary="DownloadCSV Simple"
+                  primary="CSV Simple"
                   className="text-center "
                 />
-              </MenuItem>
-              <MenuItem
+              </MenuItem> */}
+              {/* <MenuItem
                 className="px-2 "
                 onClick={() => {
                   setAnchorEl(null);
@@ -789,10 +789,10 @@ export function AdminOrders({
                 }}
               >
                 <ListItemText
-                  primary="DownloadExcel Simple"
+                  primary="Excel Simple"
                   className="text-center "
                 />
-              </MenuItem>
+              </MenuItem> */}
               <MenuItem
                 className="px-2"
                 onClick={() => {
@@ -805,7 +805,7 @@ export function AdminOrders({
                 }}
               >
                 <ListItemText
-                  primary="DownloadCSV Full"
+                  primary="Download CSV"
                   className="text-center "
                 />
               </MenuItem>
@@ -821,7 +821,7 @@ export function AdminOrders({
                 }}
               >
                 <ListItemText
-                  primary="DownloadExcel Full"
+                  primary="Download Excel"
                   className="text-center "
                 />
               </MenuItem>

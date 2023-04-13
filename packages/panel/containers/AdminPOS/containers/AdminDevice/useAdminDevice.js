@@ -21,7 +21,7 @@ import { SHOPPING_PLUGIN } from "@saas/utils/constants/plugins";
 
 const SHORTCUT_MENU_NAME = "Shortcut mode";
 const DEFAULT_MENU_NAME = "Default mode";
-const FAST_ORDER_NAME = "Quick order registration";
+const FAST_ORDER_NAME = "Quick order";
 const menuTypes = [
   {
     name: SHORTCUT_MENU_NAME,
