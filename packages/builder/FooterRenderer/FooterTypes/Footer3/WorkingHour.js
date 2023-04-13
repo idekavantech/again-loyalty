@@ -33,7 +33,7 @@ function WorkingHour({ business }) {
                         {englishNumberToPersianNumber(shift.to)}
                       </div>
                     ))
-                  : "تعطیل"}
+                  : "Closed"}
               </div>
             </div>
           );

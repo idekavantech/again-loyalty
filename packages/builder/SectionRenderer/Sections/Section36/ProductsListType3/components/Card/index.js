@@ -53,7 +53,7 @@ const Card = ({
           color: "#737373",
         }}
       >
-        به مدت نامحدود
+        for Infinit time
       </time>
     );
   if (isMock) {
@@ -133,7 +133,7 @@ const Card = ({
             }`}
             quality={30}
             src={image}
-            alt={`تصویر ${title}`}
+            alt={`Image${title}`}
           />
         </div>
 
@@ -205,7 +205,7 @@ const Card = ({
                 fontSize: "14px",
               }}
             >
-              تومان
+              Toman
             </div>
             <strong
               className="ml-1"

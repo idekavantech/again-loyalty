@@ -9,7 +9,7 @@ export default class LandingPlugin extends Plugin {
   constructor(data, business, incomingUrl, incomingHost) {
     super(data, business, incomingUrl, incomingHost);
     this.name = LANDING_PLUGIN;
-    this.title = "لندینگ";
+    this.title = "Landing";
     this.hasLandingPage = true;
     this.isActive = data.landing
       ? data.landing.isActive
@@ -20,14 +20,14 @@ export default class LandingPlugin extends Plugin {
     this.tabActions = [
       // {
       //   url: '/',
-      //   text: 'خانه',
+      //   text: 'Home',
       //   icon: HOME_SMALL,
       // },
     ];
     this.adminTabActions = [
       {
         url: `${this.urlPrefix}/admin`,
-        text: "ویرایش ویترین",
+        text: "Edit showcase",
         icon: "HomeIcon",
       },
     ];

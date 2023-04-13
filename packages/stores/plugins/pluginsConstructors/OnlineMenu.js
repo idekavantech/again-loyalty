@@ -34,11 +34,11 @@ const defaultPages = (business) => {
       plugin: ONLINE_MENU_PLUGIN,
       isStatic: true,
       data: {
-        name: "منو آنلاین",
+        name: "Online menu",
         slug: "menu",
         previewLink: "/menu",
-        seo_title: `خرید اینترنتی با بیشترین % تخفیف از ${business.revised_title}`,
-        meta_description: `خرید اینترنتی از ${business.revised_title} با بیشترین % تخفیف`,
+        seo_title: `Online shopping with the highest% Discounts from${business.revised_title}`,
+        meta_description: `Online shopping from${business.revised_title} With the most% Discount`,
         sections_skeleton,
       },
     },
@@ -55,6 +55,6 @@ export default class OnlineMenu extends Plugin {
           pluginConfig.data.pages[ONLINE_MENU_PLUGIN_MENU_PAGE]) ||
         defaultPages(business)[ONLINE_MENU_PLUGIN_MENU_PAGE],
     };
-    this.pagesLabel = "ویرایش منوی آنلاین";
+    this.pagesLabel = "Edit the online menu";
   }
 }

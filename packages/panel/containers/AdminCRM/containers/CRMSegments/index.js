@@ -118,7 +118,7 @@ function CRMSegments() {
         }}
         dialogMainActionText="Yes"
         dialogSecondActions={() => setIsDeleteModalOpen(false)}
-        dialogSecondActionText="Good"
+        dialogSecondActionText="Cancel"
       />
         <p
           className="mt-2"

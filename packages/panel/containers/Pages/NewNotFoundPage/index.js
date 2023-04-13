@@ -37,7 +37,7 @@ function NewNotFoundPage({
             className="d-flex flex-wrap flex-column justify-content-center align-items-center"
           >
             <h1 style={{ fontSize: `${maxWidth768 ? "30px" : "40px"}` }}>
-              {item} You were not found..
+              Page Not Found
             </h1>
             <h2
               className="mt-3"
@@ -58,12 +58,13 @@ function NewNotFoundPage({
             </p>
             {!noButton && (
               <Button
+              size="large"
                 style={{ borderRadius: "10px" }}
                 color="secondary"
                 variant="contained"
                 onClick={() => router.push(buttonLink || `${urlPrefix}/`)}
               >
-                {buttonText || "The homepage of the site"}
+                {buttonText || "HOME"}
               </Button>
             )}
           </div>

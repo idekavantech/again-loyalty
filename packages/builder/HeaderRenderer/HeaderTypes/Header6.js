@@ -233,7 +233,7 @@ function Header6({
                       height: 36,
                     }}
                   >
-                    جستجو کنید...
+                    Search...
                     <SearchRoundedIcon style={{ width: 18 }} />
                   </div>
                 ) : null}
@@ -248,7 +248,7 @@ function Header6({
                   }}
                   className="orderButton"
                 >
-                  سفارش آنلاین
+                  online order
                 </Button>
               </Link>
             </div>
@@ -540,7 +540,7 @@ function Header6({
                     color: "white",
                   }}
                 >
-                  سفارش آنلاین
+                  online order
                 </Button>
               </Link>
             </div>

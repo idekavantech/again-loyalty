@@ -454,7 +454,7 @@ function AddActionCRMAutomatedTrends({ props }) {
         dialogMainActionText="Yes"
         dialogSecondActions={() => toggleModals(SAVE_MODAL)}
         dialogSecondActionTextColor="primary"
-        dialogSecondActionText="Good"
+        dialogSecondActionText="Cancel"
       />
       <AssuranceDialog
         isOpen={modals[CANCEL_MODAL]}
@@ -468,7 +468,7 @@ function AddActionCRMAutomatedTrends({ props }) {
         }}
         dialogMainActionText="Yes"
         dialogSecondActions={() => toggleModals(CANCEL_MODAL)}
-        dialogSecondActionText="Good"
+        dialogSecondActionText="Cancel"
       />
 
       {isLoading ? (

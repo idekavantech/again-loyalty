@@ -202,7 +202,7 @@ function Type3({
         size={button_size}
         endIcon={<PhoneEnabledRoundedIcon />}
       >
-        {showPhoneNumber ? businessPhoneNumber : "تماس"}
+        {showPhoneNumber ? businessPhoneNumber : "Contact"}
       </Button>
     </div>
   ) : (

@@ -145,7 +145,7 @@ export function* uploadFileSaga(url, file, noSnackBarMessage) {
     if (err) {
       yield put(uploadFailure(file, err));
       if (!noSnackBarMessage)
-        yield put(setSnackBarMessage("فایل شما اپلود نشد.", "fail"));
+        yield put(setSnackBarMessage("Your file failed to upload..", "fail"));
 
       return;
     }
@@ -153,7 +153,7 @@ export function* uploadFileSaga(url, file, noSnackBarMessage) {
       yield put(uploadSuccess(file));
       if (!noSnackBarMessage)
         yield put(
-          setSnackBarMessage("فایل شما با موفقیت اپلود شد.", "success")
+          setSnackBarMessage("Your file successfully uploaded.", "success")
         );
       return;
     }
@@ -255,8 +255,8 @@ function* sendLocalEmail(action) {
       "POST"
     );
     if (response?.status === "success")
-      yield put(setSnackBarMessage("ایمیل با موفقیت ارسال شد.", "success"));
-    else yield put(setSnackBarMessage("ارسال ایمیل موفقیت‌آمیز نبود!", "fail"));
+      yield put(setSnackBarMessage("The email was successfully sent.", "success"));
+    else yield put(setSnackBarMessage("Sending email was not successful!", "fail"));
   } catch (err) {
     console.log(err);
   }

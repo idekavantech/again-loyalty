@@ -230,7 +230,7 @@ function Section47({
                         }`}
                         style={{color: coal}}
                     >
-                        انتخاب شعبه‌
+                        Choosing a branch
                     </div>
                 </Paper>
                 {dialogOpen && !minWidth768 && (
@@ -273,7 +273,7 @@ function Section47({
                                     type="text"
                                     ref={inputRef}
                                     className="w-100 u-fontLarge h-100 mr-2 search-input"
-                                    placeholder="جستجوی شعبه یا آدرس"
+                                    placeholder="Search of the branch or address"
                                     onChange={(event) => {
                                         // if (event.target.value === "") {
                                         setFilters(event.target.value);
@@ -299,7 +299,7 @@ function Section47({
                                 className="col-3 position-absolute u-cursor-pointer px-3 mt-md-5 ml-md-5 d-flex flex-row-reverse align-items-center justify-content-between"
                             >
                                 <div className="u-fontVeryLarge mr-2" style={{color: coal}}>
-                                    نزدیکترین شعبه به من
+                                    The nearest branch to me
                                 </div>
                                 <Icon color={pollution} icon={GPS} width={25} height={25}/>
                             </section>
@@ -355,7 +355,7 @@ function Section47({
                                     style={{color: coal}}
                                     className="u-font-semi-small u-fontWeightBold mr-2"
                                 >
-                                    از دو انگشت به صورت همزمان برای حرکت روی نقشه استفاده کنید.
+                                    Use two fingers simultaneously to move on the map.
                                 </div>
                             </Paper>
                         )}

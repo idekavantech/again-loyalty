@@ -27,10 +27,10 @@ export default function OpenOutOfWorkingHourText({
           className="ml-2"
         />
         {isBusinessOpenNow
-          ? "باز . سفارش گیری تا " +
+          ? "Open. Order up" +
             englishNumberToPersianNumber(workingDayStart.closingTime)
-          : "پیش سفارش می‌پذیریم"}{" "}
-        {isSelectedAddressCurrect ? ". خارج از محدوده " : ""}
+          : "We accept the order"}{" "}
+        {isSelectedAddressCurrect ? ". out of range" : ""}
       </div>
     </>
   );

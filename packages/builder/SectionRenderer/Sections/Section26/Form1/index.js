@@ -155,7 +155,7 @@ function Form1({
       }
     });
     if (newArray && newArray.length) {
-      _setSnackBarMessage("لطفا فیلدهای الزامی را پر نمایید.", "fail");
+      _setSnackBarMessage("Please fill in the required fields.", "fail");
     } else {
       const _button = form.inputs.find((_input) => _input.type === "button");
       const callback = _button ? _button.callback : null;
@@ -500,7 +500,7 @@ function Form1({
               isDesktop ? "col-lg-6" : "col-12"
             } mx-auto text-center py-5`}
           >
-            فرمی برای نمایش انتخاب نشده است.
+            Formi is not selected to show.
           </div>
         )}
       </div>

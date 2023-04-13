@@ -1,5 +1,6 @@
 export function getHostFromURL(incomingUrl) {
-  return incomingUrl
+  const test = "admin.againloyalty.com"
+  return test
     .replace("www.", "")
     .replace("order.", "")
     .replace("http://", "")

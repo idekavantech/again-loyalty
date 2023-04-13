@@ -646,7 +646,7 @@ function CRMListEdit({
           }}
           dialogMainActionText="Yes"
           dialogSecondActions={() => setOpenSaveModal(false)}
-          dialogSecondActionText="Good"
+          dialogSecondActionText="Cancel"
         />
         <AssuranceDialog
           isOpen={openCancelModal}
@@ -658,7 +658,7 @@ function CRMListEdit({
           }}
           dialogMainActionText="Yes"
           dialogSecondActions={() => setOpenCancelModal(false)}
-          dialogSecondActionText="Good"
+          dialogSecondActionText="Cancel"
         />
       </div>
     </div>

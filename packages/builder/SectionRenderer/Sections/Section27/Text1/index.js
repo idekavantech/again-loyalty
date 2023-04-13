@@ -93,8 +93,8 @@ function Text1({
               isMobile ? "col-12" : "col-lg-6"
             } mx-auto py-5 text-center`}
           >
-            با این سکشن می‌توانید متون خود برای وبلاگ موردنظر را به راحتی
-            پیاده‌سازی کرده و به آن فرم‌های مورد نظر خود را بدهید.
+            With this sequel you can easily find your texts for the blog
+            Implement and give those desired forms.
           </div>
         ) : null}
       </div>

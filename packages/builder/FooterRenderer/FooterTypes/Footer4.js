@@ -340,7 +340,7 @@ function Footer4({
                 whiteSpace: "nowrap",
               }}
             >
-              نمادهای الکترونیک
+              Electronic symbols
             </span>
             <span
               className="mx-5"
@@ -466,7 +466,7 @@ function Footer4({
                       color: icon_and_text_color,
                     }}
                   >
-                    ارتباط با ما
+                    Communication with us
                   </span>
                   <span
                     className="mx-2"
@@ -584,7 +584,7 @@ function Footer4({
                   )}
                 </div>
               )}
-              <div
+              {/* <div
                 className="d-flex align-items-center position-absolute"
                 style={{
                   left: `${
@@ -629,7 +629,7 @@ function Footer4({
                     {business.revised_title}
                   </div>
                 )}
-              </div>
+              </div> */}
               {_FOOTER_CONTACT_US_VISIBILITY && (
                 <div style={{ zIndex: 100 }}>
                   <span
@@ -639,7 +639,7 @@ function Footer4({
                     }}
                     className="ml-1"
                   >
-                    تماس با ما:
+                    contact us:
                   </span>
                   <span
                     style={{
@@ -750,7 +750,7 @@ function Footer4({
               whiteSpace: "nowrap",
             }}
           >
-            نمادهای الکترونیک
+            Electronic symbols
           </span>
           <span
             className="mx-5"

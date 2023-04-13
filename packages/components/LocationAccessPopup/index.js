@@ -15,16 +15,16 @@ function LocationAccessPopup({ business, getAccess, onClose }) {
     >
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
-          {business.revised_title} نیاز به دسترسی مکان‌یاب شما دارد، اجازه
-          دسترسی می‌دهید؟
+          {business.revised_title} Requires your location access, permission
+          Do you access?
         </DialogContentText>
       </DialogContent>
       <DialogActions>
         <Button onClick={onClose} color="disabled">
-          انصراف
+          Candifying
         </Button>
         <Button onClick={getAccess} color="secondary">
-          دسترسی
+          access
         </Button>
       </DialogActions>
     </Dialog>

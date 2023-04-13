@@ -143,7 +143,7 @@ function Header7({
       {isDesktop ? (
         <div>
           <div className="w-100 d-flex flex-1 p-3">
-            <div className="d-flex justify-content-start align-items-center flex-1 ">
+            {/* <div className="d-flex justify-content-start align-items-center flex-1 ">
               <Link
                 className="d-flex align-items-center u-cursor-pointer"
                 href={`${urlPrefix}/`}
@@ -170,7 +170,7 @@ function Header7({
                   </div>
                 ) : null}
               </Link>
-            </div>
+            </div> */}
             {_HEADER_SEARCH_VISIBILITY ? (
               <div className="d-flex justify-content-center align-items-center flex-1">
                 <div
@@ -185,7 +185,7 @@ function Header7({
                   }}
                   onClick={() => pushParamsToUrl(APP_SHOPPINGPAGE_SEARCH_MODAL)}
                 >
-                  جستجو کنید...
+                  Search...
                   <Button
                     className="position-absolute"
                     style={{
@@ -290,7 +290,7 @@ function Header7({
                   <IconButton className="p-1" edge="start" aria-label="menu">
                     <MenuIcon />
                   </IconButton>
-                  دسته‌بندی کالاها
+                  Classification of goods
                   <span
                     style={{
                       color: theme.palette.text.disabled,
@@ -443,7 +443,7 @@ function Header7({
       ) : (
         <div>
           <div className="w-100 d-flex flex-1 p-2">
-            <div className="d-flex justify-content-start align-items-center flex-1">
+            {/* <div className="d-flex justify-content-start align-items-center flex-1">
               <Link
                 href={`${urlPrefix}/`}
                 className="d-flex align-items-center"
@@ -470,7 +470,7 @@ function Header7({
                   </div>
                 ) : null}
               </Link>
-            </div>
+            </div> */}
 
             <div className="flex-1 d-flex justify-content-end align-items-center">
               {iconsWidget &&
@@ -569,7 +569,7 @@ function Header7({
                     height: 40,
                   }}
                 >
-                  جستجو کنید...
+                  Search...
                   <Button
                     className="position-absolute"
                     style={{

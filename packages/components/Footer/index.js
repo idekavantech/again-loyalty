@@ -12,27 +12,27 @@ function Footer({businessName, isWhiteLabel, whiteLabelPluginData}) {
     return (
         <footer className="c-footer py-4 pb-2">
             <div className="container text-center u-fontSmall">
-                <div className="mt-1 u-text-darkest-grey">
-                    تمامی حقوق مادی و معنوی این سایت متعلق به
+                {/* <div className="mt-1 u-text-darkest-grey">
+                    All intellectual rights of this site belonged to
                     <strong
                         className="u-font-semi-small u-cursor-pointer"
                         onClick={() => router.push("/")}
                     >
                         <i> {businessName} </i>
                     </strong>
-                    می‌باشد.
-                </div>
+                    is.
+                </div> */}
                 {!isWhiteLabel && (
                     <div>
                         <div className="mt-2 u-fontWeightBold u-fontVerySmall mt-1 u-text-darkest-grey">
-                            طراحی سایت با
+                            Website design with
                             <a
                                 href="https://vitrin.me"
                                 rel="nofollow"
                                 className="mx-1 u-text-primary-blue-remove"
                                 style={{color: "#0050FF"}}
                             >
-                                ویترین
+                                Showcase
                             </a>
                         </div>
                         <div>
@@ -41,7 +41,7 @@ function Footer({businessName, isWhiteLabel, whiteLabelPluginData}) {
                                     width={30}
                                     className="mr-1"
                                     src={`/images/vitrin-logo.png`}
-                                    alt="ویترین"
+                                    alt="Showcase"
                                 />
                             </a>
                         </div>
@@ -50,23 +50,23 @@ function Footer({businessName, isWhiteLabel, whiteLabelPluginData}) {
                 {isWhiteLabel && whiteLabelPluginData.agency && (
                     <div
                         className="d-flex align-items-center justify-content-center mt-2 u-fontWeightBold u-fontVerySmall mt-1 u-text-darkest-grey">
-                        <div>طراحی شده توسط</div>
+                        <div>Designed by</div>
                         <strong className="u-fontWeightBold mx-1">
                             <i style={{fontSize: 12}}>{whiteLabelPluginData.agency}</i>
                         </strong>
                         {whiteLabelPluginData?.has_powered_by === false ? null : (
                             <>
-                                <div>با استفاده از</div>
+                                <div>Using</div>
                                 <a
                                     href="https://vitrin.me"
                                     className="mx-1 u-text-primary-blue-remove"
                                 >
-                                    ویترین
+                                    Showcase
                                     <img
                                         width={30}
                                         className="mr-1"
                                         src={`/images/vitrin-logo.png`}
-                                        alt="ویترین"
+                                        alt="Showcase"
                                     />
                                 </a>
                             </>

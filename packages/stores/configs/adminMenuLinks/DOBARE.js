@@ -17,68 +17,68 @@ const DOBARE = {
   [SHOPPING_PLUGIN]: [],
   [CRM_PLUGIN]: [
     // {
-    //   text: "مدیریت سفارش‌ها",
+    //   text: "Order management",
     //   url: `${SHOPPING_PLUGIN_URL}/orders`,
     //   onClick: () => {},
     //   icon: "ShoppingCartIcon",
     // },
     // {
     //   icon: "GroupIcon",
-    //   text: "لیست مشتریان",
+    //   text: "Customer list",
     //   url: `crm/customers`,
     // },
     // {
     //   icon: "InboxRoundedIcon",
-    //   text: "پیام‌ها و نظرات",
+    //   text: "Messages and comments",
     //   url: `reviews`,
     // },
     // {
     //   icon: "HowToVoteIcon",
-    //   text: "نظرسنجی",
+    //   text: "Survey",
     //   url: `crm/survey`,
     // },
     // {
-    //   text: "کد تخفیف",
+    //   text: "discount code",
     //   icon: "LocalOfferIcon",
     //   url: `crm/customer_discount`,
     // },
     // {
     //   icon: "PollIcon",
-    //   text: "گزارشات",
+    //   text: "reports",
     //   subLinks: [
     //     {
-    //       text: "گزارش باشگاه",
+    //       text: "Club report",
     //       url: `crm/customer_reports`,
     //     },
     //     {
-    //       text: "گزارش اعتبار هدیه",
+    //       text: "Gift Credit Report",
     //       url: `crm/credit_reports`,
     //     },
     //   ],
     // },
     // {
     //   icon: "ListIcon",
-    //   text: "سطوح مشتریان",
+    //   text: "Customer levels",
     //   url: `crm/customer_levels`,
     // },
     // {
     //   icon: "LabelIcon",
-    //   text: "برچسب‌های مشتریان",
+    //   text: "Customer tags",
     //   url: `crm/labels`,
     // },
     // {
     //   icon: "AppsIcon",
-    //   text: "بخش‌بندی مشتریان",
+    //   text: "Customer segmentation",
     //   url: `crm/segments`,
     // },
     // {
     //   icon: "TrendingUpRoundedIcon",
-    //   text: "روند خودکار",
+    //   text: "Automatic process",
     //   url: `crm/automated_processes`,
     // },
     // {
     //   icon: "NewReleasesIcon",
-    //   text: "کمپین‌ها",
+    //   text: "Campaigns",
     //   url: `crm/campaign`,
     // },
   ],

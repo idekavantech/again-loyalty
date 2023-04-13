@@ -110,10 +110,10 @@ function BranchesSection({
       >
         <div className="py-5 u-fontNormal-r w-100">
           <div className="text-center u-text-black u-fontWeightBold">
-            انتخاب شعبه
+            Choosing a branch
           </div>
           <div className="text-center u-text-black mt-1">
-            برای سفارش آنلاین شعبه موردنظر خود را انتخاب کنید.
+            Choose your desired branch to order online.
           </div>
           <div className="align-items-center justify-content-center d-flex w-100 pt-3">
             <div
@@ -124,7 +124,7 @@ function BranchesSection({
               className="px-3 u-text-white u-no-wrap u-fontWeightBold u-height-36 c-btn-branch u-border-radius-4 u-cursor-pointer"
               style={{ backgroundColor: themeColor }}
             >
-              انتخاب شعبه
+              Choosing a branch
               <KeyboardArrowLeftRoundedIcon fontSize="small" />
             </div>
           </div>

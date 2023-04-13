@@ -124,7 +124,7 @@ function CrmSurveySettingModal({
               }}
               onClick={() => setShowSettingModal(false)}
             >
-              coming back
+              Back
             </Button>
             <Button
               variant="contained"

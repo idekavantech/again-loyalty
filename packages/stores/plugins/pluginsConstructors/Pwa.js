@@ -9,7 +9,7 @@ export default class PwaPlugin extends Plugin {
     this.price = 30000;
     this.widgets[MENU_LINKS_WIDGET] = [
       {
-        text: "نصب اپلیکیشن",
+        text: "Install the app",
         url: `/pwa/download`,
         icon: "AddToHomeScreenIcon",
         id: "pwa",
@@ -22,7 +22,7 @@ export default class PwaPlugin extends Plugin {
     };
     this.static_internal_links = [
       {
-        label: "صفحه: دانلود اپلیکیشن",
+        label: "Page: Download app",
         value: `${this.urlPrefix}/pwa/download`,
       },
     ];

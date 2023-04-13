@@ -23,9 +23,9 @@ export default function OutOfWorkingHours({ isSmallScreen, workingDayStart }) {
             className="ml-2"
           />
         ) : null}
-        {`بسته . سفارش گیری از ${
+        {`Closed. Ordering from${
           workingDayStart.dayName
-        } ساعت ${englishNumberToPersianNumber(workingDayStart.openingTime)}. `}
+        } the watch${englishNumberToPersianNumber(workingDayStart.openingTime)}. `}
       </div>
     </>
   );

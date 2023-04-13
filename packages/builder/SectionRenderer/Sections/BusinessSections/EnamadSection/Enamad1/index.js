@@ -68,7 +68,7 @@ function Enamad1({
       </div>
       <Section
         themeColor={themeColor}
-        title="مجوزها"
+        title="permissions"
         className={`position-relative ${isEditMode ? "py-5" : "py-3"}`}
       >
         <div className="d-flex justify-content-center">

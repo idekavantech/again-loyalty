@@ -39,7 +39,7 @@ function Footer1({ business, themeConfig, isMobile, pluginData }) {
         >
           <div className="u-fontVeryLarge u-fontWeightBold d-flex col-12 px-0 justify-content-center">
             {numbers.filter((number) => number !== "").length !== 0 ? (
-              <span>شماره تماس پشتیبانی</span>
+              <span>Support contact number</span>
             ) : null}
           </div>
           <div
@@ -122,7 +122,7 @@ function Footer1({ business, themeConfig, isMobile, pluginData }) {
               style={{ visibility: "hidden" }}
             >
               <a className="cursor-pointer" href={"/sitemap.xml"}>
-                نقشه سایت
+                Sitemap
               </a>
             </div>
             {themeConfig.enamad_config ||
@@ -137,7 +137,7 @@ function Footer1({ business, themeConfig, isMobile, pluginData }) {
                       src={`/images/cert.svg`}
                     />
                   </div>
-                  <span className="mx-2 u-fontWeightBold">گواهینامه</span>
+                  <span className="mx-2 u-fontWeightBold">Certificate</span>
                   <div style={{ width: 20 }}>
                     <LazyImage
                       className="w-100 h-100 object-fit-cover"
@@ -297,7 +297,7 @@ function Footer1({ business, themeConfig, isMobile, pluginData }) {
       >
         <div className="u-fontVeryLarge u-fontWeightBold d-flex col-12 col-lg-2 px-0 justify-content-center justify-content-lg-start">
           {numbers.filter((number) => number !== "").length !== 0 ? (
-            <span>شماره تماس پشتیبانی</span>
+            <span>Support contact number</span>
           ) : null}
         </div>
         <div
@@ -383,7 +383,7 @@ function Footer1({ business, themeConfig, isMobile, pluginData }) {
             style={{ visibility: "hidden" }}
           >
             <a className="cursor-pointer" href={"/sitemap.xml"}>
-              نقشه سایت
+              Sitemap
             </a>
           </div>
           {themeConfig.enamad_config ||
@@ -398,7 +398,7 @@ function Footer1({ business, themeConfig, isMobile, pluginData }) {
                     src={`/images/cert.svg`}
                   />
                 </div>
-                <span className="mx-2 u-fontWeightBold">گواهینامه</span>
+                <span className="mx-2 u-fontWeightBold">Certificate</span>
                 <div style={{ width: 20 }}>
                   <LazyImage
                     className="w-100 h-100 object-fit-cover"

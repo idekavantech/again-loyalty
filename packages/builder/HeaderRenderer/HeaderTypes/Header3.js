@@ -185,7 +185,7 @@ function Header3({
                     height: 40,
                   }}
                 >
-                  جستجو کنید...
+                  Search...
                 </div>
                 <div className="mx-1">
                   <Button
@@ -295,7 +295,7 @@ function Header3({
                   <IconButton className="p-1" edge="start" aria-label="menu">
                     <MenuIcon />
                   </IconButton>
-                  دسته‌بندی کالاها
+                  Classification of goods
                   <span
                     style={{
                       color: theme.palette.text.disabled,
@@ -580,7 +580,7 @@ function Header3({
                     height: 40,
                   }}
                 >
-                  جستجو کنید...
+                  Search...
                 </div>
               </div>
             </div>

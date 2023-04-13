@@ -1020,7 +1020,7 @@ export function AdminPageBuilder() {
               variant="outlined"
               style={{ height: 40, width: 64 }}
             >
-              Good
+              Cancel
             </Button>
             <Button
               color="primary"

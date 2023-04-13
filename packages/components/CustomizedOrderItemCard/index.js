@@ -85,7 +85,7 @@ const CustomizedOrderItemCard = ({
                   whiteSpace: "nowrap",
                 }}
               >
-                شخصی‌سازی شده
+                Personalized
               </div>
             </div>
 
@@ -138,7 +138,7 @@ const CustomizedOrderItemCard = ({
                       color: textTypes.text.default,
                     }}
                   >
-                    {priceFormatter(discountedPrice) + " تومان"}
+                    {priceFormatter(discountedPrice) + " Toman"}
                   </div>
                 </div>
               ) : (
@@ -150,7 +150,7 @@ const CustomizedOrderItemCard = ({
                     color: textTypes.text.default,
                   }}
                 >
-                  {priceFormatter(initialPrice) + " تومان"}
+                  {priceFormatter(initialPrice) + " Toman"}
                 </div>
               )}
               <EditIcon style={{ color: themeColor }} />

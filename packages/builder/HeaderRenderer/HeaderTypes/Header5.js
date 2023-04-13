@@ -123,7 +123,7 @@ function Header5({
             }}
             elevation={_HEADER_OVER_POSITION ? 0 : 3}
           >
-            <div className="d-flex justify-content-start align-items-center flex-1  ml-4">
+            {/* <div className="d-flex justify-content-start align-items-center flex-1  ml-4">
               {_HEADER_LOGO_VISIBILITY ? (
                 <Link
                   className="u-cursor-pointer d-flex align-items-center"
@@ -152,7 +152,7 @@ function Header5({
                   {title}
                 </Link>
               ) : null}
-            </div>
+            </div> */}
             <div className="flex-1 d-flex justify-content-end align-items-center">
               {_HEADER_SEARCH_VISIBILITY ? (
                 <Button
@@ -257,7 +257,7 @@ function Header5({
             }}
             elevation={_HEADER_OVER_POSITION ? 0 : 3}
           >
-            <div className="d-flex justify-content-start align-items-center flex-1">
+            {/* <div className="d-flex justify-content-start align-items-center flex-1">
               <Link
                 className="d-flex align-items-center"
                 href={`${urlPrefix}/`}
@@ -285,7 +285,7 @@ function Header5({
                   </div>
                 ) : null}
               </Link>
-            </div>
+            </div> */}
 
             <div className="flex-1 d-flex justify-content-end align-items-center">
               {_HEADER_SEARCH_VISIBILITY ? (

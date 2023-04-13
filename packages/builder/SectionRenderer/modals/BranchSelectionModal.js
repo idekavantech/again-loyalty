@@ -155,14 +155,14 @@ function BranchSelectionModal({ isOpen, onClose, themeColor, business }) {
             >
               <Icon width={25} height={25} icon={ARROW} color={pollution} />
             </div>
-            <div className="flex-1">انتخاب شعبه</div>
+            <div className="flex-1">Choosing a branch</div>
             <div className="flex-1" />
           </div>
           <div className="c-modal-body ">
             <Map options={mapOptions} />
             <div className="px-3">
               <div className="u-text-black u-fontWeightBold mt-2 text-center">
-                شعبه مورد نظر خود را انتخاب کنید.
+                Choose your desired branch.
               </div>
               <div className="my-5">
                 {branches
@@ -201,7 +201,7 @@ function BranchSelectionModal({ isOpen, onClose, themeColor, business }) {
                         >
                           {branch.title}
                         </div>
-                        <div style={{ color: themeColor }}>ثبت سفارش</div>
+                        <div style={{ color: themeColor }}>Order</div>
                         <Icon
                           icon={CHEVRON}
                           color={themeColor}
@@ -235,7 +235,7 @@ function BranchSelectionModal({ isOpen, onClose, themeColor, business }) {
                                 />
                               </div>
                             </div>
-                            سفارش میپذیریم.
+                            We accept the order.
                           </div>
                         )}
                     </div>

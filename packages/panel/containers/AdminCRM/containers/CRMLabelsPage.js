@@ -141,7 +141,7 @@ function CRMLabelsPage({
             }}
             dialogMainActionText="Yes"
             dialogSecondActions={() => setOpenCancelModal(false)}
-            dialogSecondActionText="Good"
+            dialogSecondActionText="Cancel"
           />
         </div>
       </div>

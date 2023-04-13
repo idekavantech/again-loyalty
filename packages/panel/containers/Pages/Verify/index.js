@@ -142,7 +142,7 @@ function Verify({ _verify, isLoading, resend, themeColor, _sendViaPhone }) {
             style={{ flex: "1", height: 48 }}
             className="ml-2"
           >
-            coming back
+            Back
           </Button>
           <Button
             id="SubmitVerificationCode"

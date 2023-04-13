@@ -90,7 +90,7 @@ function MenuImagePicker({ pickedColor = "#DBDCDD" }) {
           style={{ visibility: "hidden", display: "none" }}
           onChange={imageChange}
         />
-        افزودن تصویر یا آیکون
+        Add image or icon
       </Button>
     </>
   );

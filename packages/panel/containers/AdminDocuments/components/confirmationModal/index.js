@@ -59,7 +59,7 @@ const ConfirmationModal = ({ isOpen, onClose, submit, isLoading }) => {
           className="mr-2 ml-0 u-box-shadow-none u-fontMedium"
           size="large"
         >
-          coming back
+          Back
         </Button>
       </DialogActions>
     </Dialog>

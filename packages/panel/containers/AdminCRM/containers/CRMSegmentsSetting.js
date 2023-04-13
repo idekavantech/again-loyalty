@@ -163,7 +163,7 @@ function CRMSegmentsSetting({
           }}
           dialogMainActionText="Yes"
           dialogSecondActions={() => setIsSaveModalOpen(false)}
-          dialogSecondActionText="Good"
+          dialogSecondActionText="Cancel"
         />
         <AssuranceDialog
           isOpen={isCancelModalOpen}
@@ -175,7 +175,7 @@ function CRMSegmentsSetting({
           }}
           dialogMainActionText="Yes"
           dialogSecondActions={() => setIsCancelModalOpen(false)}
-          dialogSecondActionText="Good"
+          dialogSecondActionText="Cancel"
         />
       </div>
     </div>

@@ -229,7 +229,7 @@ function Banner4({
                             className="my-4 mr-5"
                             style={{color: banner_1_texts_color || ""}}
                         >
-                          {priceFormatter(banner_1_price)} تومان
+                          {priceFormatter(banner_1_price)} Toman
                         </div>
                     )}
                     <SectionLink
@@ -303,7 +303,7 @@ function Banner4({
                             className="my-4 mr-5"
                             style={{color: banner_2_texts_color || ""}}
                         >
-                          {priceFormatter(banner_2_price)} تومان
+                          {priceFormatter(banner_2_price)} Toman
                         </div>
                     )}
                     <SectionLink

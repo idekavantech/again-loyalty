@@ -19,10 +19,10 @@ function ReferralCard({ inviterGift, className = "", urlPrefix = "" }) {
             <Icon icon={GIFT} color="white" />
             <div className="text-right mr-2">
               <div className="u-fontWeightBold u-text-white">
-                {inviterGift} تومان اعتبار هدیه
+                {inviterGift} Toman Gift Credit
               </div>
               <div className="u-fontNormal u-text-white">
-                با معرفی ما به دوستانتان هدیه بگیرید.
+                Gift to your friends by introducing us.
               </div>
             </div>
           </div>

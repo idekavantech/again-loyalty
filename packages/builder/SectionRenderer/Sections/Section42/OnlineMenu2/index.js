@@ -266,7 +266,7 @@ const OnlineMenu2 = ({
                     router.push(`${urlPrefix}/checkout/cart`);
                   }}
                 >
-                  تکمیل خرید
+                  Complete the purchase
                 </Button>
               </div>
             ) : null}

@@ -99,13 +99,13 @@ function Section25({
                 <div className={isMobile ? "col-12" : "col-lg-7"}>
                   <div>{item.name}</div>
                   <div className="mt-3">
-                    آدرس:‌{" "}
+                    Address:‌{" "}
                     <span
                       dangerouslySetInnerHTML={{ __html: item.address }}
                     ></span>
                   </div>
                   <div className="mt-3">
-                    تلفن: <a href={`tel:${item.phone}`}>{item.phone}</a>
+                    Phone: <a href={`tel:${item.phone}`}>{item.phone}</a>
                   </div>
                 </div>
                 <div className={isMobile ? "col-12" : "col-lg-2"}>

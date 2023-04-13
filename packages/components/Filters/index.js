@@ -13,10 +13,10 @@ import { useRouter } from "next/router";
 const maxPrice = 30000000;
 const minPrice = 0;
 const sortOptions = [
-  { id: 0, text: "محبوب‌ترین", keyword: null },
-  { id: 1, text: "جدید‌ترین", keyword: "_updated_at" },
-  { id: 2, text: "ارزان‌ترین", keyword: "default_variation__discounted_price" },
-  { id: 3, text: "گران‌ترین", keyword: "-default_variation__discounted_price" },
+  { id: 0, text: "Most Popular", keyword: null },
+  { id: 1, text: "the newest", keyword: "_updated_at" },
+  { id: 2, text: "cheapest", keyword: "default_variation__discounted_price" },
+  { id: 3, text: "the most expensive", keyword: "-default_variation__discounted_price" },
 ];
 export default function Filters({ themeColor, submitOnChange, callback }) {
   const loaded = useRef(false);
@@ -69,7 +69,7 @@ export default function Filters({ themeColor, submitOnChange, callback }) {
         />
         <Paper elevation={2} className="p-3 u-border-radius-8">
           <div className="u-text-black u-fontWeightBold text-right mb-2">
-            مرتب‌سازی بر اساس
+            order by
           </div>
           <MaterialSelect
             options={sortOptions}
@@ -99,7 +99,7 @@ export default function Filters({ themeColor, submitOnChange, callback }) {
                 });
               }}
             />
-            <div>فقط محصولات موجود</div>
+            <div>Only existing products</div>
           </div>
           <div className="d-flex mt-2">
             <Switch
@@ -113,13 +113,13 @@ export default function Filters({ themeColor, submitOnChange, callback }) {
                 });
               }}
             />
-            <div>فقط محصولات تخفیف‌دار</div>
+            <div>Only discount products</div>
           </div>
         </Paper>
         <Paper elevation={2} className="mt-3 p-3 u-border-radius-8">
           <div className="d-flex justify-content-between">
-            <div>{priceFormatter(priceRange[0])} تومان</div>
-            <div>{priceFormatter(priceRange[1])} تومان به بالا</div>
+            <div>{priceFormatter(priceRange[0])} Toman</div>
+            <div>{priceFormatter(priceRange[1])} Toman above</div>
           </div>
           <Slider
             step={1000}
@@ -161,7 +161,7 @@ export default function Filters({ themeColor, submitOnChange, callback }) {
             color="secondary"
             variant="contained"
           >
-            اعمال
+            actions
           </Button>
         </div>
       )}

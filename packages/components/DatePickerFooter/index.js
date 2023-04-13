@@ -37,7 +37,7 @@ function DatePickerFooter({
               handleSelectedRangeDayChange(startDate, startDate);
             }}
           >
-            امروز
+            Today
           </Button>
         </div>
         <div className="p-1 col-3">
@@ -61,7 +61,7 @@ function DatePickerFooter({
               handleSelectedRangeDayChange(startDate, endDate);
             }}
           >
-            هفته جاری
+            current week
           </Button>
         </div>
         <div className="p-1 col-3">
@@ -85,7 +85,7 @@ function DatePickerFooter({
               handleSelectedRangeDayChange(startDate, endDate);
             }}
           >
-            ماه جاری
+            current month
           </Button>
         </div>
         <div className="p-1 col-3">
@@ -107,7 +107,7 @@ function DatePickerFooter({
               handleSelectedRangeDayChange(startDate, endDate);
             }}
           >
-            ۷ روز قبل
+            7 days ago
           </Button>
         </div>
         <div className="p-1 col-3">
@@ -124,7 +124,7 @@ function DatePickerFooter({
               handleSelectedRangeDayChange(startDate, startDate);
             }}
           >
-            دیروز
+            Yesterday
           </Button>
         </div>
         <div className="p-1 col-3">
@@ -148,7 +148,7 @@ function DatePickerFooter({
               handleSelectedRangeDayChange(startDate, endDate);
             }}
           >
-            هفته قبل
+            last week
           </Button>
         </div>
         <div className="p-1 col-3">
@@ -180,7 +180,7 @@ function DatePickerFooter({
               handleSelectedRangeDayChange(startDate, endDate);
             }}
           >
-            ماه قبل
+            last month
           </Button>
         </div>
         <div className="p-1 col-3">
@@ -203,7 +203,7 @@ function DatePickerFooter({
               handleSelectedRangeDayChange(startDate, endDate);
             }}
           >
-            ۳۰ روز قبل
+            7 days ago
           </Button>
         </div>
       </div>
@@ -221,7 +221,7 @@ function DatePickerFooter({
                 // size="large"
               />
             }
-            label="مقایسه با بازه زمانی قبلی"
+            label="Comparison with the previous time interval"
           />
         ) : null}
         <div className="mr-auto mt-2">
@@ -232,7 +232,7 @@ function DatePickerFooter({
             variant="contained"
             onClick={submitDate}
           >
-            اعمال
+            actions
           </Button>
         </div>
       </div>

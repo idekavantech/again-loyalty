@@ -11,7 +11,7 @@ const DARAMAD = {
   [BASE_PLUGIN]: [],
   [POS_PLUGIN]: [
     // {
-    //   text: "کانال‌های فروش",
+    //   text: "Sales Channels",
     //   subLinks: [],
     //   url: `saleschannel`,
     //   icon: "AppsIcon",
@@ -19,14 +19,14 @@ const DARAMAD = {
     //   priority: -1,
     // },
     // {
-    //   text: "دستگاه‌ها",
+    //   text: "Devices",
     //   url: `${POS_PLUGIN_URL}`,
     //   icon: "TabletMacIcon",
     //   exact: true,
     //   priority: -1,
     // },
     // {
-    //   text: "شورتکات منو",
+    //   text: "My shorts",
     //   subLinks: [],
     //   url: `supermenu`,
     //   icon: "PostAddRoundedIcon",
@@ -34,7 +34,7 @@ const DARAMAD = {
     //   priority: -1,
     // },
     // {
-    //   text: "اطلاعات اصلی",
+    //   text: "Original information",
     //   subLinks: [],
     //   url: "setting",
     //   icon: "BusinessCenterIcon",
@@ -44,51 +44,51 @@ const DARAMAD = {
   ],
   [CRM_PLUGIN]: [
     // {
-    //   text: "سیستم افزایش فروش",
+    //   text: "Sales increase system",
     //   isSubLinksOpen: false,
     //   subLinks: [
     //     {
-    //       text: "اتوماسیون مارکتینگ",
+    //       text: "Marketing automation",
     //       subLinks: [],
     //       url: `crm/automation`,
     //     },
     //     {
-    //       text: "روند خودکار",
+    //       text: "Automatic process",
     //       subLinks: [],
     //       url: `crm/automated_processes`,
     //     },
     //     {
-    //       text: "برچسب‌ها",
+    //       text: "Labels",
     //       subLinks: [],
     //       url: `crm/labels`,
     //     },
     //     {
-    //       text: "سطوح مشتریان",
+    //       text: "Customer levels",
     //       subLinks: [],
     //       url: `crm/customer_levels`,
     //     },
     //     {
-    //       text: "بخش‌بندی مشتریان ",
+    //       text: "Customer segmentation",
     //       subLinks: [],
     //       url: `crm/segments`,
     //     },
     //     {
-    //       text: "نظرسنجی",
+    //       text: "Survey",
     //       subLinks: [],
     //       url: `crm/survey`,
     //     },
     //     {
-    //       text: "لیست مشتریان باشگاه",
+    //       text: "Club customer list",
     //       subLinks: [],
     //       url: `crm/customers`,
     //     },
     //     {
-    //       text: "گزارش باشگاه مشتریان",
+    //       text: "Customer Club Report",
     //       subLinks: [],
     //       url: `crm/customer_reports`,
     //     },
     //     {
-    //       text: "کد تخفیف",
+    //       text: "discount code",
     //       subLinks: [],
     //       url: `crm/customer_discount`,
     //     },

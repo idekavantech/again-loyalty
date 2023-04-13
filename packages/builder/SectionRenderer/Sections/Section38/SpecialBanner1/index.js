@@ -235,7 +235,7 @@ function SpecialBanner1({
         }}
         endIcon={<PhoneEnabledRoundedIcon />}
       >
-        {showPhoneNumber ? businessPhoneNumber : "تماس"}
+        {showPhoneNumber ? businessPhoneNumber : "Contact"}
       </Button>
     </>
   ) : (

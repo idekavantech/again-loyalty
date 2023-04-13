@@ -259,7 +259,7 @@ function AdminProductsList({ plugin = SHOPPING_PLUGIN, isSuper = false }) {
                       className="ml-1"
                       onClick={unselectAllProducts}
                     >
-                      coming back
+                      Back
                     </Button>
                   </div>
                 )}

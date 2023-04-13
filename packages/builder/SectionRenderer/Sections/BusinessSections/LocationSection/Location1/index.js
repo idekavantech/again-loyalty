@@ -40,7 +40,7 @@ function Location1({
         isActive={isActive}
         _updateSection={_updateSection}
       >
-        <Section className="py-5" themeColor={themeColor} title="آدرس">
+        <Section className="py-5" themeColor={themeColor} title="Address">
           <div className="map-sec mx-auto">
             <Map options={mapOptions} />
           </div>
@@ -64,13 +64,13 @@ function Location1({
                     color: themeColor,
                   }}
                 >
-                  آدرس و مسیریابی
+                  Address and routing
                 </button>
               </div>
             </>
           ) : (
             <div className="u-text-darkest-grey u-fontLarge-r mt-5">
-              آدرس و موقعیت کسب و کار شما
+              The address and position of your business
             </div>
           )}
         </Section>
@@ -78,7 +78,7 @@ function Location1({
     );
   }
   return (
-    <Section className="py-4" themeColor={themeColor} title="آدرس">
+    <Section className="py-4" themeColor={themeColor} title="Address">
       <div className="map-sec mx-auto">
         <Map
           options={mapOptions}
@@ -105,7 +105,7 @@ function Location1({
                 color: themeColor,
               }}
             >
-              آدرس و مسیریابی
+              Address and routing
             </button>
           </div>
         </>

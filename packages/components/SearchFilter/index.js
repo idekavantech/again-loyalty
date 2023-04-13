@@ -20,7 +20,7 @@ export default function SearchFilter({ onChange }) {
     <TextField
       id="outlined-basic"
       className={classes.inputContainer}
-      placeholder="جستجوی نام محصول"
+      placeholder="Search product name"
       variant="outlined"
       onChange={onChange}
       InputProps={{

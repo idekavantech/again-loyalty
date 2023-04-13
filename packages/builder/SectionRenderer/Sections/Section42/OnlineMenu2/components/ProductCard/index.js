@@ -196,7 +196,7 @@ export default function ProductCard({
                     color: card_texts_color || textTypes.text.default,
                   }}
                 >
-                  تومان
+                  Toman
                 </span>
               </div>
             </div>
@@ -295,7 +295,7 @@ export default function ProductCard({
                   color: card_texts_color || textTypes.text.default,
                 }}
               >
-                تومان
+                Toman
               </span>
             </div>
             {showPlusBtn && <ControllerButton

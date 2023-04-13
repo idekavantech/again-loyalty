@@ -17,7 +17,7 @@ export default function ImageUploader({
   required,
   themeColor,
   size = 75,
-  title = "عکس",
+  title = "Picture",
   width,
   formTheme,
   folderName = "business_page_images",
@@ -92,7 +92,7 @@ export default function ImageUploader({
           type="file"
           onChange={() => {
             if (!myFiles.current.files[0].type.includes("image"))
-              _setSnackBarMessage("فرمت فایل انتخابی صحیح نمی باشد.", "fail");
+              _setSnackBarMessage("The file format is not correct.", "fail");
             else _uploadFile(myFiles.current.files, folderName, callback);
           }}
           accept={"image/*"}
@@ -104,7 +104,7 @@ export default function ImageUploader({
           arrow
           title={
             <div className={"d-flex flex-col align-items-center"}>
-              <p className="my-2">سایز مناسب برای آپلود عکس‌</p>
+              <p className="my-2">Size appropriate to upload photos</p>
               <p>{englishNumberToPersianNumber(tooltip)}</p>
             </div>
           }

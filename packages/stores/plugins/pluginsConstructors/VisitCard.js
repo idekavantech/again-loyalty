@@ -24,45 +24,45 @@ export default class VisitCardPlugin extends Plugin {
     };
     this.adminMenuLinks = [
       {
-        text: "سیستم افزایش فروش",
+        text: "Sales increase system",
         isSubLinksOpen: false,
         subLinks: [
           {
-            text: "اتوماسیون مارکتینگ",
+            text: "Marketing automation",
             subLinks: [],
             url: `crm/automation`,
           },
           {
-            text: "روند خودکار",
+            text: "Automatic process",
             subLinks: [],
             url: `crm/automated_processes`,
             [INCLUDED_WEBAPPS_ONLY_KEY]: [DOBARE_WEBAPP_CONSTANT],
           },
           {
-            text: "برچسب‌ها",
+            text: "Labels",
             subLinks: [],
             url: `crm/labels`,
           },
           {
-            text: "سطوح مشتریان",
+            text: "Customer levels",
             subLinks: [],
             url: `crm/customer_levels`,
             [INCLUDED_WEBAPPS_ONLY_KEY]: [DOBARE_WEBAPP_CONSTANT],
           },
           {
-            text: "بخش‌بندی مشتریان ",
+            text: "Customer segmentation",
             subLinks: [],
             url: `crm/segments`,
             [INCLUDED_WEBAPPS_ONLY_KEY]: [DOBARE_WEBAPP_CONSTANT],
           },
           {
-            text: "نظرسنجی",
+            text: "Survey",
             subLinks: [],
             url: `crm/survey`,
             [INCLUDED_WEBAPPS_ONLY_KEY]: [DOBARE_WEBAPP_CONSTANT],
           },
           {
-            text: "لیست مشتریان باشگاه",
+            text: "Club customer list",
             subLinks: [],
             url: `crm/customers`,
             [INCLUDED_WEBAPPS_ONLY_KEY]: [
@@ -71,13 +71,13 @@ export default class VisitCardPlugin extends Plugin {
             ],
           },
           {
-            text: "گزارش باشگاه مشتریان",
+            text: "Customer Club Report",
             subLinks: [],
             url: `crm/customer_reports`,
             [INCLUDED_WEBAPPS_ONLY_KEY]: [DOBARE_WEBAPP_CONSTANT],
           },
           {
-            text: "کد تخفیف",
+            text: "discount code",
             subLinks: [],
             url: `crm/customer_discount`,
             [INCLUDED_WEBAPPS_ONLY_KEY]: [DOBARE_WEBAPP_CONSTANT],

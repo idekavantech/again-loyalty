@@ -123,7 +123,7 @@ function CRMLevels() {
             }
           }
           dialogMainActionText="Yes"
-          dialogSecondActionText="Good"
+          dialogSecondActionText="Cancel"
         />
         <Table
           aria-labelledby="tableTitle"

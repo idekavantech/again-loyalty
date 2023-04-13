@@ -23,7 +23,7 @@ function AddNewProductCard({ onClick, className }) {
     >
       <div className="u-text-primary-blue-remove d-flex justify-content-center align-items-center m-auto">
         <Add color="primary" className="ml-1" />
-        محصول جدید
+        new product
       </div>
     </div>
   );

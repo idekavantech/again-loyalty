@@ -121,10 +121,10 @@ function Input(componentProps) {
               ) {
                 setAssistiveText("");
                 onChange(persianToEnglishNumber(e.target.value));
-              } else setAssistiveText("تنها مجاز به وارد کردن عدد هستید.");
+              } else setAssistiveText("Are only allowed to enter the number.");
             } else if (isFloat) {
               if (e.target.value?.[0] === "-") {
-                setAssistiveText("عدد بزرگتر از صفر وارد کنید.");
+                setAssistiveText("Enter the number larger than zero..");
                 return;
               }
               if (
@@ -134,7 +134,7 @@ function Input(componentProps) {
               ) {
                 setAssistiveText("");
                 onChange(persianToEnglishNumber(e.target.value));
-              } else setAssistiveText("عدد اعشاری وارد کنید.");
+              } else setAssistiveText("Enter the decimal number.");
             } else onChange(e.target.value);
           }
         }}
@@ -215,7 +215,7 @@ function Input(componentProps) {
                     ""
                   )
                 );
-              } else setAssistiveText("تنها مجاز به وارد کردن عدد هستید.");
+              } else setAssistiveText("Are only allowed to enter the number.");
             } else {
               setValue(e.target.value);
               if (numberOnly) {
@@ -224,10 +224,10 @@ function Input(componentProps) {
                 ) {
                   setAssistiveText("");
                   onChange(persianToEnglishNumber(e.target.value));
-                } else setAssistiveText("تنها مجاز به وارد کردن عدد هستید.");
+                } else setAssistiveText("Are only allowed to enter the number.");
               } else if (isFloat) {
                 if (e.target.value?.[0] === "-") {
-                  setAssistiveText("عدد بزرگتر از صفر وارد کنید.");
+                  setAssistiveText("Enter the number larger than zero..");
                   return;
                 }
                 if (
@@ -237,7 +237,7 @@ function Input(componentProps) {
                 ) {
                   setAssistiveText("");
                   onChange(persianToEnglishNumber(e.target.value));
-                } else setAssistiveText("عدد اعشاری وارد کنید.");
+                } else setAssistiveText("Enter the decimal number.");
               } else onChange(e.target.value);
             }
           }}

@@ -158,7 +158,7 @@ export function* updateBusiness(action) {
     if (meta.status_code >= 200 && meta.status_code <= 300) {
       yield put(
         setSnackBarMessage(
-          successMessage || "تغییرات شما با موفقیت ذخیره شد.",
+          successMessage || "Your changes were successfully stored.",
           "success"
         )
       );
@@ -173,17 +173,17 @@ export function* updateBusiness(action) {
         "origins and destinations have intersections"
     )
       yield put(
-        setSnackBarMessage("این ریدایرکت امکان پذیر نمی باشد.", "fail")
+        setSnackBarMessage("This redirect is not possible.", "fail")
       );
     else
       yield put(
-        setSnackBarMessage(failMessage || "ثبت تغییرات ناموفق بود!", "fail")
+        setSnackBarMessage(failMessage || "Registering changes was unsuccessful!", "fail")
       );
 
     yield put(stopLoading());
   } catch (err) {
     yield put(
-      setSnackBarMessage(failMessage || "ثبت تغییرات ناموفق بود!", "fail")
+      setSnackBarMessage(failMessage || "Registering changes was unsuccessful!", "fail")
     );
     yield put(stopLoading());
   }
@@ -233,18 +233,18 @@ export function* createCategory(action) {
         yield call(callback, data);
       }
       yield put(
-        setSnackBarMessage(`برچسب ${title} با موفقیت اضافه شد.`, "success")
+        setSnackBarMessage(`Label${title} Successfully added.`, "success")
       );
     } else {
       if (action.callback)
-        yield call(action.callback, "برچسب با این نام موجود است.");
+        yield call(action.callback, "The tag is available with this name.");
       else
-        yield put(setSnackBarMessage(`ثبت برچسب ${title} ناموفق بود!`, "fail"));
+        yield put(setSnackBarMessage(`Tag registration${title} It was unsuccessful!`, "fail"));
     }
     yield put(stopLoading());
   } catch (err) {
     console.log("err", err);
-    yield put(setSnackBarMessage(`ثبت برچسب ${title} ناموفق بود!`, "fail"));
+    yield put(setSnackBarMessage(`Tag registration${title} It was unsuccessful!`, "fail"));
     yield put(stopLoading());
   }
 }
@@ -333,7 +333,7 @@ export function* updateCategory(action) {
     if (meta.status_code >= 200 && meta.status_code <= 300) {
       yield put(
         setSnackBarMessage(
-          `ویرایش برچسب ${title} با موفقیت انجام شد.`,
+          `Label editing${title} done successfully.`,
           "success"
         )
       );
@@ -341,12 +341,12 @@ export function* updateCategory(action) {
       Router.back();
     } else
       yield put(
-        setSnackBarMessage(`ویرایش برچسب ${title} ناموفق بود!`, "fail")
+        setSnackBarMessage(`Label editing${title} It was unsuccessful!`, "fail")
       );
 
     yield put(stopLoading());
   } catch (err) {
-    yield put(setSnackBarMessage(`ویرایش برچسب ${title} ناموفق بود!`, "fail"));
+    yield put(setSnackBarMessage(`Label editing${title} It was unsuccessful!`, "fail"));
     yield put(stopLoading());
   }
 }
@@ -360,16 +360,16 @@ export function* deleteCategory(action) {
     } = yield call(request, LABELS_ITEM_API(id), {}, "DELETE");
     if (meta.status_code >= 200 && meta.status_code <= 300) {
       yield put(
-        setSnackBarMessage(`برچسب ${title} با موفقیت حذف شد.`, "success")
+        setSnackBarMessage(`Label${title} Successfully removed.`, "success")
       );
       yield call(getBusinessData);
       Router.back();
     } else
-      yield put(setSnackBarMessage(`حذف برچسب ${title} ناموفق بود!`, "fail"));
+      yield put(setSnackBarMessage(`Remove the label${title} It was unsuccessful!`, "fail"));
 
     yield put(stopLoading());
   } catch (err) {
-    yield put(setSnackBarMessage(`حذف برچسب ${title} ناموفق بود!`, "fail"));
+    yield put(setSnackBarMessage(`Remove the label${title} It was unsuccessful!`, "fail"));
     yield put(stopLoading());
   }
 }
@@ -449,14 +449,14 @@ export function* updateSection(action) {
       "PATCH"
     );
     if (meta.status_code >= 200 && meta.status_code <= 300) {
-      yield put(setSnackBarMessage("ویرایش بخش با موفقیت انجام شد", "success"));
+      yield put(setSnackBarMessage("The editing of the segment successfully performed", "success"));
       yield put(setBusiness({ business: { ...business, ...data } }));
 
       removeParamsFromUrl();
-    } else yield put(setSnackBarMessage("ویرایش ناموفق بود!", "fail"));
+    } else yield put(setSnackBarMessage("Edit was unsuccessful!", "fail"));
     yield put(stopLoading());
   } catch (err) {
-    yield put(setSnackBarMessage("ویرایش ناموفق بود!", "fail"));
+    yield put(setSnackBarMessage("Edit was unsuccessful!", "fail"));
     yield put(stopLoading());
   }
 }
@@ -480,12 +480,12 @@ export function* deleteSection(action) {
       "PATCH"
     );
     if (meta.status_code >= 200 && meta.status_code <= 300) {
-      yield put(setSnackBarMessage("ویرایش با موفقیت انجام شد.", "success"));
+      yield put(setSnackBarMessage("Edited was successfully done.", "success"));
       yield put(setBusiness({ business: { ...business, ...data } }));
-    } else yield put(setSnackBarMessage("ویرایش ناموفق بود!", "fail"));
+    } else yield put(setSnackBarMessage("Edit was unsuccessful!", "fail"));
     yield put(stopLoading());
   } catch (err) {
-    yield put(setSnackBarMessage("ویرایش ناموفق بود!", "fail"));
+    yield put(setSnackBarMessage("Edit was unsuccessful!", "fail"));
     yield put(stopLoading());
   }
 }
@@ -509,12 +509,12 @@ export function* addSection(action) {
       "PATCH"
     );
     if (meta.status_code >= 200 && meta.status_code <= 300) {
-      yield put(setSnackBarMessage("بخش جدید با موفقیت اضافه شد.", "success"));
+      yield put(setSnackBarMessage("The new section was successfully added.", "success"));
       yield put(setBusiness({ business: { ...business, ...data } }));
-    } else yield put(setSnackBarMessage("اضافه کردن بخش ناموفق بود!", "fail"));
+    } else yield put(setSnackBarMessage("Added the segment failed!", "fail"));
     yield put(stopLoading());
   } catch (err) {
-    yield put(setSnackBarMessage("اضافه کردن بخش ناموفق بود!", "fail"));
+    yield put(setSnackBarMessage("Added the segment failed!", "fail"));
     yield put(stopLoading());
   }
 }
@@ -539,13 +539,13 @@ export function* selectTemplate(action) {
       "PATCH"
     );
     if (meta.status_code >= 200 && meta.status_code <= 300) {
-      yield put(setSnackBarMessage("قالب با موفقیت انتخاب شد.", "success"));
+      yield put(setSnackBarMessage("The template was successfully selected.", "success"));
       yield put(setBusiness({ business: { ...business, ...data } }));
       removeParamsFromUrl();
-    } else yield put(setSnackBarMessage("انتخاب قالب ناموفق بود!", "fail"));
+    } else yield put(setSnackBarMessage("Selection of the template was unsuccessful!", "fail"));
     yield put(stopLoading());
   } catch (err) {
-    yield put(setSnackBarMessage("انتخاب قالب ناموفق بود!", "fail"));
+    yield put(setSnackBarMessage("Selection of the template was unsuccessful!", "fail"));
     yield put(stopLoading());
   }
 }
@@ -666,7 +666,7 @@ export function* createFormResponseSaga(action) {
     );
 
     if (data) {
-      yield put(setSnackBarMessage("فرم شما با موفقیت ثبت شد.", "success"));
+      yield put(setSnackBarMessage("Your form was successfully registered.", "success"));
       if (action.cb) {
         Router.push(action.cb);
       }

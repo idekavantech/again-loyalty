@@ -2,7 +2,7 @@ import React from "react";
 import TableCell from "@material-ui/core/TableCell";
 import TableRow from "@material-ui/core/TableRow";
 import Link from "next/link";
-import moment from "moment-jalaali";
+import moment from "moment";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 import { priceFormatter } from "@saas/utils/helpers/priceFormatter";
 

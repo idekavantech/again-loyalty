@@ -96,7 +96,7 @@ const ProductAmountController = ({
           }
         }}
       >
-        <AddIcon style={{ fontSize: 16 }} className="w-100 h-100 ml-1" /> افزودن
+        <AddIcon style={{ fontSize: 16 }} className="w-100 h-100 ml-1" /> Add
       </div>
     </div>
   );

@@ -97,7 +97,7 @@ function Header8({
     } = {},
     search_bar: {
       has_search_bar = true,
-      search_bar_title = "جستجو...",
+      search_bar_title = "Search...",
       search_bar_type = "fullscreen",
     } = {},
   } = content;
@@ -653,7 +653,7 @@ function Header8({
                           <LoadingIndicator />
                         ) : unifiedArray.length === 0 && !isInputLengthZero ? (
                           <div className="container p-2">
-                            نتیجه‌‌ای یافت نشد.
+                            There was no results.
                           </div>
                         ) : (
                           unifiedArray.map((product) => (
@@ -901,7 +901,7 @@ function Header8({
                           <LoadingIndicator />
                         ) : unifiedArray.length === 0 && !isInputLengthZero ? (
                           <div className="container p-2">
-                            نتیجه‌‌ای یافت نشد.
+                            There was no results.
                           </div>
                         ) : (
                           unifiedArray.map((product) => (
@@ -1041,7 +1041,7 @@ function Header8({
                             className="m-3 mb-0"
                             style={{ height: 1, backgroundColor: "#ccc" }}
                           ></p>
-                          <p className="p-3">دسته‌بندی کالاها</p>
+                          <p className="p-3">Classification of goods</p>
                           {showCategorySubMenu && (
                             <List className="w-100 pl-2 ">
                               {menus.map((menu) => (
@@ -1062,7 +1062,7 @@ function Header8({
                         className="m-3 mb-0"
                         style={{ height: 1, backgroundColor: "#ccc" }}
                       ></p>
-                      <p className="p-3">حساب کاربری</p>
+                      <p className="p-3">Account</p>
 
                       {menuWidget?.map((link) => {
                         if (

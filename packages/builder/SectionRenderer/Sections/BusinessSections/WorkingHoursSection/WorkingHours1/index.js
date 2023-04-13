@@ -32,7 +32,7 @@ function WorkingHours1({
       isActive={isActive}
       _updateSection={_updateSection}
     >
-      <Section themeColor={themeColor} title="ساعت کاری" className="py-4">
+      <Section themeColor={themeColor} title="Hours of work" className="py-4">
         <div
           className={`${isMobile ? "col-10" : "col-md-6"} ${
             !mock && "col-lg-3"
@@ -61,7 +61,7 @@ function WorkingHours1({
                               {englishNumberToPersianNumber(shift.to)}
                             </div>
                           ))
-                        : "تعطیل"}
+                        : "Closed"}
                     </div>
                   </div>
                 );

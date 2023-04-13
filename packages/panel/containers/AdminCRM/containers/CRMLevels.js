@@ -136,7 +136,7 @@ function CRMLevels({ adminUrlPrefix, _getCrmLevels, allCrmLevels, isLoading  ,_d
             }
           }
           dialogMainActionText="Yes"
-          dialogSecondActionText="Good"
+          dialogSecondActionText="Cancel"
         />
         <Table
           aria-labelledby="tableTitle"

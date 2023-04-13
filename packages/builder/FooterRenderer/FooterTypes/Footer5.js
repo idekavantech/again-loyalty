@@ -163,7 +163,7 @@ function Footer5({
                         style={{ color: icon_and_text_color }}
                         className="my-3 text-justify"
                       >
-                        آدرس: {truncate(business.address, 90)}
+                        Address: {truncate(business.address, 90)}
                       </address>
                     </Tooltip>
                   ) : (
@@ -171,7 +171,7 @@ function Footer5({
                       style={{ color: icon_and_text_color }}
                       className="my-3 text-justify"
                     >
-                      آدرس: {business.address}
+                      Address: {business.address}
                     </address>
                   )
                 ) : (
@@ -179,7 +179,7 @@ function Footer5({
                     style={{ color: icon_and_text_color }}
                     className="u-text-black u-fontLarge-r mt-5"
                   >
-                    آدرس: آدرس و موقعیت کسب و کار شما
+                    Address: The address and position of your business
                   </div>
                 )}
               </div>

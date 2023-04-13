@@ -237,7 +237,7 @@ function CRMCustomerLevelsSetting({
           }}
           dialogMainActionText="Yes"
           dialogSecondActions={() => setIsOpenSaveModal(false)}
-          dialogSecondActionText="Good"
+          dialogSecondActionText="Cancel"
         />
         <AssuranceDialog
           isOpen={openCancelModal}
@@ -250,7 +250,7 @@ function CRMCustomerLevelsSetting({
           }}
           dialogMainActionText="Yes"
           dialogSecondActions={() => setOpenCancelModal(false)}
-          dialogSecondActionText="Good"
+          dialogSecondActionText="Cancel"
         />
       </div>
     </div>

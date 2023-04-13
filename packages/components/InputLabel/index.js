@@ -44,8 +44,8 @@ const useStyles = makeStyles(() => ({
 }));
 
 function InputLabel({
-  placeholder = "نام منو",
-  questionLabel = "نام منو",
+  placeholder = "Menu name",
+  questionLabel = "Menu name",
   onChange,
   note,
   menuName = "",

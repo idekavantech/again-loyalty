@@ -17,7 +17,7 @@ export default class BasePlugin extends Plugin {
     this.salesChannels = pluginConfig?.sales_channels;
     this.adminMenuLinks = [
       {
-        text: "کانال‌های فروش",
+        text: "Sales Channels",
         subLinks: [],
         url: `saleschannel`,
         icon: "AppsIcon",

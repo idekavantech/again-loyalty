@@ -47,7 +47,7 @@ function Title1({
               isMobile ? "col-12" : "col-lg-6"
             } mx-auto text-center py-2`}
           >
-            عنوانی برای نمایش وجود ندارد.
+            There is no title to show.
           </div>
         )}
       </Paper>

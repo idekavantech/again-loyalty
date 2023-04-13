@@ -146,7 +146,7 @@ class DateRangePickerWrapper extends React.Component {
                       }}
                     >
                       <span style={{ color: "#d4d6d7" }} className="ml-2">
-                        زمان شروع
+                        start time
                       </span>
                       <TimeField
                         style={{ color: "#484848" }}
@@ -168,7 +168,7 @@ class DateRangePickerWrapper extends React.Component {
                       }}
                     >
                       <span style={{ color: "#d4d6d7" }} className="ml-2">
-                        زمان پایان
+                        The end time
                       </span>
                       <TimeField
                         style={{ color: "#484848" }}
@@ -201,7 +201,7 @@ class DateRangePickerWrapper extends React.Component {
                       });
                     }}
                   >
-                    امروز
+                    Today
                   </Button>
                 </div>
                 <div className="p-1 col-3">
@@ -215,7 +215,7 @@ class DateRangePickerWrapper extends React.Component {
                       this.onDatesChange({ startDate, endDate });
                     }}
                   >
-                    هفته جاری
+                    current week
                   </Button>
                 </div>
                 <div className="p-1 col-3">
@@ -229,7 +229,7 @@ class DateRangePickerWrapper extends React.Component {
                       this.onDatesChange({ startDate, endDate });
                     }}
                   >
-                    ماه جاری
+                    current month
                   </Button>
                 </div>
                 <div className="p-1 col-3">
@@ -243,7 +243,7 @@ class DateRangePickerWrapper extends React.Component {
                       this.onDatesChange({ startDate, endDate });
                     }}
                   >
-                    سال جاری
+                    Current year
                   </Button>
                 </div>
                 <div className="p-1 col-3">
@@ -258,7 +258,7 @@ class DateRangePickerWrapper extends React.Component {
                       });
                     }}
                   >
-                    دیروز
+                    Yesterday
                   </Button>
                 </div>
                 <div className="p-1 col-3">
@@ -274,7 +274,7 @@ class DateRangePickerWrapper extends React.Component {
                       this.onDatesChange({ startDate, endDate });
                     }}
                   >
-                    هفته قبل
+                    last week
                   </Button>
                 </div>
                 <div className="p-1 col-3">
@@ -295,7 +295,7 @@ class DateRangePickerWrapper extends React.Component {
                       this.onDatesChange({ startDate, endDate });
                     }}
                   >
-                    ماه قبل
+                    last month
                   </Button>
                 </div>
                 <div className="p-1 col-3">
@@ -316,7 +316,7 @@ class DateRangePickerWrapper extends React.Component {
                       this.onDatesChange({ startDate, endDate });
                     }}
                   >
-                    سال قبل
+                    The previous year
                   </Button>
                 </div>
               </div>
@@ -337,7 +337,7 @@ class DateRangePickerWrapper extends React.Component {
                         // size="large"
                       />
                     }
-                    label="مقایسه با بازه زمانی قبلی"
+                    label="Comparison with the previous time interval"
                   />
                 </div>
               ) : null}
@@ -350,7 +350,7 @@ class DateRangePickerWrapper extends React.Component {
                     variant="contained"
                     onClick={this.props.onSubmit}
                   >
-                    اعمال
+                    actions
                   </Button>
                 </div>
               ) : null}

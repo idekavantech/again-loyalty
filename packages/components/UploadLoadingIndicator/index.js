@@ -131,7 +131,7 @@ export default function UploadLoadingIndicator({ isLoading }) {
             marginTop: 20,
           }}
         >
-          در حال بارگذاری فایل ...
+          File loading...
         </span>
       </div>
     </div>

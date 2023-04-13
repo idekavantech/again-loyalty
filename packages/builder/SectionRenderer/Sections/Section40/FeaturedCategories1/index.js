@@ -52,7 +52,7 @@ function FeaturedCategories1({
             style={{ color: title_color || "white" }}
             className="header--info--title u-fontWeightBold mt-5"
           >
-            {title_value || "عنوان"}
+            {title_value || "Title"}
           </h1>
           <div
             className="d-flex flex-wrap justify-content-center"

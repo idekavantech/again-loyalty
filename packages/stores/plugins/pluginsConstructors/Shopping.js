@@ -80,11 +80,11 @@ const defaultPages = ({ business }) => {
       plugin: SHOPPING_PLUGIN,
       isStatic: true,
       data: {
-        name: "صفحه سفارش آنلاین",
+        name: "Online ordering page",
         slug: "s",
         previewLink: "/s",
-        seo_title: `خرید اینترنتی با بیشترین % تخفیف از ${business.revised_title}`,
-        meta_description: `خرید اینترنتی از ${business.revised_title} با بیشترین % تخفیف`,
+        seo_title: `Online shopping with the highest% Discounts from${business.revised_title}`,
+        meta_description: `Online shopping from${business.revised_title} With the most% Discount`,
         sections_skeleton,
       },
     },
@@ -93,7 +93,7 @@ const defaultPages = ({ business }) => {
       plugin: SHOPPING_PLUGIN,
       isStatic: true,
       data: {
-        name: "صفحه محصول",
+        name: "Product page",
         previewLink: "",
         seo_title: "",
         meta_description: "",
@@ -161,24 +161,24 @@ export default class ShoppingPlugin extends Plugin {
         hasSocialTab: false,
       },
     };
-    this.pagesLabel = "ویرایش صفحات سفارش آنلاین";
+    this.pagesLabel = "Edit online order pages";
     this.isMain = true;
     this.SEO = {
-      title: `${business.revised_title} | خرید اینترنتی با بیشترین % تخفیف از  ${business.revised_title}`,
+      title: `${business.revised_title} | Online shopping with the highest% Discounts from${business.revised_title}`,
       description: "",
     };
     this.name = SHOPPING_PLUGIN;
-    this.title = "سفارش آنلاین";
-    this.description = "امکان افزودن محصولات، افزودن به سبد خرید و ...";
+    this.title = "online order";
+    this.description = "Possibility of adding products, adding to cart and...";
     this.descriptions = [
-      "امکان افزودن یا حذف غذا در منو",
-      "امکان افزودن و حذف دسته‌بندی",
-      "امکان سفارش آنلاین",
-      "امکان خرید و پرداخت آنلاین در سایت شما",
-      "اضافه شدن سبد خرید",
-      "دریافت پنل مدیریت سفارش‌ها",
-      "امکان لغو یا تایید سفارش",
-      "دریافت آرشیو سفارش‌ها",
+      "Ability to add or remove food in the menu",
+      "Ability to add and remove categorization",
+      "Ability to order online",
+      "Ability to purchase and pay online on your site",
+      "Added Cart",
+      "Receive Orders Management Panel",
+      "The possibility of canceling or confirming the order",
+      "Receive Order Archive",
     ];
     this.hasLandingPage = true;
 
@@ -189,21 +189,21 @@ export default class ShoppingPlugin extends Plugin {
     this.callToActions = [
       {
         url: `${this.urlPrefix}/${SHOPPING_PLUGIN_URL}`,
-        text: this.callToActionText || "سفارش آنلاین",
+        text: this.callToActionText || "online order",
         icon: "ShoppingCartIcon",
       },
     ];
     this.adminTabActions = [
       {
         url: `products`,
-        text: this.adminCallToActionText || "ویرایش محصولات",
+        text: this.adminCallToActionText || "Editing Products",
         icon: "ShoppingCartIcon",
       },
     ];
     this.adminCallToActions = [
       {
         url: `products`,
-        text: this.adminCallToActionText || "ویرایش محصولات",
+        text: this.adminCallToActionText || "Editing Products",
         icon: "ShoppingCartIcon",
       },
     ];
@@ -225,23 +225,23 @@ export default class ShoppingPlugin extends Plugin {
       this.widgets[MENU_LINKS_WIDGET].push(
         {
           id: "wallet",
-          text: "شارژ کیف پول",
+          text: "Charging the wallet",
           query: `wallet_charge`,
           icon: "AccountBalanceWalletIcon",
           needsAuth: true,
-          itemsAmount: `${priceFormatter(userInfo?.walletCredit)} تومان `,
+          itemsAmount: `${priceFormatter(userInfo?.walletCredit)} Toman`,
         },
         {
           id: "wallet",
-          text: "اعتبار هدیه",
+          text: "Gift credit",
           url: `/wallet`,
           icon: "CardGiftcardIcon",
           needsAuth: true,
-          itemsAmount: `${priceFormatter(userInfo?.giftCredit)} تومان `,
+          itemsAmount: `${priceFormatter(userInfo?.giftCredit)} Toman`,
         },
         {
           needsAuth: true,
-          text: "پیگیری سفارش‌ها",
+          text: "Tracking orders",
           subLinks: [],
           url: `/${SHOPPING_PLUGIN_URL}/orders`,
           icon: "ListAltIcon",
@@ -265,12 +265,12 @@ export default class ShoppingPlugin extends Plugin {
 
     this.adminReportLinks = [
       {
-        text: "داشبورد",
+        text: "Dashboard",
         url: `${SHOPPING_PLUGIN_URL}/analytics/dashboard`,
         blank: true,
       },
       {
-        text: "گزارش‌ها",
+        text: "reports",
         url: `${SHOPPING_PLUGIN_URL}/analytics/reports`,
         blank: true,
       },
@@ -278,7 +278,7 @@ export default class ShoppingPlugin extends Plugin {
 
     if (this.hasShoppingSupport && this.hasOrdering !== false) {
       this.adminReportLinks.push({
-        text: "کیف پول مشترک",
+        text: "Joint wallet",
         url: `${SHOPPING_PLUGIN_URL}/finance/sow`,
         blank: true,
       });
@@ -305,15 +305,15 @@ export default class ShoppingPlugin extends Plugin {
     };
     this.static_internal_links = [
       {
-        label: "صفحه: سفارش آنلاین",
+        label: "Page: online order",
         value: `${this.urlPrefix}/${SHOPPING_PLUGIN_URL}`,
       },
       {
-        label: "صفحه: پیگیری سفارش",
+        label: "Page: Tracking order",
         value: `${this.urlPrefix}/${SHOPPING_PLUGIN_URL}/orders`,
       },
       {
-        label: "صفحه: سبد خرید",
+        label: "Page: Cart",
         value: `${this.urlPrefix}/${SHOPPING_PLUGIN_URL}/checkout/cart`,
       },
     ];

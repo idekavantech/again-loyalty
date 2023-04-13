@@ -128,7 +128,7 @@ export function* setPluginData(action) {
     );
     if (data) {
       yield put(updatePluginData(action.data.plugin, action.data.data));
-      yield put(setSnackBarMessage("تنظیمات با موفقیت ذخیره شد.", "success"));
+      yield put(setSnackBarMessage("Settings were successfully saved.", "success"));
     }
     yield put(stopLoading());
     if (action.callback) yield call(action.callback);
@@ -150,10 +150,10 @@ export function* groupDiscountOnProducts(action) {
     const subdomain = yield select(makeSelectBusinessSiteDomain());
 
     yield put(init(subdomain));
-    yield put(setSnackBarMessage("تغییرات با موفقیت ذخیره شد.", "success"));
+    yield put(setSnackBarMessage("The changes were successfully stored.", "success"));
     yield put(stopLoading());
   } catch (err) {
-    yield put(setSnackBarMessage("لطفا دوباره تلاش نمایید.", "fail"));
+    yield put(setSnackBarMessage("Please try again.", "fail"));
     yield put(stopLoading());
   }
 }
@@ -171,7 +171,7 @@ export function* setPluginShoppingPaymentDataSaga(action) {
       "PATCH"
     );
     if (data) {
-      yield put(setSnackBarMessage("تنظیمات با موفقیت ذخیره شد.", "success"));
+      yield put(setSnackBarMessage("Settings were successfully saved.", "success"));
       yield put(setBusiness({ business: data, subdomain: data?.site_domain }));
       yield put(
         setPlugins(data, window.location.pathname, window.location.host)
@@ -256,19 +256,19 @@ const dynamic_internal_links_funcs = {
       data: { data: products },
     } = await axios.get(SITEMAP_PRODUCTS_API(slug));
     return products.map((product) => ({
-      label: `محصول: ${product.title}`,
+      label: `the product: ${product.title}`,
       value: `${urlPrefix}/${SHOPPING_PLUGIN_URL}/products/${product.id}`,
     }));
   },
   categories: async (slug, urlPrefix, business) => {
     return business.resource_labels.map((category) => ({
-      label: `برچسب: ${category.title}`,
+      label: `Label: ${category.title}`,
       value: `${urlPrefix}/${SHOPPING_PLUGIN_URL}/l/${category.id}`,
     }));
   },
   menuItems: async (slug, urlPrefix, business) => {
     return getAllItemsFromMenu(business.menu).map((item) => ({
-      label: `دسته‌بندی: ${item.name}`,
+      label: `Grouping: ${item.name}`,
       value: `${urlPrefix}/${SHOPPING_PLUGIN_URL}/c/${item.id}`,
     }));
   },
@@ -280,12 +280,12 @@ export function* getPluginsInternalLinksSaga() {
     const slug = yield select(makeSelectBusinessSlug());
     const branches = yield select(makeSelectBranches());
     const links = [
-      { label: "صفحه اصلی", value: "/" },
-      { label: "صفحه درباره ما", value: "/about" },
+      { label: "Main Page", value: "/" },
+      { label: "Page about us", value: "/about" },
     ];
     links.push(
       ...branches?.map((branch) => ({
-        label: `شعبه: ${branch.title}`,
+        label: `Branch: ${branch.title}`,
         value: `/branches/${branch.site_domain}/s/`,
       }))
     );
@@ -293,11 +293,11 @@ export function* getPluginsInternalLinksSaga() {
     const blogs = yield call(getPages, GET_PAGES_API(slug, 1, true));
     links.push(
       ...pages.map((page) => ({
-        label: `صفحه: ${page.data.name}`,
+        label: `Page: ${page.data.name}`,
         value: `${urlPrefix}/${page.id}`,
       })),
       ...blogs.map((page) => ({
-        label: `پست: ${page.data.name}`,
+        label: `Post: ${page.data.name}`,
         value: `${urlPrefix}/blog/${page.id}`,
       }))
     );
@@ -379,9 +379,9 @@ export function* updateDeliveryTypeSaga(action) {
       response: { meta },
     } = yield call(request, DELIVERY_TYPES_ITEM_API(id), action.data, "PATCH");
     if (meta.status_code >= 200 && meta.status_code <= 300) {
-      yield put(setSnackBarMessage("تغییرات شما با موفقیت ثبت شد.", "success"));
+      yield put(setSnackBarMessage("Your changes were successfully registered.", "success"));
     } else {
-      yield put(setSnackBarMessage("خظایی رخ داده‌است.", "fail"));
+      yield put(setSnackBarMessage("There has been a mood.", "fail"));
     }
     yield put(stopLoading());
   } catch (err) {
@@ -396,10 +396,10 @@ export function* deleteDeliveryTypeSaga(action) {
       response: { meta },
     } = yield call(request, DELIVERY_TYPES_ITEM_API(action.data), {}, "DELETE");
     if (meta.status_code >= 200 && meta.status_code <= 300) {
-      yield put(setSnackBarMessage("روش ارسال با موفقیت حذف شد.", "success"));
+      yield put(setSnackBarMessage("The sending method was successfully deleted.", "success"));
       yield call(Router.back);
     } else {
-      yield put(setSnackBarMessage("خظایی رخ داده‌است.", "fail"));
+      yield put(setSnackBarMessage("There has been a mood.", "fail"));
     }
     yield put(stopLoading());
   } catch (err) {
@@ -414,10 +414,10 @@ export function* createDeliveryTypeSaga(action) {
       response: { meta },
     } = yield call(request, DELIVERY_TYPES_API, action.data, "POST");
     if (meta.status_code >= 200 && meta.status_code <= 300) {
-      yield put(setSnackBarMessage("روش ارسال با موفقیت ساخته شد.", "success"));
+      yield put(setSnackBarMessage("The method was successfully built.", "success"));
       yield call(Router.back);
     } else {
-      yield put(setSnackBarMessage("خظایی رخ داده‌است.", "fail"));
+      yield put(setSnackBarMessage("There has been a mood.", "fail"));
     }
     yield put(stopLoading());
   } catch (err) {
@@ -481,9 +481,9 @@ export function* updateDeliveryRuleSaga(action) {
         yield put(setDeliveryRules(action.plugin, [...newArray]));
       }
       yield put(setDeliveryRule(action.plugin, data));
-      yield put(setSnackBarMessage("تغییرات شما با موفقیت ثبت شد.", "success"));
+      yield put(setSnackBarMessage("Your changes were successfully registered.", "success"));
     } else {
-      yield put(setSnackBarMessage("خظایی رخ داده‌است.", "fail"));
+      yield put(setSnackBarMessage("There has been a mood.", "fail"));
     }
     yield put(stopLoading());
   } catch (err) {
@@ -503,10 +503,10 @@ export function* createDeliveryRuleSaga(action) {
       yield put(setDeliveryRule(action.plugin, data));
       yield call(Router.back);
       yield put(
-        setSnackBarMessage("محدوده ارسال شما با موفقیت ساخته شد.", "success")
+        setSnackBarMessage("Your submission range was successfully built.", "success")
       );
     } else {
-      yield put(setSnackBarMessage("خظایی رخ داده‌است.", "fail"));
+      yield put(setSnackBarMessage("There has been a mood.", "fail"));
     }
     yield put(stopLoading());
   } catch (err) {
@@ -523,11 +523,11 @@ export function* deleteDeliveryRuleSaga(action) {
     } = yield call(request, DELIVERY_RULES_ITEM_API(action.data), {}, "DELETE");
     if (meta.status_code >= 200 && meta.status_code <= 300) {
       yield put(
-        setSnackBarMessage("محدوده سرویس‌دهی با موفقیت حذف شد.", "success")
+        setSnackBarMessage("The service range was successfully eliminated.", "success")
       );
       yield call(Router.back);
     } else {
-      yield put(setSnackBarMessage("خظایی رخ داده‌است.", "fail"));
+      yield put(setSnackBarMessage("There has been a mood.", "fail"));
     }
     yield put(stopLoading());
   } catch (err) {

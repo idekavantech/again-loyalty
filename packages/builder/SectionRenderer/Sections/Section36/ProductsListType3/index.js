@@ -568,7 +568,7 @@ function ProductsListType3({
                     fontWeight: "900",
                   }}
                 >
-                  مشاهده‌ی همه
+                  View everyone
                 </p>
               </div>
             </SectionLink>

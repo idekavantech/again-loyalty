@@ -122,7 +122,7 @@ export function getAdminMenuLinkFromPlugins(plugins, adminUrlPrefix) {
 
   if (reportsSubLinks.length && (isDobarePanel || isDaramadPanel)) {
     adminMenuLinks.push({
-      text: "تحلیل‌ها و گزارش‌ها",
+      text: "Analysis and reports",
       icon: "ShoppingCartIcon",
       subLinks: reportsSubLinks,
       onClick: () => {},
@@ -207,7 +207,7 @@ export function getPluginSharedComponents(plugins) {
 export function getAdminOrdersWidgetDataFromPlugins(plugins) {
   const adminOrdersWidget = {
     icon: NotificationsActiveRoundedIcon,
-    text: "سفارش‌ها",
+    text: "Orders",
     actions: [],
     ordersAmount: 0,
     orders: [],
@@ -243,7 +243,7 @@ export function getWidgetsFromPlugins(plugins, business) {
   };
   widgets[MENU_LINKS_WIDGET].push({
     id: "about",
-    text: "اطلاعات اصلی",
+    text: "General information",
     hasChevron: true,
     icon: "InfoIcon",
     url: "/about",
@@ -255,7 +255,7 @@ export function getWidgetsFromPlugins(plugins, business) {
       id: "addresses",
       hasBorder: true,
       needsAuth: true,
-      text: "آدرس‌های من",
+      text: "My addresses",
       url: "/profile/addresses",
       icon: "ListAltIcon",
     });
@@ -294,7 +294,7 @@ export function getWidgetsFromPlugins(plugins, business) {
 
   widgets[MENU_LINKS_WIDGET].push(
     {
-      text: "دسته‌بندی‌ها",
+      text: "categories",
       subLinks: [],
       icon: "ListAltIcon",
       iconSize: 24,
@@ -315,7 +315,7 @@ export function getWidgetsFromPlugins(plugins, business) {
     widgets[MENU_LINKS_WIDGET].push(
       {
         id: "login",
-        text: "ورود به حساب",
+        text: "Login",
         action: MENU_LOGIN_ACTION,
         url: null,
         hasBorder: true,
@@ -326,12 +326,12 @@ export function getWidgetsFromPlugins(plugins, business) {
         id: "profile",
         hasBorder: true,
         needsAuth: true,
-        text: "پروفایل",
+        text: "profile",
         url: "/profile",
         icon: "AccountCircleIcon",
       },
       {
-        text: "خروج از حساب",
+        text: "Exit from the account",
         action: MENU_LOGOUT_ACTION,
         icon: "ExitToAppIcon",
         iconSize: 24,

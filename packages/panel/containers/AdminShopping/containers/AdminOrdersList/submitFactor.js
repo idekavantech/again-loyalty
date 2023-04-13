@@ -1167,7 +1167,7 @@ const SubmitFactor = ({
                   }}
                   onClick={() => setSubmitModalStep(1)}
                 >
-                  coming back
+                  Back
                 </Button>
                 <Button
                   variant="contained"

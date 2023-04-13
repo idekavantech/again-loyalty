@@ -16,7 +16,7 @@ export default class BranchesPlugin extends Plugin {
       pluginConfig?.data?.supported_plugins?.includes(SHOPPING_PLUGIN);
     this.adminMenuLinks = [
       {
-        text: "لیست شعب",
+        text: "Branches list",
         isSubLinksOpen: false,
         url: `${this.adminUrlPrefix}${BRANCHES_PLUGIN}/branches`,
         onClick: () => {},
@@ -25,17 +25,17 @@ export default class BranchesPlugin extends Plugin {
     ];
     this.adminReportLinks = [
       {
-        text: "داشبورد",
+        text: "Dashboard",
         url: `${BRANCHES_PLUGIN}/analytics/dashboard`,
         blank: true,
       },
       {
-        text: "گزارش‌ها",
+        text: "reports",
         url: `${BRANCHES_PLUGIN}/analytics/reports`,
         blank: true,
       },
       {
-        text: "کیف پول مشترک",
+        text: "Joint wallet",
         url: `${BRANCHES_PLUGIN}/finance/sow`,
         blank: true,
       },
@@ -46,7 +46,7 @@ export default class BranchesPlugin extends Plugin {
 
     if (this.hasOrdering !== false) {
       this.widgets[MENU_LINKS_WIDGET].push({
-        text: `پیگیری سفارش‌‌ها`,
+        text: `Tracking orders`,
         url: `/${BRANCHES_PLUGIN_URL}/orders`,
         icon: "ListAltIcon",
         needsAuth: true,
@@ -61,19 +61,19 @@ export default class BranchesPlugin extends Plugin {
       this.widgets[MENU_LINKS_WIDGET].push(
         {
           id: "wallet",
-          text: "شارژ کیف پول",
+          text: "Charging the wallet",
           query: `wallet_charge`,
           icon: "AccountBalanceWalletIcon",
           needsAuth: true,
-          itemsAmount: `${priceFormatter(userInfo?.walletCredit)} تومان `,
+          itemsAmount: `${priceFormatter(userInfo?.walletCredit)} Toman`,
         },
         {
           id: "wallet",
-          text: "اعتبار هدیه",
+          text: "Gift credit",
           url: `/wallet`,
           icon: "CardGiftcardIcon",
           needsAuth: true,
-          itemsAmount: `${priceFormatter(userInfo?.giftCredit)} تومان `,
+          itemsAmount: `${priceFormatter(userInfo?.giftCredit)} Toman`,
         }
       );
     }

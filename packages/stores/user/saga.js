@@ -134,7 +134,7 @@ export function* verify(action) {
       response: { meta, data: verifyData },
     } = yield call(request, VERIFY_API, dto, "POST");
     if (meta.status_code >= 200 && meta.status_code <= 300) {
-      yield put(setSnackBarMessage("با موفقیت وارد حساب کاربری خود شدید.", "success"));
+      yield put(setSnackBarMessage("Successfully entered your account.", "success"));
       const { access, refresh, invite_result: inviteResult } = verifyData;
       if (inviteResult === "OK") localStorage.setItem("giftReceived", "true");
       localStorage.setItem(VITRIN_TOKEN, access);
@@ -186,7 +186,7 @@ export function* verify(action) {
           setPluginWidgetItemAmounts(
             BRANCHES_PLUGIN,
             MENU_LINKS_WIDGET,
-            `${priceFormatter(_user.gift_credit)} تومان `,
+            `${priceFormatter(_user.gift_credit)} Toman`,
             business
           )
         );
@@ -194,7 +194,7 @@ export function* verify(action) {
           setPluginWidgetItemAmounts(
             SHOPPING_PLUGIN,
             MENU_LINKS_WIDGET,
-            `${priceFormatter(_user.gift_credit)} تومان `,
+            `${priceFormatter(_user.gift_credit)} Toman`,
             business
           )
         );
@@ -205,7 +205,7 @@ export function* verify(action) {
       if (loginCallback && loginCallback !== "undefined") yield call(loginCallback);
       if (action.callback && action.callback !== "undefined")
         yield call(() => (window.location.href = action.callback));
-    } else yield put(setSnackBarMessage("کد تایید نادرست است", "fail"));
+    } else yield put(setSnackBarMessage("The confirmation code is incorrect.", "fail"));
     yield put(stopLoading());
   } catch (err) {
     console.log("err", err);
@@ -222,10 +222,10 @@ export function* updateProfile(action) {
       response: { data, meta },
     } = yield call(request, MEMBERSHIPS_ITEM_API(action.id, slug), action.data, "PATCH");
     if (meta.status_code >= 200 && meta.status_code <= 300) {
-      yield put(setSnackBarMessage("ویرایش اطلاعات با موفقیت انجام شد", "success"));
+      yield put(setSnackBarMessage("Edited the information successfully done", "success"));
       yield put(setUser({ user: data }));
       if (action.callback) action.callback(data);
-    } else yield put(setSnackBarMessage("ویرایش اطلاعات ناموفق بود", "fail"));
+    } else yield put(setSnackBarMessage("Edit information was unsuccessful", "fail"));
     yield put(stopLoading());
   } catch (err) {
     yield put(stopLoading());

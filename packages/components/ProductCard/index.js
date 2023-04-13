@@ -172,7 +172,7 @@ function ProductCard({
               opacity: snackBar ? 1 : 0,
             }}
           >
-            به سبد خرید افزوده شد!
+            Added to the shopping cart!
           </div>
           <div className="px-1 py-1">
             {!withPadding ? (

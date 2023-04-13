@@ -100,7 +100,7 @@ function AutomatedProcess({ props }) {
           }}
           dialogMainActionText="Yes"
           dialogSecondActions={() => setIsDeleteModalOpen(false)}
-          dialogSecondActionText="Good"
+          dialogSecondActionText="Back"
         />
         <div>
           <TableContainer

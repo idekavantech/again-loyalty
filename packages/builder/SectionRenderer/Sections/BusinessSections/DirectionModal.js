@@ -55,7 +55,7 @@ const DirectionModal = ({ onClose, isOpen, business }) => {
             <div className="c-modal-body-sec">
               <Map options={mapOptions} />
               <div className="py-2 px-3">
-                <div className="u-fontMedium u-text-dark-grey">مسیریابی</div>
+                <div className="u-fontMedium u-text-dark-grey">Routing</div>
                 <div className="mt-1 mb-2 d-flex">
                   <button
                     onClick={() =>
@@ -101,7 +101,7 @@ const DirectionModal = ({ onClose, isOpen, business }) => {
                     />
                   </button>
                 </div>
-                <div className="u-fontMedium u-text-dark-grey">آدرس</div>
+                <div className="u-fontMedium u-text-dark-grey">Address</div>
                 <div className="u-fontMedium mt-1 mb-3">
                   {business?.address}
                 </div>

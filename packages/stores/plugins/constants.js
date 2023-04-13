@@ -150,18 +150,18 @@ export const CREATE_CASHBACK_TRANSACTION = "CREATE_CASHBACK_TRANSACTION";
 export const VALIDATE_CASHBACK_CODE = "VALIDATE_CASHBACK_CODE";
 
 export const transactionDescription = {
-  [ALL_CREDIT_TYPE]: "همه تراکنش‌ها",
-  [CASH_BACK_CREDIT]: "اعتبار هدیه خرید",
-  [INVITER_CREDIT]: "اعتبار هدیه دعوت کننده",
-  [INVITED_CREDIT]: "اعتبار هدیه دعوت شونده",
-  [FIRST_LOGIN_CREDIT]: "اعتبار هدیه اولین لاگین",
-  [NO_ORDER_CREDIT]: "اعتبار هدیه اولیه اتوماسیون",
-  [REFUND_ORDER_CREDIT]: "عودت وجه به کیف پول",
-  [USE_GIFT_CREDIT]: "استفاده از اعتبار هدیه‌",
-  [RETURN_GIFT_CREDIT]: "پس گرفتن اعتبار هدیه",
-  [BEHMANDASH_CREDIT]: "تنظیم اعتبار کاربر توسط ویترین",
-  [CHECKOUT_CREDIT]: "تسویه حساب",
-  [LEFTOVER]: "باقیمانده",
+  [ALL_CREDIT_TYPE]: "All transactions",
+  [CASH_BACK_CREDIT]: "The credit of the purchase gift",
+  [INVITER_CREDIT]: "Invitative gift credit",
+  [INVITED_CREDIT]: "Invitative gift",
+  [FIRST_LOGIN_CREDIT]: "Credit Gift First Login",
+  [NO_ORDER_CREDIT]: "Automatic Gift Credit",
+  [REFUND_ORDER_CREDIT]: "Refund to the wallet",
+  [USE_GIFT_CREDIT]: "Use of gift credit",
+  [RETURN_GIFT_CREDIT]: "Return the credit of the gift",
+  [BEHMANDASH_CREDIT]: "Set up user credit by showcase",
+  [CHECKOUT_CREDIT]: "Checkout",
+  [LEFTOVER]: "left over",
 };
 
 export const SHOPPING_PLUGIN_MAIN_PAGE = "main";
@@ -170,98 +170,98 @@ export const SHOPPING_PLUGIN_PDP_PAGE = "pdp";
 export const ONLINE_MENU_PLUGIN_MENU_PAGE = "menu";
 export const alterInventoryOptions = {
   1: {
-    text: "دریافت",
+    text: "Receive",
     action: "plus",
-    actionText: "موجودی افزوده",
-    countText: "موجودی",
+    actionText: "Added inventory",
+    countText: "Inventory",
   },
   2: {
-    text: "شمارش مجدد",
+    text: "Re -count",
     action: "set",
-    actionText: "موجودی جدید",
-    countText: "موجودی سابق",
+    actionText: "New creature",
+    countText: "Former creature",
   },
   3: {
-    text: "خرابی",
+    text: "Error",
     action: "minus",
-    actionText: "موجودی کم‌شده",
-    countText: "موجودی",
+    actionText: "The inventory is reduced",
+    countText: "Inventory",
   },
   4: {
-    text: "سرقت",
+    text: "Theft",
     action: "minus",
-    actionText: "موجودی کم‌شده",
-    countText: "موجودی",
+    actionText: "The inventory is reduced",
+    countText: "Inventory",
   },
   5: {
-    text: "گم شدن",
+    text: "getting lost",
     action: "minus",
-    actionText: "موجودی کم‌شده",
-    countText: "موجودی",
+    actionText: "The inventory is reduced",
+    countText: "Inventory",
   },
   6: {
-    text: "مرجوعی",
+    text: "returned",
     action: "plus",
-    actionText: "موجودی افزوده",
-    countText: "موجودی",
+    actionText: "Added inventory",
+    countText: "Inventory",
   },
   11: {
-    text: "قرض‌دادن",
+    text: "To borrow",
     action: "minus",
-    actionText: "موجودی کم‌شده",
-    countText: "موجودی",
+    actionText: "The inventory is reduced",
+    countText: "Inventory",
   },
   12: {
-    text: "قرض‌گرفتن",
+    text: "Borrowers",
     action: "plus",
-    actionText: "موجودی افزوده",
-    countText: "موجودی",
+    actionText: "Added inventory",
+    countText: "Inventory",
   },
   13: {
-    text: "انتقال‌از",
+    text: "Transition",
     action: "plus",
-    actionText: "موجودی افزوده",
-    countText: "موجودی",
+    actionText: "Added inventory",
+    countText: "Inventory",
   },
   14: {
-    text: "انتقال‌به",
+    text: "Transfer to",
     action: "minus",
-    actionText: "موجودی کم‌شده",
-    countText: "موجودی",
+    actionText: "The inventory is reduced",
+    countText: "Inventory",
   },
 };
 
 export const inventoryAdjustmentReasons = [
   {
-    text: "دریافت",
+    text: "Receive",
     keyword: "stock_received",
   },
   {
-    text: "شمارش مجدد",
+    text: "Re -count",
     keyword: "recount",
   },
   {
-    text: "خرابی",
+    text: "Error",
     keyword: "damage",
   },
   {
-    text: "سرقت",
+    text: "Theft",
     keyword: "theft",
   },
   {
-    text: "گم شدن",
+    text: "getting lost",
     keyword: "loss",
   },
   {
-    text: "مرجوعی",
+    text: "returned",
     keyword: "return",
   },
   {
-    text: "خرید",
+    text: "Buy",
     keyword: "sales",
   },
   {
-    text: "سایر",
+    text: "Other",
     keyword: "other_reason",
   },
 ];
@@ -275,23 +275,23 @@ export const DEFAULT_PAYMENT_DATA = {
 };
 export const paymentOptions = [
   {
-    title: "پرداخت نقدی یا با کارت‌خوان",
+    title: "Cash payment or with card reader",
     description:
-      "در این روش مشتری می‌تواند مبلغ کالای خریداری شده از شما را به صورت نقدی (یا با استفاده از دستگاه کارت‌خوان) پرداخت کند.",
+      "In this way, the customer can cash in cash from you(Or using a card reader) To pay.",
     value: OFFLINE_PAYMENT,
     icon: `/images/pos.svg`,
   },
   {
-    title: "کارت به کارت",
+    title: "Card to card",
     description:
-      "در این روش مشتری می‌تواند به دلخواه خود از بین روش پرداخت نقدی و روش پرداخت آنلاین، یکی را انتخاب کند.",
+      "In this way, the customer can choose from the cash payment method and the online payment method..",
     value: CARD_PAYMENT,
     icon: `/images/creditCardOutlined.svg`,
   },
   {
-    title: "پرداخت آنلاین توسط درگاه بانکی",
+    title: "Pay online by banking gateway",
     description:
-      "در این روش مشتری می‌تواند مبلغ کالای خریداری شده از شما را به صورت آنلاین و توسط درگاه پرداخت بانکی بپردازد.",
+      "In this way, the customer can pay the amount of goods purchased from you online by bank payment gateway.",
     value: ONLINE_PAYMENT,
     icon: `/images/phoneIcon.svg`,
   },

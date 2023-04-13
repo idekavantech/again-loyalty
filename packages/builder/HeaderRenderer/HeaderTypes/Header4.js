@@ -212,7 +212,7 @@ function Header4({
                       >
                         <MenuIcon />
                       </Button>
-                      دسته‌بندی کالاها
+                      Classification of goods
                       <span
                         style={{
                           color: theme.palette.text.disabled,

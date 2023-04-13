@@ -100,10 +100,10 @@ function Header11({
       [HEADER_CATEGORIES_VISIBILITY]: _HEADER_CATEGORIES_VISIBILITY = true,
       [HEADER_MENU_VISIBILITY]: _HEADER_MENU_VISIBILITY = false,
     } = {},
-    search_bar: { has_search_bar = true, search_bar_title = "جستجو..." } = {},
+    search_bar: { has_search_bar = true, search_bar_title = "Search..." } = {},
     button: {
       has_button = true,
-      button_text = "متن دکمه",
+      button_text = "Button text",
       link_type = "has_internal_link",
       internal_link = "",
       external_link = "",
@@ -772,7 +772,7 @@ function Header11({
                           <LoadingIndicator />
                         ) : unifiedArray.length === 0 && !isInputLengthZero ? (
                           <div className="container p-2">
-                            نتیجه‌‌ای یافت نشد.
+                            There was no results.
                           </div>
                         ) : (
                           unifiedArray.map((product) => (
@@ -957,7 +957,7 @@ function Header11({
                       className="m-3 mb-0"
                       style={{ height: 1, backgroundColor: "#ccc" }}
                     ></p>
-                    <p className="p-3">دسته‌بندی کالاها</p>
+                    <p className="p-3">Classification of goods</p>
                     {showCategorySubMenu && (
                       <List className="w-100 pl-2 ">
                         {menus.map((menu) => (
@@ -976,7 +976,7 @@ function Header11({
                       className="m-3 mb-0"
                       style={{ height: 1, backgroundColor: "#ccc" }}
                     ></p>
-                    <p className="p-3">حساب کاربری</p>
+                    <p className="p-3">Account</p>
 
                     {menuWidget?.map((link) => {
                       if (
@@ -1209,7 +1209,7 @@ function Header11({
                       {loading ? (
                         <LoadingIndicator />
                       ) : unifiedArray.length === 0 && !isInputLengthZero ? (
-                        <div className="container p-2">نتیجه‌‌ای یافت نشد.</div>
+                        <div className="container p-2">There was no results.</div>
                       ) : (
                         unifiedArray.map((product) => (
                           <div

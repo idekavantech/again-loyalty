@@ -10,18 +10,18 @@ export default class PersonalSiteDomainPlugin extends Plugin {
   constructor(data, business, incomingUrl, incomingHost) {
     super(data, business, incomingUrl, incomingHost);
     this.name = PERSONAL_SITE_DOMAIN_PLUGIN;
-    this.title = "اتصال به دامنه اختصاصی و عضویت ویژه";
+    this.title = "Connect to a dedicated domain and special membership";
     this.description =
-      "امکان افزودن محصولات، افزودن به سبد خرید فعال‌سازی دامنه اختصاصی، حذف تبلیغات و ... ";
+      "Ability to add products, add to the dedicated domain activation cart, delete ads and ads... ";
     this.descriptions = [
-      "فعال سازی دامنه اختصاصی",
-      "حذف تبلیغات ویترین از سایت شما",
-      "امکان انتقال دامنه موجود به دامنه دلخواه",
+      "Activate dedicated domain",
+      "Remove the showcase ads from your site",
+      "Possibility of transferring existing domain to the desired domain",
     ];
     this.price = 29000;
     this.plans = [
       // {
-      //   title: 'یک هفته رایگان',
+      //   title: 'A free week',
       //   duration: 1,
       //   tax: 0,
       //   price: Math.floor(1.09 * (this.price + 2000000)),
@@ -34,7 +34,7 @@ export default class PersonalSiteDomainPlugin extends Plugin {
       //   isTrial: true,
       // },
       {
-        title: "سه ماهه",
+        title: "Trimester",
         duration: 3,
         tax: Math.floor(0.09 * (3 * this.price + 500000)),
         price: Math.floor(1.09 * (3 * this.price + 500000)),
@@ -47,7 +47,7 @@ export default class PersonalSiteDomainPlugin extends Plugin {
         isTrial: false,
       },
       {
-        title: "یک ساله",
+        title: "one year",
         duration: 12,
         tax: Math.floor(0.09 * (12 * this.price + 500000)),
         price: Math.floor(1.09 * (12 * this.price + 500000)),

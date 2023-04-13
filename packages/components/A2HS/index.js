@@ -46,9 +46,9 @@ const A2HS = ({ title, icon, isOpen, onClose, APK_URL, pwaPlugin }) => {
               style={{ maxWidth: "calc(100% - 157px)" }}
             >
               <span className="u-font-semi-small u-fontWeightBold u-text-ellipse w-100">
-                {pwaPlugin?.data?.link_description || ` اپ ${title}`}
+                {pwaPlugin?.data?.link_description || ` you${title}`}
               </span>
-              <span className="u-fontVerySmall">دسترسی آسان‌تر</span>
+              <span className="u-fontVerySmall">Easier access</span>
             </div>
             <Button
               color="secondary"
@@ -74,7 +74,7 @@ const A2HS = ({ title, icon, isOpen, onClose, APK_URL, pwaPlugin }) => {
                 }
               }}
             >
-              نصب
+              Installation
             </Button>
           </div>
         </div>

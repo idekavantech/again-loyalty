@@ -100,134 +100,134 @@ export const VITRIN_TYPE_OTHER = 2;
 
 export const firstSection = {
   [VITRIN_TYPE_FOOD]: {
-    title: "سریع و حرفه‌ای آمادهٔ فروش آنلاین شوید!",
+    title: "Get fast and professional ready to sell online!",
     subtitle:
-      "کسب‌وکارهایی که راه‌اندازی سایت فروشگاهی را به ویترین سپرده‌اند، تا ۴ برابر زمان کمتری صرف آماده‌سازی سایت کرده‌اند.",
+      "Businesses that have set up a store site to showcase up to 5 times less time preparing the site.",
   },
   [VITRIN_TYPE_ECOMMERCE]: {
-    title: "سریع و حرفه‌ای آمادهٔ فروش آنلاین شوید!",
+    title: "Get fast and professional ready to sell online!",
     subtitle:
-      "کسب‌وکارهایی که راه‌اندازی فروشگاه اینترنتی را به ویترین سپرده‌اند، تا ۳ برابر زمان کمتری صرف آماده‌سازی فروشگاه کرده‌اند.",
+      "Businesses that have entrusted the online store to showcase up to 5 times less time to prepare the store.",
   },
   [VITRIN_TYPE_OTHER]: {
-    title: "سریع و حرفه‌ای شروع کنید!",
+    title: "Start fast and professional!",
     subtitle:
-      "کسب‌وکارهایی که راه‌اندازی سایت را به ویترین سپرده‌اند، تا ۲ برابر زمان کمتری صرف آماده‌سازی سایت کرده‌اند.",
+      "Businesses that have entrusted the site to showcase up to 5 times less time preparing the site.",
   },
 };
 
 export const thirdSection = {
   [VITRIN_TYPE_FOOD]: [
     {
-      title: "برندینگ",
+      title: "Branding",
       subtitle:
-        "به کمک تیم ویترین می‌توانید برندسازی دیجیتال فروشگاه اینترنتی خود را اصولی اجرا کنید.",
+        "With the help of the showcase you can run your digital branding on your online store.",
       bullets: [
-        "خرید و اتصال دامنهٔ دلخواه شما به سایت",
-        "طراحی گرافیکی صفحهٔ اول فروشگاه",
-        "ثبت‌نام نماد اعتماد الکترونیکی",
-        "طراحی گیفت کارت",
-        "طراحی لوگو",
+        "Buy and connect your favorite domain to the site",
+        "Graphic Design",
+        "Electronic Trust icon registration",
+        "Card design",
+        "Logo design",
       ],
     },
     {
-      title: "زیرساخت مارکتینگ",
+      title: "Marketing infrastructure",
       subtitle:
-        "تیم ویترین می‌تواند مقدمات فروش و بازاریابی دیجیتال را برای فروشگاه اینترنتی شما فراهم کند تا فروش شما به تأخیر نیفتد.",
+        "The showcase team can provide digital sales and marketing preparations for your online store so that your sales will not be delayed.",
       bullets: [
-        "راه‌اندازی و اتصال سایت به گوگل آنالیتیکس",
-        "اتصال سایت به سرچ کنسول گوگل",
-        "سئو (SEO) با اسم فروشگاه شما",
-        "اتصال سایت به گوگل مپ",
+        "Set up and connect the site to Google Analytics",
+        "Site connection to Google console search",
+        "The article(SEO) With your store name",
+        "Site connection to Google Map",
       ],
     },
     {
-      title: "تنظیم سفارش‌گیری",
+      title: "Ordering",
       subtitle:
-        "شما می‌توانید برای سرعت بخشیدن به شروع سفارش‌گیری آنلاین فروشگاه خود، از تیم ویترین کمک بگیرید.",
+        "You can get help from the showcase team to speed up your store online ordering.",
       bullets: [
-        "راه‌اندازی درگاه پرداخت آنلاین اختصاصی شما",
-        "وارد کردن محصولات فروشگاه شما",
-        "تنظیم محدوده‌های ارسال",
+        "Set up your dedicated online payment gateway",
+        "Enter your store products",
+        "Set the submission ranges",
       ],
     },
     {
-      title: "مقدمات فروش بیشتر",
+      title: "More sales preparations",
       subtitle:
-        "برای افزایش فروش آنلاین سایت شما، راهکارهای مختلفی توسط تیم ویترین در اختیارتان قرار می‌گیرد.",
+        "To increase your online sales of your site, you will be given a variety of solutions by the showcase team.",
       bullets: [
-        "تنظیم و راه‌اندازی اتوماسیون بازاریابی",
-        "طراحی نسخهٔ فیزیکی QR کد دیجیتال",
-        "پیاده‌سازی منوی دیجیتال",
+        "Setting and setting up marketing automation",
+        "Designing a physical versionQR Digital code",
+        "Implementation of digital menu",
       ],
     },
   ],
   [VITRIN_TYPE_ECOMMERCE]: [
     {
-      title: "برندینگ",
+      title: "Branding",
       subtitle:
-        "به کمک تیم ویترین می‌توانید برندسازی دیجیتال فروشگاه اینترنتی خود را اصولی اجرا کنید.",
+        "With the help of the showcase you can run your digital branding on your online store.",
       bullets: [
-        "خرید و اتصال دامنهٔ دلخواه شما به سایت",
-        "طراحی گرافیکی صفحهٔ اول فروشگاه",
-        "ثبت‌نام نماد اعتماد الکترونیکی",
-        "طراحی گیفت کارت",
-        "طراحی لوگو",
+        "Buy and connect your favorite domain to the site",
+        "Graphic Design",
+        "Electronic Trust icon registration",
+        "Card design",
+        "Logo design",
       ],
     },
     {
-      title: "زیرساخت مارکتینگ",
+      title: "Marketing infrastructure",
       subtitle:
-        "تیم ویترین می‌تواند مقدمات فروش و بازاریابی دیجیتال را برای فروشگاه اینترنتی شما فراهم کند تا فروش شما به تأخیر نیفتد.",
+        "The showcase team can provide digital sales and marketing preparations for your online store so that your sales will not be delayed.",
       bullets: [
-        "راه‌اندازی و اتصال سایت به گوگل آنالیتیکس",
-        "اتصال سایت به سرچ کنسول گوگل",
-        "سئو (SEO) با اسم فروشگاه شما",
-        "اتصال سایت به گوگل مپ",
+        "Set up and connect the site to Google Analytics",
+        "Site connection to Google console search",
+        "The article(SEO) With your store name",
+        "Site connection to Google Map",
       ],
     },
     {
-      title: "تنظیم سفارش‌گیری",
+      title: "Ordering",
       subtitle:
-        "شما می‌توانید برای سرعت بخشیدن به شروع سفارش‌گیری آنلاین فروشگاه خود، از تیم ویترین کمک بگیرید.",
+        "You can get help from the showcase team to speed up your store online ordering.",
       bullets: [
-        "راه‌اندازی درگاه پرداخت آنلاین اختصاصی شما",
-        "وارد کردن محصولات فروشگاه شما",
-        "تنظیم محدوده‌های ارسال",
+        "Set up your dedicated online payment gateway",
+        "Enter your store products",
+        "Set the submission ranges",
       ],
     },
     {
-      title: "مقدمات فروش بیشتر",
+      title: "More sales preparations",
       subtitle:
-        "برای افزایش بازدید از فروشگاه اینترنتی شما، راهکارهای مختلفی توسط تیم ویترین در اختیارتان قرار می‌گیرد.",
+        "To increase your visit to your online store, you will be given a variety of solutions by the showcase team.",
       bullets: [
-        "ثبت‌نام ترب و ایمالزو اتصال به فروشگاه",
-        "تنظیم و راه‌اندازی اتوماسیون بازاریابی",
+        "Register Radiad and Imalzo Connect to Store",
+        "Setting and setting up marketing automation",
       ],
     },
   ],
   [VITRIN_TYPE_OTHER]: [
     {
-      title: "برندینگ",
+      title: "Branding",
       subtitle:
-        "به کمک تیم ویترین می‌توانید برندسازی دیجیتال فروشگاه اینترنتی خود را اصولی اجرا کنید.",
+        "With the help of the showcase you can run your digital branding on your online store.",
       bullets: [
-        "خرید و اتصال دامنهٔ دلخواه شما به سایت",
-        "طراحی گرافیکی صفحهٔ اول فروشگاه",
-        "ثبت‌نام نماد اعتماد الکترونیکی",
-        "طراحی گیفت کارت",
-        "طراحی لوگو",
+        "Buy and connect your favorite domain to the site",
+        "Graphic Design",
+        "Electronic Trust icon registration",
+        "Card design",
+        "Logo design",
       ],
     },
     {
-      title: "زیرساخت مارکتینگ",
+      title: "Marketing infrastructure",
       subtitle:
-        "تیم ویترین می‌تواند مقدمات فروش و بازاریابی دیجیتال را برای فروشگاه اینترنتی شما فراهم کند تا فروش شما به تأخیر نیفتد.",
+        "The showcase team can provide digital sales and marketing preparations for your online store so that your sales will not be delayed.",
       bullets: [
-        "راه‌اندازی و اتصال سایت به گوگل آنالیتیکس",
-        "اتصال سایت به سرچ کنسول گوگل",
-        "سئو (SEO) با اسم فروشگاه شما",
-        "اتصال سایت به گوگل مپ",
+        "Set up and connect the site to Google Analytics",
+        "Site connection to Google console search",
+        "The article(SEO) With your store name",
+        "Site connection to Google Map",
       ],
     },
   ],

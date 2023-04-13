@@ -40,8 +40,8 @@ function HeaderCover({
       {isEditMode ? (
         <AddNewItemSection
           onClick={onEditClick}
-          AddDescription="افزودن تصویر اصلی کسب و کار"
-          title=".ویترینی که در آن از تصاویر استفاده شده است شانس بیشتری برای انتخاب شدن توسط بازدیدکنندگان دارد"
+          AddDescription="Add the original business image"
+          title=".A showcase in which the images used is more likely to be selected by visitors"
         />
       ) : null}
     </div>

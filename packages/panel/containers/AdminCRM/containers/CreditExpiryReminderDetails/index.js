@@ -79,7 +79,7 @@ function CRMCampaignDetails() {
         dialogMainActionText="Yes"
         dialogSecondActions={() => toggleModals(SAVE_MODAL)}
         dialogSecondActionTextColor="primary"
-        dialogSecondActionText="Good"
+        dialogSecondActionText="Back"
       />
       <AssuranceDialog
         isOpen={modals[CANCEL_MODAL]}
@@ -91,7 +91,7 @@ function CRMCampaignDetails() {
         }}
         dialogMainActionText="Yes"
         dialogSecondActions={() => toggleModals(CANCEL_MODAL)}
-        dialogSecondActionText="Good"
+        dialogSecondActionText="Back"
       />
       <AssuranceDialog
         isOpen={toggleCampaignStatusDialogOpen}
@@ -104,7 +104,7 @@ function CRMCampaignDetails() {
         }}
         dialogMainActionText="Yes"
         dialogSecondActions={() => toggleCampaignStatusModal()}
-        dialogSecondActionText="Good"
+        dialogSecondActionText="Back"
       />
       {_isCampaignLoading ? (
         <LoadingIndicator height={600} />

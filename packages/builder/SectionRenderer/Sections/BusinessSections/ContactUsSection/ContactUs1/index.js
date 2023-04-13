@@ -76,7 +76,7 @@ function ContactUs1({
       >
         <Section
           themeColor={themeColor}
-          title="تماس با ما"
+          title="contact us"
           className={`${isEditMode ? "py-5" : "py-3"} position-relative`}
         >
           <div className="d-flex flex-column align-items-center container">
@@ -145,7 +145,7 @@ function ContactUs1({
             </div>
 
             <div className="u-fontMedium u-text-dark-grey mt-4">
-              شماره تماس:
+              Phone number:
             </div>
             <div
               className="u-fontMedium u-text-darkest-grey mt-1 mr-1 u-cursor-pointer"
@@ -156,7 +156,7 @@ function ContactUs1({
             >
               {businessPhoneNumber
                 ? englishNumberToPersianNumber(businessPhoneNumber)
-                : "تماس"}
+                : "Contact"}
             </div>
           </div>
           {businessExtraPhoneNumber && (
@@ -170,7 +170,7 @@ function ContactUs1({
             >
               {businessExtraPhoneNumber
                 ? englishNumberToPersianNumber(businessExtraPhoneNumber)
-                : "تماس"}
+                : "Contact"}
             </div>
           )}
         </Section>

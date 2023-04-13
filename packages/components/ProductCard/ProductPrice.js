@@ -42,7 +42,7 @@ function ProductPrice({ discountedPrice, initialPrice }) {
         </div>
         <div className="u-text-black u-fontMedium text-right u-fontWeightBold">
           {priceFormatter(discountedPrice)}
-          <span className="u-font-semi-small u-fontWeightNormal"> تومان </span>
+          <span className="u-font-semi-small u-fontWeightNormal"> Toman</span>
         </div>
       </div>
     </div>
@@ -50,7 +50,7 @@ function ProductPrice({ discountedPrice, initialPrice }) {
     priceFormatter(initialPrice) && (
       <div className="u-text-black u-fontMedium text-right u-fontWeightBold py-2">
         {priceFormatter(initialPrice)}
-        <span className="u-font-semi-small u-fontWeightNormal"> تومان </span>
+        <span className="u-font-semi-small u-fontWeightNormal"> Toman</span>
       </div>
     )
   );

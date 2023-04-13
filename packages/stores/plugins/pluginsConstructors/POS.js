@@ -12,7 +12,7 @@ export default class POSPlugin extends Plugin {
 
     this.adminMenuLinks = [
       {
-        text: "دستگاه‌ها",
+        text: "Devices",
         url: `${POS_PLUGIN_URL}`,
         icon: "TabletMacIcon",
         priority: -1,
@@ -20,7 +20,7 @@ export default class POSPlugin extends Plugin {
         [INCLUDED_WEBAPPS_ONLY_KEY]: [DARAMAD_WEBAPP_CONSTANT],
       },
       {
-        text: "شورتکات منو",
+        text: "My shorts",
         subLinks: [],
         url: `supermenu`,
         icon: "PostAddRoundedIcon",
@@ -32,7 +32,7 @@ export default class POSPlugin extends Plugin {
 
     this.adminReportLinks = [
       {
-        text: "گزارش صندوق‌ها",
+        text: "Report of funds",
         url: `${POS_PLUGIN_URL}/analytics/cash_drawers`,
         blank: true,
         [INCLUDED_WEBAPPS_ONLY_KEY]: [DARAMAD_WEBAPP_CONSTANT],

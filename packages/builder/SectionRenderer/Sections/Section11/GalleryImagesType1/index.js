@@ -199,7 +199,7 @@ function GalleryImagesType1({
             header={
               <ModalHeader
                 onRightClick={() => selectImageIndex(null)}
-                title="عکس"
+                title="Picture"
               />
             }
             body={
@@ -222,7 +222,7 @@ function GalleryImagesType1({
                   className={_isMobile ? "w-100" : "px-5"}
                   color="secondary"
                 >
-                  بستن
+                  to close
                 </Button>
               </div>
             }

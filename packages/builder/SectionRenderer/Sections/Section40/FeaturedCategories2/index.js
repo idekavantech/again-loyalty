@@ -88,7 +88,7 @@ function FeaturedCategories2({
                         size="small"
                         style={{ color: texts_color || "" }}
                       >
-                        {buttons_value || "بیشتر"}
+                        {buttons_value || "More"}
                       </Button>
                     </SectionLink>
                   </div>

@@ -68,7 +68,7 @@ function LazyImage({
 }
 
 LazyImage.defaultProps = {
-  alt: "ویترین",
+  alt: "Showcase",
   className: "",
 };
 

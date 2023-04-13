@@ -15,15 +15,15 @@ export default function DeleteSectionPopup({ open, onClose, submit }) {
       >
         <DialogContent>
           <DialogContentText id="alert-dialog-description">
-            آیا مطمئن هستید که می‌خواهید این بخش را حذف کنید؟
+            Are you sure you want to delete this section?
           </DialogContentText>
         </DialogContent>
         <DialogActions>
           <Button onClick={submit} color="primary">
-            حذف بخش
+            Remove the section
           </Button>
           <Button onClick={onClose} color="primary" autoFocus>
-            انصراف
+            Candifying
           </Button>
         </DialogActions>
       </Dialog>

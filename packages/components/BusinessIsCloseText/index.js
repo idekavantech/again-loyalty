@@ -19,7 +19,7 @@ export default function BusinessIsCloseText() {
         }}
         className="ml-2"
       />
-      موقتا قادر به دریافت سفارش نیستیم
+      Temporarily unable to receive an order
     </div>
   );
 }

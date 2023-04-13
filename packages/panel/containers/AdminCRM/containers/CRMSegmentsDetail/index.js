@@ -128,7 +128,7 @@ function CRMSegmentsSetting() {
           }}
           dialogMainActionText="Yes"
           dialogSecondActions={() => setIsSaveModalOpen(false)}
-          dialogSecondActionText="Good"
+          dialogSecondActionText="Cancel"
         />
         <Paper elevation={3} style={{ marginTop: 24, padding: 24 }}>
           <p style={{ fontSize: 16, fontWeight: 500 }} className="pb-2">

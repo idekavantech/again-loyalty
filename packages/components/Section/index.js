@@ -53,7 +53,7 @@ function Section({
                 role="button"
                 tabIndex="0"
               >
-                نمایش بیشتر <LazyImage src={arrow} alt="ویترین" />
+                More display<LazyImage src={arrow} alt="Showcase" />
               </span>
             </div>
           )}

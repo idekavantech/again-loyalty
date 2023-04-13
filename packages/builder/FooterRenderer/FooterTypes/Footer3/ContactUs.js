@@ -35,15 +35,15 @@ function ContactUs({ business, themeColor }) {
     <div className="text-md-right">
       {address ? (
         <address className="u-text-black u-fontLarge-r mt-5">
-          آدرس: {address}
+          Address: {address}
         </address>
       ) : (
         <div className="u-text-black u-fontLarge-r mt-5">
-          آدرس: آدرس و موقعیت کسب و کار شما
+          Address: The address and position of your business
         </div>
       )}
       <div className="d-flex flex-column">
-        <div className="u-fontMedium u-text-black mt-2">شماره تماس:</div>
+        <div className="u-fontMedium u-text-black mt-2">Phone number:</div>
         <div
           className="u-fontMedium u-text-black mt-1 mr-1 u-cursor-pointer"
           onClick={callPhone(businessPhoneNumber)}
@@ -53,7 +53,7 @@ function ContactUs({ business, themeColor }) {
         >
           {businessPhoneNumber
             ? englishNumberToPersianNumber(businessPhoneNumber)
-            : "تماس"}
+            : "Contact"}
         </div>
         {businessExtraPhoneNumber && (
           <div
@@ -66,7 +66,7 @@ function ContactUs({ business, themeColor }) {
           >
             {businessExtraPhoneNumber
               ? englishNumberToPersianNumber(businessExtraPhoneNumber)
-              : "تماس"}
+              : "Contact"}
           </div>
         )}
         <div className="w-100 mt-2">

@@ -17,7 +17,7 @@ function VitrinPromotionSection() {
             >
                 <div className="container d-flex py-4 justify-content-around align-items-center">
                     <div>
-                        <div className="u-text-black">طراحی سایت با ویترین</div>
+                        <div className="u-text-black">Website design with showcase</div>
                         <LazyImage
                             style={{
                                 width: 163,
@@ -29,7 +29,7 @@ function VitrinPromotionSection() {
                             alt="promotion-text"
                         />
                         <div className="u-text-darkest-grey" style={{marginTop: 8}}>
-                            حرفه‌ای در کمتر از ۲۴ ساعت!
+                            Professional in less than 2 hours!
                         </div>
                     </div>
                     <LazyImage
@@ -49,13 +49,13 @@ function VitrinPromotionSection() {
             <div className="container d-flex py-4 justify-content-around align-items-center">
                 <div>
                     <div className="u-text-black u-font-largest">
-                        طراحی سایت با ویترین
+                        Website design with showcase
                     </div>
                     <div
                         className="u-text-darkest-grey u-fontVeryLarge"
                         style={{marginTop: 8}}
                     >
-                        حرفه‌ای در کمتر از ۲۴ ساعت!
+                        Professional in less than 2 hours!
                     </div>
                 </div>
                 <div className="d-flex align-items-center">

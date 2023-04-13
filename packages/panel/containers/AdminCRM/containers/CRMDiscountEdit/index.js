@@ -449,7 +449,7 @@ function CRMDiscountEdit() {
           }}
           dialogMainActionText="Yes"
           dialogSecondActions={() => setIsSaveMoalOpen(false)}
-          dialogSecondActionText="Good"
+          dialogSecondActionText="Back"
         />
         <AssuranceDialog
           isOpen={isCancelModalOpen}
@@ -462,7 +462,7 @@ function CRMDiscountEdit() {
           }}
           dialogMainActionText="Yes"
           dialogSecondActions={() => setIsCancelModalOpen(false)}
-          dialogSecondActionText="Good"
+          dialogSecondActionText="Back"
         />
       </div>
     </div>

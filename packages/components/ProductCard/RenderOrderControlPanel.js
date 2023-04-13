@@ -29,7 +29,7 @@ function RenderOrderControlPanel({
         style={{ border: `2px solid`, color: theme.palette.text.disabled }}
         className="product-not-available u-font-small-r"
       >
-        ناموجود
+        unavailable
       </div>
     );
   }
