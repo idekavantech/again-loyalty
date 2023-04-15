@@ -204,7 +204,7 @@ function ImportUserGroupModal(props) {
                         color="primary"
                         checked={importingUsersLabels?.includes(Number(label.id)) ?? false}
                       />
-                      <ListItemText primary={label?.title} className="text-right" />
+                      <ListItemText primary={label?.title} className="text-left" />
                     </div>
                   </MenuItem>
                 );
@@ -225,7 +225,7 @@ function ImportUserGroupModal(props) {
             />
           ))}
         </div>
-        <div className="d-flex flex-row-reverse mt-3">
+        <div className="d-flex mt-3">
           <Button
             onClick={submitImportUsers}
             disabled={!isExcelFileUploaded || _isImportUsersLoading}

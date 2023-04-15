@@ -257,7 +257,7 @@ function CRMMembershipsList() {
               displayEmpty
               size="large"
               renderValue={() => {
-                return `order by${!selectedSortingOption ? "Default mode" : selectedSortingOption.text}`;
+                return `Sort by ${!selectedSortingOption ? "Default mode" : selectedSortingOption.text}`;
               }}
               MenuProps={{
                 getContentAnchorEl: null,
@@ -275,7 +275,7 @@ function CRMMembershipsList() {
             >
               <MenuItem className="px-2" disabled key={"id"}>
                 <div className="w-100 d-flex align-items-center">
-                  <ListItemText primary="order by" className="text-left" />
+                  <ListItemText primary="Sort by" className="text-left" />
                 </div>
               </MenuItem>
               <MenuItem className="px-2">
@@ -381,7 +381,7 @@ function CRMMembershipsList() {
         </div>
         <div className="w-100 d-flex flex-wrap px-4 mt-1" style={{ marginTop: 24 }}>
           <div className="col-12 col-lg-6 mb-3 mb-lg-0 px-2">
-            <p style={{ fontWeight: 600 }}>Number of order</p>
+            <p style={{ fontWeight: 600 }}>Orders Count</p>
             <div
               style={{
                 border: "1px solid rgba(0, 0, 0, 0.23)",
@@ -412,7 +412,7 @@ function CRMMembershipsList() {
             </div>
           </div>
           <div className="col-12 col-lg-6 mb-3 mb-lg-0 px-2">
-            <p style={{ fontWeight: 600 }}>Rating</p>
+            <p style={{ fontWeight: 600 }}>Point</p>
             <div
               style={{
                 border: "1px solid rgba(0, 0, 0, 0.23)",
@@ -427,7 +427,7 @@ function CRMMembershipsList() {
                   value={pointCreditRange?.from || ""}
                   className="w-100 text-center"
                   type="number"
-                  placeholder="Minimum rating"
+                  placeholder="Minimum point"
                 />
               </div>
               <div className="px-3 d-flex justify-content-center align-items-center">To</div>
@@ -437,7 +437,7 @@ function CRMMembershipsList() {
                   value={pointCreditRange?.to || ""}
                   className="w-100 text-center"
                   type="number"
-                  placeholder="Maximum rating"
+                  placeholder="Maximum point"
                 />
               </div>
             </div>
@@ -445,7 +445,7 @@ function CRMMembershipsList() {
         </div>
         <div className="w-100 d-flex flex-wrap px-4 mt-4" style={{ marginTop: 24 }}>
           <div className="col-12 col-lg-6 mb-3 mb-lg-0 px-2 ltr_force">
-            <p style={{ fontWeight: 600 }}>The last order date</p>
+            <p style={{ fontWeight: 600 }}>Last order date</p>
             <div
               style={{
                 border: "1px solid rgba(0, 0, 0, 0.23)",

@@ -29,7 +29,7 @@ const FAQS = [
   {
     id: uniqueid(),
     question: "What is the Customer List?",
-    response: `You can«Customer list» See all your business customers' information. This information includes:«Customer Name, Customer Number, Rating, Gift Credit amount, wallet inventory,NPS, Tags, Customer Dating, Description, First Order Date, Last Order Date, Number of Orders, Average Purchase and sum» is. You can also make a new customer. Clicking on each customer we can assign a label to the customer.`,
+    response: `You can see all your customers' information in the "Customer List". This information including "Customer Name, Customer Number, Rating, Gift Credit amount, Wallet Inventory,NPS, Tags, The Account Creation Date, Description, First Order Date, Last Order Date, Number of Orders, Average Purchase, and Sum of Orders' Value". You can also make a new customer. Clicking on each customer we can assign a label to the customer.`,
   },
   {
     id: uniqueid(),
@@ -68,9 +68,8 @@ const FAQS = [
     response: (
       <div>
         <div>
-          You can automatically, in exchange for any event by the customers in
-          Interaction with business occurs, for customers points, gift credit and
-          SMS.
+          You can automatically, in exchange for any event by the customers in Interaction with business occurs, for
+          customers points, gift credit and SMS.
         </div>
         Automatic events include:
         <br />
@@ -86,12 +85,10 @@ const FAQS = [
         <br />
         - Introducing a new customer
         <br />
-        By clicking on any event you can determine that some time after an event
-        What is the dedicated to the customers who are specified in a distinct segmentation.
-        For example, you can specify after the customer who is categorized
-        «New customers» Located, registered the first order;
-        Be assigned to him as a gift for 5 days and to the customer through
-        Be notified SMS. Action Types: SMS- Gift credit- Rating- Cash
+        By clicking on any event you can determine that some time after an event What is the dedicated to the customers
+        who are specified in a distinct segmentation. For example, you can specify after the customer who is categorized
+        «New customers» Located, registered the first order; Be assigned to him as a gift for 5 days and to the customer
+        through Be notified SMS. Action Types: SMS- Gift credit- Rating- Cash
       </div>
     ),
   },

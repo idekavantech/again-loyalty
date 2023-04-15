@@ -160,7 +160,7 @@ function CRMSegmentsSetting() {
             </div>
           )}
           <div
-            className="faq-box position-relative text-right rtl mt-4 t-align-left"
+            className="faq-box position-relative text-left rtl mt-4 t-align-left"
             style={{
               overflowX: "hidden",
             }}
@@ -253,7 +253,7 @@ function CRMSegmentsSetting() {
                         color="primary"
                         checked={crmSegmentDetails?.levels?.length === _crmLevels?.length}
                       />
-                      <ListItemText primary="Select all levels" className="text-right" />
+                      <ListItemText primary="Select all levels" className="text-left" />
                     </div>
                   </MenuItem>
                   {_crmLevels?.map((label) => {
@@ -272,7 +272,7 @@ function CRMSegmentsSetting() {
                             color="primary"
                             checked={crmSegmentDetails?.levels?.includes(label?.id)}
                           />
-                          <ListItemText primary={label?.title} className="text-right" />
+                          <ListItemText primary={label?.title} className="text-left" />
                         </div>
                       </MenuItem>
                     );
@@ -342,7 +342,7 @@ function CRMSegmentsSetting() {
                         color="primary"
                         checked={crmSegmentDetails?.data?.satisfaction?.length === satisfactionChoices?.length}
                       />
-                      <ListItemText primary="Select all levels of satisfaction" className="text-right" />
+                      <ListItemText primary="Select all levels of satisfaction" className="text-left" />
                     </div>
                   </MenuItem>
                   {satisfactionChoices?.map((label) => {
@@ -367,7 +367,7 @@ function CRMSegmentsSetting() {
                                 : false
                             }
                           />
-                          <ListItemText primary={label?.title} className="text-right" />
+                          <ListItemText primary={label?.title} className="text-left" />
                         </div>
                       </MenuItem>
                     );
@@ -427,7 +427,7 @@ function CRMSegmentsSetting() {
                         color="primary"
                         checked={crmSegmentDetails?.labels?.length === _crmLabels?.length}
                       />
-                      <ListItemText primary="Select all tags" className="text-right" />
+                      <ListItemText primary="Select all tags" className="text-left" />
                     </div>
                   </MenuItem>
                   {_crmLabels?.map((label) => {
@@ -446,7 +446,7 @@ function CRMSegmentsSetting() {
                             color="primary"
                             checked={crmSegmentDetails?.labels?.includes(label?.id)}
                           />
-                          <ListItemText primary={label?.title} className="text-right" />
+                          <ListItemText primary={label?.title} className="text-left" />
                         </div>
                       </MenuItem>
                     );
@@ -503,7 +503,7 @@ function CRMSegmentsSetting() {
                         color="primary"
                         checked={segmentMediums?.length === selectableMediums?.length}
                       />
-                      <ListItemText primary="Select all login links" className="text-right" />
+                      <ListItemText primary="Select all login links" className="text-left" />
                     </div>
                   </MenuItem>
                   {selectableMediums?.map((medium) => {
@@ -524,7 +524,7 @@ function CRMSegmentsSetting() {
                             color="primary"
                             checked={segmentMediums?.includes(medium)}
                           />
-                          <ListItemText primary={medium} className="text-right" />
+                          <ListItemText primary={medium} className="text-left" />
                         </div>
                       </MenuItem>
                     );
@@ -765,7 +765,7 @@ function CRMSegmentsSetting() {
                               }
                               checked={crmSegmentDetails?.variations?.length === variationList?.length}
                             />
-                            <ListItemText primary={"Select all products"} className="text-right" />
+                            <ListItemText primary={"Select all products"} className="text-left" />
                           </div>
                         </MenuItem>
                         {variationList?.map((product) => {
@@ -787,7 +787,7 @@ function CRMSegmentsSetting() {
                                       : false
                                   }
                                 />
-                                <ListItemText primary={product.title} className="text-right" />
+                                <ListItemText primary={product.title} className="text-left" />
                               </div>
                             </MenuItem>
                           );
@@ -874,14 +874,14 @@ function CRMSegmentsSetting() {
                     >
                       <MenuItem className="px-2" key={UNSET} value={UNSET}>
                         <div className="w-100 d-flex align-items-center">
-                          <ListItemText primary="All customers" className="text-right" />
+                          <ListItemText primary="All customers" className="text-left" />
                         </div>
                       </MenuItem>
                       {segmentsEventDateType?.map((dateType) => {
                         return (
                           <MenuItem className="px-2" key={dateType.type} value={dateType.type}>
                             <div className="w-100 d-flex align-items-center">
-                              <ListItemText primary={dateType.description} className="text-right" />
+                              <ListItemText primary={dateType.description} className="text-left" />
                             </div>
                           </MenuItem>
                         );
@@ -945,7 +945,7 @@ function CRMSegmentsSetting() {
                               return (
                                 <MenuItem className="px-2" key={dateItem.type} value={dateItem.type}>
                                   <div className="w-100 d-flex align-items-center">
-                                    <ListItemText primary={dateItem.description} className="text-right" />
+                                    <ListItemText primary={dateItem.description} className="text-left" />
                                   </div>
                                 </MenuItem>
                               );

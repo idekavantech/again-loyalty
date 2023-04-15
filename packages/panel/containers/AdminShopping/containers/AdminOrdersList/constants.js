@@ -413,7 +413,7 @@ export const customerListConstant = [
   },
   {
     id: 2,
-    label: "customer number",
+    label: "Phone Number",
     align: "right",
     minWidth: 100,
     width: 160,
@@ -422,14 +422,14 @@ export const customerListConstant = [
   {
     id: 3,
     label: "Rating",
-    align: "right",
+    align: "center",
     minWidth: 100,
     width: 160,
     maxWidth: 170,
   },
   {
     id: 4,
-    label: "gift credit",
+    label: "Gift Credit",
     align: "right",
     minWidth: 100,
     width: 160,

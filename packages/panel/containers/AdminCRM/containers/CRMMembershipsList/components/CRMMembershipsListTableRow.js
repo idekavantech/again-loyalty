@@ -54,7 +54,7 @@ export default function CRMMembershipsListTable({
       <TableCell className="text-nowrap" align="left" style={{ fontSize: "16px", fontWeight: 600 }}>
         {englishNumberToPersianNumber(CRMMembership?.user?.phone_zero_starts)}
       </TableCell>
-      <TableCell className="text-nowrap" align="left" style={{ fontSize: "16px", fontWeight: 600 }}>
+      <TableCell className="text-nowrap" align="center" style={{ fontSize: "16px", fontWeight: 600 }}>
         {englishNumberToPersianNumber(CRMMembership?.point_credit)}
       </TableCell>
       <TableCell className="text-nowrap" align="left" style={{ fontSize: "16px", fontWeight: 600 }}>
