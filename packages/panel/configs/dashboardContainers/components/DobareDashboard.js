@@ -178,7 +178,7 @@ function DobareDashboard() {
             position: "fixed",
             backgroundColor: theme.palette.primary.main,
             color: "white",
-            left: 30,
+            right: 30,
             bottom: 30,
             padding: "1.13rem 1rem",
             zIndex: 100,
