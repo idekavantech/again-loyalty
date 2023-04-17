@@ -19,9 +19,6 @@ import {
 import { hexToRGBA } from "./helpers/hexToRGBA";
 const baseTheme = (business, isAdminPanel) => ({
   typography: {
-    fontFamily: isAdminPanel
-      ? "dana"
-      : business?.theme_config?.font?.url || "IranSans",
     button: {
       fontSize: "14px",
       fontWeight: 700,
@@ -29,6 +26,7 @@ const baseTheme = (business, isAdminPanel) => ({
     htmlFontSize: 16,
   },
 });
+
 const lightTheme = (business, isAdminPanel) =>
   createTheme({
     ...baseTheme(business, isAdminPanel),
@@ -131,6 +129,8 @@ const lightTheme = (business, isAdminPanel) =>
       MuiMenuItem: {
         root: {
           fontSize: "unset",
+          direction:"ltr",
+          textAlign:"left"
         },
       },
       MuiInputBase: {
