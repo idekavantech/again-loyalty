@@ -47,7 +47,7 @@ function FlatShoppingProductList1({ pluginData, orders, urlPrefix, ...props }) {
             }}
             id="finalizeOrderButton"
           >
-            تکمیل خرید (
+            Complete the purchase(
             {englishNumberToPersianNumber(orders?.reduce(reducerFunc, 0))})
           </Button>
         </div>

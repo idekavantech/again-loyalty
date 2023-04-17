@@ -73,88 +73,88 @@ const $ = `/images/$.svg`;
 
 const deliveryTypes = {
     send: {
-        label: "ارسال",
+        label: "submit",
         icon: `/images/bike.svg`,
     },
     onSpot: {
-        label: "تحویل حضوری",
+        label: "In-person delivery",
         icon: `/images/man.svg`,
     },
     serve: {
-        label: "سرو در محل",
+        label: "Cedar in place",
         icon: `/images/serve.svg`,
     },
     onWebSite: {
-        label: "دریافت مجازی",
+        label: "Virtual receipt",
         icon: `/images/phonelink.svg`,
     },
 };
 
 export const orderStatus = {
     [NEW_ORDER_STATUS_CART]: {
-        label: "درحال‌بررسی",
+        label: "Pending",
         iconProgress: "0%",
         iconColor: process.env.NEXT_PUBLIC_ADMIN_THEME_COLOR,
         backgroundColor:
             "linear-gradient(0deg, rgba(0, 80, 255, 0.16), rgba(0, 80, 255, 0.16)), #FFFFFF",
     },
     [NEW_ORDER_STATUS_OPEN_TAB]: {
-        label: "باز",
+        label: "Open",
         iconProgress: "0%",
         iconColor: process.env.NEXT_PUBLIC_ADMIN_THEME_COLOR,
         backgroundColor:
             "linear-gradient(0deg, rgba(0, 80, 255, 0.16), rgba(0, 80, 255, 0.16)), #FFFFFF",
     },
     [NEW_ORDER_STATUS_VOID]: {
-        label: "لغو با برگشت به انبار",
+        label: "Cancelled by returning to Anbar",
         iconProgress: "50%",
         iconColor: strawberryII,
         backgroundColor: "rgba(152, 169, 177, 0.16)",
     },
     [NEW_ORDER_STATUS_COMP]: {
-        label: "لغو بدون برگشت به انبار",
+        label: "Cancellation without returning to the warehouse",
         iconProgress: "100%",
         iconColor: strawberryII,
         backgroundColor: "rgba(152, 169, 177, 0.16)",
     },
     [NEW_ORDER_STATUS_NEW]: {
-        label: "جدید",
+        label: "New",
         iconProgress: "100%",
         iconColor: process.env.NEXT_PUBLIC_ADMIN_THEME_COLOR,
         backgroundColor: "rgba(152, 169, 177, 0.16)",
     },
     [NEW_ORDER_STATUS_ACCEPTED]: {
-        label: "تایید شده",
+        label: "Accepted",
         iconProgress: "100%",
         iconColor: jungleI,
         backgroundColor: "rgba(152, 169, 177, 0.16)",
     },
     [NEW_ORDER_STATUS_READY_TO_DELIVER]: {
-        label: "آماده ارسال",
+        label: "Ready to send",
         iconProgress: "100%",
         iconColor: jungleI,
         backgroundColor: "rgba(152, 169, 177, 0.16)",
     },
     [NEW_ORDER_STATUS_COURIER_ASSIGNED]: {
-        label: "پیک‌دار",
+        label: "Packaged",
         iconProgress: "100%",
         iconColor: jungleI,
         backgroundColor: "rgba(152, 169, 177, 0.16)",
     },
     [NEW_ORDER_STATUS_COURIER_PICKED_UP]: {
-        label: "تحویل پیک",
+        label: "Courier delivery",
         iconProgress: "100%",
         iconColor: jungleI,
         backgroundColor: "rgba(152, 169, 177, 0.16)",
     },
     [NEW_ORDER_STATUS_DELIVERED]: {
-        label: "ارسال‌شده",
+        label: "Posted",
         iconProgress: "100%",
         iconColor: jungleI,
         backgroundColor: "rgba(152, 169, 177, 0.16)",
     },
     [NEW_ORDER_STATUS_COMPLETED]: {
-        label: "بسته",
+        label: "Closed",
         iconProgress: "100%",
         iconColor: jungleI,
         backgroundColor: "rgba(152, 169, 177, 0.16)",
@@ -264,7 +264,7 @@ export function Orders({
                                     minWidth: "unset",
                                     padding: "0 20px",
                                 }}
-                                label="همه"
+                                label="All"
                                 onClick={() => setOrderStatusFilter(null)}
                             />
                             <Tab
@@ -274,7 +274,7 @@ export function Orders({
                                     minWidth: "unset",
                                     padding: "0 20px",
                                 }}
-                                label={tabLabel("درحال بررسی", submittedOrders, value === "2")}
+                                label={tabLabel("Pending", submittedOrders, value === "2")}
                                 onClick={() => setOrderStatusFilter(NEW_ORDER_STATUS_NEW)}
                             />
                             <Tab
@@ -284,7 +284,7 @@ export function Orders({
                                     minWidth: "unset",
                                     padding: "0 20px",
                                 }}
-                                label={tabLabel("تایید شده", doingOrders, value === "3")}
+                                label={tabLabel("Accepted", doingOrders, value === "3")}
                                 onClick={() => setOrderStatusFilter(NEW_ORDER_STATUS_ACCEPTED)}
                             />
                             <Tab
@@ -294,7 +294,7 @@ export function Orders({
                                     minWidth: "unset",
                                     padding: "0 20px",
                                 }}
-                                label={tabLabel("لغو شده", canceledOrders, value === "5")}
+                                label={tabLabel("Canceled", canceledOrders, value === "5")}
                                 onClick={() => setOrderStatusFilter(NEW_ORDER_STATUS_COMP)}
                             />
                         </Tabs>
@@ -319,7 +319,7 @@ export function Orders({
                                                 fontWeight: 500,
                                             }}
                                         >
-                                            تاریخ
+                                            Date
                                         </TableCell>
                                         {isSuper ? (
                                             <TableCell
@@ -331,7 +331,7 @@ export function Orders({
                                                     fontWeight: 500,
                                                 }}
                                             >
-                                                شعبه
+                                                Branch
                                             </TableCell>
                                         ) : null}
                                         <TableCell
@@ -343,7 +343,7 @@ export function Orders({
                                                 fontWeight: 500,
                                             }}
                                         >
-                                            جمع کل
+                                            total
                                         </TableCell>
                                         <TableCell
                                             size="medium"
@@ -354,7 +354,7 @@ export function Orders({
                                                 fontWeight: 500,
                                             }}
                                         >
-                                            پرداخت
+                                            the payment
                                         </TableCell>
                                         <TableCell
                                             size="medium"
@@ -365,7 +365,7 @@ export function Orders({
                                                 fontWeight: 500,
                                             }}
                                         >
-                                            تعداد آیتم
+                                            The number of items
                                         </TableCell>
                                         <TableCell
                                             size="medium"
@@ -376,7 +376,7 @@ export function Orders({
                                                 fontWeight: 500,
                                             }}
                                         >
-                                            روش ارسال
+                                            Method of sending
                                         </TableCell>
                                         <TableCell
                                             size="medium"
@@ -387,7 +387,7 @@ export function Orders({
                                                 fontWeight: 500,
                                             }}
                                         >
-                                            وضعیت سفارش
+                                            Order status
                                         </TableCell>
                                     </TableRow>
                                 </TableHead>
@@ -501,7 +501,7 @@ export function Orders({
                                                                 className="d-flex mt-1 align-items-center pdf-no-style"
                                                             >
                                                                 <div style={{fontSize: 12, color: smoke}}>
-                                                                    در محل
+                                                                    in place
                                                                 </div>
                                                             </div>
                                                         ) : (
@@ -635,27 +635,27 @@ export function Orders({
                                 {orderStatusFilter === null ? (
                                     <div>
                                         <h1 style={{fontSize: 18, fontWeight: 700}}>
-                                            هنوز سفارشی ثبت نشده.
+                                            Not registered yet customized.
                                         </h1>
                                     </div>
                                 ) : (
                                     <div style={{fontSize: 18, fontWeight: 700}}>
-                                        هیج سفارشِ {orderStatus[orderStatusFilter].label}‌ای موجود
-                                        نیست.
+                                        Any order{orderStatus[orderStatusFilter].label}‌O being
+                                        is not.
                                     </div>
                                 )}
                             </div>
                         )}
                     </TableContainer>
                     <TablePagination
-                        labelRowsPerPage={!minWidth768 ? "تعداد ردیف در هر صفحه" : ""}
+                        labelRowsPerPage={!minWidth768 ? "The number of rows per page" : ""}
                         labelDisplayedRows={({from, to, count}) =>
                             `${englishNumberToPersianNumber(
                                 from
-                            )} - ${englishNumberToPersianNumber(to)} از ${
+                            )} - ${englishNumberToPersianNumber(to)} From${
                                 count !== -1
                                     ? englishNumberToPersianNumber(count)
-                                    : `بیشتر از  ${englishNumberToPersianNumber(to)}`
+                                    : `more than${englishNumberToPersianNumber(to)}`
                             }`
                         }
                         rowsPerPageOptions={[5, 10, 25]}
@@ -718,7 +718,7 @@ export function Orders({
                                 minWidth: "unset",
                                 padding: "0 20px",
                             }}
-                            label="همه"
+                            label="All"
                             onClick={() => setOrderStatusFilter(null)}
                         />
                         <Tab
@@ -728,7 +728,7 @@ export function Orders({
                                 minWidth: "unset",
                                 padding: "0 20px",
                             }}
-                            label={tabLabel("درحال بررسی", submittedOrders, value === "2")}
+                            label={tabLabel("Pending", submittedOrders, value === "2")}
                             onClick={() => setOrderStatusFilter(NEW_ORDER_STATUS_NEW)}
                         />
                         <Tab
@@ -738,7 +738,7 @@ export function Orders({
                                 minWidth: "unset",
                                 padding: "0 20px",
                             }}
-                            label={tabLabel("تایید شده", doingOrders, value === "3")}
+                            label={tabLabel("Accepted", doingOrders, value === "3")}
                             onClick={() => setOrderStatusFilter(NEW_ORDER_STATUS_ACCEPTED)}
                         />
                         <Tab
@@ -748,7 +748,7 @@ export function Orders({
                                 minWidth: "unset",
                                 padding: "0 20px",
                             }}
-                            label={tabLabel("لغو شده", canceledOrders, value === "5")}
+                            label={tabLabel("Canceled", canceledOrders, value === "5")}
                             onClick={() => setOrderStatusFilter(NEW_ORDER_STATUS_COMP)}
                         />
                     </Tabs>
@@ -794,7 +794,7 @@ export function Orders({
                                         <div
                                             className="d-flex justify-content-between align-items-center pt-2 pb-1 px-3">
                                             <div style={{fontSize: 13, color: pollution}}>
-                                                تاریخ:
+                                                Date:
                                             </div>
                                             <div
                                                 style={{
@@ -812,7 +812,7 @@ export function Orders({
                                         </div>
                                         <div className="d-flex justify-content-between align-items-center py-1 px-3">
                                             <div style={{fontSize: 13, color: pollution}}>
-                                                جمع کل:
+                                                total:
                                             </div>
                                             <div
                                                 style={{
@@ -832,7 +832,7 @@ export function Orders({
                                         </div>
                                         <div className="d-flex justify-content-between align-items-center py-1 px-3">
                                             <div style={{fontSize: 13, color: pollution}}>
-                                                وضعیت پرداخت:
+                                                Payment status:
                                             </div>
                                             {isPaidPriceOnLocation ||
                                             isPaidPriceOnLocation === null ? (
@@ -846,7 +846,7 @@ export function Orders({
                                                     className="d-flex mt-1 align-items-center pdf-no-style"
                                                 >
                                                     <div style={{fontSize: 12, color: smoke}}>
-                                                        در محل
+                                                        in place
                                                     </div>
                                                 </div>
                                             ) : (
@@ -877,7 +877,7 @@ export function Orders({
                                         </div>
                                         <div className="d-flex justify-content-between align-items-center py-1 px-3">
                                             <div style={{fontSize: 13, color: pollution}}>
-                                                تعداد آیتم:
+                                                The number of items:
                                             </div>
                                             <div
                                                 style={{
@@ -894,7 +894,7 @@ export function Orders({
                                         <div
                                             className="d-flex justify-content-between align-items-center pt-1 pb-2  px-3">
                                             <div style={{fontSize: 13, color: pollution}}>
-                                                روش ارسال:
+                                                Method of sending:
                                             </div>
                                             <div
                                                 style={{
@@ -927,7 +927,7 @@ export function Orders({
                                         />
                                         <div className="d-flex justify-content-between align-items-center py-2 px-3">
                                             <div style={{fontSize: 13, color: pollution}}>
-                                                وضعیت سفارش:
+                                                Order status:
                                             </div>
                                             <div
                                                 style={{
@@ -977,13 +977,13 @@ export function Orders({
                             {orderStatusFilter === null ? (
                                 <div>
                                     <h1 style={{fontSize: 18, fontWeight: 700}}>
-                                        هنوز سفارشی ثبت نشده.
+                                        Not registered yet customized.
                                     </h1>
                                 </div>
                             ) : (
                                 <div style={{fontSize: 18, fontWeight: 700}}>
-                                    هیج سفارشِ {orderStatus[orderStatusFilter].label}‌ای موجود
-                                    نیست.
+                                    Any order{orderStatus[orderStatusFilter].label}‌O being
+                                    is not.
                                 </div>
                             )}
                         </div>

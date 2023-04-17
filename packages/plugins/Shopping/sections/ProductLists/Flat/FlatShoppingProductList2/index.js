@@ -274,7 +274,7 @@ function FlatShoppingProductList2({
         >
           <div className="p-2">
             <div className="d-flex mb-2 align-items-center u-fontWeightBold">
-              آیتم افزوده شده سبد خرید
+              The added item of the shopping cart
               <ShoppingCartIcon fontSize="small" className="mr-1" />
             </div>
             {orders &&
@@ -297,7 +297,7 @@ function FlatShoppingProductList2({
                 className="flex-1"
                 onClick={() => setOpen(false)}
               >
-                بستن
+                to close
               </Button>
               <Button
                 variant="contained"
@@ -308,7 +308,7 @@ function FlatShoppingProductList2({
                   router.push(`${urlPrefix}/checkout/cart`);
                 }}
               >
-                دیدن سبد خرید
+                See shopping cart
               </Button>
             </div>
           </div>
@@ -339,7 +339,7 @@ function FlatShoppingProductList2({
               id="finalizeOrderButton"
               style={{ fontSize: 16, fontWeight: 500 }}
             >
-              تکمیل خرید
+              Complete the purchase
               <span className="mr-1">
                 ({englishNumberToPersianNumber(orders?.reduce(reducerFunc, 0))})
               </span>

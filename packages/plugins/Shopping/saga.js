@@ -344,10 +344,10 @@ export function* getShoppingOrderInvoiceSaga(action) {
     if (action.data.discount_code) {
       if (meta && meta.status_code >= 200 && meta.status_code <= 300) {
         yield put(orderSubmitted(data));
-        yield put(setDiscountError("کد تخفیف با موفقیت اعمال شد."));
+        yield put(setDiscountError("The discount code was successfully applied."));
       }
       if (meta && meta.status_code === 404) {
-        yield put(setDiscountError("کد وارد شده نادرست است."));
+        yield put(setDiscountError("The code entered is incorrect.."));
         const dto = sessionStorage.getItem(SHOPPING_ORDER_INVOICE_DTO)
           ? JSON.parse(sessionStorage.getItem(SHOPPING_ORDER_INVOICE_DTO))
           : {};
@@ -459,7 +459,7 @@ export function* patchOrderSaga(action) {
     );
 
     if (status >= 400)
-      yield put(setSnackBarMessage("خطایی رخ داده است!", "fail"));
+      yield put(setSnackBarMessage("An error has occurred!", "fail"));
     if (data) {
       const prevData = JSON.parse(
         localStorage.getItem(ORDER_SUBMITTER_STORAGE)

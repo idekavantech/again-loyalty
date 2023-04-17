@@ -58,7 +58,7 @@ function TreeCategoriesList({ hierarchy, categoryItemLink }) {
           {isMainPage ? (
             <Link href={categoryItemLink() || "/"}>
               <Chip
-                label="همه"
+                label="All"
                 key="c-all"
                 className="mx-1"
                 onClick={(e) => {

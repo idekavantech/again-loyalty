@@ -146,7 +146,7 @@ function ProductModal({
                                   : "",
                             }}
                           >
-                            شرح محصول
+                            Product description
                           </div>
                         ) : null}
                         {infoTable && infoTable.length ? (
@@ -160,7 +160,7 @@ function ProductModal({
                                   : "",
                             }}
                           >
-                            مشخصات فنی
+                            Technical Specifications
                           </div>
                         ) : null}
                         {product.modifier_sets?.length ? (
@@ -174,7 +174,7 @@ function ProductModal({
                                   : "",
                             }}
                           >
-                            افزودنی‌ها
+                            Additives
                           </div>
                         ) : null}
                       </div>
@@ -240,7 +240,7 @@ function ProductModal({
                                 <div className="p-3 h-100 u-background-melo-grey-remove u-border-radius-4">
                                   {row.price || ""}
                                   <span className="mx-1">
-                                    {row.price ? "تومان" : "رایگان"}
+                                    {row.price ? "Toman" : "Free"}
                                   </span>
                                 </div>
                               </div>
@@ -297,7 +297,7 @@ function ProductModal({
                                   : "",
                             }}
                           >
-                            شرح محصول
+                            Product description
                           </div>
                         ) : null}
                         {infoTable && infoTable.length ? (
@@ -311,7 +311,7 @@ function ProductModal({
                                   : "",
                             }}
                           >
-                            مشخصات فنی
+                            Technical Specifications
                           </div>
                         ) : null}
                         {product.modifier_sets?.length ? (
@@ -325,7 +325,7 @@ function ProductModal({
                                   : "",
                             }}
                           >
-                            افزودنی‌ها
+                            Additives
                           </div>
                         ) : null}
                       </div>
@@ -398,7 +398,7 @@ function ProductModal({
                                 >
                                   {row.price || ""}
                                   <span className="mx-1">
-                                    {row.price ? "تومان" : "رایگان"}
+                                    {row.price ? "Toman" : "Free"}
                                   </span>
                                 </div>
                               </div>

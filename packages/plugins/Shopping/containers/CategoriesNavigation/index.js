@@ -175,7 +175,7 @@ function CategoriesNavigation({
                 });
                 setSearchValue(value);
               }}
-              placeholder="جستجوی محصول"
+              placeholder="Product search"
               InputProps={{
                 className: "pr-5",
                 startAdornment: (

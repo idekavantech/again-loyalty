@@ -110,7 +110,7 @@ export function ProductsSearch({
                   {loading ? (
                     <LoadingIndicator />
                   ) : unifiedArray.length === 0 && !isInputLengthZero ? (
-                    <div className="container p-2">نتیجه‌‌ای یافت نشد.</div>
+                    <div className="container p-2">There was no results.</div>
                   ) : (
                     unifiedArray.map((product) => (
                       <ProductRow product={product} key={product.id} />

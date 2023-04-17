@@ -60,7 +60,7 @@ const VariantCard = ({
                 }}
                 className="overflow-hidden object-fit-cover"
                 src={variant?.image_url || dealImage}
-                alt="عکس محصول"
+                alt="Product photo"
               />
             </div>
           ) : null}
@@ -189,7 +189,7 @@ const VariantCard = ({
                 padding: "4px 12px",
               }}
             >
-              اتمام موجودی
+              Completion of inventory
             </Button>
           )
         ) : null}

@@ -165,7 +165,7 @@ export function HierarchyCategory({
   }
   items = items.filter((_item) => _item.name);
   if (items.length) {
-    items.unshift({ name: "همه" });
+    items.unshift({ name: "All" });
   }
 
   return (
@@ -207,7 +207,7 @@ export function HierarchyCategory({
           <div className="mb-5 container-shadow u-fontWeightBold u-fontLarge-r u-border-radius-8 mt-1 mx-3">
             {item.name && (
               <div className="px-4 py-3 u-text-black text-right">
-                زیرمجموعه‌های {item.name}
+                Subsidiaries{item.name}
               </div>
             )}
             <div className="d-flex flex-wrap justify-content-start">
@@ -252,7 +252,7 @@ export function HierarchyCategory({
                         {menuItem && menuItem.name}
                       </div>
                       <div className="d-flex u-text-black align-items-center justify-content-center mt-2">
-                        محصولات
+                        Products
                         <Icon
                           icon={CHEVRON}
                           color={theme.palette.text.primary}

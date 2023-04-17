@@ -123,7 +123,7 @@ export default function NumberedModifier({
           </div>
         </div>
       ) : (
-        <Tooltip placement="top" title="سفارش نمی‌پذیریم.">
+        <Tooltip placement="top" title="We do not accept the order.">
           <div className="d-flex">
             <div className="d-flex align-items-center p-2">
               <Button
@@ -263,7 +263,7 @@ export default function NumberedModifier({
             />{" "}
           </div>
         ) : (
-          "رایگان"
+          "Free"
         )}
       </div>
     </div>

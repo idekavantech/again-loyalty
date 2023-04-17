@@ -51,24 +51,24 @@ function OrderingPopup({ workingHours, pluginData, themeConfig }) {
     POPUP_TYPE === NO_CONDITION_POP_UP ? POPUP_CUSTOM_TEXT : null;
   const closingTypesMessages = useMemo(() => {
     return {
-      [CLOSING_TYPE_MANUAL]: "موقتا قادر به دریافت سفارش نیستیم.",
+      [CLOSING_TYPE_MANUAL]: "Temporarily unable to receive an order.",
       [CLOSING_TYPE_AUTOMATIC]:
         workingDate &&
-        `خارج از ساعت کاری هستیم. شروع سفارش‌گیری از ${
+        `Are out of work hours. Start ordering from${
           workingDate.dayName
-        } ساعت ${englishNumberToPersianNumber(workingDate.openingTime)}`,
+        } the watch${englishNumberToPersianNumber(workingDate.openingTime)}`,
       [CLOSING_TYPE_HOUR]:
-        "حداکثر از یک ساعت دیگر قادر به دریافت سفارش خواهیم بود.",
+        "We will be able to get an order from a maximum of one more hour.",
     };
   }, [workingDate, overrideMessage]);
   const PREORDER_TYPE_MESSAGE = useMemo(
     () =>
       workingDate &&
-      ` درحال حاضر خارج از ساعت کاری هستیم. در صورت ثبت سفارش،  ${
+      ` Are already out of work hours. In case of order registration,${
         workingDate.dayName
-      } ساعت ${englishNumberToPersianNumber(
+      } the watch${englishNumberToPersianNumber(
         workingDate.openingTime
-      )} پردازش می‌شود.`,
+      )} Processed.`,
     [workingDate]
   );
 
@@ -112,7 +112,7 @@ function OrderingPopup({ workingHours, pluginData, themeConfig }) {
       </DialogContent>
       <DialogActions>
         <Button onClick={onClose} color="primary">
-          تایید
+          Confirm
         </Button>
       </DialogActions>
     </Dialog>

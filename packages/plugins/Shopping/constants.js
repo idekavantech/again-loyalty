@@ -62,61 +62,61 @@ export const NEW_ORDER_STATUS_COMPLETED = 100;
 
 export const orderStatus = {
   [NEW_ORDER_STATUS_CART]: {
-    label: "درحال‌بررسی",
+    label: "Pending",
     progress: "0%",
     color: process.env.NEXT_PUBLIC_ADMIN_THEME_COLOR,
     backgroundColor:
       "linear-gradient(0deg, rgba(0, 80, 255, 0.16), rgba(0, 80, 255, 0.16)), #FFFFFF",
   },
   [NEW_ORDER_STATUS_OPEN_TAB]: {
-    label: "باز",
+    label: "Open",
     progress: "0%",
     color: process.env.NEXT_PUBLIC_ADMIN_THEME_COLOR,
     backgroundColor:
       "linear-gradient(0deg, rgba(0, 80, 255, 0.16), rgba(0, 80, 255, 0.16)), #FFFFFF",
   },
   [NEW_ORDER_STATUS_VOID]: {
-    label: "لغو با برگشت به انبار",
+    label: "Cancelled by returning to Anbar",
     progress: "50%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   [NEW_ORDER_STATUS_COMP]: {
-    label: "لغو بدون برگشت به انبار",
+    label: "Cancellation without returning to the warehouse",
     progress: "100%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   [NEW_ORDER_STATUS_NEW]: {
-    label: "جدید",
+    label: "New",
     progress: "100%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   [NEW_ORDER_STATUS_ACCEPTED]: {
-    label: "تایید شده",
+    label: "Accepted",
     progress: "100%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   [NEW_ORDER_STATUS_READY_TO_DELIVER]: {
-    label: "آماده ارسال",
+    label: "Ready to send",
     progress: "100%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   [NEW_ORDER_STATUS_COURIER_ASSIGNED]: {
-    label: "پیک‌دار",
+    label: "Packaged",
     progress: "100%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   [NEW_ORDER_STATUS_COURIER_PICKED_UP]: {
-    label: "تحویل پیک",
+    label: "Courier delivery",
     progress: "100%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   [NEW_ORDER_STATUS_DELIVERED]: {
-    label: "ارسال‌شده",
+    label: "Posted",
     progress: "100%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   [NEW_ORDER_STATUS_COMPLETED]: {
-    label: "بسته",
+    label: "Closed",
     progress: "100%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
@@ -124,122 +124,122 @@ export const orderStatus = {
 
 export const messageText = {
   [NEW_ORDER_STATUS_CART]: {
-    label: "سفارش شما در حال بررسی است.",
+    label: "Your order is being reviewed..",
     progress: "0%",
     color: process.env.NEXT_PUBLIC_ADMIN_THEME_COLOR,
     backgroundColor:
       "linear-gradient(0deg, rgba(0, 80, 255, 0.16), rgba(0, 80, 255, 0.16)), #FFFFFF",
   },
   [NEW_ORDER_STATUS_OPEN_TAB]: {
-    label: "سفارش شما در تب باز قرار گرفته است.",
+    label: "Your order is in the open fever.",
     progress: "0%",
     color: process.env.NEXT_PUBLIC_ADMIN_THEME_COLOR,
     backgroundColor:
       "linear-gradient(0deg, rgba(0, 80, 255, 0.16), rgba(0, 80, 255, 0.16)), #FFFFFF",
   },
   [NEW_ORDER_STATUS_VOID]: {
-    label: "سفارش شما لغو شده و به انبار عودت داده شده است.",
+    label: "Your order has been canceled and has been refunded to the warehouse.",
     progress: "50%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   [NEW_ORDER_STATUS_COMP]: {
-    label: "سفارش شما لغو شده است.",
+    label: "Your order has been canceled.",
     progress: "100%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   [NEW_ORDER_STATUS_NEW]: {
-    label: "سفارش شما در حالت جدید قرار گرفته است.",
+    label: "Your order is in the new mode.",
     progress: "100%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   [NEW_ORDER_STATUS_ACCEPTED]: {
-    label: "سفارش شما تایید شده است.",
+    label: "Your order has been approved..",
     progress: "100%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   [NEW_ORDER_STATUS_READY_TO_DELIVER]: {
-    label: "سفارش شما آماده ارسال میباشد.",
+    label: "Your order is ready to send.",
     progress: "100%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   [NEW_ORDER_STATUS_COURIER_ASSIGNED]: {
-    label: "پیک به سفارش شما تخصیص داده شده است.",
+    label: "The courier has been assigned to your order.",
     progress: "100%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   [NEW_ORDER_STATUS_COURIER_PICKED_UP]: {
-    label: "سفارش ما به پیک تحویل داده شده است.",
+    label: "Our order has been delivered to the courier.",
     progress: "100%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   [NEW_ORDER_STATUS_DELIVERED]: {
-    label: "سفارش شما ارسال شده است.",
+    label: "Your order has been sent.",
     progress: "100%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   [NEW_ORDER_STATUS_COMPLETED]: {
-    label: "سفارش شما در حالت بسته قرار گرفته است.",
+    label: "Your order is in the closed mode.",
     progress: "100%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
 };
 export const subMessageText = {
   [NEW_ORDER_STATUS_CART]: {
-    label: "سفارش شما در حال بررسی است.",
+    label: "Your order is being reviewed..",
     progress: "0%",
     color: process.env.NEXT_PUBLIC_ADMIN_THEME_COLOR,
     backgroundColor:
       "linear-gradient(0deg, rgba(0, 80, 255, 0.16), rgba(0, 80, 255, 0.16)), #FFFFFF",
   },
   [NEW_ORDER_STATUS_OPEN_TAB]: {
-    label: "سفارش شما در تب باز قرار گرفته است.",
+    label: "Your order is in the open fever.",
     progress: "0%",
     color: process.env.NEXT_PUBLIC_ADMIN_THEME_COLOR,
     backgroundColor:
       "linear-gradient(0deg, rgba(0, 80, 255, 0.16), rgba(0, 80, 255, 0.16)), #FFFFFF",
   },
   [NEW_ORDER_STATUS_VOID]: {
-    label: "سفارش شما لغو شده و به انبار عودت داده شده است.",
+    label: "Your order has been canceled and has been refunded to the warehouse.",
     progress: "50%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   [NEW_ORDER_STATUS_COMP]: {
-    label: "سفارش شما لغو شده است.",
+    label: "Your order has been canceled.",
     progress: "100%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   [NEW_ORDER_STATUS_NEW]: {
-    label: "سفارش شما در حالت جدید قرار گرفته است.",
+    label: "Your order is in the new mode.",
     progress: "100%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   [NEW_ORDER_STATUS_ACCEPTED]: {
-    label: "سفارش شما تایید شده است.",
+    label: "Your order has been approved..",
     progress: "100%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   [NEW_ORDER_STATUS_READY_TO_DELIVER]: {
-    label: "سفارش شما آماده ارسال میباشد.",
+    label: "Your order is ready to send.",
     progress: "100%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   [NEW_ORDER_STATUS_COURIER_ASSIGNED]: {
-    label: "پیک به سفارش شما تخصیص داده شده است.",
+    label: "The courier has been assigned to your order.",
     progress: "100%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   [NEW_ORDER_STATUS_COURIER_PICKED_UP]: {
-    label: "سفارش ما به پیک تحویل داده شده است.",
+    label: "Our order has been delivered to the courier.",
     progress: "100%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   [NEW_ORDER_STATUS_DELIVERED]: {
-    label: "سفارش شما ارسال شده است.",
+    label: "Your order has been sent.",
     progress: "100%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   [NEW_ORDER_STATUS_COMPLETED]: {
-    label: "سفارش شما در حالت بسته قرار گرفته است.",
+    label: "Your order is in the closed mode.",
     progress: "100%",
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
@@ -294,32 +294,32 @@ export const NATIONAL_ID_ADDRESS_DETAIL_FIELD = "national_id";
 export const CITY_ADDRESS_DETAIL_FIELD = "city";
 
 export const addressDetailsRequirementsFieldsLabels = {
-  [POSTAL_CODE_ADDRESS_DETAIL_FIELD]: "کدپستی",
-  [NUMBER_ADDRESS_DETAIL_FIELD]: "پلاک",
-  [UNIT_ADDRESS_DETAIL_FIELD]: "واحد",
-  [NATIONAL_ID_ADDRESS_DETAIL_FIELD]: "کدملی",
-  [CITY_ADDRESS_DETAIL_FIELD]: "شهر",
+  [POSTAL_CODE_ADDRESS_DETAIL_FIELD]: "Postal code",
+  [NUMBER_ADDRESS_DETAIL_FIELD]: "Plaque",
+  [UNIT_ADDRESS_DETAIL_FIELD]: "One",
+  [NATIONAL_ID_ADDRESS_DETAIL_FIELD]: "National Code",
+  [CITY_ADDRESS_DETAIL_FIELD]: "City",
 };
 export const addressDetailsRequirementsFieldsMaximumLength = {
   [POSTAL_CODE_ADDRESS_DETAIL_FIELD]: {
     max: 10,
-    textError: "کدپستی نمی‌تواند بیشتر از ۱۰ رقم باشد.",
+    textError: "Postcode cannot be more than 2 digits.",
   },
   [NUMBER_ADDRESS_DETAIL_FIELD]: {
     max: 5,
-    textError: "شماره پلاک نمی‌تواند بیشتر از ۵ رقم باشد.",
+    textError: "The license plate number cannot be more than 2 digits.",
   },
   [UNIT_ADDRESS_DETAIL_FIELD]: {
     max: 5,
-    textError: "شماره واحد نمی‌تواند بیشتر از ۵ رقم باشد.",
+    textError: "The unit number cannot be more than 2 digits.",
   },
   [NATIONAL_ID_ADDRESS_DETAIL_FIELD]: {
     max: 10,
-    textError: "کدملی نمی‌تواند بیشتر از ۱۰ رقم باشد.",
+    textError: "Code cannot be more than 2 digits.",
   },
   [CITY_ADDRESS_DETAIL_FIELD]: {
     max: 10,
-    textError: "شهر نمی‌تواند بیشتر از 10 حرف باشد.",
+    textError: "The city cannot be more than10 Word.",
   },
 };
 export const addressDetailsRequirementsFieldsClasses = {
@@ -351,15 +351,15 @@ export const DELIVERY_TYPE_CUSTOM = "custom";
 export const DELIVERY_TYPE_SCHEDULED = "scheduled";
 
 export const deliveryTypePersianNames = {
-  [DELIVERY_TYPE_FAST]: "سریع",
-  [DELIVERY_TYPE_CUSTOM]: "دستی",
-  [DELIVERY_TYPE_SCHEDULED]: "زمان‌بندی شده",
+  [DELIVERY_TYPE_FAST]: "Fast",
+  [DELIVERY_TYPE_CUSTOM]: "Manual",
+  [DELIVERY_TYPE_SCHEDULED]: "Scheduled",
 };
 
 export const timesTypes = {
-  [MINUTE]: "دقیقه",
-  [HOUR]: "ساعت",
-  [DAY]: "روز",
+  [MINUTE]: "Minutes",
+  [HOUR]: "the watch",
+  [DAY]: "Day",
 };
 
 export const PRICING_RATE_BY_WEIGHT = "rate_by_weight";
@@ -369,12 +369,12 @@ export const PRICING_RATE_FIXED = "fixed_price";
 
 export const ORDERING_POPUP_DEFAULT_TEXT = (
   nextDay
-) => `در حال حاضر خارج از ساعت کاری هستیم. شروع مجدد دریافت سفارش از
-${englishNumberToPersianNumber(nextDay?.dayName)} ساعت
+) => `We are currently out of work hours. Start Receive the order from
+${englishNumberToPersianNumber(nextDay?.dayName)} the watch
 ${englishNumberToPersianNumber(nextDay?.openingTime)}`;
 
-export const DELIVERY_PREORDER_ALERT_DEFAULT_TEXT = `اکنون در حال بروزرسانی سایت خود هستیم و امکان دریافت سفارش
-جدید نداریم.`;
+export const DELIVERY_PREORDER_ALERT_DEFAULT_TEXT = `We are now updating our site and the possibility of receiving an order
+We have no new.`;
 
 export const NO_CONDITION_POP_UP = "NO_CONDITION_POP_UP";
 export const DEFAULT_POPUP = "DEFAULT_POPUP";

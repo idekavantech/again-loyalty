@@ -94,9 +94,9 @@ function ExtraItemsModal({
               hasError = true;
               setErrors({
                 ...errors,
-                [modifierSet.id]: `شما قادر به انتخاب ${englishNumberToPersianNumber(
+                [modifierSet.id]: `You are able to choose${englishNumberToPersianNumber(
                   modifierSet.maximum_choice
-                )} هستید.`,
+                )} You are.`,
               });
             }
             if (
@@ -107,9 +107,9 @@ function ExtraItemsModal({
               hasError = true;
               setErrors({
                 ...errors,
-                [modifierSet.id]: `باید حداقل ${englishNumberToPersianNumber(
+                [modifierSet.id]: `Should be at least${englishNumberToPersianNumber(
                   modifierSet.minimum_choice
-                )} آیتم را انتخاب کنید.`,
+                )} Select the item.`,
               });
             }
           });
@@ -138,7 +138,7 @@ function ExtraItemsModal({
         <Modal
           onClose={onClose}
           isOpen={isOpen}
-          header={<ModalHeader onRightClick={onClose} title="افزودنی‌ها" />}
+          header={<ModalHeader onRightClick={onClose} title="Additives" />}
           body={
             <div className="p-3">
               <div className="text-center">
@@ -157,8 +157,8 @@ function ExtraItemsModal({
                             </span>{" "}
                             (
                             {modifierSet.minimum_choice > 0
-                              ? "اجباری"
-                              : "اختیاری"}
+                              ? "Mandatory"
+                              : "Optional"}
                             )
                           </span>
                           {modifierSet.minimum_choice ||
@@ -169,16 +169,16 @@ function ExtraItemsModal({
                             >
                               (
                               {modifierSet.maximum_choice
-                                ? `حداکثر ${englishNumberToPersianNumber(
+                                ? `Maximum${englishNumberToPersianNumber(
                                     modifierSet.maximum_choice
                                   )}`
                                 : null}
                               {modifierSet.maximum_choice &&
                               modifierSet.minimum_choice
-                                ? "، "
+                                ? "،"
                                 : ""}
                               {modifierSet.minimum_choice
-                                ? `حداقل ${englishNumberToPersianNumber(
+                                ? `At least${englishNumberToPersianNumber(
                                     modifierSet.minimum_choice
                                   )}`
                                 : null}
@@ -233,8 +233,8 @@ function ExtraItemsModal({
                                 </div>
                                 <div className="flex-1 justify-content-end align-items-center d-flex">
                                   {modifier.price
-                                    ? `${priceFormatter(modifier.price)} تومان`
-                                    : "رایگان"}
+                                    ? `${priceFormatter(modifier.price)} Toman`
+                                    : "Free"}
                                 </div>
                               </div>
                             );
@@ -257,7 +257,7 @@ function ExtraItemsModal({
               variant="contained"
               className="w-100"
             >
-              تایید و افزودن به سبد خرید
+              Confirm and add to the shopping cart
             </Button>
           }
         />

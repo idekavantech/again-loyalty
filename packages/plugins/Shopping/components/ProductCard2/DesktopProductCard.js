@@ -180,7 +180,7 @@ const DesktopProductCard = ({
                                     ? deal.main_image_thumbnail_url
                                     : deal?.default_variation?.main_image_thumbnail_url
                             }
-                            alt="عکس محصول"
+                            alt="Product photo"
                         />
                     </div>
 
@@ -209,7 +209,7 @@ const DesktopProductCard = ({
                             </div>
                             {!customized && hasVariation ? (
                                 <div className="mr-2">
-                                    <img src={variation_icon} alt="عکس محصول وریشن دار"/>
+                                    <img src={variation_icon} alt="Vering Product Photo"/>
                                 </div>
                             ) : null}
                             {customized && (
@@ -222,7 +222,7 @@ const DesktopProductCard = ({
                                     }}
                                     className="mr-2"
                                 >
-                                    شخصی‌سازی شده
+                                    Personalized
                                 </div>
                             )}
                         </div>
@@ -253,7 +253,7 @@ const DesktopProductCard = ({
                                     }}
                                 >
                                     <div className="d-flex align-items-center justify-content-center">
-                                        {"از " + priceFormatter(minimumVariantPrice)}{" "}
+                                        {"From" + priceFormatter(minimumVariantPrice)}{" "}
                                         <TomanIcon
                                             className="mr-1"
                                             width={21}
@@ -317,7 +317,7 @@ const DesktopProductCard = ({
                                                 padding: "4px 12px",
                                             }}
                                         >
-                                            اتمام موجودی
+                                            Completion of inventory
                                         </Button>
                                     )
                                 ) : isAvailable || orderItem.count > 1 ? (
@@ -360,7 +360,7 @@ const DesktopProductCard = ({
                                             padding: "4px 12px",
                                         }}
                                     >
-                                        اتمام موجودی
+                                        Completion of inventory
                                     </Button>
                                 )
                             ) : null}

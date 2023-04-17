@@ -84,7 +84,7 @@ export function RelatedProducts1({
         <Paper elevation={3}>
           <ProductSlider
             pluginBaseUrl={SHOPPING_PLUGIN_URL}
-            title="محصولات مشابه"
+            title="similar products"
             products={deals.filter(
               (d) => d?.extra_data?.is_hidden !== true && d.id !== product.id
             )}

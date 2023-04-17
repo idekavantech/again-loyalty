@@ -68,7 +68,7 @@ export function ProductInfo1({ product: p, isEditMode }) {
                       selectedTab === "technical" ? "2px solid" : "",
                   }}
                 >
-                  مشخصات فنی
+                  Technical Specifications
                 </div>
               ) : null}
               {complementary ? (
@@ -82,7 +82,7 @@ export function ProductInfo1({ product: p, isEditMode }) {
                       selectedTab === "description" ? "2px solid" : "",
                   }}
                 >
-                  مشخصات تکمیلی
+                  Supplementary specifications
                 </div>
               ) : null}
             </div>
@@ -137,7 +137,7 @@ export function ProductInfo1({ product: p, isEditMode }) {
                       selectedTab === "technical" ? "2px solid" : "",
                   }}
                 >
-                  مشخصات فنی
+                  Technical Specifications
                 </div>
               ) : null}
               {complementary ? (
@@ -151,7 +151,7 @@ export function ProductInfo1({ product: p, isEditMode }) {
                       selectedTab === "description" ? "2px solid" : "",
                   }}
                 >
-                  مشخصات تکمیلی
+                  Supplementary specifications
                 </div>
               ) : null}
             </div>

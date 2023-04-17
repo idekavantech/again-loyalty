@@ -197,7 +197,7 @@ function ProductModal({
                         fill
                         className={`object-fit-cover`}
                         src={image}
-                        alt={`محصول ${deal?.title}`}
+                        alt={`the product${deal?.title}`}
                       />
                     ))}
                   </Slider>
@@ -341,7 +341,7 @@ function ProductModal({
                       const orderName = orderItem?.product?.title;
                       const modifiersName = orderItem?.modifiers
                         ?.map((modifier) => modifier.title)
-                        .join("، ");
+                        .join("،");
 
                       const variations = orderItem.product?.variations;
 
@@ -524,7 +524,7 @@ function ProductModal({
                                       variation.name;
                                     const modifiersName = orderItem?.modifiers
                                       ?.map((modifier) => modifier.title)
-                                      .join("، ");
+                                      .join("،");
 
                                     const initialPrice =
                                       orderItem?.product?.variations
@@ -656,7 +656,7 @@ function ProductModal({
                                       deal.default_variation?.inventory_count ||
                                       deal.default_variation?.keep_selling)
                                   )
-                                    ? "اتمام موجودی"
+                                    ? "Completion of inventory"
                                     : ""
                                 }
                               >
@@ -744,9 +744,9 @@ function ProductModal({
                         >
                           {isAvailable
                             ? customizedOrderItems?.length
-                              ? "اعمال تغییر"
-                              : "افزودن به سبد خرید"
-                            : "اتمام موجودی"}
+                              ? "The deeds of change"
+                              : "Add to Cart"
+                            : "Completion of inventory"}
                         </Button>
                       </div>
                     ) : hasVariation && !hasVariantsModifier ? (
@@ -791,8 +791,8 @@ function ProductModal({
                           }}
                         >
                           {customizedOrderItems?.length
-                            ? "اعمال تغییر"
-                            : "افزودن به سبد خرید"}
+                            ? "The deeds of change"
+                            : "Add to Cart"}
                         </Button>
                       </div>
                     ) : !hasVariation && hasModifier ? (
@@ -866,10 +866,10 @@ function ProductModal({
                             (a, b) => a + b?.count,
                             0
                           ) === maxDealCount
-                            ? "اتمام موجودی"
+                            ? "Completion of inventory"
                             : customizedOrderItems?.length
-                            ? "انتخاب این محصول با افزودنی جدید"
-                            : "افزودن به سبد خرید"}
+                            ? "Select this product with new additive"
+                            : "Add to Cart"}
                         </Button>
                       </div>
                     ) : null}
@@ -897,7 +897,7 @@ function ProductModal({
                       fontWeight: 400,
                     }}
                   >
-                    موقتا قادر به سفارش‌گیری نیستیم.
+                    Temporarily unable to order.
                   </Button>
                 </div>
               )}
@@ -940,7 +940,7 @@ function ProductModal({
                     zIndex: 2000,
                   }}
                 >
-                  <Chip className="mr-auto ml-1" size="small" label="کپی شد" />
+                  <Chip className="mr-auto ml-1" size="small" label="Copied" />
                 </div>
               ) : null}
             </div>
@@ -976,7 +976,7 @@ function ProductModal({
                         fill
                         className={`object-fit-cover`}
                         src={image}
-                        alt={`محصول ${deal?.title}`}
+                        alt={`the product${deal?.title}`}
                       />
                     ))}
                   </Slider>
@@ -1073,7 +1073,7 @@ function ProductModal({
                         <Chip
                           className="mr-auto ml-1"
                           size="small"
-                          label="کپی شد"
+                          label="Copied"
                         />
                       ) : null}
                       <CopyToClipboard
@@ -1104,7 +1104,7 @@ function ProductModal({
                         const orderName = orderItem?.product?.title;
                         const modifiersName = orderItem?.modifiers
                           ?.map((modifier) => modifier.title)
-                          .join("، ");
+                          .join("،");
 
                         const variations = orderItem.product?.variations;
 
@@ -1290,7 +1290,7 @@ function ProductModal({
                                         variation.name;
                                       const modifiersName = orderItem?.modifiers
                                         ?.map((modifier) => modifier.title)
-                                        .join("، ");
+                                        .join("،");
 
                                       const initialPrice =
                                         orderItem?.product?.variations
@@ -1424,7 +1424,7 @@ function ProductModal({
                                           ?.inventory_count ||
                                         deal.default_variation?.keep_selling)
                                     )
-                                      ? "اتمام موجودی"
+                                      ? "Completion of inventory"
                                       : ""
                                   }
                                 >
@@ -1512,9 +1512,9 @@ function ProductModal({
                           >
                             {isAvailable
                               ? customizedOrderItems?.length
-                                ? "اعمال تغییر"
-                                : "افزودن به سبد خرید"
-                              : "اتمام موجودی"}
+                                ? "The deeds of change"
+                                : "Add to Cart"
+                              : "Completion of inventory"}
                           </Button>
                         </div>
                       ) : hasVariation && !hasVariantsModifier ? (
@@ -1559,8 +1559,8 @@ function ProductModal({
                             }}
                           >
                             {customizedOrderItems?.length
-                              ? "اعمال تغییر"
-                              : "افزودن به سبد خرید"}
+                              ? "The deeds of change"
+                              : "Add to Cart"}
                           </Button>
                         </div>
                       ) : !hasVariation && hasModifier ? (
@@ -1634,10 +1634,10 @@ function ProductModal({
                               (a, b) => a + b?.count,
                               0
                             ) === maxDealCount
-                              ? "اتمام موجودی"
+                              ? "Completion of inventory"
                               : customizedOrderItems?.length
-                              ? "انتخاب این محصول با افزودنی جدید"
-                              : "افزودن به سبد خرید"}
+                              ? "Select this product with new additive"
+                              : "Add to Cart"}
                           </Button>
                         </div>
                       ) : null}
@@ -1665,7 +1665,7 @@ function ProductModal({
                         fontWeight: 400,
                       }}
                     >
-                      موقتا قادر به سفارش‌گیری نیستیم.
+                      Temporarily unable to order.
                     </Button>
                   </div>
                 )}

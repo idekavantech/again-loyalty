@@ -35,7 +35,7 @@ const CategoryNavItem = ({
           quality={30}
           className={`${maxWidth768 ? "mb-1" : "mb-2"} u-border-radius-8`}
           src={categoryImage}
-          alt={`عکس برچسب ${categoryImage}`}
+          alt={`tag Photo${categoryImage}`}
         />
       ) : null}
       <div

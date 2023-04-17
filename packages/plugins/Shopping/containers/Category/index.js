@@ -67,7 +67,7 @@ export function Category({
     () =>
       isEditMode
         ? mockCategories
-        : [{ title: "همه", products }, ..._categories],
+        : [{ title: "All", products }, ..._categories],
     [isEditMode, _categories, products]
   );
   const router = useRouter();

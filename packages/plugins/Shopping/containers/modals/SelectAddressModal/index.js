@@ -66,7 +66,7 @@ export default function SelectAddressModal({
               fontWeight: 600,
             }}
           >
-            انتخاب آدرس
+            Select address
           </div>
         </div>
 
@@ -91,7 +91,7 @@ export default function SelectAddressModal({
             </div>
             <div className="d-flex flex-column w-100 mr-3">
               <div className="mb-2" style={{ fontSize: 12, fontWeight: 600 }}>
-                ارسال به:
+                Send to:
               </div>
               <div style={{ fontSize: 14, fontWeight: 400 }}>
                 {selectedAddress.address}
@@ -111,7 +111,7 @@ export default function SelectAddressModal({
                 className="ml-2"
               />
               <div style={{ fontSize: 16, fontWeight: 600 }}>
-                افزودن آدرس جدید
+                Add new address
               </div>
             </div>
           </div>

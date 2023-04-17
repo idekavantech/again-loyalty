@@ -55,7 +55,7 @@ export default function RadioModifier({
           <Title modifier={modifier} />
         </div>
       ) : (
-        <Tooltip placement="top" title="سفارش نمی‌پذیریم.">
+        <Tooltip placement="top" title="We do not accept the order.">
           <div className="d-flex align-items-start">
             <Radio
               checked={checked}
@@ -125,7 +125,7 @@ export default function RadioModifier({
             />{" "}
           </div>
         ) : (
-          "رایگان"
+          "Free"
         )}
       </div>
     </div>

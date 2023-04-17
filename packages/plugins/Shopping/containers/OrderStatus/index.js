@@ -79,61 +79,61 @@ const ORDER_STEP_STATUS_PASSED = "ORDER_STEP_STATUS_PASSED";
 
 const deliveryTypes = {
   [FULFILLMENT_ON_USER_SITE]: {
-    label: "ارسال",
+    label: "submit",
     icon: `/images/bike.svg`,
   },
   [FULFILLMENT_CARRY_OUT]: {
-    label: "تحویل حضوری",
+    label: "In-person delivery",
     icon: `/images/man.svg`,
   },
   [FULFILLMENT_ON_BUSINESS_SITE]: {
-    label: "سرو در محل",
+    label: "Cedar in place",
     icon: `/images/serve.svg`,
   },
   [FULFILLMENT_ON_CAR]: {
-    label: "تحویل حضوری در ماشین",
+    label: "In -car delivery",
     icon: `/images/man.svg`,
   },
   [FULFILLMENT_ON_WEBSITE]: {
-    label: "دریافت مجازی",
+    label: "Virtual receipt",
     icon: `/images/phonelink.svg`,
   },
 };
 
 const paymentTypes = {
   online: {
-    label: "آنلاین",
+    label: "Online",
     iconProgress: "100%",
     iconColor: pollution,
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   cash: {
-    label: "نقدی",
+    label: "Cash",
     iconProgress: "100%",
     iconColor: pollution,
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   card: {
-    label: "کارت‌ به کارت",
+    label: "Card to card",
     iconProgress: "100%",
     iconColor: pollution,
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   wallet: {
-    label: "کیف پول",
+    label: "wallet",
     iconProgress: "100%",
     iconColor: pollution,
     backgroundColor: "rgba(152, 169, 177, 0.16)",
   },
   pos: {
-    label: "در محل",
+    label: "in place",
     iconProgress: "0%",
     iconColor: strawberryII,
     backgroundColor:
       "linear-gradient(0deg, rgba(255, 0, 56, 0.16), rgba(255, 0, 56, 0.16)), #FFFFFF",
   },
   third_party: {
-    label: "پرداخت از سرویس ثالث ",
+    label: "Payment of Third Service",
     iconProgress: "100%",
     iconColor: pollution,
     backgroundColor: "rgba(152, 169, 177, 0.16)",
@@ -143,36 +143,36 @@ const orderStatus = {
   [NEW_ORDER_STATUS_NEW]: {
     order: 0,
     status: NEW_ORDER_STATUS_NEW,
-    label: "سفارش شما با موفقیت ثبت شد.",
+    label: "Your order was successfully registered.",
   },
   [NEW_ORDER_STATUS_ACCEPTED]: {
     order: 1,
     status: NEW_ORDER_STATUS_ACCEPTED,
-    label: "سفارش شما تایید شد.",
+    label: "Your order was approved..",
   },
   [NEW_ORDER_STATUS_READY_TO_DELIVER]: {
     order: 2,
     status: NEW_ORDER_STATUS_READY_TO_DELIVER,
     label: {
-      [FULFILLMENT_ON_USER_SITE]: "سفارش شما در حال آماده‌سازی است.",
+      [FULFILLMENT_ON_USER_SITE]: "Your order is being prepared.",
       [FULFILLMENT_CARRY_OUT]:
-        "برای دریافت سفارش خود می‌توانید بصورت حضوری به ما مراجعه کنید.",
+        "You can visit us in person to get your order.",
       [FULFILLMENT_ON_CAR]:
-        "برای دریافت سفارش خود می‌توانید بصورت حضوری به ما مراجعه کنید و سفارش خود را در ماشین تحویل بگیرید.",
+        "You can visit us in person to get your order and get your order in the car.",
       [FULFILLMENT_ON_BUSINESS_SITE]:
-        "برای میل سفارش خود می‌توانید بصورت حضوری به ما مراجعه کنید.",
-      [FULFILLMENT_ON_WEBSITE]: "سفارش شما در حال آماده سازی و ارسال است.",
+        "You can visit us in person for your order.",
+      [FULFILLMENT_ON_WEBSITE]: "Your order is preparing and sending.",
     },
   },
   [NEW_ORDER_STATUS_DELIVERED]: {
     order: 3,
     status: NEW_ORDER_STATUS_DELIVERED,
     label: {
-      [FULFILLMENT_ON_USER_SITE]: "سفارش شما با موفقیت ارسال شد.",
-      [FULFILLMENT_CARRY_OUT]: "سفارش شما تحویل‌گرفته‌شد.",
-      [FULFILLMENT_ON_CAR]: "سفارش شما تحویل‌گرفته‌شد.",
-      [FULFILLMENT_ON_BUSINESS_SITE]: "سفارش شما تحویل‌گرفته‌شد.",
-      [FULFILLMENT_ON_BUSINESS_SITE]: "سفارش شما با موفقیت ارسال شد.",
+      [FULFILLMENT_ON_USER_SITE]: "Your order was successfully sent.",
+      [FULFILLMENT_CARRY_OUT]: "Your order was delivered.",
+      [FULFILLMENT_ON_CAR]: "Your order was delivered.",
+      [FULFILLMENT_ON_BUSINESS_SITE]: "Your order was delivered.",
+      [FULFILLMENT_ON_BUSINESS_SITE]: "Your order was successfully sent.",
     },
   },
 };
@@ -329,8 +329,8 @@ export function OrderStatus({
     );
   }
   let cost = pluginData.data.delivery_costs_by_user
-    ? "به عهده مشتری"
-    : "رایگان";
+    ? "Customer"
+    : "Free";
   if (order && +order.delivery_price !== 0)
     cost = `${priceFormatter(+order.delivery_price)}`;
 
@@ -450,7 +450,7 @@ export function OrderStatus({
                 }}
                 className="ml-2"
               >
-                تاریخ ثبت سفارش
+                Order registration date
               </div>
               <div style={{ fontSize: 14, color: hexToRGBA(night, 0.8) }}>
                 {order
@@ -481,7 +481,7 @@ export function OrderStatus({
                 }}
                 className="ml-2"
               >
-                شماره سفارش
+                Order number
               </div>
               <div style={{ fontSize: 14, color: hexToRGBA(night, 0.8) }}>
                 {order && englishNumberToPersianNumber(order.order_id)}
@@ -532,7 +532,7 @@ export function OrderStatus({
                       className="mr-2"
                       style={{ fontSize: 13, color: graphite }}
                     >
-                      سفارش شما با موفقیت ثبت شد.
+                      Your order was successfully registered.
                     </div>
                   </div>
                 </div>
@@ -571,7 +571,7 @@ export function OrderStatus({
                       className="mr-2"
                       style={{ fontSize: 13, color: graphite }}
                     >
-                      متاسفانه سفارش شما لغو شد.
+                      Unfortunately your order was canceled..
                     </div>
                   </div>
                 </div>
@@ -716,7 +716,7 @@ export function OrderStatus({
                     color: night,
                   }}
                 >
-                  مشخصات تحویل گیرنده
+                  The recipient's profile
                 </div>
 
                 <div>
@@ -728,13 +728,13 @@ export function OrderStatus({
                     }}
                     className="pt-2"
                   >
-                    اطلاعات خودرو
+                    Car information
                   </div>
                 </div>
                 <div className="row d-flex align-items-center">
                   {order?.user_address?.extra_data?.model_name && (
                     <div className="col-sm-3 mb-3">
-                      مدل:
+                      Model:
                       {englishNumberToPersianNumber(
                         order?.user_address?.extra_data?.model_name
                       )}
@@ -742,7 +742,7 @@ export function OrderStatus({
                   )}
                   {order?.user_address?.extra_data?.color && (
                     <div className="col-sm-3 mb-3">
-                      رنگ:
+                      Color:
                       {englishNumberToPersianNumber(
                         order?.user_address?.extra_data?.color
                       )}
@@ -750,7 +750,7 @@ export function OrderStatus({
                   )}
                   {order?.user_address?.extra_data?.plate_number && (
                     <div className="d-flex align-items-center col-sm-5 mb-3">
-                      <span>پلاک:</span>
+                      <span>Plaque:</span>
                       <div
                         className="d-flex"
                         style={{
@@ -767,7 +767,7 @@ export function OrderStatus({
                             className="position-absolute"
                             style={{ top: 0 }}
                           >
-                            ایران
+                            Iran
                           </span>
                           <span className="ml-2 pt-3">
                             {englishNumberToPersianNumber(plateNums?.slice(5))}
@@ -806,7 +806,7 @@ export function OrderStatus({
                   color: night,
                 }}
               >
-                مشخصات مراجعه
+                View Specifications
               </div>
               <div
                 style={{
@@ -838,7 +838,7 @@ export function OrderStatus({
                 }}
                 className="pb-1"
               >
-                آدرس
+                Address
               </div>
               <div
                 style={{
@@ -860,7 +860,7 @@ export function OrderStatus({
                   }}
                   className="pb-1"
                 >
-                  شماره میز
+                  The table number
                 </div>
                 <div
                   style={{
@@ -885,7 +885,7 @@ export function OrderStatus({
                 googleMapsNavigate(business.latitude, business.longitude)
               }
             >
-              مسیریابی
+              Routing
             </Button>
           </Paper>
         )}
@@ -903,7 +903,7 @@ export function OrderStatus({
                   color: night,
                 }}
               >
-                مشخصات ارسال
+                Send profile
               </div>
               <div
                 style={{
@@ -937,7 +937,7 @@ export function OrderStatus({
                     }}
                     className="pb-1"
                   >
-                    تحویل گیرنده
+                    Transferee
                   </div>
                   <div
                     style={{
@@ -966,7 +966,7 @@ export function OrderStatus({
                     }}
                     className="pb-1"
                   >
-                    شماره تلفن
+                    phone number
                   </div>
                   <div
                     style={{
@@ -992,7 +992,7 @@ export function OrderStatus({
                     }}
                     className="pb-1"
                   >
-                    تحویل گیرنده
+                    Transferee
                   </div>
                   <div
                     style={{
@@ -1014,7 +1014,7 @@ export function OrderStatus({
                     }}
                     className="pb-1"
                   >
-                    شماره تلفن
+                    phone number
                   </div>
                   <div
                     style={{
@@ -1040,7 +1040,7 @@ export function OrderStatus({
                 }}
                 className="pb-1"
               >
-                آدرس
+                Address
               </div>
               <div
                 style={{
@@ -1067,7 +1067,7 @@ export function OrderStatus({
                 style={{ color: night }}
                 className="u-fontLarge u-fontWeightBold"
               >
-                جزئیات سفارش
+                Order details
               </div>
               <div
                 style={{ color: hexToRGBA(night, 0.8) }}
@@ -1091,7 +1091,7 @@ export function OrderStatus({
               color: night,
             }}
           >
-            مشخصات
+            Specifications
           </h3>
           {order &&
             order.items &&
@@ -1131,7 +1131,7 @@ export function OrderStatus({
                       {item.product_main_image_thumbnail_url ? (
                         <Image
                           src={item.product_main_image_thumbnail_url}
-                          alt={`تصویر ${item.product_title}`}
+                          alt={`Image${item.product_title}`}
                           layout="fixed"
                           width={100}
                           height={100}
@@ -1168,10 +1168,10 @@ export function OrderStatus({
                               className="d-flex align-items-center u-font-semi-small mt-2"
                               style={{ color: graphite }}
                             >
-                              <div className="ml-1">موارد افزودنی</div>
+                              <div className="ml-1">Additive items</div>
                               <div>
                                 {modifiers_price === 0 ? (
-                                  "(رایگان)"
+                                  "(Free)"
                                 ) : (
                                   <>
                                     {priceFormatter(modifiers_price)}
@@ -1213,7 +1213,7 @@ export function OrderStatus({
                             className="my-1 u-font-semi-small"
                             style={{ color: night }}
                           >
-                            <div>گوناگونی: {item.variation_title}</div>
+                            <div>variety: {item.variation_title}</div>
                           </div>
                         )}
                       </div>
@@ -1240,7 +1240,7 @@ export function OrderStatus({
                             <div className="ml-auto">
                               {englishNumberToPersianNumber(item.amount)}
                             </div>
-                            <div>عدد</div>
+                            <div>number</div>
                           </div>
                           <div className="d-flex flex-column align-items-end">
                             {discount_amount && (
@@ -1253,7 +1253,7 @@ export function OrderStatus({
                                 <span className="pl-1">
                                   {priceFormatter(discount_amount)}
                                 </span>
-                                <span>تخفیف</span>
+                                <span>Discount</span>
                               </div>
                             )}
                             <div
@@ -1304,7 +1304,7 @@ export function OrderStatus({
                         <div className="ml-auto">
                           {englishNumberToPersianNumber(item.amount)}
                         </div>
-                        <div>عدد</div>
+                        <div>number</div>
                       </div>
                       <div className="d-flex flex-column align-items-end">
                         {discount_amount && (
@@ -1317,7 +1317,7 @@ export function OrderStatus({
                             <span className="pl-1">
                               {priceFormatter(discount_amount)}
                             </span>
-                            <span>تخفیف</span>
+                            <span>Discount</span>
                           </div>
                         )}
                         <div
@@ -1356,12 +1356,12 @@ export function OrderStatus({
                 color: night,
               }}
             >
-              فاکتور
+              Factor
             </h3>
 
             <div className="d-flex justify-content-between align-items-center py-2">
               <div style={{ color: night }}>
-                قیمت محصولات (
+                price of products(
                 <span>{englishNumberToPersianNumber(totalAmount)}</span>)
               </div>
               <div style={{ color: night }}>
@@ -1377,7 +1377,7 @@ export function OrderStatus({
             </div>
 
             <div className="d-flex justify-content-between align-items-center py-2">
-              <div style={{ color: pollution }}>تخفیف محصولات</div>
+              <div style={{ color: pollution }}>Discount Products</div>
               <div>
                 <div
                   style={{
@@ -1406,7 +1406,7 @@ export function OrderStatus({
               className="d-flex justify-content-between align-items-center py-2"
               style={{ color: pollution }}
             >
-              <div>جمع</div>
+              <div>Total</div>
               <div>
                 <div>
                   <span className="pl-1">
@@ -1437,7 +1437,7 @@ export function OrderStatus({
               className="d-flex justify-content-between align-items-center pt-2 pb-4"
               style={{ color: pollution }}
             >
-              <div>هزینه بسته‌بندی</div>
+              <div>Packaging cost</div>
               <div>
                 <div
                   style={{
@@ -1447,7 +1447,7 @@ export function OrderStatus({
                   <span className="pl-1">
                     {order.total_packaging_price
                       ? priceFormatter(order.total_packaging_price)
-                      : "رایگان"}
+                      : "Free"}
                   </span>
                   {order.total_packaging_price ? (
                     <span>
@@ -1473,7 +1473,7 @@ export function OrderStatus({
               style={{ color: pollution }}
             >
               <div>
-                مالیات (
+                Tax(
                 {englishNumberToPersianNumber(
                   Math.round(
                     (order.taxing_price /
@@ -1492,7 +1492,7 @@ export function OrderStatus({
                   <span className="pl-1">
                     {order.taxing_price
                       ? priceFormatter(order.taxing_price)
-                      : "بدون مالیات"}
+                      : "Without taxation"}
                   </span>
                   {order.taxing_price ? (
                     <span>
@@ -1519,7 +1519,7 @@ export function OrderStatus({
                 className="d-flex justify-content-between align-items-center pt-2 pb-4"
                 style={{ color: pollution }}
               >
-                <div>پرداخت از کیف پول</div>
+                <div>Pay from the wallet</div>
                 <div>
                   <div
                     style={{
@@ -1529,7 +1529,7 @@ export function OrderStatus({
                     <span className="pl-1">
                       {order.gift_credit_used
                         ? priceFormatter(order.gift_credit_used)
-                        : "رایگان"}
+                        : "Free"}
                     </span>
                     {order.gift_credit_used ? (
                       <span>
@@ -1557,7 +1557,7 @@ export function OrderStatus({
                 className="d-flex justify-content-between align-items-center pt-2 pb-4"
                 style={{ color: pollution }}
               >
-                <div>کد تخفیف</div>
+                <div>discount code</div>
                 <div>
                   <div
                     style={{
@@ -1590,7 +1590,7 @@ export function OrderStatus({
                 className="d-flex justify-content-between align-items-center pt-2 pb-4"
                 style={{ color: pollution }}
               >
-                <div>تخفیف به واسطه کوپن</div>
+                <div>Discounts by coupon</div>
                 <div>
                   <div
                     style={{
@@ -1622,7 +1622,7 @@ export function OrderStatus({
               className="d-flex justify-content-between align-items-center pt-2 pb-4"
               style={{ color: pollution, borderBottom: "1px solid #EDEDED" }}
             >
-              <div>هزینه ارسال</div>
+              <div>shipping cost</div>
               <div>
                 <div
                   style={{
@@ -1655,7 +1655,7 @@ export function OrderStatus({
               style={{ color: coal }}
             >
               <div style={{ fontSize: 13, fontWeight: 600 }}>
-                مبلغ قابل پرداخت
+                The amount payable
               </div>
               <div style={{ fontSize: 14, fontWeight: 700 }}>
                 <div>
@@ -1682,7 +1682,7 @@ export function OrderStatus({
             </div>
             <div className="d-flex justify-content-between align-items-center pb-2">
               <div style={{ fontSize: 12, color: night }}>
-                کد پیگیری:{" "}
+                Tracking Code:{" "}
                 <span>{englishNumberToPersianNumber(order.order_id)}</span>
               </div>
               <div>

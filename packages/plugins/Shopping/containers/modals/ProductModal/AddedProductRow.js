@@ -96,7 +96,7 @@ const AddedProductRow = ({
             className="d-flex mt-1 u-font-semi-small justify-content-between align-items-center w-100"
           >
             {" "}
-            نوع گوناگونی: {variation_name}
+            Different types: {variation_name}
           </div>
         ) : null}
         {order?.modifiers?.map((item) => (
@@ -129,7 +129,7 @@ const AddedProductRow = ({
                 (variation_initial_price + modifiers_price) * order.count
               )}
               {!(variation_initial_price - variation_discounted_price) ? (
-                <span className=""> تومان </span>
+                <span className=""> Toman</span>
               ) : null}
             </div>
           ) : (
@@ -146,7 +146,7 @@ const AddedProductRow = ({
               {!(
                 order.product.initial_price - order.product.discounted_price
               ) ? (
-                <span className=""> تومان </span>
+                <span className=""> Toman</span>
               ) : null}
             </div>
           )}
@@ -160,7 +160,7 @@ const AddedProductRow = ({
                         order.count
                     )}
                   </span>
-                  <span className="mx-1"> تومان </span>
+                  <span className="mx-1"> Toman</span>
                 </div>
               ) : null}
             </div>
@@ -174,7 +174,7 @@ const AddedProductRow = ({
                         order.count
                     )}
                   </span>
-                  <span className="mx-1"> تومان </span>
+                  <span className="mx-1"> Toman</span>
                 </div>
               ) : null}
             </div>

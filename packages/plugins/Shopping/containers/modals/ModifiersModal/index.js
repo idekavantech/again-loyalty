@@ -112,9 +112,9 @@ function ModifiersModal({
               hasError = true;
               setErrors({
                 ...errors,
-                [modifierSet.id]: `شما قادر به انتخاب حداکثر ${englishNumberToPersianNumber(
+                [modifierSet.id]: `You are able to choose the maximum${englishNumberToPersianNumber(
                   ModifierSetMaximumChoice
-                )} آیتم هستید.`,
+                )} Are the item.`,
               });
             }
             if (
@@ -124,9 +124,9 @@ function ModifiersModal({
               hasError = true;
               setErrors({
                 ...errors,
-                [modifierSet.id]: `باید حداقل ${englishNumberToPersianNumber(
+                [modifierSet.id]: `Should be at least${englishNumberToPersianNumber(
                   modifierSetMinimumChoice
-                )} آیتم را انتخاب کنید.`,
+                )} Select the item.`,
               });
             }
           });
@@ -156,7 +156,7 @@ function ModifiersModal({
         <Modal
           onClose={handleClose}
           isOpen={isOpen}
-          header={<ModalHeader onRightClick={handleClose} title="افزودنی‌ها" />}
+          header={<ModalHeader onRightClick={handleClose} title="Additives" />}
           body={
             <div className="p-3">
               <div className="text-center">
@@ -179,7 +179,7 @@ function ModifiersModal({
                           <span className="u-fontWeightBold">
                             {modifierSet.title}
                           </span>{" "}
-                          ({modifierSetMinimumChoice > 0 ? "اجباری" : "اختیاری"}
+                          ({modifierSetMinimumChoice > 0 ? "Mandatory" : "Optional"}
                           )
                         </span>
                         {modifierSetMinimumChoice ||
@@ -190,16 +190,16 @@ function ModifiersModal({
                           >
                             (
                             {ModifierSetMaximumChoice
-                              ? `حداکثر ${englishNumberToPersianNumber(
+                              ? `Maximum${englishNumberToPersianNumber(
                                   ModifierSetMaximumChoice
                                 )}`
                               : null}
                             {ModifierSetMaximumChoice &&
                             modifierSetMinimumChoice
-                              ? "، "
+                              ? "،"
                               : ""}
                             {modifierSetMinimumChoice
-                              ? `حداقل ${englishNumberToPersianNumber(
+                              ? `At least${englishNumberToPersianNumber(
                                   modifierSetMinimumChoice
                                 )}`
                               : null}
@@ -291,7 +291,7 @@ function ModifiersModal({
               variant="contained"
               className="w-100"
             >
-              تایید و افزودن به سبد خرید
+              Confirm and add to the shopping cart
             </Button>
           }
         />

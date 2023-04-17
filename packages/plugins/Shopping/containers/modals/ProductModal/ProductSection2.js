@@ -112,7 +112,7 @@ function ProductSection2({
                     maxWidth768 && secondary ? "u-fontLarge" : "u-fontVeryLarge"
                   }
                 >
-                  اتمام موجودی
+                  Completion of inventory
                 </h2>
               )}
             </>
@@ -165,7 +165,7 @@ function ProductSection2({
                     >
                       {priceFormatter(price)}
                     </div>
-                    {discountPercent ? "" : " تومان "}
+                    {discountPercent ? "" : " Toman"}
                   </div>
                 ) : null}
 
@@ -201,7 +201,7 @@ function ProductSection2({
                   }
                 >
                   {priceFormatter(discountedPrice)}{" "}
-                  <span className="font-weight-normal">تومان</span>
+                  <span className="font-weight-normal">Toman</span>
                 </div>
               ) : null}
             </div>
@@ -241,7 +241,7 @@ function ProductSection2({
                       variant="contained"
                     >
                       <AddRounded className="ml-1" />
-                      افزودن {lessPadding ? "" : "به سبد خرید"}
+                      Add{lessPadding ? "" : "To the shopping cart"}
                     </Button>
                   ) : (
                     <div
@@ -273,7 +273,7 @@ function ProductSection2({
                         variant="contained"
                       >
                         <AddRounded className="ml-1" />
-                        افزودن به سبد خرید
+                        Add to Cart
                       </Button>
                     </div>
                   )}
@@ -292,7 +292,7 @@ function ProductSection2({
                   variant="contained"
                 >
                   <AddRounded className="ml-1" />
-                  اتمام موجودی
+                  Completion of inventory
                 </Button>
               )
             ) : null}

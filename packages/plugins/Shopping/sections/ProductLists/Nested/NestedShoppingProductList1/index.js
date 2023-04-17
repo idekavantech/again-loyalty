@@ -52,7 +52,7 @@ function NestedShoppingProductList1({
             }}
             id="finalizeOrderButton"
           >
-            تکمیل خرید (
+            Complete the purchase(
             {englishNumberToPersianNumber(orders?.reduce(reducerFunc, 0))})
           </Button>
         </div>

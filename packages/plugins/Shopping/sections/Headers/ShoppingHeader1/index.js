@@ -74,9 +74,9 @@ function ShoppingHeader1({
     }
     return (
       <div className="text-center u-font-medium mt-1 d-flex align-items-center justify-content-center py-2">
-        {`خارج از ساعت کاری: شروع سفارش‌گیری از ${
+        {`Out of work hours: Start ordering from${
           workingDayStart.dayName
-        } ساعت ${englishNumberToPersianNumber(workingDayStart.openingTime)}`}
+        } the watch${englishNumberToPersianNumber(workingDayStart.openingTime)}`}
       </div>
     );
   }, [workingDayStart]);
@@ -129,7 +129,7 @@ function ShoppingHeader1({
           {isBranch ? (
             <div className="d-flex mt-3 justify-content-center u-font-semi-small-r">
               <div>
-                {isBranchVisible ? "شعبه:" : null}‌ {business?.revised_title}
+                {isBranchVisible ? "Branch:" : null}‌ {business?.revised_title}
               </div>
               <div
                 className="u-cursor-pointer u-fontWeightBold"
@@ -140,7 +140,7 @@ function ShoppingHeader1({
                 onClick={() => pushParamsToUrl(BRANCH_SELECTION_MODAL)}
               >
                 <Icon icon={PEN} color={themeColor} width={12} height={12} />
-                تغییر
+                Change
               </div>
             </div>
           ) : null}
@@ -163,8 +163,8 @@ function ShoppingHeader1({
                     </div>
                   </div>
                   {isBusinessOpenNow(workingHours)
-                    ? "سفارش می‌پذیریم"
-                    : "پیش‌سفارش می‌پذیریم"}
+                    ? "We accept the order"
+                    : "We accept it"}
                 </div>
               ) : (
                 outOfWorkingHoursPreorderText
@@ -172,7 +172,7 @@ function ShoppingHeader1({
             ) : (
               <div>
                 <div className="text-center u-font-medium mt-1 d-flex align-items-center justify-content-center py-2">
-                  موقتا قادر به دریافت سفارش نیستیم.
+                  Temporarily unable to receive an order.
                 </div>
               </div>
             )}
@@ -190,7 +190,7 @@ function ShoppingHeader1({
                 onClick={_toggleSearchModal}
                 className="mx-3 mt-5 u-text-dark-grey d-flex align-items-center pr-4 justify-content-between u-cursor-pointer"
               >
-                جستجوی محصولات ...
+                Searching for products...
                 <div
                   className="u-border-top-left-radius-4 u-border-bottom-left-radius-4 d-flex justify-content-center align-items-center"
                   style={{
@@ -247,7 +247,7 @@ function ShoppingHeader1({
         {isBranch ? (
           <div className="d-flex justify-content-center u-font-semi-small-r mt-3">
             <div>
-              {isBranchVisible ? "شعبه:" : null}‌ {business?.revised_title}
+              {isBranchVisible ? "Branch:" : null}‌ {business?.revised_title}
             </div>
             <div
               className="u-cursor-pointer u-fontWeightBold"
@@ -258,7 +258,7 @@ function ShoppingHeader1({
               onClick={() => pushParamsToUrl(BRANCH_SELECTION_MODAL)}
             >
               <Icon icon={PEN} color={themeColor} width={12} height={12} />
-              تغییر
+              Change
             </div>
           </div>
         ) : null}
@@ -284,8 +284,8 @@ function ShoppingHeader1({
                   </div>
                 </div>
                 {isBusinessOpenNow(workingHours)
-                  ? "سفارش می‌پذیریم"
-                  : "پیش‌سفارش می‌پذیریم"}
+                  ? "We accept the order"
+                  : "We accept it"}
               </div>
             ) : (
               outOfWorkingHoursPreorderText
@@ -293,7 +293,7 @@ function ShoppingHeader1({
           ) : (
             <div>
               <div className="text-center u-font-medium mt-1 d-flex align-items-center justify-content-center py-2">
-                موقتا قادر به دریافت سفارش نیستیم.
+                Temporarily unable to receive an order.
               </div>
             </div>
           )}
@@ -311,7 +311,7 @@ function ShoppingHeader1({
             onClick={_toggleSearchModal}
             className="mx-3 mt-5 mb-2 u-text-dark-grey d-flex align-items-center pr-4 justify-content-between u-cursor-pointer"
           >
-            جستجوی محصولات ...
+            Searching for products...
             <div
               className="u-border-top-left-radius-4 u-border-bottom-left-radius-4 d-flex justify-content-center align-items-center"
               style={{

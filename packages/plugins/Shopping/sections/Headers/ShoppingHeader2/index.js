@@ -158,7 +158,7 @@ function ShoppingHeader2({
               }}
               className="mx-4 pr-2 d-flex align-items-center  justify-content-between"
             >
-              جستجوی محصولات ...
+              Searching for products...
               <div
                 className="u-border-top-left-radius-4 u-border-bottom-left-radius-4 d-flex justify-content-center align-items-center"
                 style={{

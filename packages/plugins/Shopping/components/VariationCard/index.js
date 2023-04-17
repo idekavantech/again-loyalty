@@ -83,7 +83,7 @@ const VariationCard = ({
                       fontSize: 12,
                     }}
                   >
-                    شخصی‌سازی شده
+                    Personalized
                   </div>
                 )}
               </div>
@@ -217,7 +217,7 @@ const VariationCard = ({
                           padding: "4px 12px",
                         }}
                       >
-                        اتمام موجودی
+                        Completion of inventory
                       </Button>
                     )
                   ) : variation.isAvailable ? (
@@ -247,7 +247,7 @@ const VariationCard = ({
                         padding: "4px 12px",
                       }}
                     >
-                      اتمام موجودی
+                      Completion of inventory
                     </Button>
                   )
                 ) : null}

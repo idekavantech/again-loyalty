@@ -272,7 +272,7 @@ const ProductRow = ({
                         } else {
                           _increaseOrderItem(product);
                           _setSnackBarMessage(
-                            "به سبد خرید اضافه شد.",
+                            "Added to the cart..",
                             "default"
                           );
                         }
@@ -306,7 +306,7 @@ const ProductRow = ({
                         } else {
                           _increaseOrderItem(product);
                           _setSnackBarMessage(
-                            "به سبد خرید اضافه شد.",
+                            "Added to the cart..",
                             "default"
                           );
                         }
@@ -361,10 +361,10 @@ const ProductRow = ({
                 >
                   {priceFormatter(product.default_variation.initial_price)}
                 </div>
-                {discountPercent ? "" : " تومان "}
+                {discountPercent ? "" : " Toman"}
               </div>
             ) : (
-              <div className="u-font-semi-small pr-3">ناموجود</div>
+              <div className="u-font-semi-small pr-3">unavailable</div>
             )}
 
             {discountPercent ? (
@@ -383,7 +383,7 @@ const ProductRow = ({
           {discount ? (
             <div className="u-text-darkest-grey u-no-wrap u-fontWeightBold">
               {priceFormatter(product.default_variation.discounted_price)}{" "}
-              <span className="u-fontSmall font-weight-normal">تومان</span>
+              <span className="u-fontSmall font-weight-normal">Toman</span>
             </div>
           ) : null}
         </div>

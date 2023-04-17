@@ -74,36 +74,36 @@ const gettingOrderMethods = [
   {
     id: 1,
     name: FULFILLMENT_ON_USER_SITE,
-    title: "ارسال به من",
-    description: "ارسال به من",
+    title: "Send me",
+    description: "Send me",
     icon: `/images/deliverToCustomer.svg`,
   },
   {
     id: 2,
     name: FULFILLMENT_CARRY_OUT,
-    title: "تحویل در محل",
-    description: "دریافت سفارش در محل کسب و کار",
+    title: "delivery at your location",
+    description: "Receive an order on the location of the business",
     icon: `/images/pickup.svg`,
   },
   {
     id: 3,
     name: FULFILLMENT_ON_BUSINESS_SITE,
-    title: "میل در محل",
-    description: "سرو غذای مورد نظر در فضای رستوران",
+    title: "Mill in the place",
+    description: "The desired food in the restaurant space",
     icon: `/images/serve.svg`,
   },
   {
     id: 4,
     name: FULFILLMENT_ON_CAR,
-    title: "تحویل با ماشین",
-    description: "دریافت سفارش در محل کسب و کار در ماشین",
+    title: "Delivery by car",
+    description: "Receive an order on the location of the business in the car",
     icon: `/images/deliveryByCar.svg`,
   },
   {
     id: 5,
     name: FULFILLMENT_ON_WEBSITE,
-    title: "دریافت مجازی",
-    description: "دریافت سفارش به صورت مجازی",
+    title: "Virtual receipt",
+    description: "Receive the order on a virtual way",
     icon: `/images/phonelink.svg`,
   },
 ];
@@ -237,20 +237,20 @@ function ShoppingHeader3({
         ? pluginData?.data?.maximum_pickup_time?.type ===
           PREPARATION_TIME_BY_DAY
           ? {
-              typeName: "روز",
+              typeName: "Day",
               value: pluginData.data.maximum_pickup_time.value,
             }
           : pluginData?.data?.maximum_pickup_time?.type ===
             PREPARATION_TIME_BY_HOUR
           ? {
-              typeName: "ساعت",
+              typeName: "the watch",
               value: pluginData.data.maximum_pickup_time.value,
             }
           : {
               value: pluginData.data.maximum_pickup_time.value,
-              typeName: "دقیقه",
+              typeName: "Minutes",
             }
-        : { value: 60, typeName: "دقیقه" },
+        : { value: 60, typeName: "Minutes" },
     [pluginData]
   );
   const deliveryPrice = useMemo(() => {
@@ -296,7 +296,7 @@ function ShoppingHeader3({
             return {
               mainType: PREPARATION_TIME_BY_DAY,
               newType: PREPARATION_TIME_BY_MINUTE,
-              typeName: "روز",
+              typeName: "Day",
               newValue,
               mainValue:
                 deliveryInfo?.delivery_type?.timing?.maximum_delivery_time
@@ -312,7 +312,7 @@ function ShoppingHeader3({
             return {
               mainType: PREPARATION_TIME_BY_HOUR,
               newType: PREPARATION_TIME_BY_MINUTE,
-              typeName: "ساعت",
+              typeName: "the watch",
               newValue,
               mainValue:
                 deliveryInfo?.delivery_type?.timing?.maximum_delivery_time
@@ -322,7 +322,7 @@ function ShoppingHeader3({
           return {
             mainType: PREPARATION_TIME_BY_MINUTE,
             newType: PREPARATION_TIME_BY_MINUTE,
-            typeName: "دقیقه",
+            typeName: "Minutes",
             newValue:
               deliveryInfo?.delivery_type?.timing?.maximum_delivery_time?.value,
             mainValue:
@@ -442,11 +442,11 @@ function ShoppingHeader3({
         <AssuranceDialog
           isOpen={UIModals[DELETE_ADDRESS_MODAL]}
           closeDialogHandler={toggleModal[DELETE_ADDRESS_MODAL]}
-          contentText="آیا مطمئن هستید که می‌خواهید آدرس ذخیره‌شده‌ی خود را حذف کنید؟"
+          contentText="Are you sure you want to delete your stored address?"
           dialogMainActions={deleteAddressHandler}
-          dialogMainActionText="حذف"
+          dialogMainActionText="Delete"
           dialogSecondActions={() => toggleModal(DELETE_ADDRESS_MODAL, false)}
-          dialogSecondActionText="انصراف"
+          dialogSecondActionText="Candifying"
           isMobile={isMobile}
         />
         <SelectAddressModal
@@ -496,7 +496,7 @@ function ShoppingHeader3({
                     {selectedGettingOrderMethod?.name ===
                     FULFILLMENT_ON_USER_SITE ? (
                       <>
-                        <Tooltip title="زمان آماده‌سازی">
+                        <Tooltip title="Preparation time">
                           <div className="d-flex align-items-center justify-content-center">
                             <ClockIcon color={titleColor} />
                             {isDeliveryInfoLoading ? (
@@ -507,7 +507,7 @@ function ShoppingHeader3({
                                 }}
                               />
                             ) : preparationTime === null || !selectedAddress ? (
-                              <div>خارج از محدوده</div>
+                              <div>out of range</div>
                             ) : preparationTime?.length > 1 ? (
                               preparationTime[0]?.mainType ===
                               preparationTime[1]?.mainType ? (
@@ -515,7 +515,7 @@ function ShoppingHeader3({
                                   {englishNumberToPersianNumber(
                                     preparationTime[0]?.mainValue
                                   )}{" "}
-                                  تا{" "}
+                                  until the{" "}
                                   {englishNumberToPersianNumber(
                                     preparationTime[1]?.mainValue
                                   ) +
@@ -529,7 +529,7 @@ function ShoppingHeader3({
                                   ) +
                                     " " +
                                     preparationTime[0]?.typeName}{" "}
-                                  تا{" "}
+                                  until the{" "}
                                   {englishNumberToPersianNumber(
                                     preparationTime[1]?.mainValue
                                   ) +
@@ -551,7 +551,7 @@ function ShoppingHeader3({
                         <div className="mx-4" style={{ color: titleColor }}>
                           .
                         </div>
-                        <Tooltip title="هزینه ارسال">
+                        <Tooltip title="shipping cost">
                           <div
                             style={{ color: titleColor }}
                             className="d-flex align-items-center justify-content-center"
@@ -568,13 +568,13 @@ function ShoppingHeader3({
                                 />
                               ) : deliveryPrice?.length > 1 ? (
                                 <div>
-                                  {deliveryPrice[0]} تا {deliveryPrice[1]} تومان
+                                  {deliveryPrice[0]} until the{deliveryPrice[1]} Toman
                                 </div>
                               ) : (
-                                <div>{deliveryPrice[0]} تومان</div>
+                                <div>{deliveryPrice[0]} Toman</div>
                               )
                             ) : (
-                              <div>وابسته به آدرس</div>
+                              <div>Address dependent</div>
                             )}
                           </div>
                         </Tooltip>
@@ -586,7 +586,7 @@ function ShoppingHeader3({
                       >
                         <ClockIcon color={titleColor} />
                         <div>
-                          آماده سازی{" "}
+                          Preparation{" "}
                           {englishNumberToPersianNumber(
                             orderPreprationDuration.value
                           )}{" "}
@@ -680,8 +680,8 @@ function ShoppingHeader3({
                           }}
                         >
                           {preparationTime === null
-                            ? "خارج از محدوده"
-                            : "در محدوده"}
+                            ? "out of range"
+                            : "In the range"}
                         </div>
                       </div>
                       <div
@@ -736,7 +736,7 @@ function ShoppingHeader3({
                             textOverflow: "ellipsis",
                           }}
                         >
-                          آدرس
+                          Address
                         </div>
                       </div>
                       <div
@@ -749,8 +749,8 @@ function ShoppingHeader3({
                         }}
                       >
                         {isAuthenticated
-                          ? "وارد کردن آدرس محل سکونت"
-                          : "ورود به پروفایل"}
+                          ? "Enter the address of the place of residence."
+                          : "Enter the profile"}
                       </div>
                     </div>
 
@@ -898,7 +898,7 @@ function ShoppingHeader3({
                       textAlign: "right",
                     }}
                   >
-                    انتخاب شعبه
+                    Choosing a branch
                   </div>
                   {maxWidth1000 ? null : (
                     <div
@@ -944,11 +944,11 @@ function ShoppingHeader3({
       <AssuranceDialog
         isOpen={UIModals[DELETE_ADDRESS_MODAL]}
         closeDialogHandler={toggleModal[DELETE_ADDRESS_MODAL]}
-        contentText="آیا مطمئن هستید که می‌خواهید آدرس ذخیره‌شده‌ی خود را حذف کنید؟"
+        contentText="Are you sure you want to delete your stored address?"
         dialogMainActions={deleteAddressHandler}
-        dialogMainActionText="حذف"
+        dialogMainActionText="Delete"
         dialogSecondActions={() => toggleModal(DELETE_ADDRESS_MODAL, false)}
-        dialogSecondActionText="انصراف"
+        dialogSecondActionText="Candifying"
         isMobile={isMobile}
       />
       <SelectAddressModal
@@ -1065,8 +1065,8 @@ function ShoppingHeader3({
                             }}
                           >
                             {preparationTime === null
-                              ? "خارج از محدوده"
-                              : "در محدوده"}
+                              ? "out of range"
+                              : "In the range"}
                           </div>
                         )}
                       </div>
@@ -1122,7 +1122,7 @@ function ShoppingHeader3({
                             textOverflow: "ellipsis",
                           }}
                         >
-                          آدرس
+                          Address
                         </div>
                       </div>
                       <div
@@ -1135,8 +1135,8 @@ function ShoppingHeader3({
                         }}
                       >
                         {isAuthenticated
-                          ? "وارد کردن آدرس محل سکونت"
-                          : "ورود به پروفایل"}
+                          ? "Enter the address of the place of residence."
+                          : "Enter the profile"}
                       </div>
                     </div>
 
@@ -1205,7 +1205,7 @@ function ShoppingHeader3({
                       whiteSpace: "nowrap",
                     }}
                   >
-                    انتخاب شعبه
+                    Choosing a branch
                   </div>
                   <div
                     style={{
@@ -1289,13 +1289,13 @@ function ShoppingHeader3({
                       className="ml-2"
                     />
                     {isBusinessOpenNow(workingHours)
-                      ? "باز . سفارش گیری تا " +
+                      ? "Open. Order up" +
                         englishNumberToPersianNumber(
                           workingDayStart.closingTime
                         )
-                      : "پیش سفارش می‌پذیریم"}{" "}
+                      : "We accept the order"}{" "}
                     {selectedAddress && preparationTime === null
-                      ? ". خارج از محدوده "
+                      ? ". out of range"
                       : ""}
                   </div>
                 </>
@@ -1319,7 +1319,7 @@ function ShoppingHeader3({
                   }}
                   className="ml-2"
                 />
-                موقتا قادر به دریافت سفارش نیستیم
+                Temporarily unable to receive an order
               </div>
             )}
             {selectedAddress ? (
@@ -1361,7 +1361,7 @@ function ShoppingHeader3({
                           }}
                         />
                       ) : preparationTime === null ? (
-                        <div>خارج از محدوده</div>
+                        <div>out of range</div>
                       ) : preparationTime.length > 1 ? (
                         preparationTime[0].mainType ===
                         preparationTime[1].mainType ? (
@@ -1369,7 +1369,7 @@ function ShoppingHeader3({
                             {englishNumberToPersianNumber(
                               preparationTime[0]?.mainValue
                             )}{" "}
-                            تا{" "}
+                            until the{" "}
                             {englishNumberToPersianNumber(
                               preparationTime[1]?.mainValue
                             ) +
@@ -1383,7 +1383,7 @@ function ShoppingHeader3({
                             ) +
                               " " +
                               preparationTime[0]?.typeName}{" "}
-                            تا{" "}
+                            until the{" "}
                             {englishNumberToPersianNumber(
                               preparationTime[1]?.mainValue
                             ) +
@@ -1430,14 +1430,14 @@ function ShoppingHeader3({
                       </svg>
 
                       {deliveryPrice === null ? (
-                        <div>خارج از محدوده</div>
+                        <div>out of range</div>
                       ) : deliveryPrice?.length > 1 ? (
                         <div style={{ color: titleColor }}>
-                          {deliveryPrice[0]} تا {deliveryPrice[1]} تومان
+                          {deliveryPrice[0]} until the{deliveryPrice[1]} Toman
                         </div>
                       ) : (
                         <div style={{ color: titleColor }}>
-                          {deliveryPrice[0]} تومان
+                          {deliveryPrice[0]} Toman
                         </div>
                       )}
                     </div>
@@ -1458,7 +1458,7 @@ function ShoppingHeader3({
                       />
                     </svg>
                     <div style={{ color: titleColor }}>
-                      آماده سازی{" "}
+                      Preparation{" "}
                       {englishNumberToPersianNumber(
                         orderPreprationDuration.value
                       )}{" "}

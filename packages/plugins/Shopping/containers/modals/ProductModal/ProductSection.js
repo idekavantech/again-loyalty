@@ -226,7 +226,7 @@ function ProductSection({
                 >
                   {priceFormatter(initial_price)}
                 </div>
-                {discountPercent ? "" : " تومان "}
+                {discountPercent ? "" : " Toman"}
               </div>
             ) : null}
 
@@ -262,7 +262,7 @@ function ProductSection({
               }
             >
               {priceFormatter(discounted_price)}{" "}
-              <span className="font-weight-normal">تومان</span>
+              <span className="font-weight-normal">Toman</span>
             </div>
           ) : null}
         </div>
@@ -337,7 +337,7 @@ function ProductSection({
                 variant="contained"
               >
                 <AddRounded className="ml-1" />
-                افزودن {lessPadding ? "" : "به سبد خرید"}
+                Add{lessPadding ? "" : "To the shopping cart"}
               </Button>
             ) : (
               <div
@@ -361,18 +361,18 @@ function ProductSection({
                   variant="contained"
                 >
                   <AddRounded className="ml-1" />
-                  افزودن به سبد خرید
+                  Add to Cart
                 </Button>
               </div>
             )}
           </div>
         ) : !isDisabled && selectedVariation && product.available ? (
           <div className="flex-1 pl-4 d-flex align-items-center mt-5">
-            <div className="pr-0">این گوناگونی ناموجود است.</div>
+            <div className="pr-0">This diversity is unavailable.</div>
           </div>
         ) : !isDisabled ? (
           <div className="flex-1 pl-4 d-flex align-items-center mt-5 pr-0">
-            <div className="pr-0">این محصول ناموجود است.</div>
+            <div className="pr-0">This product is unavailable.</div>
           </div>
         ) : null}
       </div>

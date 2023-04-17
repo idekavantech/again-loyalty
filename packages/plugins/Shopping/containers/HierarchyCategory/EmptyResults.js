@@ -11,7 +11,7 @@ export default function EmptyResults() {
         style={{ color: theme.palette.text.disabled }}
         className="u-fontWeightBold mt-4"
       >
-        نتیجه‌ای یافت نشد
+        There was no result
       </div>
     </div>
   );

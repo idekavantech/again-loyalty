@@ -12,7 +12,7 @@ function FilterModal({ onClose, isOpen, themeColor }) {
     <Modal
       onClose={onClose}
       isOpen={isOpen}
-      header={<ModalHeader onRightClick={onClose} title="فیلتر کردن" />}
+      header={<ModalHeader onRightClick={onClose} title="Filtering" />}
       body={
         <div className="c-modal-body mt-2">
           <Filters themeColor={themeColor} callback={onClose} />

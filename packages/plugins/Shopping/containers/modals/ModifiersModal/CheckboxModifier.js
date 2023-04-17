@@ -81,7 +81,7 @@ export default function CheckboxModifier({
           </div>
         </div>
       ) : (
-        <Tooltip placement="top" title="سفارش نمی‌پذیریم.">
+        <Tooltip placement="top" title="We do not accept the order.">
           <div className="d-flex align-items-start">
             <Checkbox
               disabled={
@@ -181,7 +181,7 @@ export default function CheckboxModifier({
             />{" "}
           </div>
         ) : (
-          "رایگان"
+          "Free"
         )}
       </div>
     </div>

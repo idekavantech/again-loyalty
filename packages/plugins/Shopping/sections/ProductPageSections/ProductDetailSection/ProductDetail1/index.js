@@ -440,7 +440,7 @@ export function ProductDetail({
       >
         <div className="p-2">
           <div className="d-flex mb-2 align-items-center u-fontWeightBold">
-            آیتم افزوده شده سبد خرید
+            The added item of the shopping cart
             <ShoppingCartIcon fontSize="small" className="mr-1" />
           </div>
           {orders &&
@@ -464,7 +464,7 @@ export function ProductDetail({
               className="flex-1"
               onClick={() => setOpen(false)}
             >
-              بستن
+              to close
             </Button>
             <Button
               variant="contained"
@@ -475,7 +475,7 @@ export function ProductDetail({
                 router.push(`${urlPrefix}/checkout/cart`);
               }}
             >
-              دیدن سبد خرید
+              See shopping cart
             </Button>
           </div>
         </div>

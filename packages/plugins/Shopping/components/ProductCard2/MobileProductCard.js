@@ -216,7 +216,7 @@ const MobileProductCard = ({
                       ? deal.main_image_thumbnail_url
                       : deal?.default_variation?.main_image_thumbnail_url
                   }
-                  alt="عکس محصول"
+                  alt="Product photo"
                 />
               </div>
               <div className="overflow-hidden d-flex flex-column h-100 w-100">
@@ -313,7 +313,7 @@ const MobileProductCard = ({
                           padding: "4px 12px",
                         }}
                       >
-                        اتمام موجودی
+                        Completion of inventory
                       </Button>
                     )
                   ) : null}
@@ -454,7 +454,7 @@ const MobileProductCard = ({
                               );
                               const modifiersName = _orderItem?.modifiers
                                 ?.map((modifier) => modifier.title)
-                                .join("، ");
+                                .join("،");
 
                               return (
                                 <div
@@ -534,7 +534,7 @@ const MobileProductCard = ({
             ? customizedOrderItems?.map((_orderItem) => {
                 const modifiersName = _orderItem?.modifiers
                   ?.map((modifier) => modifier.title)
-                  .join("، ");
+                  .join("،");
                 const numberOfCustomizedOrderItems =
                   customizedOrderItems?.reduce((a, b) => a + b?.count, 0);
                 return (
@@ -567,7 +567,7 @@ const MobileProductCard = ({
                           fontSize: 12,
                         }}
                       >
-                        شخصی‌سازی شده
+                        Personalized
                       </div>
                     </div>
                     <div

@@ -148,7 +148,7 @@ function WalletCharge({
                       fontFamily: "dana",
                     }}
                   >
-                    موجودی کیف پول
+                    Wallet inventory
                   </p>
                   <p
                     style={{
@@ -168,7 +168,7 @@ function WalletCharge({
                         fontFamily: "dana",
                       }}
                     >
-                      تومان
+                      Toman
                     </span>
                   </p>
                 </div>
@@ -199,7 +199,7 @@ function WalletCharge({
             <Divider className="mt-5" />
             <div className="mt-5">
               <p style={{ fontSize: "16px", fontWeight: "600" }}>
-                افزایش موجودی
+                Increased inventory
               </p>
               <div className="py-5 d-flex justify-content-between">
                 {chargeWalletCard.map((item) => (
@@ -223,13 +223,13 @@ function WalletCharge({
                     >
                       {priceFormatter(item.amount)}
                     </span>
-                    تومان
+                    Toman
                   </div>
                 ))}
               </div>
               <input
                 className="pr-3 py-2 "
-                placeholder="وارد کردن مبلغ دلخواه"
+                placeholder="Enter the desired amount"
                 onChange={(e) => {
                   setAmountCharge(e.target.value);
                 }}
@@ -261,7 +261,7 @@ function WalletCharge({
                 }}
                 onClick={paymentSubmit}
               >
-                پرداخت
+                the payment
               </div>
             </div>
           </Paper>

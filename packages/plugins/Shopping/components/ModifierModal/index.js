@@ -292,9 +292,9 @@ function ModifiersModal({
             hasError = true;
             setErrors({
               ...errors,
-              [modifierSet.id]: `شما قادر به انتخاب حداکثر ${englishNumberToPersianNumber(
+              [modifierSet.id]: `You are able to choose the maximum${englishNumberToPersianNumber(
                 modifierSet.maximum_choice
-              )} آیتم هستید.`,
+              )} Are the item.`,
             });
           }
           if (
@@ -304,9 +304,9 @@ function ModifiersModal({
             hasError = true;
             setErrors({
               ...errors,
-              [modifierSet.id]: `باید حداقل ${englishNumberToPersianNumber(
+              [modifierSet.id]: `Should be at least${englishNumberToPersianNumber(
                 modifierSet.minimum_choice
-              )} آیتم را انتخاب کنید.`,
+              )} Select the item.`,
             });
           }
         });
@@ -498,10 +498,10 @@ function ModifiersModal({
                                   }}
                                 >
                                   {modifierSet.minimum_choice > 0
-                                    ? "انتخاب اجباری -"
-                                    : "انتخاب اختیاری -"}{" "}
+                                    ? "Mandatory choice-"
+                                    : "Optional selection-"}{" "}
                                   {modifierSet.minimum_choice
-                                    ? `حداقل ${englishNumberToPersianNumber(
+                                    ? `At least${englishNumberToPersianNumber(
                                         modifierSet.minimum_choice
                                       )}`
                                     : null}
@@ -510,7 +510,7 @@ function ModifiersModal({
                                     ? " - "
                                     : ""}
                                   {modifierSet.maximum_choice
-                                    ? `حداکثر ${englishNumberToPersianNumber(
+                                    ? `Maximum${englishNumberToPersianNumber(
                                         modifierSet.maximum_choice
                                       )}`
                                     : null}
@@ -635,7 +635,7 @@ function ModifiersModal({
                     }}
                     className="py-2 d-flex align-items-center justify-content-center"
                   >
-                    مجموع انتخاب شما: {priceFormatter(finalPrice)}{" "}
+                    The sum of your choice: {priceFormatter(finalPrice)}{" "}
                     <TomanIcon
                       className="mr-1"
                       width={21}
@@ -737,7 +737,7 @@ function ModifiersModal({
                             closeModalHandler();
                           }}
                         >
-                          حذف
+                          Delete
                         </Button>
                       ) : null}
                       <Button
@@ -764,8 +764,8 @@ function ModifiersModal({
                         }}
                       >
                         {selectedCustomizedOrderItem
-                          ? "اعمال تغییر"
-                          : "افزودن به سبد خرید"}
+                          ? "The deeds of change"
+                          : "Add to Cart"}
                       </Button>
                     </div>
                   </div>
@@ -821,7 +821,7 @@ function ModifiersModal({
                     <Chip
                       className="mr-auto ml-1"
                       size="small"
-                      label="کپی شد"
+                      label="Copied"
                     />
                   </div>
                 ) : null}
@@ -863,7 +863,7 @@ function ModifiersModal({
                         layout="fill"
                         className={`object-fit-cover`}
                         src={image}
-                        alt={`محصول ${deal?.title}`}
+                        alt={`the product${deal?.title}`}
                       />
                     ))}
                   </Slider>
@@ -1011,7 +1011,7 @@ function ModifiersModal({
                             <Chip
                               className="mr-auto ml-1"
                               size="small"
-                              label="کپی شد"
+                              label="Copied"
                             />
                           ) : null}
                           <CopyToClipboard
@@ -1091,10 +1091,10 @@ function ModifiersModal({
                                         }}
                                       >
                                         {modifierSet.minimum_choice > 0
-                                          ? "انتخاب اجباری -"
-                                          : "انتخاب اختیاری -"}{" "}
+                                          ? "Mandatory choice-"
+                                          : "Optional selection-"}{" "}
                                         {modifierSet.minimum_choice
-                                          ? `حداقل ${englishNumberToPersianNumber(
+                                          ? `At least${englishNumberToPersianNumber(
                                               modifierSet.minimum_choice
                                             )}`
                                           : null}
@@ -1103,7 +1103,7 @@ function ModifiersModal({
                                           ? " - "
                                           : ""}
                                         {modifierSet.maximum_choice
-                                          ? `حداکثر ${englishNumberToPersianNumber(
+                                          ? `Maximum${englishNumberToPersianNumber(
                                               modifierSet.maximum_choice
                                             )}`
                                           : null}
@@ -1239,7 +1239,7 @@ function ModifiersModal({
                         }}
                         className="py-2 d-flex align-items-center justify-content-center"
                       >
-                        مجموع انتخاب شما: {priceFormatter(finalPrice)}{" "}
+                        The sum of your choice: {priceFormatter(finalPrice)}{" "}
                         <TomanIcon
                           className="mr-1"
                           width={21}
@@ -1280,7 +1280,7 @@ function ModifiersModal({
                             >
                               <Tooltip
                                 placement="top"
-                                title={!isAvailable ? "اتمام موجودی" : ""}
+                                title={!isAvailable ? "Completion of inventory" : ""}
                               >
                                 <AddIcon
                                   style={{ fontSize: 18 }}
@@ -1345,7 +1345,7 @@ function ModifiersModal({
                                 closeModalHandler();
                               }}
                             >
-                              حذف
+                              Delete
                             </Button>
                           ) : null}
                           <Button
@@ -1371,8 +1371,8 @@ function ModifiersModal({
                             }}
                           >
                             {selectedCustomizedOrderItem
-                              ? "اعمال تغییر"
-                              : "افزودن به سبد خرید"}
+                              ? "The deeds of change"
+                              : "Add to Cart"}
                           </Button>
                         </div>
                       </div>
@@ -1388,7 +1388,7 @@ function ModifiersModal({
                         fontWeight: 400,
                       }}
                     >
-                      موقتا قادر به سفارش‌گیری نیستیم.
+                      Temporarily unable to order.
                     </Button>
                   )}
                 </div>
