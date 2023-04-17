@@ -169,12 +169,12 @@ function AdminHeaderMenu({
       : []),
     ...(!hasMultiBranchPlugin || isDobarePanel
       ? [
-          // {
-          //   text: "Orders",
-          //   url: `${urlPrefix}${SHOPPING_PLUGIN_URL}/orders`,
-          //   icon: "NewOrdersMenuIcon",
-          //   section: YOUR_BUSINESS.value,
-          // },
+          {
+            text: "Orders",
+            url: `${urlPrefix}${SHOPPING_PLUGIN_URL}/orders`,
+            icon: "NewOrdersMenuIcon",
+            section: YOUR_BUSINESS.value,
+          },
         ]
       : []),
     ...(!hasMultiBranchPlugin || isDobarePanel
@@ -450,63 +450,63 @@ function AdminHeaderMenu({
           },
         ]
       : []),
-    // {
-    //   text: "Settings",
-    //   isSubLinksOpen: false,
-    //   subLinks: [
-    //     {
-    //       text: "Original information",
-    //       url: `setting`,
-    //     },
-    //     {
-    //       text: "Survey settings",
-    //       [INCLUDED_WEBAPPS_ONLY_KEY]: [DOBARE_WEBAPP_CONSTANT],
-    //       url: `/crm/survey`,
-    //     },
-    //     {
-    //       text: "Fonts and colors",
-    //       url: `appearance/theme`,
-    //       needsShoppingSupport: false,
-    //       [INCLUDED_WEBAPPS_ONLY_KEY]: [VITRIN_WEBAPP_CONSTANT],
-    //     },
-    //     ...(!hasMultiBranchPlugin
-    //       ? [
-    //           {
-    //             text: "Ordering settings",
-    //             url: `${SHOPPING_PLUGIN_URL}/settings/general`,
-    //             needsShoppingSupport: false,
-    //             [INCLUDED_WEBAPPS_ONLY_KEY]: [
-    //               VITRIN_WEBAPP_CONSTANT,
-    //               DARAMAD_WEBAPP_CONSTANT,
-    //             ],
-    //           },
-    //           {
-    //             text: "Peaks",
-    //             url: `${SHOPPING_PLUGIN_URL}/settings/couriers`,
-    //             needsShoppingSupport: false,
-    //             [INCLUDED_WEBAPPS_ONLY_KEY]: [VITRIN_WEBAPP_CONSTANT],
-    //           },
-    //         ]
-    //       : []),
-    //     {
-    //       text: "The floating button",
-    //       url: "fab/settings",
-    //       needsShoppingSupport: false,
-    //       priority: -1,
-    //       [INCLUDED_WEBAPPS_ONLY_KEY]: [VITRIN_WEBAPP_CONSTANT],
-    //     },
-    //     {
-    //       text: "Tags",
-    //       url: `tags`,
-    //       needsShoppingSupport: true,
-    //       [INCLUDED_WEBAPPS_ONLY_KEY]: [VITRIN_WEBAPP_CONSTANT],
-    //     },
-    //   ],
-    //   url: "",
-    //   onClick: () => {},
-    //   icon: "NewSettingsMenuIcon",
-    //   section: OTHER.value,
-    // },
+    {
+      text: "Settings",
+      isSubLinksOpen: false,
+      subLinks: [
+        {
+          text: "General",
+          url: `setting`,
+        },
+        // {
+        //   text: "Survey settings",
+        //   [INCLUDED_WEBAPPS_ONLY_KEY]: [DOBARE_WEBAPP_CONSTANT],
+        //   url: `/crm/survey`,
+        // },
+        {
+          text: "Fonts and colors",
+          url: `appearance/theme`,
+          needsShoppingSupport: false,
+          [INCLUDED_WEBAPPS_ONLY_KEY]: [VITRIN_WEBAPP_CONSTANT],
+        },
+        ...(!hasMultiBranchPlugin
+          ? [
+              {
+                text: "Ordering settings",
+                url: `${SHOPPING_PLUGIN_URL}/settings/general`,
+                needsShoppingSupport: false,
+                [INCLUDED_WEBAPPS_ONLY_KEY]: [
+                  VITRIN_WEBAPP_CONSTANT,
+                  DARAMAD_WEBAPP_CONSTANT,
+                ],
+              },
+              {
+                text: "Peaks",
+                url: `${SHOPPING_PLUGIN_URL}/settings/couriers`,
+                needsShoppingSupport: false,
+                [INCLUDED_WEBAPPS_ONLY_KEY]: [VITRIN_WEBAPP_CONSTANT],
+              },
+            ]
+          : []),
+        {
+          text: "The floating button",
+          url: "fab/settings",
+          needsShoppingSupport: false,
+          priority: -1,
+          [INCLUDED_WEBAPPS_ONLY_KEY]: [VITRIN_WEBAPP_CONSTANT],
+        },
+        {
+          text: "Tags",
+          url: `tags`,
+          needsShoppingSupport: true,
+          [INCLUDED_WEBAPPS_ONLY_KEY]: [VITRIN_WEBAPP_CONSTANT],
+        },
+      ],
+      url: "",
+      onClick: () => {},
+      icon: "NewSettingsMenuIcon",
+      section: OTHER.value,
+    },
 
     // {
     //   text: "Marketing channels",
