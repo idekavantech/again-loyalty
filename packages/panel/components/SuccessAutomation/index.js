@@ -131,7 +131,7 @@ const SuccessAutomation = ({
               fontWeight: 500,
             }}
           >
-            چطور تبدیل به یک سایت موفق شوید؟
+            How to become a successful site?
           </h2>
         </div>
         <div
@@ -157,8 +157,8 @@ const SuccessAutomation = ({
                 lineHeight: desktopMatches ? "24px" : "20px",
               }}
             >
-              تبریک هم اکنون یک سایت حرفه‌ای در اختیار دارید! تمام گام های تبدیل
-              به یک سایت موفق را به طور کامل انجام دادید.
+              Congratulations now have a professional site! All the steps of conversion
+              To a successful site you have done thoroughly.
             </p>
             <LazyImage
               className="mr-2"
@@ -176,9 +176,9 @@ const SuccessAutomation = ({
               lineHeight: desktopMatches ? "24px" : "20px",
             }}
           >
-            اگر می‌خواهید در مدت کوتاه تری در فروش آنلاین موفق شوید،از چک لیست
-            زیر می‌توانید کمک بگیرید. در این لیست، مهم‌ترین گام‌هایی که سایت‌های
-            پرفروش دیگر طی کرده‌اند، آورده شده است.
+            If you want to succeed in online sales in a shorter time, from checklist
+            You can get help below. In this list, the most important steps that sites
+            The other best -selling has been brought.
           </p>
         )}
 
@@ -220,8 +220,8 @@ const SuccessAutomation = ({
             >
               <span>
                 {isOpenCollapses.showStepSlides
-                  ? "پنهان کردن گام‌های راهنما"
-                  : "نمایش مجدد گام‌های راهنما"}
+                  ? "Hide guidance steps"
+                  : "Re -display guide steps"}
               </span>
               <div
                 className="d-flex align-items-center justify-content-center mr-2"

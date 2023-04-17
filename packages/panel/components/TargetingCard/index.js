@@ -38,7 +38,7 @@ const TargetingCard = ({
             lineHeight: "32px",
           }}
         >
-          پیشرفت در هدف
+          Progress in the target
         </p>
       </div>
       <div className="d-flex justify-content-between align-items-end">
@@ -47,28 +47,28 @@ const TargetingCard = ({
             className="mt-3"
             style={{ fontSize: desktopMatches ? 16 : 14, fontWeight: 500 }}
           >
-            هدف :{" "}
+            Target:{" "}
             <span
               style={{ fontWeight: 400, fontSize: desktopMatches ? 14 : 12 }}
             >
               {" "}
               {target.type == "order_count"
-                ? `${englishNumberToPersianNumber(target?.value)} سفارش`
-                : `${priceFormatter(target?.value)} تومان`}
+                ? `${englishNumberToPersianNumber(target?.value)} Order`
+                : `${priceFormatter(target?.value)} Toman`}
             </span>
           </p>
           <p
             className="mt-3"
             style={{ fontSize: desktopMatches ? 16 : 14, fontWeight: 500 }}
           >
-            وضعیت :{" "}
+            Condition:{" "}
             <span
               style={{ fontWeight: 400, fontSize: desktopMatches ? 14 : 12 }}
             >
               {" "}
               {target.type == "order_count"
-                ? `${englishNumberToPersianNumber(target?.current_value)} سفارش`
-                : `${priceFormatter(target?.current_value)} تومان`}
+                ? `${englishNumberToPersianNumber(target?.current_value)} Order`
+                : `${priceFormatter(target?.current_value)} Toman`}
             </span>
           </p>
         </div>
@@ -94,8 +94,8 @@ const TargetingCard = ({
           onClick={() => pushParamsToUrl(ADMIN_TARGETING_MODAL)}
         >
           {Object.keys(target).length == 0
-            ? "تعریف هدف جدید"
-            : "مشاهده یا تغییر هدف "}{" "}
+            ? "Define a new goal"
+            : "Observation or change of target"}{" "}
         </button>
         <p
           className="d-flex align-items-center"
@@ -104,11 +104,11 @@ const TargetingCard = ({
           <ChevronRightRoundedIcon style={{ fontSize: 20 }} />
           {targetStartDate && targetStartDate != "Invalid Date" ? (
             <span>
-              {targetStartDate} تا {targetEndDate}
+              {targetStartDate} until the{targetEndDate}
             </span>
           ) : (
             <span>
-              <strong>بازه زمانی :</strong> تعیین نشده
+              <strong>period:</strong> Not specified
             </span>
           )}{" "}
           <KeyboardArrowLeftRoundedIcon style={{ fontSize: 20 }} />

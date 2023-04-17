@@ -90,14 +90,14 @@ const SuccessMessageModal = ({
               }}
               onClick={next}
             >
-              {nextTitle || "ادامه تغییرات"}
+              {nextTitle || "Continue changes"}
             </Button>
             <Button
               className="dashboard_buttons mt-2"
               style={{ color: "#0050FF" }}
               onClick={returnToDashboard}
             >
-              {returnToDashboardText || "بازگشت به داشبورد"}
+              {returnToDashboardText || "Back to the dashboard"}
             </Button>
           </div>
         ) : (
@@ -106,7 +106,7 @@ const SuccessMessageModal = ({
             style={{ color: "#0050FF" }}
             onClick={next}
           >
-            ادامه
+            Continuation
           </Button>
         )}
       </DialogContent>

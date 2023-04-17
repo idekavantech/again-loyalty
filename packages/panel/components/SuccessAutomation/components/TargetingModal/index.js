@@ -48,8 +48,8 @@ const useStyle = makeStyles(() => ({
 }));
 
 const options = [
-  { id: 0, title: "تعداد سفارش", type: "order_count" },
-  { id: 1, title: "میزان فروش", type: "order_total" },
+  { id: 0, title: "Number of order", type: "order_count" },
+  { id: 1, title: "sales amount", type: "order_total" },
 ];
 const TargetingModal = ({
   isOpen,
@@ -142,7 +142,7 @@ const TargetingModal = ({
             >
               <CheckCircleOutlineIcon style={{ color: "#2E7D32" }} />
               <p className="mr-3" style={{ color: "#1B5E20", fontSize: 12 }}>
-                هدف شما با موفقیت تنظیم شد.
+                Your goal was successfully set up.
               </p>
             </div>
             <div className="p-2 d-md-flex justify-content-between align-items-center">
@@ -153,13 +153,13 @@ const TargetingModal = ({
                     lineHeight: desktopMatches ? "24px" : "20px",
                   }}
                 >
-                  <strong>هدف:</strong>{" "}
+                  <strong>Target:</strong>{" "}
                   <span>
                     {selectedIndex == 1
-                      ? ` ${priceFormatter(target?.value || 0)} تومان`
+                      ? ` ${priceFormatter(target?.value || 0)} Toman`
                       : `${englishNumberToPersianNumber(
                           target?.value || 0
-                        )}  عدد`}{" "}
+                        )}  number`}{" "}
                     {}
                   </span>
                 </p>
@@ -170,12 +170,12 @@ const TargetingModal = ({
                     lineHeight: desktopMatches ? "24px" : "20px",
                   }}
                 >
-                  <strong>وضعیت پیشرفت شما:</strong>
+                  <strong>The status of your progress:</strong>
                   {selectedIndex == 1
-                    ? ` ${priceFormatter(target?.current_value || 0)} تومان`
+                    ? ` ${priceFormatter(target?.current_value || 0)} Toman`
                     : `${englishNumberToPersianNumber(
                         target?.current_value || 0
-                      )}  عدد`}
+                      )}  number`}
                 </p>
               </div>
 
@@ -198,11 +198,11 @@ const TargetingModal = ({
                   <ChevronRightRoundedIcon style={{ fontSize: 20 }} />
                   {targetStartDate ? (
                     <span>
-                      {targetStartDate} تا {targetEndDate}
+                      {targetStartDate} until the{targetEndDate}
                     </span>
                   ) : (
                     <span>
-                      <strong>بازه زمانی :</strong> تعیین نشده
+                      <strong>period:</strong> Not specified
                     </span>
                   )}{" "}
                   <KeyboardArrowLeftRoundedIcon style={{ fontSize: 20 }} />
@@ -221,7 +221,7 @@ const TargetingModal = ({
                 setTargetSet(false);
               }}
             >
-              تایید
+              Confirm
             </Button>
             <Button
               className="w-100 u-border-radius-8 mt-1"
@@ -231,7 +231,7 @@ const TargetingModal = ({
               size="medium"
               onClick={() => setTargetSet(false)}
             >
-              ویرایش مجدد هدف
+              Re -edit the target
             </Button>
           </>
         ) : (
@@ -243,7 +243,7 @@ const TargetingModal = ({
           >
             <div className="d-flex align-items-center">
               <h2 style={{ fontWeight: 400 }}>
-                شاخص هدف گذاری مورد نظر شما چیست؟
+                What is your targeting index?
               </h2>
               <ClickAwayListener onClickAway={() => setIsOpenTooltip(false)}>
                 <Tooltip
@@ -257,9 +257,9 @@ const TargetingModal = ({
                   arrow
                   title={
                     <p className="my-2">
-                      در این قسمت مشخص می کنید که می‌خواهید رشد خود را بر اساس
-                      کدام شاخص اندازه‌گیری کنید، می‌توانید بر تعدادسفارش یا
-                      میزان فروش تمرکز کنید.
+                      In this section you specify that you want your growth based on
+                      Which index to measure, you can do on your number or
+                      The amount of sales focus.
                     </p>
                   }
                   open={isOpenTooltip}
@@ -360,7 +360,7 @@ const TargetingModal = ({
                 )}
               </Popper>
             </div>
-            <p className="mt-3">ابتدا بازه زمانی مورد نظر را انتخاب کنید:</p>
+            <p className="mt-3">Choose the desired timeframe first:</p>
             <div
               className="crmReportsDatePicker d-flex justify-content-center align-items-center"
               style={{
@@ -377,8 +377,8 @@ const TargetingModal = ({
                 initialStartDate={fromDate}
                 initialEndDate={toDate}
                 stateDateWrapper={moment}
-                startDatePlaceholderText="تاریخ شروع"
-                endDatePlaceholderText="تاریخ پایان"
+                startDatePlaceholderText="start date"
+                endDatePlaceholderText="The end date"
                 onFocusChange={(focusedInput) => setFocused({ focusedInput })}
                 onDatesChange={({ startDate, endDate }) => {
                   if (startDate) setFromDate(startDate);
@@ -395,7 +395,7 @@ const TargetingModal = ({
             </div>
 
             <p className="mt-3">
-              متناسب با این بازه زمانی، هدف خود را وارد کنید.
+              Includes your target with this time interval.
             </p>
             <style
               dangerouslySetInnerHTML={{
@@ -417,27 +417,27 @@ const TargetingModal = ({
               value={
                 currentTarget ? englishNumberToPersianNumber(currentTarget) : ""
               }
-              placeholder="مثلا ۵۰"
+              placeholder="For example"
               InputProps={{
                 endAdornment: (
                   <div
                     className="ml-4"
                     style={{ color: "rgba(0, 0, 0, 0.54)" }}
                   >
-                    {options[selectedIndex].title == "تعداد سفارش"
-                      ? "سفارش"
-                      : "تومان"}
+                    {options[selectedIndex].title == "Number of order"
+                      ? "Order"
+                      : "Toman"}
                   </div>
                 ),
               }}
-              label="هدف مورد نظر"
+              label="intended purpose"
               onKeyPress={(event) => {
                 if (event.key === "Enter") send();
               }}
             />
             <p className="mt-3" style={{ fontSize: 12, lineHeight: "20px" }}>
-              در طول دوره میتوانید مقدار هدف خود را در صورت نیاز تغییر دهید.
-              پیشرفت در هدف در قسمت داشبورد به شما نمایش داده می‌شود.
+              During the period you can change your target value if required.
+              The progress in the target is displayed in the dashboard.
             </p>
 
             {isDisable ? (
@@ -451,7 +451,7 @@ const TargetingModal = ({
                   onClick={() => setIsDisable(false)}
                 >
                   <EditRoundedIcon style={{ fontSize: 20 }} />
-                  <span className="mr-2"> ویرایش هدف</span>
+                  <span className="mr-2"> Target editing</span>
                 </Button>
                 <Button
                   className="w-100 u-border-radius-8 mt-2"
@@ -461,7 +461,7 @@ const TargetingModal = ({
                   size={desktopMatches ? "large" : "medium"}
                   onClick={onClose}
                 >
-                  بازگشت
+                  coming back
                 </Button>
               </>
             ) : (
@@ -490,7 +490,7 @@ const TargetingModal = ({
                   )
                 }
               >
-                تنظیم هدف
+                Target adjustment
               </Button>
             )}
           </div>

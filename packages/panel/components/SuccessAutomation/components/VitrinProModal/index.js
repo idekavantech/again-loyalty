@@ -37,7 +37,7 @@ const VitrinProModal = ({
             lineHeight: "32px",
           }}
         >
-          ویترین‌پرو چیست؟
+          What is a showcase?
         </h2>
         <div className="w-100 mt-2 d-flex justify-content-center">
           <LazyImage
@@ -53,15 +53,15 @@ const VitrinProModal = ({
             lineHeight: desktopMatches ? "24px" : "20px",
           }}
         >
-          متخصصین حوزه طراحی، محتوا و دیجیتال مارکتینگ ویترین:
+          Design, Content and Digital Marketing Specialists Showcase:
           <br />
-          -خدمات راه‌اندازی
+          -Launch Services
           <br />
-          -طراحی حرفه‌ای برای صفحات سایت
+          -Professional design for site pages
           <br />
-          -مشاوره دیجیتال مارکتینگ برای افزایش فروش سایت <br />و خدمات سئوی
-          پیشرفته را برای مشتریان ویترین و به صورت اختصاصی بر اساس نیازهای هر
-          کسب‌وکار انجام می‌دهند.
+          -Digital Marketing Advice to Increase Site Sales<br />And SEO services
+          Advanced for customers showcase and exclusively based on the needs of each
+          They do business.
         </p>
         <div className="d-flex justify-content-between">
           <Button
@@ -74,7 +74,7 @@ const VitrinProModal = ({
             size={desktopMatches ? "large" : "small"}
             onClick={onClose}
           >
-            بازگشت
+            coming back
           </Button>
           <Button
             className="flex-1 mr-2 mt-2 dashboard_buttons"
@@ -86,7 +86,7 @@ const VitrinProModal = ({
             size={desktopMatches ? "large" : "small"}
             onClick={subminConsulationRequest}
           >
-            مشاوره راه‌اندازی می‌خواهم
+            I want to set up advice
           </Button>
         </div>
         <p
@@ -96,7 +96,7 @@ const VitrinProModal = ({
             lineHeight: desktopMatches ? "20px" : "10px",
           }}
         >
-          پس از ثبت درخواست از طرف ویترین پرو با شما تماس گرفته‌خواهد‌شد.
+          You will contact you after submitting the request by the Peruvian showcase.
         </p>
       </DialogContent>
     </Dialog>

@@ -2,22 +2,22 @@ import { uniqueId } from "lodash";
 import SetupItems from "./components/SetupItems";
 
 const statusSetupItems = [
-  { id: uniqueId(), title: "غیرفعال" },
-  { id: uniqueId(), title: "درحال پردازش" },
-  { id: uniqueId(), title: "فعال" },
+  { id: uniqueId(), title: "Inactive" },
+  { id: uniqueId(), title: "Processing" },
+  { id: uniqueId(), title: "active" },
 ];
 
 const statusSetupItem = [
   // {
   //   id: uniqueId(),
-  //   title: "وضعیت دامنه",
+  //   title: "Domain status",
   //   link: "/documents",
   //   type: "domain",
   //   statusSetupItems,
   // },
   {
     id: uniqueId(),
-    title: "وضعیت درگاه پرداخت",
+    title: "The status of the payment gateway",
     link: "/gate_away",
     type: "gateway",
     statusSetupItems,

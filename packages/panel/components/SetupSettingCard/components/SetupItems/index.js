@@ -30,9 +30,9 @@ const SetupItems = ({ item, urlPrefix, successState }) => {
         >
           {successState[item.type]
             ? successState[item.type] == 1
-              ? "در حال پردازش"
-              : "فعال"
-            : "غیرفعال"}
+              ? "Processing"
+              : "active"
+            : "Inactive"}
         </button>
       </div>
       <Link href={`${urlPrefix}/${item.link}`}>
@@ -42,7 +42,7 @@ const SetupItems = ({ item, urlPrefix, successState }) => {
           color="primary"
           disabled={successState[item.type]}
         >
-          اتصال
+          Connection
         </Button>
       </Link>
     </div>

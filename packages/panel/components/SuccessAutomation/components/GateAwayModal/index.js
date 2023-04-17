@@ -23,7 +23,7 @@ const GateAwayModal = ({isOpen, onClose}) => {
       >
         <DialogContent className="p-3 p-md-4 w-100 u-border-radius-8">
           <h1 style={{fontSize: 20, fontWeight: 500}}>
-            درگاه‌های قابل اتصال به ویترین
+            Showcase portable ports
           </h1>
           <div
               className="mt-5"
@@ -36,12 +36,12 @@ const GateAwayModal = ({isOpen, onClose}) => {
             <div className="pb-2" style={{borderBottom: "1px solid #DADADA"}}>
               <div>
                 <p style={{fontSize: 16, lineHeight: "28px"}}>
-                  درگاه‌های مستقیم
+                  Direct ports
                 </p>
                 <p className="mt-2">
-                  کارمزدی از تراکنش نمی‌گیرند و تسویه حساب به‌صورت آنی است و
-                  نیازمند اخذ اینماد هستند. فرآیند دریافت درگاه مستقیم زمان‌بر است
-                  و با شرط تکمیل مدارک گاهی تا یک ماه طول می‌کشد.
+                  The fees do not receive the transaction and the settlement is instant and
+                  Need to get these. The process of receiving the direct port is time -consuming
+                  And it takes up to one month with the condition of completing the documents.
                 </p>
               </div>
               <div className="d-flex justify-content-between mt-2">
@@ -54,7 +54,7 @@ const GateAwayModal = ({isOpen, onClose}) => {
                         style={{color: "#0050FF"}}
                         rel="noreferrer"
                     >
-                      درگاه پرداخت ملت
+                      Nation's payment door
                     </a>
                   </p>
                   <p className="mt-2">
@@ -65,7 +65,7 @@ const GateAwayModal = ({isOpen, onClose}) => {
                         style={{color: "#0050FF"}}
                         rel="noreferrer"
                     >
-                      درگاه سامان کیش{" "}
+                      Saman Kish{" "}
                     </a>
                   </p>
                 </div>
@@ -94,13 +94,13 @@ const GateAwayModal = ({isOpen, onClose}) => {
             >
               <div>
                 <p style={{fontSize: 16, lineHeight: "28px"}}>
-                  درگاه‌های واسط{" "}
+                  Intermediate ports{" "}
                 </p>
                 <p className="mt-2">
-                  درصدی کارمزد از هر تراکنش تا سقف مشخص دریافت می‌کنند و حداکثر پس
-                  از ۲۴ ساعت با حساب شما تسویه خواهد شد. فرآیند اخذ این درگاه‌ها
-                  ساده‌تر است، اغلب نیازمند اخذ اینماد هستند و ۳ الی ۷ روز کاری به
-                  طول می‌انجامد.
+                  The percentage of fees receives from each transaction to the specified ceiling and maximum
+                  Will be settled with your account from 2 hours. Process
+                  Simple, often they need to be obtained and 2 to 4 business days to
+                  It takes a long time.
                 </p>
               </div>
               <div className="w-100 d-flex mt-2 justify-content-between">
@@ -113,7 +113,7 @@ const GateAwayModal = ({isOpen, onClose}) => {
                         rel="noreferrer"
                         style={{color: "#0050FF"}}
                     >
-                      درگاه زیبال
+                      Zibal
                     </a>
                   </p>
                   <p className="mt-1">
@@ -124,9 +124,9 @@ const GateAwayModal = ({isOpen, onClose}) => {
                         rel="noreferrer"
                         style={{color: "#0050FF"}}
                     >
-                      درگاه زرین پال
+                      Zarrin Pal Port
                     </a>
-                    (بسته نقره‌ای به اینماد نیاز ندارد)
+                    (Silver package does not require this)
                   </p>
                   <p className="mt-1">
                     ۳-{" "}
@@ -137,7 +137,7 @@ const GateAwayModal = ({isOpen, onClose}) => {
                         style={{color: "#0050FF"}}
                     >
                       {" "}
-                      درگاه آیدی پی
+                      IDP
                     </a>
                   </p>
                   <p className="mt-1">
@@ -149,7 +149,7 @@ const GateAwayModal = ({isOpen, onClose}) => {
                         style={{color: "#0050FF"}}
                     >
                       {" "}
-                      درگاه سیزپی
+                      Siegie port
                     </a>
                   </p>
                 </div>
@@ -192,7 +192,7 @@ const GateAwayModal = ({isOpen, onClose}) => {
                 onClick={onClose}
                 size={desktopMatches ? "large" : "small"}
             >
-              بازگشت
+              coming back
             </Button>
           </div>
         </DialogContent>

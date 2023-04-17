@@ -24,8 +24,8 @@ const BusinessInfoModal = ({ isOpen, onClose, _updateBusiness }) => {
           },
         },
       },
-      "اطلاعات با موفقیت ذخیره شد",
-      "خطا در ثبت اطلاعات",
+      "Information was successfully stored",
+      "Information Error",
       onClose
     );
   };
@@ -49,7 +49,7 @@ const BusinessInfoModal = ({ isOpen, onClose, _updateBusiness }) => {
             padding: "0 8px 0px 0",
           }}
           classNameIcon="d-none"
-          title="تکمیل اطلاعات"
+          title="Complete the information"
         />
       }
       body={
@@ -59,7 +59,7 @@ const BusinessInfoModal = ({ isOpen, onClose, _updateBusiness }) => {
             backgroundColor: "#F6F6F7",
           }}
         >
-          <p>برای ورود به پنل کاربری ابتدا اطلاعات زیر را تکمیل کنید.</p>
+          <p>To log in to the user panel first complete the information below.</p>
           <div className="w-100 d-flex flex-col flex-md-row mt-4 justify-content-between">
             <div className="w-md-50 pl-md-2">
               <Input
@@ -69,8 +69,8 @@ const BusinessInfoModal = ({ isOpen, onClose, _updateBusiness }) => {
                 style={{ minWidth: 215 }}
                 className="mt-4 w-100"
                 value={businessInfo.first_name}
-                label="نام"
-                placeholder="مریم"
+                label="name"
+                placeholder="Mary"
               />
             </div>
             <div className="w-md-50 pr-md-2">
@@ -81,8 +81,8 @@ const BusinessInfoModal = ({ isOpen, onClose, _updateBusiness }) => {
                 className="mt-4 w-100"
                 style={{ minWidth: 215 }}
                 value={businessInfo.last_name}
-                label="نام خانوادگی"
-                placeholder="طاهری"
+                label="last name"
+                placeholder="Taheri"
               />
             </div>
           </div>
@@ -92,8 +92,8 @@ const BusinessInfoModal = ({ isOpen, onClose, _updateBusiness }) => {
             }}
             className="mt-4"
             value={businessInfo.business_title}
-            label="نام کسب‌و‌کار"
-            placeholder={"مثال : فروشگاه لوازم‌خانگی آوا"}
+            label="Business name"
+            placeholder={"Example: Ava Home Appliance Store"}
           />
         </div>
       }
@@ -109,7 +109,7 @@ const BusinessInfoModal = ({ isOpen, onClose, _updateBusiness }) => {
             !businessInfo.business_title
           }
         >
-          ذخیره اطلاعات
+          Save information
         </Button>
       }
     />

@@ -124,7 +124,7 @@ const StepSlides = React.forwardRef(
                         : "#00000099",
                   }}
                 >
-                  گام {englishNumberToPersianNumber(index + 1)}
+                  Step{englishNumberToPersianNumber(index + 1)}
                 </span>
               </div>
             ))}

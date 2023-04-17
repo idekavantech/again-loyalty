@@ -54,14 +54,14 @@ function ReviewCard({ review, link, brief }) {
         <div className="flex-1 px-3">
           <div className="d-flex text-center mt-3 u-text-darkest-grey justify-content-between">
             <div className="u-fontWeightBold ">
-              فرستنده:‌ {user_details.full_name}{" "}
+              The transmitter:‌ {user_details.full_name}{" "}
             </div>
             <div className="">
               {englishNumberToPersianNumber(orderTime.format("YYYY/MM/DD"))}
             </div>
           </div>
           <div className="d-flex text-center py-1 u-text-darkest-grey">
-            شماره همراه:‌{" "}
+            Mobile number:‌{" "}
             {englishNumberToPersianNumber(user_details.phone_number)}
           </div>
           {review.badges && (
@@ -88,7 +88,7 @@ function ReviewCard({ review, link, brief }) {
           {brief && (
             <div className="d-flex u-text-primary-blue-remove">
               <Icon icon={STAR} color={skyI} className="ml-1" />
-              {englishNumberToPersianNumber(review.rating?.toFixed(1))} از ۵
+              {englishNumberToPersianNumber(review.rating?.toFixed(1))} From 1
             </div>
           )}
           {brief && (
@@ -99,7 +99,7 @@ function ReviewCard({ review, link, brief }) {
           {brief && (
             <Link passHref href={link}>
               <div className="u-text-primary-blue-remove d-flex mb-3 mt-1 cursor-pointer">
-                مشاهده کامل
+                Full view
                 <div className="mr-2" style={{ transform: "rotate(-90deg)" }}>
                   <Icon icon={CHEVRON} color={theme.palette.primary.main} />
                 </div>
@@ -191,13 +191,13 @@ function ReviewCard({ review, link, brief }) {
               <div className="container">
                 <div className="row mb-4">
                   <div className="col-5 text-right u-fontWeightBold ">
-                    محصول
+                    the product
                   </div>
                   <div className="col-4 text-center u-fontWeightBold ">
-                    قیمت(تومان)
+                    Price(Toman)
                   </div>
                   <div className="col-3 text-center u-fontWeightBold ">
-                    تعداد
+                    Number
                   </div>
                 </div>
                 {orderData?.items.map((item, index) => {

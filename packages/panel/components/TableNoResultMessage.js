@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 const TableNoResultMessage = ({
   title,
-  description = "با تغییر فیلترها دوباره امتحان کنید",
+  description = "Try again by changing the filters.",
   submitAction,
   buttonText,
 }) => {

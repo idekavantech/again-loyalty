@@ -70,7 +70,7 @@ export default function DashboardActivationItem({
         <div className="d-flex align-items-center">
           {item.hasSkip ? (
             <Button onClick={onSkip} color="primary" className="ml-2">
-              رد کردن
+              reject
             </Button>
           ) : null}
           <Button
@@ -80,7 +80,7 @@ export default function DashboardActivationItem({
             className="u-border-radius-8 u-height-32"
             style={{ borderColor: border.subdued }}
           >
-            {item.submitText || "افزودن"}
+            {item.submitText || "Add"}
           </Button>
         </div>
       ) : null}

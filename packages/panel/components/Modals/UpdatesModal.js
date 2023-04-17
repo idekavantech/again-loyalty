@@ -28,7 +28,7 @@ const UpdatesModal = ({ isOpen, onClose }) => {
             color: "#202223",
             padding: "0 8px 0px 0",
           }}
-          title="آپدیت جدید"
+          title="New update"
         />
       }
       body={
@@ -40,7 +40,7 @@ const UpdatesModal = ({ isOpen, onClose }) => {
           }}
         >
           <div className={"w-100 d-flex justify-content-between mb-3"}>
-            <p>پرداخت از طریق کارت‌به‌کارت</p>
+            <p>Payment through card card</p>
             <div className={"d-flex align-items-center"}>
               <InsertInvitationIcon
                 style={{ fontSize: desktopMatches ? 17 : 14, marginLeft: 3 }}

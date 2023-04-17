@@ -57,17 +57,17 @@ const StepCard = ({
               lineHeight: desktopMatches ? "24px" : "20px",
             }}
           >
-            موفقیت شما در ویترین مهم است. به همین دلیل، پیشنهاد می‌شود
+            Your success is important in the showcase. For this reason, it is suggested
             <span
               className="cursor-pointer"
               onClick={() => setIsOpenTargetingModal(true)}
               style={{ color: "#0050FF" }}
             >
               {" "}
-              از این بخش{" "}
+              From this section{" "}
             </span>
-            استفاده کنید و برای فروش ماهانه خودتان هدف‌گذاری کنید تا بتوانید در
-            صفحه داشبورد هر روز روند پیشرفت خود را مشاهده کنید.{" "}
+            Use and target for your monthly sale so you can in
+            Dashboard Page View your progress every day.{" "}
           </p>
         ) : step?.type == "pages" ? (
           <p
@@ -77,27 +77,27 @@ const StepCard = ({
               lineHeight: desktopMatches ? "24px" : "20px",
             }}
           >
-            قبل از شروع سفارش‌گیری آنلاین، بهتر است صفحه‌های مهم فروشگاه مثل
-            صفحه سفارش آنلاین، صفحه اول سایت و صفحه هر محصول را ساخته و ویرایش
-            کرده باشید. <br />
-            این کار را می‌توانید در بخش{" "}
+            Before starting online ordering, it is better to store important stores like
+            Online ordering page, first page and page of each product make and edit each product page
+            Have. <br />
+            This can be done in the section{" "}
             <Link
               target="_blank"
               style={{ color: "#0050ff" }}
               href={`/admin/${router.query.site_domain}/appearance/pages`}
             >
-              ویرایش ظاهری
+              Appearance
             </Link>{" "}
-            انجام دهید. اگر می‌خواهید این صفحات به‌صورت حرفه‌ای و اختصاصی برای
-            شما طراحی شوند، از{" "}
+            Do it. If you want these pages professionally and dedicated to
+            You are designed, of{" "}
             <span
               className="cursor-pointer"
               onClick={() => pushParamsToUrl(ADMIN_VITRIN_PRO_MODAL)}
               style={{ color: "#0050FF" }}
             >
-              ویترین پرو
+              Peruvian showcase
             </span>{" "}
-            کمک بگیرید.
+            Get help.
           </p>
         ) : (
           <p
@@ -107,16 +107,16 @@ const StepCard = ({
               lineHeight: desktopMatches ? "24px" : "20px",
             }}
           >
-            با اتصال فروشگاه اینترنتی به سایت‌هایی مثل «بهترینو»، «ترب» و
-            «ایمالز» می‌توانید محصولات خود را درست مقابل چشم کاربرانی قرار دهید
-            که در اینترنت به دنبال محصولاتی مشابه محصولات شما می‌گردند.
+            By connecting online store to sites like«Bestino»،«Radiad» And
+            «Imals» You can put your products right in front of the users' eyes
+            Who are looking for products similar to your products on the Internet.
             <Link href={`${urlPrefix}/sales_channels`} passHref>
               <span className="cursor-pointer" style={{ color: "#0050FF" }}>
-                در این بخش{" "}
+                in this part{" "}
               </span>
             </Link>{" "}
-            می‌توانید لیست کانال‌های فروش پشتیبانی شده در ویترین را مشاهده کنید
-            و اطلاعات بیشتری در مورد اتصال سایت به این کانال‌ها به دست آورید.
+            You can see the list of support channels supported in the showcase
+            And find out more about connecting the site to these channels.
           </p>
         )}
 
@@ -153,7 +153,7 @@ const StepCard = ({
                   width: 132,
                 }}
               >
-                {`"دوباره" چیست؟`}
+                {`"Again" What is?`}
               </Button>
             </Link>
           ) : null}
@@ -164,7 +164,7 @@ const StepCard = ({
                 color="primary"
                 variant="outlined"
               >
-                مشاوره دجیتال مارکتینگ
+                Digital marketing advice
               </Button>
             </Link>
           ) : null}
@@ -189,7 +189,7 @@ const StepCard = ({
               variant="contained"
               onClick={() => doingSteps(step?.type)}
             >
-              انجام دادم
+              I did
             </Button>
           )}
         </div>

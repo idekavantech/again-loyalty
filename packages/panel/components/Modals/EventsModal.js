@@ -35,7 +35,7 @@ const EventsModal = ({ isOpen, onClose }) => {
             color: "#202223",
           }}
           onRightClick={onClose}
-          title="رویدادهای جدید"
+          title="New events"
         />
       }
       body={
@@ -51,9 +51,9 @@ const EventsModal = ({ isOpen, onClose }) => {
                 lineHeight: "32px",
               }}
             >
-              <p className="text-center">وبینار</p>
+              <p className="text-center">Webinar</p>
               <p className="text-center">
-                راهکارهایی برای افزایش فروش رستوران و کافه
+                Solutions to increase sales of restaurant and cafe
               </p>
               <div
                 className=" d-flex align-items-center justify-content-between"
@@ -71,7 +71,7 @@ const EventsModal = ({ isOpen, onClose }) => {
                       color: "#6D7175",
                     }}
                   />{" "}
-                  <span className="mr-1 ">سه شنبه ۲۹ شهریور</span>
+                  <span className="mr-1 ">Tuesday, September 5</span>
                 </div>
                 <div className="d-flex align-items-center">
                   <WatchLaterIcon
@@ -93,13 +93,13 @@ const EventsModal = ({ isOpen, onClose }) => {
                   color="primary"
                   className="w-100 mt-5 dashboard_buttons"
                 >
-                  شروع وبینار را به من یادآوری کن
+                  Remind me a webinar start
                 </Button>
               </Link>
             </div>
           ) : (
             <p style={{ fontSize: 16, lineHeight: "24px" }}>
-              رویداد جدیدی ثبت نشده است.
+              A new event is not registered.
             </p>
           )}
 
@@ -126,8 +126,8 @@ const EventsModal = ({ isOpen, onClose }) => {
               />
             </div>
             <p className="my-2">
-              برای شرکت در رویداد اینستاگرام ویترین را دنبال کنید و با امکانات و
-              سایت های موفق ویترین نیز بیشتر آشنا شوید.
+              Follow the showcase to participate in the Instagram event and with features and features
+              Successful showcase sites also learn more about.
             </p>
             <p
               className="text-center font-weight-bold direction-ltr"

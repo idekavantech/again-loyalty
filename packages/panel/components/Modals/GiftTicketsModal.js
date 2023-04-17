@@ -48,7 +48,7 @@ const GiftTicketsModal = ({ isOpen, onClose }) => {
             />
           </div>
 
-          <span className="w-100 text-center">بلیط هدیه</span>
+          <span className="w-100 text-center">Gift ticket</span>
         </div>
       </DialogTitle>
       <DialogContent
@@ -73,12 +73,12 @@ const GiftTicketsModal = ({ isOpen, onClose }) => {
               fontSize: desktopMatches ? 14 : 15,
             }}
           >
-            <p className="mt-4 text-center">وبینار</p>
+            <p className="mt-4 text-center">Webinar</p>
             <p
               className="text-center mt-2"
               style={{ fontWeight: 500, fontSize: desktopMatches ? 16 : 15 }}
             >
-              چگونه با ایجاد مزیت رقابتی، بیش‌تر از رقبا بفروشیم؟
+              How to sell more than competitors by creating a competitive advantage?
             </p>
             <div
               className="mr-4 mr-md-2 d-flex align-items-center justify-content-between"
@@ -93,7 +93,7 @@ const GiftTicketsModal = ({ isOpen, onClose }) => {
                 <InsertInvitationIcon
                   style={{ fontSize: desktopMatches ? 20 : 16 }}
                 />{" "}
-                <span className="mr-1 mt-1">سه شنبه ۸ شهریور</span>
+                <span className="mr-1 mt-1">Tuesday, September 5</span>
               </div>
               <div className="d-flex align-items-center">
                 <WatchLaterIcon
@@ -112,7 +112,7 @@ const GiftTicketsModal = ({ isOpen, onClose }) => {
                 color="primary"
                 className="w-100 mt-5 u-border-radius-8"
               >
-                شروع وبینار را به من یادآوری کن
+                Remind me a webinar start
               </Button>
             </Link>
           </div>
@@ -126,7 +126,7 @@ const GiftTicketsModal = ({ isOpen, onClose }) => {
           >
             <div style={{ fontSize: 15 }}>
               <p className="text-center" style={{ fontWeight: 600 }}>
-                کد شما{" "}
+                Your code{" "}
               </p>
               <div className="mt-2">
                 <Image
@@ -141,7 +141,7 @@ const GiftTicketsModal = ({ isOpen, onClose }) => {
 
             <CopyToClipboard
               text="m4525"
-              onCopy={() => _setSnackBarMessage("کپی شد.", "success")}
+              onCopy={() => _setSnackBarMessage("Copied.", "success")}
             />
             <div className="d-flex align-items-center justify-content-center">
               <span
@@ -158,8 +158,8 @@ const GiftTicketsModal = ({ isOpen, onClose }) => {
               />
             </div>
             <p className="my-2" style={{ maxWidth: 250 }}>
-              برای شرکت در رویداد اینستاگرام ویترین را دنبال کنید و با امکانات و
-              سایت های موفق ویترین نیز بیشتر آشنا شوید.
+              Follow the showcase to participate in the Instagram event and with features and features
+              Successful showcase sites also learn more about.
             </p>
             <p className="text-center font-weight-bold direction-ltr">
               <a

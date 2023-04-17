@@ -68,7 +68,7 @@ const ContactsModal = ({
               color: "#202223",
               padding: "0 8px 0px 0",
             }}
-            title="گزارش کلیک بر دکمه شناور تماس"
+            title="Report click on the contact button"
           />
         }
         body={
@@ -76,16 +76,16 @@ const ContactsModal = ({
             className="p-4 text-right u-fontLarge"
             style={{ backgroundColor: "#F6F6F7" }}
           >
-            <p>کلیک جدید (۰)</p>
+            <p>New click(۰)</p>
             <p className="mt-3">
-              کلیک جدیدی بر روی{" "}
+              New click on{" "}
               <Link href={`${urlPrefix}/fab/settings`}>
                 <span style={{ color: "#0050FF", cursor: "pointer" }}>
                   {" "}
-                  دکمه شناور تماس
+                  The floating button
                 </span>
               </Link>{" "}
-              شما ثبت نشده است.
+              You have not been registered..
             </p>
             <div className="w-100 d-flex justify-content-center mt-5 pt-2">
               <LazyImage width={200} src={`/images/no_call.svg`} />
@@ -116,7 +116,7 @@ const ContactsModal = ({
             color: "#202223",
             padding: "0 8px 0px 0",
           }}
-          title="گزارش کلیک بر دکمه شناور تماس"
+          title="Report click on the contact button"
         />
       }
       body={
@@ -127,10 +127,10 @@ const ContactsModal = ({
             padding: desktopMatches ? 20 : 16,
           }}
         >
-          <p>کلیک جدید ({englishNumberToPersianNumber(numberOfCalls || 0)})</p>
+          <p>New click({englishNumberToPersianNumber(numberOfCalls || 0)})</p>
           <p className="mt-3">
-            {englishNumberToPersianNumber(numberOfCalls || 0)} کلیک بر روی دکمه
-            شناور تماس شما ثبت شده است.
+            {englishNumberToPersianNumber(numberOfCalls || 0)} Click the button
+            Your contact float is recorded.
           </p>
 
           {pluginData?.data?.contact_channels?.map((channel) => {
@@ -164,10 +164,10 @@ const ContactsModal = ({
                   <img width={24} height={24} src={channel.icon} />
                   <span className="mr-5">
                     {englishNumberToPersianNumber(clickedChannel?.count || 0)}{" "}
-                    کلیک
+                    Click
                   </span>
                   <div className="d-flex align-items-center">
-                    <span>جزئیات</span>
+                    <span>the details</span>
 
                     <KeyboardArrowDownRoundedIcon
                       className="mr-1"

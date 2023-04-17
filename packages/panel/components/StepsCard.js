@@ -68,8 +68,8 @@ const StepsCard = ({
       {/* {stepData?.step == 4 && (
         <div className="first-order p-1 p-md-2 d-flex mt-3 justify-content-between align-items-center">
           <span className="ml-2">
-            پس از تکمیل این مرحله می‌توانید بلیط وبینار “راهکارهایی برای افزایش
-            فروش رستوران و کافه” را دریافت کنید.
+            Once you have completed this step, you can ticket webinar tickets“Solutions to increase
+            Sale of restaurants and cafes” Get the receipt.
           </span>
           <div className="d-flex align-items-cente" style={{ minWidth: 24 }}>
             <Image
@@ -116,7 +116,7 @@ const StepsCard = ({
                       color: "#D82C0D",
                     }}
                   >
-                    {text_error || "در ابتدا گام های قبل را کامل کنید."}
+                    {text_error || "Complete the previous steps first."}
                   </span>
                 </div>
               ) : null}
@@ -133,7 +133,7 @@ const StepsCard = ({
                       disabled={activeStep.number < stepNumber}
                     >
                       <PlayCircleFilledIcon />
-                      <span className="mr-2">ویدیو راهنما</span>
+                      <span className="mr-2">Help video</span>
                     </Button>
                   ) : null}
                   {buttons.extraBtn ? (
@@ -166,7 +166,7 @@ const StepsCard = ({
                         : setShowErrorMassage(true)
                     }
                   >
-                    شروع
+                    Start
                   </Button>
                 </div>
               ) : null}
@@ -185,7 +185,7 @@ const StepsCard = ({
                     href="tel:02191070751"
                   >
                     {" "}
-                    تماس با پشتیبانی{" "}
+                    Call with support{" "}
                   </a>
                   <Button
                     className="dashboard_buttons"
@@ -199,10 +199,10 @@ const StepsCard = ({
                     onClick={() =>
                       !dashboardState?.payment_step
                         ? (window.location = buttons.link)
-                        : setTextError("پنل شما هم اکنون ارتقا یافته است")
+                        : setTextError("Your panel has already upgraded")
                     }
                   >
-                    ارتقا
+                    Upgrade
                   </Button>
                 </div>
               ) : null}
@@ -217,7 +217,7 @@ const StepsCard = ({
                     }}
                     onClick={skipStepTwo}
                   >
-                    رد کردن مرحله
+                    Rejecting the stage
                   </Button>
                   <button
                     className="dashboard_buttons"
@@ -235,7 +235,7 @@ const StepsCard = ({
                         : setShowErrorMassage(true)
                     }
                   >
-                    انتخاب هدیه
+                    Gift selection
                   </button>
                 </div>
               ) : null}

@@ -51,7 +51,7 @@ const OrdersModal = ({
             />
           </div>
 
-          <span className="w-100 text-center">سفارش‌ها</span>
+          <span className="w-100 text-center">Orders</span>
         </div>
       </DialogTitle>
       <DialogContent
@@ -69,11 +69,11 @@ const OrdersModal = ({
       >
         <p>
           {" "}
-          سفارش جدید (
+          New order(
           {englishNumberToPersianNumber(adminOrdersWidget?.ordersAmount)})
         </p>
         <p className="mt-3 mb-2">
-          سریع‌تر نسبت به تایید یا لغو سفارش‌ها اقدام کنید.
+          Faster to approve or cancel orders.
         </p>
         <div
           className="scrollbar-hidden"
@@ -104,7 +104,7 @@ const OrdersModal = ({
                       style={{ fontSize: desktopMatches ? 16 : 12 }}
                     />
                     <span className="mr-1">
-                      {order?.user_address?.name || "کاربر تستی"}
+                      {order?.user_address?.name || "Test user"}
                     </span>
                   </div>
                   <div className="mt-2 d-flex align-items-center">
@@ -150,7 +150,7 @@ const OrdersModal = ({
                   color="primary"
                   style={{ marginRight: "auto", color: "#fff" }}
                 >
-                  مشاهده
+                  View
                 </Button>
               </div>
             );

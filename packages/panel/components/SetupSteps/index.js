@@ -33,7 +33,7 @@ const SetupSteps = ({
           })
         }
       >
-        <p className="title">گام‌های راه‌اندازی فروشگاه آنلاین شما</p>
+        <p className="title">Steps to set up your online store</p>
         <div
           className="d-flex align-items-center justify-content-center mr-2"
           style={{
@@ -56,10 +56,10 @@ const SetupSteps = ({
             }}
           >
             {steps.length + 1 - activeStep.number === 0 ? (
-              "تبریک، شما با موفقیت تمام گام ها را طی کرده اید!"
+              "Congratulations, you have successfully taken all steps!"
             ) : (
               <div className="text-right">
-                تنها
+                single
                 <span
                   className="mx-1"
                   style={{ fontSize: 15, fontWeight: 600 }}
@@ -68,9 +68,9 @@ const SetupSteps = ({
                     steps.length + 1 - activeStep.number
                   )}
                 </span>
-                گام ساده دیگر
+                Another simple step
                 <br />
-                برای شروع موفق شما باقی مانده ‌است
+                Left for your successful start
               </div>
             )}
           </p>
@@ -101,8 +101,8 @@ const SetupSteps = ({
             >
               <span>
                 {isOpenCollapses.showDoneSteps
-                  ? "عدم نمایش گام های طی شده"
-                  : "نمایش گام های طی شده"}
+                  ? "Non -display of steps taken"
+                  : "Show steps taken"}
               </span>
               <div
                 className="d-flex align-items-center justify-content-center mr-2"
