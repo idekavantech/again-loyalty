@@ -236,7 +236,7 @@ const CustomChip = ({
         ></div>
       </div>
     )}
-    <div style={{ fontSize: 12 }}>{label}</div>
+    <div className="mx-1" style={{ fontSize: 12 }}>{label}</div>
   </div>
 );
 
@@ -1364,10 +1364,10 @@ export function AdminOrder({
             ))}
           </div>
         ) : null}
-        <div className="d-flex flex-wrap mt-4" style={{ color: night }}>
+        <div className="d-flex flex-wrap row-rev mt-4" style={{ color: night }}>
           <div
             className={`${
-              minWidth768 ? "pl-2 pr-0 col-7" : "px-0 col-12"
+              minWidth768 ? "pr-2 pl-0 col-7" : "px-0 col-12"
             } pt-4`}
           >
             {itemsCount === 0 ? null : (
@@ -1492,7 +1492,7 @@ export function AdminOrder({
                                 style={{
                                   flex: 2,
                                 }}
-                                className="text-left"
+                                className="text-right"
                               >
                                 {priceFormatter(item.discounted_price)}
                                 <Icon
@@ -1535,7 +1535,7 @@ export function AdminOrder({
                                   color: graphite,
                                   fontWeight: 400,
                                 }}
-                                className="text-left"
+                                className="text-right"
                               >
                                 {priceFormatter(
                                   modifier.discounted_price *
@@ -1574,7 +1574,7 @@ export function AdminOrder({
                                 {englishNumberToPersianNumber(item.amount)}
                               </span>
                             </div>
-                            <div style={{ flex: 2 }} className="text-left">
+                            <div style={{ flex: 2 }} className="text-right">
                               {priceFormatter(itemFinalPrice * item.amount)}
                               <Icon
                                 icon={$}
@@ -1684,7 +1684,7 @@ export function AdminOrder({
                                 </div>
                               </div>
                             )}
-                            <div style={{ flex: 2 }} className="text-left">
+                            <div style={{ flex: 2 }} className="text-right">
                               {priceFormatter(item.discounted_price)}
                               <Icon
                               icon={$}
@@ -1720,7 +1720,7 @@ export function AdminOrder({
                                 color: graphite,
                                 fontWeight: 400,
                               }}
-                              className="text-left"
+                              className="text-right"
                             >
                               {priceFormatter(
                                 modifier.discounted_price * (modifier.amount || 1)
@@ -1752,7 +1752,7 @@ export function AdminOrder({
                               {englishNumberToPersianNumber(item.amount)}
                             </span>
                           </div>
-                          <div style={{ flex: 2 }} className="text-left">
+                          <div style={{ flex: 2 }} className="text-right">
                             {priceFormatter(itemFinalPrice * item.amount)}
                             <Icon
                               icon={$}
@@ -1831,7 +1831,7 @@ export function AdminOrder({
                         price of products({englishNumberToPersianNumber(itemsCount)}
                         )
                       </div>
-                      <div style={{ flex: 2 }} className="text-left">
+                      <div style={{ flex: 2 }} className="text-right">
                         {priceFormatter(order?.total_items_initial_price)}
                         <Icon
                           icon={$}
@@ -1844,7 +1844,7 @@ export function AdminOrder({
                     </div>
                     <div className="d-flex justify-content-between align-items-center py-2">
                       <div>Discount Products</div>
-                      <div style={{ flex: 2 }} className="text-left">
+                      <div style={{ flex: 2 }} className="text-right">
                         {priceFormatter(order?.discount_from_items)}
                         <Icon
                           icon={$}
@@ -1863,7 +1863,7 @@ export function AdminOrder({
                       }}
                     >
                       <div>Total</div>
-                      <div style={{ flex: 2 }} className="text-left">
+                      <div style={{ flex: 2 }} className="text-right">
                         {priceFormatter(order?.final_items_price)}
                         <Icon
                           icon={$}
@@ -1876,7 +1876,7 @@ export function AdminOrder({
                     </div>
                     <div className="d-flex justify-content-between align-items-center py-2">
                       <div>Tax</div>
-                      <div style={{ flex: 2 }} className="text-left">
+                      <div style={{ flex: 2 }} className="text-right">
                         {priceFormatter(order?.taxing_price)}
                         <Icon
                           icon={$}
@@ -1889,7 +1889,7 @@ export function AdminOrder({
                     </div>
                     <div className="d-flex justify-content-between align-items-center py-2">
                       <div>shipping cost</div>
-                      <div style={{ flex: 2 }} className="text-left">
+                      <div style={{ flex: 2 }} className="text-right">
                         {priceFormatter(order?.delivery_price)}
                         <Icon
                           icon={$}
@@ -1902,7 +1902,7 @@ export function AdminOrder({
                     </div>
                     <div className="d-flex justify-content-between align-items-center py-2">
                       <div>Packaging cost</div>
-                      <div style={{ flex: 2 }} className="text-left">
+                      <div style={{ flex: 2 }} className="text-right">
                         {priceFormatter(order?.total_packaging_price)}
                         <Icon
                           icon={$}
@@ -1922,7 +1922,7 @@ export function AdminOrder({
                           )}
                           )
                         </div>
-                        <div style={{ flex: 2 }} className="text-left">
+                        <div style={{ flex: 2 }} className="text-right">
                           {priceFormatter(order?.taxing_price)}
                           <Icon
                             icon={$}
@@ -1936,7 +1936,7 @@ export function AdminOrder({
                     ) : null}
                     <div className="d-flex justify-content-between align-items-center py-2">
                       <div>Gift credit</div>
-                      <div style={{ flex: 2 }} className="text-left">
+                      <div style={{ flex: 2 }} className="text-right">
                         {order?.gift_credit_used ? "-" : ""}
                         {priceFormatter(order?.gift_credit_used)}
                         <Icon
@@ -1951,7 +1951,7 @@ export function AdminOrder({
                     {order?.discount_code_amount ? (
                       <div className="d-flex justify-content-between align-items-center pt-2">
                         <div>Discount(discount code)</div>
-                        <div style={{ flex: 2 }} className="text-left">
+                        <div style={{ flex: 2 }} className="text-right">
                           {priceFormatter(order?.discount_code_amount)}
                           <Icon
                             icon={$}
@@ -1966,7 +1966,7 @@ export function AdminOrder({
                     {order?.coupon_discount_amount ? (
                       <div className="d-flex justify-content-between align-items-center pt-2">
                         <div>Discounts by coupon</div>
-                        <div style={{ flex: 2 }} className="text-left">
+                        <div style={{ flex: 2 }} className="text-right">
                           {priceFormatter(order?.coupon_discount_amount)}
                           <Icon
                             icon={$}
@@ -1981,7 +1981,7 @@ export function AdminOrder({
                     {order?.custom_discount_amount ? (
                       <div className="d-flex justify-content-between align-items-center pt-2">
                         <div>Discounts of desire</div>
-                        <div style={{ flex: 2 }} className="text-left">
+                        <div style={{ flex: 2 }} className="text-right">
                           {priceFormatter(order?.custom_discount_amount)}
                           <Icon
                             icon={$}
@@ -1996,7 +1996,7 @@ export function AdminOrder({
                     {order?.total_discount_amount ? (
                       <div className="d-flex justify-content-between align-items-center pt-2">
                         <div>The total discount</div>
-                        <div style={{ flex: 2 }} className="text-left">
+                        <div style={{ flex: 2 }} className="text-right">
                           {priceFormatter(order?.total_discount_amount)}
                           <Icon
                             icon={$}
@@ -2457,7 +2457,7 @@ export function AdminOrder({
             {!iframe_from_pos && !!order.utm_data && (
               <Paper
                 elevation={2}
-                className="my-3 d-flex flex-1 flex-column p-5 text-left"
+                className="my-3 d-flex flex-1 flex-column p-5 text-right"
                 style={{ direction: "ltr" }}
               >
                 {utmItems.map((item) => (
@@ -3202,7 +3202,7 @@ export function AdminOrder({
                       }}
                     >
                       <div>Initial price</div>
-                      <div style={{ flex: 2 }} className="text-left">
+                      <div style={{ flex: 2 }} className="text-right">
                         {priceFormatter(order?.total_items_inital_price)}
                         <Icon
                           icon={$}
@@ -3216,7 +3216,7 @@ export function AdminOrder({
                     {order?.total_discount_amount ? (
                       <div className="d-flex justify-content-between align-items-center pt-2">
                         <div>The sum of the discounts and the credit of the gift</div>
-                        <div style={{ flex: 2 }} className="text-left">
+                        <div style={{ flex: 2 }} className="text-right">
                           {priceFormatter(order?.total_discount_amount)}
                           <Icon
                             icon={$}
@@ -3231,7 +3231,7 @@ export function AdminOrder({
                     {order?.gift_credit_used ? (
                       <div className="d-flex justify-content-between align-items-center py-2">
                         <div>Gift credit</div>
-                        <div style={{ flex: 2 }} className="text-left">
+                        <div style={{ flex: 2 }} className="text-right">
                           {order?.gift_credit_used ? "-" : ""}
                           {priceFormatter(order?.gift_credit_used)}
                           <Icon
@@ -3247,7 +3247,7 @@ export function AdminOrder({
                     {order?.discount_code_amount ? (
                       <div className="d-flex justify-content-between align-items-center pt-2">
                         <div>Discount(discount code)</div>
-                        <div style={{ flex: 2 }} className="text-left">
+                        <div style={{ flex: 2 }} className="text-right">
                           {priceFormatter(order?.discount_code_amount)}
                           <Icon
                             icon={$}
@@ -3262,7 +3262,7 @@ export function AdminOrder({
                     {order?.total_packaging_price ? (
                       <div className="d-flex justify-content-between align-items-center py-2">
                         <div>Packaging cost</div>
-                        <div style={{ flex: 2 }} className="text-left">
+                        <div style={{ flex: 2 }} className="text-right">
                           {priceFormatter(order?.total_packaging_price)}
                           <Icon
                             icon={$}
@@ -3277,7 +3277,7 @@ export function AdminOrder({
                     {order?.delivery_price ? (
                       <div className="d-flex justify-content-between align-items-center py-2">
                         <div>shipping cost</div>
-                        <div style={{ flex: 2 }} className="text-left">
+                        <div style={{ flex: 2 }} className="text-right">
                           {priceFormatter(order?.delivery_price)}
                           <Icon
                             icon={$}
@@ -3292,7 +3292,7 @@ export function AdminOrder({
                     {order?.taxing_price ? (
                       <div className="d-flex justify-content-between align-items-center py-2">
                         <div>Tax</div>
-                        <div style={{ flex: 2 }} className="text-left">
+                        <div style={{ flex: 2 }} className="text-right">
                           {priceFormatter(order?.taxing_price)}
                           <Icon
                             icon={$}
@@ -3314,7 +3314,7 @@ export function AdminOrder({
                           )}
                           )
                         </div>
-                        <div style={{ flex: 2 }} className="text-left">
+                        <div style={{ flex: 2 }} className="text-right">
                           {priceFormatter(order?.taxing_price)}
                           <Icon
                             icon={$}
@@ -3330,7 +3330,7 @@ export function AdminOrder({
                     {order?.coupon_discount_amount ? (
                       <div className="d-flex justify-content-between align-items-center pt-2">
                         <div>Discounts by coupon</div>
-                        <div style={{ flex: 2 }} className="text-left">
+                        <div style={{ flex: 2 }} className="text-right">
                           {priceFormatter(order?.coupon_discount_amount)}
                           <Icon
                             icon={$}
@@ -3345,7 +3345,7 @@ export function AdminOrder({
                     {order?.custom_discount_amount ? (
                       <div className="d-flex justify-content-between align-items-center pt-2">
                         <div>Discounts of desire</div>
-                        <div style={{ flex: 2 }} className="text-left">
+                        <div style={{ flex: 2 }} className="text-right">
                           {priceFormatter(order?.custom_discount_amount)}
                           <Icon
                             icon={$}
@@ -3837,7 +3837,7 @@ export function AdminOrder({
                           style={{ color: pollution }}
                         >
                           <span className="mb-2">The date of the first order</span>
-                          <span className="mx-1">
+                          <span className="mb-1">
                             {englishNumberToPersianNumber(
                               moment(
                                 new Date(

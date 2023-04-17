@@ -275,35 +275,25 @@ const SubmitFactor = ({
             className="submitFactor"
           >
             <div
-              className="d-flex align-items-center pb-4"
+              className="d-flex align-items-center w-100 justify-content-between row-rev pb-4"
               style={{
                 borderBottom: "1px solid rgba(0, 0, 0, 0.12)",
               }}
             >
-              <CloseIcon
-                style={{ color: "#000000" }}
-                onClick={handleClose}
-                className="cursor-pointer"
-              />
-              <p style={{ fontSize: 16, fontWeight: 500, paddingRight: 13 }}>
-                Quick order
-              </p>
+              <CloseIcon style={{ color: "#000000" }} onClick={handleClose} className="cursor-pointer" />
+              <p style={{ fontSize: 16, fontWeight: 500, paddingRight: 13 }}>Quick order</p>
             </div>
             <div>
-              <p
-                style={{ fontSize: 14, fontWeight: 500, paddingTop: 24 }}
-                className="pb-4"
-              >
+              <p style={{ fontSize: 14, fontWeight: 500, paddingTop: 24 }} className="pb-4">
                 customer information
               </p>
               <div className="d-flex row mb-3">
-                <div
-                  className="col-12 col-md-4 pl-md-0 mb-3 mb-md-0"
-                  style={{ position: "relative" }}
-                >
+                <div className="col-12 col-md-4 mb-3 mb-md-0 px-md-2" style={{ position: "relative" }}>
+                  <p style={{ fontSize: 12, fontWeight: 600 }} className="mb-1">
+                    Customer Phone Number
+                  </p>
                   <Input
                     variant="outlined"
-                    label="customer number"
                     size="small"
                     value={search?.user?.phone}
                     fullWidth={false}
@@ -327,16 +317,6 @@ const SubmitFactor = ({
                     InputProps={{
                       startAdornment: (
                         <>
-                          <InputAdornment
-                            style={{ position: "absolute", left: 3 }}
-                            className="u-cursor-pointer"
-                            position="start"
-                            onClick={() => {
-                              setIsShowSearchBar(true);
-                            }}
-                          >
-                            <ArrowDropDownIcon />
-                          </InputAdornment>
                           {search?.user?.phone ? (
                             <InputAdornment
                               style={{ position: "absolute", right: 0 }}
@@ -351,9 +331,7 @@ const SubmitFactor = ({
                               }}
                               className="cursor-pointer"
                             >
-                              <ClearIcon
-                                style={{ color: "gray", width: 18, height: 18 }}
-                              />
+                              <ClearIcon style={{ color: "gray", width: 18, height: 18 }} />
                             </InputAdornment>
                           ) : null}
                         </>
@@ -377,8 +355,7 @@ const SubmitFactor = ({
                     >
                       {loading ? (
                         <LoadingIndicator />
-                      ) : membershipByQuery?.length === 0 &&
-                        !isInputLengthZero ? (
+                      ) : membershipByQuery?.length === 0 && !isInputLengthZero ? (
                         <p>There was no results.</p>
                       ) : (
                         membershipByQuery?.map((person) => (
@@ -406,40 +383,42 @@ const SubmitFactor = ({
                               });
                             }}
                           >
-                            <p style={{ whiteSpace: "nowrap" }}>
-                              {person.name}
-                            </p>
+                            <p style={{ whiteSpace: "nowrap" }}>{person.name}</p>
                             <span className="mx-1"> - </span>
-                            <p style={{ direction: "ltr" }}>
-                              {englishNumberToPersianNumber(person?.user?.phone)}
-                            </p>
+                            <p style={{ direction: "ltr" }}>{englishNumberToPersianNumber(person?.user?.phone)}</p>
                           </div>
                         ))
                       )}
                     </div>
                   )}
                 </div>
-                <div className="col-12 col-md-4 mb-3 mb-md-0 px-md-2 ">
-                  <Input
-                    variant="outlined"
-                    label="Customer Name"
-                    size="small"
-                    value={search?.name}
-                    fullWidth={false}
-                    onChange={(value) => {
-                      const _invoiceFactor = { ...invoiceFactor };
-                      _invoiceFactor.user_name = value;
-                      setInvoiceFactor(_invoiceFactor);
 
-                      setSearch({ ...search, name: value });
-                    }}
-                    placeholder="Customer Name"
-                    inputProps={{
-                      className: "pr-5",
-                    }}
-                  />
+                <div className="col-12 col-md-4 mb-3 mb-md-0 px-md-2">
+                  <p style={{ fontSize: 12, fontWeight: 600 }} className="mb-1">
+                    Customer Name
+                  </p>
+                  <div className="position-relative">
+                    <Input
+                      variant="outlined"
+                      size="small"
+                      value={search?.name}
+                      fullWidth={false}
+                      onChange={(value) => {
+                        const _invoiceFactor = { ...invoiceFactor };
+                        _invoiceFactor.user_name = value;
+                        setInvoiceFactor(_invoiceFactor);
+                        setSearch({ ...search, name: value });
+                      }}
+                      inputProps={{
+                        className: "pr-5",
+                      }}
+                    />
+                  </div>
                 </div>
                 <div className="col-12 col-md-4 mb-3 mb-md-0 px-md-2 ">
+                  <p style={{ fontSize: 12, fontWeight: 600 }} className="mb-1">
+                    Select Label
+                  </p>
                   <Select
                     className="w-100 "
                     value={crmMemberShipDetail.labels || []}
@@ -452,23 +431,11 @@ const SubmitFactor = ({
                       height: 36,
                     }}
                     renderValue={() => {
-                      if (crmMemberShipDetail?.labels?.length === 0)
-                        return "Select the label";
-                      if (
-                        crmMemberShipDetail?.labels?.length === 1 &&
-                        crmMemberShipDetail?.labels[0]
-                      )
-                        return labels?.find(
-                          (level) =>
-                            level?.id === crmMemberShipDetail?.labels[0]
-                        )?.title;
-                      if (
-                        crmMemberShipDetail?.labels?.length === labels?.length
-                      )
-                        return "All tags";
-                      return `${englishNumberToPersianNumber(
-                        crmMemberShipDetail?.labels?.length
-                      )} Label`;
+                      if (crmMemberShipDetail?.labels?.length === 0) return "Select the label";
+                      if (crmMemberShipDetail?.labels?.length === 1 && crmMemberShipDetail?.labels[0])
+                        return labels?.find((level) => level?.id === crmMemberShipDetail?.labels[0])?.title;
+                      if (crmMemberShipDetail?.labels?.length === labels?.length) return "All tags";
+                      return `${englishNumberToPersianNumber(crmMemberShipDetail?.labels?.length)} Label`;
                     }}
                     MenuProps={{
                       getContentAnchorEl: null,
@@ -488,17 +455,13 @@ const SubmitFactor = ({
                       <div
                         className="w-100 d-flex align-items-center"
                         onClick={() => {
-                          const newCrmMemberShipDetail = JSON.parse(
-                            JSON.stringify(crmMemberShipDetail)
-                          );
+                          const newCrmMemberShipDetail = JSON.parse(JSON.stringify(crmMemberShipDetail));
 
                           if (newCrmMemberShipDetail?.labels?.length) {
                             newCrmMemberShipDetail.labels = [];
                             setCrmMemberShipDetail(newCrmMemberShipDetail);
                           } else {
-                            newCrmMemberShipDetail.labels = labels?.map(
-                              (label) => label.id
-                            );
+                            newCrmMemberShipDetail.labels = labels?.map((label) => label.id);
                             setCrmMemberShipDetail(newCrmMemberShipDetail);
                           }
                         }}
@@ -507,54 +470,33 @@ const SubmitFactor = ({
                           className="p-1"
                           size="small"
                           indeterminate={
-                            crmMemberShipDetail?.labels?.length !==
-                              labels?.length &&
+                            crmMemberShipDetail?.labels?.length !== labels?.length &&
                             crmMemberShipDetail?.labels?.length
                           }
                           onChange={(e) => {
                             e.preventDefault();
                           }}
                           color="primary"
-                          checked={
-                            crmMemberShipDetail?.labels?.length ===
-                            labels?.length
-                          }
+                          checked={crmMemberShipDetail?.labels?.length === labels?.length}
                         />
-                        <ListItemText
-                          primary="Select all tags"
-                          className="text-right"
-                        />
+                        <ListItemText primary="Select all tags" className="text-right" />
                       </div>
                     </MenuItem>
                     {labels?.map((label) => {
                       return (
-                        <MenuItem
-                          className="px-2"
-                          key={label?.title}
-                          value={label?.id}
-                        >
+                        <MenuItem className="px-2" key={label?.title} value={label?.id}>
                           <div
                             className="w-100 d-flex align-items-center"
                             onClick={(e) => {
                               e.preventDefault();
-                              const newCrmMemberShipDetail = JSON.parse(
-                                JSON.stringify(crmMemberShipDetail)
-                              );
+                              const newCrmMemberShipDetail = JSON.parse(JSON.stringify(crmMemberShipDetail));
 
-                              if (
-                                crmMemberShipDetail?.labels.includes(label.id)
-                              ) {
-                                const newLabels =
-                                  crmMemberShipDetail?.labels.filter(
-                                    (_label) => _label !== label.id
-                                  );
+                              if (crmMemberShipDetail?.labels.includes(label.id)) {
+                                const newLabels = crmMemberShipDetail?.labels.filter((_label) => _label !== label.id);
                                 newCrmMemberShipDetail.labels = [...newLabels];
                                 setCrmMemberShipDetail(newCrmMemberShipDetail);
                               } else {
-                                newCrmMemberShipDetail.labels = [
-                                  ...newCrmMemberShipDetail.labels,
-                                  label.id,
-                                ];
+                                newCrmMemberShipDetail.labels = [...newCrmMemberShipDetail.labels, label.id];
                                 setCrmMemberShipDetail(newCrmMemberShipDetail);
                               }
                             }}
@@ -566,14 +508,9 @@ const SubmitFactor = ({
                                 e.preventDefault();
                               }}
                               color="primary"
-                              checked={crmMemberShipDetail?.labels?.includes(
-                                label?.id
-                              )}
+                              checked={crmMemberShipDetail?.labels?.includes(label?.id)}
                             />
-                            <ListItemText
-                              primary={label?.title}
-                              className="text-right"
-                            />
+                            <ListItemText primary={label?.title} className="text-right" />
                           </div>
                         </MenuItem>
                       );
@@ -596,11 +533,9 @@ const SubmitFactor = ({
                 size="large"
                 style={{ direction: "ltr", whiteSpace: "nowrap" }}
                 onClick={submit}
-                disabled={
-                  !(invoiceFactor.user_phone && invoiceFactor.user_name)
-                }
+                disabled={!(invoiceFactor.user_phone && invoiceFactor.user_name)}
               >
-                {search?.id ? "Customer Update" : "Customer build"}
+                {search?.id ? "Update Customer" : "Create Customer"}
               </Button>
             </div>
           </Paper>
@@ -618,19 +553,13 @@ const SubmitFactor = ({
             className="submitFactor"
           >
             <div
-              className="d-flex align-items-center pb-4"
+              className="d-flex align-items-center w-100 justify-content-between row-rev pb-4"
               style={{
                 borderBottom: "1px solid rgba(0, 0, 0, 0.12)",
               }}
             >
-              <CloseIcon
-                style={{ color: "#000000" }}
-                onClick={handleClose}
-                className="cursor-pointer"
-              />
-              <p style={{ fontSize: 16, fontWeight: 500, paddingRight: 13 }}>
-                Quick order
-              </p>
+              <CloseIcon style={{ color: "#000000" }} onClick={handleClose} className="cursor-pointer" />
+              <p style={{ fontSize: 16, fontWeight: 500, paddingRight: 13 }}>Quick order</p>
             </div>
             <div>
               <div
@@ -639,17 +568,10 @@ const SubmitFactor = ({
                   padding: "24px 0",
                 }}
               >
-                <div
-                  style={{ fontSize: 14, fontWeight: 500 }}
-                  className="col-12 mb-2 mb-sm-0 col-sm-5 d-flex"
-                >
+                <div style={{ fontSize: 14, fontWeight: 500 }} className="col-12 mb-2 mb-sm-0 col-sm-5 d-flex">
                   <p className="ml-1">customer number:</p>
                   <p style={{ direction: "ltr" }}>
-                    <b>
-                      {englishNumberToPersianNumber(
-                        selectedCrmMemberShip?.user?.phone
-                      )}
-                    </b>
+                    <b>{englishNumberToPersianNumber(selectedCrmMemberShip?.user?.phone)}</b>
                   </p>
                   <p></p>
                 </div>
@@ -674,26 +596,19 @@ const SubmitFactor = ({
               >
                 <div className="d-flex w-100 col-12 justify-content-between flex-wrap align-items-start mb-4 px-sm-0">
                   <div className="col-12 col-md-4 col-md-5 px-md-0 px-sm-0 mt-md-4">
-                    <p
-                      style={{ fontSize: 12, fontWeight: 600 }}
-                      className="mb-1"
-                    >
-                      The total amount of purchase
+                    <p style={{ fontSize: 12, fontWeight: 600 }} className="mb-1">
+                      Total amount of purchase
                     </p>
 
                     <div className="position-relative">
                       <Input
                         variant="outlined"
                         size="small"
-                        value={priceFormatter(
-                          invoiceFactor?.total_items_initial_price
-                        )}
+                        value={priceFormatter(invoiceFactor?.total_items_initial_price)}
                         fullWidth={false}
                         onChange={(value) => {
                           const _invoiceFactor = { ...invoiceFactor };
-                          _invoiceFactor.total_items_initial_price = Number(
-                            reversePriceFormatter(value)
-                          );
+                          _invoiceFactor.total_items_initial_price = Number(reversePriceFormatter(value));
                           setInvoiceFactor(_invoiceFactor);
                         }}
                         inputProps={{
@@ -705,7 +620,7 @@ const SubmitFactor = ({
                         style={{
                           position: "absolute",
                           top: 9,
-                          left: 16,
+                          right: 16,
                           color: textTypes.text.subdued,
                         }}
                       >
@@ -716,12 +631,10 @@ const SubmitFactor = ({
                 </div>
                 {minWidth768 ? (
                   <div className="mb-4">
-                    <div className="col-12 col-lg-2 col-md-2 col-sm-2">
-                      How to Delivery
-                    </div>
+                    <div className="col-12 col-lg-2 col-md-2 col-sm-2">Delivery Type</div>
                     <div className="mt-2 px-1">
                       <RadioGroup
-                        className="col-10 w-100 mx-0 px-0 d-flex"
+                        className="col-12 w-100 mx-0 px-0 d-flex"
                         aria-label="gender"
                         color="primary"
                         name="gender1"
@@ -751,10 +664,7 @@ const SubmitFactor = ({
                   <div>
                     <div className="d-flex w-100 col-12 justify-content-between flex-wrap align-items-start mb-4 px-4 px-sm-0 px-lg-0">
                       <div className=" w-100 px-5 px-sm-0">
-                        <p
-                          style={{ fontSize: 12, fontWeight: 600 }}
-                          className="mb-1"
-                        >
+                        <p style={{ fontSize: 12, fontWeight: 600 }} className="mb-1">
                           How to Delivery
                         </p>
                         <Select
@@ -773,8 +683,8 @@ const SubmitFactor = ({
                             _invoiceFactor.delivery_site_type = e.target.value;
                             setInvoiceFactor(_invoiceFactor);
                           }}
-                          renderValue={(e)=>{
-                            return deliveryTypesConstant.find((deliveryType) => deliveryType.value === e)?.title
+                          renderValue={(e) => {
+                            return deliveryTypesConstant.find((deliveryType) => deliveryType.value === e)?.title;
                           }}
                           MenuProps={{
                             getContentAnchorEl: null,
@@ -792,17 +702,10 @@ const SubmitFactor = ({
                         >
                           {deliveryTypesConstant?.map((dateItem) => {
                             return (
-                              <MenuItem
-                                className="px-2"
-                                key={dateItem.id}
-                                value={dateItem.value}
-                              >
+                              <MenuItem className="px-2" key={dateItem.id} value={dateItem.value}>
                                 <Radio checked={dateItem.value === invoiceFactor.delivery_site_type} />
                                 <div className="w-100 d-flex align-items-center">
-                                  <ListItemText
-                                    primary={dateItem.title}
-                                    className="text-right"
-                                  />
+                                  <ListItemText primary={dateItem.title} className="text-right" />
                                 </div>
                               </MenuItem>
                             );
@@ -834,9 +737,7 @@ const SubmitFactor = ({
                             <span style={{ color: "#2E7D32" }} className="pl-1">
                               {priceFormatter(search.wallet_credit)}
                             </span>
-                            <span style={{ color: "#000000", opacity: "60%" }}>
-                              $
-                            </span>
+                            <span style={{ color: "#000000", opacity: "60%" }}>$</span>
                           </>
                         ) : (
                           "-"
@@ -853,8 +754,7 @@ const SubmitFactor = ({
                             setInvoiceFactor(_invoiceFactor);
                           } else {
                             const _invoiceFactor = { ...invoiceFactor };
-                            _invoiceFactor.use_wallet_credit =
-                              !_invoiceFactor.use_wallet_credit;
+                            _invoiceFactor.use_wallet_credit = !_invoiceFactor.use_wallet_credit;
                             setInvoiceFactor(_invoiceFactor);
                           }
                         }}
@@ -876,9 +776,7 @@ const SubmitFactor = ({
                             <span style={{ color: "#2E7D32" }} className="pl-1">
                               {priceFormatter(search.gift_credit)}
                             </span>
-                            <span style={{ color: "#000000", opacity: "60%" }}>
-                              $
-                            </span>
+                            <span style={{ color: "#000000", opacity: "60%" }}>$</span>
                           </>
                         ) : (
                           "-"
@@ -892,8 +790,7 @@ const SubmitFactor = ({
                             setDiscountCode(false);
                           }
                           const _invoiceFactor = { ...invoiceFactor };
-                          _invoiceFactor.use_gift_credit =
-                            !_invoiceFactor.use_gift_credit;
+                          _invoiceFactor.use_gift_credit = !_invoiceFactor.use_gift_credit;
                           if (invoiceFactor.discount_code) {
                             delete _invoiceFactor.discount_code;
                           }
@@ -933,9 +830,7 @@ const SubmitFactor = ({
                         border: "1px dashed rgba(0, 0, 0, 0.23)",
                         borderRadius: "8px",
                         padding: "8px 12px",
-                        background: `${
-                          !discountCode ? "#f5f5f5" : "transparent"
-                        }`,
+                        background: `${!discountCode ? "#f5f5f5" : "transparent"}`,
                       }}
                       value={invoiceFactor.discount_code}
                       onChange={(e) => {
@@ -977,13 +872,8 @@ const SubmitFactor = ({
                       fontWeight: 400,
                     }}
                   >
-                    {priceFormatter(
-                      invoiceFactorResponse?.total_items_initial_price
-                    )}
-                    <span
-                      className="mr-1"
-                      style={{ color: "#000000", opacity: "60%" }}
-                    >
+                    {priceFormatter(invoiceFactorResponse?.total_items_initial_price)}
+                    <span className="mr-1" style={{ color: "#000000", opacity: "60%" }}>
                       $
                     </span>
                   </p>
@@ -1006,20 +896,12 @@ const SubmitFactor = ({
                       }}
                     >
                       {invoiceFactor?.use_wallet_credit
-                        ? selectedCrmMemberShip.wallet_credit >
-                          invoiceFactor?.total_items_initial_price
-                          ? `${priceFormatter(
-                              invoiceFactor?.total_items_initial_price
-                            )}`
-                          : `${priceFormatter(
-                              selectedCrmMemberShip.wallet_credit
-                            )}`
+                        ? selectedCrmMemberShip.wallet_credit > invoiceFactor?.total_items_initial_price
+                          ? `${priceFormatter(invoiceFactor?.total_items_initial_price)}`
+                          : `${priceFormatter(selectedCrmMemberShip.wallet_credit)}`
                         : null}
 
-                      <span
-                        className="mr-1"
-                        style={{ color: "#000000", opacity: "60%" }}
-                      >
+                      <span className="mr-1" style={{ color: "#000000", opacity: "60%" }}>
                         $
                       </span>
                     </p>
@@ -1043,10 +925,7 @@ const SubmitFactor = ({
                       }}
                     >
                       {priceFormatter(invoiceFactorResponse?.gift_credit_used)}
-                      <span
-                        className="mr-1"
-                        style={{ color: "#000000", opacity: "60%" }}
-                      >
+                      <span className="mr-1" style={{ color: "#000000", opacity: "60%" }}>
                         $
                       </span>
                     </p>
@@ -1069,13 +948,8 @@ const SubmitFactor = ({
                         fontWeight: 400,
                       }}
                     >
-                      {priceFormatter(
-                        invoiceFactorResponse?.discount_code_amount
-                      )}
-                      <span
-                        className="mr-1"
-                        style={{ color: "#000000", opacity: "60%" }}
-                      >
+                      {priceFormatter(invoiceFactorResponse?.discount_code_amount)}
+                      <span className="mr-1" style={{ color: "#000000", opacity: "60%" }}>
                         $
                       </span>
                     </p>
@@ -1099,10 +973,7 @@ const SubmitFactor = ({
                       }}
                     >
                       {priceFormatter(invoiceFactorResponse?.taxing_price)}
-                      <span
-                        className="mr-1"
-                        style={{ color: "#000000", opacity: "60%" }}
-                      >
+                      <span className="mr-1" style={{ color: "#000000", opacity: "60%" }}>
                         $
                       </span>
                     </p>
@@ -1128,31 +999,21 @@ const SubmitFactor = ({
                     {priceFormatter(
                       Number(
                         invoiceFactorResponse?.should_pay -
-                          (invoiceFactor.use_wallet_credit
-                            ? selectedCrmMemberShip.wallet_credit
-                            : 0)
+                          (invoiceFactor.use_wallet_credit ? selectedCrmMemberShip.wallet_credit : 0)
                       ) > 0
                         ? Number(
                             invoiceFactorResponse?.should_pay -
-                              (invoiceFactor.use_wallet_credit
-                                ? selectedCrmMemberShip.wallet_credit
-                                : 0)
+                              (invoiceFactor.use_wallet_credit ? selectedCrmMemberShip.wallet_credit : 0)
                           )
                         : 0
                     )}
-                    <span
-                      className="mr-1"
-                      style={{ color: "#000000", opacity: "60%" }}
-                    >
+                    <span className="mr-1" style={{ color: "#000000", opacity: "60%" }}>
                       $
                     </span>
                   </p>
                 </div>
               </div>
-              <div
-                className="d-flex justify-content-end align-center"
-                style={{ paddingTop: 24 }}
-              >
+              <div className="d-flex justify-content-end align-center" style={{ paddingTop: 24 }}>
                 <Button
                   variant="contained"
                   color="primary"

@@ -934,7 +934,7 @@ export function AdminOrders({
                 />
                 <ListItemText
                   primary="Choosing all columns"
-                  className="text-right"
+                  className="text-left"
                 />
               </MenuItem>
               {headCells.map((column) => {
@@ -990,7 +990,7 @@ export function AdminOrders({
                     />
                     <ListItemText
                       primary={column.label}
-                      className="text-right"
+                      className="text-left"
                     />
                   </MenuItem>
                 );
@@ -1169,7 +1169,7 @@ export function AdminOrders({
                 />
                 <ListItemText
                   primary="The choice of all devices"
-                  className="text-right"
+                  className="text-left"
                 />
               </MenuItem>
               {devices?.map((device) => {
@@ -1231,7 +1231,7 @@ export function AdminOrders({
                     />
                     <ListItemText
                       primary={device?.name}
-                      className="text-right"
+                      className="text-left"
                     />
                   </MenuItem>
                 );
@@ -1319,7 +1319,7 @@ export function AdminOrders({
                 />
                 <ListItemText
                   primary="Select all order situations"
-                  className="text-right"
+                  className="text-left"
                 />
               </MenuItem>
               {orderStatus.map((status) => {
@@ -1383,7 +1383,7 @@ export function AdminOrders({
                     />
                     <ListItemText
                       primary={status.title}
-                      className="text-right"
+                      className="text-left"
                     />
                   </MenuItem>
                 );
@@ -1481,7 +1481,7 @@ export function AdminOrders({
                 />
                 <ListItemText
                   primary="Select all payment status"
-                  className="text-right"
+                  className="text-left"
                 />
               </MenuItem>
               {paymentStatusOptions.map((status) => {
@@ -1545,7 +1545,7 @@ export function AdminOrders({
                     />
                     <ListItemText
                       primary={status.text}
-                      className="text-right"
+                      className="text-left"
                     />
                   </MenuItem>
                 );
@@ -1640,7 +1640,7 @@ export function AdminOrders({
                 />
                 <ListItemText
                   primary="Choosing all channels"
-                  className="text-right"
+                  className="text-left"
                 />
               </MenuItem>
               {salesChannelOptions.map((option) => {
@@ -1704,7 +1704,7 @@ export function AdminOrders({
                     />
                     <ListItemText
                       primary={option.text}
-                      className="text-right"
+                      className="text-left"
                     />
                   </MenuItem>
                 );
@@ -1799,7 +1799,7 @@ export function AdminOrders({
                 />
                 <ListItemText
                   primary="Choosing all couriers"
-                  className="text-right"
+                  className="text-left"
                 />
               </MenuItem>
               {deliveryManOptions.map((courier) => {
@@ -1863,7 +1863,7 @@ export function AdminOrders({
                     />
                     <ListItemText
                       primary={courier.text}
-                      className="text-right"
+                      className="text-left"
                     />
                   </MenuItem>
                 );
@@ -1963,7 +1963,7 @@ export function AdminOrders({
                 />
                 <ListItemText
                   primary="Select all the methods of submission"
-                  className="text-right"
+                  className="text-left"
                 />
               </MenuItem>
               {deliveryTypesWithoutPagination?.map((deliveryType) => {
@@ -2026,7 +2026,7 @@ export function AdminOrders({
                     />
                     <ListItemText
                       primary={deliveryType.title}
-                      className="text-right"
+                      className="text-left"
                     />
                   </MenuItem>
                 );
