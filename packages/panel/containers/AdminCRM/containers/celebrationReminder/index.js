@@ -99,7 +99,7 @@ function CreditExpiryReminderWithDuration() {
         contentText={
           <>
             Are you sure to deactivate?
-            <br /> If re -enabled you need support confirmation.
+            <br /> You need support confirmation to activate it later.
           </>
         }
         dialogSecondActionTextColor="primary"
@@ -112,7 +112,8 @@ function CreditExpiryReminderWithDuration() {
         {openPopperItem && <GiftDetails {...openPopperItem} />}
       </Dialog>
       <div className="mb-4">
-        Send them with a discount code or gift credit on the occasion of your customers 'birthday or anniversary of your customers' marriage.
+        Send them with a discount code or gift credit on the occasion of your customers 'birthday or anniversary of your
+        customers' marriage.
       </div>
       {!haveSetNoReminders ? (
         <CreditExpiryReminderWithDurationTable {...hooks} />

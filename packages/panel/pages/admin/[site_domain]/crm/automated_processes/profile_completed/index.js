@@ -3,7 +3,7 @@ import AdminLayout from "containers/AdminLayout";
 import { CRM_PLUGIN } from "@saas/utils/constants/plugins";
 
 const AUTOMATED_PROCESS_TYPE = {
-  title: "To complete the profile",
+  title: "For profile completion",
   type: "profile_completed",
 }
 

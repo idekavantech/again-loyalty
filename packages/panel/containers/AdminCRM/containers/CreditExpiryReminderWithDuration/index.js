@@ -35,7 +35,7 @@ function CreditExpiryReminderWithDuration() {
               variant="contained"
             >
               <AddIcon className="mx-1" />
-              <p>Creating a reminder</p>
+              <p>New reminder</p>
             </Button>
           </div>
         }
@@ -43,7 +43,7 @@ function CreditExpiryReminderWithDuration() {
       <AssuranceDialog
         isOpen={isCampaignAssuranceIsActiveModalOpen}
         closeDialogHandler={handleCloseCampaignIsActiveAssuranceModal}
-        contentText= {<>Are you sure to deactivate?<br/> If re -enabled you need support confirmation.</>} 
+        contentText= {<>Are you sure to deactivate?<br/> you need support confirmation to activate it again.</>} 
         dialogSecondActionTextColor="primary"
         dialogMainActions={handleSubmitCampaignIsActiveAssuranceModal}
         dialogSecondActions={handleCloseCampaignIsActiveAssuranceModal}

@@ -3,7 +3,7 @@ import AdminLayout from "containers/AdminLayout";
 import { CRM_PLUGIN } from "@saas/utils/constants/plugins";
 
 const AUTOMATED_PROCESS_TYPE = {
-  title: "To join the club",
+  title: "For signing up in the club",
   type: "gift_from_inviter_link_event",
 };
 

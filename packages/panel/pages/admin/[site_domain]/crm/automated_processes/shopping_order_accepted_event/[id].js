@@ -3,7 +3,7 @@ import AdminLayout from "containers/AdminLayout";
 import { CRM_PLUGIN } from "@saas/utils/constants/plugins";
 
 const AUTOMATED_PROCESS_TYPE = {
-  title: "To register the order",
+  title: "For each successful order",
   type: "shopping_order_accepted_event",
 };
 

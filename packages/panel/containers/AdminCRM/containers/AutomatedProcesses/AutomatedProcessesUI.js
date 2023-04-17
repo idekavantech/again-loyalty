@@ -32,7 +32,7 @@ const tableHead = [
   },
   {
     id: 1,
-    label: "Name of the process",
+    label: "title",
     align: "left",
     minWidth: 100,
     width: 400,
@@ -40,8 +40,8 @@ const tableHead = [
   },
   {
     id: 4,
-    label: "",
-    align: "left",
+    label: "status",
+    align: "center",
     minWidth: 100,
     width: 300,
     maxWidth: 300,
@@ -83,7 +83,7 @@ function AutomatedProcess({ props }) {
                 )
               }
             >
-              new automated trend
+              new automated process
             </Button>
           </div>
         }

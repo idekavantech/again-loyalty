@@ -137,7 +137,7 @@ function CRMSegmentsSetting() {
           <div>
             <p style={{ lineHeight: "24px" }}>
               You can Make your own sections with a combination of customer levels, their satisfaction and number
-              Customer orders and... pay attention That to execute automated trends or campaign for a portion of your
+              Customer orders and... pay attention That to execute automated processes or campaign for a portion of your
               customers, You must create the segmentation you want in this section.
             </p>
           </div>

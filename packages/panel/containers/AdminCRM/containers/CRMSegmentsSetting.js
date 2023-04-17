@@ -106,7 +106,7 @@ function CRMSegmentsSetting({
           <p style={{ lineHeight: "24px" }}>
             You can with a combination of customer levels, their satisfaction, and
             Tags they have, make your favorite parts. Be careful
-            To execute automated trends for a portion of the customers, must be in this
+            To execute automated processes for a portion of the customers, must be in this
             Create the sections of your desired.
           </p>
         </div>

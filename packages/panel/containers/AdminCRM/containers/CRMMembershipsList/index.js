@@ -518,7 +518,7 @@ function CRMMembershipsList() {
                   disabled={selectedMembershipIds.length === 0}
                   onClick={handleLableModalOpen}
                 >
-                  Apply a group label
+                  Assign Label
                 </Button>
               </div>
             </div>

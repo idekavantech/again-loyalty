@@ -28,7 +28,7 @@ import Link from "next/link";
 const FAQS = [
   {
     id: uniqueid(),
-    question: "What is the Customer List?",
+    question: "What is a Customer List?",
     response: `You can see all your customers' information in the "Customer List". This information including "Customer Name, Customer Number, Rating, Gift Credit amount, Wallet Inventory,NPS, Tags, The Account Creation Date, Description, First Order Date, Last Order Date, Number of Orders, Average Purchase, and Sum of Orders' Value". You can also make a new customer. Clicking on each customer we can assign a label to the customer.`,
   },
   {
@@ -39,12 +39,12 @@ const FAQS = [
   },
   {
     id: uniqueid(),
-    question: "What is the discount code?",
+    question: "What is a discount code?",
     response: `In this section you can click on«Create a new discount code» Correct your favorite discount code. You can also see discount codes that are active or expired at the moment.`,
   },
   {
     id: uniqueid(),
-    question: "What is the club's report?",
+    question: "What is a club's report?",
     response: `Here you can see a report on all surveys. Filtering of reports based on history, the reason for dissatisfaction, and the level of satisfaction are other features of this section. `,
   },
   {
@@ -59,12 +59,12 @@ const FAQS = [
   },
   {
     id: uniqueid(),
-    question: "What is the customer segmentation?",
+    question: "What is a customer segmentation?",
     response: `In this section you can define the labels you intend to be on one or more customers. (The labels defined here are used in the club's client list and customer segmentation.)`,
   },
   {
     id: uniqueid(),
-    question: "What are automatic trends?",
+    question: "What are automated process?",
     response: (
       <div>
         <div>
@@ -94,8 +94,8 @@ const FAQS = [
   },
   {
     id: uniqueid(),
-    question: "What is a cache?",
-    response: `Cash or return money is one of the strategies to help customer loyalty. How does the cushion work?You can determine the customer after each customer's purchase, for example, 5 % of the total amount as credit to be used to be usable for the customer in the next purchase.. For example, if we consider the percentage of cache as 2 %, if a customer buys us $ 4,000, he will give 4,000 Tomans as a cache..`,
+    question: "What is a cash-back?",
+    response: `cash-back or return money is one of the strategies to help customer loyalty. How does the cushion work?You can determine the customer after each customer's purchase, for example, 5 % of the total amount as credit to be used to be usable for the customer in the next purchase.. For example, if we consider the percentage of cache as 2 %, if a customer buys us $ 4,000, he will give 4,000 Tomans as a cache..`,
   },
 ];
 function DobareDashboard() {
@@ -232,7 +232,7 @@ function DobareDashboard() {
               <AutomatedProcessesList automatedProcesses={automated_process} />
             ) : (
               <div className="mt-4">
-                You currently have no active automated trends.
+                You currently have no active automated processes.
               </div>
             )}
           </Paper>
@@ -325,7 +325,7 @@ function DobareDashboard() {
               ) : (
                 <div className="mt-4 ltr_force" style={{ color: "#001e2d" }}>
                   <div>Your service credit has been expired.</div>
-                  <div>Please renew your service to re -enable your service.</div>
+                  <div>Please renew your service.</div>
                 </div>
               )}
             </div>

@@ -20,7 +20,7 @@ function AutomatedProcess() {
           <p
             className="w-100"
             style={{
-              textAlign: "right",
+              textAlign: "left",
               color: textTypes.text.default,
               fontSize: 20,
               fontWeight: 600,
@@ -44,12 +44,12 @@ function AutomatedProcess() {
                   className="d-flex align-items-center justify-content-between w-100 mb-4 cursor-pointer "
                 >
                   <div className="d-flex align-items-center justify-content-between">
-                    <div style={{ width: 34, height: 34 }}>{automatedProcess.image(theme.palette.primary.main)}</div>
+                    <div style={{ width: 34, height: 50 }}>{automatedProcess.image(theme.palette.primary.main)}</div>
                     <p
                       style={{
                         fontSize: 16,
                         fontWeight: 600,
-                        marginRight: 27,
+                        marginLeft: 27,
                       }}
                     >
                       {automatedProcess.title}

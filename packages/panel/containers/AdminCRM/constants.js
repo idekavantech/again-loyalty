@@ -10,7 +10,7 @@ const SURVEY_PARTICIPATION_AUTOMATED_PROCESS = "survey_participation";
 export const AUTOMATED_PROCESSES_TYPES = [
   {
     id: 3,
-    title: "To complete the profile",
+    title: "For profile completion",
     type: PROFILE_COMPLETED_AUTOMATED_PROCESS,
     image: (color) => (
       <ProfileAccepted color={color} width="100%" height="100%" />
@@ -18,19 +18,19 @@ export const AUTOMATED_PROCESSES_TYPES = [
   },
   {
     id: 2,
-    title: "To register the order",
+    title: "For each successful order",
     type: SUBMIT_SHOPPING_ORDER_AUTOMATED_PROCESS,
     image: (color) => <OrderIcon color={color} width="100%" height="100%" />,
   },
   {
     id: 1,
-    title: "To join the club",
+    title: "For signing up in the club",
     type: JOIN_CUSTOMERS_CLUB_AUTOMATED_PROCESS,
     image: (color) => <LoginIcon color={color} width="100%" height="100%" />,
   },
   {
     id: 0,
-    title: "To participate in the survey",
+    title: "For participating in the survey",
     type: SURVEY_PARTICIPATION_AUTOMATED_PROCESS,
     image: (color) => <SurveyIcon color={color} width="100%" height="100%" />,
   },

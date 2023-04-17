@@ -150,7 +150,7 @@ function CRMReports() {
         </div>
         <div className=" mx-4 px-5 pb-2 pt-2">
           {selectedCreditReport.type === AUTOMATED_PROCESS
-            ? "This report shows automated trends that are valid or cache"
+            ? "This report shows automated processes that are valid or cache"
             : "This report shows the credit -type campaigns"}
         </div>
         <div

@@ -106,7 +106,7 @@ function CRMLevels({ adminUrlPrefix, _getCrmLevels, allCrmLevels, isLoading  ,_d
       </Head>
 
       <AdminBreadCrumb
-        submitButtonText="Create a new level"
+        submitButtonText="New level"
         submitButtonHasPlus
         submitAction={() => {
           router.push(`${adminUrlPrefix}crm/customer_levels/detail/new`);

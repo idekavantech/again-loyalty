@@ -48,7 +48,7 @@ function CRMMembershipLabelModal(props) {
               className="cursor-pointer"
             />
             <p style={{ fontSize: 16, fontWeight: 500, paddingRight: 13 }}>
-              Apply a group label
+              Assign Label
             </p>
           </div>
           <div className="mb-4">

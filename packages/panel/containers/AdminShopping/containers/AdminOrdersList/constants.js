@@ -461,7 +461,7 @@ export const customerListConstant = [
   },
   {
     id: 9,
-    label: "Invite link",
+    label: "Source",
     align: "right",
     minWidth: 100,
     width: 160,
