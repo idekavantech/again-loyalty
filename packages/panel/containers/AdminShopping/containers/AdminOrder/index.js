@@ -1382,7 +1382,7 @@ export function AdminOrder({
                 }}
               >
                 <div className="px-5 pt-5 pb-4" style={{ fontWeight: 500 }}>
-                  {`number ofitems${
+                  {`number of items${
                     order.order_status === NEW_ORDER_STATUS_VOID ||
                     order.order_status === NEW_ORDER_STATUS_COMP
                       ? "Canceled"
@@ -1410,7 +1410,7 @@ export function AdminOrder({
                         }`}
                       >
                         <div
-                          className="pl-3"
+                          className="pr-3"
                           style={{
                             cursor: "pointer",
                           }}
@@ -2047,7 +2047,7 @@ export function AdminOrder({
                             disabled={loading}
                           >
                             <div
-                              className="mr-2 d-flex align-items-center"
+                              className="ml-2 d-flex align-items-center"
                               style={{
                                 color: loading
                                   ? smoke
@@ -2060,6 +2060,7 @@ export function AdminOrder({
                               <ChevronLeftRoundedIcon
                                 fontSize="small"
                                 style={{
+                                  transform:"rotate(180deg)",
                                   color: loading
                                     ? smoke
                                     : theme.palette.primary.main,
