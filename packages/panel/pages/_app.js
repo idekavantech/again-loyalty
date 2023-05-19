@@ -113,9 +113,19 @@ function MyApp({ Component }) {
     if (router.asPath.includes("/food/") || router.asPath === "/food") {
       router.push(router.asPath.replace("/food", `/${SHOPPING_PLUGIN_URL}`));
     }
+    const isRedirectedToLogin = router.route.includes("login")
+    const routerQuery = router.asPath.split("?")[1]
+
     let subdomain = new RegExp(/\/admin\//m).test(router.asPath.split("?")[0])
       ? router.query.branch_domain || router.query.site_domain
       : router.query.site_domain || getSiteDomain(window.location.host);
+
+      if(isRedirectedToLogin){
+        const routes = routerQuery.split("/")
+        const domain = routes[routes.findIndex((a) => a === "admin") + 1];
+        subdomain = domain
+      }
+
     if (
       router.asPath.includes("/s/categories") ||
       router.asPath === "/s/categories"
@@ -131,6 +141,7 @@ function MyApp({ Component }) {
     ) {
       router.push(router.asPath.replace("/menu", "/c"));
     }
+    console.log({subdomain})
     const promises = [
       getBusinessRedirectsMapFunc(subdomain),
       getBusiness(subdomain, router.asPath),

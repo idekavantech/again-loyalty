@@ -2,6 +2,7 @@ import { getHostFromURL } from "./getHostFromURL";
 import { WEBAPP_URLS } from "../constants";
 
 export function getSiteDomain(incomingUrl = "http://localhost:3000") {  
+  console.log({incomingUrl})
   const appDomains = WEBAPP_URLS?.split(",") || [];
   const host = getHostFromURL(incomingUrl);
 

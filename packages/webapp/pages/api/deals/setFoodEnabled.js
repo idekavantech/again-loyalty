@@ -6,7 +6,7 @@ export default async function handler(req, res) {
     if (method === "POST") {
       axios
         .post(
-          "https://api.behtarino.com/api/v2/resources/hami/change-availability/",
+          "https://api-againloyalty.hectora.app/api/v2/resources/hami/change-availability/",
           { ..._body, status: true }
         )
         .then((response) => {

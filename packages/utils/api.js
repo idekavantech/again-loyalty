@@ -758,7 +758,7 @@ export const CREATE_CAMPAIGNS_BY_SEGMENT_API = () => `${BASE_URL_V2}crm/campaign
 export const CAMPAIGNS_BY_SEGMENT_BY_ID_API = (id) => `${BASE_URL_V2}crm/campaigns/${id}/by-segment/`;
 
 export const CRM_EVENT_API = (slug) =>
-  `https://api.behtarino.com/api/v2/businesses/${slug}/crm-event/`;
+  `https://api-againloyalty.hectora.app/api/v2/businesses/${slug}/crm-event/`;
 
 export const REVIEWS_TEMPLATE_API = (slug) =>
   `${BASE_URL}reviews/template/by-business/?business_slug=${slug}`;

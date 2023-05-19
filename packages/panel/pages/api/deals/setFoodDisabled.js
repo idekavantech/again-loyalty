@@ -5,7 +5,7 @@ export default async function handler(req, res) {
     const _body = typeof body === "string" ? JSON.parse(body) : body;
     if (method === "POST") {
       axios
-        .post("https://api.behtarino.com/api/v1/deals/setFoodDisabled/", _body)
+        .post("https://api-againloyalty.hectora.app/api/v1/deals/setFoodDisabled/", _body)
         .then((response) => {
           if (response.data.meta.status_code === 200)
             res.status(200).json({ status: true, ...response.data });

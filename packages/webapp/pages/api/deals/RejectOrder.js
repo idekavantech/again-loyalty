@@ -6,7 +6,7 @@ export default async function handler(req, res) {
     if (method === "POST") {
       axios
         .patch(
-          `https://api.behtarino.com/api/v2/shopping-orders/hami/${_body.OrderId?.[0]}/cancel/`,
+          `https://api-againloyalty.hectora.app/api/v2/shopping-orders/hami/${_body.OrderId?.[0]}/cancel/`,
           _body
         )
         .then((response) => {

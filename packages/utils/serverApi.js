@@ -9,6 +9,6 @@ export const BUSINESS_LIGHT_SEO_BY_SITEDOMAIN_API = (url, site_domain) =>
     site_domain || getSiteDomain(url)
   }/light_seo_by_site_domain/`;
 export const BUSINESS_MANIFEST_API = (url, site_domain) =>
-  `https://api.behtarino.com/ssr/${
+  `https://api-againloyalty.hectora.app/ssr/${
     site_domain || getSiteDomain(url)
   }/manifest.json`;

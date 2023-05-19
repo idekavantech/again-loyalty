@@ -1,5 +1,5 @@
-export const BASE_URL = "https://api.behtarino.com/api/v1/";
-export const BASE_URL_V2 = "https://api.behtarino.com/api/v2/";
+export const BASE_URL = "https://api-againloyalty.hectora.app/api/v1/";
+export const BASE_URL_V2 = "https://api-againloyalty.hectora.app/api/v2/";
 export const CMS_BASE_URL = "https://cms.vitrin.me";
 export const CDN_BASE_URL =
   "https://hs3-cf.behtarino.com/static/images/behtarino-web/";
@@ -12,8 +12,8 @@ export const USER_API = `${BASE_URL}users/self/`;
 export const LOGIN_BY_PHONE_API = `${BASE_URL_V2}users/phone-verification/call/`;
 export const BUSINESS_CREATION_ROUTE_PASSED_API = (slug) =>
   `${BASE_URL}businesses/${slug}/creation_route_passed/`;
-export const CREATE_AND_INITIALIZE_VITRIN_API = `https://api.behtarino.com/api/v2/businesses/create-and-initialize/`;
-export const CREATE_VITRIN_API = `https://api.behtarino.com/api/v2/businesses/`;
+export const CREATE_AND_INITIALIZE_VITRIN_API = `https://api-againloyalty.hectora.app/api/v2/businesses/create-and-initialize/`;
+export const CREATE_VITRIN_API = `https://api-againloyalty.hectora.app/api/v2/businesses/`;
 export const CREATE_BEHTARINO_BUSINESS_API = `https://bck.behtarino.com/api/v1/businesses/by_reval_id/`;
 export const FLAG_BEHTARINO_BUSINESS_API = (revalId) =>
   `https://bck.behtarino.com/api/v1/businesses/by_reval_id/${revalId}/flag_vitrin/`;
@@ -25,12 +25,12 @@ export const DELETE_BEHTARINO_BUSINESS_IMAGES_API = (id) =>
 export const UPLOAD_FILE_BEHTARINO_API = `https://bck.behtarino.com/api/v1/get_minio_url/`;
 
 export const INITIALIZE_VITRIN_API = (slug) =>
-  `https://api.behtarino.com/api/v2/businesses/${slug}/initialize/`;
+  `https://api-againloyalty.hectora.app/api/v2/businesses/${slug}/initialize/`;
 export const UPDATE_VITRIN_API = (slug) => `${BASE_URL}businesses/${slug}/`;
 export const GET_VITRIN_CRM_JOURNEY_DATA_API = (slug) =>
   `${BASE_URL}businesses/${slug}/vitrin_crm_journey_data/`;
 export const VITRIN_CRM_EVENT_API = (slug) =>
-  `https://api.behtarino.com/api/v2/businesses/${slug}/crm-event/`;
+  `https://api-againloyalty.hectora.app/api/v2/businesses/${slug}/crm-event/`;
 
 export const CHECK_SITE_DOMAIN = (domain) =>
   `${BASE_URL}businesses/${domain}/light_seo_by_site_domain/`;

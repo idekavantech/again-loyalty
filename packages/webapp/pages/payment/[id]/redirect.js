@@ -8,7 +8,7 @@ export default function AfterPaymentRedirectPage() {
   function post() {
     const form = document.createElement("form");
     form.method = "post";
-    form.action = `https://api.behtarino.com/api/v1/order_transactions/${id}/mellat_callback/`;
+    form.action = `https://api-againloyalty.hectora.app/api/v1/order_transactions/${id}/mellat_callback/`;
     const params = JSON.parse(data);
 
     for (const key in params) {
