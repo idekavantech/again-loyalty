@@ -29,7 +29,7 @@ RUN apt-get update \
 # Install puppeteer so it's available in the container.
 
 ARG NEXT_PUBLIC_APP_URL=dobare.me
-ARG NEXT_PUBLIC_BACKEND_URL=https://api.behtarino.com/api/v1/
+ARG NEXT_PUBLIC_BACKEND_URL=https://api-againloyalty.hectora.app/api/v1/
 ARG APP=dobare
 ARG SCOPE=panel
 ENV NEXT_PUBLIC_APP_URL=$NEXT_PUBLIC_APP_URL
