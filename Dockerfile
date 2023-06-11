@@ -40,7 +40,7 @@ WORKDIR /app/
 # Installing dependencies
 COPY package*.json /app/
 COPY lerna.json /app/
-RUN yarn global add lerna --unsafe-perm=true --allow-root
+RUN yarn global add lerna@6.5.1 --unsafe-perm=true --allow-root
 COPY . /app/
 
 
