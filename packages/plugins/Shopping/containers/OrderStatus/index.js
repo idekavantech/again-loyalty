@@ -79,7 +79,7 @@ const ORDER_STEP_STATUS_PASSED = "ORDER_STEP_STATUS_PASSED";
 
 const deliveryTypes = {
   [FULFILLMENT_ON_USER_SITE]: {
-    label: "submit",
+    label: "delivery",
     icon: `/images/bike.svg`,
   },
   [FULFILLMENT_CARRY_OUT]: {

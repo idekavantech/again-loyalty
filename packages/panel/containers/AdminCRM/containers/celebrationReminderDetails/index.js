@@ -13,7 +13,7 @@ import { MuiPickersUtilsProvider, TimePicker } from "@material-ui/pickers";
 
 import AdminBreadCrumb from "containers/AdminBreadCrumb";
 import Head from "next/head";
-import JalaliUtils from "@date-io/jalaali";
+import MomentUtils from "@date-io/moment";
 import { crontabToReadableTime } from "containers/AdminCRM/helpers/crontabToReadableTime";
 import { REWARD } from "containers/AdminCRM/constants";
 
@@ -275,7 +275,7 @@ function CelebrationReminderDetails() {
             <div className="d-flex">
               <div className="col-12 col-lg-6 col-sm-12 p-0 my-4">
                 <StyledInputTitle className="mb-2">SMS time*</StyledInputTitle>
-                <MuiPickersUtilsProvider utils={JalaliUtils} locale={"fa"}>
+                <MuiPickersUtilsProvider utils={MomentUtils} locale={"en"}>
                   <TimePicker
                     style={{
                       border: "1px solid #E4E6E7",
@@ -287,9 +287,9 @@ function CelebrationReminderDetails() {
                     disabled={!isCreatingNewCelebrationReminder}
                     InputProps={{ disableUnderline: true }}
                     inputVariant="standard"
-                    okLabel="Confirmation"
+                    okLabel="Confirm"
                     fullWidth
-                    cancelLabel="Cancellation"
+                    cancelLabel="Cancel"
                     ampm={false}
                     required
                     invalidDateMessage="The selected time is not correct."

@@ -7,9 +7,6 @@
 import React, { memo, useState } from "react";
 import useTheme from "@material-ui/core/styles/useTheme";
 import Button from "@material-ui/core/Button";
-import AdminOrdersWidget from "containers/AdminLayout/AdminOrdersWidget";
-import { ADMIN_ORDER_NOTIFICATIONS_MODAL } from "@saas/stores/ui/constants";
-import { pushParamsToUrl } from "@saas/utils/helpers/pushParamsToUrl";
 import { tiramisoo } from "@saas/utils/colors";
 import MenuRoundedIcon from "@material-ui/icons/MenuRounded";
 import IconButton from "@material-ui/core/IconButton";
@@ -83,10 +80,6 @@ function AdminHeader({
         )}
       </div>
 
-      <AdminOrdersWidget
-        adminOrdersWidget={adminOrdersWidget}
-        onClick={() => pushParamsToUrl(ADMIN_ORDER_NOTIFICATIONS_MODAL)}
-      />
       {!noItemLeft && !isDobare ? (
         <div className={"d-flex align-items-center justify-content-center"}>
           <Button className={"h-100"} color="primary" onClick={() => onPreviewClick("/s")}>

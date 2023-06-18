@@ -2364,7 +2364,7 @@ export function AdminOrders({
           />
         </div>
         <TablePagination
-          labelRowsPerPage={!maxWidth768 ? "The number of rows per page" : ""}
+          labelRowsPerPage={!maxWidth768 ? "Rows count per page" : ""}
           labelDisplayedRows={({ from, to, count }) =>
             `${englishNumberToPersianNumber(
               from

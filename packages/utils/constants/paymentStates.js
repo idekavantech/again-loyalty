@@ -21,7 +21,7 @@ export const paymentStates = {
     backgroundColor: "rgba(0, 200, 151, 0.12)",
   },
   4: {
-    label: "Cancellation",
+    label: "Cancel",
     progress: "0%",
     color: strawberryII,
     backgroundColor:

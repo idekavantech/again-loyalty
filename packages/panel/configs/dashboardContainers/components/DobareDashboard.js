@@ -311,8 +311,10 @@ function DobareDashboard() {
               </div>
               {CRMPluginData.isActive ? (
                 <div className="mt-4" style={{ color: "rgba(0, 0, 0, 0.6)" }}>
-                  The service period of service:{" "}
-                  <span style={{ color: "#001e2d" }}>one year</span> Up to date{" "}
+                  Service duration:{" "}
+                  <span style={{ color: "#001e2d" }}>one year</span>
+                  <br/>
+                   Up to date{" "}
                   <span style={{ color: "#001e2d" }}>
                     {" "}
                     {englishNumberToPersianNumber(

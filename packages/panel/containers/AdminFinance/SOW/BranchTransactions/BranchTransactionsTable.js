@@ -211,7 +211,7 @@ function BranchTransactionsTable({
         </Table>
       </TableContainer>
       <TablePagination
-        labelRowsPerPage={!maxWidth768 ? "The number of rows per page" : ""}
+        labelRowsPerPage={!maxWidth768 ? "Rows count per page" : ""}
         labelDisplayedRows={({ from}) =>
           `${englishNumberToPersianNumber(from)}`
         }

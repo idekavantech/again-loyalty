@@ -2753,8 +2753,8 @@ export function AdminOrder({
                         <DateTimePicker
                           inputVariant="outlined"
                           fullWidth={true}
-                          okLabel="Confirmation"
-                          cancelLabel="Cancellation"
+                          okLabel="confirm"
+                          cancelLabel="Cancel"
                           disablePast={true}
                           ampm={false}
                           required
@@ -3066,11 +3066,6 @@ export function AdminOrder({
                           </span>
                         </div>
                       ) : null}
-                    </div>
-                    <div className="px-5 py-5">
-                      <div onClick={() => toggleModal(NAVIGATION_MODAL, true)}>
-                        <Map options={mapOptions} />
-                      </div>
                     </div>
                   </div>
                 ) : (
@@ -4048,11 +4043,6 @@ export function AdminOrder({
                           </span>
                         </div>
                       ) : null}
-                    </div>
-                    <div className="px-5 py-5">
-                      <div onClick={() => toggleModal(NAVIGATION_MODAL, true)}>
-                        <Map options={mapOptions} />
-                      </div>
                     </div>
                   </div>
                 ) : (

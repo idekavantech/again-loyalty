@@ -63,12 +63,12 @@ function CreditExpiryReminderWithDuration() {
             alignItems: "center",
             fontSize: "16px",
           }}
-        >``
+        >
           <div>
             <div className="mb-3" style={{ display: "flex", justifyContent: "center" }}>
               <Warn />
             </div>
-            <p>You haven't reminded yet.</p>
+            <p>You have not set any reminder yet</p>
           </div>
         </div>
       ) : (

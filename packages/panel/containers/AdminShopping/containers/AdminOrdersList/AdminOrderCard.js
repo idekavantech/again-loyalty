@@ -202,7 +202,7 @@ function AdminOrderCard({
   const deliveryManOptions = [..._couriers, ..._deliverer_companies];
   const cells = {
     [TIME_HEAD_CELL]: (
-      <TableCell className="text-nowrap" align="right">
+      <TableCell className="text-nowrap" align="left">
         <div
           style={{
             background: orderStatuses[orderStatus]?.backgroundColor,
@@ -234,7 +234,7 @@ function AdminOrderCard({
       </TableCell>
     ),
     [NAME_HEAD_CELL]: (
-      <TableCell align="right">
+      <TableCell align="left">
         <div>{ellipseText(userAddress?.name, 18)}</div>
         <div className="mt-1">
           {userAddress?.phone
@@ -262,7 +262,7 @@ function AdminOrderCard({
       </TableCell>
     ),
     [DESCRIPTION_HEAD_CELL]: (
-      <TableCell className="text-nowrap " align="center">
+      <TableCell className="text-nowrap " align="left">
         {description ? (
           <Tooltip title={description} className="pdf-display-none">
             <IconButton
@@ -363,7 +363,7 @@ function AdminOrderCard({
               }}
             ></div>
           </div>
-          <div style={{ fontSize: 12 }}>
+          <div className="ml-1" style={{ fontSize: 12 }}>
             {paymentStates[payment_status]?.label}
           </div>
         </div>
@@ -384,7 +384,7 @@ function AdminOrderCard({
           <img
             alt=""
             style={{ width: "20px" }}
-            className="ml-1"
+            className="mr-1"
             src={deliveryTypes[order?.delivery_site_type?.toUpperCase()]?.icon}
           />
           <div style={{ fontSize: 12, color: smoke }}>
@@ -494,7 +494,7 @@ function AdminOrderCard({
       </TableCell>
     ),
     [DELIVERY_COMPANIES_TYPE_HEAD_CELL]: (
-      <TableCell className="text-nowrap" align="right">
+      <TableCell className="text-nowrap" align="left">
         <span>
           {deliveryCompaniesType[delivery_companies_data?.company_type]?.label
             ? deliveryCompaniesType[delivery_companies_data?.company_type]
@@ -504,7 +504,7 @@ function AdminOrderCard({
       </TableCell>
     ),
     [PRINT_HEAD_CELL]: (
-      <TableCell className="text-nowrap" align="right">
+      <TableCell className="text-nowrap" align="left">
         {order && (
           <div
             className="pdf-display-none"

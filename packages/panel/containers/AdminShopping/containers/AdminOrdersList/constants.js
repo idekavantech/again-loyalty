@@ -114,7 +114,7 @@ export const paymentStatusOptions = [
   { id: 0, text: "unpaid", value: 0 },
   { id: 1, text: "incompleted", value: 1 },
   { id: 2, text: "Paid", value: 2 },
-  { id: 4, text: "Cancellation", value: 4 },
+  { id: 4, text: "Canceled", value: 4 },
 ];
 
 export const TIME_HEAD_CELL = "time";
@@ -147,7 +147,7 @@ export const headCells = [
   },
   {
     id: NAME_HEAD_CELL,
-    align: "right",
+    align: "left",
     label: "Customer",
     defaultVisibility: true,
     minWidth: 50,
@@ -175,7 +175,7 @@ export const headCells = [
   {
     id: PAYMENT_STATUS_HEAD_CELL,
     align: "center",
-    label: "the payment",
+    label: "payment",
     defaultVisibility: true,
     minWidth: 100,
     width: 100,
@@ -183,7 +183,7 @@ export const headCells = [
   },
   {
     id: DELIVERY_TYPE_HEAD_CELL,
-    align: "right",
+    align: "left",
     label: "Type and time of delivery",
     defaultVisibility: true,
     minWidth: 150,
@@ -192,7 +192,7 @@ export const headCells = [
   },
   {
     id: COST_HEAD_CELL,
-    align: "right",
+    align: "left",
     label: "total",
     defaultVisibility: true,
     minWidth: 100,
@@ -302,7 +302,7 @@ export const deliverer_companies_dict = {
 
 export const deliveryTypes = {
   [FULFILLMENT_CARRY_OUT]: {
-    label: "submit",
+    label: "delivery",
     icon: `/images/bike.svg`,
   },
   [FULFILLMENT_ON_USER_SITE]: {

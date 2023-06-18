@@ -9,8 +9,8 @@ const FieldDateTimePicker = ({ setDisable, setValue, value }) => {
         <DateTimePicker
           inputVariant="outlined"
           fullWidth={true}
-          okLabel="Confirmation"
-          cancelLabel="Cancellation"
+          okLabel="confirm"
+          cancelLabel="Cancel"
           disablePast={true}
           ampm={false}
           required

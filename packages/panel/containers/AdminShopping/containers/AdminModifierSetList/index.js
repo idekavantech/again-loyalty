@@ -318,7 +318,7 @@ export function AdminModifierSetList({
               </Table>
             </TableContainer>
             <TablePagination
-              labelRowsPerPage={!isMobile ? "The number of rows per page" : ""}
+              labelRowsPerPage={!isMobile ? "Rows count per page" : ""}
               labelDisplayedRows={({ from, to, count }) =>
                 `${englishNumberToPersianNumber(
                   from

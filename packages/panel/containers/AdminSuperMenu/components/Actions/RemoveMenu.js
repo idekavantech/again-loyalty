@@ -39,7 +39,7 @@ export default function RemoveMenu({ isOpen, onClose, slug, id }) {
       isOpen={isOpen}
       title="Remove the menu"
       bodys={bodys}
-      bottomStartText="Cancellation"
+      bottomStartText="Cancel"
       bottomEndText={
         loadingSmall ? (
           <CircularProgress size={25} style={{ color: "white" }} />

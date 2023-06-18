@@ -17,7 +17,7 @@ import {
   CREDIT_AMOUNT_KEYWORD,
 } from "../../constants";
 import { MuiPickersUtilsProvider, TimePicker } from "@material-ui/pickers";
-import JalaliUtils from "@date-io/jalaali";
+import MomentUtils from "@date-io/moment";
 import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberToPersianNumber";
 import { replaceEnglishSmsKeywordsWithPersian } from "../../helpers/smsKeywords";
 import LoadingIndicator from "@saas/components/LoadingIndicator";
@@ -114,7 +114,8 @@ function CreditExpiryReminderWithDurationModal(props) {
                   classes={tooltipClasses}
                   title={
                     <div>
-                      For example, if you enter the number 2, the reminder SMS will be sent to the customer 2 days before the expiry of the credit.
+                      For example, if you enter the number 2, the reminder SMS will be sent to the customer 2 days
+                      before the expiry of the credit.
                     </div>
                   }
                 >
@@ -154,7 +155,8 @@ function CreditExpiryReminderWithDurationModal(props) {
                   classes={tooltipClasses}
                   title={
                     <div>
-                      For example, if the time interval is 2 and the hour of sending is 16:00 , 2 days before the expiration of credit, at 4pm reminder sms will be sent
+                      For example, if the time interval is 2 and the hour of sending is 16:00 , 2 days before the
+                      expiration of credit, at 4pm reminder sms will be sent
                     </div>
                   }
                 >
@@ -163,7 +165,7 @@ function CreditExpiryReminderWithDurationModal(props) {
                   </IconButton>
                 </Tooltip>
               </span>
-              <MuiPickersUtilsProvider utils={JalaliUtils} locale={"fa"}>
+              <MuiPickersUtilsProvider utils={MomentUtils} locale={"en"}>
                 <TimePicker
                   style={{
                     border: "1px solid #E4E6E7",
@@ -175,9 +177,9 @@ function CreditExpiryReminderWithDurationModal(props) {
                   disabled={!isCreatingNewReminder}
                   InputProps={{ disableUnderline: true }}
                   inputVariant="standard"
-                  okLabel="Confirmation"
+                  okLabel="Confirm"
                   fullWidth
-                  cancelLabel="Cancellation"
+                  cancelLabel="Cancel"
                   ampm={false}
                   required
                   invalidDateMessage="The selected time is not correct."

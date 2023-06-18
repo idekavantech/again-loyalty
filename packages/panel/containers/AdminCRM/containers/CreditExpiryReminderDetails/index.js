@@ -242,8 +242,8 @@ function CRMCampaignDetails() {
                       inputVariant="standard"
                       disableUnderline={true}
                       fullWidth={true}
-                      okLabel="Confirmation"
-                      cancelLabel="Cancellation"
+                      okLabel="confirm"
+                      cancelLabel="Cancel"
                       ampm={true}
                       required
                       invalidDateMessage="The selected time is not correct."

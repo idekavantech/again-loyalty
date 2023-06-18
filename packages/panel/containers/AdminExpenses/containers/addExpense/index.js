@@ -163,8 +163,8 @@ const AddExpense = () => {
                 InputProps={{ disableUnderline: true }}
                 inputVariant="standard"
                 fullWidth={true}
-                okLabel="Confirmation"
-                cancelLabel="Cancellation"
+                okLabel="confirm"
+                cancelLabel="Cancel"
                 ampm={false}
                 required
                 invalidDateMessage="The selected time is not correct."

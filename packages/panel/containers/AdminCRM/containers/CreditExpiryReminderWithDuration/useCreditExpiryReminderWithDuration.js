@@ -25,8 +25,8 @@ import { englishNumberToPersianNumber } from "@saas/utils/helpers/englishNumberT
 import { persianToEnglishNumber } from "@saas/utils/helpers/persianToEnglishNumber";
 
 
-const defaultSmsContent = () => `Hello[Customer Name] Relative
-[The amount of credit left to expire] Gift Credit in Customer Club[Business title] You have up to[The number of days to the end of credit] The day is usable..`
+const defaultSmsContent = () => `Hello [Customer Name] dear,
+You have a remaining gift credit of [The amount of credit left to expire] $ in the [Business Title] Customer Club, which is valid for [The number of days to the end of credit] days for use.`
 
 
 const smsInitialState = {

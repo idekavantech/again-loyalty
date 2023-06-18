@@ -681,7 +681,7 @@ export const paymentStatusOptions = [
   { id: 0, text: "unpaid", value: "0" },
   { id: 1, text: "incompleted", value: "1" },
   { id: 2, text: "Paid", value: "2" },
-  { id: 4, text: "Cancellation", value: "4" },
+  { id: 4, text: "Cancel", value: "4" },
 ];
 export const PURCHASE_ORDER_STATUS_DRAFT = "-1";
 export const PURCHASE_ORDER_STATUS_PENDING_VENDOR = "1";

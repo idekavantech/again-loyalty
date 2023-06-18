@@ -73,7 +73,7 @@ const $ = `/images/$.svg`;
 
 const deliveryTypes = {
     send: {
-        label: "submit",
+        label: "delivery",
         icon: `/images/bike.svg`,
     },
     onSpot: {
@@ -648,7 +648,7 @@ export function Orders({
                         )}
                     </TableContainer>
                     <TablePagination
-                        labelRowsPerPage={!minWidth768 ? "The number of rows per page" : ""}
+                        labelRowsPerPage={!minWidth768 ? "Rows count per page" : ""}
                         labelDisplayedRows={({from, to, count}) =>
                             `${englishNumberToPersianNumber(
                                 from

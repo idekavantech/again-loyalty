@@ -677,7 +677,7 @@ function CRMMainPage({
           </Table>
         </TableContainer>
         <TablePagination
-          labelRowsPerPage={!matches ? "The number of rows per page" : ""}
+          labelRowsPerPage={!matches ? "Rows count per page" : ""}
           labelDisplayedRows={({ from, to, count }) =>
             `${englishNumberToPersianNumber(
               from

@@ -72,7 +72,7 @@ export default function RemoveDeal({ isOpen, onClose, slug }) {
       isOpen={isOpen}
       title="Remove Product"
       bodys={bodys}
-      bottomStartText="Cancellation"
+      bottomStartText="Cancel"
       bottomEndText={
         menu.loadingSmall ? (
           <CircularProgress size={25} style={{ color: "white" }} />

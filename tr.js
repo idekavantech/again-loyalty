@@ -6,7 +6,7 @@ const persianRegexp = /[\u0600-\u06FF]/;
 
 const translateToEn = async (content) => translate(content, { to: "en" });
 
-const generateChunk = (data = [], chunkSize = 2) => {
+const generateChunk = (data = [], chunkSize = 5) => {
   let res = [];
   for (let i = 0; i < Math.ceil(data.length / chunkSize); i++) {
     res.push(new Array(chunkSize));

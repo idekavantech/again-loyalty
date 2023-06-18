@@ -14,11 +14,7 @@ import { createStructuredSelector } from "reselect";
 import Drawer from "@material-ui/core/Drawer";
 import clsx from "clsx";
 
-import {
-  makeSelectAdminMenuLinks,
-  makeSelectAdminUrlPrefix,
-  makeSelectPlugin,
-} from "@saas/stores/plugins/selector";
+import { makeSelectAdminMenuLinks, makeSelectAdminUrlPrefix, makeSelectPlugin } from "@saas/stores/plugins/selector";
 import adminMenuLinksConfig from "@saas/stores/configs/adminMenuLinks";
 
 import {
@@ -43,13 +39,7 @@ import { makeSelectUser } from "@saas/stores/user/selector";
 import NewSupportMenuIcon from "../../configs/icons/NewSupportMenuIcon";
 import NewLogoutMenuIcon from "../../configs/icons/NewLogoutMenuIcon";
 import NewMenuItem from "./NewMenuItem";
-import {
-  OTHER,
-  YOUR_WEBSITE,
-  YOUR_BUSINESS,
-  ACCOUNTING,
-  YOUR_CLUB,
-} from "@saas/stores/configs/constants";
+import { OTHER, YOUR_WEBSITE, YOUR_BUSINESS, ACCOUNTING, YOUR_CLUB } from "@saas/stores/configs/constants";
 import { supportTeamPhone } from "./constants";
 
 function AdminHeaderMenu({
@@ -66,15 +56,11 @@ function AdminHeaderMenu({
   urlPrefix,
 }) {
   const hasShoppingSupport =
-    business?.super_business?.plugins_config?.[
-      BRANCHES_PLUGIN
-    ]?.data?.supported_plugins?.includes(SHOPPING_PLUGIN);
-  const hasOrdering =
-    business.plugins_config?.[SHOPPING_PLUGIN]?.data?.has_ordering;
+    business?.super_business?.plugins_config?.[BRANCHES_PLUGIN]?.data?.supported_plugins?.includes(SHOPPING_PLUGIN);
+  const hasOrdering = business.plugins_config?.[SHOPPING_PLUGIN]?.data?.has_ordering;
   const hasMultiBranchPlugin = business.plugins_config?.[BRANCHES_PLUGIN];
 
-  const isDobarePanel =
-    process.env.NEXT_PUBLIC_APP_NAME === DOBARE_WEBAPP_CONSTANT;
+  const isDobarePanel = process.env.NEXT_PUBLIC_APP_NAME === DOBARE_WEBAPP_CONSTANT;
   const reportSublinks = [
     {
       text: "Dashboard",
@@ -114,10 +100,7 @@ function AdminHeaderMenu({
           {
             text: "products",
             isSubLinksOpen: false,
-            [INCLUDED_WEBAPPS_ONLY_KEY]: [
-              DARAMAD_WEBAPP_CONSTANT,
-              VITRIN_WEBAPP_CONSTANT,
-            ],
+            [INCLUDED_WEBAPPS_ONLY_KEY]: [DARAMAD_WEBAPP_CONSTANT, VITRIN_WEBAPP_CONSTANT],
             subLinks: [
               {
                 text: "products",
@@ -157,9 +140,7 @@ function AdminHeaderMenu({
                 needsShoppingSupport: false,
                 [INCLUDED_WEBAPPS_ONLY_KEY]: [VITRIN_WEBAPP_CONSTANT],
               },
-            ].filter(
-              (link) => !link.needsShoppingSupport || !hasShoppingSupport
-            ),
+            ].filter((link) => !link.needsShoppingSupport || !hasShoppingSupport),
             url: "",
             onClick: () => {},
             icon: "NewProductsMenuIcon",
@@ -215,10 +196,7 @@ function AdminHeaderMenu({
             url: `${urlPrefix}${SHOPPING_PLUGIN_URL}/settings/discounts`,
             icon: "NewDiscountMenuIcon",
             section: YOUR_BUSINESS.value,
-            [INCLUDED_WEBAPPS_ONLY_KEY]: [
-              DARAMAD_WEBAPP_CONSTANT,
-              VITRIN_WEBAPP_CONSTANT,
-            ],
+            [INCLUDED_WEBAPPS_ONLY_KEY]: [DARAMAD_WEBAPP_CONSTANT, VITRIN_WEBAPP_CONSTANT],
           },
         ]
       : []),
@@ -475,10 +453,7 @@ function AdminHeaderMenu({
                 text: "Ordering settings",
                 url: `${SHOPPING_PLUGIN_URL}/settings/general`,
                 needsShoppingSupport: false,
-                [INCLUDED_WEBAPPS_ONLY_KEY]: [
-                  VITRIN_WEBAPP_CONSTANT,
-                  DARAMAD_WEBAPP_CONSTANT,
-                ],
+                [INCLUDED_WEBAPPS_ONLY_KEY]: [VITRIN_WEBAPP_CONSTANT, DARAMAD_WEBAPP_CONSTANT],
               },
               {
                 text: "Peaks",
@@ -519,19 +494,17 @@ function AdminHeaderMenu({
     // },
   ];
   const links = [
-    ...(adminMenuLinksConfig[process.env.NEXT_PUBLIC_APP_NAME]?.[SAAS]?.map(
-      (item) => ({ ...item, url: `${urlPrefix}${item.url}` })
-    ) || defaultAdminMenuLinksBeforePluginsLinks),
+    ...(adminMenuLinksConfig[process.env.NEXT_PUBLIC_APP_NAME]?.[SAAS]?.map((item) => ({
+      ...item,
+      url: `${urlPrefix}${item.url}`,
+    })) || defaultAdminMenuLinksBeforePluginsLinks),
     ...adminMenuLinks,
   ];
 
   const getLinksBySection = (section) => {
     const isTheOtherSection = section === OTHER.value;
-    if (!isTheOtherSection)
-      return links.filter((link) => link.section === section);
-    return links.filter(
-      (link) => !link.section || link?.section === OTHER.value
-    );
+    if (!isTheOtherSection) return links.filter((link) => link.section === section);
+    return links.filter((link) => !link.section || link?.section === OTHER.value);
   };
 
   const isNotAEmptySection = (section) => {
@@ -539,10 +512,7 @@ function AdminHeaderMenu({
     return links
       .filter(
         (link) =>
-          !link[INCLUDED_WEBAPPS_ONLY_KEY] ||
-          link[INCLUDED_WEBAPPS_ONLY_KEY].includes(
-            process.env.NEXT_PUBLIC_APP_NAME
-          )
+          !link[INCLUDED_WEBAPPS_ONLY_KEY] || link[INCLUDED_WEBAPPS_ONLY_KEY].includes(process.env.NEXT_PUBLIC_APP_NAME)
       )
       .some((link) => link.section === section.value);
   };
@@ -612,9 +582,7 @@ function AdminHeaderMenu({
                   .filter(
                     (link) =>
                       !link[INCLUDED_WEBAPPS_ONLY_KEY] ||
-                      (link[INCLUDED_WEBAPPS_ONLY_KEY].includes(
-                        process.env.NEXT_PUBLIC_APP_NAME
-                      ) &&
+                      (link[INCLUDED_WEBAPPS_ONLY_KEY].includes(process.env.NEXT_PUBLIC_APP_NAME) &&
                         (!link.needsShoppingSupport || !hasShoppingSupport))
                   )
                   .map((link, index) => {
@@ -626,9 +594,7 @@ function AdminHeaderMenu({
                         subRoutes={link.subLinks}
                         onClickItem={onClickItem}
                         text={link.text}
-                        isSubLinksOpen={
-                          link?.isSubLinksOpen ? link?.isSubLinksOpen : false
-                        }
+                        isSubLinksOpen={link?.isSubLinksOpen ? link?.isSubLinksOpen : false}
                       />
                     );
                   })}
@@ -652,14 +618,9 @@ function AdminHeaderMenu({
             </ListItem>
           </a> */}
           <div>
-            <ListItem
-              button
-              disabled={disabled}
-              style={{ height: 44 }}
-              onClick={logout}
-            >
+            <ListItem button disabled={disabled} style={{ height: 44 }} onClick={logout}>
               <ListItemIcon style={{ minWidth: 30 }}>
-                <NewLogoutMenuIcon style={{ color: "#202223" }} />
+                <NewLogoutMenuIcon style={{ "-webkit-transform": " scaleX(-1)", color: "#202223" }} />
               </ListItemIcon>
               <ListItemText
                 className="text-left"
