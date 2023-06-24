@@ -479,7 +479,7 @@ const SubmitFactor = ({
                           color="primary"
                           checked={crmMemberShipDetail?.labels?.length === labels?.length}
                         />
-                        <ListItemText primary="Select all tags" className="text-right" />
+                        <ListItemText primary="Select all tags" className="text-left" />
                       </div>
                     </MenuItem>
                     {labels?.map((label) => {
@@ -510,7 +510,7 @@ const SubmitFactor = ({
                               color="primary"
                               checked={crmMemberShipDetail?.labels?.includes(label?.id)}
                             />
-                            <ListItemText primary={label?.title} className="text-right" />
+                            <ListItemText primary={label?.title} className="text-left" />
                           </div>
                         </MenuItem>
                       );

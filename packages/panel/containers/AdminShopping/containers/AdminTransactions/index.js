@@ -821,18 +821,14 @@ function AdminTransactions({
                       (i) => parseInt(i.keyword) === payment_type
                     );
                     const date = new Date(_created_at);
-                    const createdAt = moment(_created_at, "YYYY/MM/DD");
+                    const createdAt = moment(_created_at, "YYYY/MM/DD").format("DD MMMM YYY ");
                     const isMock = !id;
                     return (
                       <TableRow
                         onClick={() => {
                           setSelectedTransaction(transaction);
                         }}
-                        className={
-                          isLoading
-                            ? "u-pointer-events-none"
-                            : "u-cursor-pointer"
-                        }
+                        className={isLoading ? "u-pointer-events-none" : "u-cursor-pointer"}
                         hover
                         key={id}
                       >
@@ -846,35 +842,13 @@ function AdminTransactions({
                               }}
                             />
                           ) : (
-                            <div>
-                              {englishNumberToPersianNumber(transaction_id)}
-                            </div>
+                            <div>{englishNumberToPersianNumber(transaction_id)}</div>
                           )}
                         </TableCell>
-                        <TableCell
-                          style={{ width: "99%" }}
-                          scope="row"
-                          className="px-2"
-                          align="right"
-                        >
-                          {isMock ? (
-                            <Skeleton style={{ width: 150 }} />
-                          ) : (
-                            englishNumberToPersianNumber(
-                              `${createdAt.date()} ${getMonthName(
-                                createdAt.month() + 1
-                              )} ${createdAt.year()} - ${`0${date.getHours()}`.slice(
-                                -2
-                              )}:${`0${date.getMinutes()}`.slice(-2)}`
-                            )
-                          )}
+                        <TableCell style={{ width: "99%" }} scope="row" className="px-2" align="right">
+                          {isMock ? <Skeleton style={{ width: 150 }} /> : createdAt}
                         </TableCell>
-                        <TableCell
-                          component="a"
-                          className="text-nowrap px-2"
-                          align="center"
-                          style={{ padding: 18 }}
-                        >
+                        <TableCell component="a" className="text-nowrap px-2" align="center" style={{ padding: 18 }}>
                           {isMock ? (
                             <Skeleton
                               style={{
@@ -885,10 +859,7 @@ function AdminTransactions({
                             <Chip
                               style={{
                                 color: status === 0 ? jungleI : strawberryII,
-                                backgroundColor:
-                                  status === 0
-                                    ? "rgba(0, 200, 151, 0.12)"
-                                    : "rgba(255, 0, 56, 0.16)",
+                                backgroundColor: status === 0 ? "rgba(0, 200, 151, 0.12)" : "rgba(255, 0, 56, 0.16)",
                                 maxWidth: "100%",
                                 direction: "ltr",
                                 cursor: "pointer",
@@ -900,43 +871,22 @@ function AdminTransactions({
                           )}
                         </TableCell>
                         {isSuper ? (
-                          <TableCell
-                            style={{ padding: 18 }}
-                            scope="row"
-                            className="px-2 text-nowrap"
-                            align="right"
-                          >
+                          <TableCell style={{ padding: 18 }} scope="row" className="px-2 text-nowrap" align="right">
                             {isMock ? (
                               <Skeleton style={{ width: 150 }} />
                             ) : (
-                              <div>
-                                {branches.find(
-                                  (branch) => branch.slug === business_slug
-                                )?.title || ""}
-                              </div>
+                              <div>{branches.find((branch) => branch.slug === business_slug)?.title || ""}</div>
                             )}
                           </TableCell>
                         ) : null}
-                        <TableCell
-                          style={{ padding: 18 }}
-                          scope="row"
-                          className="px-2"
-                          align="right"
-                        >
+                        <TableCell style={{ padding: 18 }} scope="row" className="px-2" align="right">
                           {isMock ? (
                             <Skeleton className="w-100" />
                           ) : (
-                            salesChannelsOptions.find(
-                              (o) => o.keyword == sales_channel
-                            )?.text || "-"
+                            salesChannelsOptions.find((o) => o.keyword == sales_channel)?.text || "-"
                           )}
                         </TableCell>
-                        <TableCell
-                          component="a"
-                          className="text-nowrap px-2"
-                          align="center"
-                          style={{ padding: 18 }}
-                        >
+                        <TableCell component="a" className="text-nowrap px-2" align="center" style={{ padding: 18 }}>
                           {isMock ? (
                             <Skeleton
                               style={{
@@ -969,21 +919,11 @@ function AdminTransactions({
                             <div>{priceFormatter(amount)} $</div>
                           )}
                         </TableCell>
-                        <TableCell
-                          className="text-nowrap"
-                          align="center"
-                          style={{ width: 160 }}
-                        >
+                        <TableCell className="text-nowrap" align="center" style={{ width: 160 }}>
                           {isMock ? (
                             <Skeleton />
                           ) : (
-                            <div>
-                              {gateway
-                                ? terminalOptions.find(
-                                    (i) => i.keyword === gateway
-                                  )?.text
-                                : "-"}
-                            </div>
+                            <div>{gateway ? terminalOptions.find((i) => i.keyword === gateway)?.text : "-"}</div>
                           )}
                         </TableCell>
                       </TableRow>

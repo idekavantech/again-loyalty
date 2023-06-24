@@ -14,7 +14,7 @@ export default function initSocket(callback, siteDomain, businessSlugs) {
       );
       if ((result === "denied" || result === "default") && !isAlertShown) {
         callback(
-          `برای دریافت نوتیفیکشن سفارش‌ها، باید به مرورگر دسترسی بدهید.`,
+          "Browser Permission is required to show notifications.",
           "fail"
         );
         localStorage.setItem(IS_DENIED_NOTIFICATION_ALERT_SENT, "true");

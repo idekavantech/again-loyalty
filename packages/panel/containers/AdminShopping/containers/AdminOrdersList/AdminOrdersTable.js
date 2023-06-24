@@ -148,7 +148,7 @@ export default function AdminOrdersTable({
                         className="py-3 px-4"
                         colSpan={columns.length}
                       >
-                        {formattedTime}
+                        {moment(orderDate).format("DD MMMM YYYY HH:MM")}
                       </TableCell>
                     </TableRow>
                   )}

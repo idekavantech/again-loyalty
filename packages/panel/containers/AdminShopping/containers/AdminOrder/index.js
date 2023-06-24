@@ -2687,7 +2687,7 @@ export function AdminOrder({
                 )}
               </Paper>
             )}
-            {!iframe_from_pos &&
+            {/* {!iframe_from_pos &&
               order?.delivery_site_type?.toUpperCase() ===
                 FULFILLMENT_ON_USER_SITE && (
                 <Paper
@@ -2787,7 +2787,7 @@ export function AdminOrder({
                     </Button>
                   </div>
                 </Paper>
-              )}
+              )} */}
             {!iframe_from_pos &&
               order?.delivery_site_type?.toUpperCase() ===
                 FULFILLMENT_ON_USER_SITE && (
@@ -2795,119 +2795,8 @@ export function AdminOrder({
                   className="mt-3 d-flex align-items-center"
                   style={{ fontSize: 12, color: smoke }}
                 >
-                  <ErrorRoundedIcon style={{ color: smoke }} />
-                  <span className="mr-1">
-                    If you select the courier by determining the method of sending your desired courier
-                    Your request will be sent in the moment.
-                  </span>
                 </div>
               )}
-            {!iframe_from_pos &&
-            Object.entries(orderHistoryByDate || {}).length ? (
-              <Paper
-                color={theme.palette.text.tertiary}
-                elevation={2}
-                className="mt-3"
-              >
-                <div className="d-flex align-items-center justify-content-between px-5 pt-4 pb-2">
-                  <div style={{ fontWeight: 500 }}>History</div>
-                </div>
-                <div className="mt-2 pb-4 px-5">
-                  {Object.entries(orderHistoryByDate || {})
-                    .sort(
-                      (a, b) =>
-                        new Date(moment(b[0], "jYYYY_jMM_jDD")).getTime() -
-                        new Date(moment(a[0], "jYYYY_jMM_jDD")).getTime()
-                    )
-                    .map(([date, order_histories]) => {
-                      const _date = new Date(moment(date, "YYYY/M/D"));
-                      const momentTime = moment(
-                        `${_date.getFullYear()}-${
-                          _date.getMonth() + 1
-                        }-${_date.getDate()}`,
-                        "YYYY-MM-DD"
-                      );
-                      const weekday =
-                        _date.getDate() === new Date().getDate() &&
-                        _date.getMonth() === new Date().getMonth() &&
-                        _date.getFullYear() === new Date().getFullYear()
-                          ? "Today"
-                          : getWeekDay(momentTime?.isoWeekday());
-                      const formattedTime =
-                        weekday === "Today" ? weekday : formatDate(date);
-                      return (
-                        <div className="mt-5" key={date}>
-                          <div
-                            style={{
-                              color: "#6D7175",
-                            }}
-                          >
-                            {formattedTime}
-                          </div>
-                          <div className="position-relative mt-2">
-                            {order_histories.length > 1 ? (
-                              <div
-                                className="w-100 position-absolute mr-1 mt-2"
-                                style={{
-                                  height: "calc(100% - 16px)",
-                                  borderRight: `1px dashed ${theme.palette.primary.main}`,
-                                }}
-                              ></div>
-                            ) : null}
-                            {order_histories
-                              .sort(
-                                (a, b) =>
-                                  new Date(b.timestamp).getTime() -
-                                  new Date(a.timestamp).getTime()
-                              )
-                              .map((order_history) => {
-                                const _momentTime = moment(
-                                  order_history?.timestamp
-                                );
-                                return (
-                                  <div
-                                    className="timeline-item position-relative pr-4 mb-5"
-                                    style={{
-                                      color: "#575959",
-                                    }}
-                                    key={order_history?.timestamp}
-                                  >
-                                    <div
-                                      className="position-absolute"
-                                      style={{
-                                        right: 0,
-                                        top: 4,
-
-                                        width: 10,
-                                        height: 10,
-                                        borderRadius: "50%",
-                                        backgroundColor:
-                                          process.env
-                                            .NEXT_PUBLIC_ADMIN_THEME_COLOR,
-                                      }}
-                                    ></div>
-                                    <div className="pr-3 d-flex justify-content-between align-items-center">
-                                      <div>
-                                        {orderTimeLineComponentsByType[
-                                          order_history?.reason_string
-                                        ]?.(order_history?.modifier_user_name)}
-                                      </div>
-                                      <div>
-                                        {englishNumberToPersianNumber(
-                                          _momentTime.format("HH:mm")
-                                        )}
-                                      </div>
-                                    </div>
-                                  </div>
-                                );
-                              })}
-                          </div>
-                        </div>
-                      );
-                    })}
-                </div>
-              </Paper>
-            ) : null}{" "}
             {iframe_from_pos && (
               <Paper
                 color={theme.palette.text.tertiary}

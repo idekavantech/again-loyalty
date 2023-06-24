@@ -111,9 +111,7 @@ export const orderHistorySerializer = (order_history) =>
   groupByKey(
     order_history?.map?.((order_item) => ({
       ...order_item,
-      group_date: persianToEnglishNumber(
-        moment(order_item?.timestamp).format("jYYYY_jMM_jDD")
-      ),
+      group_date: order_item.timestamp,
     })),
     "group_date"
   );
